@@ -1,0 +1,13 @@
+---
+title: EdgeLogsJobUploadRequest
+---
+## ININ.PureCloudApi.Model.EdgeLogsJobUploadRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **FileIds** | **List&lt;string&gt;** | A list of file ids to upload. | |
+{: class="table table-striped"}
+
+

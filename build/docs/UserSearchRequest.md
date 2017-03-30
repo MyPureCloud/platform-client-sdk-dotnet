@@ -1,0 +1,18 @@
+---
+title: UserSearchRequest
+---
+## ININ.PureCloudApi.Model.UserSearchRequest
+
+## Properties
+
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+| **SortOrder** | **string** | The sort order for results | [optional] |
+| **SortBy** | **string** | The field in the resource that you want to sort the results by | [optional] |
+| **PageSize** | **int?** | The number of results per page | [optional] |
+| **PageNumber** | **int?** | The page of resources you want to retrieve | [optional] |
+| **Expand** | **List&lt;string&gt;** | Provides more details about a specified resource | [optional] |
+| **Query** | [**List&lt;UserSearchCriteria&gt;**](UserSearchCriteria.html) |  | [optional] |
+{: class="table table-striped"}
+
+
