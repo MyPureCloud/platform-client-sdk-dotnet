@@ -15,8 +15,8 @@ x64/
 build/
 [Oo]bj/
 [Bb]in/*
-!bin/ININ.PureCloudApi.dll
-!bin/ININ.PureCloudApi.xml
+!bin/PureCloudPlatform.Client.V2.dll
+!bin/PureCloudPlatform.Client.V2.xml
 !bin/Newtonsoft.Json.dll
 !bin/RestSharp.dll
 
