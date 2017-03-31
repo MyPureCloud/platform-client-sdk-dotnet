@@ -119,10 +119,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
+        /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
         /// <param name="Joined">Joined.</param>
         /// <param name="MemberCount">MemberCount.</param>
-        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
+        public UserQueue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
         {
             // to ensure "MediaSettings" is required (not null)
             if (MediaSettings == null)
@@ -165,6 +166,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QueueFlow = QueueFlow;
             this.CallingPartyName = CallingPartyName;
             this.CallingPartyNumber = CallingPartyNumber;
+            this.DefaultScripts = DefaultScripts;
             this.OutboundEmailAddress = OutboundEmailAddress;
             this.Joined = Joined;
             this.MemberCount = MemberCount;
@@ -260,6 +262,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
         public string CallingPartyNumber { get; set; }
         /// <summary>
+        /// The default script Ids for the communication types.
+        /// </summary>
+        /// <value>The default script Ids for the communication types.</value>
+        [DataMember(Name="defaultScripts", EmitDefaultValue=false)]
+        public Dictionary<string, Script> DefaultScripts { get; set; }
+        /// <summary>
         /// Gets or Sets OutboundEmailAddress
         /// </summary>
         [DataMember(Name="outboundEmailAddress", EmitDefaultValue=false)]
@@ -306,6 +314,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
+            sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
             sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
             sb.Append("  Joined: ").Append(Joined).Append("\n");
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
@@ -437,6 +446,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallingPartyNumber.Equals(other.CallingPartyNumber)
                 ) &&
                 (
+                    this.DefaultScripts == other.DefaultScripts ||
+                    this.DefaultScripts != null &&
+                    this.DefaultScripts.SequenceEqual(other.DefaultScripts)
+                ) &&
+                (
                     this.OutboundEmailAddress == other.OutboundEmailAddress ||
                     this.OutboundEmailAddress != null &&
                     this.OutboundEmailAddress.Equals(other.OutboundEmailAddress)
@@ -505,6 +519,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();
                 if (this.CallingPartyNumber != null)
                     hash = hash * 59 + this.CallingPartyNumber.GetHashCode();
+                if (this.DefaultScripts != null)
+                    hash = hash * 59 + this.DefaultScripts.GetHashCode();
                 if (this.OutboundEmailAddress != null)
                     hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();
                 if (this.Joined != null)

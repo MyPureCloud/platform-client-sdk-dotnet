@@ -11,21 +11,47 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
 | [**DeleteArchitectPrompts**](ArchitectApi.html#deletearchitectprompts) | **DELETE** /api/v2/architect/prompts | Batch-delete a list of prompts asynchronously |
 | [**DeleteArchitectSystempromptResource**](ArchitectApi.html#deletearchitectsystempromptresource) | **DELETE** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Delete a system prompt resource override. |
+| [**DeleteFlow**](ArchitectApi.html#deleteflow) | **DELETE** /api/v2/flows/{flowId} | Delete flow |
+| [**DeleteFlows**](ArchitectApi.html#deleteflows) | **DELETE** /api/v2/flows | Batch-delete a list of flows asynchronously |
+| [**GetArchitectDependencytracking**](ArchitectApi.html#getarchitectdependencytracking) | **GET** /api/v2/architect/dependencytracking | Get Dependency Tracking objects that have a given display name |
+| [**GetArchitectDependencytrackingBuild**](ArchitectApi.html#getarchitectdependencytrackingbuild) | **GET** /api/v2/architect/dependencytracking/build | Get Dependency Tracking build status for an organization |
+| [**GetArchitectDependencytrackingConsumedresources**](ArchitectApi.html#getarchitectdependencytrackingconsumedresources) | **GET** /api/v2/architect/dependencytracking/consumedresources | Get resources that are consumed by a given Dependency Tracking object |
+| [**GetArchitectDependencytrackingConsumingresources**](ArchitectApi.html#getarchitectdependencytrackingconsumingresources) | **GET** /api/v2/architect/dependencytracking/consumingresources | Get resources that consume a given Dependency Tracking object |
+| [**GetArchitectDependencytrackingDeletedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingdeletedresourceconsumers) | **GET** /api/v2/architect/dependencytracking/deletedresourceconsumers | Get Dependency Tracking objects that consume deleted resources |
+| [**GetArchitectDependencytrackingObject**](ArchitectApi.html#getarchitectdependencytrackingobject) | **GET** /api/v2/architect/dependencytracking/object | Get a Dependency Tracking object |
+| [**GetArchitectDependencytrackingType**](ArchitectApi.html#getarchitectdependencytrackingtype) | **GET** /api/v2/architect/dependencytracking/types/{typeId} | Get a Dependency Tracking type. |
+| [**GetArchitectDependencytrackingTypes**](ArchitectApi.html#getarchitectdependencytrackingtypes) | **GET** /api/v2/architect/dependencytracking/types | Get Dependency Tracking types. |
+| [**GetArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingupdatedresourceconsumers) | **GET** /api/v2/architect/dependencytracking/updatedresourceconsumers | Get Dependency Tracking objects that depend on updated resources |
 | [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **GET** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
 | [**GetArchitectPromptResource**](ArchitectApi.html#getarchitectpromptresource) | **GET** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Get specified user prompt resource |
 | [**GetArchitectPromptResources**](ArchitectApi.html#getarchitectpromptresources) | **GET** /api/v2/architect/prompts/{promptId}/resources | Get a pageable list of user prompt resources |
 | [**GetArchitectPrompts**](ArchitectApi.html#getarchitectprompts) | **GET** /api/v2/architect/prompts | Get a pageable list of user prompts |
 | [**GetArchitectSystemprompt**](ArchitectApi.html#getarchitectsystemprompt) | **GET** /api/v2/architect/systemprompts/{promptId} | Get a system prompt |
 | [**GetArchitectSystempromptResource**](ArchitectApi.html#getarchitectsystempromptresource) | **GET** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Get a system prompt resource. |
-| [**GetArchitectSystempromptResources**](ArchitectApi.html#getarchitectsystempromptresources) | **GET** /api/v2/architect/systemprompts/{promptId}/resources | Get IVR System Prompt resources. |
+| [**GetArchitectSystempromptResources**](ArchitectApi.html#getarchitectsystempromptresources) | **GET** /api/v2/architect/systemprompts/{promptId}/resources | Get system prompt resources. |
 | [**GetArchitectSystemprompts**](ArchitectApi.html#getarchitectsystemprompts) | **GET** /api/v2/architect/systemprompts | Get System Prompts |
+| [**GetFlow**](ArchitectApi.html#getflow) | **GET** /api/v2/flows/{flowId} | Get flow |
+| [**GetFlowLatestconfiguration**](ArchitectApi.html#getflowlatestconfiguration) | **GET** /api/v2/flows/{flowId}/latestconfiguration | Get the latest configuration for flow |
+| [**GetFlowVersion**](ArchitectApi.html#getflowversion) | **GET** /api/v2/flows/{flowId}/versions/{versionId} | Get flow version |
+| [**GetFlowVersionConfiguration**](ArchitectApi.html#getflowversionconfiguration) | **GET** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
+| [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **GET** /api/v2/flows/{flowId}/versions | Get flow version list |
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
+| [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
 | [**PostArchitectPromptResources**](ArchitectApi.html#postarchitectpromptresources) | **POST** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
 | [**PostArchitectPrompts**](ArchitectApi.html#postarchitectprompts) | **POST** /api/v2/architect/prompts | Create a new user prompt |
 | [**PostArchitectSystempromptResources**](ArchitectApi.html#postarchitectsystempromptresources) | **POST** /api/v2/architect/systemprompts/{promptId}/resources | Create system prompt resource override. |
+| [**PostFlowVersions**](ArchitectApi.html#postflowversions) | **POST** /api/v2/flows/{flowId}/versions | Create flow version |
+| [**PostFlows**](ArchitectApi.html#postflows) | **POST** /api/v2/flows | Create flow |
+| [**PostFlowsActionsCheckin**](ArchitectApi.html#postflowsactionscheckin) | **POST** /api/v2/flows/actions/checkin | Check-in flow |
+| [**PostFlowsActionsCheckout**](ArchitectApi.html#postflowsactionscheckout) | **POST** /api/v2/flows/actions/checkout | Check-out flow |
+| [**PostFlowsActionsDeactivate**](ArchitectApi.html#postflowsactionsdeactivate) | **POST** /api/v2/flows/actions/deactivate | Deactivate flow |
+| [**PostFlowsActionsPublish**](ArchitectApi.html#postflowsactionspublish) | **POST** /api/v2/flows/actions/publish | Publish flow |
+| [**PostFlowsActionsRevert**](ArchitectApi.html#postflowsactionsrevert) | **POST** /api/v2/flows/actions/revert | Revert flow |
+| [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **POST** /api/v2/flows/actions/unlock | Unlock flow |
 | [**PutArchitectPrompt**](ArchitectApi.html#putarchitectprompt) | **PUT** /api/v2/architect/prompts/{promptId} | Update specified user prompt |
 | [**PutArchitectPromptResource**](ArchitectApi.html#putarchitectpromptresource) | **PUT** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Update specified user prompt resource |
 | [**PutArchitectSystempromptResource**](ArchitectApi.html#putarchitectsystempromptresource) | **PUT** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Updates a system prompt resource override. |
+| [**PutFlow**](ArchitectApi.html#putflow) | **PUT** /api/v2/flows/{flowId} | Update flow |
 {: class="table table-striped"}
 
 <a name="deletearchitectprompt"></a>
@@ -255,6 +281,676 @@ namespace Example
 ### Return type
 
 **string**
+
+<a name="deleteflow"></a>
+
+## void DeleteFlow (string flowId)
+
+Delete flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteFlowExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+
+            try
+            {
+                // Delete flow
+                apiInstance.DeleteFlow(flowId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteFlow: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteflows"></a>
+
+## [**Operation**](Operation.html) DeleteFlows (List<string> id)
+
+Batch-delete a list of flows asynchronously
+
+Multiple IDs can be specified, in which case all specified flows will be deleted.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteFlowsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var id = new List<string>(); // List<string> | List of Flow IDs
+
+            try
+            {
+                // Batch-delete a list of flows asynchronously
+                Operation result = apiInstance.DeleteFlows(id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteFlows: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| List of Flow IDs |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Operation**](Operation.html)
+
+<a name="getarchitectdependencytracking"></a>
+
+## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) GetArchitectDependencytracking (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
+
+Get Dependency Tracking objects that have a given display name
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var name = name_example;  // string | Object name to search for
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
+            var consumedResources = true;  // bool? | Include resources each result item consumes (optional) 
+            var consumingResources = true;  // bool? | Include resources that consume each result item (optional) 
+            var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
+            var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
+
+            try
+            {
+                // Get Dependency Tracking objects that have a given display name
+                DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytracking(name, pageNumber, pageSize, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytracking: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **string**| Object name to search for |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional]  |
+| **consumedResources** | **bool?**| Include resources each result item consumes | [optional]  |
+| **consumingResources** | **bool?**| Include resources that consume each result item | [optional]  |
+| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional]  |
+| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
+
+<a name="getarchitectdependencytrackingbuild"></a>
+
+## [**DependencyStatus**](DependencyStatus.html) GetArchitectDependencytrackingBuild ()
+
+Get Dependency Tracking build status for an organization
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingBuildExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+
+            try
+            {
+                // Get Dependency Tracking build status for an organization
+                DependencyStatus result = apiInstance.GetArchitectDependencytrackingBuild();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingBuild: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**DependencyStatus**](DependencyStatus.html)
+
+<a name="getarchitectdependencytrackingconsumedresources"></a>
+
+## [**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing.html) GetArchitectDependencytrackingConsumedresources (string id, string version, string objectType, List<string> resourceType = null)
+
+Get resources that are consumed by a given Dependency Tracking object
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingConsumedresourcesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var id = id_example;  // string | Consuming object ID
+            var version = version_example;  // string | Consuming object version
+            var objectType = objectType_example;  // string | Consuming object type
+            var resourceType = new List<string>(); // List<string> | Types of consumed resources to show (optional) 
+
+            try
+            {
+                // Get resources that are consumed by a given Dependency Tracking object
+                ConsumedResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumedresources(id, version, objectType, resourceType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingConsumedresources: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **string**| Consuming object ID |  |
+| **version** | **string**| Consuming object version |  |
+| **objectType** | **string**| Consuming object type |  |
+| **resourceType** | [**List<string>**](string.html)| Types of consumed resources to show | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing.html)
+
+<a name="getarchitectdependencytrackingconsumingresources"></a>
+
+## [**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html) GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null)
+
+Get resources that consume a given Dependency Tracking object
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingConsumingresourcesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var id = id_example;  // string | Consumed object ID
+            var objectType = objectType_example;  // string | Consumed object type (only versioned object types are valid)
+            var resourceType = new List<string>(); // List<string> | Types of consuming resources to show (optional) 
+
+            try
+            {
+                // Get resources that consume a given Dependency Tracking object
+                ConsumingResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumingresources(id, objectType, resourceType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingConsumingresources: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **string**| Consumed object ID |  |
+| **objectType** | **string**| Consumed object type (only versioned object types are valid) |  |
+| **resourceType** | [**List<string>**](string.html)| Types of consuming resources to show | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html)
+
+<a name="getarchitectdependencytrackingdeletedresourceconsumers"></a>
+
+## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) GetArchitectDependencytrackingDeletedresourceconsumers (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
+
+Get Dependency Tracking objects that consume deleted resources
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingDeletedresourceconsumersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var name = name_example;  // string | Name to search for (optional) 
+            var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
+            var flowFilter = flowFilter_example;  // string | Show only checkedIn or published flows (optional) 
+            var consumedResources = true;  // bool? | Return consumed resources? (optional)  (default to false)
+            var consumedResourceType = new List<string>(); // List<string> | Resource type(s) to return (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            {
+                // Get Dependency Tracking objects that consume deleted resources
+                DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytrackingDeletedresourceconsumers(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingDeletedresourceconsumers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **string**| Name to search for | [optional]  |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional]  |
+| **flowFilter** | **string**| Show only checkedIn or published flows | [optional]  |
+| **consumedResources** | **bool?**| Return consumed resources? | [optional] [default to false] |
+| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional]  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
+
+<a name="getarchitectdependencytrackingobject"></a>
+
+## [**DependencyObject**](DependencyObject.html) GetArchitectDependencytrackingObject (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
+
+Get a Dependency Tracking object
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingObjectExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var id = id_example;  // string | Object ID
+            var version = version_example;  // string | Object version (optional) 
+            var objectType = objectType_example;  // string | Object type (optional) 
+            var consumedResources = true;  // bool? | Include resources this item consumes (optional) 
+            var consumingResources = true;  // bool? | Include resources that consume this item (optional) 
+            var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
+            var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
+
+            try
+            {
+                // Get a Dependency Tracking object
+                DependencyObject result = apiInstance.GetArchitectDependencytrackingObject(id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingObject: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | **string**| Object ID |  |
+| **version** | **string**| Object version | [optional]  |
+| **objectType** | **string**| Object type | [optional]  |
+| **consumedResources** | **bool?**| Include resources this item consumes | [optional]  |
+| **consumingResources** | **bool?**| Include resources that consume this item | [optional]  |
+| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional]  |
+| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DependencyObject**](DependencyObject.html)
+
+<a name="getarchitectdependencytrackingtype"></a>
+
+## [**DependencyType**](DependencyType.html) GetArchitectDependencytrackingType (string typeId)
+
+Get a Dependency Tracking type.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingTypeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var typeId = typeId_example;  // string | Type ID
+
+            try
+            {
+                // Get a Dependency Tracking type.
+                DependencyType result = apiInstance.GetArchitectDependencytrackingType(typeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingType: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **typeId** | **string**| Type ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DependencyType**](DependencyType.html)
+
+<a name="getarchitectdependencytrackingtypes"></a>
+
+## [**DependencyTypeEntityListing**](DependencyTypeEntityListing.html) GetArchitectDependencytrackingTypes (int? pageNumber = null, int? pageSize = null)
+
+Get Dependency Tracking types.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingTypesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            {
+                // Get Dependency Tracking types.
+                DependencyTypeEntityListing result = apiInstance.GetArchitectDependencytrackingTypes(pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingTypes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DependencyTypeEntityListing**](DependencyTypeEntityListing.html)
+
+<a name="getarchitectdependencytrackingupdatedresourceconsumers"></a>
+
+## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) GetArchitectDependencytrackingUpdatedresourceconsumers (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
+
+Get Dependency Tracking objects that depend on updated resources
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingUpdatedresourceconsumersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var name = name_example;  // string | Name to search for (optional) 
+            var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
+            var consumedResources = true;  // bool? | Return consumed resources? (optional)  (default to false)
+            var consumedResourceType = new List<string>(); // List<string> | Resource type(s) to return (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            {
+                // Get Dependency Tracking objects that depend on updated resources
+                DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytrackingUpdatedresourceconsumers(name, objectType, consumedResources, consumedResourceType, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectDependencytrackingUpdatedresourceconsumers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **name** | **string**| Name to search for | [optional]  |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional]  |
+| **consumedResources** | **bool?**| Return consumed resources? | [optional] [default to false] |
+| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional]  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
 
 <a name="getarchitectprompt"></a>
 
@@ -612,7 +1308,7 @@ namespace Example
 
 ## [**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing.html) GetArchitectSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
 
-Get IVR System Prompt resources.
+Get system prompt resources.
 
 
 
@@ -643,7 +1339,7 @@ namespace Example
 
             try
             {
-                // Get IVR System Prompt resources.
+                // Get system prompt resources.
                 SystemPromptAssetEntityListing result = apiInstance.GetArchitectSystempromptResources(promptId, pageNumber, pageSize, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -740,6 +1436,304 @@ namespace Example
 
 [**SystemPromptEntityListing**](SystemPromptEntityListing.html)
 
+<a name="getflow"></a>
+
+## [**Flow**](Flow.html) GetFlow (string flowId, bool? deleted = null)
+
+Get flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+            var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
+
+            try
+            {
+                // Get flow
+                Flow result = apiInstance.GetFlow(flowId, deleted);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlow: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **deleted** | **bool?**| Include deleted flows | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
+
+<a name="getflowlatestconfiguration"></a>
+
+## **Object** GetFlowLatestconfiguration (string flowId, bool? deleted = null)
+
+Get the latest configuration for flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowLatestconfigurationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+            var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
+
+            try
+            {
+                // Get the latest configuration for flow
+                Object result = apiInstance.GetFlowLatestconfiguration(flowId, deleted);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowLatestconfiguration: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **deleted** | **bool?**| Include deleted flows | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+**Object**
+
+<a name="getflowversion"></a>
+
+## [**FlowVersion**](FlowVersion.html) GetFlowVersion (string flowId, string versionId, string deleted = null)
+
+Get flow version
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowVersionExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+            var versionId = versionId_example;  // string | Version ID
+            var deleted = deleted_example;  // string | Include deleted flows (optional) 
+
+            try
+            {
+                // Get flow version
+                FlowVersion result = apiInstance.GetFlowVersion(flowId, versionId, deleted);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowVersion: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **versionId** | **string**| Version ID |  |
+| **deleted** | **string**| Include deleted flows | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowVersion**](FlowVersion.html)
+
+<a name="getflowversionconfiguration"></a>
+
+## **Object** GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null)
+
+Create flow version configuration
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowVersionConfigurationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+            var versionId = versionId_example;  // string | Version ID
+            var deleted = deleted_example;  // string | Include deleted flows (optional) 
+
+            try
+            {
+                // Create flow version configuration
+                Object result = apiInstance.GetFlowVersionConfiguration(flowId, versionId, deleted);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowVersionConfiguration: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **versionId** | **string**| Version ID |  |
+| **deleted** | **string**| Include deleted flows | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+**Object**
+
+<a name="getflowversions"></a>
+
+## [**FlowVersionEntityListing**](FlowVersionEntityListing.html) GetFlowVersions (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
+
+Get flow version list
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowVersionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var deleted = true;  // bool? | Include deleted flows (optional) 
+
+            try
+            {
+                // Get flow version list
+                FlowVersionEntityListing result = apiInstance.GetFlowVersions(flowId, pageNumber, pageSize, deleted);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowVersions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **deleted** | **bool?**| Include deleted flows | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowVersionEntityListing**](FlowVersionEntityListing.html)
+
 <a name="getflows"></a>
 
 ## [**FlowEntityListing**](FlowEntityListing.html) GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
@@ -823,6 +1817,56 @@ namespace Example
 ### Return type
 
 [**FlowEntityListing**](FlowEntityListing.html)
+
+<a name="postarchitectdependencytrackingbuild"></a>
+
+## void PostArchitectDependencytrackingBuild ()
+
+Rebuild Dependency Tracking data for an organization
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectDependencytrackingBuildExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+
+            try
+            {
+                // Rebuild Dependency Tracking data for an organization
+                apiInstance.PostArchitectDependencytrackingBuild();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectDependencytrackingBuild: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postarchitectpromptresources"></a>
 
@@ -995,6 +2039,458 @@ namespace Example
 ### Return type
 
 [**SystemPromptAsset**](SystemPromptAsset.html)
+
+<a name="postflowversions"></a>
+
+## [**FlowVersion**](FlowVersion.html) PostFlowVersions (string flowId, Object body = null)
+
+Create flow version
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowVersionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+            var body = ;  // Object |  (optional) 
+
+            try
+            {
+                // Create flow version
+                FlowVersion result = apiInstance.PostFlowVersions(flowId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowVersions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **body** | **Object**|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FlowVersion**](FlowVersion.html)
+
+<a name="postflows"></a>
+
+## [**Flow**](Flow.html) PostFlows (Flow body = null)
+
+Create flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var body = new Flow(); // Flow |  (optional) 
+
+            try
+            {
+                // Create flow
+                Flow result = apiInstance.PostFlows(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlows: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Flow**](Flow.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
+
+<a name="postflowsactionscheckin"></a>
+
+## [**Flow**](Flow.html) PostFlowsActionsCheckin (string flow)
+
+Check-in flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsActionsCheckinExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flow = flow_example;  // string | Flow ID
+
+            try
+            {
+                // Check-in flow
+                Flow result = apiInstance.PostFlowsActionsCheckin(flow);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsActionsCheckin: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flow** | **string**| Flow ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
+
+<a name="postflowsactionscheckout"></a>
+
+## [**Flow**](Flow.html) PostFlowsActionsCheckout (string flow)
+
+Check-out flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsActionsCheckoutExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flow = flow_example;  // string | Flow ID
+
+            try
+            {
+                // Check-out flow
+                Flow result = apiInstance.PostFlowsActionsCheckout(flow);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsActionsCheckout: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flow** | **string**| Flow ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
+
+<a name="postflowsactionsdeactivate"></a>
+
+## [**Flow**](Flow.html) PostFlowsActionsDeactivate (string flow)
+
+Deactivate flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsActionsDeactivateExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flow = flow_example;  // string | Flow ID
+
+            try
+            {
+                // Deactivate flow
+                Flow result = apiInstance.PostFlowsActionsDeactivate(flow);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsActionsDeactivate: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flow** | **string**| Flow ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
+
+<a name="postflowsactionspublish"></a>
+
+## [**Operation**](Operation.html) PostFlowsActionsPublish (string flow, string version = null)
+
+Publish flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsActionsPublishExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flow = flow_example;  // string | Flow ID
+            var version = version_example;  // string | version (optional) 
+
+            try
+            {
+                // Publish flow
+                Operation result = apiInstance.PostFlowsActionsPublish(flow, version);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsActionsPublish: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flow** | **string**| Flow ID |  |
+| **version** | **string**| version | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Operation**](Operation.html)
+
+<a name="postflowsactionsrevert"></a>
+
+## [**Flow**](Flow.html) PostFlowsActionsRevert (string flow)
+
+Revert flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsActionsRevertExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flow = flow_example;  // string | Flow ID
+
+            try
+            {
+                // Revert flow
+                Flow result = apiInstance.PostFlowsActionsRevert(flow);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsActionsRevert: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flow** | **string**| Flow ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
+
+<a name="postflowsactionsunlock"></a>
+
+## [**Flow**](Flow.html) PostFlowsActionsUnlock (string flow)
+
+Unlock flow
+
+Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsActionsUnlockExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flow = flow_example;  // string | Flow ID
+
+            try
+            {
+                // Unlock flow
+                Flow result = apiInstance.PostFlowsActionsUnlock(flow);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsActionsUnlock: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flow** | **string**| Flow ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
 
 <a name="putarchitectprompt"></a>
 
@@ -1173,4 +2669,62 @@ namespace Example
 ### Return type
 
 [**SystemPromptAsset**](SystemPromptAsset.html)
+
+<a name="putflow"></a>
+
+## [**Flow**](Flow.html) PutFlow (string flowId, Flow body = null)
+
+Update flow
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutFlowExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ArchitectApi();
+            var flowId = flowId_example;  // string | Flow ID
+            var body = new Flow(); // Flow |  (optional) 
+
+            try
+            {
+                // Update flow
+                Flow result = apiInstance.PutFlow(flowId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutFlow: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **body** | [**Flow**](Flow.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Flow**](Flow.html)
 
