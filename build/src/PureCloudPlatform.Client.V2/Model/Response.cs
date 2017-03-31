@@ -73,7 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="InteractionType">The interaction type for this response..</param>
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
-        public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null)
+        /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
+        public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null)
         {
             // to ensure "Libraries" is required (not null)
             if (Libraries == null)
@@ -99,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateCreated = DateCreated;
             this.InteractionType = InteractionType;
             this.Substitutions = Substitutions;
+            this.SubstitutionsSchema = SubstitutionsSchema;
         }
         
         /// <summary>
@@ -149,6 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="substitutions", EmitDefaultValue=false)]
         public List<ResponseSubstitution> Substitutions { get; set; }
         /// <summary>
+        /// Metadata about the text substitutions in json schema format.
+        /// </summary>
+        /// <value>Metadata about the text substitutions in json schema format.</value>
+        [DataMember(Name="substitutionsSchema", EmitDefaultValue=false)]
+        public JsonSchemaDocument SubstitutionsSchema { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -171,6 +179,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  InteractionType: ").Append(InteractionType).Append("\n");
             sb.Append("  Substitutions: ").Append(Substitutions).Append("\n");
+            sb.Append("  SubstitutionsSchema: ").Append(SubstitutionsSchema).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -254,6 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Substitutions.SequenceEqual(other.Substitutions)
                 ) &&
                 (
+                    this.SubstitutionsSchema == other.SubstitutionsSchema ||
+                    this.SubstitutionsSchema != null &&
+                    this.SubstitutionsSchema.Equals(other.SubstitutionsSchema)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -289,6 +303,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.InteractionType.GetHashCode();
                 if (this.Substitutions != null)
                     hash = hash * 59 + this.Substitutions.GetHashCode();
+                if (this.SubstitutionsSchema != null)
+                    hash = hash * 59 + this.SubstitutionsSchema.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

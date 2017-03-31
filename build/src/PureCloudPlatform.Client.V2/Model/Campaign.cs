@@ -98,10 +98,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SkipPreviewDisabled">for preview campaigns, indicator of whether the agent can skip a preview without placing a call.</param>
         /// <param name="PreviewTimeOutSeconds">for preview campaigns, number of seconds before a call will be automatically placed. A value of 0 indicates no automatic placement of calls.</param>
         /// <param name="ContactSort">information determining the order in which the contacts will be dialed.</param>
+        /// <param name="ContactSorts">column prioritized information determining the order in which the contacts will be dialed.</param>
         /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds.</param>
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyse the call.</param>
         /// <param name="Priority">The priority of this campaign relative to other campaigns.</param>
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null)
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null)
         {
             // to ensure "ContactList" is required (not null)
             if (ContactList == null)
@@ -188,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SkipPreviewDisabled = SkipPreviewDisabled;
             this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
             this.ContactSort = ContactSort;
+            this.ContactSorts = ContactSorts;
             this.NoAnswerTimeout = NoAnswerTimeout;
             this.CallAnalysisLanguage = CallAnalysisLanguage;
             this.Priority = Priority;
@@ -331,6 +333,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="contactSort", EmitDefaultValue=false)]
         public ContactSort ContactSort { get; set; }
         /// <summary>
+        /// column prioritized information determining the order in which the contacts will be dialed
+        /// </summary>
+        /// <value>column prioritized information determining the order in which the contacts will be dialed</value>
+        [DataMember(Name="contactSorts", EmitDefaultValue=false)]
+        public List<ContactSort> ContactSorts { get; set; }
+        /// <summary>
         /// for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds
         /// </summary>
         /// <value>for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds</value>
@@ -386,6 +394,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SkipPreviewDisabled: ").Append(SkipPreviewDisabled).Append("\n");
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
+            sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
             sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
@@ -547,6 +556,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactSort.Equals(other.ContactSort)
                 ) &&
                 (
+                    this.ContactSorts == other.ContactSorts ||
+                    this.ContactSorts != null &&
+                    this.ContactSorts.SequenceEqual(other.ContactSorts)
+                ) &&
+                (
                     this.NoAnswerTimeout == other.NoAnswerTimeout ||
                     this.NoAnswerTimeout != null &&
                     this.NoAnswerTimeout.Equals(other.NoAnswerTimeout)
@@ -627,6 +641,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.PreviewTimeOutSeconds.GetHashCode();
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
+                if (this.ContactSorts != null)
+                    hash = hash * 59 + this.ContactSorts.GetHashCode();
                 if (this.NoAnswerTimeout != null)
                     hash = hash * 59 + this.NoAnswerTimeout.GetHashCode();
                 if (this.CallAnalysisLanguage != null)

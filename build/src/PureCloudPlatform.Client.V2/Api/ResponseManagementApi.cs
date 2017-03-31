@@ -108,8 +108,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        Response GetResponsemanagementResponse (string responseId);
+        Response GetResponsemanagementResponse (string responseId, string expand = null);
 
         /// <summary>
         /// Get details about an existing response.
@@ -119,8 +120,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> GetResponsemanagementResponseWithHttpInfo (string responseId);
+        ApiResponse<Response> GetResponsemanagementResponseWithHttpInfo (string responseId, string expand = null);
         /// <summary>
         /// Gets a list of existing responses.
         /// </summary>
@@ -131,8 +133,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ResponseEntityListing</returns>
-        ResponseEntityListing GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null);
+        ResponseEntityListing GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
 
         /// <summary>
         /// Gets a list of existing responses.
@@ -144,8 +147,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of ResponseEntityListing</returns>
-        ApiResponse<ResponseEntityListing> GetResponsemanagementResponsesWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null);
+        ApiResponse<ResponseEntityListing> GetResponsemanagementResponsesWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
         /// <summary>
         /// Create a response library.
         /// </summary>
@@ -175,8 +179,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        Response PostResponsemanagementResponses (Response body);
+        Response PostResponsemanagementResponses (Response body, string expand = null);
 
         /// <summary>
         /// Create a response.
@@ -186,8 +191,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> PostResponsemanagementResponsesWithHttpInfo (Response body);
+        ApiResponse<Response> PostResponsemanagementResponsesWithHttpInfo (Response body, string expand = null);
         /// <summary>
         /// Query responses
         /// </summary>
@@ -241,8 +247,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        Response PutResponsemanagementResponse (string responseId, Response body);
+        Response PutResponsemanagementResponse (string responseId, Response body, string expand = null);
 
         /// <summary>
         /// Update an existing response.
@@ -253,8 +260,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        ApiResponse<Response> PutResponsemanagementResponseWithHttpInfo (string responseId, Response body);
+        ApiResponse<Response> PutResponsemanagementResponseWithHttpInfo (string responseId, Response body, string expand = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -351,8 +359,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> GetResponsemanagementResponseAsync (string responseId);
+        System.Threading.Tasks.Task<Response> GetResponsemanagementResponseAsync (string responseId, string expand = null);
 
         /// <summary>
         /// Get details about an existing response.
@@ -362,8 +371,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> GetResponsemanagementResponseAsyncWithHttpInfo (string responseId);
+        System.Threading.Tasks.Task<ApiResponse<Response>> GetResponsemanagementResponseAsyncWithHttpInfo (string responseId, string expand = null);
         /// <summary>
         /// Gets a list of existing responses.
         /// </summary>
@@ -374,8 +384,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ResponseEntityListing</returns>
-        System.Threading.Tasks.Task<ResponseEntityListing> GetResponsemanagementResponsesAsync (string libraryId, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ResponseEntityListing> GetResponsemanagementResponsesAsync (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
 
         /// <summary>
         /// Gets a list of existing responses.
@@ -387,8 +398,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (ResponseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ResponseEntityListing>> GetResponsemanagementResponsesAsyncWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<ResponseEntityListing>> GetResponsemanagementResponsesAsyncWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null);
         /// <summary>
         /// Create a response library.
         /// </summary>
@@ -418,8 +430,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> PostResponsemanagementResponsesAsync (Response body);
+        System.Threading.Tasks.Task<Response> PostResponsemanagementResponsesAsync (Response body, string expand = null);
 
         /// <summary>
         /// Create a response.
@@ -429,8 +442,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsemanagementResponsesAsyncWithHttpInfo (Response body);
+        System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsemanagementResponsesAsyncWithHttpInfo (Response body, string expand = null);
         /// <summary>
         /// Query responses
         /// </summary>
@@ -484,8 +498,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        System.Threading.Tasks.Task<Response> PutResponsemanagementResponseAsync (string responseId, Response body);
+        System.Threading.Tasks.Task<Response> PutResponsemanagementResponseAsync (string responseId, Response body, string expand = null);
 
         /// <summary>
         /// Update an existing response.
@@ -496,8 +511,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsemanagementResponseAsyncWithHttpInfo (string responseId, Response body);
+        System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsemanagementResponseAsyncWithHttpInfo (string responseId, Response body, string expand = null);
         #endregion Asynchronous Operations
     }
 
@@ -1217,10 +1233,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        public Response GetResponsemanagementResponse (string responseId)
+        public Response GetResponsemanagementResponse (string responseId, string expand = null)
         {
-             ApiResponse<Response> localVarResponse = GetResponsemanagementResponseWithHttpInfo(responseId);
+             ApiResponse<Response> localVarResponse = GetResponsemanagementResponseWithHttpInfo(responseId, expand);
              return localVarResponse.Data;
         }
 
@@ -1229,8 +1246,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > GetResponsemanagementResponseWithHttpInfo (string responseId)
+        public ApiResponse< Response > GetResponsemanagementResponseWithHttpInfo (string responseId, string expand = null)
         {
             // verify the required parameter 'responseId' is set
             if (responseId == null)
@@ -1262,6 +1280,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (responseId != null) localVarPathParams.Add("responseId", Configuration.ApiClient.ParameterToString(responseId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1295,10 +1314,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> GetResponsemanagementResponseAsync (string responseId)
+        public async System.Threading.Tasks.Task<Response> GetResponsemanagementResponseAsync (string responseId, string expand = null)
         {
-             ApiResponse<Response> localVarResponse = await GetResponsemanagementResponseAsyncWithHttpInfo(responseId);
+             ApiResponse<Response> localVarResponse = await GetResponsemanagementResponseAsyncWithHttpInfo(responseId, expand);
              return localVarResponse.Data;
 
         }
@@ -1308,8 +1328,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> GetResponsemanagementResponseAsyncWithHttpInfo (string responseId)
+        public async System.Threading.Tasks.Task<ApiResponse<Response>> GetResponsemanagementResponseAsyncWithHttpInfo (string responseId, string expand = null)
         {
             // verify the required parameter 'responseId' is set
             if (responseId == null)
@@ -1341,6 +1362,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (responseId != null) localVarPathParams.Add("responseId", Configuration.ApiClient.ParameterToString(responseId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1376,10 +1398,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ResponseEntityListing</returns>
-        public ResponseEntityListing GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null)
+        public ResponseEntityListing GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         {
-             ApiResponse<ResponseEntityListing> localVarResponse = GetResponsemanagementResponsesWithHttpInfo(libraryId, pageNumber, pageSize);
+             ApiResponse<ResponseEntityListing> localVarResponse = GetResponsemanagementResponsesWithHttpInfo(libraryId, pageNumber, pageSize, expand);
              return localVarResponse.Data;
         }
 
@@ -1390,8 +1413,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of ResponseEntityListing</returns>
-        public ApiResponse< ResponseEntityListing > GetResponsemanagementResponsesWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null)
+        public ApiResponse< ResponseEntityListing > GetResponsemanagementResponsesWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         {
             // verify the required parameter 'libraryId' is set
             if (libraryId == null)
@@ -1425,6 +1449,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (libraryId != null) localVarQueryParams.Add("libraryId", Configuration.ApiClient.ParameterToString(libraryId)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1460,10 +1485,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ResponseEntityListing</returns>
-        public async System.Threading.Tasks.Task<ResponseEntityListing> GetResponsemanagementResponsesAsync (string libraryId, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ResponseEntityListing> GetResponsemanagementResponsesAsync (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         {
-             ApiResponse<ResponseEntityListing> localVarResponse = await GetResponsemanagementResponsesAsyncWithHttpInfo(libraryId, pageNumber, pageSize);
+             ApiResponse<ResponseEntityListing> localVarResponse = await GetResponsemanagementResponsesAsyncWithHttpInfo(libraryId, pageNumber, pageSize, expand);
              return localVarResponse.Data;
 
         }
@@ -1475,8 +1501,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="libraryId">Library ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (ResponseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ResponseEntityListing>> GetResponsemanagementResponsesAsyncWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ResponseEntityListing>> GetResponsemanagementResponsesAsyncWithHttpInfo (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
         {
             // verify the required parameter 'libraryId' is set
             if (libraryId == null)
@@ -1510,6 +1537,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (libraryId != null) localVarQueryParams.Add("libraryId", Configuration.ApiClient.ParameterToString(libraryId)); // query parameter
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -1714,10 +1742,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        public Response PostResponsemanagementResponses (Response body)
+        public Response PostResponsemanagementResponses (Response body, string expand = null)
         {
-             ApiResponse<Response> localVarResponse = PostResponsemanagementResponsesWithHttpInfo(body);
+             ApiResponse<Response> localVarResponse = PostResponsemanagementResponsesWithHttpInfo(body, expand);
              return localVarResponse.Data;
         }
 
@@ -1726,8 +1755,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > PostResponsemanagementResponsesWithHttpInfo (Response body)
+        public ApiResponse< Response > PostResponsemanagementResponsesWithHttpInfo (Response body, string expand = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1758,6 +1788,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1799,10 +1830,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> PostResponsemanagementResponsesAsync (Response body)
+        public async System.Threading.Tasks.Task<Response> PostResponsemanagementResponsesAsync (Response body, string expand = null)
         {
-             ApiResponse<Response> localVarResponse = await PostResponsemanagementResponsesAsyncWithHttpInfo(body);
+             ApiResponse<Response> localVarResponse = await PostResponsemanagementResponsesAsyncWithHttpInfo(body, expand);
              return localVarResponse.Data;
 
         }
@@ -1812,8 +1844,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsemanagementResponsesAsyncWithHttpInfo (Response body)
+        public async System.Threading.Tasks.Task<ApiResponse<Response>> PostResponsemanagementResponsesAsyncWithHttpInfo (Response body, string expand = null)
         {
             // verify the required parameter 'body' is set
             if (body == null)
@@ -1844,6 +1877,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2240,10 +2274,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Response</returns>
-        public Response PutResponsemanagementResponse (string responseId, Response body)
+        public Response PutResponsemanagementResponse (string responseId, Response body, string expand = null)
         {
-             ApiResponse<Response> localVarResponse = PutResponsemanagementResponseWithHttpInfo(responseId, body);
+             ApiResponse<Response> localVarResponse = PutResponsemanagementResponseWithHttpInfo(responseId, body, expand);
              return localVarResponse.Data;
         }
 
@@ -2253,8 +2288,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>ApiResponse of Response</returns>
-        public ApiResponse< Response > PutResponsemanagementResponseWithHttpInfo (string responseId, Response body)
+        public ApiResponse< Response > PutResponsemanagementResponseWithHttpInfo (string responseId, Response body, string expand = null)
         {
             // verify the required parameter 'responseId' is set
             if (responseId == null)
@@ -2289,6 +2325,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (responseId != null) localVarPathParams.Add("responseId", Configuration.ApiClient.ParameterToString(responseId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2331,10 +2368,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of Response</returns>
-        public async System.Threading.Tasks.Task<Response> PutResponsemanagementResponseAsync (string responseId, Response body)
+        public async System.Threading.Tasks.Task<Response> PutResponsemanagementResponseAsync (string responseId, Response body, string expand = null)
         {
-             ApiResponse<Response> localVarResponse = await PutResponsemanagementResponseAsyncWithHttpInfo(responseId, body);
+             ApiResponse<Response> localVarResponse = await PutResponsemanagementResponseAsyncWithHttpInfo(responseId, body, expand);
              return localVarResponse.Data;
 
         }
@@ -2345,8 +2383,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="responseId">Response ID</param>
         /// <param name="body">Response</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
         /// <returns>Task of ApiResponse (Response)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsemanagementResponseAsyncWithHttpInfo (string responseId, Response body)
+        public async System.Threading.Tasks.Task<ApiResponse<Response>> PutResponsemanagementResponseAsyncWithHttpInfo (string responseId, Response body, string expand = null)
         {
             // verify the required parameter 'responseId' is set
             if (responseId == null)
@@ -2381,6 +2420,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
             if (responseId != null) localVarPathParams.Add("responseId", Configuration.ApiClient.ParameterToString(responseId)); // path parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter

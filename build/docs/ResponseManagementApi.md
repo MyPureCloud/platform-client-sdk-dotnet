@@ -246,7 +246,7 @@ namespace Example
 
 <a name="getresponsemanagementresponse"></a>
 
-## [**Response**](Response.html) GetResponsemanagementResponse (string responseId)
+## [**Response**](Response.html) GetResponsemanagementResponse (string responseId, string expand = null)
 
 Get details about an existing response.
 
@@ -272,11 +272,12 @@ namespace Example
 
             var apiInstance = new ResponseManagementApi();
             var responseId = responseId_example;  // string | Response ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             {
                 // Get details about an existing response.
-                Response result = apiInstance.GetResponsemanagementResponse(responseId);
+                Response result = apiInstance.GetResponsemanagementResponse(responseId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -294,6 +295,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -302,7 +304,7 @@ namespace Example
 
 <a name="getresponsemanagementresponses"></a>
 
-## [**ResponseEntityListing**](ResponseEntityListing.html) GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null)
+## [**ResponseEntityListing**](ResponseEntityListing.html) GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
 
 Gets a list of existing responses.
 
@@ -330,11 +332,12 @@ namespace Example
             var libraryId = libraryId_example;  // string | Library ID
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             {
                 // Gets a list of existing responses.
-                ResponseEntityListing result = apiInstance.GetResponsemanagementResponses(libraryId, pageNumber, pageSize);
+                ResponseEntityListing result = apiInstance.GetResponsemanagementResponses(libraryId, pageNumber, pageSize, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -354,6 +357,7 @@ namespace Example
 | **libraryId** | **string**| Library ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **expand** | **string**| Expand instructions for the return value. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -418,7 +422,7 @@ namespace Example
 
 <a name="postresponsemanagementresponses"></a>
 
-## [**Response**](Response.html) PostResponsemanagementResponses (Response body)
+## [**Response**](Response.html) PostResponsemanagementResponses (Response body, string expand = null)
 
 Create a response.
 
@@ -444,11 +448,12 @@ namespace Example
 
             var apiInstance = new ResponseManagementApi();
             var body = new Response(); // Response | Response
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             {
                 // Create a response.
-                Response result = apiInstance.PostResponsemanagementResponses(body);
+                Response result = apiInstance.PostResponsemanagementResponses(body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -466,6 +471,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Response**](Response.html)| Response |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -588,7 +594,7 @@ namespace Example
 
 <a name="putresponsemanagementresponse"></a>
 
-## [**Response**](Response.html) PutResponsemanagementResponse (string responseId, Response body)
+## [**Response**](Response.html) PutResponsemanagementResponse (string responseId, Response body, string expand = null)
 
 Update an existing response.
 
@@ -615,11 +621,12 @@ namespace Example
             var apiInstance = new ResponseManagementApi();
             var responseId = responseId_example;  // string | Response ID
             var body = new Response(); // Response | Response
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
 
             try
             {
                 // Update an existing response.
-                Response result = apiInstance.PutResponsemanagementResponse(responseId, body);
+                Response result = apiInstance.PutResponsemanagementResponse(responseId, body, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -638,6 +645,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
 | **body** | [**Response**](Response.html)| Response |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
