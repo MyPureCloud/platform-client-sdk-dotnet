@@ -9,6 +9,10 @@
       "class": "DocumentDataV2Notification"
     },
     {
+      "topic": "v2.managementunits.{id}.workforcemanagement.intraday",
+      "class": "IntradayDataUpdateNotification"
+    },
+    {
       "topic": "v2.outbound.attemptlimits.{id}",
       "class": "AttemptLimitsNotification"
     },
@@ -167,6 +171,10 @@
     {
       "topic": "v2.users.{id}.fax.documents",
       "class": "FaxDataV2Notification"
+    },
+    {
+      "topic": "v2.users.{id}.geolocation",
+      "class": "GeolocationNotification"
     },
     {
       "topic": "v2.users.{id}.outbound.contactlists.{id}.export",

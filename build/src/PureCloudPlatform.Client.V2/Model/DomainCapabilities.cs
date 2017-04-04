@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Dhcp">True if this address family on the interface is using DHCP..</param>
         /// <param name="Metric">The metric being used for the address family on this interface. Lower values will have a higher priority. If autoMetric is true, this value will be the automatically calculated metric. To set this value be sure autoMetric is false. If no value is returned, metric configuration is not supported on this Edge..</param>
         /// <param name="AutoMetric">True if the metric is being calculated automatically for the address family on this interface..</param>
-        public DomainCapabilities(bool? Enabled = null, bool? Dhcp = null, int? Metric = null, bool? AutoMetric = null)
+        /// <param name="PingEnabled">Set to true to enable this address family on this interface to respond to ping requests..</param>
+        public DomainCapabilities(bool? Enabled = null, bool? Dhcp = null, int? Metric = null, bool? AutoMetric = null, bool? PingEnabled = null)
         {
             this.Enabled = Enabled;
             this.Dhcp = Dhcp;
             this.Metric = Metric;
             this.AutoMetric = AutoMetric;
+            this.PingEnabled = PingEnabled;
         }
         
         /// <summary>
@@ -64,6 +66,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="supportsMetric", EmitDefaultValue=false)]
         public bool? SupportsMetric { get; private set; }
         /// <summary>
+        /// Set to true to enable this address family on this interface to respond to ping requests.
+        /// </summary>
+        /// <value>Set to true to enable this address family on this interface to respond to ping requests.</value>
+        [DataMember(Name="pingEnabled", EmitDefaultValue=false)]
+        public bool? PingEnabled { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -76,6 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  AutoMetric: ").Append(AutoMetric).Append("\n");
             sb.Append("  SupportsMetric: ").Append(SupportsMetric).Append("\n");
+            sb.Append("  PingEnabled: ").Append(PingEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,6 +145,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SupportsMetric == other.SupportsMetric ||
                     this.SupportsMetric != null &&
                     this.SupportsMetric.Equals(other.SupportsMetric)
+                ) &&
+                (
+                    this.PingEnabled == other.PingEnabled ||
+                    this.PingEnabled != null &&
+                    this.PingEnabled.Equals(other.PingEnabled)
                 );
         }
 
@@ -160,6 +174,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.AutoMetric.GetHashCode();
                 if (this.SupportsMetric != null)
                     hash = hash * 59 + this.SupportsMetric.GetHashCode();
+                if (this.PingEnabled != null)
+                    hash = hash * 59 + this.PingEnabled.GetHashCode();
                 return hash;
             }
         }

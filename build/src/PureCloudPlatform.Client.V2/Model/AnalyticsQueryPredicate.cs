@@ -181,6 +181,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationend,
             
             /// <summary>
+            /// Enum Segmentend for "segmentEnd"
+            /// </summary>
+            [EnumMember(Value = "segmentEnd")]
+            Segmentend,
+            
+            /// <summary>
             /// Enum Externalcontactid for "externalContactId"
             /// </summary>
             [EnumMember(Value = "externalContactId")]

@@ -144,11 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreviewTimeOutSeconds">PreviewTimeOutSeconds.</param>
         /// <param name="SingleNumberPreview">SingleNumberPreview.</param>
         /// <param name="ContactSort">ContactSort.</param>
+        /// <param name="ContactSorts">ContactSorts.</param>
         /// <param name="NoAnswerTimeout">NoAnswerTimeout.</param>
         /// <param name="CallAnalysisLanguage">CallAnalysisLanguage.</param>
         /// <param name="Priority">Priority.</param>
+        /// <param name="ContactListFilters">ContactListFilters.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, Object AdditionalProperties = null)
+        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, List<CampaignNotificationContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<CampaignNotificationUriReference> ContactListFilters = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -175,9 +177,11 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
             this.SingleNumberPreview = SingleNumberPreview;
             this.ContactSort = ContactSort;
+            this.ContactSorts = ContactSorts;
             this.NoAnswerTimeout = NoAnswerTimeout;
             this.CallAnalysisLanguage = CallAnalysisLanguage;
             this.Priority = Priority;
+            this.ContactListFilters = ContactListFilters;
             this.AdditionalProperties = AdditionalProperties;
         }
         
@@ -297,6 +301,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="contactSort", EmitDefaultValue=false)]
         public CampaignNotificationContactSort ContactSort { get; set; }
         /// <summary>
+        /// Gets or Sets ContactSorts
+        /// </summary>
+        [DataMember(Name="contactSorts", EmitDefaultValue=false)]
+        public List<CampaignNotificationContactSort> ContactSorts { get; set; }
+        /// <summary>
         /// Gets or Sets NoAnswerTimeout
         /// </summary>
         [DataMember(Name="noAnswerTimeout", EmitDefaultValue=false)]
@@ -311,6 +320,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
+        /// <summary>
+        /// Gets or Sets ContactListFilters
+        /// </summary>
+        [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
+        public List<CampaignNotificationUriReference> ContactListFilters { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
@@ -349,9 +363,11 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
             sb.Append("  SingleNumberPreview: ").Append(SingleNumberPreview).Append("\n");
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
+            sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
             sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -515,6 +531,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ContactSort.Equals(other.ContactSort)
                 ) &&
                 (
+                    this.ContactSorts == other.ContactSorts ||
+                    this.ContactSorts != null &&
+                    this.ContactSorts.SequenceEqual(other.ContactSorts)
+                ) &&
+                (
                     this.NoAnswerTimeout == other.NoAnswerTimeout ||
                     this.NoAnswerTimeout != null &&
                     this.NoAnswerTimeout.Equals(other.NoAnswerTimeout)
@@ -528,6 +549,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Priority == other.Priority ||
                     this.Priority != null &&
                     this.Priority.Equals(other.Priority)
+                ) &&
+                (
+                    this.ContactListFilters == other.ContactListFilters ||
+                    this.ContactListFilters != null &&
+                    this.ContactListFilters.SequenceEqual(other.ContactListFilters)
                 ) &&
                 (
                     this.AdditionalProperties == other.AdditionalProperties ||
@@ -597,12 +623,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.SingleNumberPreview.GetHashCode();
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
+                if (this.ContactSorts != null)
+                    hash = hash * 59 + this.ContactSorts.GetHashCode();
                 if (this.NoAnswerTimeout != null)
                     hash = hash * 59 + this.NoAnswerTimeout.GetHashCode();
                 if (this.CallAnalysisLanguage != null)
                     hash = hash * 59 + this.CallAnalysisLanguage.GetHashCode();
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                if (this.ContactListFilters != null)
+                    hash = hash * 59 + this.ContactListFilters.GetHashCode();
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;
