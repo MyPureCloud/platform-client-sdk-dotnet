@@ -8,82 +8,82 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**DeleteConversationParticipantCode**](ConversationsApi.html#deleteconversationparticipantcode) | **DELETE** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
-| [**DeleteConversationsCallParticipantConsult**](ConversationsApi.html#deleteconversationscallparticipantconsult) | **DELETE** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Cancel the transfer |
-| [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **DELETE** /api/v2/conversations/emails/{emailId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
+| [**DeleteConversationsCallParticipantConsult**](ConversationsApi.html#deleteconversationscallparticipantconsult) | **DELETE** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
+| [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **DELETE** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetConversation**](ConversationsApi.html#getconversation) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
 | [**GetConversationParticipantWrapup**](ConversationsApi.html#getconversationparticipantwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationParticipantWrapupcodes**](ConversationsApi.html#getconversationparticipantwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get conversations |
-| [**GetConversationsCall**](ConversationsApi.html#getconversationscall) | **GET** /api/v2/conversations/calls/{callId} | Get call conversation |
-| [**GetConversationsCallParticipantWrapup**](ConversationsApi.html#getconversationscallparticipantwrapup) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsCallParticipantWrapupcodes**](ConversationsApi.html#getconversationscallparticipantwrapupcodes) | **GET** /api/v2/conversations/calls/{callId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsCallback**](ConversationsApi.html#getconversationscallback) | **GET** /api/v2/conversations/callbacks/{callbackId} | Get callback conversation |
-| [**GetConversationsCallbackParticipantWrapup**](ConversationsApi.html#getconversationscallbackparticipantwrapup) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsCallbackParticipantWrapupcodes**](ConversationsApi.html#getconversationscallbackparticipantwrapupcodes) | **GET** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsCall**](ConversationsApi.html#getconversationscall) | **GET** /api/v2/conversations/calls/{conversationId} | Get call conversation |
+| [**GetConversationsCallParticipantWrapup**](ConversationsApi.html#getconversationscallparticipantwrapup) | **GET** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsCallParticipantWrapupcodes**](ConversationsApi.html#getconversationscallparticipantwrapupcodes) | **GET** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsCallback**](ConversationsApi.html#getconversationscallback) | **GET** /api/v2/conversations/callbacks/{conversationId} | Get callback conversation |
+| [**GetConversationsCallbackParticipantWrapup**](ConversationsApi.html#getconversationscallbackparticipantwrapup) | **GET** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsCallbackParticipantWrapupcodes**](ConversationsApi.html#getconversationscallbackparticipantwrapupcodes) | **GET** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsCallbacks**](ConversationsApi.html#getconversationscallbacks) | **GET** /api/v2/conversations/callbacks | Get callback conversations |
 | [**GetConversationsCalls**](ConversationsApi.html#getconversationscalls) | **GET** /api/v2/conversations/calls | Get recent conversations |
 | [**GetConversationsCallsHistory**](ConversationsApi.html#getconversationscallshistory) | **GET** /api/v2/conversations/calls/history | Get call history |
 | [**GetConversationsCallsMaximumconferenceparties**](ConversationsApi.html#getconversationscallsmaximumconferenceparties) | **GET** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
-| [**GetConversationsChat**](ConversationsApi.html#getconversationschat) | **GET** /api/v2/conversations/chats/{chatId} | Get chat conversation |
-| [**GetConversationsChatParticipantWrapup**](ConversationsApi.html#getconversationschatparticipantwrapup) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsChatParticipantWrapupcodes**](ConversationsApi.html#getconversationschatparticipantwrapupcodes) | **GET** /api/v2/conversations/chats/{chatId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsChat**](ConversationsApi.html#getconversationschat) | **GET** /api/v2/conversations/chats/{conversationId} | Get chat conversation |
+| [**GetConversationsChatParticipantWrapup**](ConversationsApi.html#getconversationschatparticipantwrapup) | **GET** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsChatParticipantWrapupcodes**](ConversationsApi.html#getconversationschatparticipantwrapupcodes) | **GET** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsChats**](ConversationsApi.html#getconversationschats) | **GET** /api/v2/conversations/chats | Get recent chat conversations |
-| [**GetConversationsCobrowsesession**](ConversationsApi.html#getconversationscobrowsesession) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId} | Get cobrowse conversation |
-| [**GetConversationsCobrowsesessionParticipantWrapup**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapup) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsCobrowsesessionParticipantWrapupcodes**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapupcodes) | **GET** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsCobrowsesession**](ConversationsApi.html#getconversationscobrowsesession) | **GET** /api/v2/conversations/cobrowsesessions/{conversationId} | Get cobrowse conversation |
+| [**GetConversationsCobrowsesessionParticipantWrapup**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapup) | **GET** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsCobrowsesessionParticipantWrapupcodes**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapupcodes) | **GET** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsCobrowsesessions**](ConversationsApi.html#getconversationscobrowsesessions) | **GET** /api/v2/conversations/cobrowsesessions | Get recent cobrowse conversations |
-| [**GetConversationsEmail**](ConversationsApi.html#getconversationsemail) | **GET** /api/v2/conversations/emails/{emailId} | Get email conversation |
-| [**GetConversationsEmailMessage**](ConversationsApi.html#getconversationsemailmessage) | **GET** /api/v2/conversations/emails/{emailId}/messages/{messageId} | Get conversation message |
-| [**GetConversationsEmailMessages**](ConversationsApi.html#getconversationsemailmessages) | **GET** /api/v2/conversations/emails/{emailId}/messages | Get conversation messages |
-| [**GetConversationsEmailMessagesDraft**](ConversationsApi.html#getconversationsemailmessagesdraft) | **GET** /api/v2/conversations/emails/{emailId}/messages/draft | Get conversation draft reply |
-| [**GetConversationsEmailParticipantWrapup**](ConversationsApi.html#getconversationsemailparticipantwrapup) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
-| [**GetConversationsEmailParticipantWrapupcodes**](ConversationsApi.html#getconversationsemailparticipantwrapupcodes) | **GET** /api/v2/conversations/emails/{emailId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsEmail**](ConversationsApi.html#getconversationsemail) | **GET** /api/v2/conversations/emails/{conversationId} | Get email conversation |
+| [**GetConversationsEmailMessage**](ConversationsApi.html#getconversationsemailmessage) | **GET** /api/v2/conversations/emails/{conversationId}/messages/{messageId} | Get conversation message |
+| [**GetConversationsEmailMessages**](ConversationsApi.html#getconversationsemailmessages) | **GET** /api/v2/conversations/emails/{conversationId}/messages | Get conversation messages |
+| [**GetConversationsEmailMessagesDraft**](ConversationsApi.html#getconversationsemailmessagesdraft) | **GET** /api/v2/conversations/emails/{conversationId}/messages/draft | Get conversation draft reply |
+| [**GetConversationsEmailParticipantWrapup**](ConversationsApi.html#getconversationsemailparticipantwrapup) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsEmailParticipantWrapupcodes**](ConversationsApi.html#getconversationsemailparticipantwrapupcodes) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **GET** /api/v2/conversations/emails | Get recent email conversations |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{callId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
-| [**PatchConversationsCallParticipant**](ConversationsApi.html#patchconversationscallparticipant) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsCallParticipantAttributes**](ConversationsApi.html#patchconversationscallparticipantattributes) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCallParticipantCommunication**](ConversationsApi.html#patchconversationscallparticipantcommunication) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsCallParticipantConsult**](ConversationsApi.html#patchconversationscallparticipantconsult) | **PATCH** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Change who can speak |
-| [**PatchConversationsCallback**](ConversationsApi.html#patchconversationscallback) | **PATCH** /api/v2/conversations/callbacks/{callbackId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsCallbackParticipant**](ConversationsApi.html#patchconversationscallbackparticipant) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsCallbackParticipantAttributes**](ConversationsApi.html#patchconversationscallbackparticipantattributes) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCallbackParticipantCommunication**](ConversationsApi.html#patchconversationscallbackparticipantcommunication) | **PATCH** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsChat**](ConversationsApi.html#patchconversationschat) | **PATCH** /api/v2/conversations/chats/{chatId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsChatParticipant**](ConversationsApi.html#patchconversationschatparticipant) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsChatParticipantAttributes**](ConversationsApi.html#patchconversationschatparticipantattributes) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsChatParticipantCommunication**](ConversationsApi.html#patchconversationschatparticipantcommunication) | **PATCH** /api/v2/conversations/chats/{chatId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsCobrowsesession**](ConversationsApi.html#patchconversationscobrowsesession) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsCobrowsesessionParticipant**](ConversationsApi.html#patchconversationscobrowsesessionparticipant) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsCobrowsesessionParticipantAttributes**](ConversationsApi.html#patchconversationscobrowsesessionparticipantattributes) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsCobrowsesessionParticipantCommunication**](ConversationsApi.html#patchconversationscobrowsesessionparticipantcommunication) | **PATCH** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
-| [**PatchConversationsEmail**](ConversationsApi.html#patchconversationsemail) | **PATCH** /api/v2/conversations/emails/{emailId} | Update a conversation by disconnecting all of the participants |
-| [**PatchConversationsEmailParticipant**](ConversationsApi.html#patchconversationsemailparticipant) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId} | Update conversation participant |
-| [**PatchConversationsEmailParticipantAttributes**](ConversationsApi.html#patchconversationsemailparticipantattributes) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
-| [**PatchConversationsEmailParticipantCommunication**](ConversationsApi.html#patchconversationsemailparticipantcommunication) | **PATCH** /api/v2/conversations/emails/{emailId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
+| [**PatchConversationsCallParticipant**](ConversationsApi.html#patchconversationscallparticipant) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsCallParticipantAttributes**](ConversationsApi.html#patchconversationscallparticipantattributes) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsCallParticipantCommunication**](ConversationsApi.html#patchconversationscallparticipantcommunication) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsCallParticipantConsult**](ConversationsApi.html#patchconversationscallparticipantconsult) | **PATCH** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Change who can speak |
+| [**PatchConversationsCallback**](ConversationsApi.html#patchconversationscallback) | **PATCH** /api/v2/conversations/callbacks/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsCallbackParticipant**](ConversationsApi.html#patchconversationscallbackparticipant) | **PATCH** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsCallbackParticipantAttributes**](ConversationsApi.html#patchconversationscallbackparticipantattributes) | **PATCH** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsCallbackParticipantCommunication**](ConversationsApi.html#patchconversationscallbackparticipantcommunication) | **PATCH** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsChat**](ConversationsApi.html#patchconversationschat) | **PATCH** /api/v2/conversations/chats/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsChatParticipant**](ConversationsApi.html#patchconversationschatparticipant) | **PATCH** /api/v2/conversations/chats/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsChatParticipantAttributes**](ConversationsApi.html#patchconversationschatparticipantattributes) | **PATCH** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsChatParticipantCommunication**](ConversationsApi.html#patchconversationschatparticipantcommunication) | **PATCH** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsCobrowsesession**](ConversationsApi.html#patchconversationscobrowsesession) | **PATCH** /api/v2/conversations/cobrowsesessions/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsCobrowsesessionParticipant**](ConversationsApi.html#patchconversationscobrowsesessionparticipant) | **PATCH** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsCobrowsesessionParticipantAttributes**](ConversationsApi.html#patchconversationscobrowsesessionparticipantattributes) | **PATCH** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsCobrowsesessionParticipantCommunication**](ConversationsApi.html#patchconversationscobrowsesessionparticipantcommunication) | **PATCH** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsEmail**](ConversationsApi.html#patchconversationsemail) | **PATCH** /api/v2/conversations/emails/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsEmailParticipant**](ConversationsApi.html#patchconversationsemailparticipant) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsEmailParticipantAttributes**](ConversationsApi.html#patchconversationsemailparticipantattributes) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsEmailParticipantCommunication**](ConversationsApi.html#patchconversationsemailparticipantcommunication) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationParticipantReplace**](ConversationsApi.html#postconversationparticipantreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **POST** /api/v2/conversations/calls/{callId} | Add a new call to a conversation |
-| [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/consult | Initiate and update consult transfer |
-| [**PostConversationsCallParticipantMonitor**](ConversationsApi.html#postconversationscallparticipantmonitor) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
-| [**PostConversationsCallParticipantReplace**](ConversationsApi.html#postconversationscallparticipantreplace) | **POST** /api/v2/conversations/calls/{callId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsCallParticipants**](ConversationsApi.html#postconversationscallparticipants) | **POST** /api/v2/conversations/calls/{callId}/participants | Add participants to a conversation |
-| [**PostConversationsCallbackParticipantReplace**](ConversationsApi.html#postconversationscallbackparticipantreplace) | **POST** /api/v2/conversations/callbacks/{callbackId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **POST** /api/v2/conversations/calls/{conversationId} | Add a new call to a conversation |
+| [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
+| [**PostConversationsCallParticipantMonitor**](ConversationsApi.html#postconversationscallparticipantmonitor) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
+| [**PostConversationsCallParticipantReplace**](ConversationsApi.html#postconversationscallparticipantreplace) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsCallParticipants**](ConversationsApi.html#postconversationscallparticipants) | **POST** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
+| [**PostConversationsCallbackParticipantReplace**](ConversationsApi.html#postconversationscallbackparticipantreplace) | **POST** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCallbacks**](ConversationsApi.html#postconversationscallbacks) | **POST** /api/v2/conversations/callbacks | Create a Callback |
 | [**PostConversationsCalls**](ConversationsApi.html#postconversationscalls) | **POST** /api/v2/conversations/calls | Create a call conversation |
-| [**PostConversationsChatParticipantReplace**](ConversationsApi.html#postconversationschatparticipantreplace) | **POST** /api/v2/conversations/chats/{chatId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsChatParticipantReplace**](ConversationsApi.html#postconversationschatparticipantreplace) | **POST** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsChats**](ConversationsApi.html#postconversationschats) | **POST** /api/v2/conversations/chats | Create a web chat conversation |
-| [**PostConversationsCobrowsesessionParticipantReplace**](ConversationsApi.html#postconversationscobrowsesessionparticipantreplace) | **POST** /api/v2/conversations/cobrowsesessions/{cobrowseId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsEmailMessages**](ConversationsApi.html#postconversationsemailmessages) | **POST** /api/v2/conversations/emails/{emailId}/messages | Send an email reply |
-| [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **POST** /api/v2/conversations/emails/{emailId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsCobrowsesessionParticipantReplace**](ConversationsApi.html#postconversationscobrowsesessionparticipantreplace) | **POST** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsEmailMessages**](ConversationsApi.html#postconversationsemailmessages) | **POST** /api/v2/conversations/emails/{conversationId}/messages | Send an email reply |
+| [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **POST** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **POST** /api/v2/conversations/emails | Create an email conversation |
 | [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
-| [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{emailId}/messages/draft | Update conversation draft reply |
+| [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
 {: class="table table-striped"}
 
 <a name="deleteconversationparticipantcode"></a>
@@ -147,7 +147,7 @@ void (empty response body)
 
 <a name="deleteconversationscallparticipantconsult"></a>
 
-## **string** DeleteConversationsCallParticipantConsult (string callId, string participantId)
+## **string** DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
 
 Cancel the transfer
 
@@ -172,13 +172,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Cancel the transfer
-                string result = apiInstance.DeleteConversationsCallParticipantConsult(callId, participantId);
+                string result = apiInstance.DeleteConversationsCallParticipantConsult(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -195,7 +195,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -205,7 +205,7 @@ namespace Example
 
 <a name="deleteconversationsemailmessagesdraftattachment"></a>
 
-## **string** DeleteConversationsEmailMessagesDraftAttachment (string emailId, string attachmentId)
+## **string** DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
 
 Delete attachment from draft
 
@@ -230,13 +230,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var attachmentId = attachmentId_example;  // string | attachmentId
 
             try
             {
                 // Delete attachment from draft
-                string result = apiInstance.DeleteConversationsEmailMessagesDraftAttachment(emailId, attachmentId);
+                string result = apiInstance.DeleteConversationsEmailMessagesDraftAttachment(conversationId, attachmentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -253,7 +253,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **attachmentId** | **string**| attachmentId |  |
 {: class="table table-striped"}
 
@@ -549,7 +549,7 @@ namespace Example
 
 <a name="getconversationscall"></a>
 
-## [**CallConversation**](CallConversation.html) GetConversationsCall (string callId)
+## [**CallConversation**](CallConversation.html) GetConversationsCall (string conversationId)
 
 Get call conversation
 
@@ -574,12 +574,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
                 // Get call conversation
-                CallConversation result = apiInstance.GetConversationsCall(callId);
+                CallConversation result = apiInstance.GetConversationsCall(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -596,7 +596,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -605,7 +605,7 @@ namespace Example
 
 <a name="getconversationscallparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsCallParticipantWrapup (string callId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -630,14 +630,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetConversationsCallParticipantWrapup(callId, participantId, provisional);
+                Wrapup result = apiInstance.GetConversationsCallParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -654,7 +654,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
@@ -665,7 +665,7 @@ namespace Example
 
 <a name="getconversationscallparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallParticipantWrapupcodes (string callId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallParticipantWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -690,13 +690,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallParticipantWrapupcodes(callId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -713,7 +713,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -723,7 +723,7 @@ namespace Example
 
 <a name="getconversationscallback"></a>
 
-## [**CallbackConversation**](CallbackConversation.html) GetConversationsCallback (string callbackId)
+## [**CallbackConversation**](CallbackConversation.html) GetConversationsCallback (string conversationId)
 
 Get callback conversation
 
@@ -748,12 +748,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
                 // Get callback conversation
-                CallbackConversation result = apiInstance.GetConversationsCallback(callbackId);
+                CallbackConversation result = apiInstance.GetConversationsCallback(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -770,7 +770,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -779,7 +779,7 @@ namespace Example
 
 <a name="getconversationscallbackparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsCallbackParticipantWrapup (string callbackId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -804,14 +804,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetConversationsCallbackParticipantWrapup(callbackId, participantId, provisional);
+                Wrapup result = apiInstance.GetConversationsCallbackParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -828,7 +828,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
@@ -839,7 +839,7 @@ namespace Example
 
 <a name="getconversationscallbackparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallbackParticipantWrapupcodes (string callbackId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallbackParticipantWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -864,13 +864,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallbackParticipantWrapupcodes(callbackId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallbackParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -887,7 +887,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -1110,7 +1110,7 @@ This endpoint does require any parameters.
 
 <a name="getconversationschat"></a>
 
-## [**ChatConversation**](ChatConversation.html) GetConversationsChat (string chatId)
+## [**ChatConversation**](ChatConversation.html) GetConversationsChat (string conversationId)
 
 Get chat conversation
 
@@ -1135,12 +1135,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
                 // Get chat conversation
-                ChatConversation result = apiInstance.GetConversationsChat(chatId);
+                ChatConversation result = apiInstance.GetConversationsChat(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1157,7 +1157,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1166,7 +1166,7 @@ namespace Example
 
 <a name="getconversationschatparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsChatParticipantWrapup (string chatId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -1191,14 +1191,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetConversationsChatParticipantWrapup(chatId, participantId, provisional);
+                Wrapup result = apiInstance.GetConversationsChatParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1215,7 +1215,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
@@ -1226,7 +1226,7 @@ namespace Example
 
 <a name="getconversationschatparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsChatParticipantWrapupcodes (string chatId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -1251,13 +1251,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsChatParticipantWrapupcodes(chatId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsChatParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1274,7 +1274,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -1335,7 +1335,7 @@ This endpoint does require any parameters.
 
 <a name="getconversationscobrowsesession"></a>
 
-## [**CobrowseConversation**](CobrowseConversation.html) GetConversationsCobrowsesession (string cobrowseId)
+## [**CobrowseConversation**](CobrowseConversation.html) GetConversationsCobrowsesession (string conversationId)
 
 Get cobrowse conversation
 
@@ -1360,12 +1360,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
                 // Get cobrowse conversation
-                CobrowseConversation result = apiInstance.GetConversationsCobrowsesession(cobrowseId);
+                CobrowseConversation result = apiInstance.GetConversationsCobrowsesession(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1382,7 +1382,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1391,7 +1391,7 @@ namespace Example
 
 <a name="getconversationscobrowsesessionparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsCobrowsesessionParticipantWrapup (string cobrowseId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -1416,14 +1416,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetConversationsCobrowsesessionParticipantWrapup(cobrowseId, participantId, provisional);
+                Wrapup result = apiInstance.GetConversationsCobrowsesessionParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1440,7 +1440,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
@@ -1451,7 +1451,7 @@ namespace Example
 
 <a name="getconversationscobrowsesessionparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCobrowsesessionParticipantWrapupcodes (string cobrowseId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCobrowsesessionParticipantWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -1476,13 +1476,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCobrowsesessionParticipantWrapupcodes(cobrowseId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCobrowsesessionParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1499,7 +1499,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -1560,7 +1560,7 @@ This endpoint does require any parameters.
 
 <a name="getconversationsemail"></a>
 
-## [**EmailConversation**](EmailConversation.html) GetConversationsEmail (string emailId)
+## [**EmailConversation**](EmailConversation.html) GetConversationsEmail (string conversationId)
 
 Get email conversation
 
@@ -1585,12 +1585,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
                 // Get email conversation
-                EmailConversation result = apiInstance.GetConversationsEmail(emailId);
+                EmailConversation result = apiInstance.GetConversationsEmail(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1607,7 +1607,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1616,7 +1616,7 @@ namespace Example
 
 <a name="getconversationsemailmessage"></a>
 
-## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessage (string emailId, string messageId)
+## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessage (string conversationId, string messageId)
 
 Get conversation message
 
@@ -1641,13 +1641,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var messageId = messageId_example;  // string | messageId
 
             try
             {
                 // Get conversation message
-                EmailMessage result = apiInstance.GetConversationsEmailMessage(emailId, messageId);
+                EmailMessage result = apiInstance.GetConversationsEmailMessage(conversationId, messageId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1664,7 +1664,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **messageId** | **string**| messageId |  |
 {: class="table table-striped"}
 
@@ -1674,7 +1674,7 @@ namespace Example
 
 <a name="getconversationsemailmessages"></a>
 
-## [**EmailMessageListing**](EmailMessageListing.html) GetConversationsEmailMessages (string emailId)
+## [**EmailMessageListing**](EmailMessageListing.html) GetConversationsEmailMessages (string conversationId)
 
 Get conversation messages
 
@@ -1699,12 +1699,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
                 // Get conversation messages
-                EmailMessageListing result = apiInstance.GetConversationsEmailMessages(emailId);
+                EmailMessageListing result = apiInstance.GetConversationsEmailMessages(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1721,7 +1721,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1730,7 +1730,7 @@ namespace Example
 
 <a name="getconversationsemailmessagesdraft"></a>
 
-## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessagesDraft (string emailId)
+## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessagesDraft (string conversationId)
 
 Get conversation draft reply
 
@@ -1755,12 +1755,12 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
 
             try
             {
                 // Get conversation draft reply
-                EmailMessage result = apiInstance.GetConversationsEmailMessagesDraft(emailId);
+                EmailMessage result = apiInstance.GetConversationsEmailMessagesDraft(conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1777,7 +1777,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1786,7 +1786,7 @@ namespace Example
 
 <a name="getconversationsemailparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsEmailParticipantWrapup (string emailId, string participantId, bool? provisional = null)
+## [**Wrapup**](Wrapup.html) GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
 
 Get the wrap-up for this conversation participant. 
 
@@ -1811,14 +1811,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
 
             try
             {
                 // Get the wrap-up for this conversation participant. 
-                Wrapup result = apiInstance.GetConversationsEmailParticipantWrapup(emailId, participantId, provisional);
+                Wrapup result = apiInstance.GetConversationsEmailParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1835,7 +1835,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
 {: class="table table-striped"}
@@ -1846,7 +1846,7 @@ namespace Example
 
 <a name="getconversationsemailparticipantwrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsEmailParticipantWrapupcodes (string emailId, string participantId)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsEmailParticipantWrapupcodes (string conversationId, string participantId)
 
 Get list of wrapup codes for this conversation participant
 
@@ -1871,13 +1871,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Get list of wrapup codes for this conversation participant
-                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsEmailParticipantWrapupcodes(emailId, participantId);
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsEmailParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1894,7 +1894,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -2073,7 +2073,7 @@ void (empty response body)
 
 <a name="patchconversationscall"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsCall (string callId, Conversation body)
+## [**Conversation**](Conversation.html) PatchConversationsCall (string conversationId, Conversation body)
 
 Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
 
@@ -2098,13 +2098,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new Conversation(); // Conversation | Conversation
 
             try
             {
                 // Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
-                Conversation result = apiInstance.PatchConversationsCall(callId, body);
+                Conversation result = apiInstance.PatchConversationsCall(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2121,7 +2121,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -2131,7 +2131,7 @@ namespace Example
 
 <a name="patchconversationscallparticipant"></a>
 
-## void PatchConversationsCallParticipant (string callId, string participantId, MediaParticipantRequest body)
+## void PatchConversationsCallParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2156,14 +2156,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant request
 
             try
             {
                 // Update conversation participant
-                apiInstance.PatchConversationsCallParticipant(callId, participantId, body);
+                apiInstance.PatchConversationsCallParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -2179,7 +2179,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant request |  |
 {: class="table table-striped"}
@@ -2190,7 +2190,7 @@ void (empty response body)
 
 <a name="patchconversationscallparticipantattributes"></a>
 
-## void PatchConversationsCallParticipantAttributes (string callId, string participantId, ParticipantAttributes body)
+## void PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2215,14 +2215,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsCallParticipantAttributes(callId, participantId, body);
+                apiInstance.PatchConversationsCallParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -2238,7 +2238,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
@@ -2249,7 +2249,7 @@ void (empty response body)
 
 <a name="patchconversationscallparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsCallParticipantCommunication (string callId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchConversationsCallParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2274,7 +2274,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
@@ -2282,7 +2282,7 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsCallParticipantCommunication(callId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchConversationsCallParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2299,7 +2299,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
@@ -2311,7 +2311,7 @@ namespace Example
 
 <a name="patchconversationscallparticipantconsult"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchConversationsCallParticipantConsult (string callId, string participantId, ConsultTransferUpdate body)
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransferUpdate body)
 
 Change who can speak
 
@@ -2336,14 +2336,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ConsultTransferUpdate(); // ConsultTransferUpdate | new speak to
 
             try
             {
                 // Change who can speak
-                ConsultTransferResponse result = apiInstance.PatchConversationsCallParticipantConsult(callId, participantId, body);
+                ConsultTransferResponse result = apiInstance.PatchConversationsCallParticipantConsult(conversationId, participantId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2360,7 +2360,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransferUpdate**](ConsultTransferUpdate.html)| new speak to |  |
 {: class="table table-striped"}
@@ -2371,7 +2371,7 @@ namespace Example
 
 <a name="patchconversationscallback"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsCallback (string callbackId, Conversation body)
+## [**Conversation**](Conversation.html) PatchConversationsCallback (string conversationId, Conversation body)
 
 Update a conversation by disconnecting all of the participants
 
@@ -2396,13 +2396,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new Conversation(); // Conversation | Conversation
 
             try
             {
                 // Update a conversation by disconnecting all of the participants
-                Conversation result = apiInstance.PatchConversationsCallback(callbackId, body);
+                Conversation result = apiInstance.PatchConversationsCallback(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2419,7 +2419,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -2429,7 +2429,7 @@ namespace Example
 
 <a name="patchconversationscallbackparticipant"></a>
 
-## void PatchConversationsCallbackParticipant (string callbackId, string participantId, MediaParticipantRequest body)
+## void PatchConversationsCallbackParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2454,14 +2454,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
 
             try
             {
                 // Update conversation participant
-                apiInstance.PatchConversationsCallbackParticipant(callbackId, participantId, body);
+                apiInstance.PatchConversationsCallbackParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -2477,7 +2477,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
 {: class="table table-striped"}
@@ -2488,7 +2488,7 @@ void (empty response body)
 
 <a name="patchconversationscallbackparticipantattributes"></a>
 
-## void PatchConversationsCallbackParticipantAttributes (string callbackId, string participantId, ParticipantAttributes body)
+## void PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2513,14 +2513,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Attributes
 
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsCallbackParticipantAttributes(callbackId, participantId, body);
+                apiInstance.PatchConversationsCallbackParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -2536,7 +2536,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Attributes |  |
 {: class="table table-striped"}
@@ -2547,7 +2547,7 @@ void (empty response body)
 
 <a name="patchconversationscallbackparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsCallbackParticipantCommunication (string callbackId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchConversationsCallbackParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2572,7 +2572,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
@@ -2580,7 +2580,7 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsCallbackParticipantCommunication(callbackId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchConversationsCallbackParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2597,7 +2597,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
@@ -2609,7 +2609,7 @@ namespace Example
 
 <a name="patchconversationschat"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsChat (string chatId, Conversation body)
+## [**Conversation**](Conversation.html) PatchConversationsChat (string conversationId, Conversation body)
 
 Update a conversation by disconnecting all of the participants
 
@@ -2634,13 +2634,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new Conversation(); // Conversation | Conversation
 
             try
             {
                 // Update a conversation by disconnecting all of the participants
-                Conversation result = apiInstance.PatchConversationsChat(chatId, body);
+                Conversation result = apiInstance.PatchConversationsChat(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2657,7 +2657,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -2667,7 +2667,7 @@ namespace Example
 
 <a name="patchconversationschatparticipant"></a>
 
-## void PatchConversationsChatParticipant (string chatId, string participantId, MediaParticipantRequest body)
+## void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -2692,14 +2692,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
 
             try
             {
                 // Update conversation participant
-                apiInstance.PatchConversationsChatParticipant(chatId, participantId, body);
+                apiInstance.PatchConversationsChatParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -2715,7 +2715,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
 {: class="table table-striped"}
@@ -2726,7 +2726,7 @@ void (empty response body)
 
 <a name="patchconversationschatparticipantattributes"></a>
 
-## void PatchConversationsChatParticipantAttributes (string chatId, string participantId, ParticipantAttributes body)
+## void PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -2751,14 +2751,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsChatParticipantAttributes(chatId, participantId, body);
+                apiInstance.PatchConversationsChatParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -2774,7 +2774,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
@@ -2785,7 +2785,7 @@ void (empty response body)
 
 <a name="patchconversationschatparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsChatParticipantCommunication (string chatId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -2810,7 +2810,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
@@ -2818,7 +2818,7 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsChatParticipantCommunication(chatId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchConversationsChatParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2835,7 +2835,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
@@ -2847,7 +2847,7 @@ namespace Example
 
 <a name="patchconversationscobrowsesession"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsCobrowsesession (string cobrowseId, Conversation body)
+## [**Conversation**](Conversation.html) PatchConversationsCobrowsesession (string conversationId, Conversation body)
 
 Update a conversation by disconnecting all of the participants
 
@@ -2872,13 +2872,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new Conversation(); // Conversation | Conversation
 
             try
             {
                 // Update a conversation by disconnecting all of the participants
-                Conversation result = apiInstance.PatchConversationsCobrowsesession(cobrowseId, body);
+                Conversation result = apiInstance.PatchConversationsCobrowsesession(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2895,7 +2895,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -2905,7 +2905,7 @@ namespace Example
 
 <a name="patchconversationscobrowsesessionparticipant"></a>
 
-## void PatchConversationsCobrowsesessionParticipant (string cobrowseId, string participantId, MediaParticipantRequest body = null)
+## void PatchConversationsCobrowsesessionParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
 
 Update conversation participant
 
@@ -2930,14 +2930,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
 
             try
             {
                 // Update conversation participant
-                apiInstance.PatchConversationsCobrowsesessionParticipant(cobrowseId, participantId, body);
+                apiInstance.PatchConversationsCobrowsesessionParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -2953,7 +2953,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
 {: class="table table-striped"}
@@ -2964,7 +2964,7 @@ void (empty response body)
 
 <a name="patchconversationscobrowsesessionparticipantattributes"></a>
 
-## void PatchConversationsCobrowsesessionParticipantAttributes (string cobrowseId, string participantId, ParticipantAttributes body = null)
+## void PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
 Update the attributes on a conversation participant.
 
@@ -2989,14 +2989,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
 
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsCobrowsesessionParticipantAttributes(cobrowseId, participantId, body);
+                apiInstance.PatchConversationsCobrowsesessionParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -3012,7 +3012,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
 {: class="table table-striped"}
@@ -3023,7 +3023,7 @@ void (empty response body)
 
 <a name="patchconversationscobrowsesessionparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsCobrowsesessionParticipantCommunication (string cobrowseId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -3048,7 +3048,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
@@ -3056,7 +3056,7 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsCobrowsesessionParticipantCommunication(cobrowseId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchConversationsCobrowsesessionParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3073,7 +3073,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
@@ -3085,7 +3085,7 @@ namespace Example
 
 <a name="patchconversationsemail"></a>
 
-## [**Conversation**](Conversation.html) PatchConversationsEmail (string emailId, Conversation body)
+## [**Conversation**](Conversation.html) PatchConversationsEmail (string conversationId, Conversation body)
 
 Update a conversation by disconnecting all of the participants
 
@@ -3110,13 +3110,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new Conversation(); // Conversation | Conversation
 
             try
             {
                 // Update a conversation by disconnecting all of the participants
-                Conversation result = apiInstance.PatchConversationsEmail(emailId, body);
+                Conversation result = apiInstance.PatchConversationsEmail(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3133,7 +3133,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -3143,7 +3143,7 @@ namespace Example
 
 <a name="patchconversationsemailparticipant"></a>
 
-## void PatchConversationsEmailParticipant (string emailId, string participantId, MediaParticipantRequest body)
+## void PatchConversationsEmailParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
 Update conversation participant
 
@@ -3168,14 +3168,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
 
             try
             {
                 // Update conversation participant
-                apiInstance.PatchConversationsEmailParticipant(emailId, participantId, body);
+                apiInstance.PatchConversationsEmailParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -3191,7 +3191,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Update request |  |
 {: class="table table-striped"}
@@ -3202,7 +3202,7 @@ void (empty response body)
 
 <a name="patchconversationsemailparticipantattributes"></a>
 
-## void PatchConversationsEmailParticipantAttributes (string emailId, string participantId, ParticipantAttributes body)
+## void PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
 Update the attributes on a conversation participant.
 
@@ -3227,14 +3227,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
 
             try
             {
                 // Update the attributes on a conversation participant.
-                apiInstance.PatchConversationsEmailParticipantAttributes(emailId, participantId, body);
+                apiInstance.PatchConversationsEmailParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -3250,7 +3250,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ParticipantAttributes**](ParticipantAttributes.html)| Participant attributes |  |
 {: class="table table-striped"}
@@ -3261,7 +3261,7 @@ void (empty response body)
 
 <a name="patchconversationsemailparticipantcommunication"></a>
 
-## [**Empty**](Empty.html) PatchConversationsEmailParticipantCommunication (string emailId, string participantId, string communicationId, MediaParticipantRequest body)
+## [**Empty**](Empty.html) PatchConversationsEmailParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
 Update conversation participant's communication by disconnecting it.
 
@@ -3286,7 +3286,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var communicationId = communicationId_example;  // string | communicationId
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
@@ -3294,7 +3294,7 @@ namespace Example
             try
             {
                 // Update conversation participant's communication by disconnecting it.
-                Empty result = apiInstance.PatchConversationsEmailParticipantCommunication(emailId, participantId, communicationId, body);
+                Empty result = apiInstance.PatchConversationsEmailParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3311,7 +3311,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **communicationId** | **string**| communicationId |  |
 | **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
@@ -3611,7 +3611,7 @@ void (empty response body)
 
 <a name="postconversationscall"></a>
 
-## [**Conversation**](Conversation.html) PostConversationsCall (string callId, CallCommand body)
+## [**Conversation**](Conversation.html) PostConversationsCall (string conversationId, CallCommand body)
 
 Add a new call to a conversation
 
@@ -3636,13 +3636,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new CallCommand(); // CallCommand | Conversation
 
             try
             {
                 // Add a new call to a conversation
-                Conversation result = apiInstance.PostConversationsCall(callId, body);
+                Conversation result = apiInstance.PostConversationsCall(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3659,7 +3659,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**CallCommand**](CallCommand.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -3669,7 +3669,7 @@ namespace Example
 
 <a name="postconversationscallparticipantconsult"></a>
 
-## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsult (string callId, string participantId, ConsultTransfer body)
+## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
 
 Initiate and update consult transfer
 
@@ -3694,14 +3694,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new ConsultTransfer(); // ConsultTransfer | Destination address & initial speak to
 
             try
             {
                 // Initiate and update consult transfer
-                ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsult(callId, participantId, body);
+                ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsult(conversationId, participantId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3718,7 +3718,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**ConsultTransfer**](ConsultTransfer.html)| Destination address &amp; initial speak to |  |
 {: class="table table-striped"}
@@ -3729,7 +3729,7 @@ namespace Example
 
 <a name="postconversationscallparticipantmonitor"></a>
 
-## void PostConversationsCallParticipantMonitor (string callId, string participantId)
+## void PostConversationsCallParticipantMonitor (string conversationId, string participantId)
 
 Listen in on the conversation from the point of view of a given participant.
 
@@ -3754,13 +3754,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
 
             try
             {
                 // Listen in on the conversation from the point of view of a given participant.
-                apiInstance.PostConversationsCallParticipantMonitor(callId, participantId);
+                apiInstance.PostConversationsCallParticipantMonitor(conversationId, participantId);
             }
             catch (Exception e)
             {
@@ -3776,7 +3776,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 {: class="table table-striped"}
 
@@ -3786,7 +3786,7 @@ void (empty response body)
 
 <a name="postconversationscallparticipantreplace"></a>
 
-## void PostConversationsCallParticipantReplace (string callId, string participantId, TransferRequest body)
+## void PostConversationsCallParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -3811,14 +3811,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostConversationsCallParticipantReplace(callId, participantId, body);
+                apiInstance.PostConversationsCallParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -3834,7 +3834,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
@@ -3845,7 +3845,7 @@ void (empty response body)
 
 <a name="postconversationscallparticipants"></a>
 
-## [**Conversation**](Conversation.html) PostConversationsCallParticipants (string callId, Conversation body)
+## [**Conversation**](Conversation.html) PostConversationsCallParticipants (string conversationId, Conversation body)
 
 Add participants to a conversation
 
@@ -3870,13 +3870,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callId = callId_example;  // string | callId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new Conversation(); // Conversation | Conversation
 
             try
             {
                 // Add participants to a conversation
-                Conversation result = apiInstance.PostConversationsCallParticipants(callId, body);
+                Conversation result = apiInstance.PostConversationsCallParticipants(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3893,7 +3893,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callId** | **string**| callId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**Conversation**](Conversation.html)| Conversation |  |
 {: class="table table-striped"}
 
@@ -3903,7 +3903,7 @@ namespace Example
 
 <a name="postconversationscallbackparticipantreplace"></a>
 
-## void PostConversationsCallbackParticipantReplace (string callbackId, string participantId, TransferRequest body)
+## void PostConversationsCallbackParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -3928,14 +3928,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var callbackId = callbackId_example;  // string | callbackId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostConversationsCallbackParticipantReplace(callbackId, participantId, body);
+                apiInstance.PostConversationsCallbackParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -3951,7 +3951,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **callbackId** | **string**| callbackId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
@@ -4074,7 +4074,7 @@ namespace Example
 
 <a name="postconversationschatparticipantreplace"></a>
 
-## void PostConversationsChatParticipantReplace (string chatId, string participantId, TransferRequest body)
+## void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -4099,14 +4099,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var chatId = chatId_example;  // string | chatId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostConversationsChatParticipantReplace(chatId, participantId, body);
+                apiInstance.PostConversationsChatParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -4122,7 +4122,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **chatId** | **string**| chatId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
@@ -4189,7 +4189,7 @@ namespace Example
 
 <a name="postconversationscobrowsesessionparticipantreplace"></a>
 
-## void PostConversationsCobrowsesessionParticipantReplace (string cobrowseId, string participantId, TransferRequest body = null)
+## void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
 
 Replace this participant with the specified user and/or address
 
@@ -4214,14 +4214,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var cobrowseId = cobrowseId_example;  // string | cobrowseId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest |  (optional) 
 
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostConversationsCobrowsesessionParticipantReplace(cobrowseId, participantId, body);
+                apiInstance.PostConversationsCobrowsesessionParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -4237,7 +4237,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **cobrowseId** | **string**| cobrowseId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)|  | [optional]  |
 {: class="table table-striped"}
@@ -4248,7 +4248,7 @@ void (empty response body)
 
 <a name="postconversationsemailmessages"></a>
 
-## [**EmailMessage**](EmailMessage.html) PostConversationsEmailMessages (string emailId, EmailMessage body)
+## [**EmailMessage**](EmailMessage.html) PostConversationsEmailMessages (string conversationId, EmailMessage body)
 
 Send an email reply
 
@@ -4273,13 +4273,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new EmailMessage(); // EmailMessage | Reply
 
             try
             {
                 // Send an email reply
-                EmailMessage result = apiInstance.PostConversationsEmailMessages(emailId, body);
+                EmailMessage result = apiInstance.PostConversationsEmailMessages(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4296,7 +4296,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**EmailMessage**](EmailMessage.html)| Reply |  |
 {: class="table table-striped"}
 
@@ -4306,7 +4306,7 @@ namespace Example
 
 <a name="postconversationsemailparticipantreplace"></a>
 
-## void PostConversationsEmailParticipantReplace (string emailId, string participantId, TransferRequest body)
+## void PostConversationsEmailParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
 Replace this participant with the specified user and/or address
 
@@ -4331,14 +4331,14 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var participantId = participantId_example;  // string | participantId
             var body = new TransferRequest(); // TransferRequest | Transfer request
 
             try
             {
                 // Replace this participant with the specified user and/or address
-                apiInstance.PostConversationsEmailParticipantReplace(emailId, participantId, body);
+                apiInstance.PostConversationsEmailParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
             {
@@ -4354,7 +4354,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **participantId** | **string**| participantId |  |
 | **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
 {: class="table table-striped"}
@@ -4477,7 +4477,7 @@ namespace Example
 
 <a name="putconversationsemailmessagesdraft"></a>
 
-## [**EmailMessage**](EmailMessage.html) PutConversationsEmailMessagesDraft (string emailId, EmailMessage body)
+## [**EmailMessage**](EmailMessage.html) PutConversationsEmailMessagesDraft (string conversationId, EmailMessage body)
 
 Update conversation draft reply
 
@@ -4502,13 +4502,13 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new ConversationsApi();
-            var emailId = emailId_example;  // string | emailId
+            var conversationId = conversationId_example;  // string | conversationId
             var body = new EmailMessage(); // EmailMessage | Draft
 
             try
             {
                 // Update conversation draft reply
-                EmailMessage result = apiInstance.PutConversationsEmailMessagesDraft(emailId, body);
+                EmailMessage result = apiInstance.PutConversationsEmailMessagesDraft(conversationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4525,7 +4525,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **emailId** | **string**| emailId |  |
+| **conversationId** | **string**| conversationId |  |
 | **body** | [**EmailMessage**](EmailMessage.html)| Draft |  |
 {: class="table table-striped"}
 

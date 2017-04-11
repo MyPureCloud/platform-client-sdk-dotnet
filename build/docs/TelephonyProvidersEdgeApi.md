@@ -70,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesPhonebasesettingsTemplate**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphonebasesettingstemplate) | **GET** /api/v2/telephony/providers/edges/phonebasesettings/template | Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance |
 | [**GetTelephonyProvidersEdgesPhones**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphones) | **GET** /api/v2/telephony/providers/edges/phones | Get a list of Phone Instances |
 | [**GetTelephonyProvidersEdgesPhonesTemplate**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphonestemplate) | **GET** /api/v2/telephony/providers/edges/phones/template | Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance |
+| [**GetTelephonyProvidersEdgesPhysicalinterfaces**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesphysicalinterfaces) | **GET** /api/v2/telephony/providers/edges/physicalinterfaces | Get physical interfaces for edges. |
 | [**GetTelephonyProvidersEdgesSite**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessite) | **GET** /api/v2/telephony/providers/edges/sites/{siteId} | Get a Site by ID. |
 | [**GetTelephonyProvidersEdgesSiteNumberplan**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessitenumberplan) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId} | Get a Number Plan by ID. |
 | [**GetTelephonyProvidersEdgesSiteNumberplans**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgessitenumberplans) | **GET** /api/v2/telephony/providers/edges/sites/{siteId}/numberplans | Get the list of Number Plans for this Site. |
@@ -3803,6 +3804,62 @@ namespace Example
 ### Return type
 
 [**Phone**](Phone.html)
+
+<a name="gettelephonyprovidersedgesphysicalinterfaces"></a>
+
+## [**List&lt;DomainPhysicalInterface&gt;**](DomainPhysicalInterface.html) GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
+
+Get physical interfaces for edges.
+
+Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesPhysicalinterfacesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeIds = edgeIds_example;  // string | Comma separated list of Edge Id's
+
+            try
+            {
+                // Get physical interfaces for edges.
+                List&lt;DomainPhysicalInterface&gt; result = apiInstance.GetTelephonyProvidersEdgesPhysicalinterfaces(edgeIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesPhysicalinterfaces: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeIds** | **string**| Comma separated list of Edge Id&#39;s |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<DomainPhysicalInterface>**](DomainPhysicalInterface.html)
 
 <a name="gettelephonyprovidersedgessite"></a>
 

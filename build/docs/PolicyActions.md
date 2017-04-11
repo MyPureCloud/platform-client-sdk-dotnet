@@ -15,6 +15,7 @@ title: PolicyActions
 | **AssignCalibrations** | [**List&lt;CalibrationAssignment&gt;**](CalibrationAssignment.html) |  | [optional] |
 | **RetentionDuration** | [**RetentionDuration**](RetentionDuration.html) |  | [optional] |
 | **InitiateScreenRecording** | [**InitiateScreenRecording**](InitiateScreenRecording.html) |  | [optional] |
+| **MediaTranscriptions** | [**List&lt;MediaTranscription&gt;**](MediaTranscription.html) |  | [optional] |
 {: class="table table-striped"}
 
 

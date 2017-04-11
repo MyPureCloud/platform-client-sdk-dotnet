@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="Permissions">Permissions.</param>
         /// <param name="Prerequisites">Prerequisites.</param>
-        public LicenseDefinition(string Description = null, Permissions Permissions = null, List<AddressableLicenseDefinition> Prerequisites = null)
+        /// <param name="Comprises">Comprises.</param>
+        public LicenseDefinition(string Description = null, Permissions Permissions = null, List<AddressableLicenseDefinition> Prerequisites = null, List<LicenseDefinition> Comprises = null)
         {
             this.Description = Description;
             this.Permissions = Permissions;
             this.Prerequisites = Prerequisites;
+            this.Comprises = Comprises;
         }
         
         /// <summary>
@@ -53,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="prerequisites", EmitDefaultValue=false)]
         public List<AddressableLicenseDefinition> Prerequisites { get; set; }
         /// <summary>
+        /// Gets or Sets Comprises
+        /// </summary>
+        [DataMember(Name="comprises", EmitDefaultValue=false)]
+        public List<LicenseDefinition> Comprises { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -70,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
             sb.Append("  Prerequisites: ").Append(Prerequisites).Append("\n");
+            sb.Append("  Comprises: ").Append(Comprises).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -128,6 +136,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Prerequisites.SequenceEqual(other.Prerequisites)
                 ) &&
                 (
+                    this.Comprises == other.Comprises ||
+                    this.Comprises != null &&
+                    this.Comprises.SequenceEqual(other.Comprises)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -153,6 +166,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Permissions.GetHashCode();
                 if (this.Prerequisites != null)
                     hash = hash * 59 + this.Prerequisites.GetHashCode();
+                if (this.Comprises != null)
+                    hash = hash * 59 + this.Comprises.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

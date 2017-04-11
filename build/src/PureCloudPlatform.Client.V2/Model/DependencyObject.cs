@@ -129,6 +129,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Response,
             
             /// <summary>
+            /// Enum Schedule for "SCHEDULE"
+            /// </summary>
+            [EnumMember(Value = "SCHEDULE")]
+            Schedule,
+            
+            /// <summary>
+            /// Enum Schedulegroup for "SCHEDULEGROUP"
+            /// </summary>
+            [EnumMember(Value = "SCHEDULEGROUP")]
+            Schedulegroup,
+            
+            /// <summary>
             /// Enum Secureaction for "SECUREACTION"
             /// </summary>
             [EnumMember(Value = "SECUREACTION")]
@@ -183,15 +195,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type.</param>
         /// <param name="Deleted">Deleted.</param>
         /// <param name="Updated">Updated.</param>
+        /// <param name="StateUnknown">StateUnknown.</param>
         /// <param name="ConsumedResources">ConsumedResources.</param>
         /// <param name="ConsumingResources">ConsumingResources.</param>
-        public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, bool? Updated = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
+        public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, bool? Updated = null, bool? StateUnknown = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.Type = Type;
             this.Deleted = Deleted;
             this.Updated = Updated;
+            this.StateUnknown = StateUnknown;
             this.ConsumedResources = ConsumedResources;
             this.ConsumingResources = ConsumingResources;
         }
@@ -223,6 +237,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="updated", EmitDefaultValue=false)]
         public bool? Updated { get; set; }
         /// <summary>
+        /// Gets or Sets StateUnknown
+        /// </summary>
+        [DataMember(Name="stateUnknown", EmitDefaultValue=false)]
+        public bool? StateUnknown { get; set; }
+        /// <summary>
         /// Gets or Sets ConsumedResources
         /// </summary>
         [DataMember(Name="consumedResources", EmitDefaultValue=false)]
@@ -252,6 +271,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
             sb.Append("  Updated: ").Append(Updated).Append("\n");
+            sb.Append("  StateUnknown: ").Append(StateUnknown).Append("\n");
             sb.Append("  ConsumedResources: ").Append(ConsumedResources).Append("\n");
             sb.Append("  ConsumingResources: ").Append(ConsumingResources).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -322,6 +342,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Updated.Equals(other.Updated)
                 ) &&
                 (
+                    this.StateUnknown == other.StateUnknown ||
+                    this.StateUnknown != null &&
+                    this.StateUnknown.Equals(other.StateUnknown)
+                ) &&
+                (
                     this.ConsumedResources == other.ConsumedResources ||
                     this.ConsumedResources != null &&
                     this.ConsumedResources.SequenceEqual(other.ConsumedResources)
@@ -361,6 +386,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Deleted.GetHashCode();
                 if (this.Updated != null)
                     hash = hash * 59 + this.Updated.GetHashCode();
+                if (this.StateUnknown != null)
+                    hash = hash * 59 + this.StateUnknown.GetHashCode();
                 if (this.ConsumedResources != null)
                     hash = hash * 59 + this.ConsumedResources.GetHashCode();
                 if (this.ConsumingResources != null)

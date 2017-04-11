@@ -316,7 +316,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectReasons">List of reasons that this call was disconnected. This will be set once the call disconnects..</param>
         /// <param name="FaxStatus">Extra information on fax transmission..</param>
         /// <param name="Provider">The source provider for the call..</param>
-        public CallBasic(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null)
+        /// <param name="ScriptId">The UUID of the script to use..</param>
+        public CallBasic(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null)
         {
             this.State = State;
             this.Id = Id;
@@ -337,6 +338,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectReasons = DisconnectReasons;
             this.FaxStatus = FaxStatus;
             this.Provider = Provider;
+            this.ScriptId = ScriptId;
         }
         
         /// <summary>
@@ -429,6 +431,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
+        /// The UUID of the script to use.
+        /// </summary>
+        /// <value>The UUID of the script to use.</value>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -455,6 +463,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -585,6 +594,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
+                ) &&
+                (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
                 );
         }
 
@@ -637,6 +651,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 return hash;
             }
         }

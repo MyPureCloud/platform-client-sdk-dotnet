@@ -57,6 +57,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ActivityCodeContainer</returns>
         ApiResponse<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId);
         /// <summary>
+        /// Get intraday queues for the given date
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>WfmIntradayQueueListing</returns>
+        WfmIntradayQueueListing GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date);
+
+        /// <summary>
+        /// Get intraday queues for the given date
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>ApiResponse of WfmIntradayQueueListing</returns>
+        ApiResponse<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date);
+        /// <summary>
         /// Get a time off request by id
         /// </summary>
         /// <remarks>
@@ -218,6 +241,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId, TimeOffRequestPatch body = null);
         /// <summary>
+        /// Get intraday data for the given date for the requested queueIds
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>IntradayResponse</returns>
+        IntradayResponse PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null);
+
+        /// <summary>
+        /// Get intraday data for the given date for the requested queueIds
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of IntradayResponse</returns>
+        ApiResponse<IntradayResponse> PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId, IntradayQueryDataCommand body = null);
+        /// <summary>
         /// Get user schedules within the given time range
         /// </summary>
         /// <remarks>
@@ -305,6 +351,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The muId of the management unit.</param>
         /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId);
+        /// <summary>
+        /// Get intraday queues for the given date
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>Task of WfmIntradayQueueListing</returns>
+        System.Threading.Tasks.Task<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId, string date);
+
+        /// <summary>
+        /// Get intraday queues for the given date
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>Task of ApiResponse (WfmIntradayQueueListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date);
         /// <summary>
         /// Get a time off request by id
         /// </summary>
@@ -466,6 +535,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId, TimeOffRequestPatch body = null);
+        /// <summary>
+        /// Get intraday data for the given date for the requested queueIds
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of IntradayResponse</returns>
+        System.Threading.Tasks.Task<IntradayResponse> PostWorkforcemanagementManagementunitIntradayAsync (string muId, IntradayQueryDataCommand body = null);
+
+        /// <summary>
+        /// Get intraday data for the given date for the requested queueIds
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (IntradayResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<IntradayResponse>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId, IntradayQueryDataCommand body = null);
         /// <summary>
         /// Get user schedules within the given time range
         /// </summary>
@@ -911,6 +1003,175 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ActivityCodeContainer>(localVarStatusCode,
                 localVarHeaders,
                 (ActivityCodeContainer) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActivityCodeContainer)));
+            
+        }
+
+        /// <summary>
+        /// Get intraday queues for the given date 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>WfmIntradayQueueListing</returns>
+        public WfmIntradayQueueListing GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date)
+        {
+             ApiResponse<WfmIntradayQueueListing> localVarResponse = GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo(muId, date);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get intraday queues for the given date 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>ApiResponse of WfmIntradayQueueListing</returns>
+        public ApiResponse< WfmIntradayQueueListing > GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
+            // verify the required parameter 'date' is set
+            if (date == null)
+                throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitIntradayQueues: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitIntradayQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmIntradayQueueListing>(localVarStatusCode,
+                localVarHeaders,
+                (WfmIntradayQueueListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmIntradayQueueListing)));
+            
+        }
+
+        /// <summary>
+        /// Get intraday queues for the given date 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>Task of WfmIntradayQueueListing</returns>
+        public async System.Threading.Tasks.Task<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId, string date)
+        {
+             ApiResponse<WfmIntradayQueueListing> localVarResponse = await GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo(muId, date);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get intraday queues for the given date 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
+        /// <returns>Task of ApiResponse (WfmIntradayQueueListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
+            // verify the required parameter 'date' is set
+            if (date == null)
+                throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitIntradayQueues: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementManagementunitIntradayQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmIntradayQueueListing>(localVarStatusCode,
+                localVarHeaders,
+                (WfmIntradayQueueListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmIntradayQueueListing)));
             
         }
 
@@ -2071,6 +2332,183 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null);
+        }
+
+        /// <summary>
+        /// Get intraday data for the given date for the requested queueIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>IntradayResponse</returns>
+        public IntradayResponse PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null)
+        {
+             ApiResponse<IntradayResponse> localVarResponse = PostWorkforcemanagementManagementunitIntradayWithHttpInfo(muId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get intraday data for the given date for the requested queueIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of IntradayResponse</returns>
+        public ApiResponse< IntradayResponse > PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitIntraday");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitIntraday: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitIntraday: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IntradayResponse>(localVarStatusCode,
+                localVarHeaders,
+                (IntradayResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntradayResponse)));
+            
+        }
+
+        /// <summary>
+        /// Get intraday data for the given date for the requested queueIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of IntradayResponse</returns>
+        public async System.Threading.Tasks.Task<IntradayResponse> PostWorkforcemanagementManagementunitIntradayAsync (string muId, IntradayQueryDataCommand body = null)
+        {
+             ApiResponse<IntradayResponse> localVarResponse = await PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo(muId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get intraday data for the given date for the requested queueIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="muId">The muId of the management unit.</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (IntradayResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<IntradayResponse>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
+        {
+            // verify the required parameter 'muId' is set
+            if (muId == null)
+                throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitIntraday");
+
+            var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitIntraday: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementManagementunitIntraday: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IntradayResponse>(localVarStatusCode,
+                localVarHeaders,
+                (IntradayResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntradayResponse)));
+            
         }
 
         /// <summary>

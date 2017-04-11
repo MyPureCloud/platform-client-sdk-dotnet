@@ -11,6 +11,7 @@ title: LicenseDefinition
 | **Description** | **string** |  | [optional] |
 | **Permissions** | [**Permissions**](Permissions.html) |  | [optional] |
 | **Prerequisites** | [**List&lt;AddressableLicenseDefinition&gt;**](AddressableLicenseDefinition.html) |  | [optional] |
+| **Comprises** | [**List&lt;LicenseDefinition&gt;**](LicenseDefinition.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

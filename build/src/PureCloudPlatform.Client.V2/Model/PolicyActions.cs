@@ -29,7 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
         /// <param name="RetentionDuration">RetentionDuration.</param>
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
-        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null)
+        /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
         {
             this.RetainRecording = RetainRecording;
             this.DeleteRecording = DeleteRecording;
@@ -39,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssignCalibrations = AssignCalibrations;
             this.RetentionDuration = RetentionDuration;
             this.InitiateScreenRecording = InitiateScreenRecording;
+            this.MediaTranscriptions = MediaTranscriptions;
         }
         
         /// <summary>
@@ -85,6 +87,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="initiateScreenRecording", EmitDefaultValue=false)]
         public InitiateScreenRecording InitiateScreenRecording { get; set; }
         /// <summary>
+        /// Gets or Sets MediaTranscriptions
+        /// </summary>
+        [DataMember(Name="mediaTranscriptions", EmitDefaultValue=false)]
+        public List<MediaTranscription> MediaTranscriptions { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -100,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
             sb.Append("  InitiateScreenRecording: ").Append(InitiateScreenRecording).Append("\n");
+            sb.Append("  MediaTranscriptions: ").Append(MediaTranscriptions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InitiateScreenRecording == other.InitiateScreenRecording ||
                     this.InitiateScreenRecording != null &&
                     this.InitiateScreenRecording.Equals(other.InitiateScreenRecording)
+                ) &&
+                (
+                    this.MediaTranscriptions == other.MediaTranscriptions ||
+                    this.MediaTranscriptions != null &&
+                    this.MediaTranscriptions.SequenceEqual(other.MediaTranscriptions)
                 );
         }
 
@@ -205,6 +218,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.RetentionDuration.GetHashCode();
                 if (this.InitiateScreenRecording != null)
                     hash = hash * 59 + this.InitiateScreenRecording.GetHashCode();
+                if (this.MediaTranscriptions != null)
+                    hash = hash * 59 + this.MediaTranscriptions.GetHashCode();
                 return hash;
             }
         }

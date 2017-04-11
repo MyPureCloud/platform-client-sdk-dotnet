@@ -1496,6 +1496,27 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Phone</returns>
         ApiResponse<Phone> GetTelephonyProvidersEdgesPhonesTemplateWithHttpInfo (string phoneBaseSettingsId);
         /// <summary>
+        /// Get physical interfaces for edges.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>List&lt;DomainPhysicalInterface&gt;</returns>
+        List<DomainPhysicalInterface> GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds);
+
+        /// <summary>
+        /// Get physical interfaces for edges.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>ApiResponse of List&lt;DomainPhysicalInterface&gt;</returns>
+        ApiResponse<List<DomainPhysicalInterface>> GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds);
+        /// <summary>
         /// Get a Site by ID.
         /// </summary>
         /// <remarks>
@@ -4276,6 +4297,27 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="phoneBaseSettingsId">The id of a Phone Base Settings object upon which to base this Phone</param>
         /// <returns>Task of ApiResponse (Phone)</returns>
         System.Threading.Tasks.Task<ApiResponse<Phone>> GetTelephonyProvidersEdgesPhonesTemplateAsyncWithHttpInfo (string phoneBaseSettingsId);
+        /// <summary>
+        /// Get physical interfaces for edges.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>Task of List&lt;DomainPhysicalInterface&gt;</returns>
+        System.Threading.Tasks.Task<List<DomainPhysicalInterface>> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds);
+
+        /// <summary>
+        /// Get physical interfaces for edges.
+        /// </summary>
+        /// <remarks>
+        /// Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>Task of ApiResponse (List&lt;DomainPhysicalInterface&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<DomainPhysicalInterface>>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds);
         /// <summary>
         /// Get a Site by ID.
         /// </summary>
@@ -16006,6 +16048,163 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Phone>(localVarStatusCode,
                 localVarHeaders,
                 (Phone) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Phone)));
+            
+        }
+
+        /// <summary>
+        /// Get physical interfaces for edges. Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>List&lt;DomainPhysicalInterface&gt;</returns>
+        public List<DomainPhysicalInterface> GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
+        {
+             ApiResponse<List<DomainPhysicalInterface>> localVarResponse = GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo(edgeIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get physical interfaces for edges. Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>ApiResponse of List&lt;DomainPhysicalInterface&gt;</returns>
+        public ApiResponse< List<DomainPhysicalInterface> > GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds)
+        {
+            // verify the required parameter 'edgeIds' is set
+            if (edgeIds == null)
+                throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhysicalinterfaces");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/physicalinterfaces";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (edgeIds != null) localVarQueryParams.Add("edgeIds", Configuration.ApiClient.ParameterToString(edgeIds)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesPhysicalinterfaces: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesPhysicalinterfaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<DomainPhysicalInterface>>(localVarStatusCode,
+                localVarHeaders,
+                (List<DomainPhysicalInterface>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DomainPhysicalInterface>)));
+            
+        }
+
+        /// <summary>
+        /// Get physical interfaces for edges. Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>Task of List&lt;DomainPhysicalInterface&gt;</returns>
+        public async System.Threading.Tasks.Task<List<DomainPhysicalInterface>> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds)
+        {
+             ApiResponse<List<DomainPhysicalInterface>> localVarResponse = await GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo(edgeIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get physical interfaces for edges. Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
+        /// <returns>Task of ApiResponse (List&lt;DomainPhysicalInterface&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<DomainPhysicalInterface>>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds)
+        {
+            // verify the required parameter 'edgeIds' is set
+            if (edgeIds == null)
+                throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhysicalinterfaces");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/physicalinterfaces";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (edgeIds != null) localVarQueryParams.Add("edgeIds", Configuration.ApiClient.ParameterToString(edgeIds)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesPhysicalinterfaces: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesPhysicalinterfaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<DomainPhysicalInterface>>(localVarStatusCode,
+                localVarHeaders,
+                (List<DomainPhysicalInterface>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DomainPhysicalInterface>)));
             
         }
 
