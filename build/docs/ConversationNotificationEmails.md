@@ -12,6 +12,7 @@ title: ConversationNotificationEmails
 | **Held** | **bool?** |  | [optional] |
 | **Subject** | **string** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
+| **ScriptId** | **string** |  | [optional] |
 | **MessagesSent** | **int?** |  | [optional] |
 | **ErrorInfo** | [**ConversationNotificationErrorDetails**](ConversationNotificationErrorDetails.html) |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |

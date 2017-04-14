@@ -184,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Held">Held.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="Provider">Provider.</param>
+        /// <param name="ScriptId">ScriptId.</param>
         /// <param name="MessagesSent">MessagesSent.</param>
         /// <param name="ErrorInfo">ErrorInfo.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
@@ -191,13 +192,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationEmails(string Id = null, StateEnum? State = null, bool? Held = null, string Subject = null, string Provider = null, int? MessagesSent = null, ConversationNotificationErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationEmails(string Id = null, StateEnum? State = null, bool? Held = null, string Subject = null, string Provider = null, string ScriptId = null, int? MessagesSent = null, ConversationNotificationErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
             this.Held = Held;
             this.Subject = Subject;
             this.Provider = Provider;
+            this.ScriptId = ScriptId;
             this.MessagesSent = MessagesSent;
             this.ErrorInfo = ErrorInfo;
             this.DisconnectType = DisconnectType;
@@ -227,6 +229,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        /// <summary>
+        /// Gets or Sets ScriptId
+        /// </summary>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
         /// <summary>
         /// Gets or Sets MessagesSent
         /// </summary>
@@ -270,6 +277,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  MessagesSent: ").Append(MessagesSent).Append("\n");
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
@@ -339,6 +347,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
                     this.MessagesSent == other.MessagesSent ||
                     this.MessagesSent != null &&
                     this.MessagesSent.Equals(other.MessagesSent)
@@ -396,6 +409,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Subject.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 if (this.MessagesSent != null)
                     hash = hash * 59 + this.MessagesSent.GetHashCode();
                 if (this.ErrorInfo != null)

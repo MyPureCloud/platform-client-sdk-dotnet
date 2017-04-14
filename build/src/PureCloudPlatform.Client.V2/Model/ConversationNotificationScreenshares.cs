@@ -209,11 +209,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Context">Context.</param>
         /// <param name="Sharing">Sharing.</param>
         /// <param name="Provider">Provider.</param>
+        /// <param name="ScriptId">ScriptId.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationScreenshares(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationScreenshares(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? Sharing = null, string Provider = null, string ScriptId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Self = Self;
@@ -221,6 +222,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Context = Context;
             this.Sharing = Sharing;
             this.Provider = Provider;
+            this.ScriptId = ScriptId;
             this.DisconnectType = DisconnectType;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
@@ -253,6 +255,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
+        /// Gets or Sets ScriptId
+        /// </summary>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+        /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
@@ -281,6 +288,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
@@ -352,6 +360,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
@@ -396,6 +409,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Sharing.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.ConnectedTime != null)

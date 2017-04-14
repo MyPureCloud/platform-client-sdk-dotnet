@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Primary">Primary.</param>
         /// <param name="Message">Message.</param>
-        public UserPresenceNotification(string Source = null, UserPresenceNotificationPresenceDefinition PresenceDefinition = null, bool? Primary = null, string Message = null)
+        /// <param name="ModifiedDate">ModifiedDate.</param>
+        public UserPresenceNotification(string Source = null, UserPresenceNotificationPresenceDefinition PresenceDefinition = null, bool? Primary = null, string Message = null, DateTime? ModifiedDate = null)
         {
             this.Source = Source;
             this.PresenceDefinition = PresenceDefinition;
             this.Primary = Primary;
             this.Message = Message;
+            this.ModifiedDate = ModifiedDate;
         }
         
         /// <summary>
@@ -54,6 +56,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
         /// <summary>
+        /// Gets or Sets ModifiedDate
+        /// </summary>
+        [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
+        public DateTime? ModifiedDate { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
             sb.Append("  Primary: ").Append(Primary).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
+            sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -120,6 +128,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
+                ) &&
+                (
+                    this.ModifiedDate == other.ModifiedDate ||
+                    this.ModifiedDate != null &&
+                    this.ModifiedDate.Equals(other.ModifiedDate)
                 );
         }
 
@@ -142,6 +155,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Primary.GetHashCode();
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
+                if (this.ModifiedDate != null)
+                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 return hash;
             }
         }

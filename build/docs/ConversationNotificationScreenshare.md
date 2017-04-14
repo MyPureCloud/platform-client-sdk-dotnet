@@ -13,6 +13,7 @@ title: ConversationNotificationScreenshare
 | **Context** | **string** |  | [optional] |
 | **Sharing** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
+| **ScriptId** | **string** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |

@@ -206,6 +206,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">State.</param>
         /// <param name="Id">Id.</param>
         /// <param name="Provider">Provider.</param>
+        /// <param name="ScriptId">ScriptId.</param>
         /// <param name="RoomId">RoomId.</param>
         /// <param name="Held">Held.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
@@ -213,11 +214,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationChat(StateEnum? State = null, string Id = null, string Provider = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationChat(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
             this.Provider = Provider;
+            this.ScriptId = ScriptId;
             this.RoomId = RoomId;
             this.Held = Held;
             this.DisconnectType = DisconnectType;
@@ -237,6 +239,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        /// <summary>
+        /// Gets or Sets ScriptId
+        /// </summary>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
         /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
@@ -278,6 +285,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
@@ -337,6 +345,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -390,6 +403,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
                 if (this.Held != null)

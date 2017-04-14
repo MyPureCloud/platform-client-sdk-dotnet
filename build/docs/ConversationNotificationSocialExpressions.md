@@ -16,6 +16,7 @@ title: ConversationNotificationSocialExpressions
 | **RecordingId** | **string** |  | [optional] |
 | **Held** | **bool?** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
+| **ScriptId** | **string** |  | [optional] |
 | **DisconnectType** | **string** |  | [optional] |
 | **StartHoldTime** | **DateTime?** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
