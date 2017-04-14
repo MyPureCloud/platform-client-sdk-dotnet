@@ -4,7 +4,7 @@ title: Platform API Client SDK - .NET
 
 [![NuGet Badge](https://buildstats.info/nuget/PureCloudPlatform.Client.V2)](https://www.nuget.org/packages/PureCloudPlatform.Client.V2/)
 
-Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/latest/](https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/latest/)
+Documentation can be found at [https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/](https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/)
 
 ## Install Using nuget
 
@@ -60,7 +60,7 @@ In addition to the process in the tutorial above, swap out the POST to "https://
 
 Use the following namespaces:
 
-~~~
+~~~ csharp
 using ININ.PureCloudApi.Api;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Extensions;
@@ -68,7 +68,7 @@ using ININ.PureCloudApi.Extensions;
 
 Then call the _PostToken_ extension method of _ApiClient_, including the redirect URI and auth code:
 
-~~~
+~~~ csharp
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
   "http://redirecturi.com/",
@@ -86,7 +86,7 @@ For headless and non-user applications, the [Client Credentials Grant](http://de
 
 First, use the following namespaces:
 
-~~~
+~~~ csharp
 using ININ.PureCloudApi.Api;
 using ININ.PureCloudApi.Client;
 using ININ.PureCloudApi.Extensions;
@@ -94,7 +94,7 @@ using ININ.PureCloudApi.Extensions;
 
 Then call the _PostToken_ extension method of _ApiClient_, leaving the redirect URI and auth code blank:
 
-~~~
+~~~ csharp
 var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
   "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo");
 Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
@@ -106,7 +106,7 @@ Console.WriteLine("Access token=" + accessTokenInfo.AccessToken);
 
 If connecting to a PureCloud environment other than mypurecloud.com (e.g. mypurecloud.ie), set the new base path before constructing any API classes. The new base path should be the base path to the Platform API for your environment.
 
-~~~
+~~~ csharp
 Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api.mypurecloud.ie");
 ~~~
 
@@ -114,7 +114,7 @@ Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api.mypure
 
 Once an access token has been obtained from one of the OAuth methods, it must be set in the SDK's configuration.
 
-~~~
+~~~ csharp
 ININ.PureCloudApi.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zk3333QImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
 ~~~
 
@@ -127,7 +127,7 @@ There are two steps to making requests:
 
 Example of getting the authenticated user's information:
 
-~~~
+~~~ csharp
 // Instantiate instance of the Users API
 var usersApi = new UsersApi();
 
@@ -148,25 +148,25 @@ The helper uses [WebSocketSharp](https://www.nuget.org/packages/WebSocketSharp)'
 
 Create a new instance:
 
-~~~csharp
+~~~ csharp
 var handler = new NotificationHandler();
 ~~~
 
 Add a subscription:
 
-~~~csharp
+~~~ csharp
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
 ~~~
 
 Remove a subscription:
 
-~~~csharp
+~~~ csharp
 handler.RemoveSubscription($"v2.users.{_me.Id}.conversations");
 ~~~
 
 Handle incoming notification:
 
-~~~csharp
+~~~ csharp
 handler.NotificationReceived += (data) =>
 {
     Console.WriteLine(JsonConvert.SerializeObject(data, Formatting.Indented));
@@ -181,7 +181,7 @@ handler.NotificationReceived += (data) =>
 
 Full example:
 
-~~~csharp
+~~~ csharp
 var handler = new NotificationHandler();
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
 handler.AddSubscription($"v2.users.{_me.Id}.conversations", typeof(ConversationNotification));
