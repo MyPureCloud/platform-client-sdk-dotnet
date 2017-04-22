@@ -284,7 +284,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
         /// <param name="RoomId">RoomId.</param>
-        public ChatConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, ChatConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ChatConversationNotificationErrorInfo ErrorInfo = null, ChatConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ChatConversationNotificationUriReference ExternalContact = null, ChatConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string RoomId = null)
+        public ChatConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, ChatConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ChatConversationNotificationErrorInfo ErrorInfo = null, ChatConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ChatConversationNotificationUriReference ExternalContact = null, ChatConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string RoomId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -373,7 +373,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public DocumentDataV2NotificationCreatedBy User { get; set; }
+        public DependencyTrackingBuildNotificationNotificationUser User { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>

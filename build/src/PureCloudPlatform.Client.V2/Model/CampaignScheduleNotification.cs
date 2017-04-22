@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Campaign">Campaign.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public CampaignScheduleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleNotificationIntervals> Intervals = null, string TimeZone = null, DocumentDataV2NotificationCreatedBy Campaign = null, Object AdditionalProperties = null)
+        public CampaignScheduleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleNotificationIntervals> Intervals = null, string TimeZone = null, DependencyTrackingBuildNotificationNotificationUser Campaign = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
-        public DocumentDataV2NotificationCreatedBy Campaign { get; set; }
+        public DependencyTrackingBuildNotificationNotificationUser Campaign { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>

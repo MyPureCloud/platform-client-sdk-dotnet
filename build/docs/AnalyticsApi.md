@@ -33,7 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteanalyticsreportingschedule"></a>
 
-## **string** DeleteAnalyticsReportingSchedule (string scheduleId)
+## void DeleteAnalyticsReportingSchedule (string scheduleId)
 
 Delete a scheduled report job.
 
@@ -63,8 +63,7 @@ namespace Example
             try
             {
                 // Delete a scheduled report job.
-                string result = apiInstance.DeleteAnalyticsReportingSchedule(scheduleId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteAnalyticsReportingSchedule(scheduleId);
             }
             catch (Exception e)
             {
@@ -85,7 +84,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getanalyticsconversationdetails"></a>
 

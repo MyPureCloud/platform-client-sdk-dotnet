@@ -87,7 +87,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteoutboundattemptlimit"></a>
 
-## **string** DeleteOutboundAttemptlimit (string attemptLimitsId)
+## void DeleteOutboundAttemptlimit (string attemptLimitsId)
 
 Delete attempt limits
 
@@ -117,8 +117,7 @@ namespace Example
             try
             {
                 // Delete attempt limits
-                string result = apiInstance.DeleteOutboundAttemptlimit(attemptLimitsId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundAttemptlimit(attemptLimitsId);
             }
             catch (Exception e)
             {
@@ -139,11 +138,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundcallabletimeset"></a>
 
-## **string** DeleteOutboundCallabletimeset (string callableTimeSetId)
+## void DeleteOutboundCallabletimeset (string callableTimeSetId)
 
 Delete callable time set
 
@@ -173,8 +172,7 @@ namespace Example
             try
             {
                 // Delete callable time set
-                string result = apiInstance.DeleteOutboundCallabletimeset(callableTimeSetId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundCallabletimeset(callableTimeSetId);
             }
             catch (Exception e)
             {
@@ -195,11 +193,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundcallanalysisresponseset"></a>
 
-## **string** DeleteOutboundCallanalysisresponseset (string callAnalysisSetId)
+## void DeleteOutboundCallanalysisresponseset (string callAnalysisSetId)
 
 Delete a dialer call analysis response set.
 
@@ -229,8 +227,7 @@ namespace Example
             try
             {
                 // Delete a dialer call analysis response set.
-                string result = apiInstance.DeleteOutboundCallanalysisresponseset(callAnalysisSetId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundCallanalysisresponseset(callAnalysisSetId);
             }
             catch (Exception e)
             {
@@ -251,7 +248,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundcampaign"></a>
 
@@ -366,7 +363,7 @@ void (empty response body)
 
 <a name="deleteoutboundcampaignrule"></a>
 
-## **string** DeleteOutboundCampaignrule (string campaignRuleId)
+## void DeleteOutboundCampaignrule (string campaignRuleId)
 
 Delete Campaign Rule
 
@@ -396,8 +393,7 @@ namespace Example
             try
             {
                 // Delete Campaign Rule
-                string result = apiInstance.DeleteOutboundCampaignrule(campaignRuleId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundCampaignrule(campaignRuleId);
             }
             catch (Exception e)
             {
@@ -418,11 +414,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundcontactlist"></a>
 
-## **string** DeleteOutboundContactlist (string contactListId)
+## void DeleteOutboundContactlist (string contactListId)
 
 Delete a contact list.
 
@@ -452,8 +448,7 @@ namespace Example
             try
             {
                 // Delete a contact list.
-                string result = apiInstance.DeleteOutboundContactlist(contactListId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundContactlist(contactListId);
             }
             catch (Exception e)
             {
@@ -474,11 +469,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundcontactlistcontact"></a>
 
-## **string** DeleteOutboundContactlistContact (string contactListId, string contactId)
+## void DeleteOutboundContactlistContact (string contactListId, string contactId)
 
 Delete a contact.
 
@@ -509,8 +504,7 @@ namespace Example
             try
             {
                 // Delete a contact.
-                string result = apiInstance.DeleteOutboundContactlistContact(contactListId, contactId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundContactlistContact(contactListId, contactId);
             }
             catch (Exception e)
             {
@@ -532,11 +526,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutbounddnclist"></a>
 
-## **string** DeleteOutboundDnclist (string dncListId)
+## void DeleteOutboundDnclist (string dncListId)
 
 Delete dialer DNC list
 
@@ -566,8 +560,7 @@ namespace Example
             try
             {
                 // Delete dialer DNC list
-                string result = apiInstance.DeleteOutboundDnclist(dncListId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundDnclist(dncListId);
             }
             catch (Exception e)
             {
@@ -588,11 +581,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundruleset"></a>
 
-## **string** DeleteOutboundRuleset (string ruleSetId)
+## void DeleteOutboundRuleset (string ruleSetId)
 
 Delete a Rule set.
 
@@ -622,8 +615,7 @@ namespace Example
             try
             {
                 // Delete a Rule set.
-                string result = apiInstance.DeleteOutboundRuleset(ruleSetId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundRuleset(ruleSetId);
             }
             catch (Exception e)
             {
@@ -644,11 +636,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundschedulescampaign"></a>
 
-## **string** DeleteOutboundSchedulesCampaign (string campaignId)
+## void DeleteOutboundSchedulesCampaign (string campaignId)
 
 Delete a dialer campaign schedule.
 
@@ -678,8 +670,7 @@ namespace Example
             try
             {
                 // Delete a dialer campaign schedule.
-                string result = apiInstance.DeleteOutboundSchedulesCampaign(campaignId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundSchedulesCampaign(campaignId);
             }
             catch (Exception e)
             {
@@ -700,11 +691,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundschedulessequence"></a>
 
-## **string** DeleteOutboundSchedulesSequence (string sequenceId)
+## void DeleteOutboundSchedulesSequence (string sequenceId)
 
 Delete a dialer sequence schedule.
 
@@ -734,8 +725,7 @@ namespace Example
             try
             {
                 // Delete a dialer sequence schedule.
-                string result = apiInstance.DeleteOutboundSchedulesSequence(sequenceId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundSchedulesSequence(sequenceId);
             }
             catch (Exception e)
             {
@@ -756,11 +746,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteoutboundsequence"></a>
 
-## **string** DeleteOutboundSequence (string sequenceId)
+## void DeleteOutboundSequence (string sequenceId)
 
 Delete a dialer campaign sequence.
 
@@ -790,8 +780,7 @@ namespace Example
             try
             {
                 // Delete a dialer campaign sequence.
-                string result = apiInstance.DeleteOutboundSequence(sequenceId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteOutboundSequence(sequenceId);
             }
             catch (Exception e)
             {
@@ -812,7 +801,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getoutboundattemptlimit"></a>
 

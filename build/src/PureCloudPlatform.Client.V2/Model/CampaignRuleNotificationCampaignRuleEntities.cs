@@ -23,7 +23,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Campaigns">Campaigns.</param>
         /// <param name="Sequences">Sequences.</param>
-        public CampaignRuleNotificationCampaignRuleEntities(List<DocumentDataV2NotificationCreatedBy> Campaigns = null, List<CampaignRuleNotificationUriReference> Sequences = null)
+        public CampaignRuleNotificationCampaignRuleEntities(List<DependencyTrackingBuildNotificationNotificationUser> Campaigns = null, List<CampaignRuleNotificationUriReference> Sequences = null)
         {
             this.Campaigns = Campaigns;
             this.Sequences = Sequences;
@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Campaigns
         /// </summary>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
-        public List<DocumentDataV2NotificationCreatedBy> Campaigns { get; set; }
+        public List<DependencyTrackingBuildNotificationNotificationUser> Campaigns { get; set; }
         /// <summary>
         /// Gets or Sets Sequences
         /// </summary>

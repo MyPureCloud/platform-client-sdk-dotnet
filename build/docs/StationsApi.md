@@ -14,7 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletestationassociateduser"></a>
 
-## **string** DeleteStationAssociateduser (string stationId)
+## void DeleteStationAssociateduser (string stationId)
 
 Unassigns the user assigned to this station
 
@@ -44,8 +44,7 @@ namespace Example
             try
             {
                 // Unassigns the user assigned to this station
-                string result = apiInstance.DeleteStationAssociateduser(stationId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteStationAssociateduser(stationId);
             }
             catch (Exception e)
             {
@@ -66,7 +65,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getstation"></a>
 
@@ -126,7 +125,7 @@ namespace Example
 
 <a name="getstations"></a>
 
-## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null)
+## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
 
 Get the list of available stations.
 
@@ -155,13 +154,14 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var name = name_example;  // string | Name (optional) 
+            var webRtcUserId = webRtcUserId_example;  // string | Filter for the webRtc station of the webRtcUserId (optional) 
             var id = id_example;  // string | Comma separated list of stationIds (optional) 
             var lineAppearanceId = lineAppearanceId_example;  // string | lineAppearanceId (optional) 
 
             try
             {
                 // Get the list of available stations.
-                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, id, lineAppearanceId);
+                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, webRtcUserId, id, lineAppearanceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -182,6 +182,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **name** | **string**| Name | [optional]  |
+| **webRtcUserId** | **string**| Filter for the webRtc station of the webRtcUserId | [optional]  |
 | **id** | **string**| Comma separated list of stationIds | [optional]  |
 | **lineAppearanceId** | **string**| lineAppearanceId | [optional]  |
 {: class="table table-striped"}

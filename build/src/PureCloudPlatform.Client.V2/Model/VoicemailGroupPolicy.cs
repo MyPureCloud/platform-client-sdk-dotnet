@@ -19,6 +19,45 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class VoicemailGroupPolicy :  IEquatable<VoicemailGroupPolicy>
     {
         /// <summary>
+        /// Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.
+        /// </summary>
+        /// <value>Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum GroupAlertTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Random for "RANDOM"
+            /// </summary>
+            [EnumMember(Value = "RANDOM")]
+            Random,
+            
+            /// <summary>
+            /// Enum RoundRobin for "ROUND_ROBIN"
+            /// </summary>
+            [EnumMember(Value = "ROUND_ROBIN")]
+            RoundRobin,
+            
+            /// <summary>
+            /// Enum Sequential for "SEQUENTIAL"
+            /// </summary>
+            [EnumMember(Value = "SEQUENTIAL")]
+            Sequential
+        }
+        /// <summary>
+        /// Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.
+        /// </summary>
+        /// <value>Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin.</value>
+        [DataMember(Name="groupAlertType", EmitDefaultValue=false)]
+        public GroupAlertTypeEnum? GroupAlertType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailGroupPolicy" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -27,7 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SendEmailNotifications">Whether email notifications are sent to group members when a new voicemail is received.</param>
         /// <param name="RotateCallsSecs">How many seconds to ring before rotating to the next member in the group.</param>
         /// <param name="StopRingingAfterRotations">How many rotations to go through.</param>
-        public VoicemailGroupPolicy(string Name = null, Group Group = null, bool? Enabled = null, bool? SendEmailNotifications = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null)
+        /// <param name="OverflowGroupId"> A fallback group to contact when all of the members in this group did not answer the call..</param>
+        /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
+        public VoicemailGroupPolicy(string Name = null, Group Group = null, bool? Enabled = null, bool? SendEmailNotifications = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null)
         {
             this.Name = Name;
             this.Group = Group;
@@ -35,6 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SendEmailNotifications = SendEmailNotifications;
             this.RotateCallsSecs = RotateCallsSecs;
             this.StopRingingAfterRotations = StopRingingAfterRotations;
+            this.OverflowGroupId = OverflowGroupId;
+            this.GroupAlertType = GroupAlertType;
         }
         
         /// <summary>
@@ -73,6 +116,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="stopRingingAfterRotations", EmitDefaultValue=false)]
         public int? StopRingingAfterRotations { get; set; }
         /// <summary>
+        ///  A fallback group to contact when all of the members in this group did not answer the call.
+        /// </summary>
+        /// <value> A fallback group to contact when all of the members in this group did not answer the call.</value>
+        [DataMember(Name="overflowGroupId", EmitDefaultValue=false)]
+        public string OverflowGroupId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -86,6 +135,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SendEmailNotifications: ").Append(SendEmailNotifications).Append("\n");
             sb.Append("  RotateCallsSecs: ").Append(RotateCallsSecs).Append("\n");
             sb.Append("  StopRingingAfterRotations: ").Append(StopRingingAfterRotations).Append("\n");
+            sb.Append("  OverflowGroupId: ").Append(OverflowGroupId).Append("\n");
+            sb.Append("  GroupAlertType: ").Append(GroupAlertType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -151,6 +202,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StopRingingAfterRotations == other.StopRingingAfterRotations ||
                     this.StopRingingAfterRotations != null &&
                     this.StopRingingAfterRotations.Equals(other.StopRingingAfterRotations)
+                ) &&
+                (
+                    this.OverflowGroupId == other.OverflowGroupId ||
+                    this.OverflowGroupId != null &&
+                    this.OverflowGroupId.Equals(other.OverflowGroupId)
+                ) &&
+                (
+                    this.GroupAlertType == other.GroupAlertType ||
+                    this.GroupAlertType != null &&
+                    this.GroupAlertType.Equals(other.GroupAlertType)
                 );
         }
 
@@ -177,6 +238,10 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.RotateCallsSecs.GetHashCode();
                 if (this.StopRingingAfterRotations != null)
                     hash = hash * 59 + this.StopRingingAfterRotations.GetHashCode();
+                if (this.OverflowGroupId != null)
+                    hash = hash * 59 + this.OverflowGroupId.GetHashCode();
+                if (this.GroupAlertType != null)
+                    hash = hash * 59 + this.GroupAlertType.GetHashCode();
                 return hash;
             }
         }

@@ -159,7 +159,7 @@ namespace Example
 
 <a name="deleterecordingmediaretentionpolicies"></a>
 
-## **string** DeleteRecordingMediaretentionpolicies (string ids)
+## void DeleteRecordingMediaretentionpolicies (string ids)
 
 Delete media retention policies
 
@@ -189,8 +189,7 @@ namespace Example
             try
             {
                 // Delete media retention policies
-                string result = apiInstance.DeleteRecordingMediaretentionpolicies(ids);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRecordingMediaretentionpolicies(ids);
             }
             catch (Exception e)
             {
@@ -211,11 +210,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleterecordingmediaretentionpolicy"></a>
 
-## **string** DeleteRecordingMediaretentionpolicy (string policyId)
+## void DeleteRecordingMediaretentionpolicy (string policyId)
 
 Delete a media retention policy
 
@@ -245,8 +244,7 @@ namespace Example
             try
             {
                 // Delete a media retention policy
-                string result = apiInstance.DeleteRecordingMediaretentionpolicy(policyId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRecordingMediaretentionpolicy(policyId);
             }
             catch (Exception e)
             {
@@ -267,7 +265,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getconversationrecording"></a>
 

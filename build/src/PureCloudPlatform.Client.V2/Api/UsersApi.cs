@@ -65,8 +65,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>string</returns>
-        string DeleteUserRoutingskill (string userId, string skillId);
+        /// <returns></returns>
+        void DeleteUserRoutingskill (string userId, string skillId);
 
         /// <summary>
         /// Remove routing skill from user
@@ -77,8 +77,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
         /// <summary>
         /// Clear associated station
         /// </summary>
@@ -549,7 +549,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>User</returns>
-        User PatchUser (string userId, User body);
+        User PatchUser (string userId, UpdateUser body);
 
         /// <summary>
         /// Update user
@@ -561,7 +561,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
-        ApiResponse<User> PatchUserWithHttpInfo (string userId, User body);
+        ApiResponse<User> PatchUserWithHttpInfo (string userId, UpdateUser body);
         /// <summary>
         /// Patch a user&#39;s CallForwarding
         /// </summary>
@@ -1025,8 +1025,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteUserRoutingskillAsync (string userId, string skillId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId);
 
         /// <summary>
         /// Remove routing skill from user
@@ -1037,8 +1037,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
         /// <summary>
         /// Clear associated station
         /// </summary>
@@ -1509,7 +1509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of User</returns>
-        System.Threading.Tasks.Task<User> PatchUserAsync (string userId, User body);
+        System.Threading.Tasks.Task<User> PatchUserAsync (string userId, UpdateUser body);
 
         /// <summary>
         /// Update user
@@ -1521,7 +1521,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserAsyncWithHttpInfo (string userId, User body);
+        System.Threading.Tasks.Task<ApiResponse<User>> PatchUserAsyncWithHttpInfo (string userId, UpdateUser body);
         /// <summary>
         /// Patch a user&#39;s CallForwarding
         /// </summary>
@@ -2340,11 +2340,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>string</returns>
-        public string DeleteUserRoutingskill (string userId, string skillId)
+        /// <returns></returns>
+        public void DeleteUserRoutingskill (string userId, string skillId)
         {
-             ApiResponse<string> localVarResponse = DeleteUserRoutingskillWithHttpInfo(userId, skillId);
-             return localVarResponse.Data;
+             DeleteUserRoutingskillWithHttpInfo(userId, skillId);
         }
 
         /// <summary>
@@ -2353,8 +2352,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteUserRoutingskillWithHttpInfo (string userId, string skillId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2412,10 +2411,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2424,11 +2423,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteUserRoutingskillAsync (string userId, string skillId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId)
         {
-             ApiResponse<string> localVarResponse = await DeleteUserRoutingskillAsyncWithHttpInfo(userId, skillId);
-             return localVarResponse.Data;
+             await DeleteUserRoutingskillAsyncWithHttpInfo(userId, skillId);
 
         }
 
@@ -2438,8 +2436,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -2497,10 +2495,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5760,7 +5758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>User</returns>
-        public User PatchUser (string userId, User body)
+        public User PatchUser (string userId, UpdateUser body)
         {
              ApiResponse<User> localVarResponse = PatchUserWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -5773,7 +5771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>ApiResponse of User</returns>
-        public ApiResponse< User > PatchUserWithHttpInfo (string userId, User body)
+        public ApiResponse< User > PatchUserWithHttpInfo (string userId, UpdateUser body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -5851,7 +5849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of User</returns>
-        public async System.Threading.Tasks.Task<User> PatchUserAsync (string userId, User body)
+        public async System.Threading.Tasks.Task<User> PatchUserAsync (string userId, UpdateUser body)
         {
              ApiResponse<User> localVarResponse = await PatchUserAsyncWithHttpInfo(userId, body);
              return localVarResponse.Data;
@@ -5865,7 +5863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="body">User</param>
         /// <returns>Task of ApiResponse (User)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<User>> PatchUserAsyncWithHttpInfo (string userId, User body)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> PatchUserAsyncWithHttpInfo (string userId, UpdateUser body)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)

@@ -55,7 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deleteroutingemaildomain"></a>
 
-## **string** DeleteRoutingEmailDomain (string domainId)
+## void DeleteRoutingEmailDomain (string domainId)
 
 Delete a domain
 
@@ -85,8 +85,7 @@ namespace Example
             try
             {
                 // Delete a domain
-                string result = apiInstance.DeleteRoutingEmailDomain(domainId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingEmailDomain(domainId);
             }
             catch (Exception e)
             {
@@ -107,11 +106,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteroutingemaildomainroute"></a>
 
-## **string** DeleteRoutingEmailDomainRoute (string domainName, string routeId)
+## void DeleteRoutingEmailDomainRoute (string domainName, string routeId)
 
 Delete a route
 
@@ -142,8 +141,7 @@ namespace Example
             try
             {
                 // Delete a route
-                string result = apiInstance.DeleteRoutingEmailDomainRoute(domainName, routeId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingEmailDomainRoute(domainName, routeId);
             }
             catch (Exception e)
             {
@@ -165,11 +163,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteroutingqueue"></a>
 
-## **string** DeleteRoutingQueue (string queueId, bool? forceDelete = null)
+## void DeleteRoutingQueue (string queueId, bool? forceDelete = null)
 
 Delete a queue
 
@@ -200,8 +198,7 @@ namespace Example
             try
             {
                 // Delete a queue
-                string result = apiInstance.DeleteRoutingQueue(queueId, forceDelete);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingQueue(queueId, forceDelete);
             }
             catch (Exception e)
             {
@@ -223,11 +220,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteroutingqueueuser"></a>
 
-## **string** DeleteRoutingQueueUser (string queueId, string memberId)
+## void DeleteRoutingQueueUser (string queueId, string memberId)
 
 Delete queue member
 
@@ -258,8 +255,7 @@ namespace Example
             try
             {
                 // Delete queue member
-                string result = apiInstance.DeleteRoutingQueueUser(queueId, memberId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingQueueUser(queueId, memberId);
             }
             catch (Exception e)
             {
@@ -281,11 +277,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteroutingqueuewrapupcode"></a>
 
-## **string** DeleteRoutingQueueWrapupcode (string queueId, string codeId)
+## void DeleteRoutingQueueWrapupcode (string queueId, string codeId)
 
 Delete a wrap-up code from a queue
 
@@ -316,8 +312,7 @@ namespace Example
             try
             {
                 // Delete a wrap-up code from a queue
-                string result = apiInstance.DeleteRoutingQueueWrapupcode(queueId, codeId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingQueueWrapupcode(queueId, codeId);
             }
             catch (Exception e)
             {
@@ -339,11 +334,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteroutingskill"></a>
 
-## **string** DeleteRoutingSkill (string skillId)
+## void DeleteRoutingSkill (string skillId)
 
 Delete Routing Skill
 
@@ -373,8 +368,7 @@ namespace Example
             try
             {
                 // Delete Routing Skill
-                string result = apiInstance.DeleteRoutingSkill(skillId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingSkill(skillId);
             }
             catch (Exception e)
             {
@@ -395,11 +389,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteroutingutilization"></a>
 
-## **string** DeleteRoutingUtilization ()
+## void DeleteRoutingUtilization ()
 
 Delete utilization settings and revert to system defaults.
 
@@ -428,8 +422,7 @@ namespace Example
             try
             {
                 // Delete utilization settings and revert to system defaults.
-                string result = apiInstance.DeleteRoutingUtilization();
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingUtilization();
             }
             catch (Exception e)
             {
@@ -446,11 +439,11 @@ This endpoint does require any parameters.
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteroutingwrapupcode"></a>
 
-## **string** DeleteRoutingWrapupcode (string codeId)
+## void DeleteRoutingWrapupcode (string codeId)
 
 Delete wrap-up code
 
@@ -480,8 +473,7 @@ namespace Example
             try
             {
                 // Delete wrap-up code
-                string result = apiInstance.DeleteRoutingWrapupcode(codeId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteRoutingWrapupcode(codeId);
             }
             catch (Exception e)
             {
@@ -502,11 +494,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteuserroutingskill"></a>
 
-## **string** DeleteUserRoutingskill (string userId, string skillId)
+## void DeleteUserRoutingskill (string userId, string skillId)
 
 Remove routing skill from user
 
@@ -537,8 +529,7 @@ namespace Example
             try
             {
                 // Remove routing skill from user
-                string result = apiInstance.DeleteUserRoutingskill(userId, skillId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteUserRoutingskill(userId, skillId);
             }
             catch (Exception e)
             {
@@ -560,7 +551,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getroutingemaildomain"></a>
 

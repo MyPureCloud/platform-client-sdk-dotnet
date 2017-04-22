@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>string</returns>
-        string DeleteVoicemailMessage (string messageId);
+        /// <returns></returns>
+        void DeleteVoicemailMessage (string messageId);
 
         /// <summary>
         /// Delete a message.
@@ -33,8 +33,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteVoicemailMessageWithHttpInfo (string messageId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteVoicemailMessageWithHttpInfo (string messageId);
         /// <summary>
         /// Delete all voicemail messages
         /// </summary>
@@ -42,8 +42,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string DeleteVoicemailMessages ();
+        /// <returns></returns>
+        void DeleteVoicemailMessages ();
 
         /// <summary>
         /// Delete all voicemail messages
@@ -52,8 +52,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteVoicemailMessagesWithHttpInfo ();
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteVoicemailMessagesWithHttpInfo ();
         /// <summary>
         /// Get the group&#39;s mailbox information
         /// </summary>
@@ -496,8 +496,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteVoicemailMessageAsync (string messageId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteVoicemailMessageAsync (string messageId);
 
         /// <summary>
         /// Delete a message.
@@ -507,8 +507,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId);
         /// <summary>
         /// Delete all voicemail messages
         /// </summary>
@@ -516,8 +516,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteVoicemailMessagesAsync ();
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteVoicemailMessagesAsync ();
 
         /// <summary>
         /// Delete all voicemail messages
@@ -526,8 +526,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteVoicemailMessagesAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessagesAsyncWithHttpInfo ();
         /// <summary>
         /// Get the group&#39;s mailbox information
         /// </summary>
@@ -1055,11 +1055,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>string</returns>
-        public string DeleteVoicemailMessage (string messageId)
+        /// <returns></returns>
+        public void DeleteVoicemailMessage (string messageId)
         {
-             ApiResponse<string> localVarResponse = DeleteVoicemailMessageWithHttpInfo(messageId);
-             return localVarResponse.Data;
+             DeleteVoicemailMessageWithHttpInfo(messageId);
         }
 
         /// <summary>
@@ -1067,8 +1066,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteVoicemailMessageWithHttpInfo (string messageId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteVoicemailMessageWithHttpInfo (string messageId)
         {
             // verify the required parameter 'messageId' is set
             if (messageId == null)
@@ -1122,10 +1121,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -1133,11 +1132,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteVoicemailMessageAsync (string messageId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteVoicemailMessageAsync (string messageId)
         {
-             ApiResponse<string> localVarResponse = await DeleteVoicemailMessageAsyncWithHttpInfo(messageId);
-             return localVarResponse.Data;
+             await DeleteVoicemailMessageAsyncWithHttpInfo(messageId);
 
         }
 
@@ -1146,8 +1144,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId)
         {
             // verify the required parameter 'messageId' is set
             if (messageId == null)
@@ -1201,29 +1199,28 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
         /// Delete all voicemail messages 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string DeleteVoicemailMessages ()
+        /// <returns></returns>
+        public void DeleteVoicemailMessages ()
         {
-             ApiResponse<string> localVarResponse = DeleteVoicemailMessagesWithHttpInfo();
-             return localVarResponse.Data;
+             DeleteVoicemailMessagesWithHttpInfo();
         }
 
         /// <summary>
         /// Delete all voicemail messages 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteVoicemailMessagesWithHttpInfo ()
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteVoicemailMessagesWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/voicemail/messages";
@@ -1273,21 +1270,20 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
         /// Delete all voicemail messages 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteVoicemailMessagesAsync ()
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteVoicemailMessagesAsync ()
         {
-             ApiResponse<string> localVarResponse = await DeleteVoicemailMessagesAsyncWithHttpInfo();
-             return localVarResponse.Data;
+             await DeleteVoicemailMessagesAsyncWithHttpInfo();
 
         }
 
@@ -1295,8 +1291,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete all voicemail messages 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteVoicemailMessagesAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessagesAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/voicemail/messages";
@@ -1346,10 +1342,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteVoicemailMessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>

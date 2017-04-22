@@ -160,7 +160,7 @@ namespace Example
 
 <a name="deletequalityform"></a>
 
-## **string** DeleteQualityForm (string formId)
+## void DeleteQualityForm (string formId)
 
 Delete an evaluation form.
 
@@ -190,8 +190,7 @@ namespace Example
             try
             {
                 // Delete an evaluation form.
-                string result = apiInstance.DeleteQualityForm(formId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteQualityForm(formId);
             }
             catch (Exception e)
             {
@@ -212,7 +211,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletequalitykeywordset"></a>
 
@@ -271,7 +270,7 @@ void (empty response body)
 
 <a name="deletequalitykeywordsets"></a>
 
-## **string** DeleteQualityKeywordsets (string ids)
+## void DeleteQualityKeywordsets (string ids)
 
 Delete keyword sets
 
@@ -301,8 +300,7 @@ namespace Example
             try
             {
                 // Delete keyword sets
-                string result = apiInstance.DeleteQualityKeywordsets(ids);
-                Debug.WriteLine(result);
+                apiInstance.DeleteQualityKeywordsets(ids);
             }
             catch (Exception e)
             {
@@ -323,7 +321,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getqualityagentsactivity"></a>
 
@@ -570,7 +568,7 @@ namespace Example
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var recordingId = recordingId_example;  // string | id of the recording (optional) 
-            var entityType = entityType_example;  // string | entity type options: Recording, Calibration, Evaluation, Annotation (optional)  (default to RECORDING)
+            var entityType = entityType_example;  // string | entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional)  (default to RECORDING)
 
             try
             {
@@ -600,7 +598,7 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **recordingId** | **string**| id of the recording | [optional]  |
-| **entityType** | **string**| entity type options: Recording, Calibration, Evaluation, Annotation | [optional] [default to RECORDING] |
+| **entityType** | **string**| entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording | [optional] [default to RECORDING] |
 {: class="table table-striped"}
 
 ### Return type

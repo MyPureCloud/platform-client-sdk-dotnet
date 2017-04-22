@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>string</returns>
-        string DeleteStationAssociateduser (string stationId);
+        /// <returns></returns>
+        void DeleteStationAssociateduser (string stationId);
 
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -33,8 +33,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteStationAssociateduserWithHttpInfo (string stationId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteStationAssociateduserWithHttpInfo (string stationId);
         /// <summary>
         /// Get station.
         /// </summary>
@@ -67,10 +67,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>StationEntityListing</returns>
-        StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null);
+        StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
 
         /// <summary>
         /// Get the list of available stations.
@@ -83,10 +84,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>ApiResponse of StationEntityListing</returns>
-        ApiResponse<StationEntityListing> GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null);
+        ApiResponse<StationEntityListing> GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -97,8 +99,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteStationAssociateduserAsync (string stationId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteStationAssociateduserAsync (string stationId);
 
         /// <summary>
         /// Unassigns the user assigned to this station
@@ -108,8 +110,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId);
         /// <summary>
         /// Get station.
         /// </summary>
@@ -142,10 +144,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of StationEntityListing</returns>
-        System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null);
+        System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
 
         /// <summary>
         /// Get the list of available stations.
@@ -158,10 +161,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null);
+        System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null);
         #endregion Asynchronous Operations
     }
 
@@ -257,11 +261,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>string</returns>
-        public string DeleteStationAssociateduser (string stationId)
+        /// <returns></returns>
+        public void DeleteStationAssociateduser (string stationId)
         {
-             ApiResponse<string> localVarResponse = DeleteStationAssociateduserWithHttpInfo(stationId);
-             return localVarResponse.Data;
+             DeleteStationAssociateduserWithHttpInfo(stationId);
         }
 
         /// <summary>
@@ -269,8 +272,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteStationAssociateduserWithHttpInfo (string stationId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteStationAssociateduserWithHttpInfo (string stationId)
         {
             // verify the required parameter 'stationId' is set
             if (stationId == null)
@@ -324,10 +327,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteStationAssociateduser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -335,11 +338,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteStationAssociateduserAsync (string stationId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteStationAssociateduserAsync (string stationId)
         {
-             ApiResponse<string> localVarResponse = await DeleteStationAssociateduserAsyncWithHttpInfo(stationId);
-             return localVarResponse.Data;
+             await DeleteStationAssociateduserAsyncWithHttpInfo(stationId);
 
         }
 
@@ -348,8 +350,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="stationId">Station ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteStationAssociateduserAsyncWithHttpInfo (string stationId)
         {
             // verify the required parameter 'stationId' is set
             if (stationId == null)
@@ -403,10 +405,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteStationAssociateduser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -574,12 +576,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>StationEntityListing</returns>
-        public StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null)
+        public StationEntityListing GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         {
-             ApiResponse<StationEntityListing> localVarResponse = GetStationsWithHttpInfo(pageSize, pageNumber, sortBy, name, id, lineAppearanceId);
+             ApiResponse<StationEntityListing> localVarResponse = GetStationsWithHttpInfo(pageSize, pageNumber, sortBy, name, webRtcUserId, id, lineAppearanceId);
              return localVarResponse.Data;
         }
 
@@ -591,10 +594,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>ApiResponse of StationEntityListing</returns>
-        public ApiResponse< StationEntityListing > GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null)
+        public ApiResponse< StationEntityListing > GetStationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         {
 
             var localVarPath = "/api/v2/stations";
@@ -626,6 +630,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (webRtcUserId != null) localVarQueryParams.Add("webRtcUserId", Configuration.ApiClient.ParameterToString(webRtcUserId)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (lineAppearanceId != null) localVarQueryParams.Add("lineAppearanceId", Configuration.ApiClient.ParameterToString(lineAppearanceId)); // query parameter
 
@@ -664,12 +669,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of StationEntityListing</returns>
-        public async System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null)
+        public async System.Threading.Tasks.Task<StationEntityListing> GetStationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         {
-             ApiResponse<StationEntityListing> localVarResponse = await GetStationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name, id, lineAppearanceId);
+             ApiResponse<StationEntityListing> localVarResponse = await GetStationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, name, webRtcUserId, id, lineAppearanceId);
              return localVarResponse.Data;
 
         }
@@ -682,10 +688,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="name">Name (optional)</param>
+        /// <param name="webRtcUserId">Filter for the webRtc station of the webRtcUserId (optional)</param>
         /// <param name="id">Comma separated list of stationIds (optional)</param>
         /// <param name="lineAppearanceId">lineAppearanceId (optional)</param>
         /// <returns>Task of ApiResponse (StationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string id = null, string lineAppearanceId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
         {
 
             var localVarPath = "/api/v2/stations";
@@ -717,6 +724,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (webRtcUserId != null) localVarQueryParams.Add("webRtcUserId", Configuration.ApiClient.ParameterToString(webRtcUserId)); // query parameter
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (lineAppearanceId != null) localVarQueryParams.Add("lineAppearanceId", Configuration.ApiClient.ParameterToString(lineAppearanceId)); // query parameter
 

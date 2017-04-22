@@ -164,7 +164,7 @@ void (empty response body)
 
 <a name="deleteuserroutingskill"></a>
 
-## **string** DeleteUserRoutingskill (string userId, string skillId)
+## void DeleteUserRoutingskill (string userId, string skillId)
 
 Remove routing skill from user
 
@@ -195,8 +195,7 @@ namespace Example
             try
             {
                 // Remove routing skill from user
-                string result = apiInstance.DeleteUserRoutingskill(userId, skillId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteUserRoutingskill(userId, skillId);
             }
             catch (Exception e)
             {
@@ -218,7 +217,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteuserstationassociatedstation"></a>
 
@@ -1380,7 +1379,7 @@ namespace Example
 
 <a name="patchuser"></a>
 
-## [**User**](User.html) PatchUser (string userId, User body)
+## [**User**](User.html) PatchUser (string userId, UpdateUser body)
 
 Update user
 
@@ -1406,7 +1405,7 @@ namespace Example
 
             var apiInstance = new UsersApi();
             var userId = userId_example;  // string | User ID
-            var body = new User(); // User | User
+            var body = new UpdateUser(); // UpdateUser | User
 
             try
             {
@@ -1429,7 +1428,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**User**](User.html)| User |  |
+| **body** | [**UpdateUser**](UpdateUser.html)| User |  |
 {: class="table table-striped"}
 
 ### Return type

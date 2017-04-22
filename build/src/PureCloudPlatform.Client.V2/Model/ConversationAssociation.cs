@@ -130,6 +130,12 @@ namespace PureCloudPlatform.Client.V2.Model
         }
         
         /// <summary>
+        /// External Contact ID; populated from url
+        /// </summary>
+        /// <value>External Contact ID; populated from url</value>
+        [DataMember(Name="externalContactId", EmitDefaultValue=false)]
+        public string ExternalContactId { get; private set; }
+        /// <summary>
         /// Conversation ID
         /// </summary>
         /// <value>Conversation ID</value>
@@ -149,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationAssociation {\n");
+            sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
@@ -189,6 +196,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.ExternalContactId == other.ExternalContactId ||
+                    this.ExternalContactId != null &&
+                    this.ExternalContactId.Equals(other.ExternalContactId)
+                ) &&
+                (
                     this.ConversationId == other.ConversationId ||
                     this.ConversationId != null &&
                     this.ConversationId.Equals(other.ConversationId)
@@ -216,6 +228,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.ExternalContactId != null)
+                    hash = hash * 59 + this.ExternalContactId.GetHashCode();
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
                 if (this.CommunicationId != null)

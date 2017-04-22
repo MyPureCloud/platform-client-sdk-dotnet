@@ -48,8 +48,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>string</returns>
-        string DeleteConversationsCallParticipantConsult (string conversationId, string participantId);
+        /// <returns></returns>
+        void DeleteConversationsCallParticipantConsult (string conversationId, string participantId);
 
         /// <summary>
         /// Cancel the transfer
@@ -60,8 +60,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteConversationsCallParticipantConsultWithHttpInfo (string conversationId, string participantId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteConversationsCallParticipantConsultWithHttpInfo (string conversationId, string participantId);
         /// <summary>
         /// Delete attachment from draft
         /// </summary>
@@ -71,8 +71,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>string</returns>
-        string DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId);
+        /// <returns></returns>
+        void DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId);
 
         /// <summary>
         /// Delete attachment from draft
@@ -83,8 +83,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteConversationsEmailMessagesDraftAttachmentWithHttpInfo (string conversationId, string attachmentId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteConversationsEmailMessagesDraftAttachmentWithHttpInfo (string conversationId, string attachmentId);
         /// <summary>
         /// Get a conversation by id
         /// </summary>
@@ -1841,8 +1841,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteConversationsCallParticipantConsultAsync (string conversationId, string participantId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteConversationsCallParticipantConsultAsync (string conversationId, string participantId);
 
         /// <summary>
         /// Cancel the transfer
@@ -1853,8 +1853,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationsCallParticipantConsultAsyncWithHttpInfo (string conversationId, string participantId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsCallParticipantConsultAsyncWithHttpInfo (string conversationId, string participantId);
         /// <summary>
         /// Delete attachment from draft
         /// </summary>
@@ -1864,8 +1864,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteConversationsEmailMessagesDraftAttachmentAsync (string conversationId, string attachmentId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteConversationsEmailMessagesDraftAttachmentAsync (string conversationId, string attachmentId);
 
         /// <summary>
         /// Delete attachment from draft
@@ -1876,8 +1876,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationsEmailMessagesDraftAttachmentAsyncWithHttpInfo (string conversationId, string attachmentId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsEmailMessagesDraftAttachmentAsyncWithHttpInfo (string conversationId, string attachmentId);
         /// <summary>
         /// Get a conversation by id
         /// </summary>
@@ -3873,11 +3873,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>string</returns>
-        public string DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
+        /// <returns></returns>
+        public void DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
         {
-             ApiResponse<string> localVarResponse = DeleteConversationsCallParticipantConsultWithHttpInfo(conversationId, participantId);
-             return localVarResponse.Data;
+             DeleteConversationsCallParticipantConsultWithHttpInfo(conversationId, participantId);
         }
 
         /// <summary>
@@ -3886,8 +3885,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteConversationsCallParticipantConsultWithHttpInfo (string conversationId, string participantId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteConversationsCallParticipantConsultWithHttpInfo (string conversationId, string participantId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -3945,10 +3944,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsCallParticipantConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3957,11 +3956,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteConversationsCallParticipantConsultAsync (string conversationId, string participantId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteConversationsCallParticipantConsultAsync (string conversationId, string participantId)
         {
-             ApiResponse<string> localVarResponse = await DeleteConversationsCallParticipantConsultAsyncWithHttpInfo(conversationId, participantId);
-             return localVarResponse.Data;
+             await DeleteConversationsCallParticipantConsultAsyncWithHttpInfo(conversationId, participantId);
 
         }
 
@@ -3971,8 +3969,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationsCallParticipantConsultAsyncWithHttpInfo (string conversationId, string participantId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsCallParticipantConsultAsyncWithHttpInfo (string conversationId, string participantId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4030,10 +4028,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsCallParticipantConsult: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4042,11 +4040,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>string</returns>
-        public string DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
+        /// <returns></returns>
+        public void DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
         {
-             ApiResponse<string> localVarResponse = DeleteConversationsEmailMessagesDraftAttachmentWithHttpInfo(conversationId, attachmentId);
-             return localVarResponse.Data;
+             DeleteConversationsEmailMessagesDraftAttachmentWithHttpInfo(conversationId, attachmentId);
         }
 
         /// <summary>
@@ -4055,8 +4052,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteConversationsEmailMessagesDraftAttachmentWithHttpInfo (string conversationId, string attachmentId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteConversationsEmailMessagesDraftAttachmentWithHttpInfo (string conversationId, string attachmentId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4114,10 +4111,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsEmailMessagesDraftAttachment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4126,11 +4123,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteConversationsEmailMessagesDraftAttachmentAsync (string conversationId, string attachmentId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteConversationsEmailMessagesDraftAttachmentAsync (string conversationId, string attachmentId)
         {
-             ApiResponse<string> localVarResponse = await DeleteConversationsEmailMessagesDraftAttachmentAsyncWithHttpInfo(conversationId, attachmentId);
-             return localVarResponse.Data;
+             await DeleteConversationsEmailMessagesDraftAttachmentAsyncWithHttpInfo(conversationId, attachmentId);
 
         }
 
@@ -4140,8 +4136,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="attachmentId">attachmentId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteConversationsEmailMessagesDraftAttachmentAsyncWithHttpInfo (string conversationId, string attachmentId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsEmailMessagesDraftAttachmentAsyncWithHttpInfo (string conversationId, string attachmentId)
         {
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4199,10 +4195,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsEmailMessagesDraftAttachment: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>

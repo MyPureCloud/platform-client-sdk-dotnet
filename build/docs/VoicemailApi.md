@@ -33,7 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletevoicemailmessage"></a>
 
-## **string** DeleteVoicemailMessage (string messageId)
+## void DeleteVoicemailMessage (string messageId)
 
 Delete a message.
 
@@ -63,8 +63,7 @@ namespace Example
             try
             {
                 // Delete a message.
-                string result = apiInstance.DeleteVoicemailMessage(messageId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteVoicemailMessage(messageId);
             }
             catch (Exception e)
             {
@@ -85,11 +84,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletevoicemailmessages"></a>
 
-## **string** DeleteVoicemailMessages ()
+## void DeleteVoicemailMessages ()
 
 Delete all voicemail messages
 
@@ -118,8 +117,7 @@ namespace Example
             try
             {
                 // Delete all voicemail messages
-                string result = apiInstance.DeleteVoicemailMessages();
-                Debug.WriteLine(result);
+                apiInstance.DeleteVoicemailMessages();
             }
             catch (Exception e)
             {
@@ -136,7 +134,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getvoicemailgroupmailbox"></a>
 

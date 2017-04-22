@@ -55,17 +55,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Status">Status.</param>
-        /// <param name="UserId">UserId.</param>
+        /// <param name="UserId">The Id of the user currently logged in and associated with the station..</param>
+        /// <param name="WebRtcUserId">The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone..</param>
         /// <param name="PrimaryEdge">PrimaryEdge.</param>
         /// <param name="SecondaryEdge">SecondaryEdge.</param>
         /// <param name="Type">Type.</param>
         /// <param name="LineAppearanceId">LineAppearanceId.</param>
-        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
+        public Station(string Name = null, string Description = null, StatusEnum? Status = null, string UserId = null, string WebRtcUserId = null, UriReference PrimaryEdge = null, UriReference SecondaryEdge = null, string Type = null, string LineAppearanceId = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Status = Status;
             this.UserId = UserId;
+            this.WebRtcUserId = WebRtcUserId;
             this.PrimaryEdge = PrimaryEdge;
             this.SecondaryEdge = SecondaryEdge;
             this.Type = Type;
@@ -89,10 +91,17 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         /// <summary>
-        /// Gets or Sets UserId
+        /// The Id of the user currently logged in and associated with the station.
         /// </summary>
+        /// <value>The Id of the user currently logged in and associated with the station.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+        /// <summary>
+        /// The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone.
+        /// </summary>
+        /// <value>The Id of the user configured for the station if it is of type inin_webrtc_softphone. Empty if station type is not inin_webrtc_softphone.</value>
+        [DataMember(Name="webRtcUserId", EmitDefaultValue=false)]
+        public string WebRtcUserId { get; set; }
         /// <summary>
         /// Gets or Sets PrimaryEdge
         /// </summary>
@@ -132,6 +141,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            sb.Append("  WebRtcUserId: ").Append(WebRtcUserId).Append("\n");
             sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -199,6 +209,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserId.Equals(other.UserId)
                 ) &&
                 (
+                    this.WebRtcUserId == other.WebRtcUserId ||
+                    this.WebRtcUserId != null &&
+                    this.WebRtcUserId.Equals(other.WebRtcUserId)
+                ) &&
+                (
                     this.PrimaryEdge == other.PrimaryEdge ||
                     this.PrimaryEdge != null &&
                     this.PrimaryEdge.Equals(other.PrimaryEdge)
@@ -246,6 +261,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Status.GetHashCode();
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+                if (this.WebRtcUserId != null)
+                    hash = hash * 59 + this.WebRtcUserId.GetHashCode();
                 if (this.PrimaryEdge != null)
                     hash = hash * 59 + this.PrimaryEdge.GetHashCode();
                 if (this.SecondaryEdge != null)

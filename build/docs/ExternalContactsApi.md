@@ -16,15 +16,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactNote**](ExternalContactsApi.html#getexternalcontactscontactnote) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Fetch a note for an external contact |
 | [**GetExternalcontactsContactNotes**](ExternalContactsApi.html#getexternalcontactscontactnotes) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes | List notes for an external contact |
 | [**GetExternalcontactsContacts**](ExternalContactsApi.html#getexternalcontactscontacts) | **GET** /api/v2/externalcontacts/contacts | Search for external contacts |
+| [**GetExternalcontactsContactsSchema**](ExternalContactsApi.html#getexternalcontactscontactsschema) | **GET** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Get a schema |
 | [**GetExternalcontactsOrganization**](ExternalContactsApi.html#getexternalcontactsorganization) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Fetch an external organization |
 | [**GetExternalcontactsOrganizationContacts**](ExternalContactsApi.html#getexternalcontactsorganizationcontacts) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts | Search for external contacts in an external organization |
 | [**GetExternalcontactsOrganizationNote**](ExternalContactsApi.html#getexternalcontactsorganizationnote) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Fetch a note for an external organization |
 | [**GetExternalcontactsOrganizationNotes**](ExternalContactsApi.html#getexternalcontactsorganizationnotes) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | List notes for an external organization |
 | [**GetExternalcontactsOrganizationRelationships**](ExternalContactsApi.html#getexternalcontactsorganizationrelationships) | **GET** /api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships | Fetch a relationship for an external organization |
 | [**GetExternalcontactsOrganizations**](ExternalContactsApi.html#getexternalcontactsorganizations) | **GET** /api/v2/externalcontacts/organizations | Search for external organizations |
+| [**GetExternalcontactsOrganizationsSchema**](ExternalContactsApi.html#getexternalcontactsorganizationsschema) | **GET** /api/v2/externalcontacts/organizations/schemas/{schemaId} | Get a schema |
 | [**GetExternalcontactsRelationship**](ExternalContactsApi.html#getexternalcontactsrelationship) | **GET** /api/v2/externalcontacts/relationships/{relationshipId} | Fetch a relationship |
 | [**GetExternalcontactsReversewhitepageslookup**](ExternalContactsApi.html#getexternalcontactsreversewhitepageslookup) | **GET** /api/v2/externalcontacts/reversewhitepageslookup | Lookup contacts and externalOrganizations based on an attribute |
-| [**PostExternalcontactsContactAssociateconversation**](ExternalContactsApi.html#postexternalcontactscontactassociateconversation) | **POST** /api/v2/externalcontacts/contacts/{contactId}/associateconversation | Associate an external contact with a conversation |
 | [**PostExternalcontactsContactNotes**](ExternalContactsApi.html#postexternalcontactscontactnotes) | **POST** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a note for an external contact |
 | [**PostExternalcontactsContacts**](ExternalContactsApi.html#postexternalcontactscontacts) | **POST** /api/v2/externalcontacts/contacts | Create an external contact |
 | [**PostExternalcontactsOrganizationNotes**](ExternalContactsApi.html#postexternalcontactsorganizationnotes) | **POST** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes | Create a note for an external organization |
@@ -32,9 +33,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsRelationships**](ExternalContactsApi.html#postexternalcontactsrelationships) | **POST** /api/v2/externalcontacts/relationships | Create a relationship |
 | [**PutExternalcontactsContact**](ExternalContactsApi.html#putexternalcontactscontact) | **PUT** /api/v2/externalcontacts/contacts/{contactId} | Update an external contact |
 | [**PutExternalcontactsContactNote**](ExternalContactsApi.html#putexternalcontactscontactnote) | **PUT** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Update a note for an external contact |
+| [**PutExternalcontactsContactsSchema**](ExternalContactsApi.html#putexternalcontactscontactsschema) | **PUT** /api/v2/externalcontacts/contacts/schemas/{schemaId} | Update a schema |
 | [**PutExternalcontactsConversation**](ExternalContactsApi.html#putexternalcontactsconversation) | **PUT** /api/v2/externalcontacts/conversations/{conversationId} | Associate an external contact with a conversation |
 | [**PutExternalcontactsOrganization**](ExternalContactsApi.html#putexternalcontactsorganization) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an external organization |
 | [**PutExternalcontactsOrganizationNote**](ExternalContactsApi.html#putexternalcontactsorganizationnote) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note for an external organization |
+| [**PutExternalcontactsOrganizationsSchema**](ExternalContactsApi.html#putexternalcontactsorganizationsschema) | **PUT** /api/v2/externalcontacts/organizations/schemas/{schemaId} | Update a schema |
 | [**PutExternalcontactsRelationship**](ExternalContactsApi.html#putexternalcontactsrelationship) | **PUT** /api/v2/externalcontacts/relationships/{relationshipId} | Update a relationship |
 {: class="table table-striped"}
 
@@ -563,6 +566,64 @@ namespace Example
 
 [**ContactListing**](ContactListing.html)
 
+<a name="getexternalcontactscontactsschema"></a>
+
+## [**DataSchema**](DataSchema.html) GetExternalcontactsContactsSchema (string schemaId, List<string> expand = null)
+
+Get a schema
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsContactsSchemaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ExternalContactsApi();
+            var schemaId = schemaId_example;  // string | Schema ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Expand 'jsonSchema.definitions' to get a readonly schema for data validation. (optional) 
+
+            try
+            {
+                // Get a schema
+                DataSchema result = apiInstance.GetExternalcontactsContactsSchema(schemaId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsContactsSchema: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **schemaId** | **string**| Schema ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. Expand &#39;jsonSchema.definitions&#39; to get a readonly schema for data validation. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
 <a name="getexternalcontactsorganization"></a>
 
 ## [**ExternalOrganization**](ExternalOrganization.html) GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null)
@@ -939,6 +1000,64 @@ namespace Example
 
 [**ExternalOrganizationListing**](ExternalOrganizationListing.html)
 
+<a name="getexternalcontactsorganizationsschema"></a>
+
+## [**DataSchema**](DataSchema.html) GetExternalcontactsOrganizationsSchema (string schemaId, List<string> expand = null)
+
+Get a schema
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsOrganizationsSchemaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ExternalContactsApi();
+            var schemaId = schemaId_example;  // string | Schema ID
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Expand 'jsonSchema.definitions' to get a readonly schema for data validation. (optional) 
+
+            try
+            {
+                // Get a schema
+                DataSchema result = apiInstance.GetExternalcontactsOrganizationsSchema(schemaId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsOrganizationsSchema: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **schemaId** | **string**| Schema ID |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. Expand &#39;jsonSchema.definitions&#39; to get a readonly schema for data validation. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
 <a name="getexternalcontactsrelationship"></a>
 
 ## [**Relationship**](Relationship.html) GetExternalcontactsRelationship (string relationshipId, string expand = null)
@@ -1054,63 +1173,6 @@ namespace Example
 ### Return type
 
 [**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult.html)
-
-<a name="postexternalcontactscontactassociateconversation"></a>
-
-## void PostExternalcontactsContactAssociateconversation (string contactId, ConversationAssociation body = null)
-
-Associate an external contact with a conversation
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostExternalcontactsContactAssociateconversationExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-
-            var apiInstance = new ExternalContactsApi();
-            var contactId = contactId_example;  // string | ExternalContact ID
-            var body = new ConversationAssociation(); // ConversationAssociation | ConversationAssociation (optional) 
-
-            try
-            {
-                // Associate an external contact with a conversation
-                apiInstance.PostExternalcontactsContactAssociateconversation(contactId, body);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsContactAssociateconversation: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **contactId** | **string**| ExternalContact ID |  |
-| **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation | [optional]  |
-{: class="table table-striped"}
-
-### Return type
-
-void (empty response body)
 
 <a name="postexternalcontactscontactnotes"></a>
 
@@ -1514,6 +1576,64 @@ namespace Example
 
 [**Note**](Note.html)
 
+<a name="putexternalcontactscontactsschema"></a>
+
+## [**DataSchema**](DataSchema.html) PutExternalcontactsContactsSchema (string schemaId, DataSchema body)
+
+Update a schema
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsContactsSchemaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ExternalContactsApi();
+            var schemaId = schemaId_example;  // string | Schema ID
+            var body = new DataSchema(); // DataSchema | Data Schema
+
+            try
+            {
+                // Update a schema
+                DataSchema result = apiInstance.PutExternalcontactsContactsSchema(schemaId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsContactsSchema: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **schemaId** | **string**| Schema ID |  |
+| **body** | [**DataSchema**](DataSchema.html)| Data Schema |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
+
 <a name="putexternalcontactsconversation"></a>
 
 ## void PutExternalcontactsConversation (string conversationId, ConversationAssociation body = null)
@@ -1688,6 +1808,64 @@ namespace Example
 ### Return type
 
 [**Note**](Note.html)
+
+<a name="putexternalcontactsorganizationsschema"></a>
+
+## [**DataSchema**](DataSchema.html) PutExternalcontactsOrganizationsSchema (string schemaId, DataSchema body)
+
+Update a schema
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsOrganizationsSchemaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new ExternalContactsApi();
+            var schemaId = schemaId_example;  // string | Schema ID
+            var body = new DataSchema(); // DataSchema | Data Schema
+
+            try
+            {
+                // Update a schema
+                DataSchema result = apiInstance.PutExternalcontactsOrganizationsSchema(schemaId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsOrganizationsSchema: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **schemaId** | **string**| Schema ID |  |
+| **body** | [**DataSchema**](DataSchema.html)| Data Schema |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**DataSchema**](DataSchema.html)
 
 <a name="putexternalcontactsrelationship"></a>
 

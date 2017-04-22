@@ -9,10 +9,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteArchitectPrompt**](ArchitectApi.html#deletearchitectprompt) | **DELETE** /api/v2/architect/prompts/{promptId} | Delete specified user prompt |
 | [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
-| [**DeleteArchitectPrompts**](ArchitectApi.html#deletearchitectprompts) | **DELETE** /api/v2/architect/prompts | Batch-delete a list of prompts asynchronously |
+| [**DeleteArchitectPrompts**](ArchitectApi.html#deletearchitectprompts) | **DELETE** /api/v2/architect/prompts | Batch-delete a list of prompts |
 | [**DeleteArchitectSystempromptResource**](ArchitectApi.html#deletearchitectsystempromptresource) | **DELETE** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Delete a system prompt resource override. |
 | [**DeleteFlow**](ArchitectApi.html#deleteflow) | **DELETE** /api/v2/flows/{flowId} | Delete flow |
-| [**DeleteFlows**](ArchitectApi.html#deleteflows) | **DELETE** /api/v2/flows | Batch-delete a list of flows asynchronously |
+| [**DeleteFlows**](ArchitectApi.html#deleteflows) | **DELETE** /api/v2/flows | Batch-delete a list of flows |
 | [**GetArchitectDependencytracking**](ArchitectApi.html#getarchitectdependencytracking) | **GET** /api/v2/architect/dependencytracking | Get Dependency Tracking objects that have a given display name |
 | [**GetArchitectDependencytrackingBuild**](ArchitectApi.html#getarchitectdependencytrackingbuild) | **GET** /api/v2/architect/dependencytracking/build | Get Dependency Tracking build status for an organization |
 | [**GetArchitectDependencytrackingConsumedresources**](ArchitectApi.html#getarchitectdependencytrackingconsumedresources) | **GET** /api/v2/architect/dependencytracking/consumedresources | Get resources that are consumed by a given Dependency Tracking object |
@@ -172,9 +172,9 @@ void (empty response body)
 
 ## [**Operation**](Operation.html) DeleteArchitectPrompts (List<string> id)
 
-Batch-delete a list of prompts asynchronously
+Batch-delete a list of prompts
 
-Multiple IDs can be specified, in which case all specified prompts will be deleted.
+Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
 ### Example
 ~~~csharp
@@ -199,7 +199,7 @@ namespace Example
 
             try
             {
-                // Batch-delete a list of prompts asynchronously
+                // Batch-delete a list of prompts
                 Operation result = apiInstance.DeleteArchitectPrompts(id);
                 Debug.WriteLine(result);
             }
@@ -226,7 +226,7 @@ namespace Example
 
 <a name="deletearchitectsystempromptresource"></a>
 
-## **string** DeleteArchitectSystempromptResource (string promptId, string languageCode)
+## void DeleteArchitectSystempromptResource (string promptId, string languageCode)
 
 Delete a system prompt resource override.
 
@@ -257,8 +257,7 @@ namespace Example
             try
             {
                 // Delete a system prompt resource override.
-                string result = apiInstance.DeleteArchitectSystempromptResource(promptId, languageCode);
-                Debug.WriteLine(result);
+                apiInstance.DeleteArchitectSystempromptResource(promptId, languageCode);
             }
             catch (Exception e)
             {
@@ -280,7 +279,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteflow"></a>
 
@@ -341,9 +340,9 @@ void (empty response body)
 
 ## [**Operation**](Operation.html) DeleteFlows (List<string> id)
 
-Batch-delete a list of flows asynchronously
+Batch-delete a list of flows
 
-Multiple IDs can be specified, in which case all specified flows will be deleted.
+Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
 
 ### Example
 ~~~csharp
@@ -368,7 +367,7 @@ namespace Example
 
             try
             {
-                // Batch-delete a list of flows asynchronously
+                // Batch-delete a list of flows
                 Operation result = apiInstance.DeleteFlows(id);
                 Debug.WriteLine(result);
             }
@@ -1824,7 +1823,7 @@ namespace Example
 
 Rebuild Dependency Tracking data for an organization
 
-
+Asynchronous.  Notification topic: v2.architect.dependencytracking.build
 
 ### Example
 ~~~csharp
@@ -2160,7 +2159,7 @@ namespace Example
 
 Check-in flow
 
-
+Asynchronous.  Notification topic: v2.flows.{flowId}
 
 ### Example
 ~~~csharp
@@ -2328,7 +2327,7 @@ namespace Example
 
 Publish flow
 
-
+Asynchronous.  Notification topic: v2.flows.{flowId}
 
 ### Example
 ~~~csharp

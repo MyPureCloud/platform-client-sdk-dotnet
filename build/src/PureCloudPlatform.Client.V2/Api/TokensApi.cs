@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string DeleteTokensMe ();
+        /// <returns></returns>
+        void DeleteTokensMe ();
 
         /// <summary>
         /// Delete  auth token used to make the request.
@@ -31,8 +31,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTokensMeWithHttpInfo ();
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTokensMeWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -42,8 +42,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTokensMeAsync ();
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTokensMeAsync ();
 
         /// <summary>
         /// Delete  auth token used to make the request.
@@ -52,8 +52,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTokensMeAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokensMeAsyncWithHttpInfo ();
         #endregion Asynchronous Operations
     }
 
@@ -148,19 +148,18 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string DeleteTokensMe ()
+        /// <returns></returns>
+        public void DeleteTokensMe ()
         {
-             ApiResponse<string> localVarResponse = DeleteTokensMeWithHttpInfo();
-             return localVarResponse.Data;
+             DeleteTokensMeWithHttpInfo();
         }
 
         /// <summary>
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTokensMeWithHttpInfo ()
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTokensMeWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/tokens/me";
@@ -210,21 +209,20 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTokensMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTokensMeAsync ()
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTokensMeAsync ()
         {
-             ApiResponse<string> localVarResponse = await DeleteTokensMeAsyncWithHttpInfo();
-             return localVarResponse.Data;
+             await DeleteTokensMeAsyncWithHttpInfo();
 
         }
 
@@ -232,8 +230,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete  auth token used to make the request. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTokensMeAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokensMeAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/tokens/me";
@@ -283,10 +281,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTokensMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
     }

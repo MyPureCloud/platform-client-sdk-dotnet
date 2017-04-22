@@ -361,7 +361,7 @@ namespace Example
 
 <a name="getauthorizationroles"></a>
 
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, bool? userCount = null)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null)
 
 Retrieve a list of all roles defined for the organization
 
@@ -393,12 +393,13 @@ namespace Example
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var permission = new List<Object>(); // List<Object> |  (optional) 
+            var defaultRoleId = new List<Object>(); // List<Object> |  (optional) 
             var userCount = true;  // bool? |  (optional)  (default to true)
 
             try
             {
                 // Retrieve a list of all roles defined for the organization
-                OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, userCount);
+                OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, defaultRoleId, userCount);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -422,6 +423,7 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **permission** | [**List<Object>**](Object.html)|  | [optional]  |
+| **defaultRoleId** | [**List<Object>**](Object.html)|  | [optional]  |
 | **userCount** | **bool?**|  | [optional] [default to true] |
 {: class="table table-striped"}
 

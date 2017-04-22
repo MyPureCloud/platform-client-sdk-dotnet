@@ -38,7 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationMillieconds">DurationMillieconds.</param>
         /// <param name="Conversation">Conversation.</param>
         /// <param name="Read">Read.</param>
-        public RecordingDataV2Notification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DocumentDataV2NotificationWorkspace Workspace = null, DocumentDataV2NotificationCreatedBy CreatedBy = null, string ContentType = null, int? ContentLength = null, string Filename = null, int? ChangeNumber = null, DateTime? DateUploaded = null, RecordingDataV2NotificationUserData UploadedBy = null, RecordingDataV2NotificationLockInfo LockInfo = null, string SelfUri = null, int? DurationMillieconds = null, DocumentDataV2NotificationWorkspace Conversation = null, bool? Read = null)
+        public RecordingDataV2Notification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DocumentDataV2NotificationWorkspace Workspace = null, DependencyTrackingBuildNotificationNotificationUser CreatedBy = null, string ContentType = null, int? ContentLength = null, string Filename = null, int? ChangeNumber = null, DateTime? DateUploaded = null, RecordingDataV2NotificationUserData UploadedBy = null, RecordingDataV2NotificationLockInfo LockInfo = null, string SelfUri = null, int? DurationMillieconds = null, DocumentDataV2NotificationWorkspace Conversation = null, bool? Read = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public DocumentDataV2NotificationCreatedBy CreatedBy { get; set; }
+        public DependencyTrackingBuildNotificationNotificationUser CreatedBy { get; set; }
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>

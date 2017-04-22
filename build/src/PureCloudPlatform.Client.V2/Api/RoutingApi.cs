@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>string</returns>
-        string DeleteRoutingEmailDomain (string domainId);
+        /// <returns></returns>
+        void DeleteRoutingEmailDomain (string domainId);
 
         /// <summary>
         /// Delete a domain
@@ -33,8 +33,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingEmailDomainWithHttpInfo (string domainId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingEmailDomainWithHttpInfo (string domainId);
         /// <summary>
         /// Delete a route
         /// </summary>
@@ -44,8 +44,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>string</returns>
-        string DeleteRoutingEmailDomainRoute (string domainName, string routeId);
+        /// <returns></returns>
+        void DeleteRoutingEmailDomainRoute (string domainName, string routeId);
 
         /// <summary>
         /// Delete a route
@@ -56,8 +56,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Delete a queue
         /// </summary>
@@ -67,8 +67,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>string</returns>
-        string DeleteRoutingQueue (string queueId, bool? forceDelete = null);
+        /// <returns></returns>
+        void DeleteRoutingQueue (string queueId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a queue
@@ -79,8 +79,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null);
         /// <summary>
         /// Delete queue member
         /// </summary>
@@ -90,8 +90,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>string</returns>
-        string DeleteRoutingQueueUser (string queueId, string memberId);
+        /// <returns></returns>
+        void DeleteRoutingQueueUser (string queueId, string memberId);
 
         /// <summary>
         /// Delete queue member
@@ -102,8 +102,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingQueueUserWithHttpInfo (string queueId, string memberId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingQueueUserWithHttpInfo (string queueId, string memberId);
         /// <summary>
         /// Delete a wrap-up code from a queue
         /// </summary>
@@ -113,8 +113,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>string</returns>
-        string DeleteRoutingQueueWrapupcode (string queueId, string codeId);
+        /// <returns></returns>
+        void DeleteRoutingQueueWrapupcode (string queueId, string codeId);
 
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -125,8 +125,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingQueueWrapupcodeWithHttpInfo (string queueId, string codeId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingQueueWrapupcodeWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Delete Routing Skill
         /// </summary>
@@ -135,8 +135,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>string</returns>
-        string DeleteRoutingSkill (string skillId);
+        /// <returns></returns>
+        void DeleteRoutingSkill (string skillId);
 
         /// <summary>
         /// Delete Routing Skill
@@ -146,8 +146,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingSkillWithHttpInfo (string skillId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingSkillWithHttpInfo (string skillId);
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
         /// </summary>
@@ -155,8 +155,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        string DeleteRoutingUtilization ();
+        /// <returns></returns>
+        void DeleteRoutingUtilization ();
 
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
@@ -165,8 +165,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingUtilizationWithHttpInfo ();
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingUtilizationWithHttpInfo ();
         /// <summary>
         /// Delete wrap-up code
         /// </summary>
@@ -175,8 +175,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>string</returns>
-        string DeleteRoutingWrapupcode (string codeId);
+        /// <returns></returns>
+        void DeleteRoutingWrapupcode (string codeId);
 
         /// <summary>
         /// Delete wrap-up code
@@ -186,8 +186,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRoutingWrapupcodeWithHttpInfo (string codeId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRoutingWrapupcodeWithHttpInfo (string codeId);
         /// <summary>
         /// Remove routing skill from user
         /// </summary>
@@ -197,8 +197,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>string</returns>
-        string DeleteUserRoutingskill (string userId, string skillId);
+        /// <returns></returns>
+        void DeleteUserRoutingskill (string userId, string skillId);
 
         /// <summary>
         /// Remove routing skill from user
@@ -209,8 +209,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId);
         /// <summary>
         /// Get domain
         /// </summary>
@@ -1040,8 +1040,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingEmailDomainAsync (string domainId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingEmailDomainAsync (string domainId);
 
         /// <summary>
         /// Delete a domain
@@ -1051,8 +1051,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingEmailDomainAsyncWithHttpInfo (string domainId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainAsyncWithHttpInfo (string domainId);
         /// <summary>
         /// Delete a route
         /// </summary>
@@ -1062,8 +1062,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingEmailDomainRouteAsync (string domainName, string routeId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingEmailDomainRouteAsync (string domainName, string routeId);
 
         /// <summary>
         /// Delete a route
@@ -1074,8 +1074,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId);
         /// <summary>
         /// Delete a queue
         /// </summary>
@@ -1085,8 +1085,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingQueueAsync (string queueId, bool? forceDelete = null);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingQueueAsync (string queueId, bool? forceDelete = null);
 
         /// <summary>
         /// Delete a queue
@@ -1097,8 +1097,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null);
         /// <summary>
         /// Delete queue member
         /// </summary>
@@ -1108,8 +1108,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingQueueUserAsync (string queueId, string memberId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingQueueUserAsync (string queueId, string memberId);
 
         /// <summary>
         /// Delete queue member
@@ -1120,8 +1120,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId);
         /// <summary>
         /// Delete a wrap-up code from a queue
         /// </summary>
@@ -1131,8 +1131,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingQueueWrapupcodeAsync (string queueId, string codeId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingQueueWrapupcodeAsync (string queueId, string codeId);
 
         /// <summary>
         /// Delete a wrap-up code from a queue
@@ -1143,8 +1143,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId);
         /// <summary>
         /// Delete Routing Skill
         /// </summary>
@@ -1153,8 +1153,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingSkillAsync (string skillId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingSkillAsync (string skillId);
 
         /// <summary>
         /// Delete Routing Skill
@@ -1164,8 +1164,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingSkillAsyncWithHttpInfo (string skillId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillAsyncWithHttpInfo (string skillId);
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
         /// </summary>
@@ -1173,8 +1173,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingUtilizationAsync ();
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingUtilizationAsync ();
 
         /// <summary>
         /// Delete utilization settings and revert to system defaults.
@@ -1183,8 +1183,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingUtilizationAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationAsyncWithHttpInfo ();
         /// <summary>
         /// Delete wrap-up code
         /// </summary>
@@ -1193,8 +1193,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRoutingWrapupcodeAsync (string codeId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRoutingWrapupcodeAsync (string codeId);
 
         /// <summary>
         /// Delete wrap-up code
@@ -1204,8 +1204,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingWrapupcodeAsyncWithHttpInfo (string codeId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingWrapupcodeAsyncWithHttpInfo (string codeId);
         /// <summary>
         /// Remove routing skill from user
         /// </summary>
@@ -1215,8 +1215,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteUserRoutingskillAsync (string userId, string skillId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId);
 
         /// <summary>
         /// Remove routing skill from user
@@ -1227,8 +1227,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId);
         /// <summary>
         /// Get domain
         /// </summary>
@@ -2143,11 +2143,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>string</returns>
-        public string DeleteRoutingEmailDomain (string domainId)
+        /// <returns></returns>
+        public void DeleteRoutingEmailDomain (string domainId)
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingEmailDomainWithHttpInfo(domainId);
-             return localVarResponse.Data;
+             DeleteRoutingEmailDomainWithHttpInfo(domainId);
         }
 
         /// <summary>
@@ -2155,8 +2154,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingEmailDomainWithHttpInfo (string domainId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingEmailDomainWithHttpInfo (string domainId)
         {
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -2210,10 +2209,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2221,11 +2220,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingEmailDomainAsync (string domainId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingEmailDomainAsync (string domainId)
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingEmailDomainAsyncWithHttpInfo(domainId);
-             return localVarResponse.Data;
+             await DeleteRoutingEmailDomainAsyncWithHttpInfo(domainId);
 
         }
 
@@ -2234,8 +2232,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingEmailDomainAsyncWithHttpInfo (string domainId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainAsyncWithHttpInfo (string domainId)
         {
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -2289,10 +2287,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2301,11 +2299,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>string</returns>
-        public string DeleteRoutingEmailDomainRoute (string domainName, string routeId)
+        /// <returns></returns>
+        public void DeleteRoutingEmailDomainRoute (string domainName, string routeId)
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingEmailDomainRouteWithHttpInfo(domainName, routeId);
-             return localVarResponse.Data;
+             DeleteRoutingEmailDomainRouteWithHttpInfo(domainName, routeId);
         }
 
         /// <summary>
@@ -2314,8 +2311,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingEmailDomainRouteWithHttpInfo (string domainName, string routeId)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -2373,10 +2370,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailDomainRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2385,11 +2382,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingEmailDomainRouteAsync (string domainName, string routeId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingEmailDomainRouteAsync (string domainName, string routeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingEmailDomainRouteAsyncWithHttpInfo(domainName, routeId);
-             return localVarResponse.Data;
+             await DeleteRoutingEmailDomainRouteAsyncWithHttpInfo(domainName, routeId);
 
         }
 
@@ -2399,8 +2395,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingEmailDomainRouteAsyncWithHttpInfo (string domainName, string routeId)
         {
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -2458,10 +2454,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingEmailDomainRoute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2470,11 +2466,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>string</returns>
-        public string DeleteRoutingQueue (string queueId, bool? forceDelete = null)
+        /// <returns></returns>
+        public void DeleteRoutingQueue (string queueId, bool? forceDelete = null)
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingQueueWithHttpInfo(queueId, forceDelete);
-             return localVarResponse.Data;
+             DeleteRoutingQueueWithHttpInfo(queueId, forceDelete);
         }
 
         /// <summary>
@@ -2483,8 +2478,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingQueueWithHttpInfo (string queueId, bool? forceDelete = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -2539,10 +2534,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2551,11 +2546,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingQueueAsync (string queueId, bool? forceDelete = null)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingQueueAsync (string queueId, bool? forceDelete = null)
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingQueueAsyncWithHttpInfo(queueId, forceDelete);
-             return localVarResponse.Data;
+             await DeleteRoutingQueueAsyncWithHttpInfo(queueId, forceDelete);
 
         }
 
@@ -2565,8 +2559,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="forceDelete">forceDelete (optional)</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueAsyncWithHttpInfo (string queueId, bool? forceDelete = null)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -2621,10 +2615,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueue: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2633,11 +2627,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>string</returns>
-        public string DeleteRoutingQueueUser (string queueId, string memberId)
+        /// <returns></returns>
+        public void DeleteRoutingQueueUser (string queueId, string memberId)
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingQueueUserWithHttpInfo(queueId, memberId);
-             return localVarResponse.Data;
+             DeleteRoutingQueueUserWithHttpInfo(queueId, memberId);
         }
 
         /// <summary>
@@ -2646,8 +2639,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingQueueUserWithHttpInfo (string queueId, string memberId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingQueueUserWithHttpInfo (string queueId, string memberId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -2705,10 +2698,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2717,11 +2710,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingQueueUserAsync (string queueId, string memberId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingQueueUserAsync (string queueId, string memberId)
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingQueueUserAsyncWithHttpInfo(queueId, memberId);
-             return localVarResponse.Data;
+             await DeleteRoutingQueueUserAsyncWithHttpInfo(queueId, memberId);
 
         }
 
@@ -2731,8 +2723,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="memberId">Member ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueUserAsyncWithHttpInfo (string queueId, string memberId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -2790,10 +2782,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueUser: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2802,11 +2794,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>string</returns>
-        public string DeleteRoutingQueueWrapupcode (string queueId, string codeId)
+        /// <returns></returns>
+        public void DeleteRoutingQueueWrapupcode (string queueId, string codeId)
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingQueueWrapupcodeWithHttpInfo(queueId, codeId);
-             return localVarResponse.Data;
+             DeleteRoutingQueueWrapupcodeWithHttpInfo(queueId, codeId);
         }
 
         /// <summary>
@@ -2815,8 +2806,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingQueueWrapupcodeWithHttpInfo (string queueId, string codeId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingQueueWrapupcodeWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -2874,10 +2865,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2886,11 +2877,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingQueueWrapupcodeAsync (string queueId, string codeId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingQueueWrapupcodeAsync (string queueId, string codeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo(queueId, codeId);
-             return localVarResponse.Data;
+             await DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo(queueId, codeId);
 
         }
 
@@ -2900,8 +2890,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="codeId">Code ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingQueueWrapupcodeAsyncWithHttpInfo (string queueId, string codeId)
         {
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -2959,10 +2949,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingQueueWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2970,11 +2960,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>string</returns>
-        public string DeleteRoutingSkill (string skillId)
+        /// <returns></returns>
+        public void DeleteRoutingSkill (string skillId)
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingSkillWithHttpInfo(skillId);
-             return localVarResponse.Data;
+             DeleteRoutingSkillWithHttpInfo(skillId);
         }
 
         /// <summary>
@@ -2982,8 +2971,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingSkillWithHttpInfo (string skillId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingSkillWithHttpInfo (string skillId)
         {
             // verify the required parameter 'skillId' is set
             if (skillId == null)
@@ -3037,10 +3026,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3048,11 +3037,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingSkillAsync (string skillId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingSkillAsync (string skillId)
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingSkillAsyncWithHttpInfo(skillId);
-             return localVarResponse.Data;
+             await DeleteRoutingSkillAsyncWithHttpInfo(skillId);
 
         }
 
@@ -3061,8 +3049,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="skillId">Skill ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingSkillAsyncWithHttpInfo (string skillId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingSkillAsyncWithHttpInfo (string skillId)
         {
             // verify the required parameter 'skillId' is set
             if (skillId == null)
@@ -3116,29 +3104,28 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingSkill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>string</returns>
-        public string DeleteRoutingUtilization ()
+        /// <returns></returns>
+        public void DeleteRoutingUtilization ()
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingUtilizationWithHttpInfo();
-             return localVarResponse.Data;
+             DeleteRoutingUtilizationWithHttpInfo();
         }
 
         /// <summary>
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingUtilizationWithHttpInfo ()
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingUtilizationWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/routing/utilization";
@@ -3188,21 +3175,20 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingUtilizationAsync ()
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingUtilizationAsync ()
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingUtilizationAsyncWithHttpInfo();
-             return localVarResponse.Data;
+             await DeleteRoutingUtilizationAsyncWithHttpInfo();
 
         }
 
@@ -3210,8 +3196,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete utilization settings and revert to system defaults. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingUtilizationAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingUtilizationAsyncWithHttpInfo ()
         {
 
             var localVarPath = "/api/v2/routing/utilization";
@@ -3261,10 +3247,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingUtilization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3272,11 +3258,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>string</returns>
-        public string DeleteRoutingWrapupcode (string codeId)
+        /// <returns></returns>
+        public void DeleteRoutingWrapupcode (string codeId)
         {
-             ApiResponse<string> localVarResponse = DeleteRoutingWrapupcodeWithHttpInfo(codeId);
-             return localVarResponse.Data;
+             DeleteRoutingWrapupcodeWithHttpInfo(codeId);
         }
 
         /// <summary>
@@ -3284,8 +3269,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRoutingWrapupcodeWithHttpInfo (string codeId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRoutingWrapupcodeWithHttpInfo (string codeId)
         {
             // verify the required parameter 'codeId' is set
             if (codeId == null)
@@ -3339,10 +3324,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3350,11 +3335,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRoutingWrapupcodeAsync (string codeId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRoutingWrapupcodeAsync (string codeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteRoutingWrapupcodeAsyncWithHttpInfo(codeId);
-             return localVarResponse.Data;
+             await DeleteRoutingWrapupcodeAsyncWithHttpInfo(codeId);
 
         }
 
@@ -3363,8 +3347,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="codeId">Wrapup Code ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRoutingWrapupcodeAsyncWithHttpInfo (string codeId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingWrapupcodeAsyncWithHttpInfo (string codeId)
         {
             // verify the required parameter 'codeId' is set
             if (codeId == null)
@@ -3418,10 +3402,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingWrapupcode: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3430,11 +3414,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>string</returns>
-        public string DeleteUserRoutingskill (string userId, string skillId)
+        /// <returns></returns>
+        public void DeleteUserRoutingskill (string userId, string skillId)
         {
-             ApiResponse<string> localVarResponse = DeleteUserRoutingskillWithHttpInfo(userId, skillId);
-             return localVarResponse.Data;
+             DeleteUserRoutingskillWithHttpInfo(userId, skillId);
         }
 
         /// <summary>
@@ -3443,8 +3426,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteUserRoutingskillWithHttpInfo (string userId, string skillId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteUserRoutingskillWithHttpInfo (string userId, string skillId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3502,10 +3485,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3514,11 +3497,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteUserRoutingskillAsync (string userId, string skillId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteUserRoutingskillAsync (string userId, string skillId)
         {
-             ApiResponse<string> localVarResponse = await DeleteUserRoutingskillAsyncWithHttpInfo(userId, skillId);
-             return localVarResponse.Data;
+             await DeleteUserRoutingskillAsyncWithHttpInfo(userId, skillId);
 
         }
 
@@ -3528,8 +3510,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="skillId">skillId</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutingskillAsyncWithHttpInfo (string userId, string skillId)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -3587,10 +3569,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutingskill: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>

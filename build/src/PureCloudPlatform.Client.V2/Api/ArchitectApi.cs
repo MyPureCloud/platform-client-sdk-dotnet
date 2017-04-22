@@ -61,10 +61,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteArchitectPromptResourceWithHttpInfo (string promptId, string languageCode);
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously
+        /// Batch-delete a list of prompts
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -72,10 +72,10 @@ namespace PureCloudPlatform.Client.V2.Api
         Operation DeleteArchitectPrompts (List<string> id);
 
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously
+        /// Batch-delete a list of prompts
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -90,8 +90,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>string</returns>
-        string DeleteArchitectSystempromptResource (string promptId, string languageCode);
+        /// <returns></returns>
+        void DeleteArchitectSystempromptResource (string promptId, string languageCode);
 
         /// <summary>
         /// Delete a system prompt resource override.
@@ -102,8 +102,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode);
         /// <summary>
         /// Delete flow
         /// </summary>
@@ -126,10 +126,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId);
         /// <summary>
-        /// Batch-delete a list of flows asynchronously
+        /// Batch-delete a list of flows
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -137,10 +137,10 @@ namespace PureCloudPlatform.Client.V2.Api
         Operation DeleteFlows (List<string> id);
 
         /// <summary>
-        /// Batch-delete a list of flows asynchronously
+        /// Batch-delete a list of flows
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -773,7 +773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -783,7 +783,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -903,7 +903,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Check-in flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -914,7 +914,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Check-in flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -966,7 +966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -978,7 +978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -1172,10 +1172,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously
+        /// Batch-delete a list of prompts
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -1183,10 +1183,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Operation> DeleteArchitectPromptsAsync (List<string> id);
 
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously
+        /// Batch-delete a list of prompts
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -1201,8 +1201,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteArchitectSystempromptResourceAsync (string promptId, string languageCode);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteArchitectSystempromptResourceAsync (string promptId, string languageCode);
 
         /// <summary>
         /// Delete a system prompt resource override.
@@ -1213,8 +1213,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode);
         /// <summary>
         /// Delete flow
         /// </summary>
@@ -1237,10 +1237,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId);
         /// <summary>
-        /// Batch-delete a list of flows asynchronously
+        /// Batch-delete a list of flows
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -1248,10 +1248,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Operation> DeleteFlowsAsync (List<string> id);
 
         /// <summary>
-        /// Batch-delete a list of flows asynchronously
+        /// Batch-delete a list of flows
         /// </summary>
         /// <remarks>
-        /// Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -1884,7 +1884,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -1894,7 +1894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -2014,7 +2014,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Check-in flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -2025,7 +2025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Check-in flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -2077,7 +2077,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -2089,7 +2089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish flow
         /// </summary>
         /// <remarks>
-        /// 
+        /// Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -2653,7 +2653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Batch-delete a list of prompts Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -2665,7 +2665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Batch-delete a list of prompts Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -2731,7 +2731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Batch-delete a list of prompts Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -2744,7 +2744,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of prompts asynchronously Multiple IDs can be specified, in which case all specified prompts will be deleted.
+        /// Batch-delete a list of prompts Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Prompt IDs</param>
@@ -2815,11 +2815,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>string</returns>
-        public string DeleteArchitectSystempromptResource (string promptId, string languageCode)
+        /// <returns></returns>
+        public void DeleteArchitectSystempromptResource (string promptId, string languageCode)
         {
-             ApiResponse<string> localVarResponse = DeleteArchitectSystempromptResourceWithHttpInfo(promptId, languageCode);
-             return localVarResponse.Data;
+             DeleteArchitectSystempromptResourceWithHttpInfo(promptId, languageCode);
         }
 
         /// <summary>
@@ -2828,8 +2827,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode)
         {
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -2887,10 +2886,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectSystempromptResource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2899,11 +2898,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteArchitectSystempromptResourceAsync (string promptId, string languageCode)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteArchitectSystempromptResourceAsync (string promptId, string languageCode)
         {
-             ApiResponse<string> localVarResponse = await DeleteArchitectSystempromptResourceAsyncWithHttpInfo(promptId, languageCode);
-             return localVarResponse.Data;
+             await DeleteArchitectSystempromptResourceAsyncWithHttpInfo(promptId, languageCode);
 
         }
 
@@ -2913,8 +2911,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
         {
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -2972,10 +2970,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectSystempromptResource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3134,7 +3132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of flows asynchronously Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -3146,7 +3144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of flows asynchronously Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -3212,7 +3210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of flows asynchronously Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -3225,7 +3223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Batch-delete a list of flows asynchronously Multiple IDs can be specified, in which case all specified flows will be deleted.
+        /// Batch-delete a list of flows Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">List of Flow IDs</param>
@@ -7328,7 +7326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Rebuild Dependency Tracking data for an organization 
+        /// Rebuild Dependency Tracking data for an organization Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
@@ -7338,7 +7336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Rebuild Dependency Tracking data for an organization 
+        /// Rebuild Dependency Tracking data for an organization Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
@@ -7399,7 +7397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Rebuild Dependency Tracking data for an organization 
+        /// Rebuild Dependency Tracking data for an organization Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
@@ -7410,7 +7408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Rebuild Dependency Tracking data for an organization 
+        /// Rebuild Dependency Tracking data for an organization Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
@@ -8332,7 +8330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Check-in flow 
+        /// Check-in flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -8344,7 +8342,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Check-in flow 
+        /// Check-in flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -8410,7 +8408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Check-in flow 
+        /// Check-in flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -8423,7 +8421,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Check-in flow 
+        /// Check-in flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -8803,7 +8801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Publish flow 
+        /// Publish flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -8816,7 +8814,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Publish flow 
+        /// Publish flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -8884,7 +8882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Publish flow 
+        /// Publish flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>
@@ -8898,7 +8896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Publish flow 
+        /// Publish flow Asynchronous.  Notification topic: v2.flows.{flowId}
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flow">Flow ID</param>

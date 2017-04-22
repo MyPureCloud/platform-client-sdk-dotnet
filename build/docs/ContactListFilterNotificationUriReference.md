@@ -1,7 +1,7 @@
 ---
-title: DocumentDataV2NotificationCreatedBy
+title: ContactListFilterNotificationUriReference
 ---
-## ININ.PureCloudApi.Model.DocumentDataV2NotificationCreatedBy
+## ININ.PureCloudApi.Model.ContactListFilterNotificationUriReference
 
 ## Properties
 

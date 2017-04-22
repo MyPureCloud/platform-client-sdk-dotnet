@@ -147,7 +147,7 @@ void (empty response body)
 
 <a name="deleteconversationscallparticipantconsult"></a>
 
-## **string** DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
+## void DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
 
 Cancel the transfer
 
@@ -178,8 +178,7 @@ namespace Example
             try
             {
                 // Cancel the transfer
-                string result = apiInstance.DeleteConversationsCallParticipantConsult(conversationId, participantId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteConversationsCallParticipantConsult(conversationId, participantId);
             }
             catch (Exception e)
             {
@@ -201,11 +200,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deleteconversationsemailmessagesdraftattachment"></a>
 
-## **string** DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
+## void DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
 
 Delete attachment from draft
 
@@ -236,8 +235,7 @@ namespace Example
             try
             {
                 // Delete attachment from draft
-                string result = apiInstance.DeleteConversationsEmailMessagesDraftAttachment(conversationId, attachmentId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteConversationsEmailMessagesDraftAttachment(conversationId, attachmentId);
             }
             catch (Exception e)
             {
@@ -259,7 +257,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getanalyticsconversationdetails"></a>
 

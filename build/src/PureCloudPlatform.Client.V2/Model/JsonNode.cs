@@ -97,12 +97,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Array">Array.</param>
         /// <param name="_Null">_Null.</param>
         /// <param name="NodeType">NodeType.</param>
-        /// <param name="_Float">_Float.</param>
         /// <param name="Boolean">Boolean.</param>
         /// <param name="Number">Number.</param>
         /// <param name="_Object">_Object.</param>
-        /// <param name="ValueNode">ValueNode.</param>
-        /// <param name="ContainerNode">ContainerNode.</param>
+        /// <param name="_Float">_Float.</param>
         /// <param name="MissingNode">MissingNode.</param>
         /// <param name="Pojo">Pojo.</param>
         /// <param name="IntegralNumber">IntegralNumber.</param>
@@ -115,17 +113,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BigInteger">BigInteger.</param>
         /// <param name="Textual">Textual.</param>
         /// <param name="Binary">Binary.</param>
-        public JsonNode(bool? Array = null, bool? _Null = null, NodeTypeEnum? NodeType = null, bool? _Float = null, bool? Boolean = null, bool? Number = null, bool? _Object = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null)
+        /// <param name="ValueNode">ValueNode.</param>
+        /// <param name="ContainerNode">ContainerNode.</param>
+        public JsonNode(bool? Array = null, bool? _Null = null, NodeTypeEnum? NodeType = null, bool? Boolean = null, bool? Number = null, bool? _Object = null, bool? _Float = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? ValueNode = null, bool? ContainerNode = null)
         {
             this.Array = Array;
             this._Null = _Null;
             this.NodeType = NodeType;
-            this._Float = _Float;
             this.Boolean = Boolean;
             this.Number = Number;
             this._Object = _Object;
-            this.ValueNode = ValueNode;
-            this.ContainerNode = ContainerNode;
+            this._Float = _Float;
             this.MissingNode = MissingNode;
             this.Pojo = Pojo;
             this.IntegralNumber = IntegralNumber;
@@ -138,6 +136,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.BigInteger = BigInteger;
             this.Textual = Textual;
             this.Binary = Binary;
+            this.ValueNode = ValueNode;
+            this.ContainerNode = ContainerNode;
         }
         
         /// <summary>
@@ -150,11 +150,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="null", EmitDefaultValue=false)]
         public bool? _Null { get; set; }
-        /// <summary>
-        /// Gets or Sets _Float
-        /// </summary>
-        [DataMember(Name="float", EmitDefaultValue=false)]
-        public bool? _Float { get; set; }
         /// <summary>
         /// Gets or Sets Boolean
         /// </summary>
@@ -171,15 +166,10 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="object", EmitDefaultValue=false)]
         public bool? _Object { get; set; }
         /// <summary>
-        /// Gets or Sets ValueNode
+        /// Gets or Sets _Float
         /// </summary>
-        [DataMember(Name="valueNode", EmitDefaultValue=false)]
-        public bool? ValueNode { get; set; }
-        /// <summary>
-        /// Gets or Sets ContainerNode
-        /// </summary>
-        [DataMember(Name="containerNode", EmitDefaultValue=false)]
-        public bool? ContainerNode { get; set; }
+        [DataMember(Name="float", EmitDefaultValue=false)]
+        public bool? _Float { get; set; }
         /// <summary>
         /// Gets or Sets MissingNode
         /// </summary>
@@ -241,6 +231,16 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="binary", EmitDefaultValue=false)]
         public bool? Binary { get; set; }
         /// <summary>
+        /// Gets or Sets ValueNode
+        /// </summary>
+        [DataMember(Name="valueNode", EmitDefaultValue=false)]
+        public bool? ValueNode { get; set; }
+        /// <summary>
+        /// Gets or Sets ContainerNode
+        /// </summary>
+        [DataMember(Name="containerNode", EmitDefaultValue=false)]
+        public bool? ContainerNode { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -251,12 +251,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Array: ").Append(Array).Append("\n");
             sb.Append("  _Null: ").Append(_Null).Append("\n");
             sb.Append("  NodeType: ").Append(NodeType).Append("\n");
-            sb.Append("  _Float: ").Append(_Float).Append("\n");
             sb.Append("  Boolean: ").Append(Boolean).Append("\n");
             sb.Append("  Number: ").Append(Number).Append("\n");
             sb.Append("  _Object: ").Append(_Object).Append("\n");
-            sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
-            sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
+            sb.Append("  _Float: ").Append(_Float).Append("\n");
             sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
             sb.Append("  Pojo: ").Append(Pojo).Append("\n");
             sb.Append("  IntegralNumber: ").Append(IntegralNumber).Append("\n");
@@ -269,6 +267,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BigInteger: ").Append(BigInteger).Append("\n");
             sb.Append("  Textual: ").Append(Textual).Append("\n");
             sb.Append("  Binary: ").Append(Binary).Append("\n");
+            sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
+            sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -321,11 +321,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NodeType.Equals(other.NodeType)
                 ) &&
                 (
-                    this._Float == other._Float ||
-                    this._Float != null &&
-                    this._Float.Equals(other._Float)
-                ) &&
-                (
                     this.Boolean == other.Boolean ||
                     this.Boolean != null &&
                     this.Boolean.Equals(other.Boolean)
@@ -341,14 +336,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this._Object.Equals(other._Object)
                 ) &&
                 (
-                    this.ValueNode == other.ValueNode ||
-                    this.ValueNode != null &&
-                    this.ValueNode.Equals(other.ValueNode)
-                ) &&
-                (
-                    this.ContainerNode == other.ContainerNode ||
-                    this.ContainerNode != null &&
-                    this.ContainerNode.Equals(other.ContainerNode)
+                    this._Float == other._Float ||
+                    this._Float != null &&
+                    this._Float.Equals(other._Float)
                 ) &&
                 (
                     this.MissingNode == other.MissingNode ||
@@ -409,6 +399,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Binary == other.Binary ||
                     this.Binary != null &&
                     this.Binary.Equals(other.Binary)
+                ) &&
+                (
+                    this.ValueNode == other.ValueNode ||
+                    this.ValueNode != null &&
+                    this.ValueNode.Equals(other.ValueNode)
+                ) &&
+                (
+                    this.ContainerNode == other.ContainerNode ||
+                    this.ContainerNode != null &&
+                    this.ContainerNode.Equals(other.ContainerNode)
                 );
         }
 
@@ -429,18 +429,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this._Null.GetHashCode();
                 if (this.NodeType != null)
                     hash = hash * 59 + this.NodeType.GetHashCode();
-                if (this._Float != null)
-                    hash = hash * 59 + this._Float.GetHashCode();
                 if (this.Boolean != null)
                     hash = hash * 59 + this.Boolean.GetHashCode();
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
                 if (this._Object != null)
                     hash = hash * 59 + this._Object.GetHashCode();
-                if (this.ValueNode != null)
-                    hash = hash * 59 + this.ValueNode.GetHashCode();
-                if (this.ContainerNode != null)
-                    hash = hash * 59 + this.ContainerNode.GetHashCode();
+                if (this._Float != null)
+                    hash = hash * 59 + this._Float.GetHashCode();
                 if (this.MissingNode != null)
                     hash = hash * 59 + this.MissingNode.GetHashCode();
                 if (this.Pojo != null)
@@ -465,6 +461,10 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Textual.GetHashCode();
                 if (this.Binary != null)
                     hash = hash * 59 + this.Binary.GetHashCode();
+                if (this.ValueNode != null)
+                    hash = hash * 59 + this.ValueNode.GetHashCode();
+                if (this.ContainerNode != null)
+                    hash = hash * 59 + this.ContainerNode.GetHashCode();
                 return hash;
             }
         }

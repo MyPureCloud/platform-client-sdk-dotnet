@@ -694,7 +694,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ooffqueueusers for "oOffQueueUsers"
             /// </summary>
             [EnumMember(Value = "oOffQueueUsers")]
-            Ooffqueueusers
+            Ooffqueueusers,
+            
+            /// <summary>
+            /// Enum Ouserpresences for "oUserPresences"
+            /// </summary>
+            [EnumMember(Value = "oUserPresences")]
+            Ouserpresences,
+            
+            /// <summary>
+            /// Enum Ouserroutingstatuses for "oUserRoutingStatuses"
+            /// </summary>
+            [EnumMember(Value = "oUserRoutingStatuses")]
+            Ouserroutingstatuses
         }
         /// <summary>
         /// Optional operator, default is matches

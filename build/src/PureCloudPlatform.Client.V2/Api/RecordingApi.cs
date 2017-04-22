@@ -68,8 +68,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>string</returns>
-        string DeleteRecordingMediaretentionpolicies (string ids);
+        /// <returns></returns>
+        void DeleteRecordingMediaretentionpolicies (string ids);
 
         /// <summary>
         /// Delete media retention policies
@@ -79,8 +79,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids);
         /// <summary>
         /// Delete a media retention policy
         /// </summary>
@@ -89,8 +89,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>string</returns>
-        string DeleteRecordingMediaretentionpolicy (string policyId);
+        /// <returns></returns>
+        void DeleteRecordingMediaretentionpolicy (string policyId);
 
         /// <summary>
         /// Delete a media retention policy
@@ -100,8 +100,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId);
         /// <summary>
         /// Gets a specific recording.
         /// </summary>
@@ -843,8 +843,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRecordingMediaretentionpoliciesAsync (string ids);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRecordingMediaretentionpoliciesAsync (string ids);
 
         /// <summary>
         /// Delete media retention policies
@@ -854,8 +854,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids);
         /// <summary>
         /// Delete a media retention policy
         /// </summary>
@@ -864,8 +864,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteRecordingMediaretentionpolicyAsync (string policyId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteRecordingMediaretentionpolicyAsync (string policyId);
 
         /// <summary>
         /// Delete a media retention policy
@@ -875,8 +875,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId);
         /// <summary>
         /// Gets a specific recording.
         /// </summary>
@@ -1993,11 +1993,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>string</returns>
-        public string DeleteRecordingMediaretentionpolicies (string ids)
+        /// <returns></returns>
+        public void DeleteRecordingMediaretentionpolicies (string ids)
         {
-             ApiResponse<string> localVarResponse = DeleteRecordingMediaretentionpoliciesWithHttpInfo(ids);
-             return localVarResponse.Data;
+             DeleteRecordingMediaretentionpoliciesWithHttpInfo(ids);
         }
 
         /// <summary>
@@ -2005,8 +2004,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -2060,10 +2059,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2071,11 +2070,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRecordingMediaretentionpoliciesAsync (string ids)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRecordingMediaretentionpoliciesAsync (string ids)
         {
-             ApiResponse<string> localVarResponse = await DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo(ids);
-             return localVarResponse.Data;
+             await DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo(ids);
 
         }
 
@@ -2084,8 +2082,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids"></param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -2139,10 +2137,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingMediaretentionpolicies: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2150,11 +2148,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>string</returns>
-        public string DeleteRecordingMediaretentionpolicy (string policyId)
+        /// <returns></returns>
+        public void DeleteRecordingMediaretentionpolicy (string policyId)
         {
-             ApiResponse<string> localVarResponse = DeleteRecordingMediaretentionpolicyWithHttpInfo(policyId);
-             return localVarResponse.Data;
+             DeleteRecordingMediaretentionpolicyWithHttpInfo(policyId);
         }
 
         /// <summary>
@@ -2162,8 +2159,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
@@ -2217,10 +2214,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2228,11 +2225,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteRecordingMediaretentionpolicyAsync (string policyId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteRecordingMediaretentionpolicyAsync (string policyId)
         {
-             ApiResponse<string> localVarResponse = await DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo(policyId);
-             return localVarResponse.Data;
+             await DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo(policyId);
 
         }
 
@@ -2241,8 +2237,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         {
             // verify the required parameter 'policyId' is set
             if (policyId == null)
@@ -2296,10 +2292,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRecordingMediaretentionpolicy: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>

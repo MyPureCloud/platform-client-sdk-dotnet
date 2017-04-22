@@ -12,7 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletetokensme"></a>
 
-## **string** DeleteTokensMe ()
+## void DeleteTokensMe ()
 
 Delete  auth token used to make the request.
 
@@ -41,8 +41,7 @@ namespace Example
             try
             {
                 // Delete  auth token used to make the request.
-                string result = apiInstance.DeleteTokensMe();
-                Debug.WriteLine(result);
+                apiInstance.DeleteTokensMe();
             }
             catch (Exception e)
             {
@@ -59,5 +58,5 @@ This endpoint does require any parameters.
 
 ### Return type
 
-**string**
+void (empty response body)
 

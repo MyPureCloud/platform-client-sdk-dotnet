@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundAttemptlimit (string attemptLimitsId);
+        /// <returns></returns>
+        void DeleteOutboundAttemptlimit (string attemptLimitsId);
 
         /// <summary>
         /// Delete attempt limits
@@ -33,8 +33,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundAttemptlimitWithHttpInfo (string attemptLimitsId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundAttemptlimitWithHttpInfo (string attemptLimitsId);
         /// <summary>
         /// Delete callable time set
         /// </summary>
@@ -43,8 +43,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundCallabletimeset (string callableTimeSetId);
+        /// <returns></returns>
+        void DeleteOutboundCallabletimeset (string callableTimeSetId);
 
         /// <summary>
         /// Delete callable time set
@@ -54,8 +54,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundCallabletimesetWithHttpInfo (string callableTimeSetId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundCallabletimesetWithHttpInfo (string callableTimeSetId);
         /// <summary>
         /// Delete a dialer call analysis response set.
         /// </summary>
@@ -64,8 +64,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundCallanalysisresponseset (string callAnalysisSetId);
+        /// <returns></returns>
+        void DeleteOutboundCallanalysisresponseset (string callAnalysisSetId);
 
         /// <summary>
         /// Delete a dialer call analysis response set.
@@ -75,8 +75,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId);
         /// <summary>
         /// Delete a campaign.
         /// </summary>
@@ -127,8 +127,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundCampaignrule (string campaignRuleId);
+        /// <returns></returns>
+        void DeleteOutboundCampaignrule (string campaignRuleId);
 
         /// <summary>
         /// Delete Campaign Rule
@@ -138,8 +138,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundCampaignruleWithHttpInfo (string campaignRuleId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundCampaignruleWithHttpInfo (string campaignRuleId);
         /// <summary>
         /// Delete a contact list.
         /// </summary>
@@ -148,8 +148,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundContactlist (string contactListId);
+        /// <returns></returns>
+        void DeleteOutboundContactlist (string contactListId);
 
         /// <summary>
         /// Delete a contact list.
@@ -159,8 +159,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundContactlistWithHttpInfo (string contactListId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundContactlistWithHttpInfo (string contactListId);
         /// <summary>
         /// Delete a contact.
         /// </summary>
@@ -170,8 +170,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundContactlistContact (string contactListId, string contactId);
+        /// <returns></returns>
+        void DeleteOutboundContactlistContact (string contactListId, string contactId);
 
         /// <summary>
         /// Delete a contact.
@@ -182,8 +182,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId);
         /// <summary>
         /// Delete dialer DNC list
         /// </summary>
@@ -192,8 +192,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundDnclist (string dncListId);
+        /// <returns></returns>
+        void DeleteOutboundDnclist (string dncListId);
 
         /// <summary>
         /// Delete dialer DNC list
@@ -203,8 +203,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundDnclistWithHttpInfo (string dncListId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundDnclistWithHttpInfo (string dncListId);
         /// <summary>
         /// Delete a Rule set.
         /// </summary>
@@ -213,8 +213,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundRuleset (string ruleSetId);
+        /// <returns></returns>
+        void DeleteOutboundRuleset (string ruleSetId);
 
         /// <summary>
         /// Delete a Rule set.
@@ -224,8 +224,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundRulesetWithHttpInfo (string ruleSetId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundRulesetWithHttpInfo (string ruleSetId);
         /// <summary>
         /// Delete a dialer campaign schedule.
         /// </summary>
@@ -234,8 +234,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundSchedulesCampaign (string campaignId);
+        /// <returns></returns>
+        void DeleteOutboundSchedulesCampaign (string campaignId);
 
         /// <summary>
         /// Delete a dialer campaign schedule.
@@ -245,8 +245,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundSchedulesCampaignWithHttpInfo (string campaignId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundSchedulesCampaignWithHttpInfo (string campaignId);
         /// <summary>
         /// Delete a dialer sequence schedule.
         /// </summary>
@@ -255,8 +255,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundSchedulesSequence (string sequenceId);
+        /// <returns></returns>
+        void DeleteOutboundSchedulesSequence (string sequenceId);
 
         /// <summary>
         /// Delete a dialer sequence schedule.
@@ -266,8 +266,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundSchedulesSequenceWithHttpInfo (string sequenceId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundSchedulesSequenceWithHttpInfo (string sequenceId);
         /// <summary>
         /// Delete a dialer campaign sequence.
         /// </summary>
@@ -276,8 +276,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>string</returns>
-        string DeleteOutboundSequence (string sequenceId);
+        /// <returns></returns>
+        void DeleteOutboundSequence (string sequenceId);
 
         /// <summary>
         /// Delete a dialer campaign sequence.
@@ -287,8 +287,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteOutboundSequenceWithHttpInfo (string sequenceId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundSequenceWithHttpInfo (string sequenceId);
         /// <summary>
         /// Get attempt limits
         /// </summary>
@@ -1788,8 +1788,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundAttemptlimitAsync (string attemptLimitsId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundAttemptlimitAsync (string attemptLimitsId);
 
         /// <summary>
         /// Delete attempt limits
@@ -1799,8 +1799,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId);
         /// <summary>
         /// Delete callable time set
         /// </summary>
@@ -1809,8 +1809,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundCallabletimesetAsync (string callableTimeSetId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundCallabletimesetAsync (string callableTimeSetId);
 
         /// <summary>
         /// Delete callable time set
@@ -1820,8 +1820,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId);
         /// <summary>
         /// Delete a dialer call analysis response set.
         /// </summary>
@@ -1830,8 +1830,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundCallanalysisresponsesetAsync (string callAnalysisSetId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundCallanalysisresponsesetAsync (string callAnalysisSetId);
 
         /// <summary>
         /// Delete a dialer call analysis response set.
@@ -1841,8 +1841,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId);
         /// <summary>
         /// Delete a campaign.
         /// </summary>
@@ -1893,8 +1893,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundCampaignruleAsync (string campaignRuleId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundCampaignruleAsync (string campaignRuleId);
 
         /// <summary>
         /// Delete Campaign Rule
@@ -1904,8 +1904,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId);
         /// <summary>
         /// Delete a contact list.
         /// </summary>
@@ -1914,8 +1914,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundContactlistAsync (string contactListId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundContactlistAsync (string contactListId);
 
         /// <summary>
         /// Delete a contact list.
@@ -1925,8 +1925,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundContactlistAsyncWithHttpInfo (string contactListId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistAsyncWithHttpInfo (string contactListId);
         /// <summary>
         /// Delete a contact.
         /// </summary>
@@ -1936,8 +1936,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundContactlistContactAsync (string contactListId, string contactId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundContactlistContactAsync (string contactListId, string contactId);
 
         /// <summary>
         /// Delete a contact.
@@ -1948,8 +1948,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
         /// <summary>
         /// Delete dialer DNC list
         /// </summary>
@@ -1958,8 +1958,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundDnclistAsync (string dncListId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundDnclistAsync (string dncListId);
 
         /// <summary>
         /// Delete dialer DNC list
@@ -1969,8 +1969,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundDnclistAsyncWithHttpInfo (string dncListId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistAsyncWithHttpInfo (string dncListId);
         /// <summary>
         /// Delete a Rule set.
         /// </summary>
@@ -1979,8 +1979,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundRulesetAsync (string ruleSetId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundRulesetAsync (string ruleSetId);
 
         /// <summary>
         /// Delete a Rule set.
@@ -1990,8 +1990,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundRulesetAsyncWithHttpInfo (string ruleSetId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundRulesetAsyncWithHttpInfo (string ruleSetId);
         /// <summary>
         /// Delete a dialer campaign schedule.
         /// </summary>
@@ -2000,8 +2000,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundSchedulesCampaignAsync (string campaignId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundSchedulesCampaignAsync (string campaignId);
 
         /// <summary>
         /// Delete a dialer campaign schedule.
@@ -2011,8 +2011,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId);
         /// <summary>
         /// Delete a dialer sequence schedule.
         /// </summary>
@@ -2021,8 +2021,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundSchedulesSequenceAsync (string sequenceId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundSchedulesSequenceAsync (string sequenceId);
 
         /// <summary>
         /// Delete a dialer sequence schedule.
@@ -2032,8 +2032,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId);
         /// <summary>
         /// Delete a dialer campaign sequence.
         /// </summary>
@@ -2042,8 +2042,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteOutboundSequenceAsync (string sequenceId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundSequenceAsync (string sequenceId);
 
         /// <summary>
         /// Delete a dialer campaign sequence.
@@ -2053,8 +2053,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundSequenceAsyncWithHttpInfo (string sequenceId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSequenceAsyncWithHttpInfo (string sequenceId);
         /// <summary>
         /// Get attempt limits
         /// </summary>
@@ -3639,11 +3639,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundAttemptlimit (string attemptLimitsId)
+        /// <returns></returns>
+        public void DeleteOutboundAttemptlimit (string attemptLimitsId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundAttemptlimitWithHttpInfo(attemptLimitsId);
-             return localVarResponse.Data;
+             DeleteOutboundAttemptlimitWithHttpInfo(attemptLimitsId);
         }
 
         /// <summary>
@@ -3651,8 +3650,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundAttemptlimitWithHttpInfo (string attemptLimitsId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundAttemptlimitWithHttpInfo (string attemptLimitsId)
         {
             // verify the required parameter 'attemptLimitsId' is set
             if (attemptLimitsId == null)
@@ -3706,10 +3705,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundAttemptlimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3717,11 +3716,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundAttemptlimitAsync (string attemptLimitsId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundAttemptlimitAsync (string attemptLimitsId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundAttemptlimitAsyncWithHttpInfo(attemptLimitsId);
-             return localVarResponse.Data;
+             await DeleteOutboundAttemptlimitAsyncWithHttpInfo(attemptLimitsId);
 
         }
 
@@ -3730,8 +3728,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="attemptLimitsId">Attempt limits ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundAttemptlimitAsyncWithHttpInfo (string attemptLimitsId)
         {
             // verify the required parameter 'attemptLimitsId' is set
             if (attemptLimitsId == null)
@@ -3785,10 +3783,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundAttemptlimit: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3796,11 +3794,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundCallabletimeset (string callableTimeSetId)
+        /// <returns></returns>
+        public void DeleteOutboundCallabletimeset (string callableTimeSetId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundCallabletimesetWithHttpInfo(callableTimeSetId);
-             return localVarResponse.Data;
+             DeleteOutboundCallabletimesetWithHttpInfo(callableTimeSetId);
         }
 
         /// <summary>
@@ -3808,8 +3805,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundCallabletimesetWithHttpInfo (string callableTimeSetId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundCallabletimesetWithHttpInfo (string callableTimeSetId)
         {
             // verify the required parameter 'callableTimeSetId' is set
             if (callableTimeSetId == null)
@@ -3863,10 +3860,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundCallabletimeset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3874,11 +3871,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundCallabletimesetAsync (string callableTimeSetId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundCallabletimesetAsync (string callableTimeSetId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundCallabletimesetAsyncWithHttpInfo(callableTimeSetId);
-             return localVarResponse.Data;
+             await DeleteOutboundCallabletimesetAsyncWithHttpInfo(callableTimeSetId);
 
         }
 
@@ -3887,8 +3883,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callableTimeSetId">Callable Time Set ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallabletimesetAsyncWithHttpInfo (string callableTimeSetId)
         {
             // verify the required parameter 'callableTimeSetId' is set
             if (callableTimeSetId == null)
@@ -3942,10 +3938,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundCallabletimeset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3953,11 +3949,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundCallanalysisresponseset (string callAnalysisSetId)
+        /// <returns></returns>
+        public void DeleteOutboundCallanalysisresponseset (string callAnalysisSetId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundCallanalysisresponsesetWithHttpInfo(callAnalysisSetId);
-             return localVarResponse.Data;
+             DeleteOutboundCallanalysisresponsesetWithHttpInfo(callAnalysisSetId);
         }
 
         /// <summary>
@@ -3965,8 +3960,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundCallanalysisresponsesetWithHttpInfo (string callAnalysisSetId)
         {
             // verify the required parameter 'callAnalysisSetId' is set
             if (callAnalysisSetId == null)
@@ -4020,10 +4015,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundCallanalysisresponseset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4031,11 +4026,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundCallanalysisresponsesetAsync (string callAnalysisSetId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundCallanalysisresponsesetAsync (string callAnalysisSetId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo(callAnalysisSetId);
-             return localVarResponse.Data;
+             await DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo(callAnalysisSetId);
 
         }
 
@@ -4044,8 +4038,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="callAnalysisSetId">Call Analysis Response Set ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCallanalysisresponsesetAsyncWithHttpInfo (string callAnalysisSetId)
         {
             // verify the required parameter 'callAnalysisSetId' is set
             if (callAnalysisSetId == null)
@@ -4099,10 +4093,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundCallanalysisresponseset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4422,11 +4416,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundCampaignrule (string campaignRuleId)
+        /// <returns></returns>
+        public void DeleteOutboundCampaignrule (string campaignRuleId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundCampaignruleWithHttpInfo(campaignRuleId);
-             return localVarResponse.Data;
+             DeleteOutboundCampaignruleWithHttpInfo(campaignRuleId);
         }
 
         /// <summary>
@@ -4434,8 +4427,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundCampaignruleWithHttpInfo (string campaignRuleId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundCampaignruleWithHttpInfo (string campaignRuleId)
         {
             // verify the required parameter 'campaignRuleId' is set
             if (campaignRuleId == null)
@@ -4489,10 +4482,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundCampaignrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4500,11 +4493,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundCampaignruleAsync (string campaignRuleId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundCampaignruleAsync (string campaignRuleId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundCampaignruleAsyncWithHttpInfo(campaignRuleId);
-             return localVarResponse.Data;
+             await DeleteOutboundCampaignruleAsyncWithHttpInfo(campaignRuleId);
 
         }
 
@@ -4513,8 +4505,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignRuleId">Campaign Rule ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundCampaignruleAsyncWithHttpInfo (string campaignRuleId)
         {
             // verify the required parameter 'campaignRuleId' is set
             if (campaignRuleId == null)
@@ -4568,10 +4560,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundCampaignrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4579,11 +4571,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundContactlist (string contactListId)
+        /// <returns></returns>
+        public void DeleteOutboundContactlist (string contactListId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundContactlistWithHttpInfo(contactListId);
-             return localVarResponse.Data;
+             DeleteOutboundContactlistWithHttpInfo(contactListId);
         }
 
         /// <summary>
@@ -4591,8 +4582,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundContactlistWithHttpInfo (string contactListId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundContactlistWithHttpInfo (string contactListId)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -4646,10 +4637,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4657,11 +4648,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundContactlistAsync (string contactListId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundContactlistAsync (string contactListId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundContactlistAsyncWithHttpInfo(contactListId);
-             return localVarResponse.Data;
+             await DeleteOutboundContactlistAsyncWithHttpInfo(contactListId);
 
         }
 
@@ -4670,8 +4660,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">ContactList ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundContactlistAsyncWithHttpInfo (string contactListId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistAsyncWithHttpInfo (string contactListId)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -4725,10 +4715,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4737,11 +4727,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundContactlistContact (string contactListId, string contactId)
+        /// <returns></returns>
+        public void DeleteOutboundContactlistContact (string contactListId, string contactId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundContactlistContactWithHttpInfo(contactListId, contactId);
-             return localVarResponse.Data;
+             DeleteOutboundContactlistContactWithHttpInfo(contactListId, contactId);
         }
 
         /// <summary>
@@ -4750,8 +4739,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -4809,10 +4798,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContact: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4821,11 +4810,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundContactlistContactAsync (string contactListId, string contactId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundContactlistContactAsync (string contactListId, string contactId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundContactlistContactAsyncWithHttpInfo(contactListId, contactId);
-             return localVarResponse.Data;
+             await DeleteOutboundContactlistContactAsyncWithHttpInfo(contactListId, contactId);
 
         }
 
@@ -4835,8 +4823,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="contactId">Contact ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId)
         {
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -4894,10 +4882,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContact: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4905,11 +4893,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundDnclist (string dncListId)
+        /// <returns></returns>
+        public void DeleteOutboundDnclist (string dncListId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundDnclistWithHttpInfo(dncListId);
-             return localVarResponse.Data;
+             DeleteOutboundDnclistWithHttpInfo(dncListId);
         }
 
         /// <summary>
@@ -4917,8 +4904,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundDnclistWithHttpInfo (string dncListId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundDnclistWithHttpInfo (string dncListId)
         {
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
@@ -4972,10 +4959,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -4983,11 +4970,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundDnclistAsync (string dncListId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundDnclistAsync (string dncListId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundDnclistAsyncWithHttpInfo(dncListId);
-             return localVarResponse.Data;
+             await DeleteOutboundDnclistAsyncWithHttpInfo(dncListId);
 
         }
 
@@ -4996,8 +4982,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dncListId">DncList ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundDnclistAsyncWithHttpInfo (string dncListId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundDnclistAsyncWithHttpInfo (string dncListId)
         {
             // verify the required parameter 'dncListId' is set
             if (dncListId == null)
@@ -5051,10 +5037,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundDnclist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5062,11 +5048,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundRuleset (string ruleSetId)
+        /// <returns></returns>
+        public void DeleteOutboundRuleset (string ruleSetId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundRulesetWithHttpInfo(ruleSetId);
-             return localVarResponse.Data;
+             DeleteOutboundRulesetWithHttpInfo(ruleSetId);
         }
 
         /// <summary>
@@ -5074,8 +5059,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundRulesetWithHttpInfo (string ruleSetId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundRulesetWithHttpInfo (string ruleSetId)
         {
             // verify the required parameter 'ruleSetId' is set
             if (ruleSetId == null)
@@ -5129,10 +5114,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundRuleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5140,11 +5125,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundRulesetAsync (string ruleSetId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundRulesetAsync (string ruleSetId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundRulesetAsyncWithHttpInfo(ruleSetId);
-             return localVarResponse.Data;
+             await DeleteOutboundRulesetAsyncWithHttpInfo(ruleSetId);
 
         }
 
@@ -5153,8 +5137,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleSetId">Rule Set ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundRulesetAsyncWithHttpInfo (string ruleSetId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundRulesetAsyncWithHttpInfo (string ruleSetId)
         {
             // verify the required parameter 'ruleSetId' is set
             if (ruleSetId == null)
@@ -5208,10 +5192,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundRuleset: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5219,11 +5203,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundSchedulesCampaign (string campaignId)
+        /// <returns></returns>
+        public void DeleteOutboundSchedulesCampaign (string campaignId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundSchedulesCampaignWithHttpInfo(campaignId);
-             return localVarResponse.Data;
+             DeleteOutboundSchedulesCampaignWithHttpInfo(campaignId);
         }
 
         /// <summary>
@@ -5231,8 +5214,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundSchedulesCampaignWithHttpInfo (string campaignId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundSchedulesCampaignWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -5286,10 +5269,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesCampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5297,11 +5280,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundSchedulesCampaignAsync (string campaignId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundSchedulesCampaignAsync (string campaignId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundSchedulesCampaignAsyncWithHttpInfo(campaignId);
-             return localVarResponse.Data;
+             await DeleteOutboundSchedulesCampaignAsyncWithHttpInfo(campaignId);
 
         }
 
@@ -5310,8 +5292,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="campaignId">Campaign ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesCampaignAsyncWithHttpInfo (string campaignId)
         {
             // verify the required parameter 'campaignId' is set
             if (campaignId == null)
@@ -5365,10 +5347,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesCampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5376,11 +5358,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundSchedulesSequence (string sequenceId)
+        /// <returns></returns>
+        public void DeleteOutboundSchedulesSequence (string sequenceId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundSchedulesSequenceWithHttpInfo(sequenceId);
-             return localVarResponse.Data;
+             DeleteOutboundSchedulesSequenceWithHttpInfo(sequenceId);
         }
 
         /// <summary>
@@ -5388,8 +5369,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundSchedulesSequenceWithHttpInfo (string sequenceId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundSchedulesSequenceWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
@@ -5443,10 +5424,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesSequence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5454,11 +5435,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundSchedulesSequenceAsync (string sequenceId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundSchedulesSequenceAsync (string sequenceId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundSchedulesSequenceAsyncWithHttpInfo(sequenceId);
-             return localVarResponse.Data;
+             await DeleteOutboundSchedulesSequenceAsyncWithHttpInfo(sequenceId);
 
         }
 
@@ -5467,8 +5447,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Sequence ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
@@ -5522,10 +5502,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesSequence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5533,11 +5513,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>string</returns>
-        public string DeleteOutboundSequence (string sequenceId)
+        /// <returns></returns>
+        public void DeleteOutboundSequence (string sequenceId)
         {
-             ApiResponse<string> localVarResponse = DeleteOutboundSequenceWithHttpInfo(sequenceId);
-             return localVarResponse.Data;
+             DeleteOutboundSequenceWithHttpInfo(sequenceId);
         }
 
         /// <summary>
@@ -5545,8 +5524,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteOutboundSequenceWithHttpInfo (string sequenceId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundSequenceWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
@@ -5600,10 +5579,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSequence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5611,11 +5590,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteOutboundSequenceAsync (string sequenceId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundSequenceAsync (string sequenceId)
         {
-             ApiResponse<string> localVarResponse = await DeleteOutboundSequenceAsyncWithHttpInfo(sequenceId);
-             return localVarResponse.Data;
+             await DeleteOutboundSequenceAsyncWithHttpInfo(sequenceId);
 
         }
 
@@ -5624,8 +5602,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sequenceId">Campaign Sequence ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteOutboundSequenceAsyncWithHttpInfo (string sequenceId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSequenceAsyncWithHttpInfo (string sequenceId)
         {
             // verify the required parameter 'sequenceId' is set
             if (sequenceId == null)
@@ -5679,10 +5657,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSequence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>

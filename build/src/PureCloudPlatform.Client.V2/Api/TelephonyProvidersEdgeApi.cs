@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdge (string edgeId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdge (string edgeId);
 
         /// <summary>
         /// Delete a edge.
@@ -33,8 +33,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgeWithHttpInfo (string edgeId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgeWithHttpInfo (string edgeId);
         /// <summary>
         /// Delete an edge logical interface
         /// </summary>
@@ -66,8 +66,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId);
 
         /// <summary>
         /// Cancels any in-progress update for this edge.
@@ -77,8 +77,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId);
         /// <summary>
         /// Delete a certificate authority.
         /// </summary>
@@ -87,8 +87,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId);
 
         /// <summary>
         /// Delete a certificate authority.
@@ -98,8 +98,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId);
         /// <summary>
         /// Delete a DID Pool by ID.
         /// </summary>
@@ -108,8 +108,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesDidpool (string didPoolId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesDidpool (string didPoolId);
 
         /// <summary>
         /// Delete a DID Pool by ID.
@@ -119,8 +119,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId);
         /// <summary>
         /// Delete an edge group.
         /// </summary>
@@ -129,8 +129,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId);
 
         /// <summary>
         /// Delete an edge group.
@@ -140,8 +140,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId);
         /// <summary>
         /// Delete endpoint
         /// </summary>
@@ -150,8 +150,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesEndpoint (string endpointId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesEndpoint (string endpointId);
 
         /// <summary>
         /// Delete endpoint
@@ -161,8 +161,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesEndpointWithHttpInfo (string endpointId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesEndpointWithHttpInfo (string endpointId);
         /// <summary>
         /// Delete an extension pool by ID
         /// </summary>
@@ -171,8 +171,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId);
 
         /// <summary>
         /// Delete an extension pool by ID
@@ -182,8 +182,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId);
         /// <summary>
         /// Delete Outbound Route
         /// </summary>
@@ -192,8 +192,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId);
 
         /// <summary>
         /// Delete Outbound Route
@@ -203,8 +203,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId);
         /// <summary>
         /// Delete a Phone by ID
         /// </summary>
@@ -213,8 +213,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesPhone (string phoneId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesPhone (string phoneId);
 
         /// <summary>
         /// Delete a Phone by ID
@@ -224,8 +224,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId);
         /// <summary>
         /// Delete a Phone Base Settings by ID
         /// </summary>
@@ -234,8 +234,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId);
 
         /// <summary>
         /// Delete a Phone Base Settings by ID
@@ -245,8 +245,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId);
         /// <summary>
         /// Delete a Site by ID
         /// </summary>
@@ -255,8 +255,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesSite (string siteId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesSite (string siteId);
 
         /// <summary>
         /// Delete a Site by ID
@@ -266,8 +266,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesSiteWithHttpInfo (string siteId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteWithHttpInfo (string siteId);
         /// <summary>
         /// Delete Outbound Route
         /// </summary>
@@ -277,8 +277,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId);
 
         /// <summary>
         /// Delete Outbound Route
@@ -289,8 +289,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId);
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
         /// </summary>
@@ -299,8 +299,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>string</returns>
-        string DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId);
+        /// <returns></returns>
+        void DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId);
 
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
@@ -310,8 +310,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId);
         /// <summary>
         /// Lists available schema categories (Deprecated)
         /// </summary>
@@ -1503,8 +1503,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>List&lt;DomainPhysicalInterface&gt;</returns>
-        List<DomainPhysicalInterface> GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds);
+        /// <returns>PhysicalInterfaceEntityListing</returns>
+        PhysicalInterfaceEntityListing GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds);
 
         /// <summary>
         /// Get physical interfaces for edges.
@@ -1514,8 +1514,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>ApiResponse of List&lt;DomainPhysicalInterface&gt;</returns>
-        ApiResponse<List<DomainPhysicalInterface>> GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds);
+        /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
+        ApiResponse<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds);
         /// <summary>
         /// Get a Site by ID.
         /// </summary>
@@ -2824,8 +2824,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeAsync (string edgeId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeAsync (string edgeId);
 
         /// <summary>
         /// Delete a edge.
@@ -2835,8 +2835,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId);
         /// <summary>
         /// Delete an edge logical interface
         /// </summary>
@@ -2868,8 +2868,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId);
 
         /// <summary>
         /// Cancels any in-progress update for this edge.
@@ -2879,8 +2879,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId);
         /// <summary>
         /// Delete a certificate authority.
         /// </summary>
@@ -2889,8 +2889,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId);
 
         /// <summary>
         /// Delete a certificate authority.
@@ -2900,8 +2900,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId);
         /// <summary>
         /// Delete a DID Pool by ID.
         /// </summary>
@@ -2910,8 +2910,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesDidpoolAsync (string didPoolId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesDidpoolAsync (string didPoolId);
 
         /// <summary>
         /// Delete a DID Pool by ID.
@@ -2921,8 +2921,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId);
         /// <summary>
         /// Delete an edge group.
         /// </summary>
@@ -2931,8 +2931,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId);
 
         /// <summary>
         /// Delete an edge group.
@@ -2942,8 +2942,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId);
         /// <summary>
         /// Delete endpoint
         /// </summary>
@@ -2952,8 +2952,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesEndpointAsync (string endpointId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesEndpointAsync (string endpointId);
 
         /// <summary>
         /// Delete endpoint
@@ -2963,8 +2963,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesEndpointAsyncWithHttpInfo (string endpointId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesEndpointAsyncWithHttpInfo (string endpointId);
         /// <summary>
         /// Delete an extension pool by ID
         /// </summary>
@@ -2973,8 +2973,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId);
 
         /// <summary>
         /// Delete an extension pool by ID
@@ -2984,8 +2984,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId);
         /// <summary>
         /// Delete Outbound Route
         /// </summary>
@@ -2994,8 +2994,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId);
 
         /// <summary>
         /// Delete Outbound Route
@@ -3005,8 +3005,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId);
         /// <summary>
         /// Delete a Phone by ID
         /// </summary>
@@ -3015,8 +3015,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesPhoneAsync (string phoneId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhoneAsync (string phoneId);
 
         /// <summary>
         /// Delete a Phone by ID
@@ -3026,8 +3026,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId);
         /// <summary>
         /// Delete a Phone Base Settings by ID
         /// </summary>
@@ -3036,8 +3036,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId);
 
         /// <summary>
         /// Delete a Phone Base Settings by ID
@@ -3047,8 +3047,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId);
         /// <summary>
         /// Delete a Site by ID
         /// </summary>
@@ -3057,8 +3057,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesSiteAsync (string siteId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteAsync (string siteId);
 
         /// <summary>
         /// Delete a Site by ID
@@ -3068,8 +3068,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId);
         /// <summary>
         /// Delete Outbound Route
         /// </summary>
@@ -3079,8 +3079,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId);
 
         /// <summary>
         /// Delete Outbound Route
@@ -3091,8 +3091,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId);
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
         /// </summary>
@@ -3101,8 +3101,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId);
 
         /// <summary>
         /// Delete a Trunk Base Settings object by ID
@@ -3112,8 +3112,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId);
         /// <summary>
         /// Lists available schema categories (Deprecated)
         /// </summary>
@@ -4305,8 +4305,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>Task of List&lt;DomainPhysicalInterface&gt;</returns>
-        System.Threading.Tasks.Task<List<DomainPhysicalInterface>> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds);
+        /// <returns>Task of PhysicalInterfaceEntityListing</returns>
+        System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds);
 
         /// <summary>
         /// Get physical interfaces for edges.
@@ -4316,8 +4316,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>Task of ApiResponse (List&lt;DomainPhysicalInterface&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DomainPhysicalInterface>>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds);
+        /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds);
         /// <summary>
         /// Get a Site by ID.
         /// </summary>
@@ -5711,11 +5711,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdge (string edgeId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdge (string edgeId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgeWithHttpInfo(edgeId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgeWithHttpInfo(edgeId);
         }
 
         /// <summary>
@@ -5723,8 +5722,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgeWithHttpInfo (string edgeId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgeWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -5778,10 +5777,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdge: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -5789,11 +5788,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeAsync (string edgeId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeAsync (string edgeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgeAsyncWithHttpInfo(edgeId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgeAsyncWithHttpInfo(edgeId);
 
         }
 
@@ -5802,8 +5800,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -5857,10 +5855,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdge: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6035,11 +6033,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo(edgeId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo(edgeId);
         }
 
         /// <summary>
@@ -6047,8 +6044,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgeSoftwareupdateWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -6102,10 +6099,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgeSoftwareupdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6113,11 +6110,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgeSoftwareupdateAsync (string edgeId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo(edgeId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo(edgeId);
 
         }
 
@@ -6126,8 +6122,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeId">Edge ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgeSoftwareupdateAsyncWithHttpInfo (string edgeId)
         {
             // verify the required parameter 'edgeId' is set
             if (edgeId == null)
@@ -6181,10 +6177,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgeSoftwareupdate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6192,11 +6188,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo(certificateId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo(certificateId);
         }
 
         /// <summary>
@@ -6204,8 +6199,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesCertificateauthorityWithHttpInfo (string certificateId)
         {
             // verify the required parameter 'certificateId' is set
             if (certificateId == null)
@@ -6259,10 +6254,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesCertificateauthority: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6270,11 +6265,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesCertificateauthorityAsync (string certificateId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo(certificateId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo(certificateId);
 
         }
 
@@ -6283,8 +6277,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="certificateId">Certificate ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesCertificateauthorityAsyncWithHttpInfo (string certificateId)
         {
             // verify the required parameter 'certificateId' is set
             if (certificateId == null)
@@ -6338,10 +6332,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesCertificateauthority: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6349,11 +6343,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesDidpool (string didPoolId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesDidpool (string didPoolId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo(didPoolId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo(didPoolId);
         }
 
         /// <summary>
@@ -6361,8 +6354,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesDidpoolWithHttpInfo (string didPoolId)
         {
             // verify the required parameter 'didPoolId' is set
             if (didPoolId == null)
@@ -6416,10 +6409,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesDidpool: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6427,11 +6420,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesDidpoolAsync (string didPoolId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesDidpoolAsync (string didPoolId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo(didPoolId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo(didPoolId);
 
         }
 
@@ -6440,8 +6432,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="didPoolId">DID pool ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesDidpoolAsyncWithHttpInfo (string didPoolId)
         {
             // verify the required parameter 'didPoolId' is set
             if (didPoolId == null)
@@ -6495,10 +6487,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesDidpool: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6506,11 +6498,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo(edgeGroupId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo(edgeGroupId);
         }
 
         /// <summary>
@@ -6518,8 +6509,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesEdgegroupWithHttpInfo (string edgeGroupId)
         {
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
@@ -6573,10 +6564,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesEdgegroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6584,11 +6575,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesEdgegroupAsync (string edgeGroupId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo(edgeGroupId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo(edgeGroupId);
 
         }
 
@@ -6597,8 +6587,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeGroupId">Edge group ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesEdgegroupAsyncWithHttpInfo (string edgeGroupId)
         {
             // verify the required parameter 'edgeGroupId' is set
             if (edgeGroupId == null)
@@ -6652,10 +6642,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesEdgegroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6663,11 +6653,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesEndpoint (string endpointId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesEndpoint (string endpointId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesEndpointWithHttpInfo(endpointId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesEndpointWithHttpInfo(endpointId);
         }
 
         /// <summary>
@@ -6675,8 +6664,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesEndpointWithHttpInfo (string endpointId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesEndpointWithHttpInfo (string endpointId)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
@@ -6730,10 +6719,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesEndpoint: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6741,11 +6730,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesEndpointAsync (string endpointId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesEndpointAsync (string endpointId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesEndpointAsyncWithHttpInfo(endpointId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesEndpointAsyncWithHttpInfo(endpointId);
 
         }
 
@@ -6754,8 +6742,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="endpointId">Endpoint ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesEndpointAsyncWithHttpInfo (string endpointId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesEndpointAsyncWithHttpInfo (string endpointId)
         {
             // verify the required parameter 'endpointId' is set
             if (endpointId == null)
@@ -6809,10 +6797,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesEndpoint: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6820,11 +6808,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo(extensionPoolId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo(extensionPoolId);
         }
 
         /// <summary>
@@ -6832,8 +6819,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesExtensionpoolWithHttpInfo (string extensionPoolId)
         {
             // verify the required parameter 'extensionPoolId' is set
             if (extensionPoolId == null)
@@ -6887,10 +6874,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesExtensionpool: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6898,11 +6885,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesExtensionpoolAsync (string extensionPoolId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo(extensionPoolId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo(extensionPoolId);
 
         }
 
@@ -6911,8 +6897,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="extensionPoolId">Extension pool ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesExtensionpoolAsyncWithHttpInfo (string extensionPoolId)
         {
             // verify the required parameter 'extensionPoolId' is set
             if (extensionPoolId == null)
@@ -6966,10 +6952,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesExtensionpool: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -6977,11 +6963,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesOutboundrouteWithHttpInfo(outboundRouteId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesOutboundrouteWithHttpInfo(outboundRouteId);
         }
 
         /// <summary>
@@ -6989,8 +6974,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesOutboundrouteWithHttpInfo (string outboundRouteId)
         {
             // verify the required parameter 'outboundRouteId' is set
             if (outboundRouteId == null)
@@ -7044,10 +7029,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesOutboundroute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7055,11 +7040,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesOutboundrouteAsync (string outboundRouteId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo(outboundRouteId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo(outboundRouteId);
 
         }
 
@@ -7068,8 +7052,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesOutboundrouteAsyncWithHttpInfo (string outboundRouteId)
         {
             // verify the required parameter 'outboundRouteId' is set
             if (outboundRouteId == null)
@@ -7123,10 +7107,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesOutboundroute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7134,11 +7118,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesPhone (string phoneId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesPhone (string phoneId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesPhoneWithHttpInfo(phoneId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesPhoneWithHttpInfo(phoneId);
         }
 
         /// <summary>
@@ -7146,8 +7129,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesPhoneWithHttpInfo (string phoneId)
         {
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
@@ -7201,10 +7184,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesPhone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7212,11 +7195,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesPhoneAsync (string phoneId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhoneAsync (string phoneId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo(phoneId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo(phoneId);
 
         }
 
@@ -7225,8 +7207,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneId">Phone ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhoneAsyncWithHttpInfo (string phoneId)
         {
             // verify the required parameter 'phoneId' is set
             if (phoneId == null)
@@ -7280,10 +7262,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesPhone: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7291,11 +7273,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo(phoneBaseId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo(phoneBaseId);
         }
 
         /// <summary>
@@ -7303,8 +7284,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesPhonebasesettingWithHttpInfo (string phoneBaseId)
         {
             // verify the required parameter 'phoneBaseId' is set
             if (phoneBaseId == null)
@@ -7358,10 +7339,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesPhonebasesetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7369,11 +7350,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesPhonebasesettingAsync (string phoneBaseId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo(phoneBaseId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo(phoneBaseId);
 
         }
 
@@ -7382,8 +7362,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneBaseId">Phone base ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesPhonebasesettingAsyncWithHttpInfo (string phoneBaseId)
         {
             // verify the required parameter 'phoneBaseId' is set
             if (phoneBaseId == null)
@@ -7437,10 +7417,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesPhonebasesetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7448,11 +7428,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesSite (string siteId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesSite (string siteId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesSiteWithHttpInfo(siteId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesSiteWithHttpInfo(siteId);
         }
 
         /// <summary>
@@ -7460,8 +7439,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesSiteWithHttpInfo (string siteId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteWithHttpInfo (string siteId)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
@@ -7515,10 +7494,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesSite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7526,11 +7505,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesSiteAsync (string siteId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteAsync (string siteId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo(siteId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo(siteId);
 
         }
 
@@ -7539,8 +7517,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteAsyncWithHttpInfo (string siteId)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
@@ -7594,10 +7572,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesSite: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7606,11 +7584,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo(siteId, outboundRouteId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo(siteId, outboundRouteId);
         }
 
         /// <summary>
@@ -7619,8 +7596,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesSiteOutboundrouteWithHttpInfo (string siteId, string outboundRouteId)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
@@ -7678,10 +7655,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesSiteOutboundroute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7690,11 +7667,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesSiteOutboundrouteAsync (string siteId, string outboundRouteId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo(siteId, outboundRouteId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo(siteId, outboundRouteId);
 
         }
 
@@ -7704,8 +7680,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="siteId">Site ID</param>
         /// <param name="outboundRouteId">Outbound route ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesSiteOutboundrouteAsyncWithHttpInfo (string siteId, string outboundRouteId)
         {
             // verify the required parameter 'siteId' is set
             if (siteId == null)
@@ -7763,10 +7739,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesSiteOutboundroute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7774,11 +7750,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>string</returns>
-        public string DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
+        /// <returns></returns>
+        public void DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
         {
-             ApiResponse<string> localVarResponse = DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo(trunkBaseSettingsId);
-             return localVarResponse.Data;
+             DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo(trunkBaseSettingsId);
         }
 
         /// <summary>
@@ -7786,8 +7761,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteTelephonyProvidersEdgesTrunkbasesettingWithHttpInfo (string trunkBaseSettingsId)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
@@ -7841,10 +7816,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesTrunkbasesetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -7852,11 +7827,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteTelephonyProvidersEdgesTrunkbasesettingAsync (string trunkBaseSettingsId)
         {
-             ApiResponse<string> localVarResponse = await DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId);
-             return localVarResponse.Data;
+             await DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo(trunkBaseSettingsId);
 
         }
 
@@ -7865,8 +7839,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="trunkBaseSettingsId">Trunk Base ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesTrunkbasesettingAsyncWithHttpInfo (string trunkBaseSettingsId)
         {
             // verify the required parameter 'trunkBaseSettingsId' is set
             if (trunkBaseSettingsId == null)
@@ -7920,10 +7894,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteTelephonyProvidersEdgesTrunkbasesetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -16056,10 +16030,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>List&lt;DomainPhysicalInterface&gt;</returns>
-        public List<DomainPhysicalInterface> GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
+        /// <returns>PhysicalInterfaceEntityListing</returns>
+        public PhysicalInterfaceEntityListing GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
         {
-             ApiResponse<List<DomainPhysicalInterface>> localVarResponse = GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo(edgeIds);
+             ApiResponse<PhysicalInterfaceEntityListing> localVarResponse = GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo(edgeIds);
              return localVarResponse.Data;
         }
 
@@ -16068,8 +16042,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>ApiResponse of List&lt;DomainPhysicalInterface&gt;</returns>
-        public ApiResponse< List<DomainPhysicalInterface> > GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds)
+        /// <returns>ApiResponse of PhysicalInterfaceEntityListing</returns>
+        public ApiResponse< PhysicalInterfaceEntityListing > GetTelephonyProvidersEdgesPhysicalinterfacesWithHttpInfo (string edgeIds)
         {
             // verify the required parameter 'edgeIds' is set
             if (edgeIds == null)
@@ -16123,9 +16097,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesPhysicalinterfaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<DomainPhysicalInterface>>(localVarStatusCode,
+            return new ApiResponse<PhysicalInterfaceEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<DomainPhysicalInterface>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DomainPhysicalInterface>)));
+                (PhysicalInterfaceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhysicalInterfaceEntityListing)));
             
         }
 
@@ -16134,10 +16108,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>Task of List&lt;DomainPhysicalInterface&gt;</returns>
-        public async System.Threading.Tasks.Task<List<DomainPhysicalInterface>> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds)
+        /// <returns>Task of PhysicalInterfaceEntityListing</returns>
+        public async System.Threading.Tasks.Task<PhysicalInterfaceEntityListing> GetTelephonyProvidersEdgesPhysicalinterfacesAsync (string edgeIds)
         {
-             ApiResponse<List<DomainPhysicalInterface>> localVarResponse = await GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo(edgeIds);
+             ApiResponse<PhysicalInterfaceEntityListing> localVarResponse = await GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo(edgeIds);
              return localVarResponse.Data;
 
         }
@@ -16147,8 +16121,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="edgeIds">Comma separated list of Edge Id&#39;s</param>
-        /// <returns>Task of ApiResponse (List&lt;DomainPhysicalInterface&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DomainPhysicalInterface>>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds)
+        /// <returns>Task of ApiResponse (PhysicalInterfaceEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<PhysicalInterfaceEntityListing>> GetTelephonyProvidersEdgesPhysicalinterfacesAsyncWithHttpInfo (string edgeIds)
         {
             // verify the required parameter 'edgeIds' is set
             if (edgeIds == null)
@@ -16202,9 +16176,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesPhysicalinterfaces: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<DomainPhysicalInterface>>(localVarStatusCode,
+            return new ApiResponse<PhysicalInterfaceEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<DomainPhysicalInterface>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<DomainPhysicalInterface>)));
+                (PhysicalInterfaceEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PhysicalInterfaceEntityListing)));
             
         }
 

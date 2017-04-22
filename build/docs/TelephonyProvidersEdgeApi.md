@@ -131,7 +131,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 <a name="deletetelephonyprovidersedge"></a>
 
-## **string** DeleteTelephonyProvidersEdge (string edgeId)
+## void DeleteTelephonyProvidersEdge (string edgeId)
 
 Delete a edge.
 
@@ -161,8 +161,7 @@ namespace Example
             try
             {
                 // Delete a edge.
-                string result = apiInstance.DeleteTelephonyProvidersEdge(edgeId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdge(edgeId);
             }
             catch (Exception e)
             {
@@ -183,7 +182,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgelogicalinterface"></a>
 
@@ -244,7 +243,7 @@ void (empty response body)
 
 <a name="deletetelephonyprovidersedgesoftwareupdate"></a>
 
-## **string** DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId)
+## void DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId)
 
 Cancels any in-progress update for this edge.
 
@@ -274,8 +273,7 @@ namespace Example
             try
             {
                 // Cancels any in-progress update for this edge.
-                string result = apiInstance.DeleteTelephonyProvidersEdgeSoftwareupdate(edgeId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgeSoftwareupdate(edgeId);
             }
             catch (Exception e)
             {
@@ -296,11 +294,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgescertificateauthority"></a>
 
-## **string** DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId)
+## void DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId)
 
 Delete a certificate authority.
 
@@ -330,8 +328,7 @@ namespace Example
             try
             {
                 // Delete a certificate authority.
-                string result = apiInstance.DeleteTelephonyProvidersEdgesCertificateauthority(certificateId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesCertificateauthority(certificateId);
             }
             catch (Exception e)
             {
@@ -352,11 +349,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgesdidpool"></a>
 
-## **string** DeleteTelephonyProvidersEdgesDidpool (string didPoolId)
+## void DeleteTelephonyProvidersEdgesDidpool (string didPoolId)
 
 Delete a DID Pool by ID.
 
@@ -386,8 +383,7 @@ namespace Example
             try
             {
                 // Delete a DID Pool by ID.
-                string result = apiInstance.DeleteTelephonyProvidersEdgesDidpool(didPoolId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesDidpool(didPoolId);
             }
             catch (Exception e)
             {
@@ -408,11 +404,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgesedgegroup"></a>
 
-## **string** DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId)
+## void DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId)
 
 Delete an edge group.
 
@@ -442,8 +438,7 @@ namespace Example
             try
             {
                 // Delete an edge group.
-                string result = apiInstance.DeleteTelephonyProvidersEdgesEdgegroup(edgeGroupId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesEdgegroup(edgeGroupId);
             }
             catch (Exception e)
             {
@@ -464,11 +459,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgesendpoint"></a>
 
-## **string** DeleteTelephonyProvidersEdgesEndpoint (string endpointId)
+## void DeleteTelephonyProvidersEdgesEndpoint (string endpointId)
 
 Delete endpoint
 
@@ -498,8 +493,7 @@ namespace Example
             try
             {
                 // Delete endpoint
-                string result = apiInstance.DeleteTelephonyProvidersEdgesEndpoint(endpointId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesEndpoint(endpointId);
             }
             catch (Exception e)
             {
@@ -520,11 +514,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgesextensionpool"></a>
 
-## **string** DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
+## void DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
 
 Delete an extension pool by ID
 
@@ -554,8 +548,7 @@ namespace Example
             try
             {
                 // Delete an extension pool by ID
-                string result = apiInstance.DeleteTelephonyProvidersEdgesExtensionpool(extensionPoolId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesExtensionpool(extensionPoolId);
             }
             catch (Exception e)
             {
@@ -576,11 +569,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgesoutboundroute"></a>
 
-## **string** DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
+## void DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
 
 Delete Outbound Route
 
@@ -610,8 +603,7 @@ namespace Example
             try
             {
                 // Delete Outbound Route
-                string result = apiInstance.DeleteTelephonyProvidersEdgesOutboundroute(outboundRouteId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesOutboundroute(outboundRouteId);
             }
             catch (Exception e)
             {
@@ -632,11 +624,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgesphone"></a>
 
-## **string** DeleteTelephonyProvidersEdgesPhone (string phoneId)
+## void DeleteTelephonyProvidersEdgesPhone (string phoneId)
 
 Delete a Phone by ID
 
@@ -666,8 +658,7 @@ namespace Example
             try
             {
                 // Delete a Phone by ID
-                string result = apiInstance.DeleteTelephonyProvidersEdgesPhone(phoneId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesPhone(phoneId);
             }
             catch (Exception e)
             {
@@ -688,11 +679,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgesphonebasesetting"></a>
 
-## **string** DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
+## void DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
 
 Delete a Phone Base Settings by ID
 
@@ -722,8 +713,7 @@ namespace Example
             try
             {
                 // Delete a Phone Base Settings by ID
-                string result = apiInstance.DeleteTelephonyProvidersEdgesPhonebasesetting(phoneBaseId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesPhonebasesetting(phoneBaseId);
             }
             catch (Exception e)
             {
@@ -744,11 +734,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgessite"></a>
 
-## **string** DeleteTelephonyProvidersEdgesSite (string siteId)
+## void DeleteTelephonyProvidersEdgesSite (string siteId)
 
 Delete a Site by ID
 
@@ -778,8 +768,7 @@ namespace Example
             try
             {
                 // Delete a Site by ID
-                string result = apiInstance.DeleteTelephonyProvidersEdgesSite(siteId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesSite(siteId);
             }
             catch (Exception e)
             {
@@ -800,11 +789,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgessiteoutboundroute"></a>
 
-## **string** DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
+## void DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
 
 Delete Outbound Route
 
@@ -835,8 +824,7 @@ namespace Example
             try
             {
                 // Delete Outbound Route
-                string result = apiInstance.DeleteTelephonyProvidersEdgesSiteOutboundroute(siteId, outboundRouteId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesSiteOutboundroute(siteId, outboundRouteId);
             }
             catch (Exception e)
             {
@@ -858,11 +846,11 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="deletetelephonyprovidersedgestrunkbasesetting"></a>
 
-## **string** DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
+## void DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
 
 Delete a Trunk Base Settings object by ID
 
@@ -892,8 +880,7 @@ namespace Example
             try
             {
                 // Delete a Trunk Base Settings object by ID
-                string result = apiInstance.DeleteTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);
-                Debug.WriteLine(result);
+                apiInstance.DeleteTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);
             }
             catch (Exception e)
             {
@@ -914,7 +901,7 @@ namespace Example
 
 ### Return type
 
-**string**
+void (empty response body)
 
 <a name="getconfigurationschemasedgesvnext"></a>
 
@@ -3807,7 +3794,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesphysicalinterfaces"></a>
 
-## [**List&lt;DomainPhysicalInterface&gt;**](DomainPhysicalInterface.html) GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
+## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
 
 Get physical interfaces for edges.
 
@@ -3837,7 +3824,7 @@ namespace Example
             try
             {
                 // Get physical interfaces for edges.
-                List&lt;DomainPhysicalInterface&gt; result = apiInstance.GetTelephonyProvidersEdgesPhysicalinterfaces(edgeIds);
+                PhysicalInterfaceEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhysicalinterfaces(edgeIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3859,7 +3846,7 @@ namespace Example
 
 ### Return type
 
-[**List<DomainPhysicalInterface>**](DomainPhysicalInterface.html)
+[**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html)
 
 <a name="gettelephonyprovidersedgessite"></a>
 

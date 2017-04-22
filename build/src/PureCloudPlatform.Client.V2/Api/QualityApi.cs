@@ -70,8 +70,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>string</returns>
-        string DeleteQualityForm (string formId);
+        /// <returns></returns>
+        void DeleteQualityForm (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -81,8 +81,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteQualityFormWithHttpInfo (string formId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteQualityFormWithHttpInfo (string formId);
         /// <summary>
         /// Delete a keywordSet by id.
         /// </summary>
@@ -112,8 +112,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>string</returns>
-        string DeleteQualityKeywordsets (string ids);
+        /// <returns></returns>
+        void DeleteQualityKeywordsets (string ids);
 
         /// <summary>
         /// Delete keyword sets
@@ -123,8 +123,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteQualityKeywordsetsWithHttpInfo (string ids);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteQualityKeywordsetsWithHttpInfo (string ids);
         /// <summary>
         /// Gets a list of Agent Activities
         /// </summary>
@@ -245,7 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
         QualityAuditPage GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
@@ -264,7 +264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
         ApiResponse<QualityAuditPage> GetQualityConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         /// <summary>
@@ -901,8 +901,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteQualityFormAsync (string formId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteQualityFormAsync (string formId);
 
         /// <summary>
         /// Delete an evaluation form.
@@ -912,8 +912,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityFormAsyncWithHttpInfo (string formId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQualityFormAsyncWithHttpInfo (string formId);
         /// <summary>
         /// Delete a keywordSet by id.
         /// </summary>
@@ -943,8 +943,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteQualityKeywordsetsAsync (string ids);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteQualityKeywordsetsAsync (string ids);
 
         /// <summary>
         /// Delete keyword sets
@@ -954,8 +954,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityKeywordsetsAsyncWithHttpInfo (string ids);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQualityKeywordsetsAsyncWithHttpInfo (string ids);
         /// <summary>
         /// Gets a list of Agent Activities
         /// </summary>
@@ -1076,7 +1076,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
         System.Threading.Tasks.Task<QualityAuditPage> GetQualityConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
@@ -1095,7 +1095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
         System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetQualityConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         /// <summary>
@@ -2113,11 +2113,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>string</returns>
-        public string DeleteQualityForm (string formId)
+        /// <returns></returns>
+        public void DeleteQualityForm (string formId)
         {
-             ApiResponse<string> localVarResponse = DeleteQualityFormWithHttpInfo(formId);
-             return localVarResponse.Data;
+             DeleteQualityFormWithHttpInfo(formId);
         }
 
         /// <summary>
@@ -2125,8 +2124,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteQualityFormWithHttpInfo (string formId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteQualityFormWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -2180,10 +2179,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteQualityForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2191,11 +2190,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteQualityFormAsync (string formId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteQualityFormAsync (string formId)
         {
-             ApiResponse<string> localVarResponse = await DeleteQualityFormAsyncWithHttpInfo(formId);
-             return localVarResponse.Data;
+             await DeleteQualityFormAsyncWithHttpInfo(formId);
 
         }
 
@@ -2204,8 +2202,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="formId">Form ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityFormAsyncWithHttpInfo (string formId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQualityFormAsyncWithHttpInfo (string formId)
         {
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -2259,10 +2257,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteQualityForm: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2425,11 +2423,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>string</returns>
-        public string DeleteQualityKeywordsets (string ids)
+        /// <returns></returns>
+        public void DeleteQualityKeywordsets (string ids)
         {
-             ApiResponse<string> localVarResponse = DeleteQualityKeywordsetsWithHttpInfo(ids);
-             return localVarResponse.Data;
+             DeleteQualityKeywordsetsWithHttpInfo(ids);
         }
 
         /// <summary>
@@ -2437,8 +2434,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteQualityKeywordsetsWithHttpInfo (string ids)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteQualityKeywordsetsWithHttpInfo (string ids)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -2492,10 +2489,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteQualityKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -2503,11 +2500,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteQualityKeywordsetsAsync (string ids)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteQualityKeywordsetsAsync (string ids)
         {
-             ApiResponse<string> localVarResponse = await DeleteQualityKeywordsetsAsyncWithHttpInfo(ids);
-             return localVarResponse.Data;
+             await DeleteQualityKeywordsetsAsyncWithHttpInfo(ids);
 
         }
 
@@ -2516,8 +2512,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ids">A comma-delimited list of valid KeywordSet ids</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteQualityKeywordsetsAsyncWithHttpInfo (string ids)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQualityKeywordsetsAsyncWithHttpInfo (string ids)
         {
             // verify the required parameter 'ids' is set
             if (ids == null)
@@ -2571,10 +2567,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteQualityKeywordsets: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -3186,7 +3182,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
         public QualityAuditPage GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
@@ -3206,7 +3202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
         public ApiResponse< QualityAuditPage > GetQualityConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
@@ -3288,7 +3284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
         public async System.Threading.Tasks.Task<QualityAuditPage> GetQualityConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
@@ -3309,7 +3305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="recordingId">id of the recording (optional)</param>
-        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation (optional, default to RECORDING)</param>
+        /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetQualityConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {

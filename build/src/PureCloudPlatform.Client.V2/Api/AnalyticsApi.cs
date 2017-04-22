@@ -22,8 +22,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>string</returns>
-        string DeleteAnalyticsReportingSchedule (string scheduleId);
+        /// <returns></returns>
+        void DeleteAnalyticsReportingSchedule (string scheduleId);
 
         /// <summary>
         /// Delete a scheduled report job.
@@ -33,8 +33,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> DeleteAnalyticsReportingScheduleWithHttpInfo (string scheduleId);
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteAnalyticsReportingScheduleWithHttpInfo (string scheduleId);
         /// <summary>
         /// Get a conversation by id
         /// </summary>
@@ -500,8 +500,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> DeleteAnalyticsReportingScheduleAsync (string scheduleId);
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteAnalyticsReportingScheduleAsync (string scheduleId);
 
         /// <summary>
         /// Delete a scheduled report job.
@@ -511,8 +511,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> DeleteAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId);
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId);
         /// <summary>
         /// Get a conversation by id
         /// </summary>
@@ -1063,11 +1063,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>string</returns>
-        public string DeleteAnalyticsReportingSchedule (string scheduleId)
+        /// <returns></returns>
+        public void DeleteAnalyticsReportingSchedule (string scheduleId)
         {
-             ApiResponse<string> localVarResponse = DeleteAnalyticsReportingScheduleWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
+             DeleteAnalyticsReportingScheduleWithHttpInfo(scheduleId);
         }
 
         /// <summary>
@@ -1075,8 +1074,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > DeleteAnalyticsReportingScheduleWithHttpInfo (string scheduleId)
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteAnalyticsReportingScheduleWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
@@ -1130,10 +1129,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>
@@ -1141,11 +1140,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> DeleteAnalyticsReportingScheduleAsync (string scheduleId)
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteAnalyticsReportingScheduleAsync (string scheduleId)
         {
-             ApiResponse<string> localVarResponse = await DeleteAnalyticsReportingScheduleAsyncWithHttpInfo(scheduleId);
-             return localVarResponse.Data;
+             await DeleteAnalyticsReportingScheduleAsyncWithHttpInfo(scheduleId);
 
         }
 
@@ -1154,8 +1152,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> DeleteAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId)
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsReportingScheduleAsyncWithHttpInfo (string scheduleId)
         {
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
@@ -1209,10 +1207,10 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsReportingSchedule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarHeaders,
-                (string) Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
             
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         /// <summary>

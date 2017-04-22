@@ -13,32 +13,39 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DocumentDataV2NotificationCreatedBy
+    /// TrunkErrorInfo
     /// </summary>
     [DataContract]
-    public partial class DocumentDataV2NotificationCreatedBy :  IEquatable<DocumentDataV2NotificationCreatedBy>
+    public partial class TrunkErrorInfo :  IEquatable<TrunkErrorInfo>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DocumentDataV2NotificationCreatedBy" /> class.
+        /// Initializes a new instance of the <see cref="TrunkErrorInfo" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        public DocumentDataV2NotificationCreatedBy(string Id = null, string Name = null)
+        /// <param name="Text">Text.</param>
+        /// <param name="Code">Code.</param>
+        /// <param name="Details">Details.</param>
+        public TrunkErrorInfo(string Text = null, string Code = null, TrunkErrorInfoDetails Details = null)
         {
-            this.Id = Id;
-            this.Name = Name;
+            this.Text = Text;
+            this.Code = Code;
+            this.Details = Details;
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets Text
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets Code
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="code", EmitDefaultValue=false)]
+        public string Code { get; set; }
+        /// <summary>
+        /// Gets or Sets Details
+        /// </summary>
+        [DataMember(Name="details", EmitDefaultValue=false)]
+        public TrunkErrorInfoDetails Details { get; set; }
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -46,9 +53,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DocumentDataV2NotificationCreatedBy {\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("class TrunkErrorInfo {\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  Details: ").Append(Details).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -70,15 +78,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DocumentDataV2NotificationCreatedBy);
+            return this.Equals(obj as TrunkErrorInfo);
         }
 
         /// <summary>
-        /// Returns true if DocumentDataV2NotificationCreatedBy instances are equal
+        /// Returns true if TrunkErrorInfo instances are equal
         /// </summary>
-        /// <param name="other">Instance of DocumentDataV2NotificationCreatedBy to be compared</param>
+        /// <param name="other">Instance of TrunkErrorInfo to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DocumentDataV2NotificationCreatedBy other)
+        public bool Equals(TrunkErrorInfo other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -86,14 +94,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Code == other.Code ||
+                    this.Code != null &&
+                    this.Code.Equals(other.Code)
+                ) &&
+                (
+                    this.Details == other.Details ||
+                    this.Details != null &&
+                    this.Details.Equals(other.Details)
                 );
         }
 
@@ -108,10 +121,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
+                if (this.Code != null)
+                    hash = hash * 59 + this.Code.GetHashCode();
+                if (this.Details != null)
+                    hash = hash * 59 + this.Details.GetHashCode();
                 return hash;
             }
         }
