@@ -3478,7 +3478,7 @@ namespace Example
 
 <a name="gettelephonyprovidersedgesphonebasesettings"></a>
 
-## [**PhoneBaseEntityListing**](PhoneBaseEntityListing.html) GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null)
+## [**PhoneBaseEntityListing**](PhoneBaseEntityListing.html) GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
 
 Get a list of Phone Base Settings objects
 
@@ -3507,12 +3507,13 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
             var name = name_example;  // string | Name (optional) 
 
             try
             {
                 // Get a list of Phone Base Settings objects
-                PhoneBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhonebasesettings(pageSize, pageNumber, sortBy, sortOrder, name);
+                PhoneBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhonebasesettings(pageSize, pageNumber, sortBy, sortOrder, expand, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3533,6 +3534,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
 | **name** | **string**| Name | [optional]  |
 {: class="table table-striped"}
 

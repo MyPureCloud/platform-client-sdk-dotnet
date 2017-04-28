@@ -43,6 +43,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundDnclistExport**](OutboundApi.html#getoutbounddnclistexport) | **GET** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
 | [**GetOutboundDnclistImportstatus**](OutboundApi.html#getoutbounddnclistimportstatus) | **GET** /api/v2/outbound/dnclists/{dncListId}/importstatus | Get dialer dncList import status. |
 | [**GetOutboundDnclists**](OutboundApi.html#getoutbounddnclists) | **GET** /api/v2/outbound/dnclists | Query dialer DNC lists |
+| [**GetOutboundEvent**](OutboundApi.html#getoutboundevent) | **GET** /api/v2/outbound/events/{eventId} | Get Dialer Event |
+| [**GetOutboundEvents**](OutboundApi.html#getoutboundevents) | **GET** /api/v2/outbound/events | Query Event Logs |
 | [**GetOutboundRuleset**](OutboundApi.html#getoutboundruleset) | **GET** /api/v2/outbound/rulesets/{ruleSetId} | Get a Rule Set by ID. |
 | [**GetOutboundRulesets**](OutboundApi.html#getoutboundrulesets) | **GET** /api/v2/outbound/rulesets | Query a list of Rule Sets. |
 | [**GetOutboundSchedulesCampaign**](OutboundApi.html#getoutboundschedulescampaign) | **GET** /api/v2/outbound/schedules/campaigns/{campaignId} | Get a dialer campaign schedule. |
@@ -2192,6 +2194,130 @@ namespace Example
 ### Return type
 
 [**DncListEntityListing**](DncListEntityListing.html)
+
+<a name="getoutboundevent"></a>
+
+## [**EventLog**](EventLog.html) GetOutboundEvent (string eventId)
+
+Get Dialer Event
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundEventExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var eventId = eventId_example;  // string | Event Log ID
+
+            try
+            {
+                // Get Dialer Event
+                EventLog result = apiInstance.GetOutboundEvent(eventId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundEvent: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eventId** | **string**| Event Log ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EventLog**](EventLog.html)
+
+<a name="getoutboundevents"></a>
+
+## [**DialerEventEntityListing**](DialerEventEntityListing.html) GetOutboundEvents (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
+
+Query Event Logs
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundEventsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            var category = category_example;  // string | Category (optional) 
+            var level = level_example;  // string | Level (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+
+            try
+            {
+                // Query Event Logs
+                DialerEventEntityListing result = apiInstance.GetOutboundEvents(pageSize, pageNumber, filterType, category, level, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundEvents: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
+| **category** | **string**| Category | [optional]  |
+| **level** | **string**| Level | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a] |
+{: class="table table-striped"}
+
+### Return type
+
+[**DialerEventEntityListing**](DialerEventEntityListing.html)
 
 <a name="getoutboundruleset"></a>
 

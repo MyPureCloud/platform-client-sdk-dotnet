@@ -1365,9 +1365,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>PhoneBaseEntityListing</returns>
-        PhoneBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null);
+        PhoneBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
 
         /// <summary>
         /// Get a list of Phone Base Settings objects
@@ -1380,9 +1381,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of PhoneBaseEntityListing</returns>
-        ApiResponse<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null);
+        ApiResponse<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Phone Base Settings
         /// </summary>
@@ -4167,9 +4169,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of PhoneBaseEntityListing</returns>
-        System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
 
         /// <summary>
         /// Get a list of Phone Base Settings objects
@@ -4182,9 +4185,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (PhoneBaseEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null);
+        System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null);
         /// <summary>
         /// Get a list of available makes and models to create a new Phone Base Settings
         /// </summary>
@@ -15158,11 +15162,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>PhoneBaseEntityListing</returns>
-        public PhoneBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null)
+        public PhoneBaseEntityListing GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         {
-             ApiResponse<PhoneBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name);
+             ApiResponse<PhoneBaseEntityListing> localVarResponse = GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, expand, name);
              return localVarResponse.Data;
         }
 
@@ -15174,9 +15179,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>ApiResponse of PhoneBaseEntityListing</returns>
-        public ApiResponse< PhoneBaseEntityListing > GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null)
+        public ApiResponse< PhoneBaseEntityListing > GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
@@ -15208,6 +15214,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
 
             // authentication (PureCloud Auth) required
@@ -15245,11 +15252,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of PhoneBaseEntityListing</returns>
-        public async System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         {
-             ApiResponse<PhoneBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name);
+             ApiResponse<PhoneBaseEntityListing> localVarResponse = await GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, expand, name);
              return localVarResponse.Data;
 
         }
@@ -15262,9 +15270,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="expand">Fields to expand in the response, comma-separated (optional)</param>
         /// <param name="name">Name (optional)</param>
         /// <returns>Task of ApiResponse (PhoneBaseEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
         {
 
             var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
@@ -15296,6 +15305,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
 
             // authentication (PureCloud Auth) required

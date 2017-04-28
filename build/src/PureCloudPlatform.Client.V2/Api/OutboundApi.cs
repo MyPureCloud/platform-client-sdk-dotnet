@@ -875,6 +875,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DncListEntityListing</returns>
         ApiResponse<DncListEntityListing> GetOutboundDnclistsWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         /// <summary>
+        /// Get Dialer Event
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>EventLog</returns>
+        EventLog GetOutboundEvent (string eventId);
+
+        /// <summary>
+        /// Get Dialer Event
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>ApiResponse of EventLog</returns>
+        ApiResponse<EventLog> GetOutboundEventWithHttpInfo (string eventId);
+        /// <summary>
+        /// Query Event Logs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>DialerEventEntityListing</returns>
+        DialerEventEntityListing GetOutboundEvents (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query Event Logs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of DialerEventEntityListing</returns>
+        ApiResponse<DialerEventEntityListing> GetOutboundEventsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
         /// Get a Rule Set by ID.
         /// </summary>
         /// <remarks>
@@ -2640,6 +2694,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (DncListEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DncListEntityListing>> GetOutboundDnclistsAsyncWithHttpInfo (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        /// <summary>
+        /// Get Dialer Event
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>Task of EventLog</returns>
+        System.Threading.Tasks.Task<EventLog> GetOutboundEventAsync (string eventId);
+
+        /// <summary>
+        /// Get Dialer Event
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>Task of ApiResponse (EventLog)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EventLog>> GetOutboundEventAsyncWithHttpInfo (string eventId);
+        /// <summary>
+        /// Query Event Logs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of DialerEventEntityListing</returns>
+        System.Threading.Tasks.Task<DialerEventEntityListing> GetOutboundEventsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query Event Logs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (DialerEventEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DialerEventEntityListing>> GetOutboundEventsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null);
         /// <summary>
         /// Get a Rule Set by ID.
         /// </summary>
@@ -9541,6 +9649,350 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DncListEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (DncListEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DncListEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get Dialer Event 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>EventLog</returns>
+        public EventLog GetOutboundEvent (string eventId)
+        {
+             ApiResponse<EventLog> localVarResponse = GetOutboundEventWithHttpInfo(eventId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Dialer Event 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>ApiResponse of EventLog</returns>
+        public ApiResponse< EventLog > GetOutboundEventWithHttpInfo (string eventId)
+        {
+            // verify the required parameter 'eventId' is set
+            if (eventId == null)
+                throw new ApiException(400, "Missing required parameter 'eventId' when calling OutboundApi->GetOutboundEvent");
+
+            var localVarPath = "/api/v2/outbound/events/{eventId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (eventId != null) localVarPathParams.Add("eventId", Configuration.ApiClient.ParameterToString(eventId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EventLog>(localVarStatusCode,
+                localVarHeaders,
+                (EventLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EventLog)));
+            
+        }
+
+        /// <summary>
+        /// Get Dialer Event 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>Task of EventLog</returns>
+        public async System.Threading.Tasks.Task<EventLog> GetOutboundEventAsync (string eventId)
+        {
+             ApiResponse<EventLog> localVarResponse = await GetOutboundEventAsyncWithHttpInfo(eventId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Dialer Event 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="eventId">Event Log ID</param>
+        /// <returns>Task of ApiResponse (EventLog)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EventLog>> GetOutboundEventAsyncWithHttpInfo (string eventId)
+        {
+            // verify the required parameter 'eventId' is set
+            if (eventId == null)
+                throw new ApiException(400, "Missing required parameter 'eventId' when calling OutboundApi->GetOutboundEvent");
+
+            var localVarPath = "/api/v2/outbound/events/{eventId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (eventId != null) localVarPathParams.Add("eventId", Configuration.ApiClient.ParameterToString(eventId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvent: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvent: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EventLog>(localVarStatusCode,
+                localVarHeaders,
+                (EventLog) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EventLog)));
+            
+        }
+
+        /// <summary>
+        /// Query Event Logs 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>DialerEventEntityListing</returns>
+        public DialerEventEntityListing GetOutboundEvents (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<DialerEventEntityListing> localVarResponse = GetOutboundEventsWithHttpInfo(pageSize, pageNumber, filterType, category, level, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query Event Logs 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of DialerEventEntityListing</returns>
+        public ApiResponse< DialerEventEntityListing > GetOutboundEventsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/events";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (category != null) localVarQueryParams.Add("category", Configuration.ApiClient.ParameterToString(category)); // query parameter
+            if (level != null) localVarQueryParams.Add("level", Configuration.ApiClient.ParameterToString(level)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerEventEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DialerEventEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerEventEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Query Event Logs 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of DialerEventEntityListing</returns>
+        public async System.Threading.Tasks.Task<DialerEventEntityListing> GetOutboundEventsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<DialerEventEntityListing> localVarResponse = await GetOutboundEventsAsyncWithHttpInfo(pageSize, pageNumber, filterType, category, level, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query Event Logs 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="category">Category (optional)</param>
+        /// <param name="level">Level (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (DialerEventEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DialerEventEntityListing>> GetOutboundEventsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/events";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (category != null) localVarQueryParams.Add("category", Configuration.ApiClient.ParameterToString(category)); // query parameter
+            if (level != null) localVarQueryParams.Add("level", Configuration.ApiClient.ParameterToString(level)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundEvents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DialerEventEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (DialerEventEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerEventEntityListing)));
             
         }
 

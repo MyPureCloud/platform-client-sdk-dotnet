@@ -60,7 +60,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaxAttemptsPerNumber">MaxAttemptsPerNumber.</param>
         /// <param name="TimeZoneId">The timezone is necessary to define when \&quot;today\&quot; starts and ends.</param>
         /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0.</param>
-        public AttemptLimits(string Name = null, int? Version = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null)
+        /// <param name="RecallEntries">Configuration for recall attempts.</param>
+        public AttemptLimits(string Name = null, int? Version = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, RecallEntry> RecallEntries = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -68,6 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
             this.TimeZoneId = TimeZoneId;
             this.ResetPeriod = ResetPeriod;
+            this.RecallEntries = RecallEntries;
         }
         
         /// <summary>
@@ -116,6 +118,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
         /// <summary>
+        /// Configuration for recall attempts
+        /// </summary>
+        /// <value>Configuration for recall attempts</value>
+        [DataMember(Name="recallEntries", EmitDefaultValue=false)]
+        public Dictionary<string, RecallEntry> RecallEntries { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -138,6 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaxAttemptsPerNumber: ").Append(MaxAttemptsPerNumber).Append("\n");
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("  ResetPeriod: ").Append(ResetPeriod).Append("\n");
+            sb.Append("  RecallEntries: ").Append(RecallEntries).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -221,6 +230,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ResetPeriod.Equals(other.ResetPeriod)
                 ) &&
                 (
+                    this.RecallEntries == other.RecallEntries ||
+                    this.RecallEntries != null &&
+                    this.RecallEntries.SequenceEqual(other.RecallEntries)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -256,6 +270,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
                 if (this.ResetPeriod != null)
                     hash = hash * 59 + this.ResetPeriod.GetHashCode();
+                if (this.RecallEntries != null)
+                    hash = hash * 59 + this.RecallEntries.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
