@@ -1,38 +1,16 @@
 
-# Major Changes (1 change)
-
-**GET /api/v2/telephony/providers/edges/phonebasesettings** (1 change)
-
-* Parameter expand was added
+# Major Changes (0 changes)
 
 
-# Minor Changes (8 changes)
+# Minor Changes (2 changes)
 
-**/api/v2/outbound/events** (2 changes)
+**/api/v2/outbound/contactlists/{contactListId}/contacts** (1 change)
 
-* Path was added
-* Operation GET was added
+* Operation delete was added. Summary: Delete contacts from a contact list.
 
-**/api/v2/outbound/events/{eventId}** (2 changes)
+**Edge** (1 change)
 
-* Path was added
-* Operation GET was added
-
-**DialerEventEntityListing** (1 change)
-
-* Model was added
-
-**EventLog** (1 change)
-
-* Model was added
-
-**EventMessage** (1 change)
-
-* Model was added
-
-**AttemptLimits** (1 change)
-
-* Optional property recallEntries was added
+* Optional property proxy was added
 
 
 # Point Changes (0 changes)

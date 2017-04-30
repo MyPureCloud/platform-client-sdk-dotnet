@@ -307,7 +307,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EdgeDeploymentType">EdgeDeploymentType.</param>
         /// <param name="CallDrainingState">CallDrainingState.</param>
         /// <param name="ConversationCount">ConversationCount.</param>
-        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null)
+        /// <param name="Proxy">Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed..</param>
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null, string Proxy = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -353,6 +354,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EdgeDeploymentType = EdgeDeploymentType;
             this.CallDrainingState = CallDrainingState;
             this.ConversationCount = ConversationCount;
+            this.Proxy = Proxy;
         }
         
         /// <summary>
@@ -522,6 +524,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="conversationCount", EmitDefaultValue=false)]
         public int? ConversationCount { get; set; }
         /// <summary>
+        /// Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed.
+        /// </summary>
+        /// <value>Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed.</value>
+        [DataMember(Name="proxy", EmitDefaultValue=false)]
+        public string Proxy { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -572,6 +580,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EdgeDeploymentType: ").Append(EdgeDeploymentType).Append("\n");
             sb.Append("  CallDrainingState: ").Append(CallDrainingState).Append("\n");
             sb.Append("  ConversationCount: ").Append(ConversationCount).Append("\n");
+            sb.Append("  Proxy: ").Append(Proxy).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -795,6 +804,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationCount.Equals(other.ConversationCount)
                 ) &&
                 (
+                    this.Proxy == other.Proxy ||
+                    this.Proxy != null &&
+                    this.Proxy.Equals(other.Proxy)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -886,6 +900,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.CallDrainingState.GetHashCode();
                 if (this.ConversationCount != null)
                     hash = hash * 59 + this.ConversationCount.GetHashCode();
+                if (this.Proxy != null)
+                    hash = hash * 59 + this.Proxy.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

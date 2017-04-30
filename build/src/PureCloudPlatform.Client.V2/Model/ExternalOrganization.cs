@@ -26,6 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Name">The name of the company. (required).</param>
         /// <param name="CompanyType">CompanyType.</param>
         /// <param name="Industry">Industry.</param>
@@ -42,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
-        public ExternalOrganization(string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -53,6 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            this.Id = Id;
             this.CompanyType = CompanyType;
             this.Industry = Industry;
             this.PrimaryContactId = PrimaryContactId;
@@ -75,7 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         /// <summary>
         /// The name of the company.
         /// </summary>

@@ -185,6 +185,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId);
         /// <summary>
+        /// Delete contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns></returns>
+        void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds);
+
+        /// <summary>
+        /// Delete contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundContactlistContactsWithHttpInfo (string contactListId, List<string> contactIds);
+        /// <summary>
         /// Delete dialer DNC list
         /// </summary>
         /// <remarks>
@@ -2004,6 +2027,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactId">Contact ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
+        /// <summary>
+        /// Delete contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundContactlistContactsAsync (string contactListId, List<string> contactIds);
+
+        /// <summary>
+        /// Delete contacts from a contact list.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<string> contactIds);
         /// <summary>
         /// Delete dialer DNC list
         /// </summary>
@@ -4989,6 +5035,173 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContact: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContact: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        /// <summary>
+        /// Delete contacts from a contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns></returns>
+        public void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds)
+        {
+             DeleteOutboundContactlistContactsWithHttpInfo(contactListId, contactIds);
+        }
+
+        /// <summary>
+        /// Delete contacts from a contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundContactlistContactsWithHttpInfo (string contactListId, List<string> contactIds)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteOutboundContactlistContacts");
+            // verify the required parameter 'contactIds' is set
+            if (contactIds == null)
+                throw new ApiException(400, "Missing required parameter 'contactIds' when calling OutboundApi->DeleteOutboundContactlistContacts");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (contactIds != null) localVarQueryParams.Add("contactIds", Configuration.ApiClient.ParameterToString(contactIds)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        /// <summary>
+        /// Delete contacts from a contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundContactlistContactsAsync (string contactListId, List<string> contactIds)
+        {
+             await DeleteOutboundContactlistContactsAsyncWithHttpInfo(contactListId, contactIds);
+
+        }
+
+        /// <summary>
+        /// Delete contacts from a contact list. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListId">Contact List ID</param>
+        /// <param name="contactIds">ContactIds to delete.</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<string> contactIds)
+        {
+            // verify the required parameter 'contactListId' is set
+            if (contactListId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteOutboundContactlistContacts");
+            // verify the required parameter 'contactIds' is set
+            if (contactIds == null)
+                throw new ApiException(400, "Missing required parameter 'contactIds' when calling OutboundApi->DeleteOutboundContactlistContacts");
+
+            var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListId != null) localVarPathParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // path parameter
+            if (contactIds != null) localVarQueryParams.Add("contactIds", Configuration.ApiClient.ParameterToString(contactIds)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
