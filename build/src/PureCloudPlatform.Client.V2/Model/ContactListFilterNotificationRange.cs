@@ -21,42 +21,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotificationRange" /> class.
         /// </summary>
-        /// <param name="Gt">Gt.</param>
-        /// <param name="Gte">Gte.</param>
-        /// <param name="Lt">Lt.</param>
-        /// <param name="Lte">Lte.</param>
+        /// <param name="Min">Min.</param>
+        /// <param name="Max">Max.</param>
+        /// <param name="MinInclusive">MinInclusive.</param>
+        /// <param name="MaxInclusive">MaxInclusive.</param>
         /// <param name="InSet">InSet.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ContactListFilterNotificationRange(string Gt = null, string Gte = null, string Lt = null, string Lte = null, List<string> InSet = null, Object AdditionalProperties = null)
+        public ContactListFilterNotificationRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null, Object AdditionalProperties = null)
         {
-            this.Gt = Gt;
-            this.Gte = Gte;
-            this.Lt = Lt;
-            this.Lte = Lte;
+            this.Min = Min;
+            this.Max = Max;
+            this.MinInclusive = MinInclusive;
+            this.MaxInclusive = MaxInclusive;
             this.InSet = InSet;
             this.AdditionalProperties = AdditionalProperties;
         }
         
         /// <summary>
-        /// Gets or Sets Gt
+        /// Gets or Sets Min
         /// </summary>
-        [DataMember(Name="gt", EmitDefaultValue=false)]
-        public string Gt { get; set; }
+        [DataMember(Name="min", EmitDefaultValue=false)]
+        public string Min { get; set; }
         /// <summary>
-        /// Gets or Sets Gte
+        /// Gets or Sets Max
         /// </summary>
-        [DataMember(Name="gte", EmitDefaultValue=false)]
-        public string Gte { get; set; }
+        [DataMember(Name="max", EmitDefaultValue=false)]
+        public string Max { get; set; }
         /// <summary>
-        /// Gets or Sets Lt
+        /// Gets or Sets MinInclusive
         /// </summary>
-        [DataMember(Name="lt", EmitDefaultValue=false)]
-        public string Lt { get; set; }
+        [DataMember(Name="minInclusive", EmitDefaultValue=false)]
+        public bool? MinInclusive { get; set; }
         /// <summary>
-        /// Gets or Sets Lte
+        /// Gets or Sets MaxInclusive
         /// </summary>
-        [DataMember(Name="lte", EmitDefaultValue=false)]
-        public string Lte { get; set; }
+        [DataMember(Name="maxInclusive", EmitDefaultValue=false)]
+        public bool? MaxInclusive { get; set; }
         /// <summary>
         /// Gets or Sets InSet
         /// </summary>
@@ -75,10 +75,10 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterNotificationRange {\n");
-            sb.Append("  Gt: ").Append(Gt).Append("\n");
-            sb.Append("  Gte: ").Append(Gte).Append("\n");
-            sb.Append("  Lt: ").Append(Lt).Append("\n");
-            sb.Append("  Lte: ").Append(Lte).Append("\n");
+            sb.Append("  Min: ").Append(Min).Append("\n");
+            sb.Append("  Max: ").Append(Max).Append("\n");
+            sb.Append("  MinInclusive: ").Append(MinInclusive).Append("\n");
+            sb.Append("  MaxInclusive: ").Append(MaxInclusive).Append("\n");
             sb.Append("  InSet: ").Append(InSet).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
@@ -118,24 +118,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Gt == other.Gt ||
-                    this.Gt != null &&
-                    this.Gt.Equals(other.Gt)
+                    this.Min == other.Min ||
+                    this.Min != null &&
+                    this.Min.Equals(other.Min)
                 ) &&
                 (
-                    this.Gte == other.Gte ||
-                    this.Gte != null &&
-                    this.Gte.Equals(other.Gte)
+                    this.Max == other.Max ||
+                    this.Max != null &&
+                    this.Max.Equals(other.Max)
                 ) &&
                 (
-                    this.Lt == other.Lt ||
-                    this.Lt != null &&
-                    this.Lt.Equals(other.Lt)
+                    this.MinInclusive == other.MinInclusive ||
+                    this.MinInclusive != null &&
+                    this.MinInclusive.Equals(other.MinInclusive)
                 ) &&
                 (
-                    this.Lte == other.Lte ||
-                    this.Lte != null &&
-                    this.Lte.Equals(other.Lte)
+                    this.MaxInclusive == other.MaxInclusive ||
+                    this.MaxInclusive != null &&
+                    this.MaxInclusive.Equals(other.MaxInclusive)
                 ) &&
                 (
                     this.InSet == other.InSet ||
@@ -160,14 +160,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Gt != null)
-                    hash = hash * 59 + this.Gt.GetHashCode();
-                if (this.Gte != null)
-                    hash = hash * 59 + this.Gte.GetHashCode();
-                if (this.Lt != null)
-                    hash = hash * 59 + this.Lt.GetHashCode();
-                if (this.Lte != null)
-                    hash = hash * 59 + this.Lte.GetHashCode();
+                if (this.Min != null)
+                    hash = hash * 59 + this.Min.GetHashCode();
+                if (this.Max != null)
+                    hash = hash * 59 + this.Max.GetHashCode();
+                if (this.MinInclusive != null)
+                    hash = hash * 59 + this.MinInclusive.GetHashCode();
+                if (this.MaxInclusive != null)
+                    hash = hash * 59 + this.MaxInclusive.GetHashCode();
                 if (this.InSet != null)
                     hash = hash * 59 + this.InSet.GetHashCode();
                 if (this.AdditionalProperties != null)

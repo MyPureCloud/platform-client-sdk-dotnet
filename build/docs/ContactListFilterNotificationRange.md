@@ -7,10 +7,10 @@ title: ContactListFilterNotificationRange
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Gt** | **string** |  | [optional] |
-| **Gte** | **string** |  | [optional] |
-| **Lt** | **string** |  | [optional] |
-| **Lte** | **string** |  | [optional] |
+| **Min** | **string** |  | [optional] |
+| **Max** | **string** |  | [optional] |
+| **MinInclusive** | **bool?** |  | [optional] |
+| **MaxInclusive** | **bool?** |  | [optional] |
 | **InSet** | **List&lt;string&gt;** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}

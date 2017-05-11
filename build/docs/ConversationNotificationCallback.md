@@ -14,6 +14,7 @@ title: ConversationNotificationCallback
 | **DisconnectType** | **string** |  | [optional] |
 | **StartHoldTime** | **DateTime?** |  | [optional] |
 | **DialerPreview** | [**ConversationNotificationDialerPreview**](ConversationNotificationDialerPreview.html) |  | [optional] |
+| **Voicemail** | [**DocumentDataV2NotificationWorkspace**](DocumentDataV2NotificationWorkspace.html) |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
 | **CallbackUserName** | **string** |  | [optional] |
 | **ScriptId** | **string** |  | [optional] |

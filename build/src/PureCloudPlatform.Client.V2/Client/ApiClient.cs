@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Client
         /// </summary>
         public ApiClient()
         {
+            // Use TLS 1.2
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             Configuration = Configuration.Default;
             RestClient = new RestClient("https://api.mypurecloud.com");
             AddSerializerSettings();
@@ -41,6 +44,9 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config = null)
         {
+            // Use TLS 1.2
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
             if (config == null)
                 Configuration = Configuration.Default;
             else
@@ -57,7 +63,10 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="basePath">The base path.</param>
         public ApiClient(String basePath = "https://api.mypurecloud.com")
         {
-           if (String.IsNullOrEmpty(basePath))
+            // Use TLS 1.2
+            ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
+
+            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");
 
             RestClient = new RestClient(basePath);
