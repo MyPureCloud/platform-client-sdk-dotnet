@@ -87,6 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CallRuleNoDncListsConfigured,
             
             /// <summary>
+            /// Enum ContactListFilterEvaluationFailed for "CONTACT_LIST_FILTER_EVALUATION_FAILED"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_LIST_FILTER_EVALUATION_FAILED")]
+            ContactListFilterEvaluationFailed,
+            
+            /// <summary>
             /// Enum InvalidPhoneNumber for "INVALID_PHONE_NUMBER"
             /// </summary>
             [EnumMember(Value = "INVALID_PHONE_NUMBER")]

@@ -100,7 +100,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum NumberUncallable for "NUMBER_UNCALLABLE"
             /// </summary>
             [EnumMember(Value = "NUMBER_UNCALLABLE")]
-            NumberUncallable
+            NumberUncallable,
+            
+            /// <summary>
+            /// Enum SetCallerId for "SET_CALLER_ID"
+            /// </summary>
+            [EnumMember(Value = "SET_CALLER_ID")]
+            SetCallerId,
+            
+            /// <summary>
+            /// Enum SetSkills for "SET_SKILLS"
+            /// </summary>
+            [EnumMember(Value = "SET_SKILLS")]
+            SetSkills
         }
         /// <summary>
         /// Indicator of the type of update action (applicable only to certain types of actions)

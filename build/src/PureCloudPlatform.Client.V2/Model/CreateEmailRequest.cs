@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">The ID of the queue to use for routing the chat conversation. (required).</param>
         /// <param name="Provider">The name of the provider that is sourcing the web chat. (required).</param>
         /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
-        /// <param name="LanguageId">The ID of the langauge to use for routing..</param>
+        /// <param name="LanguageId">The ID of the language to use for routing..</param>
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
         /// <param name="ToAddress">The email address of the recipient of the email..</param>
@@ -122,9 +122,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
         /// <summary>
-        /// The ID of the langauge to use for routing.
+        /// The ID of the language to use for routing.
         /// </summary>
-        /// <value>The ID of the langauge to use for routing.</value>
+        /// <value>The ID of the language to use for routing.</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
         /// <summary>

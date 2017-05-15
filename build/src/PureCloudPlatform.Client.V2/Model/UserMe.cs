@@ -98,7 +98,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Adjacents">The first 50 superiors, direct reports, and siblings of this user. Mutually exclusive with superiors and direct reports expands..</param>
         /// <param name="RoutingSkills">The first 50 routing skills for user&#39;s organizations.</param>
         /// <param name="FieldConfigs">The field config for all entities types of user&#39;s organization.</param>
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null)
+        /// <param name="Token">Information about the current token.</param>
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -141,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Adjacents = Adjacents;
             this.RoutingSkills = RoutingSkills;
             this.FieldConfigs = FieldConfigs;
+            this.Token = Token;
         }
         
         /// <summary>
@@ -340,6 +342,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="fieldConfigs", EmitDefaultValue=false)]
         public FieldConfigs FieldConfigs { get; set; }
         /// <summary>
+        /// Information about the current token
+        /// </summary>
+        /// <value>Information about the current token</value>
+        [DataMember(Name="token", EmitDefaultValue=false)]
+        public TokenInfo Token { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -388,6 +396,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Adjacents: ").Append(Adjacents).Append("\n");
             sb.Append("  RoutingSkills: ").Append(RoutingSkills).Append("\n");
             sb.Append("  FieldConfigs: ").Append(FieldConfigs).Append("\n");
+            sb.Append("  Token: ").Append(Token).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -601,6 +610,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FieldConfigs.Equals(other.FieldConfigs)
                 ) &&
                 (
+                    this.Token == other.Token ||
+                    this.Token != null &&
+                    this.Token.Equals(other.Token)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -688,6 +702,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.RoutingSkills.GetHashCode();
                 if (this.FieldConfigs != null)
                     hash = hash * 59 + this.FieldConfigs.GetHashCode();
+                if (this.Token != null)
+                    hash = hash * 59 + this.Token.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

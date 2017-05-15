@@ -629,7 +629,7 @@ namespace Example
 
 <a name="getorphanrecordings"></a>
 
-## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null)
+## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
 
 Gets all orphan recordings
 
@@ -661,11 +661,12 @@ namespace Example
             var nextPage = nextPage_example;  // string | next page token (optional) 
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
             var hasConversation = true;  // bool? | Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. (optional)  (default to false)
+            var media = media_example;  // string | Filter resulting orphans based on their media type (optional) 
 
             try
             {
                 // Gets all orphan recordings
-                OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation);
+                OrphanRecordingListing result = apiInstance.GetOrphanrecordings(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, hasConversation, media);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -689,6 +690,7 @@ namespace Example
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **hasConversation** | **bool?**| Filter resulting orphans by whether the conversation is known. False returns all orphans for the organization. | [optional] [default to false] |
+| **media** | **string**| Filter resulting orphans based on their media type | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

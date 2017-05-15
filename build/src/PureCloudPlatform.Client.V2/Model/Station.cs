@@ -123,6 +123,18 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="lineAppearanceId", EmitDefaultValue=false)]
         public string LineAppearanceId { get; set; }
         /// <summary>
+        /// The default or configured value of media dscp for the station. Empty if station type is not inin_webrtc_softphone.
+        /// </summary>
+        /// <value>The default or configured value of media dscp for the station. Empty if station type is not inin_webrtc_softphone.</value>
+        [DataMember(Name="webRtcMediaDscp", EmitDefaultValue=false)]
+        public int? WebRtcMediaDscp { get; private set; }
+        /// <summary>
+        /// The default or configured value of persistent connection setting for the station. Empty if station type is not inin_webrtc_softphone.
+        /// </summary>
+        /// <value>The default or configured value of persistent connection setting for the station. Empty if station type is not inin_webrtc_softphone.</value>
+        [DataMember(Name="webRtcPersistentEnabled", EmitDefaultValue=false)]
+        public bool? WebRtcPersistentEnabled { get; private set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -146,6 +158,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  LineAppearanceId: ").Append(LineAppearanceId).Append("\n");
+            sb.Append("  WebRtcMediaDscp: ").Append(WebRtcMediaDscp).Append("\n");
+            sb.Append("  WebRtcPersistentEnabled: ").Append(WebRtcPersistentEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -234,6 +248,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LineAppearanceId.Equals(other.LineAppearanceId)
                 ) &&
                 (
+                    this.WebRtcMediaDscp == other.WebRtcMediaDscp ||
+                    this.WebRtcMediaDscp != null &&
+                    this.WebRtcMediaDscp.Equals(other.WebRtcMediaDscp)
+                ) &&
+                (
+                    this.WebRtcPersistentEnabled == other.WebRtcPersistentEnabled ||
+                    this.WebRtcPersistentEnabled != null &&
+                    this.WebRtcPersistentEnabled.Equals(other.WebRtcPersistentEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -271,6 +295,10 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Type.GetHashCode();
                 if (this.LineAppearanceId != null)
                     hash = hash * 59 + this.LineAppearanceId.GetHashCode();
+                if (this.WebRtcMediaDscp != null)
+                    hash = hash * 59 + this.WebRtcMediaDscp.GetHashCode();
+                if (this.WebRtcPersistentEnabled != null)
+                    hash = hash * 59 + this.WebRtcPersistentEnabled.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

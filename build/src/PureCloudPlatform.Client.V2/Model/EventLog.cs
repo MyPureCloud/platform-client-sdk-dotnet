@@ -83,6 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Callback,
             
             /// <summary>
+            /// Enum ContactListFilter for "CONTACT_LIST_FILTER"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_LIST_FILTER")]
+            ContactListFilter,
+            
+            /// <summary>
             /// Enum Schedule for "SCHEDULE"
             /// </summary>
             [EnumMember(Value = "SCHEDULE")]

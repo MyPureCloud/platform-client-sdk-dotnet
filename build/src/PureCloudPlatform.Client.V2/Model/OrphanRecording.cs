@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Email for "EMAIL"
             /// </summary>
             [EnumMember(Value = "EMAIL")]
-            Email
+            Email,
+            
+            /// <summary>
+            /// Enum ScreenRecording for "SCREEN_RECORDING"
+            /// </summary>
+            [EnumMember(Value = "SCREEN_RECORDING")]
+            ScreenRecording
         }
         /// <summary>
         /// Gets or Sets MediaType
@@ -80,7 +86,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Email for "EMAIL"
             /// </summary>
             [EnumMember(Value = "EMAIL")]
-            Email
+            Email,
+            
+            /// <summary>
+            /// Enum Screen for "SCREEN"
+            /// </summary>
+            [EnumMember(Value = "SCREEN")]
+            Screen
         }
         /// <summary>
         /// Gets or Sets FileState

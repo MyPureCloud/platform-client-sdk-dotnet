@@ -19,8 +19,9 @@ title: VoicemailMessage
 | **CallerUser** | [**User**](User.html) | Optionally the user that left the voicemail message if the caller was a known user | [optional] |
 | **Deleted** | **bool?** | Whether the voicemail message has been marked as deleted | [optional] |
 | **Note** | **string** | An optional note | [optional] |
-| **User** | [**User**](User.html) | The user that the voicemail message belongs to or null which means the voicemail message belongs to a group | [optional] |
-| **Group** | [**Group**](Group.html) | The group that the voicemail message belongs to or null which means the voicemail message belongs to a user | [optional] |
+| **User** | [**User**](User.html) | The user that the voicemail message belongs to or null which means the voicemail message belongs to a group or queue | [optional] |
+| **Group** | [**Group**](Group.html) | The group that the voicemail message belongs to or null which means the voicemail message belongs to a user or queue | [optional] |
+| **Queue** | [**Queue**](Queue.html) | The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group | [optional] |
 | **CopiedFrom** | [**VoicemailCopyRecord**](VoicemailCopyRecord.html) | Represents where this voicemail message was copied from | [optional] |
 | **CopiedTo** | [**List&lt;VoicemailCopyRecord&gt;**](VoicemailCopyRecord.html) | Represents where this voicemail has been copied to | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
