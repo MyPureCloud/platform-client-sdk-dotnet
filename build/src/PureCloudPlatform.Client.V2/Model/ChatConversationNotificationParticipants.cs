@@ -283,8 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">ExternalContact.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="Peer">Peer.</param>
         /// <param name="RoomId">RoomId.</param>
-        public ChatConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, ChatConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ChatConversationNotificationErrorInfo ErrorInfo = null, ChatConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ChatConversationNotificationUriReference ExternalContact = null, ChatConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string RoomId = null)
+        public ChatConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, ChatConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ChatConversationNotificationErrorInfo ErrorInfo = null, ChatConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ChatConversationNotificationUriReference ExternalContact = null, ChatConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string RoomId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -311,6 +312,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.RoomId = RoomId;
         }
         
@@ -425,6 +427,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationNotificationWrapup Wrapup { get; set; }
         /// <summary>
+        /// Gets or Sets Peer
+        /// </summary>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
@@ -462,6 +469,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -625,6 +633,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -692,6 +705,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
                 return hash;

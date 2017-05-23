@@ -12,6 +12,7 @@ title: ManagementUnit
 | **StartDayOfWeek** | **string** | Start day of week for workforce management planning purposes | [optional] |
 | **Timezone** | **string** | The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database) | [optional] |
 | **Version** | **int?** | The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests | |
+| **DateModified** | **DateTime?** | The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

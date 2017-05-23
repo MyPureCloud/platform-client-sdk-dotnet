@@ -19,6 +19,7 @@ title: ConversationChat
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Provider** | **string** | The source provider for the email. | [optional] |
+| **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 {: class="table table-striped"}
 
 

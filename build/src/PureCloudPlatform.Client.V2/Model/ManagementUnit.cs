@@ -93,7 +93,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StartDayOfWeek">Start day of week for workforce management planning purposes.</param>
         /// <param name="Timezone">The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database).</param>
         /// <param name="Version">The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests (required).</param>
-        public ManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string Timezone = null, int? Version = null)
+        /// <param name="DateModified">The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        public ManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string Timezone = null, int? Version = null, DateTime? DateModified = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -107,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Name = Name;
             this.StartDayOfWeek = StartDayOfWeek;
             this.Timezone = Timezone;
+            this.DateModified = DateModified;
         }
         
         /// <summary>
@@ -133,6 +135,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
+        /// The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -151,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -214,6 +223,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version.Equals(other.Version)
                 ) &&
                 (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -241,6 +255,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Timezone.GetHashCode();
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

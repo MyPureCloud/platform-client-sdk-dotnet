@@ -32,6 +32,7 @@ title: ChatConversationNotificationParticipants
 | **ExternalContact** | [**ChatConversationNotificationUriReference**](ChatConversationNotificationUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**ChatConversationNotificationUriReference**](ChatConversationNotificationUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **Peer** | **string** |  | [optional] |
 | **RoomId** | **string** |  | [optional] |
 {: class="table table-striped"}
 

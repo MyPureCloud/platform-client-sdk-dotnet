@@ -693,6 +693,39 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DomainEdgeSoftwareVersionDtoEntityListing</returns>
         ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing> GetTelephonyProvidersEdgeSoftwareversionsWithHttpInfo (string edgeId);
         /// <summary>
+        /// Get the list of available trunks for the given Edge.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>TrunkEntityListing</returns>
+        TrunkEntityListing GetTelephonyProvidersEdgeTrunks (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
+
+        /// <summary>
+        /// Get the list of available trunks for the given Edge.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>ApiResponse of TrunkEntityListing</returns>
+        ApiResponse<TrunkEntityListing> GetTelephonyProvidersEdgeTrunksWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
+        /// <summary>
         /// Get the list of edges.
         /// </summary>
         /// <remarks>
@@ -3496,6 +3529,39 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgeId">Edge ID</param>
         /// <returns>Task of ApiResponse (DomainEdgeSoftwareVersionDtoEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>> GetTelephonyProvidersEdgeSoftwareversionsAsyncWithHttpInfo (string edgeId);
+        /// <summary>
+        /// Get the list of available trunks for the given Edge.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of TrunkEntityListing</returns>
+        System.Threading.Tasks.Task<TrunkEntityListing> GetTelephonyProvidersEdgeTrunksAsync (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
+
+        /// <summary>
+        /// Get the list of available trunks for the given Edge.
+        /// </summary>
+        /// <remarks>
+        /// Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetTelephonyProvidersEdgeTrunksAsyncWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null);
         /// <summary>
         /// Get the list of edges.
         /// </summary>
@@ -10605,6 +10671,199 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DomainEdgeSoftwareVersionDtoEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (DomainEdgeSoftwareVersionDtoEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainEdgeSoftwareVersionDtoEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of available trunks for the given Edge. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>TrunkEntityListing</returns>
+        public TrunkEntityListing GetTelephonyProvidersEdgeTrunks (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
+        {
+             ApiResponse<TrunkEntityListing> localVarResponse = GetTelephonyProvidersEdgeTrunksWithHttpInfo(edgeId, pageNumber, pageSize, sortBy, sortOrder, trunkBaseId, trunkType);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of available trunks for the given Edge. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>ApiResponse of TrunkEntityListing</returns>
+        public ApiResponse< TrunkEntityListing > GetTelephonyProvidersEdgeTrunksWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
+        {
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeTrunks");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/trunks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (trunkBaseId != null) localVarQueryParams.Add("trunkBase.id", Configuration.ApiClient.ParameterToString(trunkBaseId)); // query parameter
+            if (trunkType != null) localVarQueryParams.Add("trunkType", Configuration.ApiClient.ParameterToString(trunkType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeTrunks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeTrunks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Get the list of available trunks for the given Edge. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of TrunkEntityListing</returns>
+        public async System.Threading.Tasks.Task<TrunkEntityListing> GetTelephonyProvidersEdgeTrunksAsync (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
+        {
+             ApiResponse<TrunkEntityListing> localVarResponse = await GetTelephonyProvidersEdgeTrunksAsyncWithHttpInfo(edgeId, pageNumber, pageSize, sortBy, sortOrder, trunkBaseId, trunkType);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of available trunks for the given Edge. Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="edgeId">Edge ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Value by which to sort (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="trunkBaseId">Filter by Trunk Base Ids (optional)</param>
+        /// <param name="trunkType">Filter by a Trunk type (optional)</param>
+        /// <returns>Task of ApiResponse (TrunkEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetTelephonyProvidersEdgeTrunksAsyncWithHttpInfo (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
+        {
+            // verify the required parameter 'edgeId' is set
+            if (edgeId == null)
+                throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeTrunks");
+
+            var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/trunks";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (edgeId != null) localVarPathParams.Add("edgeId", Configuration.ApiClient.ParameterToString(edgeId)); // path parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (trunkBaseId != null) localVarQueryParams.Add("trunkBase.id", Configuration.ApiClient.ParameterToString(trunkBaseId)); // query parameter
+            if (trunkType != null) localVarQueryParams.Add("trunkType", Configuration.ApiClient.ParameterToString(trunkType)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeTrunks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgeTrunks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TrunkEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (TrunkEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(TrunkEntityListing)));
             
         }
 

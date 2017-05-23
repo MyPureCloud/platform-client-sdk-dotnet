@@ -283,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">ExternalContact.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="Peer">Peer.</param>
         /// <param name="OutboundPreview">OutboundPreview.</param>
         /// <param name="Voicemail">Voicemail.</param>
         /// <param name="CallbackNumbers">CallbackNumbers.</param>
@@ -291,7 +292,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        public CallbackConversationNotificationCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, ConversationNotificationDialerPreview OutboundPreview = null, DocumentDataV2NotificationWorkspace Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
+        public CallbackConversationNotificationCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, ConversationNotificationDialerPreview OutboundPreview = null, DocumentDataV2NotificationWorkspace Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -318,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.OutboundPreview = OutboundPreview;
             this.Voicemail = Voicemail;
             this.CallbackNumbers = CallbackNumbers;
@@ -439,6 +441,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationNotificationWrapup Wrapup { get; set; }
         /// <summary>
+        /// Gets or Sets Peer
+        /// </summary>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// Gets or Sets OutboundPreview
         /// </summary>
         [DataMember(Name="outboundPreview", EmitDefaultValue=false)]
@@ -511,6 +518,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
             sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
@@ -681,6 +689,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
@@ -783,6 +796,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();
                 if (this.Voicemail != null)

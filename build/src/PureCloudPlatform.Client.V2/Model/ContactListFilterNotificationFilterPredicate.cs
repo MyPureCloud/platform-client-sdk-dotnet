@@ -148,14 +148,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="_Operator">_Operator.</param>
         /// <param name="Value">Value.</param>
         /// <param name="Range">Range.</param>
+        /// <param name="Inverted">Inverted.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ContactListFilterNotificationFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, ContactListFilterNotificationRange Range = null, Object AdditionalProperties = null)
+        public ContactListFilterNotificationFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, ContactListFilterNotificationRange Range = null, bool? Inverted = null, Object AdditionalProperties = null)
         {
             this.Column = Column;
             this.ColumnType = ColumnType;
             this._Operator = _Operator;
             this.Value = Value;
             this.Range = Range;
+            this.Inverted = Inverted;
             this.AdditionalProperties = AdditionalProperties;
         }
         
@@ -175,6 +177,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="range", EmitDefaultValue=false)]
         public ContactListFilterNotificationRange Range { get; set; }
         /// <summary>
+        /// Gets or Sets Inverted
+        /// </summary>
+        [DataMember(Name="inverted", EmitDefaultValue=false)]
+        public bool? Inverted { get; set; }
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -192,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Range: ").Append(Range).Append("\n");
+            sb.Append("  Inverted: ").Append(Inverted).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -255,6 +263,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Range.Equals(other.Range)
                 ) &&
                 (
+                    this.Inverted == other.Inverted ||
+                    this.Inverted != null &&
+                    this.Inverted.Equals(other.Inverted)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -282,6 +295,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Value.GetHashCode();
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
+                if (this.Inverted != null)
+                    hash = hash * 59 + this.Inverted.GetHashCode();
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 return hash;

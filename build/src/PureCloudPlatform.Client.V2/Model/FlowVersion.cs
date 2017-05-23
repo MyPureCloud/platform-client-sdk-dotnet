@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">DateCreated.</param>
         /// <param name="GenerationId">GenerationId.</param>
         /// <param name="PublishResultUri">PublishResultUri.</param>
-        public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, UriReference CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
+        public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
         {
             this.Name = Name;
             this.CommitVersion = CommitVersion;
@@ -112,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
-        public UriReference CreatedBy { get; set; }
+        public User CreatedBy { get; set; }
         /// <summary>
         /// Gets or Sets ConfigurationUri
         /// </summary>

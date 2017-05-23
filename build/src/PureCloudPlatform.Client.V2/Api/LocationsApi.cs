@@ -45,8 +45,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>List&lt;LocationDefinition&gt;</returns>
-        List<LocationDefinition> GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>LocationEntityListing</returns>
+        LocationEntityListing GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of all locations.
@@ -58,8 +58,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>ApiResponse of List&lt;LocationDefinition&gt;</returns>
-        ApiResponse<List<LocationDefinition>> GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>ApiResponse of LocationEntityListing</returns>
+        ApiResponse<LocationEntityListing> GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Search locations using the q64 value returned from a previous search
         /// </summary>
@@ -137,8 +137,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of List&lt;LocationDefinition&gt;</returns>
-        System.Threading.Tasks.Task<List<LocationDefinition>> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>Task of LocationEntityListing</returns>
+        System.Threading.Tasks.Task<LocationEntityListing> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get a list of all locations.
@@ -150,8 +150,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;LocationDefinition&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<LocationDefinition>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
         /// <summary>
         /// Search locations using the q64 value returned from a previous search
         /// </summary>
@@ -450,10 +450,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>List&lt;LocationDefinition&gt;</returns>
-        public List<LocationDefinition> GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>LocationEntityListing</returns>
+        public LocationEntityListing GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<List<LocationDefinition>> localVarResponse = GetLocationsWithHttpInfo(pageSize, pageNumber, sortOrder);
+             ApiResponse<LocationEntityListing> localVarResponse = GetLocationsWithHttpInfo(pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -464,8 +464,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>ApiResponse of List&lt;LocationDefinition&gt;</returns>
-        public ApiResponse< List<LocationDefinition> > GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>ApiResponse of LocationEntityListing</returns>
+        public ApiResponse< LocationEntityListing > GetLocationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
 
             var localVarPath = "/api/v2/locations";
@@ -518,9 +518,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<LocationDefinition>>(localVarStatusCode,
+            return new ApiResponse<LocationEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<LocationDefinition>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LocationDefinition>)));
+                (LocationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)));
             
         }
 
@@ -531,10 +531,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of List&lt;LocationDefinition&gt;</returns>
-        public async System.Threading.Tasks.Task<List<LocationDefinition>> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>Task of LocationEntityListing</returns>
+        public async System.Threading.Tasks.Task<LocationEntityListing> GetLocationsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<List<LocationDefinition>> localVarResponse = await GetLocationsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
+             ApiResponse<LocationEntityListing> localVarResponse = await GetLocationsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -546,8 +546,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <returns>Task of ApiResponse (List&lt;LocationDefinition&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<LocationDefinition>>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        /// <returns>Task of ApiResponse (LocationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LocationEntityListing>> GetLocationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
 
             var localVarPath = "/api/v2/locations";
@@ -600,9 +600,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLocations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<LocationDefinition>>(localVarStatusCode,
+            return new ApiResponse<LocationEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<LocationDefinition>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LocationDefinition>)));
+                (LocationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LocationEntityListing)));
             
         }
 

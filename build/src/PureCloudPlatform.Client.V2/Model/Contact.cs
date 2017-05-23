@@ -128,11 +128,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Address">Email address or phone number for this contact type.</param>
         /// <param name="MediaType">MediaType.</param>
         /// <param name="Type">Type.</param>
-        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null)
+        /// <param name="Extension">Use extension instead of address for setting internal extensions.</param>
+        public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null, string Extension = null)
         {
             this.Address = Address;
             this.MediaType = MediaType;
             this.Type = Type;
+            this.Extension = Extension;
         }
         
         /// <summary>
@@ -148,6 +150,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; private set; }
         /// <summary>
+        /// Use extension instead of address for setting internal extensions
+        /// </summary>
+        /// <value>Use extension instead of address for setting internal extensions</value>
+        [DataMember(Name="extension", EmitDefaultValue=false)]
+        public string Extension { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -159,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Display: ").Append(Display).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Extension: ").Append(Extension).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -214,6 +223,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.Extension == other.Extension ||
+                    this.Extension != null &&
+                    this.Extension.Equals(other.Extension)
                 );
         }
 
@@ -236,6 +250,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.MediaType.GetHashCode();
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                if (this.Extension != null)
+                    hash = hash * 59 + this.Extension.GetHashCode();
                 return hash;
             }
         }

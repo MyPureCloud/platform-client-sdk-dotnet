@@ -10,6 +10,7 @@ title: VoicemailMediaInfo
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **MediaFileUri** | **string** |  | [optional] |
 | **MediaImageUri** | **string** |  | [optional] |
+| **WaveformData** | **List&lt;float?&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

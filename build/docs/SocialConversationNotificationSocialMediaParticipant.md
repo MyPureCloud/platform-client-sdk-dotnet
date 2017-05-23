@@ -32,6 +32,7 @@ title: SocialConversationNotificationSocialMediaParticipant
 | **ExternalContact** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **Peer** | **string** |  | [optional] |
 | **SocialMediaId** | **string** |  | [optional] |
 | **SocialMediaHub** | **string** |  | [optional] |
 | **SocialUserName** | **string** |  | [optional] |

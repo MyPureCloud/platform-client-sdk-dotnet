@@ -305,12 +305,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Other">Other.</param>
         /// <param name="Provider">Provider.</param>
         /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="PeerId">PeerId.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, string Provider = null, string ScriptId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
+        public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.State = State;
@@ -328,6 +329,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Other = Other;
             this.Provider = Provider;
             this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.DisconnectReasons = DisconnectReasons;
@@ -396,6 +398,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         /// <summary>
+        /// Gets or Sets PeerId
+        /// </summary>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+        /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
@@ -444,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Other: ").Append(Other).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
@@ -566,6 +574,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScriptId.Equals(other.ScriptId)
                 ) &&
                 (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
                     this.ConnectedTime == other.ConnectedTime ||
                     this.ConnectedTime != null &&
                     this.ConnectedTime.Equals(other.ConnectedTime)
@@ -635,6 +648,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
                 if (this.DisconnectedTime != null)

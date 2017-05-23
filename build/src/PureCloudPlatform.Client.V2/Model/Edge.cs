@@ -281,7 +281,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="State">State.</param>
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
         /// <param name="CreatedByApp">CreatedByApp.</param>
-        /// <param name="Interfaces">Interfaces.</param>
+        /// <param name="Interfaces">The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead.</param>
         /// <param name="Make">Make.</param>
         /// <param name="Model">Model.</param>
         /// <param name="ApiVersion">ApiVersion.</param>
@@ -412,8 +412,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         /// <summary>
-        /// Gets or Sets Interfaces
+        /// The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead
         /// </summary>
+        /// <value>The list of interfaces for the edge. (Deprecated) Replaced by configuring trunks/ip info on the logical interface instead</value>
         [DataMember(Name="interfaces", EmitDefaultValue=false)]
         public List<EdgeInterface> Interfaces { get; set; }
         /// <summary>

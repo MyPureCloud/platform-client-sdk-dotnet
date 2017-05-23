@@ -283,10 +283,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">ExternalContact.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="Peer">Peer.</param>
         /// <param name="Context">Context.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Sharing">Sharing.</param>
-        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -313,6 +314,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.Context = Context;
             this.PeerCount = PeerCount;
             this.Sharing = Sharing;
@@ -429,6 +431,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationNotificationWrapup Wrapup { get; set; }
         /// <summary>
+        /// Gets or Sets Peer
+        /// </summary>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
@@ -476,6 +483,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  Context: ").Append(Context).Append("\n");
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             sb.Append("  Sharing: ").Append(Sharing).Append("\n");
@@ -641,6 +649,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
@@ -718,6 +731,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
                 if (this.PeerCount != null)

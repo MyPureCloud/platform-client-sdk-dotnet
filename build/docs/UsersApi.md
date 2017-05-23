@@ -1201,7 +1201,7 @@ namespace Example
 
 <a name="getusers"></a>
 
-## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null)
 
 Get the list of available users.
 
@@ -1231,11 +1231,12 @@ namespace Example
             var id = new List<string>(); // List<string> | id (optional) 
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            var state = state_example;  // string | Only list users of this state (optional)  (default to active)
 
             try
             {
                 // Get the list of available users.
-                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand);
+                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1257,6 +1258,7 @@ namespace Example
 | **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **state** | **string**| Only list users of this state | [optional] [default to active] |
 {: class="table table-striped"}
 
 ### Return type

@@ -22,21 +22,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JsonSchemaDocument" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
+        /// <param name="Schema">Schema.</param>
         /// <param name="Title">Title.</param>
         /// <param name="Description">Description.</param>
         /// <param name="Type">Type.</param>
         /// <param name="Required">Required.</param>
         /// <param name="Properties">Properties.</param>
-        /// <param name="Schema">Schema.</param>
-        public JsonSchemaDocument(string Id = null, string Title = null, string Description = null, string Type = null, List<string> Required = null, Dictionary<string, Object> Properties = null, string Schema = null)
+        public JsonSchemaDocument(string Id = null, string Schema = null, string Title = null, string Description = null, string Type = null, List<string> Required = null, Dictionary<string, Object> Properties = null)
         {
             this.Id = Id;
+            this.Schema = Schema;
             this.Title = Title;
             this.Description = Description;
             this.Type = Type;
             this.Required = Required;
             this.Properties = Properties;
-            this.Schema = Schema;
         }
         
         /// <summary>
@@ -44,6 +44,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        /// <summary>
+        /// Gets or Sets Schema
+        /// </summary>
+        [DataMember(Name="$schema", EmitDefaultValue=false)]
+        public string Schema { get; set; }
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
@@ -70,11 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, Object> Properties { get; set; }
         /// <summary>
-        /// Gets or Sets Schema
-        /// </summary>
-        [DataMember(Name="$schema", EmitDefaultValue=false)]
-        public string Schema { get; set; }
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -83,12 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class JsonSchemaDocument {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Required: ").Append(Required).Append("\n");
             sb.Append("  Properties: ").Append(Properties).Append("\n");
-            sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,6 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Schema == other.Schema ||
+                    this.Schema != null &&
+                    this.Schema.Equals(other.Schema)
+                ) &&
+                (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
@@ -154,11 +159,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
-                ) &&
-                (
-                    this.Schema == other.Schema ||
-                    this.Schema != null &&
-                    this.Schema.Equals(other.Schema)
                 );
         }
 
@@ -175,6 +175,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                if (this.Schema != null)
+                    hash = hash * 59 + this.Schema.GetHashCode();
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
                 if (this.Description != null)
@@ -185,8 +187,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Required.GetHashCode();
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
-                if (this.Schema != null)
-                    hash = hash * 59 + this.Schema.GetHashCode();
                 return hash;
             }
         }

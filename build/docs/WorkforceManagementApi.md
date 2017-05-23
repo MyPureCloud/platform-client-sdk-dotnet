@@ -105,7 +105,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The muId of the management unit.
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             {
@@ -127,7 +127,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit. |  |
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -161,7 +161,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The muId of the management unit.
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
             var date = date_example;  // string | ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
 
             try
@@ -184,7 +184,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit. |  |
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **date** | **string**| ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23 |  |
 {: class="table table-striped"}
 
@@ -219,7 +219,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The muId of the management unit.
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
 
@@ -243,7 +243,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit. |  |
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The userId to whom the Time Off Request applies. |  |
 | **timeOffRequestId** | **string**| Time Off Request Id |  |
 {: class="table table-striped"}
@@ -279,7 +279,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The muId of the management unit.
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
             var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
 
@@ -303,7 +303,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit. |  |
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The userId to whom the Time Off Request applies. |  |
 | **recentlyReviewed** | **bool?**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table table-striped"}
@@ -339,7 +339,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The muId of the management unit.
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
 
             try
             {
@@ -361,7 +361,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit. |  |
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -624,7 +624,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The muId of the management unit.
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new IntradayQueryDataCommand(); // IntradayQueryDataCommand | body (optional) 
 
             try
@@ -647,7 +647,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit. |  |
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -682,7 +682,7 @@ namespace Example
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
 
             var apiInstance = new WorkforceManagementApi();
-            var muId = muId_example;  // string | The muId of the management unit.
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
             var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body (optional) 
 
             try
@@ -705,7 +705,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit. |  |
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional]  |
 {: class="table table-striped"}
 

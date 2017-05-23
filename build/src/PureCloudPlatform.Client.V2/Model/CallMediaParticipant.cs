@@ -310,6 +310,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
         /// <param name="Wrapup">Wrapup for this participant, if it has been applied..</param>
+        /// <param name="Peer">The peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="Muted">Value is true when the call is muted..</param>
         /// <param name="Confined">Value is true when the call is confined..</param>
         /// <param name="Recording">Value is true when the call is being recorded..</param>
@@ -321,7 +322,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FaxStatus">Extra fax information if the call is a fax..</param>
         /// <param name="MonitoredParticipantId">The ID of the participant being monitored when performing a call monitor..</param>
         /// <param name="ConsultParticipantId">The ID of the consult transfer target participant when performing a consult transfer..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null)
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -348,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.Muted = Muted;
             this.Confined = Confined;
             this.Recording = Recording;
@@ -494,6 +496,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
         /// <summary>
+        /// The peer communication corresponding to a matching leg for this communication.
+        /// </summary>
+        /// <value>The peer communication corresponding to a matching leg for this communication.</value>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// Value is true when the call is muted.
         /// </summary>
         /// <value>Value is true when the call is muted.</value>
@@ -586,6 +594,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Recording: ").Append(Recording).Append("\n");
@@ -759,6 +768,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
@@ -876,6 +890,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
                 if (this.Confined != null)

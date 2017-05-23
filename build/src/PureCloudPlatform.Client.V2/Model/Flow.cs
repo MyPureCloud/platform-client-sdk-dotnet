@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
-        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, UriReference LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, UriReference PublishedBy = null, Operation CurrentOperation = null)
+        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
             // to ensure "Name" is required (not null)
             if (Name == null)
@@ -148,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets LockedUser
         /// </summary>
         [DataMember(Name="lockedUser", EmitDefaultValue=false)]
-        public UriReference LockedUser { get; set; }
+        public User LockedUser { get; set; }
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
@@ -195,7 +195,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PublishedBy
         /// </summary>
         [DataMember(Name="publishedBy", EmitDefaultValue=false)]
-        public UriReference PublishedBy { get; set; }
+        public User PublishedBy { get; set; }
         /// <summary>
         /// Gets or Sets CurrentOperation
         /// </summary>

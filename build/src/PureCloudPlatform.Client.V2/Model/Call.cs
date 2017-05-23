@@ -317,7 +317,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FaxStatus">Extra information on fax transmission..</param>
         /// <param name="Provider">The source provider for the call..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null)
+        /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null)
         {
             this.State = State;
             this.Id = Id;
@@ -339,6 +340,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FaxStatus = FaxStatus;
             this.Provider = Provider;
             this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
         }
         
         /// <summary>
@@ -437,6 +439,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         /// <summary>
+        /// The id of the peer communication corresponding to a matching leg for this communication.
+        /// </summary>
+        /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -464,6 +472,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -599,6 +608,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
                 );
         }
 
@@ -653,6 +667,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 return hash;
             }
         }

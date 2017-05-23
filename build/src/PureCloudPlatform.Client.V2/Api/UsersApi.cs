@@ -478,8 +478,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
-        UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -493,8 +494,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null);
         /// <summary>
         /// Get current user details.
         /// </summary>
@@ -1438,8 +1440,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
-        System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -1453,8 +1456,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null);
         /// <summary>
         /// Get current user details.
         /// </summary>
@@ -5271,10 +5275,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
-        public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
+             ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand, state);
              return localVarResponse.Data;
         }
 
@@ -5287,8 +5292,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
-        public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -5321,6 +5327,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (state != null) localVarQueryParams.Add("state", Configuration.ApiClient.ParameterToString(state)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required
@@ -5358,10 +5365,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand);
+             ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, sortOrder, expand, state);
              return localVarResponse.Data;
 
         }
@@ -5375,8 +5383,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">id (optional)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
+        /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null)
         {
 
             var localVarPath = "/api/v2/users";
@@ -5409,6 +5418,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            if (state != null) localVarQueryParams.Add("state", Configuration.ApiClient.ParameterToString(state)); // query parameter
 
             // authentication (PureCloud Auth) required
             // oauth required

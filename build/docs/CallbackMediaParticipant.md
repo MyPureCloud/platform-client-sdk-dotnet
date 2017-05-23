@@ -32,7 +32,9 @@ title: CallbackMediaParticipant
 | **ExternalContact** | [**UriReference**](UriReference.html) | If this participant represents an external contact, then this will be the reference for the external contact. | [optional] |
 | **ExternalOrganization** | [**UriReference**](UriReference.html) | If this participant represents an external org, then this will be the reference for the external org. | [optional] |
 | **Wrapup** | [**Wrapup**](Wrapup.html) | Wrapup for this participant, if it has been applied. | [optional] |
+| **Peer** | **string** | The peer communication corresponding to a matching leg for this communication. | [optional] |
 | **OutboundPreview** | [**DialerPreview**](DialerPreview.html) | The outbound preview associated with this callback. | [optional] |
+| **Voicemail** | [**Voicemail**](Voicemail.html) | The voicemail associated with this callback. | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** | The list of phone number to use for this callback. | [optional] |
 | **CallbackUserName** | **string** | The name of the callback target. | [optional] |
 | **SkipEnabled** | **bool?** | If true, the callback can be skipped | [optional] |

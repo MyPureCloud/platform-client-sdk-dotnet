@@ -271,12 +271,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
         /// <param name="Wrapup">Wrapup for this participant, if it has been applied..</param>
+        /// <param name="Peer">The peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="CobrowseSessionId">The co-browse session ID..</param>
         /// <param name="CobrowseRole">This value identifies the role of the co-browse client within the co-browse session (a client is a sharer or a viewer)..</param>
         /// <param name="Controlling">ID of co-browse participants for which this client has been granted control (list is empty if this client cannot control any shared pages)..</param>
         /// <param name="ViewerUrl">The URL that can be used to open co-browse session in web browser..</param>
         /// <param name="ProviderEventTime">The time when the provider event which triggered this conversation update happened in the corrected provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
+        public CobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -303,6 +304,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.CobrowseSessionId = CobrowseSessionId;
             this.CobrowseRole = CobrowseRole;
             this.Controlling = Controlling;
@@ -443,6 +445,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
         /// <summary>
+        /// The peer communication corresponding to a matching leg for this communication.
+        /// </summary>
+        /// <value>The peer communication corresponding to a matching leg for this communication.</value>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// The co-browse session ID.
         /// </summary>
         /// <value>The co-browse session ID.</value>
@@ -505,6 +513,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
             sb.Append("  CobrowseRole: ").Append(CobrowseRole).Append("\n");
             sb.Append("  Controlling: ").Append(Controlling).Append("\n");
@@ -672,6 +681,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.CobrowseSessionId == other.CobrowseSessionId ||
                     this.CobrowseSessionId != null &&
                     this.CobrowseSessionId.Equals(other.CobrowseSessionId)
@@ -759,6 +773,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.CobrowseSessionId != null)
                     hash = hash * 59 + this.CobrowseSessionId.GetHashCode();
                 if (this.CobrowseRole != null)

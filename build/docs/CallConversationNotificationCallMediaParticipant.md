@@ -32,6 +32,7 @@ title: CallConversationNotificationCallMediaParticipant
 | **ExternalContact** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**CallConversationNotificationUriReference**](CallConversationNotificationUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **Peer** | **string** |  | [optional] |
 | **Muted** | **bool?** |  | [optional] |
 | **Confined** | **bool?** |  | [optional] |
 | **Recording** | **bool?** |  | [optional] |

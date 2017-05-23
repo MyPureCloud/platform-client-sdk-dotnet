@@ -23,6 +23,7 @@ title: ConversationNotificationCall
 | **Other** | [**ConversationNotificationAddress**](ConversationNotificationAddress.html) |  | [optional] |
 | **Provider** | **string** |  | [optional] |
 | **ScriptId** | **string** |  | [optional] |
+| **PeerId** | **string** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectReasons** | [**List&lt;ConversationNotificationDisconnectReasons&gt;**](ConversationNotificationDisconnectReasons.html) |  | [optional] |

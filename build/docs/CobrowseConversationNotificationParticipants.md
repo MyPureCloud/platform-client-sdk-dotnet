@@ -32,6 +32,7 @@ title: CobrowseConversationNotificationParticipants
 | **ExternalContact** | [**CobrowseConversationNotificationUriReference**](CobrowseConversationNotificationUriReference.html) |  | [optional] |
 | **ExternalOrganization** | [**CobrowseConversationNotificationUriReference**](CobrowseConversationNotificationUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
+| **Peer** | **string** |  | [optional] |
 | **CobrowseSessionId** | **string** |  | [optional] |
 | **CobrowseRole** | **string** |  | [optional] |
 | **ViewerUrl** | **string** |  | [optional] |

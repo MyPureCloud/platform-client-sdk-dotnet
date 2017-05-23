@@ -11,7 +11,7 @@ title: Flow
 | **Name** | **string** | The flow name | |
 | **Description** | **string** |  | [optional] |
 | **Type** | **string** |  | [optional] |
-| **LockedUser** | [**UriReference**](UriReference.html) |  | [optional] |
+| **LockedUser** | [**User**](User.html) |  | [optional] |
 | **Active** | **bool?** |  | [optional] |
 | **System** | **bool?** |  | [optional] |
 | **Deleted** | **bool?** |  | [optional] |
@@ -20,7 +20,7 @@ title: Flow
 | **InputSchema** | **Object** | json schema describing the inputs for the flow | [optional] |
 | **OutputSchema** | **Object** | json schema describing the outputs for the flow | [optional] |
 | **CheckedInVersion** | [**FlowVersion**](FlowVersion.html) |  | [optional] |
-| **PublishedBy** | [**UriReference**](UriReference.html) |  | [optional] |
+| **PublishedBy** | [**User**](User.html) |  | [optional] |
 | **CurrentOperation** | [**Operation**](Operation.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

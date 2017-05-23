@@ -18,6 +18,7 @@ title: ConversationNotificationCobrowsesessions
 | **ViewerUrl** | **string** |  | [optional] |
 | **Provider** | **string** |  | [optional] |
 | **ScriptId** | **string** |  | [optional] |
+| **PeerId** | **string** |  | [optional] |
 | **ProviderEventTime** | **DateTime?** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |

@@ -202,11 +202,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ViewerUrl">ViewerUrl.</param>
         /// <param name="Provider">Provider.</param>
         /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="PeerId">PeerId.</param>
         /// <param name="ProviderEventTime">ProviderEventTime.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationCobrowse(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, ConversationNotificationAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationCobrowse(StateEnum? State = null, DisconnectTypeEnum? DisconnectType = null, string Id = null, ConversationNotificationAddress Self = null, string RoomId = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.DisconnectType = DisconnectType;
@@ -219,6 +220,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ViewerUrl = ViewerUrl;
             this.Provider = Provider;
             this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
             this.ProviderEventTime = ProviderEventTime;
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
@@ -271,6 +273,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         /// <summary>
+        /// Gets or Sets PeerId
+        /// </summary>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+        /// <summary>
         /// Gets or Sets ProviderEventTime
         /// </summary>
         [DataMember(Name="providerEventTime", EmitDefaultValue=false)]
@@ -309,6 +316,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ViewerUrl: ").Append(ViewerUrl).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  ProviderEventTime: ").Append(ProviderEventTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
@@ -405,6 +413,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScriptId.Equals(other.ScriptId)
                 ) &&
                 (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
                     this.ProviderEventTime == other.ProviderEventTime ||
                     this.ProviderEventTime != null &&
                     this.ProviderEventTime.Equals(other.ProviderEventTime)
@@ -459,6 +472,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 if (this.ProviderEventTime != null)
                     hash = hash * 59 + this.ProviderEventTime.GetHashCode();
                 if (this.ConnectedTime != null)

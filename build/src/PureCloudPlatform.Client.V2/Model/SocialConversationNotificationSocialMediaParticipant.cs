@@ -283,11 +283,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">ExternalContact.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="Peer">Peer.</param>
         /// <param name="SocialMediaId">SocialMediaId.</param>
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
         /// <param name="SocialUserName">SocialUserName.</param>
         /// <param name="PreviewText">PreviewText.</param>
-        public SocialConversationNotificationSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, SocialConversationNotificationUriReference ExternalContact = null, SocialConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
+        public SocialConversationNotificationSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, SocialConversationNotificationUriReference ExternalContact = null, SocialConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -314,6 +315,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.SocialMediaId = SocialMediaId;
             this.SocialMediaHub = SocialMediaHub;
             this.SocialUserName = SocialUserName;
@@ -431,6 +433,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationNotificationWrapup Wrapup { get; set; }
         /// <summary>
+        /// Gets or Sets Peer
+        /// </summary>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// Gets or Sets SocialMediaId
         /// </summary>
         [DataMember(Name="socialMediaId", EmitDefaultValue=false)]
@@ -483,6 +490,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
             sb.Append("  SocialMediaHub: ").Append(SocialMediaHub).Append("\n");
             sb.Append("  SocialUserName: ").Append(SocialUserName).Append("\n");
@@ -649,6 +657,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.SocialMediaId == other.SocialMediaId ||
                     this.SocialMediaId != null &&
                     this.SocialMediaId.Equals(other.SocialMediaId)
@@ -731,6 +744,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.SocialMediaId != null)
                     hash = hash * 59 + this.SocialMediaId.GetHashCode();
                 if (this.SocialMediaHub != null)

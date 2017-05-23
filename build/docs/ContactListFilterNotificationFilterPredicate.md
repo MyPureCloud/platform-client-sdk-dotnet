@@ -12,6 +12,7 @@ title: ContactListFilterNotificationFilterPredicate
 | **_Operator** | **string** |  | [optional] |
 | **Value** | **string** |  | [optional] |
 | **Range** | [**ContactListFilterNotificationRange**](ContactListFilterNotificationRange.html) |  | [optional] |
+| **Inverted** | **bool?** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

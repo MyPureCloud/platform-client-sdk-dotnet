@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreateDate">create date of the key pair. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="KeydataSummary">key data summary (base 64 encoded public key).</param>
         /// <param name="User">user that requested generation of public key.</param>
-        public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null)
+        /// <param name="LocalEncryptionConfiguration">Local configuration.</param>
+        public EncryptionKey(string Name = null, DateTime? CreateDate = null, string KeydataSummary = null, User User = null, LocalEncryptionConfiguration LocalEncryptionConfiguration = null)
         {
             this.Name = Name;
             this.CreateDate = CreateDate;
             this.KeydataSummary = KeydataSummary;
             this.User = User;
+            this.LocalEncryptionConfiguration = LocalEncryptionConfiguration;
         }
         
         /// <summary>
@@ -63,6 +65,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
         /// <summary>
+        /// Local configuration
+        /// </summary>
+        /// <value>Local configuration</value>
+        [DataMember(Name="localEncryptionConfiguration", EmitDefaultValue=false)]
+        public LocalEncryptionConfiguration LocalEncryptionConfiguration { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -81,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
             sb.Append("  KeydataSummary: ").Append(KeydataSummary).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  LocalEncryptionConfiguration: ").Append(LocalEncryptionConfiguration).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -144,6 +153,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.User.Equals(other.User)
                 ) &&
                 (
+                    this.LocalEncryptionConfiguration == other.LocalEncryptionConfiguration ||
+                    this.LocalEncryptionConfiguration != null &&
+                    this.LocalEncryptionConfiguration.Equals(other.LocalEncryptionConfiguration)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -171,6 +185,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.KeydataSummary.GetHashCode();
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                if (this.LocalEncryptionConfiguration != null)
+                    hash = hash * 59 + this.LocalEncryptionConfiguration.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

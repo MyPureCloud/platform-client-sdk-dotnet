@@ -213,8 +213,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="Provider">The source provider for the co-browse session..</param>
+        /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
-        public Cobrowsesession(StateEnum? State = null, string Id = null, DisconnectTypeEnum? DisconnectType = null, Address Self = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, List<Segment> Segments = null)
+        public Cobrowsesession(StateEnum? State = null, string Id = null, DisconnectTypeEnum? DisconnectType = null, Address Self = null, string CobrowseSessionId = null, string CobrowseRole = null, List<string> Controlling = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<Segment> Segments = null)
         {
             this.State = State;
             this.Id = Id;
@@ -228,6 +229,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ConnectedTime = ConnectedTime;
             this.DisconnectedTime = DisconnectedTime;
             this.Provider = Provider;
+            this.PeerId = PeerId;
             this.Segments = Segments;
         }
         
@@ -292,6 +294,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
+        /// The id of the peer communication corresponding to a matching leg for this communication.
+        /// </summary>
+        /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+        /// <summary>
         /// The time line of the participant&#39;s call, divided into activity segments.
         /// </summary>
         /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
@@ -317,6 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  Segments: ").Append(Segments).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -415,6 +424,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
@@ -456,6 +470,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
                 return hash;

@@ -271,14 +271,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">If this participant represents an external contact, then this will be the reference for the external contact..</param>
         /// <param name="ExternalOrganization">If this participant represents an external org, then this will be the reference for the external org..</param>
         /// <param name="Wrapup">Wrapup for this participant, if it has been applied..</param>
+        /// <param name="Peer">The peer communication corresponding to a matching leg for this communication..</param>
         /// <param name="OutboundPreview">The outbound preview associated with this callback..</param>
+        /// <param name="Voicemail">The voicemail associated with this callback..</param>
         /// <param name="CallbackNumbers">The list of phone number to use for this callback..</param>
         /// <param name="CallbackUserName">The name of the callback target..</param>
         /// <param name="SkipEnabled">If true, the callback can be skipped.</param>
         /// <param name="TimeoutSeconds">Duration in seconds before the callback will be auto-dialed..</param>
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If absent, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, DialerPreview OutboundPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
+        public CallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, DialerPreview OutboundPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string AutomatedCallbackConfigId = null, DateTime? CallbackScheduledTime = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -305,7 +307,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.OutboundPreview = OutboundPreview;
+            this.Voicemail = Voicemail;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
             this.SkipEnabled = SkipEnabled;
@@ -447,11 +451,23 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
         /// <summary>
+        /// The peer communication corresponding to a matching leg for this communication.
+        /// </summary>
+        /// <value>The peer communication corresponding to a matching leg for this communication.</value>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// The outbound preview associated with this callback.
         /// </summary>
         /// <value>The outbound preview associated with this callback.</value>
         [DataMember(Name="outboundPreview", EmitDefaultValue=false)]
         public DialerPreview OutboundPreview { get; set; }
+        /// <summary>
+        /// The voicemail associated with this callback.
+        /// </summary>
+        /// <value>The voicemail associated with this callback.</value>
+        [DataMember(Name="voicemail", EmitDefaultValue=false)]
+        public Voicemail Voicemail { get; set; }
         /// <summary>
         /// The list of phone number to use for this callback.
         /// </summary>
@@ -521,7 +537,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
+            sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
@@ -690,9 +708,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
+                ) &&
+                (
+                    this.Voicemail == other.Voicemail ||
+                    this.Voicemail != null &&
+                    this.Voicemail.Equals(other.Voicemail)
                 ) &&
                 (
                     this.CallbackNumbers == other.CallbackNumbers ||
@@ -787,8 +815,12 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();
+                if (this.Voicemail != null)
+                    hash = hash * 59 + this.Voicemail.GetHashCode();
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
                 if (this.CallbackUserName != null)

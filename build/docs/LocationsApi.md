@@ -71,7 +71,7 @@ namespace Example
 
 <a name="getlocations"></a>
 
-## [**List&lt;LocationDefinition&gt;**](LocationDefinition.html) GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**LocationEntityListing**](LocationEntityListing.html) GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 Get a list of all locations.
 
@@ -103,7 +103,7 @@ namespace Example
             try
             {
                 // Get a list of all locations.
-                List&lt;LocationDefinition&gt; result = apiInstance.GetLocations(pageSize, pageNumber, sortOrder);
+                LocationEntityListing result = apiInstance.GetLocations(pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -127,7 +127,7 @@ namespace Example
 
 ### Return type
 
-[**List<LocationDefinition>**](LocationDefinition.html)
+[**LocationEntityListing**](LocationEntityListing.html)
 
 <a name="getlocationssearch"></a>
 

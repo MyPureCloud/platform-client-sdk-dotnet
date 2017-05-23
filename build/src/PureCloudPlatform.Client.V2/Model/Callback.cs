@@ -254,6 +254,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
         /// <param name="StartHoldTime">The timestamp the callback was placed on hold in the cloud clock if the callback is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="DialerPreview">The preview data to be used when this callback is a Preview..</param>
+        /// <param name="Voicemail">The voicemail data to be used when this callback is an ACD voicemail..</param>
         /// <param name="CallbackNumbers">The phone number(s) to use to place the callback..</param>
         /// <param name="CallbackUserName">The name of the user requesting a callback..</param>
         /// <param name="ScriptId">The UUID of the script to use..</param>
@@ -264,7 +265,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackScheduledTime">The timestamp when this communication is scheduled in the provider clock. If this value is missing it indicates the callback will be placed immediately. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         /// <param name="AutomatedCallbackConfigId">The id of the config for automatically placing the callback (and handling the disposition). If null, the callback will not be placed automatically but routed to an agent as per normal..</param>
         /// <param name="Provider">The source provider for the callback..</param>
-        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null)
+        /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
+        public Callback(StateEnum? State = null, string Id = null, List<Segment> Segments = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DialerPreview DialerPreview = null, Voicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, string Provider = null, string PeerId = null)
         {
             this.State = State;
             this.Id = Id;
@@ -274,6 +276,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.DialerPreview = DialerPreview;
+            this.Voicemail = Voicemail;
             this.CallbackNumbers = CallbackNumbers;
             this.CallbackUserName = CallbackUserName;
             this.ScriptId = ScriptId;
@@ -284,6 +287,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackScheduledTime = CallbackScheduledTime;
             this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             this.Provider = Provider;
+            this.PeerId = PeerId;
         }
         
         /// <summary>
@@ -316,6 +320,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The preview data to be used when this callback is a Preview.</value>
         [DataMember(Name="dialerPreview", EmitDefaultValue=false)]
         public DialerPreview DialerPreview { get; set; }
+        /// <summary>
+        /// The voicemail data to be used when this callback is an ACD voicemail.
+        /// </summary>
+        /// <value>The voicemail data to be used when this callback is an ACD voicemail.</value>
+        [DataMember(Name="voicemail", EmitDefaultValue=false)]
+        public Voicemail Voicemail { get; set; }
         /// <summary>
         /// The phone number(s) to use to place the callback.
         /// </summary>
@@ -377,6 +387,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         /// <summary>
+        /// The id of the peer communication corresponding to a matching leg for this communication.
+        /// </summary>
+        /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -392,6 +408,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  DialerPreview: ").Append(DialerPreview).Append("\n");
+            sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
             sb.Append("  CallbackUserName: ").Append(CallbackUserName).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
@@ -402,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             sb.Append("  AutomatedCallbackConfigId: ").Append(AutomatedCallbackConfigId).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -479,6 +497,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DialerPreview.Equals(other.DialerPreview)
                 ) &&
                 (
+                    this.Voicemail == other.Voicemail ||
+                    this.Voicemail != null &&
+                    this.Voicemail.Equals(other.Voicemail)
+                ) &&
+                (
                     this.CallbackNumbers == other.CallbackNumbers ||
                     this.CallbackNumbers != null &&
                     this.CallbackNumbers.SequenceEqual(other.CallbackNumbers)
@@ -527,6 +550,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Provider == other.Provider ||
                     this.Provider != null &&
                     this.Provider.Equals(other.Provider)
+                ) &&
+                (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
                 );
         }
 
@@ -557,6 +585,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
                 if (this.DialerPreview != null)
                     hash = hash * 59 + this.DialerPreview.GetHashCode();
+                if (this.Voicemail != null)
+                    hash = hash * 59 + this.Voicemail.GetHashCode();
                 if (this.CallbackNumbers != null)
                     hash = hash * 59 + this.CallbackNumbers.GetHashCode();
                 if (this.CallbackUserName != null)
@@ -577,6 +607,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.AutomatedCallbackConfigId.GetHashCode();
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 return hash;
             }
         }

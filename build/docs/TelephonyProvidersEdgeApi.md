@@ -37,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgeSetuppackage**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesetuppackage) | **GET** /api/v2/telephony/providers/edges/{edgeId}/setuppackage | Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge. |
 | [**GetTelephonyProvidersEdgeSoftwareupdate**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoftwareupdate) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareupdate | Gets software update status information about any edge. |
 | [**GetTelephonyProvidersEdgeSoftwareversions**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesoftwareversions) | **GET** /api/v2/telephony/providers/edges/{edgeId}/softwareversions | Gets all the available software versions for this edge. |
+| [**GetTelephonyProvidersEdgeTrunks**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgetrunks) | **GET** /api/v2/telephony/providers/edges/{edgeId}/trunks | Get the list of available trunks for the given Edge. |
 | [**GetTelephonyProvidersEdges**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedges) | **GET** /api/v2/telephony/providers/edges | Get the list of edges. |
 | [**GetTelephonyProvidersEdgesAvailablelanguages**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesavailablelanguages) | **GET** /api/v2/telephony/providers/edges/availablelanguages | Get the list of available languages. |
 | [**GetTelephonyProvidersEdgesCertificateauthorities**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgescertificateauthorities) | **GET** /api/v2/telephony/providers/edges/certificateauthorities | Get the list of certificate authorities. |
@@ -1842,6 +1843,74 @@ namespace Example
 ### Return type
 
 [**DomainEdgeSoftwareVersionDtoEntityListing**](DomainEdgeSoftwareVersionDtoEntityListing.html)
+
+<a name="gettelephonyprovidersedgetrunks"></a>
+
+## [**TrunkEntityListing**](TrunkEntityListing.html) GetTelephonyProvidersEdgeTrunks (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
+
+Get the list of available trunks for the given Edge.
+
+Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgeTrunksExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var edgeId = edgeId_example;  // string | Edge ID
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            var trunkBaseId = trunkBaseId_example;  // string | Filter by Trunk Base Ids (optional) 
+            var trunkType = trunkType_example;  // string | Filter by a Trunk type (optional) 
+
+            try
+            {
+                // Get the list of available trunks for the given Edge.
+                TrunkEntityListing result = apiInstance.GetTelephonyProvidersEdgeTrunks(edgeId, pageNumber, pageSize, sortBy, sortOrder, trunkBaseId, trunkType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgeTrunks: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **edgeId** | **string**| Edge ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **trunkBaseId** | **string**| Filter by Trunk Base Ids | [optional]  |
+| **trunkType** | **string**| Filter by a Trunk type | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrunkEntityListing**](TrunkEntityListing.html)
 
 <a name="gettelephonyprovidersedges"></a>
 

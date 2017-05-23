@@ -213,12 +213,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Held">Held.</param>
         /// <param name="Provider">Provider.</param>
         /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="PeerId">PeerId.</param>
         /// <param name="DisconnectType">DisconnectType.</param>
         /// <param name="StartHoldTime">StartHoldTime.</param>
         /// <param name="ConnectedTime">ConnectedTime.</param>
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ConversationNotificationSocialExpressions(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, string Provider = null, string ScriptId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationSocialExpressions(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
             this.State = State;
             this.Id = Id;
@@ -230,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Held = Held;
             this.Provider = Provider;
             this.ScriptId = ScriptId;
+            this.PeerId = PeerId;
             this.DisconnectType = DisconnectType;
             this.StartHoldTime = StartHoldTime;
             this.ConnectedTime = ConnectedTime;
@@ -283,6 +285,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         /// <summary>
+        /// Gets or Sets PeerId
+        /// </summary>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+        /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
@@ -320,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
@@ -412,6 +420,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScriptId.Equals(other.ScriptId)
                 ) &&
                 (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
                     this.DisconnectType == other.DisconnectType ||
                     this.DisconnectType != null &&
                     this.DisconnectType.Equals(other.DisconnectType)
@@ -469,6 +482,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Provider.GetHashCode();
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
                 if (this.StartHoldTime != null)

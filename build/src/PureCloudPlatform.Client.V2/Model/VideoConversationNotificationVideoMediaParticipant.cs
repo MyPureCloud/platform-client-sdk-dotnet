@@ -283,12 +283,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalContact">ExternalContact.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="Wrapup">Wrapup.</param>
+        /// <param name="Peer">Peer.</param>
         /// <param name="AudioMuted">AudioMuted.</param>
         /// <param name="VideoMuted">VideoMuted.</param>
         /// <param name="SharingScreen">SharingScreen.</param>
         /// <param name="PeerCount">PeerCount.</param>
         /// <param name="Context">Context.</param>
-        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, VideoConversationNotificationUriReference ExternalContact = null, VideoConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null)
+        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, VideoConversationNotificationUriReference ExternalContact = null, VideoConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -315,6 +316,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalContact = ExternalContact;
             this.ExternalOrganization = ExternalOrganization;
             this.Wrapup = Wrapup;
+            this.Peer = Peer;
             this.AudioMuted = AudioMuted;
             this.VideoMuted = VideoMuted;
             this.SharingScreen = SharingScreen;
@@ -433,6 +435,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationNotificationWrapup Wrapup { get; set; }
         /// <summary>
+        /// Gets or Sets Peer
+        /// </summary>
+        [DataMember(Name="peer", EmitDefaultValue=false)]
+        public string Peer { get; set; }
+        /// <summary>
         /// Gets or Sets AudioMuted
         /// </summary>
         [DataMember(Name="audioMuted", EmitDefaultValue=false)]
@@ -490,6 +497,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            sb.Append("  Peer: ").Append(Peer).Append("\n");
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
@@ -657,6 +665,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Wrapup.Equals(other.Wrapup)
                 ) &&
                 (
+                    this.Peer == other.Peer ||
+                    this.Peer != null &&
+                    this.Peer.Equals(other.Peer)
+                ) &&
+                (
                     this.AudioMuted == other.AudioMuted ||
                     this.AudioMuted != null &&
                     this.AudioMuted.Equals(other.AudioMuted)
@@ -744,6 +757,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                if (this.Peer != null)
+                    hash = hash * 59 + this.Peer.GetHashCode();
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
                 if (this.VideoMuted != null)

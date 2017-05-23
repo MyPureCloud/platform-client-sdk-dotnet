@@ -19,6 +19,50 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class UpdateUser :  IEquatable<UpdateUser>
     {
         /// <summary>
+        /// The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.
+        /// </summary>
+        /// <value>The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Active for "active"
+            /// </summary>
+            [EnumMember(Value = "active")]
+            Active,
+            
+            /// <summary>
+            /// Enum Inactive for "inactive"
+            /// </summary>
+            [EnumMember(Value = "inactive")]
+            Inactive,
+            
+            /// <summary>
+            /// Enum Deleted for "deleted"
+            /// </summary>
+            [EnumMember(Value = "deleted")]
+            Deleted
+        }
+        /// <summary>
+        /// The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.
+        /// </summary>
+        /// <value>The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.</value>
+        [DataMember(Name="state", EmitDefaultValue=false)]
+        public StateEnum? State { get; set; }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UpdateUser" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UpdateUser() { }
+        /// <summary>
         /// Initializes a new instance of the <see cref="UpdateUser" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
@@ -31,12 +75,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Username">Username.</param>
         /// <param name="Manager">Manager.</param>
         /// <param name="Images">Images.</param>
-        /// <param name="Version">Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH..</param>
+        /// <param name="Version">This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH. (required).</param>
         /// <param name="ProfileSkills">Skills possessed by the user.</param>
         /// <param name="Locations">The user placement at each site location..</param>
         /// <param name="Groups">The groups the user is a member of.</param>
-        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null)
+        /// <param name="State">The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field..</param>
+        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null)
         {
+            // to ensure "Version" is required (not null)
+            if (Version == null)
+            {
+                throw new InvalidDataException("Version is a required property for UpdateUser and cannot be null");
+            }
+            else
+            {
+                this.Version = Version;
+            }
             this.Name = Name;
             this.Chat = Chat;
             this.Department = Department;
@@ -47,10 +101,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Username = Username;
             this.Manager = Manager;
             this.Images = Images;
-            this.Version = Version;
             this.ProfileSkills = ProfileSkills;
             this.Locations = Locations;
             this.Groups = Groups;
+            this.State = State;
         }
         
         /// <summary>
@@ -111,9 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
         /// <summary>
-        /// Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.
+        /// This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH.
         /// </summary>
-        /// <value>Required when updating a user, this value should be the current version of the user.  The current version can be obtained with a GET on the user before doing a PATCH.</value>
+        /// <value>This value should be the current version of the user. The current version can be obtained with a GET on the user before doing a PATCH.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         /// <summary>
@@ -163,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProfileSkills: ").Append(ProfileSkills).Append("\n");
             sb.Append("  Locations: ").Append(Locations).Append("\n");
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -276,6 +331,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Groups.SequenceEqual(other.Groups)
                 ) &&
                 (
+                    this.State == other.State ||
+                    this.State != null &&
+                    this.State.Equals(other.State)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -323,6 +383,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Locations.GetHashCode();
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
+                if (this.State != null)
+                    hash = hash * 59 + this.State.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;
