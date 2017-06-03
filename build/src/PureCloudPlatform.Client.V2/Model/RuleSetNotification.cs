@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Queue">Queue.</param>
         /// <param name="Rules">Rules.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public RuleSetNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DependencyTrackingBuildNotificationNotificationUser ContactList = null, RuleSetNotificationUriReference Queue = null, List<RuleSetNotificationRules> Rules = null, Object AdditionalProperties = null)
+        public RuleSetNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, RuleSetNotificationUriReference Queue = null, List<RuleSetNotificationRules> Rules = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public DependencyTrackingBuildNotificationNotificationUser ContactList { get; set; }
+        public DocumentDataV2NotificationCreatedBy ContactList { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>

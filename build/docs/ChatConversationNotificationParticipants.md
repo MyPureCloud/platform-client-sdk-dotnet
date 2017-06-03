@@ -21,7 +21,7 @@ title: ChatConversationNotificationParticipants
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**DependencyTrackingBuildNotificationNotificationUser**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
+| **User** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **Queue** | [**ChatConversationNotificationUriReference**](ChatConversationNotificationUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**ChatConversationNotificationErrorInfo**](ChatConversationNotificationErrorInfo.html) |  | [optional] |

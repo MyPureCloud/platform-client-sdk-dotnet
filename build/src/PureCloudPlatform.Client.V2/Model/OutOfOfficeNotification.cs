@@ -25,14 +25,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Active">Active.</param>
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
-        /// <param name="ModifiedDate">ModifiedDate.</param>
-        public OutOfOfficeNotification(DocumentDataV2NotificationWorkspace User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null, DateTime? ModifiedDate = null)
+        public OutOfOfficeNotification(DocumentDataV2NotificationWorkspace User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
             this.User = User;
             this.Active = Active;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
-            this.ModifiedDate = ModifiedDate;
         }
         
         /// <summary>
@@ -56,11 +54,6 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
         /// <summary>
-        /// Gets or Sets ModifiedDate
-        /// </summary>
-        [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
-        public DateTime? ModifiedDate { get; set; }
-        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -72,7 +65,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Active: ").Append(Active).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
-            sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,11 +120,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndDate == other.EndDate ||
                     this.EndDate != null &&
                     this.EndDate.Equals(other.EndDate)
-                ) &&
-                (
-                    this.ModifiedDate == other.ModifiedDate ||
-                    this.ModifiedDate != null &&
-                    this.ModifiedDate.Equals(other.ModifiedDate)
                 );
         }
 
@@ -155,8 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
-                if (this.ModifiedDate != null)
-                    hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 return hash;
             }
         }

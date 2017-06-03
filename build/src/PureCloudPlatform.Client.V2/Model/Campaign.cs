@@ -102,7 +102,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NoAnswerTimeout">for non-preview campaigns, how long to wait before dispositioning as &#39;no-answer&#39;, default 30 seconds.</param>
         /// <param name="CallAnalysisLanguage">The language the edge will use to analyse the call.</param>
         /// <param name="Priority">The priority of this campaign relative to other campaigns.</param>
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null)
+        /// <param name="ContactListFilters">Filter defining a subset of contacts from the contact list to be dialed.</param>
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
         {
             // to ensure "ContactList" is required (not null)
             if (ContactList == null)
@@ -193,6 +194,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NoAnswerTimeout = NoAnswerTimeout;
             this.CallAnalysisLanguage = CallAnalysisLanguage;
             this.Priority = Priority;
+            this.ContactListFilters = ContactListFilters;
         }
         
         /// <summary>
@@ -357,6 +359,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
         /// <summary>
+        /// Filter defining a subset of contacts from the contact list to be dialed
+        /// </summary>
+        /// <value>Filter defining a subset of contacts from the contact list to be dialed</value>
+        [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
+        public List<UriReference> ContactListFilters { get; set; }
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -398,6 +406,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -576,6 +585,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Priority.Equals(other.Priority)
                 ) &&
                 (
+                    this.ContactListFilters == other.ContactListFilters ||
+                    this.ContactListFilters != null &&
+                    this.ContactListFilters.SequenceEqual(other.ContactListFilters)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -649,6 +663,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.CallAnalysisLanguage.GetHashCode();
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                if (this.ContactListFilters != null)
+                    hash = hash * 59 + this.ContactListFilters.GetHashCode();
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
                 return hash;

@@ -95,10 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationAssociation" /> class.
         /// </summary>
+        /// <param name="ExternalContactId">External Contact ID.</param>
         /// <param name="ConversationId">Conversation ID (required).</param>
         /// <param name="CommunicationId">Communication ID (required).</param>
         /// <param name="MediaType">Media type (required).</param>
-        public ConversationAssociation(string ConversationId = null, string CommunicationId = null, MediaTypeEnum? MediaType = null)
+        public ConversationAssociation(string ExternalContactId = null, string ConversationId = null, string CommunicationId = null, MediaTypeEnum? MediaType = null)
         {
             // to ensure "ConversationId" is required (not null)
             if (ConversationId == null)
@@ -127,14 +128,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.MediaType = MediaType;
             }
+            this.ExternalContactId = ExternalContactId;
         }
         
         /// <summary>
-        /// External Contact ID; populated from url
+        /// External Contact ID
         /// </summary>
-        /// <value>External Contact ID; populated from url</value>
+        /// <value>External Contact ID</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
-        public string ExternalContactId { get; private set; }
+        public string ExternalContactId { get; set; }
         /// <summary>
         /// Conversation ID
         /// </summary>

@@ -292,7 +292,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
         /// <param name="CallbackScheduledTime">CallbackScheduledTime.</param>
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
-        public CallbackConversationNotificationCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DependencyTrackingBuildNotificationNotificationUser User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, ConversationNotificationDialerPreview OutboundPreview = null, DocumentDataV2NotificationWorkspace Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
+        public CallbackConversationNotificationCallbackMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, ConversationNotificationDialerPreview OutboundPreview = null, DocumentDataV2NotificationWorkspace Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -389,7 +389,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public DependencyTrackingBuildNotificationNotificationUser User { get; set; }
+        public DocumentDataV2NotificationCreatedBy User { get; set; }
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>

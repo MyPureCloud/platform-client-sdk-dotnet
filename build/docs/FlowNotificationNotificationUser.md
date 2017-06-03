@@ -9,6 +9,7 @@ title: FlowNotificationNotificationUser
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
 | **Name** | **string** |  | [optional] |
+| **HomeOrg** | [**DependencyTrackingBuildNotificationNotificationUserHomeOrg**](DependencyTrackingBuildNotificationNotificationUserHomeOrg.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -104,7 +104,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CallRule for "CALL_RULE"
             /// </summary>
             [EnumMember(Value = "CALL_RULE")]
-            CallRule
+            CallRule,
+            
+            /// <summary>
+            /// Enum OrganizationConfiguration for "ORGANIZATION_CONFIGURATION"
+            /// </summary>
+            [EnumMember(Value = "ORGANIZATION_CONFIGURATION")]
+            OrganizationConfiguration
         }
         /// <summary>
         /// Gets or Sets Level

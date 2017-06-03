@@ -73,9 +73,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The current version of the organization. (required).</param>
         /// <param name="State">The current state. Examples are active, inactive, deleted..</param>
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
+        /// <param name="SupportURI">Email address where support tickets are sent to..</param>
         /// <param name="VoicemailEnabled">VoicemailEnabled.</param>
         /// <param name="Features">The state of features available for the organization..</param>
-        public Organization(string Name = null, string DefaultLanguage = null, string DefaultCountryCode = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, bool? VoicemailEnabled = null, Dictionary<string, bool?> Features = null)
+        public Organization(string Name = null, string DefaultLanguage = null, string DefaultCountryCode = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, string SupportURI = null, bool? VoicemailEnabled = null, Dictionary<string, bool?> Features = null)
         {
             // to ensure "Version" is required (not null)
             if (Version == null)
@@ -93,6 +94,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Domain = Domain;
             this.State = State;
             this.DefaultSiteId = DefaultSiteId;
+            this.SupportURI = SupportURI;
             this.VoicemailEnabled = VoicemailEnabled;
             this.Features = Features;
         }
@@ -148,6 +150,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="defaultSiteId", EmitDefaultValue=false)]
         public string DefaultSiteId { get; set; }
         /// <summary>
+        /// Email address where support tickets are sent to.
+        /// </summary>
+        /// <value>Email address where support tickets are sent to.</value>
+        [DataMember(Name="supportURI", EmitDefaultValue=false)]
+        public string SupportURI { get; set; }
+        /// <summary>
         /// Gets or Sets VoicemailEnabled
         /// </summary>
         [DataMember(Name="voicemailEnabled", EmitDefaultValue=false)]
@@ -182,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  DefaultSiteId: ").Append(DefaultSiteId).Append("\n");
+            sb.Append("  SupportURI: ").Append(SupportURI).Append("\n");
             sb.Append("  VoicemailEnabled: ").Append(VoicemailEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  Features: ").Append(Features).Append("\n");
@@ -272,6 +281,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultSiteId.Equals(other.DefaultSiteId)
                 ) &&
                 (
+                    this.SupportURI == other.SupportURI ||
+                    this.SupportURI != null &&
+                    this.SupportURI.Equals(other.SupportURI)
+                ) &&
+                (
                     this.VoicemailEnabled == other.VoicemailEnabled ||
                     this.VoicemailEnabled != null &&
                     this.VoicemailEnabled.Equals(other.VoicemailEnabled)
@@ -319,6 +333,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.State.GetHashCode();
                 if (this.DefaultSiteId != null)
                     hash = hash * 59 + this.DefaultSiteId.GetHashCode();
+                if (this.SupportURI != null)
+                    hash = hash * 59 + this.SupportURI.GetHashCode();
                 if (this.VoicemailEnabled != null)
                     hash = hash * 59 + this.VoicemailEnabled.GetHashCode();
                 if (this.SelfUri != null)

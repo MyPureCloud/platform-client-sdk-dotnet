@@ -7,7 +7,7 @@ title: CampaignRuleNotificationCampaignRuleEntities
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Campaigns** | [**List&lt;DependencyTrackingBuildNotificationNotificationUser&gt;**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
+| **Campaigns** | [**List&lt;DocumentDataV2NotificationCreatedBy&gt;**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **Sequences** | [**List&lt;CampaignRuleNotificationUriReference&gt;**](CampaignRuleNotificationUriReference.html) |  | [optional] |
 {: class="table table-striped"}
 

@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Size">Size.</param>
         /// <param name="AttemptLimits">AttemptLimits.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ContactListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactListNotificationPhoneColumns> PhoneColumns = null, ContactListNotificationImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DependencyTrackingBuildNotificationNotificationUser AttemptLimits = null, Object AdditionalProperties = null)
+        public ContactListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactListNotificationPhoneColumns> PhoneColumns = null, ContactListNotificationImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DocumentDataV2NotificationCreatedBy AttemptLimits = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -110,7 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets AttemptLimits
         /// </summary>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
-        public DependencyTrackingBuildNotificationNotificationUser AttemptLimits { get; set; }
+        public DocumentDataV2NotificationCreatedBy AttemptLimits { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>

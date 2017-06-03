@@ -87,6 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CallRuleNoDncListsConfigured,
             
             /// <summary>
+            /// Enum CallRuleUpdatedPhoneColumn for "CALL_RULE_UPDATED_PHONE_COLUMN"
+            /// </summary>
+            [EnumMember(Value = "CALL_RULE_UPDATED_PHONE_COLUMN")]
+            CallRuleUpdatedPhoneColumn,
+            
+            /// <summary>
             /// Enum ContactListFilterEvaluationFailed for "CONTACT_LIST_FILTER_EVALUATION_FAILED"
             /// </summary>
             [EnumMember(Value = "CONTACT_LIST_FILTER_EVALUATION_FAILED")]
@@ -151,6 +157,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "IMPORT_LIST_NO_LONGER_EXISTS")]
             ImportListNoLongerExists,
+            
+            /// <summary>
+            /// Enum OrganizationHasNoDomainSet for "ORGANIZATION_HAS_NO_DOMAIN_SET"
+            /// </summary>
+            [EnumMember(Value = "ORGANIZATION_HAS_NO_DOMAIN_SET")]
+            OrganizationHasNoDomainSet,
             
             /// <summary>
             /// Enum RecycleCampaign for "RECYCLE_CAMPAIGN"

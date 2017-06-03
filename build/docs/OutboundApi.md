@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundContactlist**](OutboundApi.html#deleteoutboundcontactlist) | **DELETE** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
 | [**DeleteOutboundContactlistContact**](OutboundApi.html#deleteoutboundcontactlistcontact) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
 | [**DeleteOutboundContactlistContacts**](OutboundApi.html#deleteoutboundcontactlistcontacts) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. |
+| [**DeleteOutboundContactlistfilter**](OutboundApi.html#deleteoutboundcontactlistfilter) | **DELETE** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
 | [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
 | [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
 | [**DeleteOutboundSchedulesCampaign**](OutboundApi.html#deleteoutboundschedulescampaign) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
@@ -39,6 +40,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
 | [**GetOutboundContactlistExport**](OutboundApi.html#getoutboundcontactlistexport) | **GET** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
 | [**GetOutboundContactlistImportstatus**](OutboundApi.html#getoutboundcontactlistimportstatus) | **GET** /api/v2/outbound/contactlists/{contactListId}/importstatus | Get dialer contactList import status. |
+| [**GetOutboundContactlistfilter**](OutboundApi.html#getoutboundcontactlistfilter) | **GET** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Get Contact list filter |
+| [**GetOutboundContactlistfilters**](OutboundApi.html#getoutboundcontactlistfilters) | **GET** /api/v2/outbound/contactlistfilters | Query Contact list filters |
 | [**GetOutboundContactlists**](OutboundApi.html#getoutboundcontactlists) | **GET** /api/v2/outbound/contactlists | Query a list of contact lists. |
 | [**GetOutboundDnclist**](OutboundApi.html#getoutbounddnclist) | **GET** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
 | [**GetOutboundDnclistExport**](OutboundApi.html#getoutbounddnclistexport) | **GET** /api/v2/outbound/dnclists/{dncListId}/export | Get the URI of a DNC list export. |
@@ -65,6 +68,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundCampaignsProgress**](OutboundApi.html#postoutboundcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
 | [**PostOutboundContactlistContacts**](OutboundApi.html#postoutboundcontactlistcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
 | [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
+| [**PostOutboundContactlistfilters**](OutboundApi.html#postoutboundcontactlistfilters) | **POST** /api/v2/outbound/contactlistfilters | Create Contact List Filter |
+| [**PostOutboundContactlistfiltersPreview**](OutboundApi.html#postoutboundcontactlistfilterspreview) | **POST** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
 | [**PostOutboundContactlists**](OutboundApi.html#postoutboundcontactlists) | **POST** /api/v2/outbound/contactlists | Create a contact List. |
 | [**PostOutboundConversationDnc**](OutboundApi.html#postoutboundconversationdnc) | **POST** /api/v2/outbound/conversations/{conversationId}/dnc | Add phone numbers to a Dialer DNC list. |
 | [**PostOutboundDnclistExport**](OutboundApi.html#postoutbounddnclistexport) | **POST** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
@@ -80,6 +85,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundCampaignrule**](OutboundApi.html#putoutboundcampaignrule) | **PUT** /api/v2/outbound/campaignrules/{campaignRuleId} | Update Campaign Rule |
 | [**PutOutboundContactlist**](OutboundApi.html#putoutboundcontactlist) | **PUT** /api/v2/outbound/contactlists/{contactListId} | Update a contact list. |
 | [**PutOutboundContactlistContact**](OutboundApi.html#putoutboundcontactlistcontact) | **PUT** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Update a contact. |
+| [**PutOutboundContactlistfilter**](OutboundApi.html#putoutboundcontactlistfilter) | **PUT** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Update Contact List Filter |
 | [**PutOutboundDnclist**](OutboundApi.html#putoutbounddnclist) | **PUT** /api/v2/outbound/dnclists/{dncListId} | Update dialer DNC list |
 | [**PutOutboundRuleset**](OutboundApi.html#putoutboundruleset) | **PUT** /api/v2/outbound/rulesets/{ruleSetId} | Update a RuleSet. |
 | [**PutOutboundSchedulesCampaign**](OutboundApi.html#putoutboundschedulescampaign) | **PUT** /api/v2/outbound/schedules/campaigns/{campaignId} | Update a new campaign schedule. |
@@ -582,6 +588,61 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **contactIds** | [**List<string>**](string.html)| ContactIds to delete. |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundcontactlistfilter"></a>
+
+## void DeleteOutboundContactlistfilter (string contactListFilterId)
+
+Delete Contact List Filter
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundContactlistfilterExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListFilterId = contactListFilterId_example;  // string | Contact List Filter ID
+
+            try
+            {
+                // Delete Contact List Filter
+                apiInstance.DeleteOutboundContactlistfilter(contactListFilterId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundContactlistfilter: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListFilterId** | **string**| Contact List Filter ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1938,6 +1999,130 @@ namespace Example
 ### Return type
 
 [**ImportStatus**](ImportStatus.html)
+
+<a name="getoutboundcontactlistfilter"></a>
+
+## [**ContactListFilter**](ContactListFilter.html) GetOutboundContactlistfilter (string contactListFilterId)
+
+Get Contact list filter
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlistfilterExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListFilterId = contactListFilterId_example;  // string | Contact List Filter ID
+
+            try
+            {
+                // Get Contact list filter
+                ContactListFilter result = apiInstance.GetOutboundContactlistfilter(contactListFilterId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlistfilter: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListFilterId** | **string**| Contact List Filter ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListFilter**](ContactListFilter.html)
+
+<a name="getoutboundcontactlistfilters"></a>
+
+## [**ContactListFilterEntityListing**](ContactListFilterEntityListing.html) GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
+
+Query Contact list filters
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundContactlistfiltersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            var name = name_example;  // string | Name (optional) 
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+            var contactListId = contactListId_example;  // string | Contact List ID (optional) 
+
+            try
+            {
+                // Query Contact list filters
+                ContactListFilterEntityListing result = apiInstance.GetOutboundContactlistfilters(pageSize, pageNumber, filterType, name, sortBy, sortOrder, contactListId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundContactlistfilters: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix] |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a] |
+| **contactListId** | **string**| Contact List ID | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListFilterEntityListing**](ContactListFilterEntityListing.html)
 
 <a name="getoutboundcontactlists"></a>
 
@@ -3464,6 +3649,118 @@ namespace Example
 
 [**UriReference**](UriReference.html)
 
+<a name="postoutboundcontactlistfilters"></a>
+
+## [**ContactListFilter**](ContactListFilter.html) PostOutboundContactlistfilters (ContactListFilter body)
+
+Create Contact List Filter
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistfiltersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactListFilter(); // ContactListFilter | ContactListFilter
+
+            try
+            {
+                // Create Contact List Filter
+                ContactListFilter result = apiInstance.PostOutboundContactlistfilters(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistfilters: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListFilter**](ContactListFilter.html)
+
+<a name="postoutboundcontactlistfilterspreview"></a>
+
+## [**FilterPreviewResponse**](FilterPreviewResponse.html) PostOutboundContactlistfiltersPreview (ContactListFilter body)
+
+Get a preview of the output of a contact list filter
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistfiltersPreviewExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactListFilter(); // ContactListFilter | ContactListFilter
+
+            try
+            {
+                // Get a preview of the output of a contact list filter
+                FilterPreviewResponse result = apiInstance.PostOutboundContactlistfiltersPreview(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistfiltersPreview: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**FilterPreviewResponse**](FilterPreviewResponse.html)
+
 <a name="postoutboundcontactlists"></a>
 
 ## [**ContactList**](ContactList.html) PostOutboundContactlists (ContactList body)
@@ -4323,6 +4620,64 @@ namespace Example
 ### Return type
 
 [**DialerContact**](DialerContact.html)
+
+<a name="putoutboundcontactlistfilter"></a>
+
+## [**ContactListFilter**](ContactListFilter.html) PutOutboundContactlistfilter (string contactListFilterId, ContactListFilter body)
+
+Update Contact List Filter
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundContactlistfilterExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+
+            var apiInstance = new OutboundApi();
+            var contactListFilterId = contactListFilterId_example;  // string | Contact List Filter ID
+            var body = new ContactListFilter(); // ContactListFilter | ContactListFilter
+
+            try
+            {
+                // Update Contact List Filter
+                ContactListFilter result = apiInstance.PutOutboundContactlistfilter(contactListFilterId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundContactlistfilter: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListFilterId** | **string**| Contact List Filter ID |  |
+| **body** | [**ContactListFilter**](ContactListFilter.html)| ContactListFilter |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ContactListFilter**](ContactListFilter.html)
 
 <a name="putoutbounddnclist"></a>
 

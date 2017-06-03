@@ -125,7 +125,7 @@ namespace Example
 
 <a name="getstations"></a>
 
-## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
+## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
 
 Get the list of available stations.
 
@@ -154,6 +154,7 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             var name = name_example;  // string | Name (optional) 
+            var userSelectable = userSelectable_example;  // string | True for stations that the user can select otherwise false (optional) 
             var webRtcUserId = webRtcUserId_example;  // string | Filter for the webRtc station of the webRtcUserId (optional) 
             var id = id_example;  // string | Comma separated list of stationIds (optional) 
             var lineAppearanceId = lineAppearanceId_example;  // string | lineAppearanceId (optional) 
@@ -161,7 +162,7 @@ namespace Example
             try
             {
                 // Get the list of available stations.
-                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, webRtcUserId, id, lineAppearanceId);
+                StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, userSelectable, webRtcUserId, id, lineAppearanceId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -182,6 +183,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **name** | **string**| Name | [optional]  |
+| **userSelectable** | **string**| True for stations that the user can select otherwise false | [optional]  |
 | **webRtcUserId** | **string**| Filter for the webRtc station of the webRtcUserId | [optional]  |
 | **id** | **string**| Comma separated list of stationIds | [optional]  |
 | **lineAppearanceId** | **string**| lineAppearanceId | [optional]  |

@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PresenceDefinition">PresenceDefinition.</param>
         /// <param name="Message">Message.</param>
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        public UserPresence(string Name = null, string Source = null, bool? Primary = null, OrganizationPresence PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
+        public UserPresence(string Name = null, string Source = null, bool? Primary = null, PresenceDefinition PresenceDefinition = null, string Message = null, DateTime? ModifiedDate = null)
         {
             this.Name = Name;
             this.Source = Source;
@@ -64,7 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets PresenceDefinition
         /// </summary>
         [DataMember(Name="presenceDefinition", EmitDefaultValue=false)]
-        public OrganizationPresence PresenceDefinition { get; set; }
+        public PresenceDefinition PresenceDefinition { get; set; }
         /// <summary>
         /// Gets or Sets Message
         /// </summary>

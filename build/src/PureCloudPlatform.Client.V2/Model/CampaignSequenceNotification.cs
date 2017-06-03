@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="StopMessage">StopMessage.</param>
         /// <param name="Repeat">Repeat.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public CampaignSequenceNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DependencyTrackingBuildNotificationNotificationUser> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, Object AdditionalProperties = null)
+        public CampaignSequenceNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DocumentDataV2NotificationCreatedBy> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -113,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Campaigns
         /// </summary>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
-        public List<DependencyTrackingBuildNotificationNotificationUser> Campaigns { get; set; }
+        public List<DocumentDataV2NotificationCreatedBy> Campaigns { get; set; }
         /// <summary>
         /// Gets or Sets CurrentCampaign
         /// </summary>

@@ -62,7 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Clauses">Clauses.</param>
         /// <param name="FilterType">FilterType.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public ContactListFilterNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DependencyTrackingBuildNotificationNotificationUser ContactList = null, List<string> ContactListColumns = null, List<ContactListFilterNotificationClauses> Clauses = null, FilterTypeEnum? FilterType = null, Object AdditionalProperties = null)
+        public ContactListFilterNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, List<string> ContactListColumns = null, List<ContactListFilterNotificationClauses> Clauses = null, FilterTypeEnum? FilterType = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
-        public DependencyTrackingBuildNotificationNotificationUser ContactList { get; set; }
+        public DocumentDataV2NotificationCreatedBy ContactList { get; set; }
         /// <summary>
         /// Gets or Sets ContactListColumns
         /// </summary>

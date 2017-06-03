@@ -208,6 +208,27 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteOutboundContactlistContactsWithHttpInfo (string contactListId, List<string> contactIds);
         /// <summary>
+        /// Delete Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns></returns>
+        void DeleteOutboundContactlistfilter (string contactListFilterId);
+
+        /// <summary>
+        /// Delete Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteOutboundContactlistfilterWithHttpInfo (string contactListFilterId);
+        /// <summary>
         /// Delete dialer DNC list
         /// </summary>
         /// <remarks>
@@ -758,6 +779,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>ApiResponse of ImportStatus</returns>
         ApiResponse<ImportStatus> GetOutboundContactlistImportstatusWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Get Contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>ContactListFilter</returns>
+        ContactListFilter GetOutboundContactlistfilter (string contactListFilterId);
+
+        /// <summary>
+        /// Get Contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>ApiResponse of ContactListFilter</returns>
+        ApiResponse<ContactListFilter> GetOutboundContactlistfilterWithHttpInfo (string contactListFilterId);
+        /// <summary>
+        /// Query Contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>ContactListFilterEntityListing</returns>
+        ContactListFilterEntityListing GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
+
+        /// <summary>
+        /// Query Contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>ApiResponse of ContactListFilterEntityListing</returns>
+        ApiResponse<ContactListFilterEntityListing> GetOutboundContactlistfiltersWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
         /// <summary>
         /// Query a list of contact lists.
         /// </summary>
@@ -1383,6 +1458,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UriReference</returns>
         ApiResponse<UriReference> PostOutboundContactlistExportWithHttpInfo (string contactListId);
         /// <summary>
+        /// Create Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ContactListFilter</returns>
+        ContactListFilter PostOutboundContactlistfilters (ContactListFilter body);
+
+        /// <summary>
+        /// Create Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ApiResponse of ContactListFilter</returns>
+        ApiResponse<ContactListFilter> PostOutboundContactlistfiltersWithHttpInfo (ContactListFilter body);
+        /// <summary>
+        /// Get a preview of the output of a contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>FilterPreviewResponse</returns>
+        FilterPreviewResponse PostOutboundContactlistfiltersPreview (ContactListFilter body);
+
+        /// <summary>
+        /// Get a preview of the output of a contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ApiResponse of FilterPreviewResponse</returns>
+        ApiResponse<FilterPreviewResponse> PostOutboundContactlistfiltersPreviewWithHttpInfo (ContactListFilter body);
+        /// <summary>
         /// Create a contact List.
         /// </summary>
         /// <remarks>
@@ -1720,6 +1837,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DialerContact</returns>
         ApiResponse<DialerContact> PutOutboundContactlistContactWithHttpInfo (string contactListId, string contactId, DialerContact body);
         /// <summary>
+        /// Update Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ContactListFilter</returns>
+        ContactListFilter PutOutboundContactlistfilter (string contactListFilterId, ContactListFilter body);
+
+        /// <summary>
+        /// Update Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ApiResponse of ContactListFilter</returns>
+        ApiResponse<ContactListFilter> PutOutboundContactlistfilterWithHttpInfo (string contactListFilterId, ContactListFilter body);
+        /// <summary>
         /// Update dialer DNC list
         /// </summary>
         /// <remarks>
@@ -2050,6 +2190,27 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactIds">ContactIds to delete.</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<string> contactIds);
+        /// <summary>
+        /// Delete Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteOutboundContactlistfilterAsync (string contactListFilterId);
+
+        /// <summary>
+        /// Delete Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId);
         /// <summary>
         /// Delete dialer DNC list
         /// </summary>
@@ -2601,6 +2762,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="contactListId">ContactList ID</param>
         /// <returns>Task of ApiResponse (ImportStatus)</returns>
         System.Threading.Tasks.Task<ApiResponse<ImportStatus>> GetOutboundContactlistImportstatusAsyncWithHttpInfo (string contactListId);
+        /// <summary>
+        /// Get Contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of ContactListFilter</returns>
+        System.Threading.Tasks.Task<ContactListFilter> GetOutboundContactlistfilterAsync (string contactListFilterId);
+
+        /// <summary>
+        /// Get Contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of ApiResponse (ContactListFilter)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> GetOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId);
+        /// <summary>
+        /// Query Contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>Task of ContactListFilterEntityListing</returns>
+        System.Threading.Tasks.Task<ContactListFilterEntityListing> GetOutboundContactlistfiltersAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
+
+        /// <summary>
+        /// Query Contact list filters
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>Task of ApiResponse (ContactListFilterEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactListFilterEntityListing>> GetOutboundContactlistfiltersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null);
         /// <summary>
         /// Query a list of contact lists.
         /// </summary>
@@ -3226,6 +3441,48 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UriReference)</returns>
         System.Threading.Tasks.Task<ApiResponse<UriReference>> PostOutboundContactlistExportAsyncWithHttpInfo (string contactListId);
         /// <summary>
+        /// Create Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ContactListFilter</returns>
+        System.Threading.Tasks.Task<ContactListFilter> PostOutboundContactlistfiltersAsync (ContactListFilter body);
+
+        /// <summary>
+        /// Create Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ApiResponse (ContactListFilter)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PostOutboundContactlistfiltersAsyncWithHttpInfo (ContactListFilter body);
+        /// <summary>
+        /// Get a preview of the output of a contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of FilterPreviewResponse</returns>
+        System.Threading.Tasks.Task<FilterPreviewResponse> PostOutboundContactlistfiltersPreviewAsync (ContactListFilter body);
+
+        /// <summary>
+        /// Get a preview of the output of a contact list filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ApiResponse (FilterPreviewResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FilterPreviewResponse>> PostOutboundContactlistfiltersPreviewAsyncWithHttpInfo (ContactListFilter body);
+        /// <summary>
         /// Create a contact List.
         /// </summary>
         /// <remarks>
@@ -3562,6 +3819,29 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Contact</param>
         /// <returns>Task of ApiResponse (DialerContact)</returns>
         System.Threading.Tasks.Task<ApiResponse<DialerContact>> PutOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId, DialerContact body);
+        /// <summary>
+        /// Update Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ContactListFilter</returns>
+        System.Threading.Tasks.Task<ContactListFilter> PutOutboundContactlistfilterAsync (string contactListFilterId, ContactListFilter body);
+
+        /// <summary>
+        /// Update Contact List Filter
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ApiResponse (ContactListFilter)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PutOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId, ContactListFilter body);
         /// <summary>
         /// Update dialer DNC list
         /// </summary>
@@ -5202,6 +5482,161 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContacts: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistContacts: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        /// <summary>
+        /// Delete Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns></returns>
+        public void DeleteOutboundContactlistfilter (string contactListFilterId)
+        {
+             DeleteOutboundContactlistfilterWithHttpInfo(contactListFilterId);
+        }
+
+        /// <summary>
+        /// Delete Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteOutboundContactlistfilterWithHttpInfo (string contactListFilterId)
+        {
+            // verify the required parameter 'contactListFilterId' is set
+            if (contactListFilterId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->DeleteOutboundContactlistfilter");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListFilterId != null) localVarPathParams.Add("contactListFilterId", Configuration.ApiClient.ParameterToString(contactListFilterId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistfilter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistfilter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        /// <summary>
+        /// Delete Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteOutboundContactlistfilterAsync (string contactListFilterId)
+        {
+             await DeleteOutboundContactlistfilterAsyncWithHttpInfo(contactListFilterId);
+
+        }
+
+        /// <summary>
+        /// Delete Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId)
+        {
+            // verify the required parameter 'contactListFilterId' is set
+            if (contactListFilterId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->DeleteOutboundContactlistfilter");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListFilterId != null) localVarPathParams.Add("contactListFilterId", Configuration.ApiClient.ParameterToString(contactListFilterId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistfilter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundContactlistfilter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -8987,6 +9422,350 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ImportStatus>(localVarStatusCode,
                 localVarHeaders,
                 (ImportStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportStatus)));
+            
+        }
+
+        /// <summary>
+        /// Get Contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>ContactListFilter</returns>
+        public ContactListFilter GetOutboundContactlistfilter (string contactListFilterId)
+        {
+             ApiResponse<ContactListFilter> localVarResponse = GetOutboundContactlistfilterWithHttpInfo(contactListFilterId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>ApiResponse of ContactListFilter</returns>
+        public ApiResponse< ContactListFilter > GetOutboundContactlistfilterWithHttpInfo (string contactListFilterId)
+        {
+            // verify the required parameter 'contactListFilterId' is set
+            if (contactListFilterId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->GetOutboundContactlistfilter");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListFilterId != null) localVarPathParams.Add("contactListFilterId", Configuration.ApiClient.ParameterToString(contactListFilterId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilter>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)));
+            
+        }
+
+        /// <summary>
+        /// Get Contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of ContactListFilter</returns>
+        public async System.Threading.Tasks.Task<ContactListFilter> GetOutboundContactlistfilterAsync (string contactListFilterId)
+        {
+             ApiResponse<ContactListFilter> localVarResponse = await GetOutboundContactlistfilterAsyncWithHttpInfo(contactListFilterId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <returns>Task of ApiResponse (ContactListFilter)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> GetOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId)
+        {
+            // verify the required parameter 'contactListFilterId' is set
+            if (contactListFilterId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->GetOutboundContactlistfilter");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListFilterId != null) localVarPathParams.Add("contactListFilterId", Configuration.ApiClient.ParameterToString(contactListFilterId)); // path parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilter>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)));
+            
+        }
+
+        /// <summary>
+        /// Query Contact list filters 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>ContactListFilterEntityListing</returns>
+        public ContactListFilterEntityListing GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
+        {
+             ApiResponse<ContactListFilterEntityListing> localVarResponse = GetOutboundContactlistfiltersWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder, contactListId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query Contact list filters 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>ApiResponse of ContactListFilterEntityListing</returns>
+        public ApiResponse< ContactListFilterEntityListing > GetOutboundContactlistfiltersWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (contactListId != null) localVarQueryParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilters: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilterEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilterEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilterEntityListing)));
+            
+        }
+
+        /// <summary>
+        /// Query Contact list filters 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>Task of ContactListFilterEntityListing</returns>
+        public async System.Threading.Tasks.Task<ContactListFilterEntityListing> GetOutboundContactlistfiltersAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
+        {
+             ApiResponse<ContactListFilterEntityListing> localVarResponse = await GetOutboundContactlistfiltersAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder, contactListId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query Contact list filters 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <param name="contactListId">Contact List ID (optional)</param>
+        /// <returns>Task of ApiResponse (ContactListFilterEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListFilterEntityListing>> GetOutboundContactlistfiltersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
+        {
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            if (filterType != null) localVarQueryParams.Add("filterType", Configuration.ApiClient.ParameterToString(filterType)); // query parameter
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            if (contactListId != null) localVarQueryParams.Add("contactListId", Configuration.ApiClient.ParameterToString(contactListId)); // query parameter
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundContactlistfilters: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilterEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilterEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilterEntityListing)));
             
         }
 
@@ -13397,6 +14176,348 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
+        /// Create Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ContactListFilter</returns>
+        public ContactListFilter PostOutboundContactlistfilters (ContactListFilter body)
+        {
+             ApiResponse<ContactListFilter> localVarResponse = PostOutboundContactlistfiltersWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ApiResponse of ContactListFilter</returns>
+        public ApiResponse< ContactListFilter > PostOutboundContactlistfiltersWithHttpInfo (ContactListFilter body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfilters");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfilters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfilters: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilter>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)));
+            
+        }
+
+        /// <summary>
+        /// Create Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ContactListFilter</returns>
+        public async System.Threading.Tasks.Task<ContactListFilter> PostOutboundContactlistfiltersAsync (ContactListFilter body)
+        {
+             ApiResponse<ContactListFilter> localVarResponse = await PostOutboundContactlistfiltersAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ApiResponse (ContactListFilter)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PostOutboundContactlistfiltersAsyncWithHttpInfo (ContactListFilter body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfilters");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfilters: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfilters: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilter>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)));
+            
+        }
+
+        /// <summary>
+        /// Get a preview of the output of a contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>FilterPreviewResponse</returns>
+        public FilterPreviewResponse PostOutboundContactlistfiltersPreview (ContactListFilter body)
+        {
+             ApiResponse<FilterPreviewResponse> localVarResponse = PostOutboundContactlistfiltersPreviewWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a preview of the output of a contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ApiResponse of FilterPreviewResponse</returns>
+        public ApiResponse< FilterPreviewResponse > PostOutboundContactlistfiltersPreviewWithHttpInfo (ContactListFilter body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersPreview");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersPreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersPreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FilterPreviewResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FilterPreviewResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilterPreviewResponse)));
+            
+        }
+
+        /// <summary>
+        /// Get a preview of the output of a contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of FilterPreviewResponse</returns>
+        public async System.Threading.Tasks.Task<FilterPreviewResponse> PostOutboundContactlistfiltersPreviewAsync (ContactListFilter body)
+        {
+             ApiResponse<FilterPreviewResponse> localVarResponse = await PostOutboundContactlistfiltersPreviewAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a preview of the output of a contact list filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ApiResponse (FilterPreviewResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FilterPreviewResponse>> PostOutboundContactlistfiltersPreviewAsyncWithHttpInfo (ContactListFilter body)
+        {
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersPreview");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/preview";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersPreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundContactlistfiltersPreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FilterPreviewResponse>(localVarStatusCode,
+                localVarHeaders,
+                (FilterPreviewResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FilterPreviewResponse)));
+            
+        }
+
+        /// <summary>
         /// Create a contact List. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16058,6 +17179,189 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DialerContact>(localVarStatusCode,
                 localVarHeaders,
                 (DialerContact) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DialerContact)));
+            
+        }
+
+        /// <summary>
+        /// Update Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ContactListFilter</returns>
+        public ContactListFilter PutOutboundContactlistfilter (string contactListFilterId, ContactListFilter body)
+        {
+             ApiResponse<ContactListFilter> localVarResponse = PutOutboundContactlistfilterWithHttpInfo(contactListFilterId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>ApiResponse of ContactListFilter</returns>
+        public ApiResponse< ContactListFilter > PutOutboundContactlistfilterWithHttpInfo (string contactListFilterId, ContactListFilter body)
+        {
+            // verify the required parameter 'contactListFilterId' is set
+            if (contactListFilterId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->PutOutboundContactlistfilter");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlistfilter");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListFilterId != null) localVarPathParams.Add("contactListFilterId", Configuration.ApiClient.ParameterToString(contactListFilterId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundContactlistfilter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundContactlistfilter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilter>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)));
+            
+        }
+
+        /// <summary>
+        /// Update Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ContactListFilter</returns>
+        public async System.Threading.Tasks.Task<ContactListFilter> PutOutboundContactlistfilterAsync (string contactListFilterId, ContactListFilter body)
+        {
+             ApiResponse<ContactListFilter> localVarResponse = await PutOutboundContactlistfilterAsyncWithHttpInfo(contactListFilterId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update Contact List Filter 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactListFilterId">Contact List Filter ID</param>
+        /// <param name="body">ContactListFilter</param>
+        /// <returns>Task of ApiResponse (ContactListFilter)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ContactListFilter>> PutOutboundContactlistfilterAsyncWithHttpInfo (string contactListFilterId, ContactListFilter body)
+        {
+            // verify the required parameter 'contactListFilterId' is set
+            if (contactListFilterId == null)
+                throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->PutOutboundContactlistfilter");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlistfilter");
+
+            var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            if (contactListFilterId != null) localVarPathParams.Add("contactListFilterId", Configuration.ApiClient.ParameterToString(contactListFilterId)); // path parameter
+            if (body != null && body.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = body; // byte array
+            }
+
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundContactlistfilter: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundContactlistfilter: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ContactListFilter>(localVarStatusCode,
+                localVarHeaders,
+                (ContactListFilter) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListFilter)));
             
         }
 

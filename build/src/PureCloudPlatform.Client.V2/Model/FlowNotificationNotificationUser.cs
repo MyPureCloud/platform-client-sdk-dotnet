@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Name">Name.</param>
-        public FlowNotificationNotificationUser(string Id = null, string Name = null)
+        /// <param name="HomeOrg">HomeOrg.</param>
+        public FlowNotificationNotificationUser(string Id = null, string Name = null, DependencyTrackingBuildNotificationNotificationUserHomeOrg HomeOrg = null)
         {
             this.Id = Id;
             this.Name = Name;
+            this.HomeOrg = HomeOrg;
         }
         
         /// <summary>
@@ -40,6 +42,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         /// <summary>
+        /// Gets or Sets HomeOrg
+        /// </summary>
+        [DataMember(Name="homeOrg", EmitDefaultValue=false)]
+        public DependencyTrackingBuildNotificationNotificationUserHomeOrg HomeOrg { get; set; }
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -49,6 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class FlowNotificationNotificationUser {\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  HomeOrg: ").Append(HomeOrg).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -94,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.HomeOrg == other.HomeOrg ||
+                    this.HomeOrg != null &&
+                    this.HomeOrg.Equals(other.HomeOrg)
                 );
         }
 
@@ -112,6 +125,8 @@ namespace PureCloudPlatform.Client.V2.Model
                     hash = hash * 59 + this.Id.GetHashCode();
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                if (this.HomeOrg != null)
+                    hash = hash * 59 + this.HomeOrg.GetHashCode();
                 return hash;
             }
         }

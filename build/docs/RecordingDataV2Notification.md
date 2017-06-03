@@ -12,7 +12,7 @@ title: RecordingDataV2Notification
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
 | **Workspace** | [**DocumentDataV2NotificationWorkspace**](DocumentDataV2NotificationWorkspace.html) |  | [optional] |
-| **CreatedBy** | [**DependencyTrackingBuildNotificationNotificationUser**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
+| **CreatedBy** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **ContentType** | **string** |  | [optional] |
 | **ContentLength** | **int?** |  | [optional] |
 | **Filename** | **string** |  | [optional] |

@@ -12,7 +12,7 @@ title: CampaignNotification
 | **DateCreated** | **DateTime?** |  | [optional] |
 | **DateModified** | **DateTime?** |  | [optional] |
 | **Version** | **int?** |  | [optional] |
-| **ContactList** | [**DependencyTrackingBuildNotificationNotificationUser**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
+| **ContactList** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **Queue** | [**CampaignNotificationUriReference**](CampaignNotificationUriReference.html) |  | [optional] |
 | **DialingMode** | **string** |  | [optional] |
 | **Script** | [**CampaignNotificationUriReference**](CampaignNotificationUriReference.html) |  | [optional] |

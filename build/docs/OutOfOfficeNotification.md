@@ -11,7 +11,6 @@ title: OutOfOfficeNotification
 | **Active** | **bool?** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
-| **ModifiedDate** | **DateTime?** |  | [optional] |
 {: class="table table-striped"}
 
 

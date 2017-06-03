@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">TimeZone.</param>
         /// <param name="Sequence">Sequence.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public SequenceScheduleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleNotificationIntervals> Intervals = null, string TimeZone = null, DependencyTrackingBuildNotificationNotificationUser Sequence = null, Object AdditionalProperties = null)
+        public SequenceScheduleNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<CampaignScheduleNotificationIntervals> Intervals = null, string TimeZone = null, DocumentDataV2NotificationCreatedBy Sequence = null, Object AdditionalProperties = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Sequence
         /// </summary>
         [DataMember(Name="sequence", EmitDefaultValue=false)]
-        public DependencyTrackingBuildNotificationNotificationUser Sequence { get; set; }
+        public DocumentDataV2NotificationCreatedBy Sequence { get; set; }
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>

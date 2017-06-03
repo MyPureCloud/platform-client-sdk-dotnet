@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TotalNumberOfContacts">TotalNumberOfContacts.</param>
         /// <param name="Percentage">Percentage.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public CampaignProgressNotification(DependencyTrackingBuildNotificationNotificationUser Campaign = null, double? NumberOfContactsCalled = null, double? TotalNumberOfContacts = null, int? Percentage = null, Object AdditionalProperties = null)
+        public CampaignProgressNotification(DocumentDataV2NotificationCreatedBy Campaign = null, double? NumberOfContactsCalled = null, double? TotalNumberOfContacts = null, int? Percentage = null, Object AdditionalProperties = null)
         {
             this.Campaign = Campaign;
             this.NumberOfContactsCalled = NumberOfContactsCalled;
@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Campaign
         /// </summary>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
-        public DependencyTrackingBuildNotificationNotificationUser Campaign { get; set; }
+        public DocumentDataV2NotificationCreatedBy Campaign { get; set; }
         /// <summary>
         /// Gets or Sets NumberOfContactsCalled
         /// </summary>

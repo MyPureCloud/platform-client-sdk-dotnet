@@ -21,7 +21,7 @@ title: VideoConversationNotificationVideoMediaParticipant
 | **Held** | **bool?** |  | [optional] |
 | **WrapupRequired** | **bool?** |  | [optional] |
 | **WrapupPrompt** | **string** |  | [optional] |
-| **User** | [**DependencyTrackingBuildNotificationNotificationUser**](DependencyTrackingBuildNotificationNotificationUser.html) |  | [optional] |
+| **User** | [**DocumentDataV2NotificationCreatedBy**](DocumentDataV2NotificationCreatedBy.html) |  | [optional] |
 | **Queue** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **ErrorInfo** | [**VideoConversationNotificationErrorInfo**](VideoConversationNotificationErrorInfo.html) |  | [optional] |
