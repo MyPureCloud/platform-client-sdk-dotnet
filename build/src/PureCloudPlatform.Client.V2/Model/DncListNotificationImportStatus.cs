@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DncListNotificationImportStatus :  IEquatable<DncListNotificationImportStatus>
     {
+        
+        
         /// <summary>
         /// Gets or Sets ImportState
         /// </summary>
@@ -44,55 +46,199 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED")]
             Failed
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ImportState
         /// </summary>
         [DataMember(Name="importState", EmitDefaultValue=false)]
         public ImportStateEnum? ImportState { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DncListNotificationImportStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="ImportState">ImportState.</param>
+        
+        
+        
         /// <param name="TotalRecords">TotalRecords.</param>
+        
+        
+        
         /// <param name="CompletedRecords">CompletedRecords.</param>
+        
+        
+        
         /// <param name="PercentageComplete">PercentageComplete.</param>
+        
+        
+        
         /// <param name="FailureReason">FailureReason.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public DncListNotificationImportStatus(ImportStateEnum? ImportState = null, int? TotalRecords = null, int? CompletedRecords = null, int? PercentageComplete = null, string FailureReason = null, Object AdditionalProperties = null)
         {
-            this.ImportState = ImportState;
-            this.TotalRecords = TotalRecords;
-            this.CompletedRecords = CompletedRecords;
-            this.PercentageComplete = PercentageComplete;
-            this.FailureReason = FailureReason;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ImportState = ImportState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalRecords = TotalRecords;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CompletedRecords = CompletedRecords;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PercentageComplete = PercentageComplete;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FailureReason = FailureReason;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets TotalRecords
         /// </summary>
         [DataMember(Name="totalRecords", EmitDefaultValue=false)]
         public int? TotalRecords { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CompletedRecords
         /// </summary>
         [DataMember(Name="completedRecords", EmitDefaultValue=false)]
         public int? CompletedRecords { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PercentageComplete
         /// </summary>
         [DataMember(Name="percentageComplete", EmitDefaultValue=false)]
         public int? PercentageComplete { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FailureReason
         /// </summary>
         [DataMember(Name="failureReason", EmitDefaultValue=false)]
         public string FailureReason { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,12 +247,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DncListNotificationImportStatus {\n");
+            
             sb.Append("  ImportState: ").Append(ImportState).Append("\n");
+            
             sb.Append("  TotalRecords: ").Append(TotalRecords).Append("\n");
+            
             sb.Append("  CompletedRecords: ").Append(CompletedRecords).Append("\n");
+            
             sb.Append("  PercentageComplete: ").Append(PercentageComplete).Append("\n");
+            
             sb.Append("  FailureReason: ").Append(FailureReason).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,18 +339,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ImportState != null)
                     hash = hash * 59 + this.ImportState.GetHashCode();
+                
                 if (this.TotalRecords != null)
                     hash = hash * 59 + this.TotalRecords.GetHashCode();
+                
                 if (this.CompletedRecords != null)
                     hash = hash * 59 + this.CompletedRecords.GetHashCode();
+                
                 if (this.PercentageComplete != null)
                     hash = hash * 59 + this.PercentageComplete.GetHashCode();
+                
                 if (this.FailureReason != null)
                     hash = hash * 59 + this.FailureReason.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

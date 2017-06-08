@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallConversationNotificationCallMediaParticipant :  IEquatable<CallConversationNotificationCallMediaParticipant>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -104,6 +130,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
@@ -130,6 +160,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -240,6 +274,64 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -272,272 +364,1042 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paused")]
             Paused
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallConversationNotificationCallMediaParticipant" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Address">Address.</param>
+        
+        
+        
         /// <param name="StartTime">StartTime.</param>
+        
+        
+        
         /// <param name="ConnectedTime">ConnectedTime.</param>
+        
+        
+        
         /// <param name="EndTime">EndTime.</param>
+        
+        
+        
         /// <param name="StartHoldTime">StartHoldTime.</param>
+        
+        
+        
         /// <param name="Purpose">Purpose.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="Direction">Direction.</param>
+        
+        
+        
         /// <param name="DisconnectType">DisconnectType.</param>
+        
+        
+        
         /// <param name="Held">Held.</param>
+        
+        
+        
         /// <param name="WrapupRequired">WrapupRequired.</param>
+        
+        
+        
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
+        
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="Queue">Queue.</param>
+        
+        
+        
         /// <param name="Attributes">Attributes.</param>
+        
+        
+        
         /// <param name="ErrorInfo">ErrorInfo.</param>
+        
+        
+        
         /// <param name="Script">Script.</param>
+        
+        
+        
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
+        
+        
+        
         /// <param name="WrapupSkipped">WrapupSkipped.</param>
+        
+        
+        
         /// <param name="Provider">Provider.</param>
+        
+        
+        
         /// <param name="ExternalContact">ExternalContact.</param>
+        
+        
+        
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
+        
+        
+        
         /// <param name="Wrapup">Wrapup.</param>
+        
+        
+        
         /// <param name="Peer">Peer.</param>
+        
+        
+        
         /// <param name="Muted">Muted.</param>
+        
+        
+        
         /// <param name="Confined">Confined.</param>
+        
+        
+        
         /// <param name="Recording">Recording.</param>
+        
+        
+        
         /// <param name="RecordingState">RecordingState.</param>
+        
+        
+        
         /// <param name="Group">Group.</param>
+        
+        
+        
         /// <param name="Ani">Ani.</param>
+        
+        
+        
         /// <param name="Dnis">Dnis.</param>
+        
+        
+        
         /// <param name="DocumentId">DocumentId.</param>
+        
+        
+        
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        
+        
+        
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
+        
+        
+        
         /// <param name="FaxStatus">FaxStatus.</param>
+        
+        
         public CallConversationNotificationCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Address = Address;
-            this.StartTime = StartTime;
-            this.ConnectedTime = ConnectedTime;
-            this.EndTime = EndTime;
-            this.StartHoldTime = StartHoldTime;
-            this.Purpose = Purpose;
-            this.State = State;
-            this.Direction = Direction;
-            this.DisconnectType = DisconnectType;
-            this.Held = Held;
-            this.WrapupRequired = WrapupRequired;
-            this.WrapupPrompt = WrapupPrompt;
-            this.User = User;
-            this.Queue = Queue;
-            this.Attributes = Attributes;
-            this.ErrorInfo = ErrorInfo;
-            this.Script = Script;
-            this.WrapupTimeoutMs = WrapupTimeoutMs;
-            this.WrapupSkipped = WrapupSkipped;
-            this.Provider = Provider;
-            this.ExternalContact = ExternalContact;
-            this.ExternalOrganization = ExternalOrganization;
-            this.Wrapup = Wrapup;
-            this.Peer = Peer;
-            this.Muted = Muted;
-            this.Confined = Confined;
-            this.Recording = Recording;
-            this.RecordingState = RecordingState;
-            this.Group = Group;
-            this.Ani = Ani;
-            this.Dnis = Dnis;
-            this.DocumentId = DocumentId;
-            this.MonitoredParticipantId = MonitoredParticipantId;
-            this.ConsultParticipantId = ConsultParticipantId;
-            this.FaxStatus = FaxStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Address = Address;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartTime = StartTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedTime = ConnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndTime = EndTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartHoldTime = StartHoldTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Purpose = Purpose;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Direction = Direction;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectType = DisconnectType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Held = Held;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupRequired = WrapupRequired;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupPrompt = WrapupPrompt;
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Queue = Queue;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Attributes = Attributes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Script = Script;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupTimeoutMs = WrapupTimeoutMs;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupSkipped = WrapupSkipped;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provider = Provider;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalContact = ExternalContact;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalOrganization = ExternalOrganization;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Wrapup = Wrapup;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Peer = Peer;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Muted = Muted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Confined = Confined;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Recording = Recording;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingState = RecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Group = Group;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Ani = Ani;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Dnis = Dnis;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DocumentId = DocumentId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MonitoredParticipantId = MonitoredParticipantId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConsultParticipantId = ConsultParticipantId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FaxStatus = FaxStatus;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupRequired
         /// </summary>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupPrompt
         /// </summary>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public string WrapupPrompt { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public DocumentDataV2NotificationCreatedBy User { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public CallConversationNotificationUriReference Queue { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public CallConversationNotificationErrorInfo ErrorInfo { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Script
         /// </summary>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public CallConversationNotificationUriReference Script { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupSkipped
         /// </summary>
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExternalContact
         /// </summary>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
         public CallConversationNotificationUriReference ExternalContact { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExternalOrganization
         /// </summary>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
         public CallConversationNotificationUriReference ExternalOrganization { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Wrapup
         /// </summary>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationNotificationWrapup Wrapup { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Peer
         /// </summary>
         [DataMember(Name="peer", EmitDefaultValue=false)]
         public string Peer { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Muted
         /// </summary>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Confined
         /// </summary>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Group
         /// </summary>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public CallConversationNotificationUriReference Group { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Ani
         /// </summary>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Dnis
         /// </summary>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DocumentId
         /// </summary>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MonitoredParticipantId
         /// </summary>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConsultParticipantId
         /// </summary>
         [DataMember(Name="consultParticipantId", EmitDefaultValue=false)]
         public string ConsultParticipantId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FaxStatus
         /// </summary>
         [DataMember(Name="faxStatus", EmitDefaultValue=false)]
         public CallConversationNotificationFaxStatus FaxStatus { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -546,43 +1408,81 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallConversationNotificationCallMediaParticipant {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Address: ").Append(Address).Append("\n");
+            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            
             sb.Append("  Held: ").Append(Held).Append("\n");
+            
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
+            
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            
             sb.Append("  Script: ").Append(Script).Append("\n");
+            
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
+            
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
+            
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
             sb.Append("  Muted: ").Append(Muted).Append("\n");
+            
             sb.Append("  Confined: ").Append(Confined).Append("\n");
+            
             sb.Append("  Recording: ").Append(Recording).Append("\n");
+            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            
             sb.Append("  Group: ").Append(Group).Append("\n");
+            
             sb.Append("  Ani: ").Append(Ani).Append("\n");
+            
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
+            
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
+            
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
+            
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -817,80 +1717,118 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+                
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+                
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
+                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
+                
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
+                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+                
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
+                
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
+                
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
+                
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
+                
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
+                
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
+                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
+                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
+                
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
+                
                 if (this.Dnis != null)
                     hash = hash * 59 + this.Dnis.GetHashCode();
+                
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
+                
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
+                
                 if (this.FaxStatus != null)
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
+                
                 return hash;
             }
         }

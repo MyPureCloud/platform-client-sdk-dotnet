@@ -18,6 +18,28 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeInterface :  IEquatable<EdgeInterface>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets LineTypes
         /// </summary>
@@ -56,69 +78,241 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "STATION")]
             Station
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeInterface" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="IpAddress">IpAddress.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="MacAddress">MacAddress.</param>
+        
+        
+        
         /// <param name="IfName">IfName.</param>
+        
+        
+        
         /// <param name="Endpoints">Endpoints.</param>
+        
+        
+        
         /// <param name="LineTypes">LineTypes.</param>
+        
+        
+        
         /// <param name="AddressFamilyId">AddressFamilyId.</param>
+        
+        
         public EdgeInterface(string Type = null, string IpAddress = null, string Name = null, string MacAddress = null, string IfName = null, List<UriReference> Endpoints = null, List<LineTypesEnum> LineTypes = null, string AddressFamilyId = null)
         {
-            this.Type = Type;
-            this.IpAddress = IpAddress;
-            this.Name = Name;
-            this.MacAddress = MacAddress;
-            this.IfName = IfName;
-            this.Endpoints = Endpoints;
-            this.LineTypes = LineTypes;
-            this.AddressFamilyId = AddressFamilyId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IpAddress = IpAddress;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MacAddress = MacAddress;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IfName = IfName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Endpoints = Endpoints;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LineTypes = LineTypes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressFamilyId = AddressFamilyId;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets IpAddress
         /// </summary>
         [DataMember(Name="ipAddress", EmitDefaultValue=false)]
         public string IpAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MacAddress
         /// </summary>
         [DataMember(Name="macAddress", EmitDefaultValue=false)]
         public string MacAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets IfName
         /// </summary>
         [DataMember(Name="ifName", EmitDefaultValue=false)]
         public string IfName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Endpoints
         /// </summary>
         [DataMember(Name="endpoints", EmitDefaultValue=false)]
         public List<UriReference> Endpoints { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets LineTypes
         /// </summary>
         [DataMember(Name="lineTypes", EmitDefaultValue=false)]
         public List<LineTypesEnum> LineTypes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AddressFamilyId
         /// </summary>
         [DataMember(Name="addressFamilyId", EmitDefaultValue=false)]
         public string AddressFamilyId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -127,14 +321,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeInterface {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  MacAddress: ").Append(MacAddress).Append("\n");
+            
             sb.Append("  IfName: ").Append(IfName).Append("\n");
+            
             sb.Append("  Endpoints: ").Append(Endpoints).Append("\n");
+            
             sb.Append("  LineTypes: ").Append(LineTypes).Append("\n");
+            
             sb.Append("  AddressFamilyId: ").Append(AddressFamilyId).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -224,22 +427,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.IpAddress != null)
                     hash = hash * 59 + this.IpAddress.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.MacAddress != null)
                     hash = hash * 59 + this.MacAddress.GetHashCode();
+                
                 if (this.IfName != null)
                     hash = hash * 59 + this.IfName.GetHashCode();
+                
                 if (this.Endpoints != null)
                     hash = hash * 59 + this.Endpoints.GetHashCode();
+                
                 if (this.LineTypes != null)
                     hash = hash * 59 + this.LineTypes.GetHashCode();
+                
                 if (this.AddressFamilyId != null)
                     hash = hash * 59 + this.AddressFamilyId.GetHashCode();
+                
                 return hash;
             }
         }

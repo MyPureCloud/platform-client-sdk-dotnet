@@ -18,18 +18,86 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ProvisionInfo :  IEquatable<ProvisionInfo>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ProvisionInfo" /> class.
         /// </summary>
+        
+        
         /// <param name="Time">The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="Source">The source of the provisioning.</param>
+        
+        
+        
         /// <param name="ErrorInfo">The error information from the provision process, if any.</param>
+        
+        
         public ProvisionInfo(DateTime? Time = null, string Source = null, string ErrorInfo = null)
         {
-            this.Time = Time;
-            this.Source = Source;
-            this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Time = Time;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Source = Source;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -37,18 +105,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The time at which this phone was provisioned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="time", EmitDefaultValue=false)]
         public DateTime? Time { get; set; }
+        
+        
+        
         /// <summary>
         /// The source of the provisioning
         /// </summary>
         /// <value>The source of the provisioning</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public string Source { get; set; }
+        
+        
+        
         /// <summary>
         /// The error information from the provision process, if any
         /// </summary>
         /// <value>The error information from the provision process, if any</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public string ErrorInfo { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -57,9 +133,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ProvisionInfo {\n");
+            
             sb.Append("  Time: ").Append(Time).Append("\n");
+            
             sb.Append("  Source: ").Append(Source).Append("\n");
+            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,12 +204,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Time != null)
                     hash = hash * 59 + this.Time.GetHashCode();
+                
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
+                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+                
                 return hash;
             }
         }

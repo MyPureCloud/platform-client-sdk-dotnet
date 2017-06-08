@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RuleSetNotificationRule :  IEquatable<RuleSetNotificationRule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
@@ -44,62 +55,220 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DIALER_WRAPUP")]
             Wrapup
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationRule" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Order">Order.</param>
+        
+        
+        
         /// <param name="Category">Category.</param>
+        
+        
+        
         /// <param name="Conditions">Conditions.</param>
+        
+        
+        
         /// <param name="Actions">Actions.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public RuleSetNotificationRule(string Id = null, string Name = null, int? Order = null, CategoryEnum? Category = null, List<RuleSetNotificationConditions> Conditions = null, List<RuleSetNotificationActions> Actions = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Order = Order;
-            this.Category = Category;
-            this.Conditions = Conditions;
-            this.Actions = Actions;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Order = Order;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Category = Category;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Conditions = Conditions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Actions = Actions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Order
         /// </summary>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Conditions
         /// </summary>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<RuleSetNotificationConditions> Conditions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<RuleSetNotificationActions> Actions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,13 +277,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RuleSetNotificationRule {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Order: ").Append(Order).Append("\n");
+            
             sb.Append("  Category: ").Append(Category).Append("\n");
+            
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
+            
             sb.Append("  Actions: ").Append(Actions).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,20 +376,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
+                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
+                
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
+                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

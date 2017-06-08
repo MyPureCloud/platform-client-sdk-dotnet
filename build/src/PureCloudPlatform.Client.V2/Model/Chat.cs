@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Chat :  IEquatable<Chat>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Chat" /> class.
         /// </summary>
+        
+        
         /// <param name="JabberId">JabberId.</param>
+        
+        
         public Chat(string JabberId = null)
         {
-            this.JabberId = JabberId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.JabberId = JabberId;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets JabberId
         /// </summary>
         [DataMember(Name="jabberId", EmitDefaultValue=false)]
         public string JabberId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Chat {\n");
+            
             sb.Append("  JabberId: ").Append(JabberId).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.JabberId != null)
                     hash = hash * 59 + this.JabberId.GetHashCode();
+                
                 return hash;
             }
         }

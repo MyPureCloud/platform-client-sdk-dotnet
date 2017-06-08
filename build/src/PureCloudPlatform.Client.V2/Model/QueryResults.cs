@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueryResults :  IEquatable<QueryResults>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryResults" /> class.
         /// </summary>
+        
+        
         /// <param name="Results">Results.</param>
+        
+        
+        
         /// <param name="FacetInfo">FacetInfo.</param>
+        
+        
         public QueryResults(DomainEntityListingQueryResult Results = null, QueryFacetInfo FacetInfo = null)
         {
-            this.Results = Results;
-            this.FacetInfo = FacetInfo;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Results = Results;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FacetInfo = FacetInfo;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public DomainEntityListingQueryResult Results { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FacetInfo
         /// </summary>
         [DataMember(Name="facetInfo", EmitDefaultValue=false)]
         public QueryFacetInfo FacetInfo { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueryResults {\n");
+            
             sb.Append("  Results: ").Append(Results).Append("\n");
+            
             sb.Append("  FacetInfo: ").Append(FacetInfo).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+                
                 if (this.FacetInfo != null)
                     hash = hash * 59 + this.FacetInfo.GetHashCode();
+                
                 return hash;
             }
         }

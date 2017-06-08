@@ -18,21 +18,89 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Relationship :  IEquatable<Relationship>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Relationship" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Relationship() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Relationship" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="User">The user associated with the external organization (required).</param>
+        
+        
+        
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
+        
+        
+        
         /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
+        
+        
+        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
+        
+        
+        
+        
         public Relationship(string Name = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null, List<ExternalDataSource> ExternalDataSources = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "User" is required (not null)
             if (User == null)
             {
@@ -42,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.User = User;
             }
+            
+            
+            
+            
+            
             // to ensure "ExternalOrganization" is required (not null)
             if (ExternalOrganization == null)
             {
@@ -51,6 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.ExternalOrganization = ExternalOrganization;
             }
+            
+            
+            
+            
+            
             // to ensure "_Relationship" is required (not null)
             if (_Relationship == null)
             {
@@ -60,9 +138,53 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this._Relationship = _Relationship;
             }
-            this.Name = Name;
-            this.ExternalDataSources = ExternalDataSources;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalDataSources = ExternalDataSources;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -70,41 +192,61 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The user associated with the external organization
         /// </summary>
         /// <value>The user associated with the external organization</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
         /// <summary>
         /// The external organization this relationship is attached to
         /// </summary>
         /// <value>The external organization this relationship is attached to</value>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
         public ExternalOrganization ExternalOrganization { get; set; }
+        
+        
+        
         /// <summary>
         /// The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant
         /// </summary>
         /// <value>The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant</value>
         [DataMember(Name="relationship", EmitDefaultValue=false)]
         public string _Relationship { get; set; }
+        
+        
+        
         /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
         public List<ExternalDataSource> ExternalDataSources { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,13 +255,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Relationship {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
+            
             sb.Append("  _Relationship: ").Append(_Relationship).Append("\n");
+            
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,20 +354,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
+                
                 if (this._Relationship != null)
                     hash = hash * 59 + this._Relationship.GetHashCode();
+                
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IGreetingsApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
         /// </summary>
@@ -35,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGreetingWithHttpInfo (string greetingId);
+        
         /// <summary>
         /// Get a Greeting with the given GreetingId
         /// </summary>
@@ -56,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>ApiResponse of Greeting</returns>
         ApiResponse<Greeting> GetGreetingWithHttpInfo (string greetingId);
+        
         /// <summary>
         /// Get media playback URI for this greeting
         /// </summary>
@@ -79,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
         ApiResponse<GreetingMediaInfo> GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null);
+        
         /// <summary>
         /// Gets an Organization&#39;s Greetings
         /// </summary>
@@ -102,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
         ApiResponse<DomainEntityListing> GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -121,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> GetGreetingsDefaultsWithHttpInfo ();
+        
         /// <summary>
         /// Get a list of the Group&#39;s Greetings
         /// </summary>
@@ -146,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of GreetingListing</returns>
         ApiResponse<GreetingListing> GetGroupGreetingsWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a Group&#39;s ID
         /// </summary>
@@ -167,6 +175,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> GetGroupGreetingsDefaultsWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Get a list of the User&#39;s Greetings
         /// </summary>
@@ -192,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of DomainEntityListing</returns>
         ApiResponse<DomainEntityListing> GetUserGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
@@ -213,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> GetUserGreetingsDefaultsWithHttpInfo (string userId);
+        
         /// <summary>
         /// Create a Greeting for an Organization
         /// </summary>
@@ -234,6 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> PostGreetingsWithHttpInfo (Greeting body);
+        
         /// <summary>
         /// Creates a Greeting for a Group
         /// </summary>
@@ -257,6 +269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
         ApiResponse<Greeting> PostGroupGreetingsWithHttpInfo (string groupId, Greeting body);
+        
         /// <summary>
         /// Creates a Greeting for a User
         /// </summary>
@@ -280,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Greeting to create</param>
         /// <returns>ApiResponse of Greeting</returns>
         ApiResponse<Greeting> PostUserGreetingsWithHttpInfo (string userId, Greeting body);
+        
         /// <summary>
         /// Updates the Greeting with the given GreetingId
         /// </summary>
@@ -303,6 +317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Greeting</param>
         /// <returns>ApiResponse of Greeting</returns>
         ApiResponse<Greeting> PutGreetingWithHttpInfo (string greetingId, Greeting body);
+        
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -324,6 +339,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> PutGreetingsDefaultsWithHttpInfo (DefaultGreetingList body);
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified Group
         /// </summary>
@@ -347,6 +363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> PutGroupGreetingsDefaultsWithHttpInfo (string groupId, DefaultGreetingList body);
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
         /// </summary>
@@ -370,8 +387,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         ApiResponse<DefaultGreetingList> PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Deletes a Greeting with the given GreetingId
         /// </summary>
@@ -393,6 +413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGreetingAsyncWithHttpInfo (string greetingId);
+        
         /// <summary>
         /// Get a Greeting with the given GreetingId
         /// </summary>
@@ -414,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="greetingId">Greeting ID</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
         System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId);
+        
         /// <summary>
         /// Get media playback URI for this greeting
         /// </summary>
@@ -437,6 +459,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WAV)</param>
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null);
+        
         /// <summary>
         /// Gets an Organization&#39;s Greetings
         /// </summary>
@@ -460,6 +483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -479,6 +503,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGreetingsDefaultsAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Get a list of the Group&#39;s Greetings
         /// </summary>
@@ -504,6 +529,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (GreetingListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<GreetingListing>> GetGroupGreetingsAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a Group&#39;s ID
         /// </summary>
@@ -525,6 +551,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Get a list of the User&#39;s Greetings
         /// </summary>
@@ -550,6 +577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID
         /// </summary>
@@ -571,6 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserGreetingsDefaultsAsyncWithHttpInfo (string userId);
+        
         /// <summary>
         /// Create a Greeting for an Organization
         /// </summary>
@@ -592,6 +621,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body);
+        
         /// <summary>
         /// Creates a Greeting for a Group
         /// </summary>
@@ -615,6 +645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGroupGreetingsAsyncWithHttpInfo (string groupId, Greeting body);
+        
         /// <summary>
         /// Creates a Greeting for a User
         /// </summary>
@@ -638,6 +669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Greeting to create</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body);
+        
         /// <summary>
         /// Updates the Greeting with the given GreetingId
         /// </summary>
@@ -661,6 +693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated Greeting</param>
         /// <returns>Task of ApiResponse (Greeting)</returns>
         System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingAsyncWithHttpInfo (string greetingId, Greeting body);
+        
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList
         /// </summary>
@@ -682,6 +715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGreetingsDefaultsAsyncWithHttpInfo (DefaultGreetingList body);
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified Group
         /// </summary>
@@ -705,6 +739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId, DefaultGreetingList body);
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User
         /// </summary>
@@ -728,7 +763,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The updated defaultGreetingList</param>
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -818,6 +855,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Deletes a Greeting with the given GreetingId 
         /// </summary>
@@ -837,9 +875,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGreetingWithHttpInfo (string greetingId)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreeting");
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -851,13 +893,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -866,14 +912,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -895,6 +952,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Deletes a Greeting with the given GreetingId 
         /// </summary>
@@ -915,9 +973,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGreetingAsyncWithHttpInfo (string greetingId)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreeting");
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -929,13 +991,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -944,14 +1010,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -973,6 +1051,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Get a Greeting with the given GreetingId 
         /// </summary>
@@ -993,9 +1073,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Greeting</returns>
         public ApiResponse< Greeting > GetGreetingWithHttpInfo (string greetingId)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreeting");
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1007,13 +1091,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1022,14 +1110,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1051,6 +1150,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a Greeting with the given GreetingId 
         /// </summary>
@@ -1072,9 +1172,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Greeting)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> GetGreetingAsyncWithHttpInfo (string greetingId)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreeting");
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1086,13 +1190,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1101,14 +1209,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1130,6 +1250,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get media playback URI for this greeting 
         /// </summary>
@@ -1152,9 +1274,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GreetingMediaInfo</returns>
         public ApiResponse< GreetingMediaInfo > GetGreetingMediaWithHttpInfo (string greetingId, string formatId = null)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingMedia");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1166,13 +1294,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1181,15 +1313,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1211,6 +1355,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get media playback URI for this greeting 
         /// </summary>
@@ -1234,9 +1379,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GreetingMediaInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GreetingMediaInfo>> GetGreetingMediaAsyncWithHttpInfo (string greetingId, string formatId = null)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingMedia");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1248,13 +1399,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1263,15 +1418,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1293,6 +1461,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Gets an Organization&#39;s Greetings 
         /// </summary>
@@ -1315,6 +1485,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DomainEntityListing</returns>
         public ApiResponse< DomainEntityListing > GetGreetingsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1326,13 +1501,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1341,15 +1520,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1371,6 +1562,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Gets an Organization&#39;s Greetings 
         /// </summary>
@@ -1394,6 +1586,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1405,13 +1602,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1420,15 +1621,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1450,6 +1664,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList 
         /// </summary>
@@ -1468,6 +1684,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         public ApiResponse< DefaultGreetingList > GetGreetingsDefaultsWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1479,13 +1696,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1494,13 +1715,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1522,6 +1753,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get an Organization&#39;s DefaultGreetingList 
         /// </summary>
@@ -1541,6 +1773,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGreetingsDefaultsAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1552,13 +1785,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1567,13 +1804,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1595,6 +1843,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a list of the Group&#39;s Greetings 
         /// </summary>
@@ -1619,9 +1869,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GreetingListing</returns>
         public ApiResponse< GreetingListing > GetGroupGreetingsWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetings");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1633,13 +1891,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1648,16 +1910,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1679,6 +1954,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a list of the Group&#39;s Greetings 
         /// </summary>
@@ -1704,9 +1980,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GreetingListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GreetingListing>> GetGroupGreetingsAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetings");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1718,13 +2002,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1733,16 +2021,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1764,6 +2066,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a Group&#39;s ID 
         /// </summary>
@@ -1784,9 +2088,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         public ApiResponse< DefaultGreetingList > GetGroupGreetingsDefaultsWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1798,13 +2106,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1813,14 +2125,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1842,6 +2165,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a Group&#39;s ID 
         /// </summary>
@@ -1863,9 +2187,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1877,13 +2205,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1892,14 +2224,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1921,6 +2265,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a list of the User&#39;s Greetings 
         /// </summary>
@@ -1945,9 +2291,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DomainEntityListing</returns>
         public ApiResponse< DomainEntityListing > GetUserGreetingsWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetings");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1959,13 +2313,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1974,16 +2332,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2005,6 +2376,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a list of the User&#39;s Greetings 
         /// </summary>
@@ -2030,9 +2402,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DomainEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetUserGreetingsAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetings");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2044,13 +2424,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2059,16 +2443,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2090,6 +2488,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID 
         /// </summary>
@@ -2110,9 +2510,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         public ApiResponse< DefaultGreetingList > GetUserGreetingsDefaultsWithHttpInfo (string userId)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2124,13 +2528,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2139,14 +2547,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2168,6 +2587,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Grabs the list of Default Greetings given a User&#39;s ID 
         /// </summary>
@@ -2189,9 +2609,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetUserGreetingsDefaultsAsyncWithHttpInfo (string userId)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2203,13 +2627,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2218,14 +2646,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2247,6 +2687,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Create a Greeting for an Organization 
         /// </summary>
@@ -2267,9 +2709,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         public ApiResponse< DefaultGreetingList > PostGreetingsWithHttpInfo (Greeting body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGreetings");
+            
+            
 
             var localVarPath = "/api/v2/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2281,13 +2727,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2296,6 +2746,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2304,13 +2759,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2332,6 +2793,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Create a Greeting for an Organization 
         /// </summary>
@@ -2353,9 +2815,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGreetings");
+            
+            
 
             var localVarPath = "/api/v2/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2367,13 +2833,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2382,6 +2852,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2390,13 +2865,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2418,6 +2900,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Creates a Greeting for a Group 
         /// </summary>
@@ -2440,12 +2924,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Greeting</returns>
         public ApiResponse< Greeting > PostGroupGreetingsWithHttpInfo (string groupId, Greeting body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PostGroupGreetings");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGroupGreetings");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2457,13 +2948,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2472,7 +2967,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2481,13 +2982,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2509,6 +3016,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Creates a Greeting for a Group 
         /// </summary>
@@ -2532,12 +3040,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Greeting)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGroupGreetingsAsyncWithHttpInfo (string groupId, Greeting body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PostGroupGreetings");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGroupGreetings");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2549,13 +3064,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2564,7 +3083,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2573,13 +3098,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2601,6 +3133,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Creates a Greeting for a User 
         /// </summary>
@@ -2623,12 +3157,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Greeting</returns>
         public ApiResponse< Greeting > PostUserGreetingsWithHttpInfo (string userId, Greeting body)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PostUserGreetings");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserGreetings");
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2640,13 +3181,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2655,7 +3200,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2664,13 +3215,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2692,6 +3249,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Creates a Greeting for a User 
         /// </summary>
@@ -2715,12 +3273,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Greeting)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostUserGreetingsAsyncWithHttpInfo (string userId, Greeting body)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PostUserGreetings");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserGreetings");
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2732,13 +3297,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2747,7 +3316,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2756,13 +3331,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2784,6 +3366,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Updates the Greeting with the given GreetingId 
         /// </summary>
@@ -2806,12 +3390,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Greeting</returns>
         public ApiResponse< Greeting > PutGreetingWithHttpInfo (string greetingId, Greeting body)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->PutGreeting");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreeting");
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2823,13 +3414,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2838,7 +3433,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2847,13 +3448,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2875,6 +3482,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Updates the Greeting with the given GreetingId 
         /// </summary>
@@ -2898,12 +3506,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Greeting)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PutGreetingAsyncWithHttpInfo (string greetingId, Greeting body)
         {
+            
+            
             // verify the required parameter 'greetingId' is set
             if (greetingId == null)
                 throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->PutGreeting");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreeting");
+            
+            
 
             var localVarPath = "/api/v2/greetings/{greetingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2915,13 +3530,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2930,7 +3549,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (greetingId != null) localVarPathParams.Add("greetingId", Configuration.ApiClient.ParameterToString(greetingId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2939,13 +3564,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2967,6 +3599,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList 
         /// </summary>
@@ -2987,9 +3621,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         public ApiResponse< DefaultGreetingList > PutGreetingsDefaultsWithHttpInfo (DefaultGreetingList body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3001,13 +3639,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3016,6 +3658,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3024,13 +3671,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3052,6 +3705,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update an Organization&#39;s DefaultGreetingList 
         /// </summary>
@@ -3073,9 +3727,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGreetingsDefaultsAsyncWithHttpInfo (DefaultGreetingList body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3087,13 +3745,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3102,6 +3764,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3110,13 +3777,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3138,6 +3812,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified Group 
         /// </summary>
@@ -3160,12 +3836,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         public ApiResponse< DefaultGreetingList > PutGroupGreetingsDefaultsWithHttpInfo (string groupId, DefaultGreetingList body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PutGroupGreetingsDefaults");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGroupGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3177,13 +3860,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3192,7 +3879,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3201,13 +3894,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3229,6 +3928,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified Group 
         /// </summary>
@@ -3252,12 +3952,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutGroupGreetingsDefaultsAsyncWithHttpInfo (string groupId, DefaultGreetingList body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->PutGroupGreetingsDefaults");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGroupGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3269,13 +3976,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3284,7 +3995,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3293,13 +4010,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3321,6 +4045,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User 
         /// </summary>
@@ -3343,12 +4069,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DefaultGreetingList</returns>
         public ApiResponse< DefaultGreetingList > PutUserGreetingsDefaultsWithHttpInfo (string userId, DefaultGreetingList body)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PutUserGreetingsDefaults");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3360,13 +4093,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3375,7 +4112,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3384,13 +4127,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3412,6 +4161,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Updates the DefaultGreetingList of the specified User 
         /// </summary>
@@ -3435,12 +4185,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PutUserGreetingsDefaultsAsyncWithHttpInfo (string userId, DefaultGreetingList body)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->PutUserGreetingsDefaults");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserGreetingsDefaults");
+            
+            
 
             var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3452,13 +4209,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3467,7 +4228,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3476,13 +4243,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3504,5 +4278,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

@@ -65,14 +65,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var calibrationId = calibrationId_example;  // string | Calibration ID
+            
+            
+            
+            
             var calibratorId = calibratorId_example;  // string | calibratorId
+            
+            
+            
 
             try
             {
+                
                 // Delete a calibration by id.
+                
                 Calibration result = apiInstance.DeleteQualityCalibration(calibrationId, calibratorId);
                 Debug.WriteLine(result);
             }
@@ -123,15 +135,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var evaluationId = evaluationId_example;  // string | evaluationId
+            
+            
+            
+            
             var expand = expand_example;  // string | evaluatorId (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Delete an evaluation
+                
                 Evaluation result = apiInstance.DeleteQualityConversationEvaluation(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
@@ -183,13 +211,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var formId = formId_example;  // string | Form ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an evaluation form.
+                
                 apiInstance.DeleteQualityForm(formId);
             }
             catch (Exception e)
@@ -238,13 +274,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a keywordSet by id.
+                
                 apiInstance.DeleteQualityKeywordset(keywordSetId);
             }
             catch (Exception e)
@@ -293,13 +337,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var ids = ids_example;  // string | A comma-delimited list of valid KeywordSet ids
+            
+            
+            
 
             try
             {
+                
                 // Delete keyword sets
+                
                 apiInstance.DeleteQualityKeywordsets(ids);
             }
             catch (Exception e)
@@ -348,24 +400,76 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
             var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
+            
+            
+            
+            
             var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
+            
+            
+            
+            
+            
             var agentUserId = new List<Object>(); // List<Object> | user id of agent requested (optional) 
+            
+            
+            
             var evaluatorUserId = evaluatorUserId_example;  // string | user id of the evaluator (optional) 
+            
+            
+            
+            
             var name = name_example;  // string | name (optional) 
+            
+            
+            
+            
             var group = group_example;  // string | group id (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Gets a list of Agent Activities
+                
                 AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
                 Debug.WriteLine(result);
             }
@@ -426,14 +530,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var calibrationId = calibrationId_example;  // string | Calibration ID
+            
+            
+            
+            
             var calibratorId = calibratorId_example;  // string | calibratorId
+            
+            
+            
 
             try
             {
+                
                 // Get a calibration by id.
+                
                 Calibration result = apiInstance.GetQualityCalibration(calibrationId, calibratorId);
                 Debug.WriteLine(result);
             }
@@ -484,22 +600,66 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var calibratorId = calibratorId_example;  // string | user id of calibrator
+            
+            
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
             var conversationId = conversationId_example;  // string | conversation id (optional) 
+            
+            
+            
+            
             var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
+            
+            
+            
+            
             var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of calibrations
+                
                 CalibrationEntityListing result = apiInstance.GetQualityCalibrations(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
                 Debug.WriteLine(result);
             }
@@ -558,21 +718,61 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var conversationId = conversationId_example;  // string | Conversation ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
             var recordingId = recordingId_example;  // string | id of the recording (optional) 
+            
+            
+            
+            
             var entityType = entityType_example;  // string | entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional)  (default to RECORDING)
+            
+            
+            
 
             try
             {
+                
                 // Get audits for conversation or recording
+                
                 QualityAuditPage result = apiInstance.GetQualityConversationAudits(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
                 Debug.WriteLine(result);
             }
@@ -630,15 +830,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var evaluationId = evaluationId_example;  // string | evaluationId
+            
+            
+            
+            
             var expand = expand_example;  // string | agent, evaluator, evaluationForm (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get an evaluation
+                
                 Evaluation result = apiInstance.GetQualityConversationEvaluation(conversationId, evaluationId, expand);
                 Debug.WriteLine(result);
             }
@@ -690,29 +906,101 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
             var conversationId = conversationId_example;  // string | conversationId specified (optional) 
+            
+            
+            
+            
             var agentUserId = agentUserId_example;  // string | user id of the agent (optional) 
+            
+            
+            
+            
             var evaluatorUserId = evaluatorUserId_example;  // string | evaluator user id (optional) 
+            
+            
+            
+            
             var queueId = queueId_example;  // string | queue id (optional) 
+            
+            
+            
+            
             var startTime = startTime_example;  // string | start time of the evaluation query (optional) 
+            
+            
+            
+            
             var endTime = endTime_example;  // string | end time of the evaluation query (optional) 
+            
+            
+            
+            
+            
             var evaluationState = new List<Object>(); // List<Object> | evaluation state options: Pending, InProgress, Finished (optional) 
+            
+            
+            
             var isReleased = true;  // bool? | the evaluation has been released (optional) 
+            
+            
+            
+            
             var agentHasRead = true;  // bool? | agent has the evaluation (optional) 
+            
+            
+            
+            
             var expandAnswerTotalScores = true;  // bool? | get the total scores for evaluations (optional) 
+            
+            
+            
+            
             var maximum = 56;  // int? | maximum (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Queries Evaluations and returns a paged list
+                
                 EvaluationEntityListing result = apiInstance.GetQualityEvaluationsQuery(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum);
                 Debug.WriteLine(result);
             }
@@ -778,23 +1066,71 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
             var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
+            
+            
+            
+            
             var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional) 
+            
+            
+            
+            
             var name = name_example;  // string | Evaluator name (optional) 
+            
+            
+            
+            
+            
             var permission = new List<Object>(); // List<Object> | permission strings (optional) 
+            
+            
+            
             var group = group_example;  // string | group id (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get an evaluator activity
+                
                 EvaluatorActivityEntityListing result = apiInstance.GetQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
                 Debug.WriteLine(result);
             }
@@ -854,13 +1190,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var formId = formId_example;  // string | Form ID
+            
+            
+            
 
             try
             {
+                
                 // Get an evaluation form
+                
                 EvaluationForm result = apiInstance.GetQualityForm(formId);
                 Debug.WriteLine(result);
             }
@@ -910,15 +1254,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var formId = formId_example;  // string | Form ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Gets all the revisions for a specific evaluation.
+                
                 EvaluationFormEntityListing result = apiInstance.GetQualityFormVersions(formId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -970,19 +1330,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
             var expand = expand_example;  // string | Expand (optional) 
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of evaluation forms
+                
                 EvaluationFormEntityListing result = apiInstance.GetQualityForms(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
                 Debug.WriteLine(result);
             }
@@ -1038,13 +1430,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
+            
+            
+            
 
             try
             {
+                
                 // Get a keywordSet by id.
+                
                 KeywordSet result = apiInstance.GetQualityKeywordset(keywordSetId);
                 Debug.WriteLine(result);
             }
@@ -1094,22 +1494,66 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
             var name = name_example;  // string | the keyword set name - used for filtering results in searches. (optional) 
+            
+            
+            
+            
             var queueId = queueId_example;  // string | the queue id - used for filtering results in searches. (optional) 
+            
+            
+            
+            
             var agentId = agentId_example;  // string | the agent id - used for filtering results in searches. (optional) 
+            
+            
+            
+            
             var _operator = _operator_example;  // string | If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of keyword sets
+                
                 KeywordSetEntityListing result = apiInstance.GetQualityKeywordsets(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
                 Debug.WriteLine(result);
             }
@@ -1136,7 +1580,7 @@ namespace Example
 | **name** | **string**| the keyword set name - used for filtering results in searches. | [optional]  |
 | **queueId** | **string**| the queue id - used for filtering results in searches. | [optional]  |
 | **agentId** | **string**| the agent id - used for filtering results in searches. | [optional]  |
-| **_operator** | **string**| If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. | [optional]  |
+| **_operator** | **string**| If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. | [optional] <br />**Values**: AND, OR |
 {: class="table table-striped"}
 
 ### Return type
@@ -1168,13 +1612,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var formId = formId_example;  // string | Form ID
+            
+            
+            
 
             try
             {
+                
                 // Get the published evaluation forms.
+                
                 EvaluationForm result = apiInstance.GetQualityPublishedform(formId);
                 Debug.WriteLine(result);
             }
@@ -1224,15 +1676,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the published evaluation forms.
+                
                 EvaluationFormEntityListing result = apiInstance.GetQualityPublishedforms(pageSize, pageNumber, name);
                 Debug.WriteLine(result);
             }
@@ -1284,13 +1752,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
+            
             var body = new AggregationQuery(); // AggregationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for evaluation aggregates
+                
                 AggregateQueryResponse result = apiInstance.PostAnalyticsEvaluationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1340,14 +1816,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
+            
             var body = new CalibrationCreate(); // CalibrationCreate | calibration
+            
+            
+            
             var expand = expand_example;  // string | calibratorId (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Create a calibration
+                
                 Calibration result = apiInstance.PostQualityCalibrations(body, expand);
                 Debug.WriteLine(result);
             }
@@ -1398,15 +1886,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new Evaluation(); // Evaluation | evaluation
+            
+            
+            
             var expand = expand_example;  // string | evaluatorId (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Create an evaluation
+                
                 Evaluation result = apiInstance.PostQualityConversationEvaluations(conversationId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -1458,13 +1962,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
+            
             var body = new EvaluationFormAndScoringSet(); // EvaluationFormAndScoringSet | evaluationAndScoringSet
+            
+            
 
             try
             {
+                
                 // Score evaluation
+                
                 EvaluationScoringSet result = apiInstance.PostQualityEvaluationsScoring(body);
                 Debug.WriteLine(result);
             }
@@ -1514,13 +2026,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
+            
             var body = new EvaluationForm(); // EvaluationForm | Evaluation form
+            
+            
 
             try
             {
+                
                 // Create an evaluation form.
+                
                 EvaluationForm result = apiInstance.PostQualityForms(body);
                 Debug.WriteLine(result);
             }
@@ -1570,14 +2090,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
+            
             var body = new KeywordSet(); // KeywordSet | keywordSet
+            
+            
+            
             var expand = expand_example;  // string | queueId (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Create a Keyword Set
+                
                 KeywordSet result = apiInstance.PostQualityKeywordsets(body, expand);
                 Debug.WriteLine(result);
             }
@@ -1628,13 +2160,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
+            
             var body = new EvaluationForm(); // EvaluationForm | Evaluation form
+            
+            
 
             try
             {
+                
                 // Publish an evaluation form.
+                
                 EvaluationForm result = apiInstance.PostQualityPublishedforms(body);
                 Debug.WriteLine(result);
             }
@@ -1684,13 +2224,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
+            
             var body = new KeywordSet(); // KeywordSet | Keyword Set (optional) 
+            
+            
 
             try
             {
+                
                 // Retrieve the spotability statistic
+                
                 KeywordSet result = apiInstance.PostQualitySpotability(body);
                 Debug.WriteLine(result);
             }
@@ -1740,14 +2288,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var calibrationId = calibrationId_example;  // string | Calibration ID
+            
+            
+            
+            
+            
             var body = new Calibration(); // Calibration | Calibration
+            
+            
 
             try
             {
+                
                 // Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
+                
                 Calibration result = apiInstance.PutQualityCalibration(calibrationId, body);
                 Debug.WriteLine(result);
             }
@@ -1798,16 +2358,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var evaluationId = evaluationId_example;  // string | evaluationId
+            
+            
+            
+            
+            
             var body = new Evaluation(); // Evaluation | evaluation
+            
+            
+            
             var expand = expand_example;  // string | evaluatorId (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Update an evaluation
+                
                 Evaluation result = apiInstance.PutQualityConversationEvaluation(conversationId, evaluationId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -1860,14 +2440,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var formId = formId_example;  // string | Form ID
+            
+            
+            
+            
+            
             var body = new EvaluationForm(); // EvaluationForm | Evaluation form
+            
+            
 
             try
             {
+                
                 // Update an evaluation form.
+                
                 EvaluationForm result = apiInstance.PutQualityForm(formId, body);
                 Debug.WriteLine(result);
             }
@@ -1918,14 +2510,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new QualityApi();
+            
+            
             var keywordSetId = keywordSetId_example;  // string | KeywordSet ID
+            
+            
+            
+            
+            
             var body = new KeywordSet(); // KeywordSet | keywordSet
+            
+            
 
             try
             {
+                
                 // Update a keywordSet to the specified keywordSet via PUT.
+                
                 KeywordSet result = apiInstance.PutQualityKeywordset(keywordSetId, body);
                 Debug.WriteLine(result);
             }

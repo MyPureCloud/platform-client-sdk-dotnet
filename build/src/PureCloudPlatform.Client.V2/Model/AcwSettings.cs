@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AcwSettings :  IEquatable<AcwSettings>
     {
+        
+        
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
@@ -57,22 +59,72 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MANDATORY_FORCED_TIMEOUT")]
             MandatoryForcedTimeout
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// This field controls how the UI prompts the agent for a wrapup.
         /// </summary>
         /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public WrapupPromptEnum? WrapupPrompt { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AcwSettings" /> class.
         /// </summary>
+        
+        
         /// <param name="WrapupPrompt">This field controls how the UI prompts the agent for a wrapup..</param>
+        
+        
+        
         /// <param name="TimeoutMs">The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT..</param>
+        
+        
         public AcwSettings(WrapupPromptEnum? WrapupPrompt = null, int? TimeoutMs = null)
         {
-            this.WrapupPrompt = WrapupPrompt;
-            this.TimeoutMs = TimeoutMs;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupPrompt = WrapupPrompt;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeoutMs = TimeoutMs;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.
@@ -80,6 +132,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The amount of time the agent can stay in ACW (Min: 1 sec, Max: 1 day).  Can only be used when ACW is MANDATORY_TIMEOUT or MANDATORY_FORCED_TIMEOUT.</value>
         [DataMember(Name="timeoutMs", EmitDefaultValue=false)]
         public int? TimeoutMs { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -88,8 +142,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AcwSettings {\n");
+            
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
+            
             sb.Append("  TimeoutMs: ").Append(TimeoutMs).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,10 +206,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
+                
                 if (this.TimeoutMs != null)
                     hash = hash * 59 + this.TimeoutMs.GetHashCode();
+                
                 return hash;
             }
         }

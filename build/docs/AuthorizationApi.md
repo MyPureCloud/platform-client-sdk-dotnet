@@ -51,13 +51,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var roleId = roleId_example;  // string | Role ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an organization role.
+                
                 apiInstance.DeleteAuthorizationRole(roleId);
             }
             catch (Exception e)
@@ -106,13 +114,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Removes all the roles from the user.
+                
                 apiInstance.DeleteUserRoles(userId);
             }
             catch (Exception e)
@@ -161,14 +177,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Get all permissions.
+                
                 PermissionCollectionEntityListing result = apiInstance.GetAuthorizationPermissions(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -219,12 +247,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
 
             try
             {
+                
                 // Get the list of enabled products
+                
                 OrganizationProductEntityListing result = apiInstance.GetAuthorizationProducts();
                 Debug.WriteLine(result);
             }
@@ -270,13 +302,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var roleId = roleId_example;  // string | Role ID
+            
+            
+            
 
             try
             {
+                
                 // Get a single organization role.
+                
                 DomainOrganizationRole result = apiInstance.GetAuthorizationRole(roleId);
                 Debug.WriteLine(result);
             }
@@ -326,14 +366,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var leftRoleId = leftRoleId_example;  // string | Left Role ID
+            
+            
+            
+            
             var rightRoleId = rightRoleId_example;  // string | Right Role id
+            
+            
+            
 
             try
             {
+                
                 // Get an org role to default role comparison comparison
+                
                 DomainOrgRoleDifference result = apiInstance.GetAuthorizationRoleComparedefaultRightRoleId(leftRoleId, rightRoleId);
                 Debug.WriteLine(result);
             }
@@ -384,21 +436,61 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
             var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
             var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
             var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
+            
             var permission = new List<Object>(); // List<Object> |  (optional) 
+            
+            
+            
+            
             var defaultRoleId = new List<Object>(); // List<Object> |  (optional) 
+            
+            
+            
             var userCount = true;  // bool? |  (optional)  (default to true)
+            
+            
+            
 
             try
             {
+                
                 // Retrieve a list of all roles defined for the organization
+                
                 OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, defaultRoleId, userCount);
                 Debug.WriteLine(result);
             }
@@ -456,13 +548,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Returns a listing of roles and permissions for a user.
+                
                 UserAuthorization result = apiInstance.GetUserRoles(userId);
                 Debug.WriteLine(result);
             }
@@ -512,14 +612,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var roleId = roleId_example;  // string | Role ID
+            
+            
+            
+            
+            
             var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
+            
+            
 
             try
             {
+                
                 // Patch Organization Role for needsUpdate Field
+                
                 DomainOrganizationRole result = apiInstance.PatchAuthorizationRole(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -570,15 +682,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var leftRoleId = leftRoleId_example;  // string | Left Role ID
+            
+            
+            
+            
             var rightRoleId = rightRoleId_example;  // string | Right Role id
+            
+            
+            
+            
+            
             var body = new DomainOrganizationRole(); // DomainOrganizationRole | Organization role
+            
+            
 
             try
             {
+                
                 // Get an unsaved org role to default role comparison
+                
                 DomainOrgRoleDifference result = apiInstance.PostAuthorizationRoleComparedefaultRightRoleId(leftRoleId, rightRoleId, body);
                 Debug.WriteLine(result);
             }
@@ -630,13 +758,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
+            
             var body = new DomainOrganizationRoleCreate(); // DomainOrganizationRoleCreate | Organization role
+            
+            
 
             try
             {
+                
                 // Create an organization role.
+                
                 DomainOrganizationRole result = apiInstance.PostAuthorizationRoles(body);
                 Debug.WriteLine(result);
             }
@@ -686,13 +822,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var force = true;  // bool? | Restore default roles (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Restores all default roles
+                
                 OrganizationRoleEntityListing result = apiInstance.PostAuthorizationRolesDefault(force);
                 Debug.WriteLine(result);
             }
@@ -742,14 +886,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var roleId = roleId_example;  // string | Role ID
+            
+            
+            
+            
+            
             var body = new DomainOrganizationRoleUpdate(); // DomainOrganizationRoleUpdate | Organization role
+            
+            
 
             try
             {
+                
                 // Update an organization role.
+                
                 DomainOrganizationRole result = apiInstance.PutAuthorizationRole(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -800,14 +956,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var roleId = roleId_example;  // string | Role ID
+            
+            
+            
+            
             var body = ;  // List<string> | List of user IDs
+            
+            
+            
 
             try
             {
+                
                 // Sets the users for the role
+                
                 List&lt;string&gt; result = apiInstance.PutAuthorizationRoleUsersAdd(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -858,14 +1026,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var roleId = roleId_example;  // string | Role ID
+            
+            
+            
+            
             var body = ;  // List<string> | List of user IDs
+            
+            
+            
 
             try
             {
+                
                 // Removes the users from the role
+                
                 List&lt;string&gt; result = apiInstance.PutAuthorizationRoleUsersRemove(roleId, body);
                 Debug.WriteLine(result);
             }
@@ -916,13 +1096,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
+            
             var body = new List<DomainOrganizationRole>(); // List<DomainOrganizationRole> | Organization roles list
+            
+            
 
             try
             {
+                
                 // Restore specified default roles
+                
                 OrganizationRoleEntityListing result = apiInstance.PutAuthorizationRolesDefault(body);
                 Debug.WriteLine(result);
             }
@@ -972,14 +1160,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AuthorizationApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var body = ;  // List<string> | List of roles
+            
+            
+            
 
             try
             {
+                
                 // Sets the user's roles
+                
                 UserAuthorization result = apiInstance.PutUserRoles(userId, body);
                 Debug.WriteLine(result);
             }

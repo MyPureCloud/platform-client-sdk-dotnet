@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingDataV2NotificationConversationData :  IEquatable<RecordingDataV2NotificationConversationData>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingDataV2NotificationConversationData" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
         public RecordingDataV2NotificationConversationData(string Id = null)
         {
-            this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingDataV2NotificationConversationData {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 return hash;
             }
         }

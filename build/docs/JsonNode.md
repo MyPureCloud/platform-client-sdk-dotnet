@@ -12,11 +12,11 @@ title: JsonNode
 | **_Object** | **bool?** |  | [optional] |
 | **Boolean** | **bool?** |  | [optional] |
 | **Number** | **bool?** |  | [optional] |
+| **FloatingPointNumber** | **bool?** |  | [optional] |
 | **ContainerNode** | **bool?** |  | [optional] |
 | **MissingNode** | **bool?** |  | [optional] |
 | **Pojo** | **bool?** |  | [optional] |
 | **IntegralNumber** | **bool?** |  | [optional] |
-| **FloatingPointNumber** | **bool?** |  | [optional] |
 | **_Short** | **bool?** |  | [optional] |
 | **_Int** | **bool?** |  | [optional] |
 | **_Long** | **bool?** |  | [optional] |

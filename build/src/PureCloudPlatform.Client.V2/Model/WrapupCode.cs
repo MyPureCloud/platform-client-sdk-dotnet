@@ -18,21 +18,85 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WrapupCode :  IEquatable<WrapupCode>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WrapupCode" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WrapupCode() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WrapupCode" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The wrap-up code name. (required).</param>
+        
+        
+        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="ModifiedBy">ModifiedBy.</param>
+        
+        
+        
         /// <param name="CreatedBy">CreatedBy.</param>
+        
+        
+        
+        
         public WrapupCode(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -42,11 +106,75 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -54,40 +182,60 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The wrap-up code name.
         /// </summary>
         /// <value>The wrap-up code name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,13 +244,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WrapupCode {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -187,20 +343,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

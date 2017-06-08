@@ -18,18 +18,86 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TokenInfo :  IEquatable<TokenInfo>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TokenInfo" /> class.
         /// </summary>
+        
+        
         /// <param name="Organization">The current organization.</param>
+        
+        
+        
         /// <param name="HomeOrganization">The token&#39;s home organization.</param>
+        
+        
+        
         /// <param name="OAuthClient">OAuthClient.</param>
+        
+        
         public TokenInfo(Entity Organization = null, Entity HomeOrganization = null, OrgOAuthClient OAuthClient = null)
         {
-            this.Organization = Organization;
-            this.HomeOrganization = HomeOrganization;
-            this.OAuthClient = OAuthClient;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Organization = Organization;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HomeOrganization = HomeOrganization;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OAuthClient = OAuthClient;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The current organization
@@ -37,17 +105,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The current organization</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public Entity Organization { get; set; }
+        
+        
+        
         /// <summary>
         /// The token&#39;s home organization
         /// </summary>
         /// <value>The token&#39;s home organization</value>
         [DataMember(Name="homeOrganization", EmitDefaultValue=false)]
         public Entity HomeOrganization { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets OAuthClient
         /// </summary>
         [DataMember(Name="OAuthClient", EmitDefaultValue=false)]
         public OrgOAuthClient OAuthClient { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,9 +132,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TokenInfo {\n");
+            
             sb.Append("  Organization: ").Append(Organization).Append("\n");
+            
             sb.Append("  HomeOrganization: ").Append(HomeOrganization).Append("\n");
+            
             sb.Append("  OAuthClient: ").Append(OAuthClient).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,12 +203,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
+                
                 if (this.HomeOrganization != null)
                     hash = hash * 59 + this.HomeOrganization.GetHashCode();
+                
                 if (this.OAuthClient != null)
                     hash = hash * 59 + this.OAuthClient.GetHashCode();
+                
                 return hash;
             }
         }

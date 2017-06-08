@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentAudit :  IEquatable<DocumentAudit>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
@@ -44,6 +70,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SYSTEM")]
             System
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -70,6 +103,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILURE")]
             Failure
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionContext
         /// </summary>
@@ -330,6 +367,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VERSION_CREATE")]
             VersionCreate
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
@@ -590,60 +631,337 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VERSION_CREATE")]
             VersionCreate
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public LevelEnum? Level { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionContext
         /// </summary>
         [DataMember(Name="actionContext", EmitDefaultValue=false)]
         public ActionContextEnum? ActionContext { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public ActionEnum? Action { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentAudit" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="Workspace">Workspace.</param>
+        
+        
+        
         /// <param name="TransactionId">TransactionId.</param>
+        
+        
+        
         /// <param name="TransactionInitiator">TransactionInitiator.</param>
+        
+        
+        
         /// <param name="Application">Application.</param>
+        
+        
+        
         /// <param name="ServiceName">ServiceName.</param>
+        
+        
+        
         /// <param name="Level">Level.</param>
+        
+        
+        
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="Status">Status.</param>
+        
+        
+        
         /// <param name="ActionContext">ActionContext.</param>
+        
+        
+        
         /// <param name="Action">Action.</param>
+        
+        
+        
         /// <param name="Entity">Entity.</param>
+        
+        
+        
         /// <param name="Changes">Changes.</param>
+        
+        
+        
+        
         public DocumentAudit(string Name = null, UriReference User = null, UriReference Workspace = null, string TransactionId = null, bool? TransactionInitiator = null, string Application = null, string ServiceName = null, LevelEnum? Level = null, DateTime? Timestamp = null, StatusEnum? Status = null, ActionContextEnum? ActionContext = null, ActionEnum? Action = null, AuditEntityReference Entity = null, List<AuditChange> Changes = null)
         {
-            this.Name = Name;
-            this.User = User;
-            this.Workspace = Workspace;
-            this.TransactionId = TransactionId;
-            this.TransactionInitiator = TransactionInitiator;
-            this.Application = Application;
-            this.ServiceName = ServiceName;
-            this.Level = Level;
-            this.Timestamp = Timestamp;
-            this.Status = Status;
-            this.ActionContext = ActionContext;
-            this.Action = Action;
-            this.Entity = Entity;
-            this.Changes = Changes;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Workspace = Workspace;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TransactionId = TransactionId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TransactionInitiator = TransactionInitiator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Application = Application;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ServiceName = ServiceName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Level = Level;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Timestamp = Timestamp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Status = Status;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActionContext = ActionContext;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Action = Action;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Entity = Entity;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Changes = Changes;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -651,63 +969,106 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public UriReference User { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TransactionId
         /// </summary>
         [DataMember(Name="transactionId", EmitDefaultValue=false)]
         public string TransactionId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TransactionInitiator
         /// </summary>
         [DataMember(Name="transactionInitiator", EmitDefaultValue=false)]
         public bool? TransactionInitiator { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Application
         /// </summary>
         [DataMember(Name="application", EmitDefaultValue=false)]
         public string Application { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ServiceName
         /// </summary>
         [DataMember(Name="serviceName", EmitDefaultValue=false)]
         public string ServiceName { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntityReference Entity { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Changes
         /// </summary>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<AuditChange> Changes { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -716,22 +1077,39 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentAudit {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
+            
             sb.Append("  TransactionId: ").Append(TransactionId).Append("\n");
+            
             sb.Append("  TransactionInitiator: ").Append(TransactionInitiator).Append("\n");
+            
             sb.Append("  Application: ").Append(Application).Append("\n");
+            
             sb.Append("  ServiceName: ").Append(ServiceName).Append("\n");
+            
             sb.Append("  Level: ").Append(Level).Append("\n");
+            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
+            
             sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("  ActionContext: ").Append(ActionContext).Append("\n");
+            
             sb.Append("  Action: ").Append(Action).Append("\n");
+            
             sb.Append("  Entity: ").Append(Entity).Append("\n");
+            
             sb.Append("  Changes: ").Append(Changes).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -861,38 +1239,55 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
+                
                 if (this.TransactionId != null)
                     hash = hash * 59 + this.TransactionId.GetHashCode();
+                
                 if (this.TransactionInitiator != null)
                     hash = hash * 59 + this.TransactionInitiator.GetHashCode();
+                
                 if (this.Application != null)
                     hash = hash * 59 + this.Application.GetHashCode();
+                
                 if (this.ServiceName != null)
                     hash = hash * 59 + this.ServiceName.GetHashCode();
+                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
+                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.ActionContext != null)
                     hash = hash * 59 + this.ActionContext.GetHashCode();
+                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
+                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
+                
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

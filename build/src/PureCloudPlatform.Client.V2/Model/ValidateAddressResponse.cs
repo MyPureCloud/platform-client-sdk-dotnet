@@ -18,18 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ValidateAddressResponse :  IEquatable<ValidateAddressResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ValidateAddressResponse() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="Valid">Was the passed in address valid (required).</param>
+        
+        
+        
         /// <param name="Response">Subscriber schema.</param>
+        
+        
         public ValidateAddressResponse(bool? Valid = null, SubscriberResponse Response = null)
         {
+            
+            
+            
             // to ensure "Valid" is required (not null)
             if (Valid == null)
             {
@@ -39,8 +63,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Valid = Valid;
             }
-            this.Response = Response;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Response = Response;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Was the passed in address valid
@@ -48,12 +94,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Was the passed in address valid</value>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
+        
+        
+        
         /// <summary>
         /// Subscriber schema
         /// </summary>
         /// <value>Subscriber schema</value>
         [DataMember(Name="response", EmitDefaultValue=false)]
         public SubscriberResponse Response { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -62,8 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ValidateAddressResponse {\n");
+            
             sb.Append("  Valid: ").Append(Valid).Append("\n");
+            
             sb.Append("  Response: ").Append(Response).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,10 +177,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Valid != null)
                     hash = hash * 59 + this.Valid.GetHashCode();
+                
                 if (this.Response != null)
                     hash = hash * 59 + this.Response.GetHashCode();
+                
                 return hash;
             }
         }

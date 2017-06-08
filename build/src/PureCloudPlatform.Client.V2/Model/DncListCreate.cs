@@ -18,6 +18,29 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DncListCreate :  IEquatable<DncListCreate>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
         /// </summary>
@@ -51,29 +74,109 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "gryphon")]
             Gryphon
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
         /// </summary>
         /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
         [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
         public DncSourceTypeEnum? DncSourceType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DncListCreate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DncListCreate() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DncListCreate" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The name of the list. (required).</param>
+        
+        
+        
+        
+        
+        
+        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        
+        
+        
         /// <param name="ImportStatus">the status of the import process.</param>
+        
+        
+        
+        
+        
         /// <param name="DncSourceType">the type of dnc list being created, rds (csv file), gryphon, or dnc.com.</param>
+        
+        
+        
         /// <param name="LoginId">the loginId if the dncSourceType is dnc.com.</param>
+        
+        
+        
         /// <param name="DncCodes">the list of dnc.com codes to be treated as DNC.</param>
+        
+        
+        
         /// <param name="LicenseId">the license number if the dncSourceType is gryphon.</param>
+        
+        
+        
+        
         public DncListCreate(string Name = null, int? Version = null, ImportStatus ImportStatus = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -83,13 +186,113 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
-            this.Version = Version;
-            this.ImportStatus = ImportStatus;
-            this.DncSourceType = DncSourceType;
-            this.LoginId = LoginId;
-            this.DncCodes = DncCodes;
-            this.LicenseId = LicenseId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ImportStatus = ImportStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.DncSourceType = DncSourceType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LoginId = LoginId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DncCodes = DncCodes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LicenseId = LicenseId;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -97,66 +300,100 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The name of the list.
         /// </summary>
         /// <value>The name of the list.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
+        
+        
+        
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+        
+        
+        
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// the status of the import process
         /// </summary>
         /// <value>the status of the import process</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// the number of phone numbers in the do not call list
         /// </summary>
         /// <value>the number of phone numbers in the do not call list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// the loginId if the dncSourceType is dnc.com
         /// </summary>
         /// <value>the loginId if the dncSourceType is dnc.com</value>
         [DataMember(Name="loginId", EmitDefaultValue=false)]
         public string LoginId { get; set; }
+        
+        
+        
         /// <summary>
         /// the list of dnc.com codes to be treated as DNC
         /// </summary>
         /// <value>the list of dnc.com codes to be treated as DNC</value>
         [DataMember(Name="dncCodes", EmitDefaultValue=false)]
         public List<string> DncCodes { get; set; }
+        
+        
+        
         /// <summary>
         /// the license number if the dncSourceType is gryphon
         /// </summary>
         /// <value>the license number if the dncSourceType is gryphon</value>
         [DataMember(Name="licenseId", EmitDefaultValue=false)]
         public string LicenseId { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -165,18 +402,31 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DncListCreate {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
+            
             sb.Append("  Size: ").Append(Size).Append("\n");
+            
             sb.Append("  DncSourceType: ").Append(DncSourceType).Append("\n");
+            
             sb.Append("  LoginId: ").Append(LoginId).Append("\n");
+            
             sb.Append("  DncCodes: ").Append(DncCodes).Append("\n");
+            
             sb.Append("  LicenseId: ").Append(LicenseId).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -286,30 +536,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
+                
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
+                
                 if (this.DncSourceType != null)
                     hash = hash * 59 + this.DncSourceType.GetHashCode();
+                
                 if (this.LoginId != null)
                     hash = hash * 59 + this.LoginId.GetHashCode();
+                
                 if (this.DncCodes != null)
                     hash = hash * 59 + this.DncCodes.GetHashCode();
+                
                 if (this.LicenseId != null)
                     hash = hash * 59 + this.LicenseId.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Entry :  IEquatable<Entry>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Entry" /> class.
         /// </summary>
+        
+        
         /// <param name="Value">A value included in this facet..</param>
+        
+        
+        
         /// <param name="Count">The number of results with this value..</param>
+        
+        
         public Entry(string Value = null, int? Count = null)
         {
-            this.Value = Value;
-            this.Count = Count;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Count = Count;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A value included in this facet.
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A value included in this facet.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of results with this value.
         /// </summary>
         /// <value>The number of results with this value.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Entry {\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  Count: ").Append(Count).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+                
                 return hash;
             }
         }

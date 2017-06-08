@@ -42,13 +42,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
+            
             var presenceId = presenceId_example;  // string | Organization Presence ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a Presence Definition
+                
                 apiInstance.DeletePresencedefinition(presenceId);
             }
             catch (Exception e)
@@ -97,14 +105,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
+            
             var presenceId = presenceId_example;  // string | Organization Presence ID
+            
+            
+            
+            
             var localeCode = localeCode_example;  // string | The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a Presence Definition
+                
                 OrganizationPresence result = apiInstance.GetPresencedefinition(presenceId, localeCode);
                 Debug.WriteLine(result);
             }
@@ -155,16 +175,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var deleted = deleted_example;  // string | Deleted query can be TRUE, FALSE or ALL (optional)  (default to false)
+            
+            
+            
+            
             var localeCode = localeCode_example;  // string | The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get an Organization's list of Presence Definitions
+                
                 OrganizationPresenceEntityListing result = apiInstance.GetPresencedefinitions(pageNumber, pageSize, deleted, localeCode);
                 Debug.WriteLine(result);
             }
@@ -217,12 +257,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
 
             try
             {
+                
                 // Get the list of SystemPresences
+                
                 List&lt;SystemPresence&gt; result = apiInstance.GetSystempresences();
                 Debug.WriteLine(result);
             }
@@ -268,14 +312,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
+            
             var userId = userId_example;  // string | user Id
+            
+            
+            
+            
             var sourceId = sourceId_example;  // string | Source
+            
+            
+            
 
             try
             {
+                
                 // Get a user's Presence
+                
                 UserPresence result = apiInstance.GetUserPresence(userId, sourceId);
                 Debug.WriteLine(result);
             }
@@ -326,15 +382,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
+            
             var userId = userId_example;  // string | user Id
+            
+            
+            
+            
             var sourceId = sourceId_example;  // string | Source
+            
+            
+            
+            
+            
             var body = new UserPresence(); // UserPresence | User presence
+            
+            
 
             try
             {
+                
                 // Patch a user's Presence
+                
                 UserPresence result = apiInstance.PatchUserPresence(userId, sourceId, body);
                 Debug.WriteLine(result);
             }
@@ -386,13 +458,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
+            
+            
             var body = new OrganizationPresence(); // OrganizationPresence | The Presence Definition to create
+            
+            
 
             try
             {
+                
                 // Create a Presence Definition
+                
                 OrganizationPresence result = apiInstance.PostPresencedefinitions(body);
                 Debug.WriteLine(result);
             }
@@ -442,14 +522,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new PresenceApi();
+            
+            
             var presenceId = presenceId_example;  // string | Organization Presence ID
+            
+            
+            
+            
+            
             var body = new OrganizationPresence(); // OrganizationPresence | The OrganizationPresence to update
+            
+            
 
             try
             {
+                
                 // Update a Presence Definition
+                
                 OrganizationPresence result = apiInstance.PutPresencedefinition(presenceId, body);
                 Debug.WriteLine(result);
             }

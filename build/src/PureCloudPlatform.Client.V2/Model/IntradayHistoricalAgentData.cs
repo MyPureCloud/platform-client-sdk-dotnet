@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayHistoricalAgentData :  IEquatable<IntradayHistoricalAgentData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayHistoricalAgentData" /> class.
         /// </summary>
+        
+        
         /// <param name="OnQueueTimeSeconds">The total on-queue time in seconds for all agents in this group.</param>
+        
+        
+        
         /// <param name="InteractingTimeSeconds">The total time spent interacting in seconds for all agents in this group.</param>
+        
+        
         public IntradayHistoricalAgentData(double? OnQueueTimeSeconds = null, double? InteractingTimeSeconds = null)
         {
-            this.OnQueueTimeSeconds = OnQueueTimeSeconds;
-            this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.OnQueueTimeSeconds = OnQueueTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The total on-queue time in seconds for all agents in this group
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The total on-queue time in seconds for all agents in this group</value>
         [DataMember(Name="onQueueTimeSeconds", EmitDefaultValue=false)]
         public double? OnQueueTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The total time spent interacting in seconds for all agents in this group
         /// </summary>
         /// <value>The total time spent interacting in seconds for all agents in this group</value>
         [DataMember(Name="interactingTimeSeconds", EmitDefaultValue=false)]
         public double? InteractingTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayHistoricalAgentData {\n");
+            
             sb.Append("  OnQueueTimeSeconds: ").Append(OnQueueTimeSeconds).Append("\n");
+            
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.OnQueueTimeSeconds != null)
                     hash = hash * 59 + this.OnQueueTimeSeconds.GetHashCode();
+                
                 if (this.InteractingTimeSeconds != null)
                     hash = hash * 59 + this.InteractingTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

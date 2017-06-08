@@ -18,6 +18,31 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HeartBeatRule :  IEquatable<HeartBeatRule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -50,6 +75,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
+        
+        
+        
+        
         /// <summary>
         /// The type of system the will be generating the heartbeat.
         /// </summary>
@@ -71,29 +100,92 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EDGE")]
             Edge
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The type of system the will be generating the heartbeat.
         /// </summary>
         /// <value>The type of system the will be generating the heartbeat.</value>
         [DataMember(Name="ruleType", EmitDefaultValue=false)]
         public RuleTypeEnum? RuleType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="HeartBeatRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected HeartBeatRule() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="HeartBeatRule" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name of the rule (required).</param>
+        
+        
+        
         /// <param name="SenderId">The value that identifies the sender of the heartbeat. (required).</param>
+        
+        
+        
         /// <param name="HeartBeatTimeoutInMinutes">The number of minutes to wait before alerting missing heartbeats. (required).</param>
+        
+        
+        
         /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
+        
+        
+        
+        
+        
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
+        
+        
+        
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
+        
+        
+        
         /// <param name="RuleType">The type of system the will be generating the heartbeat. (required).</param>
+        
+        
+        
+        
         public HeartBeatRule(string Name = null, string SenderId = null, int? HeartBeatTimeoutInMinutes = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, RuleTypeEnum? RuleType = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -103,6 +195,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "SenderId" is required (not null)
             if (SenderId == null)
             {
@@ -112,6 +209,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.SenderId = SenderId;
             }
+            
+            
+            
+            
+            
             // to ensure "HeartBeatTimeoutInMinutes" is required (not null)
             if (HeartBeatTimeoutInMinutes == null)
             {
@@ -121,6 +223,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.HeartBeatTimeoutInMinutes = HeartBeatTimeoutInMinutes;
             }
+            
+            
+            
+            
+            
             // to ensure "Enabled" is required (not null)
             if (Enabled == null)
             {
@@ -130,6 +237,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Enabled = Enabled;
             }
+            
+            
+            
+            
+            
+            
+            
             // to ensure "NotificationUsers" is required (not null)
             if (NotificationUsers == null)
             {
@@ -139,6 +253,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.NotificationUsers = NotificationUsers;
             }
+            
+            
+            
+            
+            
             // to ensure "AlertTypes" is required (not null)
             if (AlertTypes == null)
             {
@@ -148,6 +267,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.AlertTypes = AlertTypes;
             }
+            
+            
+            
+            
+            
             // to ensure "RuleType" is required (not null)
             if (RuleType == null)
             {
@@ -157,7 +281,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.RuleType = RuleType;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -165,54 +331,82 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Name of the rule
         /// </summary>
         /// <value>Name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The value that identifies the sender of the heartbeat.
         /// </summary>
         /// <value>The value that identifies the sender of the heartbeat.</value>
         [DataMember(Name="senderId", EmitDefaultValue=false)]
         public string SenderId { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of minutes to wait before alerting missing heartbeats.
         /// </summary>
         /// <value>The number of minutes to wait before alerting missing heartbeats.</value>
         [DataMember(Name="heartBeatTimeoutInMinutes", EmitDefaultValue=false)]
         public int? HeartBeatTimeoutInMinutes { get; set; }
+        
+        
+        
         /// <summary>
         /// Indicates if the rule is enabled.
         /// </summary>
         /// <value>Indicates if the rule is enabled.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
         /// <summary>
         /// Indicates if the rule is in alarm state.
         /// </summary>
         /// <value>Indicates if the rule is in alarm state.</value>
         [DataMember(Name="inAlarm", EmitDefaultValue=false)]
         public bool? InAlarm { get; private set; }
+        
+        
+        
         /// <summary>
         /// The ids of users who will be notified of alarm state change.
         /// </summary>
         /// <value>The ids of users who will be notified of alarm state change.</value>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
+        
+        
+        
         /// <summary>
         /// A collection of notification methods.
         /// </summary>
         /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -221,16 +415,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HeartBeatRule {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  SenderId: ").Append(SenderId).Append("\n");
+            
             sb.Append("  HeartBeatTimeoutInMinutes: ").Append(HeartBeatTimeoutInMinutes).Append("\n");
+            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
+            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
+            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
+            
             sb.Append("  RuleType: ").Append(RuleType).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -330,26 +535,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.SenderId != null)
                     hash = hash * 59 + this.SenderId.GetHashCode();
+                
                 if (this.HeartBeatTimeoutInMinutes != null)
                     hash = hash * 59 + this.HeartBeatTimeoutInMinutes.GetHashCode();
+                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
                 if (this.InAlarm != null)
                     hash = hash * 59 + this.InAlarm.GetHashCode();
+                
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
+                
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
+                
                 if (this.RuleType != null)
                     hash = hash * 59 + this.RuleType.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

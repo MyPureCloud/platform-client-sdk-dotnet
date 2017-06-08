@@ -18,12 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallRecord :  IEquatable<CallRecord>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallRecord" /> class.
         /// </summary>
+        
+        
+        
+        
+        
         public CallRecord()
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Timestamp of the last attempt to reach this number. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -31,12 +61,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Timestamp of the last attempt to reach this number. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="lastAttempt", EmitDefaultValue=false)]
         public DateTime? LastAttempt { get; private set; }
+        
+        
+        
         /// <summary>
         /// Result of the last attempt to reach this number
         /// </summary>
         /// <value>Result of the last attempt to reach this number</value>
         [DataMember(Name="lastResult", EmitDefaultValue=false)]
         public string LastResult { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,8 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallRecord {\n");
+            
             sb.Append("  LastAttempt: ").Append(LastAttempt).Append("\n");
+            
             sb.Append("  LastResult: ").Append(LastResult).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,10 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.LastAttempt != null)
                     hash = hash * 59 + this.LastAttempt.GetHashCode();
+                
                 if (this.LastResult != null)
                     hash = hash * 59 + this.LastResult.GetHashCode();
+                
                 return hash;
             }
         }

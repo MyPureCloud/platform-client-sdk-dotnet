@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FieldConfig :  IEquatable<FieldConfig>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
@@ -56,29 +64,173 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "externalContact")]
             Externalcontact
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public EntityTypeEnum? EntityType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldConfig" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="EntityType">EntityType.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="Sections">Sections.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="SchemaVersion">SchemaVersion.</param>
+        
+        
+        
+        
         public FieldConfig(string Name = null, EntityTypeEnum? EntityType = null, string State = null, List<Section> Sections = null, string Version = null, string SchemaVersion = null)
         {
-            this.Name = Name;
-            this.EntityType = EntityType;
-            this.State = State;
-            this.Sections = Sections;
-            this.Version = Version;
-            this.SchemaVersion = SchemaVersion;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EntityType = EntityType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Sections = Sections;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SchemaVersion = SchemaVersion;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -86,37 +238,59 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Sections
         /// </summary>
         [DataMember(Name="sections", EmitDefaultValue=false)]
         public List<Section> Sections { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SchemaVersion
         /// </summary>
         [DataMember(Name="schemaVersion", EmitDefaultValue=false)]
         public string SchemaVersion { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -125,14 +299,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FieldConfig {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Sections: ").Append(Sections).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  SchemaVersion: ").Append(SchemaVersion).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,22 +405,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Sections != null)
                     hash = hash * 59 + this.Sections.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.SchemaVersion != null)
                     hash = hash * 59 + this.SchemaVersion.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

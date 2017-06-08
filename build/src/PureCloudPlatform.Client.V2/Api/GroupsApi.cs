@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IGroupsApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Delete group
         /// </summary>
@@ -35,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteGroupWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Remove members
         /// </summary>
@@ -58,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>ApiResponse of Empty</returns>
         ApiResponse<Empty> DeleteGroupMembersWithHttpInfo (string groupId, string ids);
+        
         /// <summary>
         /// Fetch field config for an entity type
         /// </summary>
@@ -79,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>ApiResponse of FieldConfig</returns>
         ApiResponse<FieldConfig> GetFieldconfigWithHttpInfo (string type);
+        
         /// <summary>
         /// Get group
         /// </summary>
@@ -100,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of Group</returns>
         ApiResponse<Group> GetGroupWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Get group members
         /// </summary>
@@ -129,6 +135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         ApiResponse<UserEntityListing> GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
+        
         /// <summary>
         /// Get a group list
         /// </summary>
@@ -154,6 +161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>ApiResponse of GroupEntityListing</returns>
         ApiResponse<GroupEntityListing> GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        
         /// <summary>
         /// Search groups using the q64 value returned from a previous search
         /// </summary>
@@ -177,6 +185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         ApiResponse<GroupsSearchResponse> GetGroupsSearchWithHttpInfo (string q64, List<string> expand = null);
+        
         /// <summary>
         /// Add members
         /// </summary>
@@ -200,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Add members</param>
         /// <returns>ApiResponse of Empty</returns>
         ApiResponse<Empty> PostGroupMembersWithHttpInfo (string groupId, GroupMembersUpdate body);
+        
         /// <summary>
         /// Create a group
         /// </summary>
@@ -221,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group</param>
         /// <returns>ApiResponse of Group</returns>
         ApiResponse<Group> PostGroupsWithHttpInfo (Group body);
+        
         /// <summary>
         /// Search groups
         /// </summary>
@@ -242,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         ApiResponse<GroupsSearchResponse> PostGroupsSearchWithHttpInfo (GroupSearchRequest body);
+        
         /// <summary>
         /// Update group
         /// </summary>
@@ -265,8 +277,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>ApiResponse of Group</returns>
         ApiResponse<Group> PutGroupWithHttpInfo (string groupId, GroupUpdate body = null);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Delete group
         /// </summary>
@@ -288,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupAsyncWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Remove members
         /// </summary>
@@ -311,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ids">Comma separated list of userIds to remove</param>
         /// <returns>Task of ApiResponse (Empty)</returns>
         System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids);
+        
         /// <summary>
         /// Fetch field config for an entity type
         /// </summary>
@@ -332,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">Field type</param>
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
         System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type);
+        
         /// <summary>
         /// Get group
         /// </summary>
@@ -353,6 +371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Get group members
         /// </summary>
@@ -382,6 +401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
+        
         /// <summary>
         /// Get a group list
         /// </summary>
@@ -407,6 +427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        
         /// <summary>
         /// Search groups using the q64 value returned from a previous search
         /// </summary>
@@ -430,6 +451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetGroupsSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
+        
         /// <summary>
         /// Add members
         /// </summary>
@@ -453,6 +475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Add members</param>
         /// <returns>Task of ApiResponse (Empty)</returns>
         System.Threading.Tasks.Task<ApiResponse<Empty>> PostGroupMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body);
+        
         /// <summary>
         /// Create a group
         /// </summary>
@@ -474,6 +497,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group</param>
         /// <returns>Task of ApiResponse (Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body);
+        
         /// <summary>
         /// Search groups
         /// </summary>
@@ -495,6 +519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostGroupsSearchAsyncWithHttpInfo (GroupSearchRequest body);
+        
         /// <summary>
         /// Update group
         /// </summary>
@@ -518,7 +543,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Group (optional)</param>
         /// <returns>Task of ApiResponse (Group)</returns>
         System.Threading.Tasks.Task<ApiResponse<Group>> PutGroupAsyncWithHttpInfo (string groupId, GroupUpdate body = null);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -608,6 +635,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Delete group 
         /// </summary>
@@ -627,9 +655,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteGroupWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroup");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -641,13 +673,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -656,14 +692,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -685,6 +732,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Delete group 
         /// </summary>
@@ -705,9 +753,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteGroupAsyncWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroup");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -719,13 +771,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -734,14 +790,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -763,6 +831,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Remove members 
         /// </summary>
@@ -785,12 +855,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Empty</returns>
         public ApiResponse< Empty > DeleteGroupMembersWithHttpInfo (string groupId, string ids)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupMembers");
+            
+            
+            
             // verify the required parameter 'ids' is set
             if (ids == null)
                 throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupMembers");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -802,13 +879,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -817,15 +898,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -847,6 +940,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Remove members 
         /// </summary>
@@ -870,12 +964,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Empty)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Empty>> DeleteGroupMembersAsyncWithHttpInfo (string groupId, string ids)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupMembers");
+            
+            
+            
             // verify the required parameter 'ids' is set
             if (ids == null)
                 throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupMembers");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -887,13 +988,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -902,15 +1007,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -932,6 +1050,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Fetch field config for an entity type 
         /// </summary>
@@ -952,9 +1072,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of FieldConfig</returns>
         public ApiResponse< FieldConfig > GetFieldconfigWithHttpInfo (string type)
         {
+            
+            
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling GroupsApi->GetFieldconfig");
+            
+            
 
             var localVarPath = "/api/v2/fieldconfig";
             var localVarPathParams = new Dictionary<String, String>();
@@ -966,13 +1090,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -981,14 +1109,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1010,6 +1149,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Fetch field config for an entity type 
         /// </summary>
@@ -1031,9 +1171,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (FieldConfig)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FieldConfig>> GetFieldconfigAsyncWithHttpInfo (string type)
         {
+            
+            
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling GroupsApi->GetFieldconfig");
+            
+            
 
             var localVarPath = "/api/v2/fieldconfig";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1045,13 +1189,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1060,14 +1208,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1089,6 +1249,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get group 
         /// </summary>
@@ -1109,9 +1271,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Group</returns>
         public ApiResponse< Group > GetGroupWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroup");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1123,13 +1289,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1138,14 +1308,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1167,6 +1348,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get group 
         /// </summary>
@@ -1188,9 +1370,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Group>> GetGroupAsyncWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroup");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1202,13 +1388,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1217,14 +1407,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1246,6 +1448,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get group members 
         /// </summary>
@@ -1274,9 +1478,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UserEntityListing</returns>
         public ApiResponse< UserEntityListing > GetGroupMembersWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupMembers");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1288,13 +1504,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1303,18 +1523,33 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1336,6 +1571,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get group members 
         /// </summary>
@@ -1365,9 +1601,21 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupMembersAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupMembers");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1379,13 +1627,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1394,18 +1646,34 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1427,6 +1695,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a group list 
         /// </summary>
@@ -1451,6 +1721,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GroupEntityListing</returns>
         public ApiResponse< GroupEntityListing > GetGroupsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1462,13 +1739,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1477,16 +1758,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1508,6 +1802,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a group list 
         /// </summary>
@@ -1533,6 +1828,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GroupEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1544,13 +1846,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1559,16 +1865,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1590,6 +1910,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Search groups using the q64 value returned from a previous search 
         /// </summary>
@@ -1612,9 +1934,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         public ApiResponse< GroupsSearchResponse > GetGroupsSearchWithHttpInfo (string q64, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling GroupsApi->GetGroupsSearch");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1626,13 +1954,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1641,15 +1973,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1671,6 +2015,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Search groups using the q64 value returned from a previous search 
         /// </summary>
@@ -1694,9 +2039,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> GetGroupsSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling GroupsApi->GetGroupsSearch");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1708,13 +2059,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1723,15 +2078,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1753,6 +2121,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Add members 
         /// </summary>
@@ -1775,12 +2145,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Empty</returns>
         public ApiResponse< Empty > PostGroupMembersWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupMembers");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupMembers");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1792,13 +2169,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1807,7 +2188,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1816,13 +2203,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1844,6 +2237,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Add members 
         /// </summary>
@@ -1867,12 +2261,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Empty)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Empty>> PostGroupMembersAsyncWithHttpInfo (string groupId, GroupMembersUpdate body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PostGroupMembers");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupMembers");
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}/members";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1884,13 +2285,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1899,7 +2304,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1908,13 +2319,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1936,6 +2354,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Create a group 
         /// </summary>
@@ -1956,9 +2376,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Group</returns>
         public ApiResponse< Group > PostGroupsWithHttpInfo (Group body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroups");
+            
+            
 
             var localVarPath = "/api/v2/groups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1970,13 +2394,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1985,6 +2413,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1993,13 +2426,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2021,6 +2460,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Create a group 
         /// </summary>
@@ -2042,9 +2482,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroups");
+            
+            
 
             var localVarPath = "/api/v2/groups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2056,13 +2500,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2071,6 +2519,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2079,13 +2532,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2107,6 +2567,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Search groups 
         /// </summary>
@@ -2127,9 +2589,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GroupsSearchResponse</returns>
         public ApiResponse< GroupsSearchResponse > PostGroupsSearchWithHttpInfo (GroupSearchRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsSearch");
+            
+            
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2141,13 +2607,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2156,6 +2626,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2164,13 +2639,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2192,6 +2673,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Search groups 
         /// </summary>
@@ -2213,9 +2695,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GroupsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GroupsSearchResponse>> PostGroupsSearchAsyncWithHttpInfo (GroupSearchRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsSearch");
+            
+            
 
             var localVarPath = "/api/v2/groups/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2227,13 +2713,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2242,6 +2732,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2250,13 +2745,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2278,6 +2780,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update group 
         /// </summary>
@@ -2300,9 +2804,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Group</returns>
         public ApiResponse< Group > PutGroupWithHttpInfo (string groupId, GroupUpdate body = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroup");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2314,13 +2824,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2329,7 +2843,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2338,13 +2858,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2366,6 +2892,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update group 
         /// </summary>
@@ -2389,9 +2916,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Group)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Group>> PutGroupAsyncWithHttpInfo (string groupId, GroupUpdate body = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroup");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/groups/{groupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2403,13 +2936,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2418,7 +2955,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -2427,13 +2970,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2455,5 +3005,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

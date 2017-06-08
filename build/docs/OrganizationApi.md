@@ -38,13 +38,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OrganizationApi();
+            
+            
             var type = type_example;  // string | Field type
+            
+            
+            
 
             try
             {
+                
                 // Fetch field config for an entity type
+                
                 FieldConfig result = apiInstance.GetFieldconfig(type);
                 Debug.WriteLine(result);
             }
@@ -62,7 +70,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **type** | **string**| Field type |  |
+| **type** | **string**| Field type | <br />**Values**: person, group, org, externalContact |
 {: class="table table-striped"}
 
 ### Return type
@@ -94,12 +102,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OrganizationApi();
+            
 
             try
             {
+                
                 // Get organization.
+                
                 Organization result = apiInstance.GetOrganizationsMe();
                 Debug.WriteLine(result);
             }
@@ -145,14 +157,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OrganizationApi();
+            
+            
             var featureName = featureName_example;  // string | Organization feature
+            
+            
+            
+            
+            
             var enabled = new FeatureState(); // FeatureState | New state of feature
+            
+            
 
             try
             {
+                
                 // Update organization
+                
                 OrganizationFeatures result = apiInstance.PatchOrganizationsFeature(featureName, enabled);
                 Debug.WriteLine(result);
             }
@@ -170,7 +194,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **featureName** | **string**| Organization feature |  |
+| **featureName** | **string**| Organization feature | <br />**Values**: realtimeCIC, purecloud, hipaa, ucEnabled, pci, purecloudVoice, xmppFederation, chat, informalPhotos, directory, contactCenter, unifiedCommunications, custserv |
 | **enabled** | [**FeatureState**](FeatureState.html)| New state of feature |  |
 {: class="table table-striped"}
 
@@ -203,13 +227,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OrganizationApi();
+            
+            
+            
             var body = new Organization(); // Organization | Organization (optional) 
+            
+            
 
             try
             {
+                
                 // Update organization.
+                
                 Organization result = apiInstance.PutOrganizationsMe(body);
                 Debug.WriteLine(result);
             }

@@ -18,19 +18,59 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignTimeSlot :  IEquatable<CampaignTimeSlot>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignTimeSlot" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CampaignTimeSlot() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignTimeSlot" /> class.
         /// </summary>
+        
+        
         /// <param name="StartTime">interval start time as an ISO-8601 string. For example: HH:mm:ss.</param>
+        
+        
+        
         /// <param name="StopTime">interval stop time as an ISO-8601 string. For example: HH:mm:ss.</param>
+        
+        
+        
         /// <param name="Day">must be within [1-7], representing Monday through Sunday (required).</param>
+        
+        
         public CampaignTimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Day" is required (not null)
             if (Day == null)
             {
@@ -40,9 +80,35 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Day = Day;
             }
-            this.StartTime = StartTime;
-            this.StopTime = StopTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartTime = StartTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StopTime = StopTime;
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// interval start time as an ISO-8601 string. For example: HH:mm:ss
@@ -50,18 +116,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>interval start time as an ISO-8601 string. For example: HH:mm:ss</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
+        
+        
+        
         /// <summary>
         /// interval stop time as an ISO-8601 string. For example: HH:mm:ss
         /// </summary>
         /// <value>interval stop time as an ISO-8601 string. For example: HH:mm:ss</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
+        
+        
+        
         /// <summary>
         /// must be within [1-7], representing Monday through Sunday
         /// </summary>
         /// <value>must be within [1-7], representing Monday through Sunday</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,9 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignTimeSlot {\n");
+            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
+            
             sb.Append("  Day: ").Append(Day).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,12 +215,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+                
                 if (this.StopTime != null)
                     hash = hash * 59 + this.StopTime.GetHashCode();
+                
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
+                
                 return hash;
             }
         }

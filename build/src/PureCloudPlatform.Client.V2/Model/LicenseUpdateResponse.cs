@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LicenseUpdateResponse :  IEquatable<LicenseUpdateResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseUpdateResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="Statuses">Statuses.</param>
+        
+        
         public LicenseUpdateResponse(List<LicenseUpdateStatus> Statuses = null)
         {
-            this.Statuses = Statuses;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Statuses = Statuses;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Statuses
         /// </summary>
         [DataMember(Name="statuses", EmitDefaultValue=false)]
         public List<LicenseUpdateStatus> Statuses { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LicenseUpdateResponse {\n");
+            
             sb.Append("  Statuses: ").Append(Statuses).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Statuses != null)
                     hash = hash * 59 + this.Statuses.GetHashCode();
+                
                 return hash;
             }
         }

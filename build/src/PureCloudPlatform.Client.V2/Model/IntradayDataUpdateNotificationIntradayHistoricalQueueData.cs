@@ -18,69 +18,260 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayDataUpdateNotificationIntradayHistoricalQueueData :  IEquatable<IntradayDataUpdateNotificationIntradayHistoricalQueueData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationIntradayHistoricalQueueData" /> class.
         /// </summary>
+        
+        
         /// <param name="Offered">Offered.</param>
+        
+        
+        
         /// <param name="Completed">Completed.</param>
+        
+        
+        
         /// <param name="Answered">Answered.</param>
+        
+        
+        
         /// <param name="Abandoned">Abandoned.</param>
+        
+        
+        
         /// <param name="AverageTalkTimeSeconds">AverageTalkTimeSeconds.</param>
+        
+        
+        
         /// <param name="AverageAfterCallWorkSeconds">AverageAfterCallWorkSeconds.</param>
+        
+        
+        
         /// <param name="ServiceLevelPercent">ServiceLevelPercent.</param>
+        
+        
+        
         /// <param name="AverageSpeedOfAnswerSeconds">AverageSpeedOfAnswerSeconds.</param>
+        
+        
         public IntradayDataUpdateNotificationIntradayHistoricalQueueData(int? Offered = null, int? Completed = null, int? Answered = null, int? Abandoned = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null, double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null)
         {
-            this.Offered = Offered;
-            this.Completed = Completed;
-            this.Answered = Answered;
-            this.Abandoned = Abandoned;
-            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
-            this.ServiceLevelPercent = ServiceLevelPercent;
-            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Offered = Offered;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Completed = Completed;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Answered = Answered;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Abandoned = Abandoned;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ServiceLevelPercent = ServiceLevelPercent;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Offered
         /// </summary>
         [DataMember(Name="offered", EmitDefaultValue=false)]
         public int? Offered { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Completed
         /// </summary>
         [DataMember(Name="completed", EmitDefaultValue=false)]
         public int? Completed { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Answered
         /// </summary>
         [DataMember(Name="answered", EmitDefaultValue=false)]
         public int? Answered { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Abandoned
         /// </summary>
         [DataMember(Name="abandoned", EmitDefaultValue=false)]
         public int? Abandoned { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AverageTalkTimeSeconds
         /// </summary>
         [DataMember(Name="averageTalkTimeSeconds", EmitDefaultValue=false)]
         public double? AverageTalkTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AverageAfterCallWorkSeconds
         /// </summary>
         [DataMember(Name="averageAfterCallWorkSeconds", EmitDefaultValue=false)]
         public double? AverageAfterCallWorkSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ServiceLevelPercent
         /// </summary>
         [DataMember(Name="serviceLevelPercent", EmitDefaultValue=false)]
         public double? ServiceLevelPercent { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AverageSpeedOfAnswerSeconds
         /// </summary>
         [DataMember(Name="averageSpeedOfAnswerSeconds", EmitDefaultValue=false)]
         public double? AverageSpeedOfAnswerSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -89,14 +280,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayDataUpdateNotificationIntradayHistoricalQueueData {\n");
+            
             sb.Append("  Offered: ").Append(Offered).Append("\n");
+            
             sb.Append("  Completed: ").Append(Completed).Append("\n");
+            
             sb.Append("  Answered: ").Append(Answered).Append("\n");
+            
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
+            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
+            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
+            
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
+            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,22 +386,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Offered != null)
                     hash = hash * 59 + this.Offered.GetHashCode();
+                
                 if (this.Completed != null)
                     hash = hash * 59 + this.Completed.GetHashCode();
+                
                 if (this.Answered != null)
                     hash = hash * 59 + this.Answered.GetHashCode();
+                
                 if (this.Abandoned != null)
                     hash = hash * 59 + this.Abandoned.GetHashCode();
+                
                 if (this.AverageTalkTimeSeconds != null)
                     hash = hash * 59 + this.AverageTalkTimeSeconds.GetHashCode();
+                
                 if (this.AverageAfterCallWorkSeconds != null)
                     hash = hash * 59 + this.AverageAfterCallWorkSeconds.GetHashCode();
+                
                 if (this.ServiceLevelPercent != null)
                     hash = hash * 59 + this.ServiceLevelPercent.GetHashCode();
+                
                 if (this.AverageSpeedOfAnswerSeconds != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswerSeconds.GetHashCode();
+                
                 return hash;
             }
         }

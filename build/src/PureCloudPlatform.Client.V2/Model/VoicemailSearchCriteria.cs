@@ -18,6 +18,23 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailSearchCriteria :  IEquatable<VoicemailSearchCriteria>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// How to apply this search criteria against other criteria
         /// </summary>
@@ -51,6 +68,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NOT")]
             Not
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Search Type
         /// </summary>
@@ -114,36 +138,116 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "MATCH_ALL")]
             MatchAll
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// How to apply this search criteria against other criteria
         /// </summary>
         /// <value>How to apply this search criteria against other criteria</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Search Type
         /// </summary>
         /// <value>Search Type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailSearchCriteria" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected VoicemailSearchCriteria() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailSearchCriteria" /> class.
         /// </summary>
+        
+        
         /// <param name="EndValue">The end value of the range. This field is used for range search types..</param>
+        
+        
+        
         /// <param name="Values">A list of values for the search to match against.</param>
+        
+        
+        
         /// <param name="StartValue">The start value of the range. This field is used for range search types..</param>
+        
+        
+        
         /// <param name="Fields">Field names to search against.</param>
+        
+        
+        
         /// <param name="Value">A value for the search to match against.</param>
+        
+        
+        
         /// <param name="_Operator">How to apply this search criteria against other criteria.</param>
+        
+        
+        
         /// <param name="Group">Groups multiple conditions.</param>
+        
+        
+        
         /// <param name="Type">Search Type (required).</param>
+        
+        
         public VoicemailSearchCriteria(string EndValue = null, List<string> Values = null, string StartValue = null, List<string> Fields = null, string Value = null, OperatorEnum? _Operator = null, List<VoicemailSearchCriteria> Group = null, TypeEnum? Type = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -153,14 +257,80 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
-            this.EndValue = EndValue;
-            this.Values = Values;
-            this.StartValue = StartValue;
-            this.Fields = Fields;
-            this.Value = Value;
-            this._Operator = _Operator;
-            this.Group = Group;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndValue = EndValue;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Values = Values;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartValue = StartValue;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Fields = Fields;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Group = Group;
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The end value of the range. This field is used for range search types.
@@ -168,36 +338,57 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The end value of the range. This field is used for range search types.</value>
         [DataMember(Name="endValue", EmitDefaultValue=false)]
         public string EndValue { get; set; }
+        
+        
+        
         /// <summary>
         /// A list of values for the search to match against
         /// </summary>
         /// <value>A list of values for the search to match against</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
+        
+        
+        
         /// <summary>
         /// The start value of the range. This field is used for range search types.
         /// </summary>
         /// <value>The start value of the range. This field is used for range search types.</value>
         [DataMember(Name="startValue", EmitDefaultValue=false)]
         public string StartValue { get; set; }
+        
+        
+        
         /// <summary>
         /// Field names to search against
         /// </summary>
         /// <value>Field names to search against</value>
         [DataMember(Name="fields", EmitDefaultValue=false)]
         public List<string> Fields { get; set; }
+        
+        
+        
         /// <summary>
         /// A value for the search to match against
         /// </summary>
         /// <value>A value for the search to match against</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Groups multiple conditions
         /// </summary>
         /// <value>Groups multiple conditions</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public List<VoicemailSearchCriteria> Group { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,14 +397,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailSearchCriteria {\n");
+            
             sb.Append("  EndValue: ").Append(EndValue).Append("\n");
+            
             sb.Append("  Values: ").Append(Values).Append("\n");
+            
             sb.Append("  StartValue: ").Append(StartValue).Append("\n");
+            
             sb.Append("  Fields: ").Append(Fields).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Group: ").Append(Group).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -303,22 +503,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.EndValue != null)
                     hash = hash * 59 + this.EndValue.GetHashCode();
+                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
+                
                 if (this.StartValue != null)
                     hash = hash * 59 + this.StartValue.GetHashCode();
+                
                 if (this.Fields != null)
                     hash = hash * 59 + this.Fields.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 return hash;
             }
         }

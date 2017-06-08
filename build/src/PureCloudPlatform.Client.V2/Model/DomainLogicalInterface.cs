@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainLogicalInterface :  IEquatable<DomainLogicalInterface>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -50,6 +76,37 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The type of this network interface.
         /// </summary>
@@ -77,6 +134,22 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SYSTEM")]
             System
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CurrentState
         /// </summary>
@@ -127,62 +200,266 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DELETING")]
             Deleting
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The type of this network interface.
         /// </summary>
         /// <value>The type of this network interface.</value>
         [DataMember(Name="interfaceType", EmitDefaultValue=false)]
         public InterfaceTypeEnum? InterfaceType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CurrentState
         /// </summary>
         [DataMember(Name="currentState", EmitDefaultValue=false)]
         public CurrentStateEnum? CurrentState { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DomainLogicalInterface() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainLogicalInterface" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The name of the entity. (required).</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="ModifiedBy">ModifiedBy.</param>
+        
+        
+        
         /// <param name="CreatedBy">CreatedBy.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        
+        
+        
         /// <param name="CreatedByApp">CreatedByApp.</param>
+        
+        
+        
         /// <param name="EdgeUri">EdgeUri.</param>
+        
+        
+        
         /// <param name="EdgeAssignedId">EdgeAssignedId.</param>
+        
+        
+        
         /// <param name="FriendlyName">Friendly Name (required).</param>
+        
+        
+        
         /// <param name="VlanTagId">VlanTagId.</param>
+        
+        
+        
         /// <param name="HardwareAddress">Hardware Address (required).</param>
+        
+        
+        
         /// <param name="PhysicalAdapterId">Physical Adapter Id (required).</param>
+        
+        
+        
         /// <param name="IfStatus">IfStatus.</param>
+        
+        
+        
+        
+        
         /// <param name="Routes">The list of routes assigned to this interface..</param>
+        
+        
+        
         /// <param name="Addresses">The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list..</param>
+        
+        
+        
         /// <param name="Ipv4Capabilities">IPv4 interface settings..</param>
+        
+        
+        
         /// <param name="Ipv6Capabilities">IPv6 interface settings..</param>
+        
+        
+        
         /// <param name="CurrentState">CurrentState.</param>
+        
+        
+        
         /// <param name="LastModifiedUserId">LastModifiedUserId.</param>
+        
+        
+        
         /// <param name="LastModifiedCorrelationId">LastModifiedCorrelationId.</param>
+        
+        
+        
         /// <param name="CommandResponses">CommandResponses.</param>
+        
+        
+        
         /// <param name="InheritPhoneTrunkBasesIPv4">The IPv4 phone trunk base assignment will be inherited from the Edge Group..</param>
+        
+        
+        
         /// <param name="InheritPhoneTrunkBasesIPv6">The IPv6 phone trunk base assignment will be inherited from the Edge Group..</param>
+        
+        
+        
         /// <param name="UseForInternalEdgeCommunication">This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group..</param>
+        
+        
+        
         /// <param name="ExternalTrunkBaseAssignments">External trunk base settings to use for external communication from this interface..</param>
+        
+        
+        
         /// <param name="PhoneTrunkBaseAssignments">Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true..</param>
+        
+        
+        
+        
         public DomainLogicalInterface(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, string EdgeUri = null, string EdgeAssignedId = null, string FriendlyName = null, int? VlanTagId = null, string HardwareAddress = null, string PhysicalAdapterId = null, string IfStatus = null, List<DomainNetworkRoute> Routes = null, List<DomainNetworkAddress> Addresses = null, DomainCapabilities Ipv4Capabilities = null, DomainCapabilities Ipv6Capabilities = null, CurrentStateEnum? CurrentState = null, string LastModifiedUserId = null, string LastModifiedCorrelationId = null, List<DomainNetworkCommandResponse> CommandResponses = null, bool? InheritPhoneTrunkBasesIPv4 = null, bool? InheritPhoneTrunkBasesIPv6 = null, bool? UseForInternalEdgeCommunication = null, List<TrunkBaseAssignment> ExternalTrunkBaseAssignments = null, List<TrunkBaseAssignment> PhoneTrunkBaseAssignments = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -192,6 +469,55 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "FriendlyName" is required (not null)
             if (FriendlyName == null)
             {
@@ -201,6 +527,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.FriendlyName = FriendlyName;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "HardwareAddress" is required (not null)
             if (HardwareAddress == null)
             {
@@ -210,6 +545,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.HardwareAddress = HardwareAddress;
             }
+            
+            
+            
+            
+            
             // to ensure "PhysicalAdapterId" is required (not null)
             if (PhysicalAdapterId == null)
             {
@@ -219,33 +559,329 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.PhysicalAdapterId = PhysicalAdapterId;
             }
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.EdgeUri = EdgeUri;
-            this.EdgeAssignedId = EdgeAssignedId;
-            this.VlanTagId = VlanTagId;
-            this.IfStatus = IfStatus;
-            this.Routes = Routes;
-            this.Addresses = Addresses;
-            this.Ipv4Capabilities = Ipv4Capabilities;
-            this.Ipv6Capabilities = Ipv6Capabilities;
-            this.CurrentState = CurrentState;
-            this.LastModifiedUserId = LastModifiedUserId;
-            this.LastModifiedCorrelationId = LastModifiedCorrelationId;
-            this.CommandResponses = CommandResponses;
-            this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
-            this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
-            this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
-            this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
-            this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedByApp = ModifiedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedByApp = CreatedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EdgeUri = EdgeUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EdgeAssignedId = EdgeAssignedId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.VlanTagId = VlanTagId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.IfStatus = IfStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Routes = Routes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Addresses = Addresses;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Ipv4Capabilities = Ipv4Capabilities;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Ipv6Capabilities = Ipv6Capabilities;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CurrentState = CurrentState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LastModifiedUserId = LastModifiedUserId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LastModifiedCorrelationId = LastModifiedCorrelationId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CommandResponses = CommandResponses;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InheritPhoneTrunkBasesIPv4 = InheritPhoneTrunkBasesIPv4;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InheritPhoneTrunkBasesIPv6 = InheritPhoneTrunkBasesIPv6;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UseForInternalEdgeCommunication = UseForInternalEdgeCommunication;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalTrunkBaseAssignments = ExternalTrunkBaseAssignments;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PhoneTrunkBaseAssignments = PhoneTrunkBaseAssignments;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -253,167 +889,262 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The name of the entity.
         /// </summary>
         /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EdgeAssignedId
         /// </summary>
         [DataMember(Name="edgeAssignedId", EmitDefaultValue=false)]
         public string EdgeAssignedId { get; set; }
+        
+        
+        
         /// <summary>
         /// Friendly Name
         /// </summary>
         /// <value>Friendly Name</value>
         [DataMember(Name="friendlyName", EmitDefaultValue=false)]
         public string FriendlyName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets VlanTagId
         /// </summary>
         [DataMember(Name="vlanTagId", EmitDefaultValue=false)]
         public int? VlanTagId { get; set; }
+        
+        
+        
         /// <summary>
         /// Hardware Address
         /// </summary>
         /// <value>Hardware Address</value>
         [DataMember(Name="hardwareAddress", EmitDefaultValue=false)]
         public string HardwareAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// Physical Adapter Id
         /// </summary>
         /// <value>Physical Adapter Id</value>
         [DataMember(Name="physicalAdapterId", EmitDefaultValue=false)]
         public string PhysicalAdapterId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets IfStatus
         /// </summary>
         [DataMember(Name="ifStatus", EmitDefaultValue=false)]
         public string IfStatus { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The list of routes assigned to this interface.
         /// </summary>
         /// <value>The list of routes assigned to this interface.</value>
         [DataMember(Name="routes", EmitDefaultValue=false)]
         public List<DomainNetworkRoute> Routes { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list.
         /// </summary>
         /// <value>The list of IP addresses on this interface.  Priority of dns addresses are based on order in the list.</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<DomainNetworkAddress> Addresses { get; set; }
+        
+        
+        
         /// <summary>
         /// IPv4 interface settings.
         /// </summary>
         /// <value>IPv4 interface settings.</value>
         [DataMember(Name="ipv4Capabilities", EmitDefaultValue=false)]
         public DomainCapabilities Ipv4Capabilities { get; set; }
+        
+        
+        
         /// <summary>
         /// IPv6 interface settings.
         /// </summary>
         /// <value>IPv6 interface settings.</value>
         [DataMember(Name="ipv6Capabilities", EmitDefaultValue=false)]
         public DomainCapabilities Ipv6Capabilities { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets LastModifiedUserId
         /// </summary>
         [DataMember(Name="lastModifiedUserId", EmitDefaultValue=false)]
         public string LastModifiedUserId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets LastModifiedCorrelationId
         /// </summary>
         [DataMember(Name="lastModifiedCorrelationId", EmitDefaultValue=false)]
         public string LastModifiedCorrelationId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CommandResponses
         /// </summary>
         [DataMember(Name="commandResponses", EmitDefaultValue=false)]
         public List<DomainNetworkCommandResponse> CommandResponses { get; set; }
+        
+        
+        
         /// <summary>
         /// The IPv4 phone trunk base assignment will be inherited from the Edge Group.
         /// </summary>
         /// <value>The IPv4 phone trunk base assignment will be inherited from the Edge Group.</value>
         [DataMember(Name="inheritPhoneTrunkBasesIPv4", EmitDefaultValue=false)]
         public bool? InheritPhoneTrunkBasesIPv4 { get; set; }
+        
+        
+        
         /// <summary>
         /// The IPv6 phone trunk base assignment will be inherited from the Edge Group.
         /// </summary>
         /// <value>The IPv6 phone trunk base assignment will be inherited from the Edge Group.</value>
         [DataMember(Name="inheritPhoneTrunkBasesIPv6", EmitDefaultValue=false)]
         public bool? InheritPhoneTrunkBasesIPv6 { get; set; }
+        
+        
+        
         /// <summary>
         /// This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.
         /// </summary>
         /// <value>This interface will be used for all internal edge-to-edge communication using settings from the edgeTrunkBaseAssignment on the Edge Group.</value>
         [DataMember(Name="useForInternalEdgeCommunication", EmitDefaultValue=false)]
         public bool? UseForInternalEdgeCommunication { get; set; }
+        
+        
+        
         /// <summary>
         /// External trunk base settings to use for external communication from this interface.
         /// </summary>
         /// <value>External trunk base settings to use for external communication from this interface.</value>
         [DataMember(Name="externalTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> ExternalTrunkBaseAssignments { get; set; }
+        
+        
+        
         /// <summary>
         /// Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true.
         /// </summary>
         /// <value>Phone trunk base settings to use for phone communication from this interface.  These settings will be ignored when \&quot;inheritPhoneTrunkBases\&quot; is true.</value>
         [DataMember(Name="phoneTrunkBaseAssignments", EmitDefaultValue=false)]
         public List<TrunkBaseAssignment> PhoneTrunkBaseAssignments { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -422,39 +1153,73 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainLogicalInterface {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
+            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
+            
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
+            
             sb.Append("  EdgeAssignedId: ").Append(EdgeAssignedId).Append("\n");
+            
             sb.Append("  FriendlyName: ").Append(FriendlyName).Append("\n");
+            
             sb.Append("  VlanTagId: ").Append(VlanTagId).Append("\n");
+            
             sb.Append("  HardwareAddress: ").Append(HardwareAddress).Append("\n");
+            
             sb.Append("  PhysicalAdapterId: ").Append(PhysicalAdapterId).Append("\n");
+            
             sb.Append("  IfStatus: ").Append(IfStatus).Append("\n");
+            
             sb.Append("  InterfaceType: ").Append(InterfaceType).Append("\n");
+            
             sb.Append("  Routes: ").Append(Routes).Append("\n");
+            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
+            
             sb.Append("  Ipv4Capabilities: ").Append(Ipv4Capabilities).Append("\n");
+            
             sb.Append("  Ipv6Capabilities: ").Append(Ipv6Capabilities).Append("\n");
+            
             sb.Append("  CurrentState: ").Append(CurrentState).Append("\n");
+            
             sb.Append("  LastModifiedUserId: ").Append(LastModifiedUserId).Append("\n");
+            
             sb.Append("  LastModifiedCorrelationId: ").Append(LastModifiedCorrelationId).Append("\n");
+            
             sb.Append("  CommandResponses: ").Append(CommandResponses).Append("\n");
+            
             sb.Append("  InheritPhoneTrunkBasesIPv4: ").Append(InheritPhoneTrunkBasesIPv4).Append("\n");
+            
             sb.Append("  InheritPhoneTrunkBasesIPv6: ").Append(InheritPhoneTrunkBasesIPv6).Append("\n");
+            
             sb.Append("  UseForInternalEdgeCommunication: ").Append(UseForInternalEdgeCommunication).Append("\n");
+            
             sb.Append("  ExternalTrunkBaseAssignments: ").Append(ExternalTrunkBaseAssignments).Append("\n");
+            
             sb.Append("  PhoneTrunkBaseAssignments: ").Append(PhoneTrunkBaseAssignments).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -669,72 +1434,106 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
+                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
+                
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
+                
                 if (this.EdgeAssignedId != null)
                     hash = hash * 59 + this.EdgeAssignedId.GetHashCode();
+                
                 if (this.FriendlyName != null)
                     hash = hash * 59 + this.FriendlyName.GetHashCode();
+                
                 if (this.VlanTagId != null)
                     hash = hash * 59 + this.VlanTagId.GetHashCode();
+                
                 if (this.HardwareAddress != null)
                     hash = hash * 59 + this.HardwareAddress.GetHashCode();
+                
                 if (this.PhysicalAdapterId != null)
                     hash = hash * 59 + this.PhysicalAdapterId.GetHashCode();
+                
                 if (this.IfStatus != null)
                     hash = hash * 59 + this.IfStatus.GetHashCode();
+                
                 if (this.InterfaceType != null)
                     hash = hash * 59 + this.InterfaceType.GetHashCode();
+                
                 if (this.Routes != null)
                     hash = hash * 59 + this.Routes.GetHashCode();
+                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
+                
                 if (this.Ipv4Capabilities != null)
                     hash = hash * 59 + this.Ipv4Capabilities.GetHashCode();
+                
                 if (this.Ipv6Capabilities != null)
                     hash = hash * 59 + this.Ipv6Capabilities.GetHashCode();
+                
                 if (this.CurrentState != null)
                     hash = hash * 59 + this.CurrentState.GetHashCode();
+                
                 if (this.LastModifiedUserId != null)
                     hash = hash * 59 + this.LastModifiedUserId.GetHashCode();
+                
                 if (this.LastModifiedCorrelationId != null)
                     hash = hash * 59 + this.LastModifiedCorrelationId.GetHashCode();
+                
                 if (this.CommandResponses != null)
                     hash = hash * 59 + this.CommandResponses.GetHashCode();
+                
                 if (this.InheritPhoneTrunkBasesIPv4 != null)
                     hash = hash * 59 + this.InheritPhoneTrunkBasesIPv4.GetHashCode();
+                
                 if (this.InheritPhoneTrunkBasesIPv6 != null)
                     hash = hash * 59 + this.InheritPhoneTrunkBasesIPv6.GetHashCode();
+                
                 if (this.UseForInternalEdgeCommunication != null)
                     hash = hash * 59 + this.UseForInternalEdgeCommunication.GetHashCode();
+                
                 if (this.ExternalTrunkBaseAssignments != null)
                     hash = hash * 59 + this.ExternalTrunkBaseAssignments.GetHashCode();
+                
                 if (this.PhoneTrunkBaseAssignments != null)
                     hash = hash * 59 + this.PhoneTrunkBaseAssignments.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

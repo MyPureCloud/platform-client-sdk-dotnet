@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContentFacetFilterItem :  IEquatable<ContentFacetFilterItem>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -62,6 +67,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "LIST")]
             List
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
@@ -130,41 +139,133 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CONTAINS")]
             Contains
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContentFacetFilterItem" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="_Operator">_Operator.</param>
+        
+        
+        
         /// <param name="Values">Values.</param>
+        
+        
         public ContentFacetFilterItem(string Name = null, TypeEnum? Type = null, OperatorEnum? _Operator = null, List<string> Values = null)
         {
-            this.Name = Name;
-            this.Type = Type;
-            this._Operator = _Operator;
-            this.Values = Values;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Values = Values;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Values
         /// </summary>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -173,10 +274,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContentFacetFilterItem {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Values: ").Append(Values).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -246,14 +352,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScheduleInterval :  IEquatable<ScheduleInterval>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleInterval" /> class.
         /// </summary>
+        
+        
         /// <param name="Start">scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="End">scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
         public ScheduleInterval(string Start = null, string End = null)
         {
-            this.Start = Start;
-            this.End = End;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Start = Start;
+            
+            
+            
+            
+            
+            
+            
+            
+this.End = End;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
+        
+        
+        
         /// <summary>
         /// scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScheduleInterval {\n");
+            
             sb.Append("  Start: ").Append(Start).Append("\n");
+            
             sb.Append("  End: ").Append(End).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Start != null)
                     hash = hash * 59 + this.Start.GetHashCode();
+                
                 if (this.End != null)
                     hash = hash * 59 + this.End.GetHashCode();
+                
                 return hash;
             }
         }

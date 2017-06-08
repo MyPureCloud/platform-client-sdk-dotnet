@@ -155,13 +155,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a edge.
+                
                 apiInstance.DeleteTelephonyProvidersEdge(edgeId);
             }
             catch (Exception e)
@@ -210,14 +218,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var interfaceId = interfaceId_example;  // string | Interface ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an edge logical interface
+                
                 apiInstance.DeleteTelephonyProvidersEdgeLogicalinterface(edgeId, interfaceId);
             }
             catch (Exception e)
@@ -267,13 +287,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
 
             try
             {
+                
                 // Cancels any in-progress update for this edge.
+                
                 apiInstance.DeleteTelephonyProvidersEdgeSoftwareupdate(edgeId);
             }
             catch (Exception e)
@@ -322,13 +350,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var certificateId = certificateId_example;  // string | Certificate ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a certificate authority.
+                
                 apiInstance.DeleteTelephonyProvidersEdgesCertificateauthority(certificateId);
             }
             catch (Exception e)
@@ -377,13 +413,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var didPoolId = didPoolId_example;  // string | DID pool ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a DID Pool by ID.
+                
                 apiInstance.DeleteTelephonyProvidersEdgesDidpool(didPoolId);
             }
             catch (Exception e)
@@ -432,13 +476,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeGroupId = edgeGroupId_example;  // string | Edge group ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an edge group.
+                
                 apiInstance.DeleteTelephonyProvidersEdgesEdgegroup(edgeGroupId);
             }
             catch (Exception e)
@@ -487,13 +539,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var endpointId = endpointId_example;  // string | Endpoint ID
+            
+            
+            
 
             try
             {
+                
                 // Delete endpoint
+                
                 apiInstance.DeleteTelephonyProvidersEdgesEndpoint(endpointId);
             }
             catch (Exception e)
@@ -542,13 +602,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var extensionPoolId = extensionPoolId_example;  // string | Extension pool ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an extension pool by ID
+                
                 apiInstance.DeleteTelephonyProvidersEdgesExtensionpool(extensionPoolId);
             }
             catch (Exception e)
@@ -597,13 +665,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            
+            
+            
 
             try
             {
+                
                 // Delete Outbound Route
+                
                 apiInstance.DeleteTelephonyProvidersEdgesOutboundroute(outboundRouteId);
             }
             catch (Exception e)
@@ -652,13 +728,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneId = phoneId_example;  // string | Phone ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a Phone by ID
+                
                 apiInstance.DeleteTelephonyProvidersEdgesPhone(phoneId);
             }
             catch (Exception e)
@@ -707,13 +791,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneBaseId = phoneBaseId_example;  // string | Phone base ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a Phone Base Settings by ID
+                
                 apiInstance.DeleteTelephonyProvidersEdgesPhonebasesetting(phoneBaseId);
             }
             catch (Exception e)
@@ -762,13 +854,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a Site by ID
+                
                 apiInstance.DeleteTelephonyProvidersEdgesSite(siteId);
             }
             catch (Exception e)
@@ -817,14 +917,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
             var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            
+            
+            
 
             try
             {
+                
                 // Delete Outbound Route
+                
                 apiInstance.DeleteTelephonyProvidersEdgesSiteOutboundroute(siteId, outboundRouteId);
             }
             catch (Exception e)
@@ -874,13 +986,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var trunkBaseSettingsId = trunkBaseSettingsId_example;  // string | Trunk Base ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a Trunk Base Settings object by ID
+                
                 apiInstance.DeleteTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId);
             }
             catch (Exception e)
@@ -929,14 +1049,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Lists available schema categories (Deprecated)
+                
                 SchemaCategoryEntityListing result = apiInstance.GetConfigurationSchemasEdgesVnext(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -987,15 +1119,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var schemaCategory = schemaCategory_example;  // string | Schema category
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // List schemas of a specific category (Deprecated)
+                
                 SchemaReferenceEntityListing result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategory(schemaCategory, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1047,16 +1195,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var schemaCategory = schemaCategory_example;  // string | Schema category
+            
+            
+            
+            
             var schemaType = schemaType_example;  // string | Schema type
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // List schemas of a specific category (Deprecated)
+                
                 SchemaReferenceEntityListing result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaType(schemaCategory, schemaType, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1109,15 +1277,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var schemaCategory = schemaCategory_example;  // string | Schema category
+            
+            
+            
+            
             var schemaType = schemaType_example;  // string | Schema type
+            
+            
+            
+            
             var schemaId = schemaId_example;  // string | Schema ID
+            
+            
+            
 
             try
             {
+                
                 // Get a json schema (Deprecated)
+                
                 Organization result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId(schemaCategory, schemaType, schemaId);
                 Debug.WriteLine(result);
             }
@@ -1169,18 +1353,46 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var schemaCategory = schemaCategory_example;  // string | Schema category
+            
+            
+            
+            
             var schemaType = schemaType_example;  // string | Schema type
+            
+            
+            
+            
             var schemaId = schemaId_example;  // string | Schema ID
+            
+            
+            
+            
             var extensionType = extensionType_example;  // string | extension
+            
+            
+            
+            
             var metadataId = metadataId_example;  // string | Metadata ID
+            
+            
+            
+            
             var type = type_example;  // string | Type (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get metadata for a schema (Deprecated)
+                
                 Organization result = apiInstance.GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId(schemaCategory, schemaType, schemaId, extensionType, metadataId, type);
                 Debug.WriteLine(result);
             }
@@ -1235,14 +1447,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
+            
+            
 
             try
             {
+                
                 // Get edge.
+                
                 Edge result = apiInstance.GetTelephonyProvidersEdge(edgeId, expand);
                 Debug.WriteLine(result);
             }
@@ -1261,7 +1485,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: site |
 {: class="table table-striped"}
 
 ### Return type
@@ -1293,14 +1517,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var lineId = lineId_example;  // string | Line ID
+            
+            
+            
 
             try
             {
+                
                 // Get line
+                
                 EdgeLine result = apiInstance.GetTelephonyProvidersEdgeLine(edgeId, lineId);
                 Debug.WriteLine(result);
             }
@@ -1351,15 +1587,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Get the list of lines.
+                
                 EdgeLineEntityListing result = apiInstance.GetTelephonyProvidersEdgeLines(edgeId, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -1411,15 +1663,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var interfaceId = interfaceId_example;  // string | Interface ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
+            
+            
 
             try
             {
+                
                 // Get an edge logical interface
+                
                 DomainLogicalInterface result = apiInstance.GetTelephonyProvidersEdgeLogicalinterface(edgeId, interfaceId, expand);
                 Debug.WriteLine(result);
             }
@@ -1439,7 +1707,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
 | **interfaceId** | **string**| Interface ID |  |
-| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
+| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional] <br />**Values**: externalTrunkBaseAssignments, phoneTrunkBaseAssignments |
 {: class="table table-striped"}
 
 ### Return type
@@ -1471,14 +1739,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
+            
+            
 
             try
             {
+                
                 // Get edge logical interfaces.
+                
                 LogicalInterfaceEntityListing result = apiInstance.GetTelephonyProvidersEdgeLogicalinterfaces(edgeId, expand);
                 Debug.WriteLine(result);
             }
@@ -1497,7 +1777,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeId** | **string**| Edge ID |  |
-| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
+| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional] <br />**Values**: externalTrunkBaseAssignments, phoneTrunkBaseAssignments |
 {: class="table table-striped"}
 
 ### Return type
@@ -1529,14 +1809,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var jobId = jobId_example;  // string | Job ID
+            
+            
+            
 
             try
             {
+                
                 // Get an Edge logs job.
+                
                 EdgeLogsJob result = apiInstance.GetTelephonyProvidersEdgeLogsJob(edgeId, jobId);
                 Debug.WriteLine(result);
             }
@@ -1587,14 +1879,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var interfaceId = interfaceId_example;  // string | Interface ID
+            
+            
+            
 
             try
             {
+                
                 // Get edge physical interface.
+                
                 DomainPhysicalInterface result = apiInstance.GetTelephonyProvidersEdgePhysicalinterface(edgeId, interfaceId);
                 Debug.WriteLine(result);
             }
@@ -1645,13 +1949,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
 
             try
             {
+                
                 // Retrieve a list of all configured physical interfaces from a specific edge.
+                
                 PhysicalInterfaceEntityListing result = apiInstance.GetTelephonyProvidersEdgePhysicalinterfaces(edgeId);
                 Debug.WriteLine(result);
             }
@@ -1701,13 +2013,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
 
             try
             {
+                
                 // Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
+                
                 VmPairingInfo result = apiInstance.GetTelephonyProvidersEdgeSetuppackage(edgeId);
                 Debug.WriteLine(result);
             }
@@ -1757,13 +2077,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
 
             try
             {
+                
                 // Gets software update status information about any edge.
+                
                 DomainEdgeSoftwareUpdateDto result = apiInstance.GetTelephonyProvidersEdgeSoftwareupdate(edgeId);
                 Debug.WriteLine(result);
             }
@@ -1813,13 +2141,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
 
             try
             {
+                
                 // Gets all the available software versions for this edge.
+                
                 DomainEdgeSoftwareVersionDtoEntityListing result = apiInstance.GetTelephonyProvidersEdgeSoftwareversions(edgeId);
                 Debug.WriteLine(result);
             }
@@ -1869,19 +2205,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var trunkBaseId = trunkBaseId_example;  // string | Filter by Trunk Base Ids (optional) 
+            
+            
+            
+            
             var trunkType = trunkType_example;  // string | Filter by a Trunk type (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of available trunks for the given Edge.
+                
                 TrunkEntityListing result = apiInstance.GetTelephonyProvidersEdgeTrunks(edgeId, pageNumber, pageSize, sortBy, sortOrder, trunkBaseId, trunkType);
                 Debug.WriteLine(result);
             }
@@ -1905,7 +2273,7 @@ namespace Example
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **trunkBaseId** | **string**| Filter by Trunk Base Ids | [optional]  |
-| **trunkType** | **string**| Filter by a Trunk type | [optional]  |
+| **trunkType** | **string**| Filter by a Trunk type | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
 {: class="table table-striped"}
 
 ### Return type
@@ -1937,19 +2305,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var siteId = siteId_example;  // string | Filter by site.id (optional) 
+            
+            
+            
+            
             var edgeGroupId = edgeGroupId_example;  // string | Filter by edgeGroup.id (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
             var managed = true;  // bool? | Filter by managed (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of edges.
+                
                 EdgeEntityListing result = apiInstance.GetTelephonyProvidersEdges(pageSize, pageNumber, name, siteId, edgeGroupId, sortBy, managed);
                 Debug.WriteLine(result);
             }
@@ -2005,12 +2405,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
 
             try
             {
+                
                 // Get the list of available languages.
+                
                 AvailableLanguageList result = apiInstance.GetTelephonyProvidersEdgesAvailablelanguages();
                 Debug.WriteLine(result);
             }
@@ -2056,12 +2460,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
 
             try
             {
+                
                 // Get the list of certificate authorities.
+                
                 CertificateAuthorityEntityListing result = apiInstance.GetTelephonyProvidersEdgesCertificateauthorities();
                 Debug.WriteLine(result);
             }
@@ -2107,13 +2515,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var certificateId = certificateId_example;  // string | Certificate ID
+            
+            
+            
 
             try
             {
+                
                 // Get a certificate authority.
+                
                 DomainCertificateAuthority result = apiInstance.GetTelephonyProvidersEdgesCertificateauthority(certificateId);
                 Debug.WriteLine(result);
             }
@@ -2163,13 +2579,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var didId = didId_example;  // string | DID ID
+            
+            
+            
 
             try
             {
+                
                 // Get a DID by ID.
+                
                 DID result = apiInstance.GetTelephonyProvidersEdgesDid(didId);
                 Debug.WriteLine(result);
             }
@@ -2219,13 +2643,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var didPoolId = didPoolId_example;  // string | DID pool ID
+            
+            
+            
 
             try
             {
+                
                 // Get a DID Pool by ID.
+                
                 DIDPool result = apiInstance.GetTelephonyProvidersEdgesDidpool(didPoolId);
                 Debug.WriteLine(result);
             }
@@ -2275,15 +2707,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to number)
+            
+            
+            
 
             try
             {
+                
                 // Get a listing of DID Pools
+                
                 DIDPoolEntityListing result = apiInstance.GetTelephonyProvidersEdgesDidpools(pageSize, pageNumber, sortBy);
                 Debug.WriteLine(result);
             }
@@ -2335,17 +2783,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to number)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var phoneNumber = phoneNumber_example;  // string | Filter by phoneNumber (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a listing of DIDs
+                
                 DIDEntityListing result = apiInstance.GetTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber);
                 Debug.WriteLine(result);
             }
@@ -2399,14 +2871,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeGroupId = edgeGroupId_example;  // string | Edge group ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Fields to expand in the response (optional) 
+            
+            
 
             try
             {
+                
                 // Get edge group.
+                
                 EdgeGroup result = apiInstance.GetTelephonyProvidersEdgesEdgegroup(edgeGroupId, expand);
                 Debug.WriteLine(result);
             }
@@ -2425,7 +2909,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeGroupId** | **string**| Edge group ID |  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response | [optional] <br />**Values**: phoneTrunkBases, edgeTrunkBaseAssignment |
 {: class="table table-striped"}
 
 ### Return type
@@ -2457,14 +2941,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgegroupId = edgegroupId_example;  // string | Edge Group ID
+            
+            
+            
+            
             var edgetrunkbaseId = edgetrunkbaseId_example;  // string | Edge Trunk Base ID
+            
+            
+            
 
             try
             {
+                
                 // Gets the edge trunk base associated with the edge group
+                
                 EdgeTrunkBase result = apiInstance.GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis(edgegroupId, edgetrunkbaseId);
                 Debug.WriteLine(result);
             }
@@ -2515,17 +3011,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
             var managed = true;  // bool? | Filter by managed (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of edge groups.
+                
                 EdgeGroupEntityListing result = apiInstance.GetTelephonyProvidersEdgesEdgegroups(pageSize, pageNumber, name, sortBy, managed);
                 Debug.WriteLine(result);
             }
@@ -2579,12 +3099,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
 
             try
             {
+                
                 // Get the edge version report.
+                
                 EdgeVersionReport result = apiInstance.GetTelephonyProvidersEdgesEdgeversionreport();
                 Debug.WriteLine(result);
             }
@@ -2630,13 +3154,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var endpointId = endpointId_example;  // string | Endpoint ID
+            
+            
+            
 
             try
             {
+                
                 // Get endpoint
+                
                 Endpoint result = apiInstance.GetTelephonyProvidersEdgesEndpoint(endpointId);
                 Debug.WriteLine(result);
             }
@@ -2686,16 +3218,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
 
             try
             {
+                
                 // Get endpoints
+                
                 EndpointEntityListing result = apiInstance.GetTelephonyProvidersEdgesEndpoints(pageSize, pageNumber, name, sortBy);
                 Debug.WriteLine(result);
             }
@@ -2748,13 +3300,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var extensionId = extensionId_example;  // string | Extension ID
+            
+            
+            
 
             try
             {
+                
                 // Get an extension by ID.
+                
                 Extension result = apiInstance.GetTelephonyProvidersEdgesExtension(extensionId);
                 Debug.WriteLine(result);
             }
@@ -2804,13 +3364,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var extensionPoolId = extensionPoolId_example;  // string | Extension pool ID
+            
+            
+            
 
             try
             {
+                
                 // Get an extension pool by ID
+                
                 ExtensionPool result = apiInstance.GetTelephonyProvidersEdgesExtensionpool(extensionPoolId);
                 Debug.WriteLine(result);
             }
@@ -2860,16 +3428,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to startNumber)
+            
+            
+            
+            
             var number = number_example;  // string | Number (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a listing of extension pools
+                
                 ExtensionPoolEntityListing result = apiInstance.GetTelephonyProvidersEdgesExtensionpools(pageSize, pageNumber, sortBy, number);
                 Debug.WriteLine(result);
             }
@@ -2922,17 +3510,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to number)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var number = number_example;  // string | Filter by number (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a listing of extensions
+                
                 ExtensionEntityListing result = apiInstance.GetTelephonyProvidersEdgesExtensions(pageSize, pageNumber, sortBy, sortOrder, number);
                 Debug.WriteLine(result);
             }
@@ -2986,13 +3598,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var lineId = lineId_example;  // string | Line ID
+            
+            
+            
 
             try
             {
+                
                 // Get a Line by ID
+                
                 Line result = apiInstance.GetTelephonyProvidersEdgesLine(lineId);
                 Debug.WriteLine(result);
             }
@@ -3042,13 +3662,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var lineBaseId = lineBaseId_example;  // string | Line base ID
+            
+            
+            
 
             try
             {
+                
                 // Get a line base settings object by ID
+                
                 LineBase result = apiInstance.GetTelephonyProvidersEdgesLinebasesetting(lineBaseId);
                 Debug.WriteLine(result);
             }
@@ -3098,16 +3726,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
 
             try
             {
+                
                 // Get a listing of line base settings objects
+                
                 LineBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesLinebasesettings(pageNumber, pageSize, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -3160,17 +3808,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
+            
+            
 
             try
             {
+                
                 // Get a list of Lines
+                
                 LineEntityListing result = apiInstance.GetTelephonyProvidersEdgesLines(pageSize, pageNumber, name, sortBy, expand);
                 Debug.WriteLine(result);
             }
@@ -3192,7 +3864,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, edgeGroup, primaryEdge, secondaryEdge, edges, assignedUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -3224,13 +3896,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var lineBaseSettingsId = lineBaseSettingsId_example;  // string | The id of a Line Base Settings object upon which to base this Line
+            
+            
+            
 
             try
             {
+                
                 // Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
+                
                 Line result = apiInstance.GetTelephonyProvidersEdgesLinesTemplate(lineBaseSettingsId);
                 Debug.WriteLine(result);
             }
@@ -3280,14 +3960,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeIds = edgeIds_example;  // string | Comma separated list of Edge Id's
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Field to expand in the response (optional) 
+            
+            
 
             try
             {
+                
                 // Get edge logical interfaces.
+                
                 LogicalInterfaceEntityListing result = apiInstance.GetTelephonyProvidersEdgesLogicalinterfaces(edgeIds, expand);
                 Debug.WriteLine(result);
             }
@@ -3306,7 +3998,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **edgeIds** | **string**| Comma separated list of Edge Id&#39;s |  |
-| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional]  |
+| **expand** | [**List<string>**](string.html)| Field to expand in the response | [optional] <br />**Values**: externalTrunkBaseAssignments, phoneTrunkBaseAssignments |
 {: class="table table-striped"}
 
 ### Return type
@@ -3338,13 +4030,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            
+            
+            
 
             try
             {
+                
                 // Get outbound route
+                
                 OutboundRoute result = apiInstance.GetTelephonyProvidersEdgesOutboundroute(outboundRouteId);
                 Debug.WriteLine(result);
             }
@@ -3394,17 +4094,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var siteId = siteId_example;  // string | Filter by site.id (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
 
             try
             {
+                
                 // Get outbound routes
+                
                 OutboundRouteEntityListing result = apiInstance.GetTelephonyProvidersEdgesOutboundroutes(pageSize, pageNumber, name, siteId, sortBy);
                 Debug.WriteLine(result);
             }
@@ -3458,13 +4182,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneId = phoneId_example;  // string | Phone ID
+            
+            
+            
 
             try
             {
+                
                 // Get a Phone by ID
+                
                 Phone result = apiInstance.GetTelephonyProvidersEdgesPhone(phoneId);
                 Debug.WriteLine(result);
             }
@@ -3514,13 +4246,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneBaseId = phoneBaseId_example;  // string | Phone base ID
+            
+            
+            
 
             try
             {
+                
                 // Get a Phone Base Settings object by ID
+                
                 PhoneBase result = apiInstance.GetTelephonyProvidersEdgesPhonebasesetting(phoneBaseId);
                 Debug.WriteLine(result);
             }
@@ -3570,18 +4310,46 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a list of Phone Base Settings objects
+                
                 PhoneBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhonebasesettings(pageSize, pageNumber, sortBy, sortOrder, expand, name);
                 Debug.WriteLine(result);
             }
@@ -3603,7 +4371,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Value by which to sort | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, lines |
 | **name** | **string**| Name | [optional]  |
 {: class="table table-striped"}
 
@@ -3636,14 +4404,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Get a list of available makes and models to create a new Phone Base Settings
+                
                 PhoneMetaBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -3694,13 +4474,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneMetabaseId = phoneMetabaseId_example;  // string | The id of a metabase object upon which to base this Phone Base Settings
+            
+            
+            
 
             try
             {
+                
                 // Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
+                
                 PhoneBase result = apiInstance.GetTelephonyProvidersEdgesPhonebasesettingsTemplate(phoneMetabaseId);
                 Debug.WriteLine(result);
             }
@@ -3750,26 +4538,86 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var siteId = siteId_example;  // string | Filter by site.id (optional) 
+            
+            
+            
+            
             var webRtcUserId = webRtcUserId_example;  // string | Filter by webRtcUser.id (optional) 
+            
+            
+            
+            
             var phoneBaseSettingsId = phoneBaseSettingsId_example;  // string | Filter by phoneBaseSettings.id (optional) 
+            
+            
+            
+            
             var linesLoggedInUserId = linesLoggedInUserId_example;  // string | Filter by lines.loggedInUser.id (optional) 
+            
+            
+            
+            
             var linesDefaultForUserId = linesDefaultForUserId_example;  // string | Filter by lines.defaultForUser.id (optional) 
+            
+            
+            
+            
             var phoneHardwareId = phoneHardwareId_example;  // string | Filter by phone_hardwareId (optional) 
+            
+            
+            
+            
             var linesId = linesId_example;  // string | Filter by lines.id (optional) 
+            
+            
+            
+            
             var linesName = linesName_example;  // string | Filter by lines.name (optional) 
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
+            
+            
+            
+            
             var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) 
+            
+            
 
             try
             {
+                
                 // Get a list of Phone Instances
+                
                 PhoneEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhones(pageNumber, pageSize, sortBy, sortOrder, siteId, webRtcUserId, phoneBaseSettingsId, linesLoggedInUserId, linesDefaultForUserId, phoneHardwareId, linesId, linesName, expand, fields);
                 Debug.WriteLine(result);
             }
@@ -3799,8 +4647,8 @@ namespace Example
 | **phoneHardwareId** | **string**| Filter by phone_hardwareId | [optional]  |
 | **linesId** | **string**| Filter by lines.id | [optional]  |
 | **linesName** | **string**| Filter by lines.name | [optional]  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
-| **fields** | [**List<string>**](string.html)| Fields and properties to get, comma-separated | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties, site, status, status.primaryEdgesStatus, status.secondaryEdgesStatus, phoneBaseSettings, lines |
+| **fields** | [**List<string>**](string.html)| Fields and properties to get, comma-separated | [optional] <br />**Values**: webRtcUser, properties.*, lines.loggedInUser, lines.defaultForUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -3832,13 +4680,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneBaseSettingsId = phoneBaseSettingsId_example;  // string | The id of a Phone Base Settings object upon which to base this Phone
+            
+            
+            
 
             try
             {
+                
                 // Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
+                
                 Phone result = apiInstance.GetTelephonyProvidersEdgesPhonesTemplate(phoneBaseSettingsId);
                 Debug.WriteLine(result);
             }
@@ -3888,13 +4744,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeIds = edgeIds_example;  // string | Comma separated list of Edge Id's
+            
+            
+            
 
             try
             {
+                
                 // Get physical interfaces for edges.
+                
                 PhysicalInterfaceEntityListing result = apiInstance.GetTelephonyProvidersEdgesPhysicalinterfaces(edgeIds);
                 Debug.WriteLine(result);
             }
@@ -3944,13 +4808,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
 
             try
             {
+                
                 // Get a Site by ID.
+                
                 Site result = apiInstance.GetTelephonyProvidersEdgesSite(siteId);
                 Debug.WriteLine(result);
             }
@@ -4000,14 +4872,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
             var numberPlanId = numberPlanId_example;  // string | Number Plan ID
+            
+            
+            
 
             try
             {
+                
                 // Get a Number Plan by ID.
+                
                 NumberPlan result = apiInstance.GetTelephonyProvidersEdgesSiteNumberplan(siteId, numberPlanId);
                 Debug.WriteLine(result);
             }
@@ -4058,13 +4942,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
 
             try
             {
+                
                 // Get the list of Number Plans for this Site.
+                
                 List&lt;NumberPlan&gt; result = apiInstance.GetTelephonyProvidersEdgesSiteNumberplans(siteId);
                 Debug.WriteLine(result);
             }
@@ -4114,14 +5006,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
             var classification = classification_example;  // string | Classification (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a list of Classifications for this Site
+                
                 List&lt;string&gt; result = apiInstance.GetTelephonyProvidersEdgesSiteNumberplansClassifications(siteId, classification);
                 Debug.WriteLine(result);
             }
@@ -4172,14 +5076,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
             var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            
+            
+            
 
             try
             {
+                
                 // Get an outbound route
+                
                 OutboundRouteBase result = apiInstance.GetTelephonyProvidersEdgesSiteOutboundroute(siteId, outboundRouteId);
                 Debug.WriteLine(result);
             }
@@ -4230,17 +5146,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
 
             try
             {
+                
                 // Get outbound routes
+                
                 OutboundRouteBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesSiteOutboundroutes(siteId, pageSize, pageNumber, name, sortBy);
                 Debug.WriteLine(result);
             }
@@ -4294,19 +5234,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var locationId = locationId_example;  // string | Location Id (optional) 
+            
+            
+            
+            
             var managed = true;  // bool? | Filter by managed (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of Sites.
+                
                 SiteEntityListing result = apiInstance.GetTelephonyProvidersEdgesSites(pageSize, pageNumber, sortBy, sortOrder, name, locationId, managed);
                 Debug.WriteLine(result);
             }
@@ -4362,14 +5334,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 1000)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Get a list of Edge-compatible time zones
+                
                 TimeZoneEntityListing result = apiInstance.GetTelephonyProvidersEdgesTimezones(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -4420,13 +5404,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var trunkId = trunkId_example;  // string | Trunk ID
+            
+            
+            
 
             try
             {
+                
                 // Get a Trunk by ID
+                
                 Trunk result = apiInstance.GetTelephonyProvidersEdgesTrunk(trunkId);
                 Debug.WriteLine(result);
             }
@@ -4476,14 +5468,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var trunkBaseSettingsId = trunkBaseSettingsId_example;  // string | Trunk Base ID
+            
+            
+            
+            
             var ignoreHidden = true;  // bool? | Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a Trunk Base Settings object by ID
+                
                 TrunkBase result = apiInstance.GetTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId, ignoreHidden);
                 Debug.WriteLine(result);
             }
@@ -4534,21 +5538,61 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var recordingEnabled = true;  // bool? | Filter trunks by recording enabled (optional) 
+            
+            
+            
+            
             var ignoreHidden = true;  // bool? | Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. (optional) 
+            
+            
+            
+            
             var managed = true;  // bool? | Filter by managed (optional) 
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Fields to expand in the response, comma-separated (optional) 
+            
+            
+            
             var name = name_example;  // string | Name of the TrunkBase to filter by (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get Trunk Base Settings listing
+                
                 TrunkBaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesTrunkbasesettings(pageNumber, pageSize, sortBy, sortOrder, recordingEnabled, ignoreHidden, managed, expand, name);
                 Debug.WriteLine(result);
             }
@@ -4573,7 +5617,7 @@ namespace Example
 | **recordingEnabled** | **bool?**| Filter trunks by recording enabled | [optional]  |
 | **ignoreHidden** | **bool?**| Set this to true to not receive trunk properties that are meant to be hidden or for internal system usage only. | [optional]  |
 | **managed** | **bool?**| Filter by managed | [optional]  |
-| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional]  |
+| **expand** | [**List<string>**](string.html)| Fields to expand in the response, comma-separated | [optional] <br />**Values**: properties |
 | **name** | **string**| Name of the TrunkBase to filter by | [optional]  |
 {: class="table table-striped"}
 
@@ -4606,15 +5650,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var type = type_example;  // string |  (optional) 
+            
+            
+            
+            
             var pageSize = 56;  // int? |  (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Get a list of available makes and models to create a new Trunk Base Settings
+                
                 TrunkMetabaseEntityListing result = apiInstance.GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases(type, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -4632,7 +5692,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **type** | **string**|  | [optional]  |
+| **type** | **string**|  | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
 | **pageSize** | **int?**|  | [optional] [default to 25] |
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 {: class="table table-striped"}
@@ -4666,13 +5726,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var trunkMetabaseId = trunkMetabaseId_example;  // string | The id of a metabase object upon which to base this Trunk Base Settings
+            
+            
+            
 
             try
             {
+                
                 // Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
+                
                 TrunkBase result = apiInstance.GetTelephonyProvidersEdgesTrunkbasesettingsTemplate(trunkMetabaseId);
                 Debug.WriteLine(result);
             }
@@ -4722,19 +5790,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Value by which to sort (optional)  (default to name)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var edgeId = edgeId_example;  // string | Filter by Edge Ids (optional) 
+            
+            
+            
+            
             var trunkBaseId = trunkBaseId_example;  // string | Filter by Trunk Base Ids (optional) 
+            
+            
+            
+            
             var trunkType = trunkType_example;  // string | Filter by a Trunk type (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of available trunks.
+                
                 TrunkEntityListing result = apiInstance.GetTelephonyProvidersEdgesTrunks(pageNumber, pageSize, sortBy, sortOrder, edgeId, trunkBaseId, trunkType);
                 Debug.WriteLine(result);
             }
@@ -4758,7 +5858,7 @@ namespace Example
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
 | **edgeId** | **string**| Filter by Edge Ids | [optional]  |
 | **trunkBaseId** | **string**| Filter by Trunk Base Ids | [optional]  |
-| **trunkType** | **string**| Filter by a Trunk type | [optional]  |
+| **trunkType** | **string**| Filter by a Trunk type | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
 {: class="table table-striped"}
 
 ### Return type
@@ -4790,13 +5890,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var trunkType = trunkType_example;  // string | The type of this trunk base. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get Counts of trunks that have recording disabled or enabled
+                
                 TrunkRecordingEnabledCount result = apiInstance.GetTelephonyProvidersEdgesTrunkswithrecording(trunkType);
                 Debug.WriteLine(result);
             }
@@ -4814,7 +5922,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **trunkType** | **string**| The type of this trunk base. | [optional]  |
+| **trunkType** | **string**| The type of this trunk base. | [optional] <br />**Values**: EXTERNAL, PHONE, EDGE |
 {: class="table table-striped"}
 
 ### Return type
@@ -4846,14 +5954,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var body = new DomainLogicalInterface(); // DomainLogicalInterface | Logical interface
+            
+            
 
             try
             {
+                
                 // Create an edge logical interface.
+                
                 DomainLogicalInterface result = apiInstance.PostTelephonyProvidersEdgeLogicalinterfaces(edgeId, body);
                 Debug.WriteLine(result);
             }
@@ -4904,15 +6024,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var jobId = jobId_example;  // string | Job ID
+            
+            
+            
+            
+            
             var body = new EdgeLogsJobUploadRequest(); // EdgeLogsJobUploadRequest | Log upload request
+            
+            
 
             try
             {
+                
                 // Request that the specified fileIds be uploaded from the Edge.
+                
                 apiInstance.PostTelephonyProvidersEdgeLogsJobUpload(edgeId, jobId, body);
             }
             catch (Exception e)
@@ -4963,14 +6099,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var body = new EdgeLogsJobRequest(); // EdgeLogsJobRequest | EdgeLogsJobRequest
+            
+            
 
             try
             {
+                
                 // Create a job to upload a list of Edge logs.
+                
                 EdgeLogsJobResponse result = apiInstance.PostTelephonyProvidersEdgeLogsJobs(edgeId, body);
                 Debug.WriteLine(result);
             }
@@ -5021,14 +6169,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var body = new EdgeRebootParameters(); // EdgeRebootParameters | Parameters for the edge reboot (optional) 
+            
+            
 
             try
             {
+                
                 // Reboot an Edge
+                
                 string result = apiInstance.PostTelephonyProvidersEdgeReboot(edgeId, body);
                 Debug.WriteLine(result);
             }
@@ -5079,14 +6239,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var body = new DomainEdgeSoftwareUpdateDto(); // DomainEdgeSoftwareUpdateDto | Software update request
+            
+            
 
             try
             {
+                
                 // Starts a software update for this edge.
+                
                 DomainEdgeSoftwareUpdateDto result = apiInstance.PostTelephonyProvidersEdgeSoftwareupdate(edgeId, body);
                 Debug.WriteLine(result);
             }
@@ -5137,14 +6309,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var body = new EdgeServiceStateRequest(); // EdgeServiceStateRequest | Edge Service State (optional) 
+            
+            
 
             try
             {
+                
                 // Take an Edge in or out of service
+                
                 string result = apiInstance.PostTelephonyProvidersEdgeStatuscode(edgeId, body);
                 Debug.WriteLine(result);
             }
@@ -5195,13 +6379,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge Id
+            
+            
+            
 
             try
             {
+                
                 // Unpair an Edge
+                
                 string result = apiInstance.PostTelephonyProvidersEdgeUnpair(edgeId);
                 Debug.WriteLine(result);
             }
@@ -5251,13 +6443,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new Edge(); // Edge | Edge
+            
+            
 
             try
             {
+                
                 // Create an edge.
+                
                 Edge result = apiInstance.PostTelephonyProvidersEdges(body);
                 Debug.WriteLine(result);
             }
@@ -5307,13 +6507,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new ValidateAddressRequest(); // ValidateAddressRequest | Address
+            
+            
 
             try
             {
+                
                 // Validates a street address
+                
                 ValidateAddressResponse result = apiInstance.PostTelephonyProvidersEdgesAddressvalidation(body);
                 Debug.WriteLine(result);
             }
@@ -5363,13 +6571,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | CertificateAuthority
+            
+            
 
             try
             {
+                
                 // Create a certificate authority.
+                
                 DomainCertificateAuthority result = apiInstance.PostTelephonyProvidersEdgesCertificateauthorities(body);
                 Debug.WriteLine(result);
             }
@@ -5419,13 +6635,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new DIDPool(); // DIDPool | DID pool
+            
+            
 
             try
             {
+                
                 // Create a new DID pool
+                
                 DIDPool result = apiInstance.PostTelephonyProvidersEdgesDidpools(body);
                 Debug.WriteLine(result);
             }
@@ -5475,13 +6699,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new EdgeGroup(); // EdgeGroup | EdgeGroup
+            
+            
 
             try
             {
+                
                 // Create an edge group.
+                
                 EdgeGroup result = apiInstance.PostTelephonyProvidersEdgesEdgegroups(body);
                 Debug.WriteLine(result);
             }
@@ -5531,13 +6763,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new Endpoint(); // Endpoint | EndpointTemplate
+            
+            
 
             try
             {
+                
                 // Create endpoint
+                
                 Endpoint result = apiInstance.PostTelephonyProvidersEdgesEndpoints(body);
                 Debug.WriteLine(result);
             }
@@ -5587,13 +6827,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new ExtensionPool(); // ExtensionPool | ExtensionPool
+            
+            
 
             try
             {
+                
                 // Create a new extension pool
+                
                 ExtensionPool result = apiInstance.PostTelephonyProvidersEdgesExtensionpools(body);
                 Debug.WriteLine(result);
             }
@@ -5643,13 +6891,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new OutboundRoute(); // OutboundRoute | OutboundRoute
+            
+            
 
             try
             {
+                
                 // Create outbound rule
+                
                 OutboundRoute result = apiInstance.PostTelephonyProvidersEdgesOutboundroutes(body);
                 Debug.WriteLine(result);
             }
@@ -5699,13 +6955,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneId = phoneId_example;  // string | Phone Id
+            
+            
+            
 
             try
             {
+                
                 // Reboot a Phone
+                
                 apiInstance.PostTelephonyProvidersEdgesPhoneReboot(phoneId);
             }
             catch (Exception e)
@@ -5754,13 +7018,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new PhoneBase(); // PhoneBase | Phone base settings
+            
+            
 
             try
             {
+                
                 // Create a new Phone Base Settings object
+                
                 PhoneBase result = apiInstance.PostTelephonyProvidersEdgesPhonebasesettings(body);
                 Debug.WriteLine(result);
             }
@@ -5810,13 +7082,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new Phone(); // Phone | Phone
+            
+            
 
             try
             {
+                
                 // Create a new Phone
+                
                 Phone result = apiInstance.PostTelephonyProvidersEdgesPhones(body);
                 Debug.WriteLine(result);
             }
@@ -5866,13 +7146,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new PhonesReboot(); // PhonesReboot | Phones
+            
+            
 
             try
             {
+                
                 // Reboot Multiple Phones
+                
                 apiInstance.PostTelephonyProvidersEdgesPhonesReboot(body);
             }
             catch (Exception e)
@@ -5921,14 +7209,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
+            
             var body = new OutboundRouteBase(); // OutboundRouteBase | OutboundRoute
+            
+            
 
             try
             {
+                
                 // Create outbound route
+                
                 OutboundRouteBase result = apiInstance.PostTelephonyProvidersEdgesSiteOutboundroutes(siteId, body);
                 Debug.WriteLine(result);
             }
@@ -5979,13 +7279,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
 
             try
             {
+                
                 // Triggers the rebalance operation.
+                
                 apiInstance.PostTelephonyProvidersEdgesSiteRebalance(siteId);
             }
             catch (Exception e)
@@ -6034,13 +7342,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new Site(); // Site | Site
+            
+            
 
             try
             {
+                
                 // Create a Site.
+                
                 Site result = apiInstance.PostTelephonyProvidersEdgesSites(body);
                 Debug.WriteLine(result);
             }
@@ -6090,13 +7406,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
+            
             var body = new TrunkBase(); // TrunkBase | Trunk base settings
+            
+            
 
             try
             {
+                
                 // Create a Trunk Base Settings object
+                
                 TrunkBase result = apiInstance.PostTelephonyProvidersEdgesTrunkbasesettings(body);
                 Debug.WriteLine(result);
             }
@@ -6146,14 +7470,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
+            
             var body = new Edge(); // Edge | Edge
+            
+            
 
             try
             {
+                
                 // Update a edge.
+                
                 Edge result = apiInstance.PutTelephonyProvidersEdge(edgeId, body);
                 Debug.WriteLine(result);
             }
@@ -6204,15 +7540,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var lineId = lineId_example;  // string | Line ID
+            
+            
+            
+            
+            
             var body = new EdgeLine(); // EdgeLine | Line
+            
+            
 
             try
             {
+                
                 // Update a line.
+                
                 EdgeLine result = apiInstance.PutTelephonyProvidersEdgeLine(edgeId, lineId, body);
                 Debug.WriteLine(result);
             }
@@ -6264,15 +7616,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeId = edgeId_example;  // string | Edge ID
+            
+            
+            
+            
             var interfaceId = interfaceId_example;  // string | Interface ID
+            
+            
+            
+            
+            
             var body = new DomainLogicalInterface(); // DomainLogicalInterface | Logical interface
+            
+            
 
             try
             {
+                
                 // Update an edge logical interface.
+                
                 DomainLogicalInterface result = apiInstance.PutTelephonyProvidersEdgeLogicalinterface(edgeId, interfaceId, body);
                 Debug.WriteLine(result);
             }
@@ -6324,14 +7692,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var certificateId = certificateId_example;  // string | Certificate ID
+            
+            
+            
+            
+            
             var body = new DomainCertificateAuthority(); // DomainCertificateAuthority | Certificate authority
+            
+            
 
             try
             {
+                
                 // Update a certificate authority.
+                
                 DomainCertificateAuthority result = apiInstance.PutTelephonyProvidersEdgesCertificateauthority(certificateId, body);
                 Debug.WriteLine(result);
             }
@@ -6382,14 +7762,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var didId = didId_example;  // string | DID ID
+            
+            
+            
+            
+            
             var body = new DID(); // DID | DID
+            
+            
 
             try
             {
+                
                 // Update a DID by ID.
+                
                 DID result = apiInstance.PutTelephonyProvidersEdgesDid(didId, body);
                 Debug.WriteLine(result);
             }
@@ -6440,14 +7832,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var didPoolId = didPoolId_example;  // string | DID pool ID
+            
+            
+            
+            
+            
             var body = new DIDPool(); // DIDPool | DID pool
+            
+            
 
             try
             {
+                
                 // Update a DID Pool by ID.
+                
                 DIDPool result = apiInstance.PutTelephonyProvidersEdgesDidpool(didPoolId, body);
                 Debug.WriteLine(result);
             }
@@ -6498,14 +7902,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgeGroupId = edgeGroupId_example;  // string | Edge group ID
+            
+            
+            
+            
+            
             var body = new EdgeGroup(); // EdgeGroup | EdgeGroup
+            
+            
 
             try
             {
+                
                 // Update an edge group.
+                
                 EdgeGroup result = apiInstance.PutTelephonyProvidersEdgesEdgegroup(edgeGroupId, body);
                 Debug.WriteLine(result);
             }
@@ -6556,15 +7972,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var edgegroupId = edgegroupId_example;  // string | Edge Group ID
+            
+            
+            
+            
             var edgetrunkbaseId = edgetrunkbaseId_example;  // string | Edge Trunk Base ID
+            
+            
+            
+            
+            
             var body = new EdgeTrunkBase(); // EdgeTrunkBase | EdgeTrunkBase
+            
+            
 
             try
             {
+                
                 // Update the edge trunk base associated with the edge group
+                
                 EdgeTrunkBase result = apiInstance.PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis(edgegroupId, edgetrunkbaseId, body);
                 Debug.WriteLine(result);
             }
@@ -6616,14 +8048,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var endpointId = endpointId_example;  // string | Endpoint ID
+            
+            
+            
+            
+            
             var body = new Endpoint(); // Endpoint | EndpointTemplate
+            
+            
 
             try
             {
+                
                 // Update endpoint
+                
                 Endpoint result = apiInstance.PutTelephonyProvidersEdgesEndpoint(endpointId, body);
                 Debug.WriteLine(result);
             }
@@ -6674,14 +8118,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var extensionId = extensionId_example;  // string | Extension ID
+            
+            
+            
+            
+            
             var body = new Extension(); // Extension | Extension
+            
+            
 
             try
             {
+                
                 // Update an extension by ID.
+                
                 Extension result = apiInstance.PutTelephonyProvidersEdgesExtension(extensionId, body);
                 Debug.WriteLine(result);
             }
@@ -6732,14 +8188,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var extensionPoolId = extensionPoolId_example;  // string | Extension pool ID
+            
+            
+            
+            
+            
             var body = new ExtensionPool(); // ExtensionPool | ExtensionPool
+            
+            
 
             try
             {
+                
                 // Update an extension pool by ID
+                
                 ExtensionPool result = apiInstance.PutTelephonyProvidersEdgesExtensionpool(extensionPoolId, body);
                 Debug.WriteLine(result);
             }
@@ -6790,14 +8258,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            
+            
+            
+            
+            
             var body = new OutboundRoute(); // OutboundRoute | OutboundRoute
+            
+            
 
             try
             {
+                
                 // Update outbound route
+                
                 OutboundRoute result = apiInstance.PutTelephonyProvidersEdgesOutboundroute(outboundRouteId, body);
                 Debug.WriteLine(result);
             }
@@ -6848,14 +8328,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneId = phoneId_example;  // string | Phone ID
+            
+            
+            
+            
+            
             var body = new Phone(); // Phone | Phone
+            
+            
 
             try
             {
+                
                 // Update a Phone by ID
+                
                 Phone result = apiInstance.PutTelephonyProvidersEdgesPhone(phoneId, body);
                 Debug.WriteLine(result);
             }
@@ -6906,14 +8398,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var phoneBaseId = phoneBaseId_example;  // string | Phone base ID
+            
+            
+            
+            
+            
             var body = new PhoneBase(); // PhoneBase | Phone base settings
+            
+            
 
             try
             {
+                
                 // Update a Phone Base Settings by ID
+                
                 PhoneBase result = apiInstance.PutTelephonyProvidersEdgesPhonebasesetting(phoneBaseId, body);
                 Debug.WriteLine(result);
             }
@@ -6964,14 +8468,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
+            
             var body = new Site(); // Site | Site
+            
+            
 
             try
             {
+                
                 // Update a Site by ID.
+                
                 Site result = apiInstance.PutTelephonyProvidersEdgesSite(siteId, body);
                 Debug.WriteLine(result);
             }
@@ -7022,14 +8538,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
+            
             var body = new List<NumberPlan>(); // List<NumberPlan> | List of number plans
+            
+            
 
             try
             {
+                
                 // Update the list of Number Plans.
+                
                 List&lt;NumberPlan&gt; result = apiInstance.PutTelephonyProvidersEdgesSiteNumberplans(siteId, body);
                 Debug.WriteLine(result);
             }
@@ -7080,15 +8608,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var siteId = siteId_example;  // string | Site ID
+            
+            
+            
+            
             var outboundRouteId = outboundRouteId_example;  // string | Outbound route ID
+            
+            
+            
+            
+            
             var body = new OutboundRouteBase(); // OutboundRouteBase | OutboundRoute
+            
+            
 
             try
             {
+                
                 // Update outbound route
+                
                 OutboundRouteBase result = apiInstance.PutTelephonyProvidersEdgesSiteOutboundroute(siteId, outboundRouteId, body);
                 Debug.WriteLine(result);
             }
@@ -7140,14 +8684,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TelephonyProvidersEdgeApi();
+            
+            
             var trunkBaseSettingsId = trunkBaseSettingsId_example;  // string | Trunk Base ID
+            
+            
+            
+            
+            
             var body = new TrunkBase(); // TrunkBase | Trunk base settings
+            
+            
 
             try
             {
+                
                 // Update a Trunk Base Settings object by ID
+                
                 TrunkBase result = apiInstance.PutTelephonyProvidersEdgesTrunkbasesetting(trunkBaseSettingsId, body);
                 Debug.WriteLine(result);
             }

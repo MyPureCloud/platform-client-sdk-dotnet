@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayScheduleData :  IEquatable<IntradayScheduleData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayScheduleData" /> class.
         /// </summary>
+        
+        
         /// <param name="OnQueueTimeSeconds">The total scheduled on-queue time in seconds for all agents in this group.</param>
+        
+        
+        
         /// <param name="ScheduledTimeSeconds">The total scheduled time in seconds for all agents in this group.</param>
+        
+        
         public IntradayScheduleData(int? OnQueueTimeSeconds = null, int? ScheduledTimeSeconds = null)
         {
-            this.OnQueueTimeSeconds = OnQueueTimeSeconds;
-            this.ScheduledTimeSeconds = ScheduledTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.OnQueueTimeSeconds = OnQueueTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScheduledTimeSeconds = ScheduledTimeSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The total scheduled on-queue time in seconds for all agents in this group
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The total scheduled on-queue time in seconds for all agents in this group</value>
         [DataMember(Name="onQueueTimeSeconds", EmitDefaultValue=false)]
         public int? OnQueueTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The total scheduled time in seconds for all agents in this group
         /// </summary>
         /// <value>The total scheduled time in seconds for all agents in this group</value>
         [DataMember(Name="scheduledTimeSeconds", EmitDefaultValue=false)]
         public int? ScheduledTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayScheduleData {\n");
+            
             sb.Append("  OnQueueTimeSeconds: ").Append(OnQueueTimeSeconds).Append("\n");
+            
             sb.Append("  ScheduledTimeSeconds: ").Append(ScheduledTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.OnQueueTimeSeconds != null)
                     hash = hash * 59 + this.OnQueueTimeSeconds.GetHashCode();
+                
                 if (this.ScheduledTimeSeconds != null)
                     hash = hash * 59 + this.ScheduledTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

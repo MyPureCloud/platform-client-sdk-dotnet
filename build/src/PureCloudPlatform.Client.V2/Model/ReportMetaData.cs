@@ -18,26 +18,196 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportMetaData :  IEquatable<ReportMetaData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportMetaData" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Title">Title.</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Keywords">Keywords.</param>
+        
+        
+        
         /// <param name="AvailableLocales">AvailableLocales.</param>
+        
+        
+        
         /// <param name="Parameters">Parameters.</param>
+        
+        
+        
         /// <param name="ExampleUrl">ExampleUrl.</param>
+        
+        
+        
+        
         public ReportMetaData(string Name = null, string Title = null, string Description = null, List<string> Keywords = null, List<string> AvailableLocales = null, List<Parameter> Parameters = null, string ExampleUrl = null)
         {
-            this.Name = Name;
-            this.Title = Title;
-            this.Description = Description;
-            this.Keywords = Keywords;
-            this.AvailableLocales = AvailableLocales;
-            this.Parameters = Parameters;
-            this.ExampleUrl = ExampleUrl;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Title = Title;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Keywords = Keywords;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AvailableLocales = AvailableLocales;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Parameters = Parameters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExampleUrl = ExampleUrl;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -45,47 +215,73 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Keywords
         /// </summary>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public List<string> Keywords { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AvailableLocales
         /// </summary>
         [DataMember(Name="availableLocales", EmitDefaultValue=false)]
         public List<string> AvailableLocales { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public List<Parameter> Parameters { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExampleUrl
         /// </summary>
         [DataMember(Name="exampleUrl", EmitDefaultValue=false)]
         public string ExampleUrl { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -94,15 +290,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportMetaData {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Title: ").Append(Title).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
+            
             sb.Append("  AvailableLocales: ").Append(AvailableLocales).Append("\n");
+            
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
+            
             sb.Append("  ExampleUrl: ").Append(ExampleUrl).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -197,24 +403,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Keywords != null)
                     hash = hash * 59 + this.Keywords.GetHashCode();
+                
                 if (this.AvailableLocales != null)
                     hash = hash * 59 + this.AvailableLocales.GetHashCode();
+                
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
+                
                 if (this.ExampleUrl != null)
                     hash = hash * 59 + this.ExampleUrl.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

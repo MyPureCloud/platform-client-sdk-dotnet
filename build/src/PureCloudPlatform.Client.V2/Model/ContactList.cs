@@ -18,24 +18,145 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactList :  IEquatable<ContactList>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ContactList() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactList" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
+        
+        
+        
+        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        
+        
+        
         /// <param name="ColumnNames">the contact column names (required).</param>
+        
+        
+        
         /// <param name="PhoneColumns">the columns containing phone numbers (required).</param>
+        
+        
+        
         /// <param name="ImportStatus">the status of the import process.</param>
+        
+        
+        
         /// <param name="PreviewModeColumnName">the name of the column that holds the indicators for contacts that are to be dialed in preview mode only.</param>
+        
+        
+        
         /// <param name="PreviewModeAcceptedValues">list of user-defined values indicating the contact is to be dialed in preview mode only.</param>
+        
+        
+        
+        
+        
         /// <param name="AttemptLimits">the associated AttemptLimits.</param>
+        
+        
+        
+        
         public ContactList(string Name = null, int? Version = null, List<string> ColumnNames = null, List<ContactPhoneNumberColumn> PhoneColumns = null, ImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, UriReference AttemptLimits = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "ColumnNames" is required (not null)
             if (ColumnNames == null)
             {
@@ -45,6 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.ColumnNames = ColumnNames;
             }
+            
+            
+            
+            
+            
             // to ensure "PhoneColumns" is required (not null)
             if (PhoneColumns == null)
             {
@@ -54,13 +180,105 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.PhoneColumns = PhoneColumns;
             }
-            this.Name = Name;
-            this.Version = Version;
-            this.ImportStatus = ImportStatus;
-            this.PreviewModeColumnName = PreviewModeColumnName;
-            this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
-            this.AttemptLimits = AttemptLimits;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ImportStatus = ImportStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PreviewModeColumnName = PreviewModeColumnName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PreviewModeAcceptedValues = PreviewModeAcceptedValues;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.AttemptLimits = AttemptLimits;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -68,77 +286,115 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
+        
+        
+        
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+        
+        
+        
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// the contact column names
         /// </summary>
         /// <value>the contact column names</value>
         [DataMember(Name="columnNames", EmitDefaultValue=false)]
         public List<string> ColumnNames { get; set; }
+        
+        
+        
         /// <summary>
         /// the columns containing phone numbers
         /// </summary>
         /// <value>the columns containing phone numbers</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<ContactPhoneNumberColumn> PhoneColumns { get; set; }
+        
+        
+        
         /// <summary>
         /// the status of the import process
         /// </summary>
         /// <value>the status of the import process</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// the name of the column that holds the indicators for contacts that are to be dialed in preview mode only
         /// </summary>
         /// <value>the name of the column that holds the indicators for contacts that are to be dialed in preview mode only</value>
         [DataMember(Name="previewModeColumnName", EmitDefaultValue=false)]
         public string PreviewModeColumnName { get; set; }
+        
+        
+        
         /// <summary>
         /// list of user-defined values indicating the contact is to be dialed in preview mode only
         /// </summary>
         /// <value>list of user-defined values indicating the contact is to be dialed in preview mode only</value>
         [DataMember(Name="previewModeAcceptedValues", EmitDefaultValue=false)]
         public List<string> PreviewModeAcceptedValues { get; set; }
+        
+        
+        
         /// <summary>
         /// the number of contacts in the contact list
         /// </summary>
         /// <value>the number of contacts in the contact list</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
+        
+        
+        
         /// <summary>
         /// the associated AttemptLimits
         /// </summary>
         /// <value>the associated AttemptLimits</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
         public UriReference AttemptLimits { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -147,19 +403,33 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactList {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  ColumnNames: ").Append(ColumnNames).Append("\n");
+            
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
+            
             sb.Append("  ImportStatus: ").Append(ImportStatus).Append("\n");
+            
             sb.Append("  PreviewModeColumnName: ").Append(PreviewModeColumnName).Append("\n");
+            
             sb.Append("  PreviewModeAcceptedValues: ").Append(PreviewModeAcceptedValues).Append("\n");
+            
             sb.Append("  Size: ").Append(Size).Append("\n");
+            
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -274,32 +544,46 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.ColumnNames != null)
                     hash = hash * 59 + this.ColumnNames.GetHashCode();
+                
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
+                
                 if (this.ImportStatus != null)
                     hash = hash * 59 + this.ImportStatus.GetHashCode();
+                
                 if (this.PreviewModeColumnName != null)
                     hash = hash * 59 + this.PreviewModeColumnName.GetHashCode();
+                
                 if (this.PreviewModeAcceptedValues != null)
                     hash = hash * 59 + this.PreviewModeAcceptedValues.GetHashCode();
+                
                 if (this.Size != null)
                     hash = hash * 59 + this.Size.GetHashCode();
+                
                 if (this.AttemptLimits != null)
                     hash = hash * 59 + this.AttemptLimits.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

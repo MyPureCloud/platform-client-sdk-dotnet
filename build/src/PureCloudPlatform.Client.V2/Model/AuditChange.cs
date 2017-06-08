@@ -18,41 +18,140 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditChange :  IEquatable<AuditChange>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditChange" /> class.
         /// </summary>
+        
+        
         /// <param name="Property">Property.</param>
+        
+        
+        
         /// <param name="Entity">Entity.</param>
+        
+        
+        
         /// <param name="OldValues">OldValues.</param>
+        
+        
+        
         /// <param name="NewValues">NewValues.</param>
+        
+        
         public AuditChange(string Property = null, AuditEntityReference Entity = null, List<string> OldValues = null, List<string> NewValues = null)
         {
-            this.Property = Property;
-            this.Entity = Entity;
-            this.OldValues = OldValues;
-            this.NewValues = NewValues;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Property = Property;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Entity = Entity;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OldValues = OldValues;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NewValues = NewValues;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Property
         /// </summary>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntityReference Entity { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets OldValues
         /// </summary>
         [DataMember(Name="oldValues", EmitDefaultValue=false)]
         public List<string> OldValues { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NewValues
         /// </summary>
         [DataMember(Name="newValues", EmitDefaultValue=false)]
         public List<string> NewValues { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,10 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditChange {\n");
+            
             sb.Append("  Property: ").Append(Property).Append("\n");
+            
             sb.Append("  Entity: ").Append(Entity).Append("\n");
+            
             sb.Append("  OldValues: ").Append(OldValues).Append("\n");
+            
             sb.Append("  NewValues: ").Append(NewValues).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,14 +238,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
+                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
+                
                 if (this.OldValues != null)
                     hash = hash * 59 + this.OldValues.GetHashCode();
+                
                 if (this.NewValues != null)
                     hash = hash * 59 + this.NewValues.GetHashCode();
+                
                 return hash;
             }
         }

@@ -62,12 +62,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete ADFS Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersAdfs();
                 Debug.WriteLine(result);
             }
@@ -113,12 +117,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete Customer Interaction Center (CIC) Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersCic();
                 Debug.WriteLine(result);
             }
@@ -164,12 +172,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete G Suite Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersGsuite();
                 Debug.WriteLine(result);
             }
@@ -215,12 +227,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete IdentityNow Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersIdentitynow();
                 Debug.WriteLine(result);
             }
@@ -266,12 +282,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete Okta Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersOkta();
                 Debug.WriteLine(result);
             }
@@ -317,12 +337,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete OneLogin Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersOnelogin();
                 Debug.WriteLine(result);
             }
@@ -368,12 +392,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete Ping Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersPing();
                 Debug.WriteLine(result);
             }
@@ -419,12 +447,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete PureCloud Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersPurecloud();
                 Debug.WriteLine(result);
             }
@@ -470,12 +502,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Delete Salesforce Identity Provider
+                
                 Empty result = apiInstance.DeleteIdentityprovidersSalesforce();
                 Debug.WriteLine(result);
             }
@@ -521,12 +557,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // The list of identity providers
+                
                 OAuthProviderEntityListing result = apiInstance.GetIdentityproviders();
                 Debug.WriteLine(result);
             }
@@ -572,12 +612,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get ADFS Identity Provider
+                
                 ADFS result = apiInstance.GetIdentityprovidersAdfs();
                 Debug.WriteLine(result);
             }
@@ -623,12 +667,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get Customer Interaction Center (CIC) Identity Provider
+                
                 CustomerInteractionCenter result = apiInstance.GetIdentityprovidersCic();
                 Debug.WriteLine(result);
             }
@@ -674,12 +722,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get G Suite Identity Provider
+                
                 GSuite result = apiInstance.GetIdentityprovidersGsuite();
                 Debug.WriteLine(result);
             }
@@ -725,12 +777,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get IdentityNow Provider
+                
                 IdentityNow result = apiInstance.GetIdentityprovidersIdentitynow();
                 Debug.WriteLine(result);
             }
@@ -776,12 +832,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get Okta Identity Provider
+                
                 Okta result = apiInstance.GetIdentityprovidersOkta();
                 Debug.WriteLine(result);
             }
@@ -827,12 +887,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get OneLogin Identity Provider
+                
                 OneLogin result = apiInstance.GetIdentityprovidersOnelogin();
                 Debug.WriteLine(result);
             }
@@ -878,12 +942,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get Ping Identity Provider
+                
                 PingIdentity result = apiInstance.GetIdentityprovidersPing();
                 Debug.WriteLine(result);
             }
@@ -929,12 +997,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get PureCloud Identity Provider
+                
                 PureCloudPlatform.Client.V2.Model.PureCloud result = apiInstance.GetIdentityprovidersPurecloud();
                 Debug.WriteLine(result);
             }
@@ -980,12 +1052,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
 
             try
             {
+                
                 // Get Salesforce Identity Provider
+                
                 Salesforce result = apiInstance.GetIdentityprovidersSalesforce();
                 Debug.WriteLine(result);
             }
@@ -1031,13 +1107,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new ADFS(); // ADFS | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create ADFS Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersAdfs(body);
                 Debug.WriteLine(result);
             }
@@ -1087,13 +1171,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new CustomerInteractionCenter(); // CustomerInteractionCenter | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create Customer Interaction Center (CIC) Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersCic(body);
                 Debug.WriteLine(result);
             }
@@ -1143,13 +1235,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new GSuite(); // GSuite | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create G Suite Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersGsuite(body);
                 Debug.WriteLine(result);
             }
@@ -1199,13 +1299,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new IdentityNow(); // IdentityNow | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create IdentityNow Provider
+                
                 IdentityNow result = apiInstance.PutIdentityprovidersIdentitynow(body);
                 Debug.WriteLine(result);
             }
@@ -1255,13 +1363,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new Okta(); // Okta | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create Okta Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersOkta(body);
                 Debug.WriteLine(result);
             }
@@ -1311,13 +1427,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new OneLogin(); // OneLogin | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create OneLogin Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersOnelogin(body);
                 Debug.WriteLine(result);
             }
@@ -1367,13 +1491,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new PingIdentity(); // PingIdentity | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create Ping Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersPing(body);
                 Debug.WriteLine(result);
             }
@@ -1423,13 +1555,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new PureCloudPlatform.Client.V2.Model.PureCloud(); // PureCloudPlatform.Client.V2.Model.PureCloud | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create PureCloud Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersPurecloud(body);
                 Debug.WriteLine(result);
             }
@@ -1479,13 +1619,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new IdentityProviderApi();
+            
+            
+            
             var body = new Salesforce(); // Salesforce | Provider
+            
+            
 
             try
             {
+                
                 // Update/Create Salesforce Identity Provider
+                
                 OAuthProvider result = apiInstance.PutIdentityprovidersSalesforce(body);
                 Debug.WriteLine(result);
             }

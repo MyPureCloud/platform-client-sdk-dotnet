@@ -18,6 +18,13 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ObservationQuery :  IEquatable<ObservationQuery>
     {
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
@@ -284,18 +291,38 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "oUserRoutingStatuses")]
             Ouserroutingstatuses
         }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationQuery" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ObservationQuery() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationQuery" /> class.
         /// </summary>
+        
+        
         /// <param name="Filter">Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters (required).</param>
+        
+        
+        
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
+        
+        
         public ObservationQuery(AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null)
         {
+            
+            
+            
             // to ensure "Filter" is required (not null)
             if (Filter == null)
             {
@@ -305,8 +332,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Filter = Filter;
             }
-            this.Metrics = Metrics;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Metrics = Metrics;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters
@@ -314,12 +363,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Filter to return a subset of observations. Expresses boolean logical predicates as well as dimensional filters</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public AnalyticsQueryFilter Filter { get; set; }
+        
+        
+        
         /// <summary>
         /// Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).
         /// </summary>
         /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -328,8 +382,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ObservationQuery {\n");
+            
             sb.Append("  Filter: ").Append(Filter).Append("\n");
+            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -389,10 +446,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
+                
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AggregateViewData :  IEquatable<AggregateViewData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateViewData" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Stats">Stats.</param>
+        
+        
         public AggregateViewData(string Name = null, StatisticalSummary Stats = null)
         {
-            this.Name = Name;
-            this.Stats = Stats;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Stats = Stats;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Stats
         /// </summary>
         [DataMember(Name="stats", EmitDefaultValue=false)]
         public StatisticalSummary Stats { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AggregateViewData {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Stats: ").Append(Stats).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Stats != null)
                     hash = hash * 59 + this.Stats.GetHashCode();
+                
                 return hash;
             }
         }

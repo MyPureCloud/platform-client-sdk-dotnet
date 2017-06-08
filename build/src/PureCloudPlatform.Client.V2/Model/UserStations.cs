@@ -18,20 +18,108 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserStations :  IEquatable<UserStations>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserStations" /> class.
         /// </summary>
+        
+        
         /// <param name="AssociatedStation">Current associated station for this user..</param>
+        
+        
+        
         /// <param name="EffectiveStation">The station where the user can be reached based on their default and associated station..</param>
+        
+        
+        
         /// <param name="DefaultStation">Default station to be used if not associated with a station..</param>
+        
+        
+        
         /// <param name="LastAssociatedStation">Last associated station for this user..</param>
+        
+        
         public UserStations(UserStation AssociatedStation = null, UserStation EffectiveStation = null, UserStation DefaultStation = null, UserStation LastAssociatedStation = null)
         {
-            this.AssociatedStation = AssociatedStation;
-            this.EffectiveStation = EffectiveStation;
-            this.DefaultStation = DefaultStation;
-            this.LastAssociatedStation = LastAssociatedStation;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.AssociatedStation = AssociatedStation;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EffectiveStation = EffectiveStation;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DefaultStation = DefaultStation;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LastAssociatedStation = LastAssociatedStation;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Current associated station for this user.
@@ -39,24 +127,35 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Current associated station for this user.</value>
         [DataMember(Name="associatedStation", EmitDefaultValue=false)]
         public UserStation AssociatedStation { get; set; }
+        
+        
+        
         /// <summary>
         /// The station where the user can be reached based on their default and associated station.
         /// </summary>
         /// <value>The station where the user can be reached based on their default and associated station.</value>
         [DataMember(Name="effectiveStation", EmitDefaultValue=false)]
         public UserStation EffectiveStation { get; set; }
+        
+        
+        
         /// <summary>
         /// Default station to be used if not associated with a station.
         /// </summary>
         /// <value>Default station to be used if not associated with a station.</value>
         [DataMember(Name="defaultStation", EmitDefaultValue=false)]
         public UserStation DefaultStation { get; set; }
+        
+        
+        
         /// <summary>
         /// Last associated station for this user.
         /// </summary>
         /// <value>Last associated station for this user.</value>
         [DataMember(Name="lastAssociatedStation", EmitDefaultValue=false)]
         public UserStation LastAssociatedStation { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -65,10 +164,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserStations {\n");
+            
             sb.Append("  AssociatedStation: ").Append(AssociatedStation).Append("\n");
+            
             sb.Append("  EffectiveStation: ").Append(EffectiveStation).Append("\n");
+            
             sb.Append("  DefaultStation: ").Append(DefaultStation).Append("\n");
+            
             sb.Append("  LastAssociatedStation: ").Append(LastAssociatedStation).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,14 +242,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.AssociatedStation != null)
                     hash = hash * 59 + this.AssociatedStation.GetHashCode();
+                
                 if (this.EffectiveStation != null)
                     hash = hash * 59 + this.EffectiveStation.GetHashCode();
+                
                 if (this.DefaultStation != null)
                     hash = hash * 59 + this.DefaultStation.GetHashCode();
+                
                 if (this.LastAssociatedStation != null)
                     hash = hash * 59 + this.LastAssociatedStation.GetHashCode();
+                
                 return hash;
             }
         }

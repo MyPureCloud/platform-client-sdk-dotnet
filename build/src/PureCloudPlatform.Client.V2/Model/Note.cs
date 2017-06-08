@@ -18,22 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Note :  IEquatable<Note>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Note" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Note() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Note" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="NoteText">NoteText.</param>
+        
+        
+        
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="CreatedBy">The author of this note (required).</param>
+        
+        
+        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
+        
+        
+        
+        
         public Note(string Name = null, string NoteText = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, User CreatedBy = null, List<ExternalDataSource> ExternalDataSources = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "CreatedBy" is required (not null)
             if (CreatedBy == null)
             {
@@ -43,12 +131,72 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.CreatedBy = CreatedBy;
             }
-            this.Name = Name;
-            this.NoteText = NoteText;
-            this.ModifyDate = ModifyDate;
-            this.CreateDate = CreateDate;
-            this.ExternalDataSources = ExternalDataSources;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NoteText = NoteText;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifyDate = ModifyDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreateDate = CreateDate;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalDataSources = ExternalDataSources;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -56,46 +204,69 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NoteText
         /// </summary>
         [DataMember(Name="noteText", EmitDefaultValue=false)]
         public string NoteText { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifyDate", EmitDefaultValue=false)]
         public DateTime? ModifyDate { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createDate", EmitDefaultValue=false)]
         public DateTime? CreateDate { get; set; }
+        
+        
+        
         /// <summary>
         /// The author of this note
         /// </summary>
         /// <value>The author of this note</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
         [DataMember(Name="externalDataSources", EmitDefaultValue=false)]
         public List<ExternalDataSource> ExternalDataSources { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,14 +275,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Note {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  NoteText: ").Append(NoteText).Append("\n");
+            
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
+            
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -201,22 +381,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.NoteText != null)
                     hash = hash * 59 + this.NoteText.GetHashCode();
+                
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
+                
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

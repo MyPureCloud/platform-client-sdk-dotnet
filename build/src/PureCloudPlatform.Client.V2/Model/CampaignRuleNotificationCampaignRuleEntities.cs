@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleNotificationCampaignRuleEntities :  IEquatable<CampaignRuleNotificationCampaignRuleEntities>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleNotificationCampaignRuleEntities" /> class.
         /// </summary>
+        
+        
         /// <param name="Campaigns">Campaigns.</param>
+        
+        
+        
         /// <param name="Sequences">Sequences.</param>
+        
+        
         public CampaignRuleNotificationCampaignRuleEntities(List<DocumentDataV2NotificationCreatedBy> Campaigns = null, List<CampaignRuleNotificationUriReference> Sequences = null)
         {
-            this.Campaigns = Campaigns;
-            this.Sequences = Sequences;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Campaigns = Campaigns;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Sequences = Sequences;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Campaigns
         /// </summary>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<DocumentDataV2NotificationCreatedBy> Campaigns { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Sequences
         /// </summary>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
         public List<CampaignRuleNotificationUriReference> Sequences { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleNotificationCampaignRuleEntities {\n");
+            
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
+            
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Campaigns != null)
                     hash = hash * 59 + this.Campaigns.GetHashCode();
+                
                 if (this.Sequences != null)
                     hash = hash * 59 + this.Sequences.GetHashCode();
+                
                 return hash;
             }
         }

@@ -8,7 +8,7 @@ title: CoverSheet
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Notes** | **string** | Text to be added to the coversheet | [optional] |
-| **Locale** | **string** | Locale, e.g. &#x3D; en-US | [optional] |
+| **Locale** | **string** | Locale, e.g. = en-US | [optional] |
 {: class="table table-striped"}
 
 

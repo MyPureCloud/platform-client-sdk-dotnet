@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserRoutingStatusNotificationRoutingStatus :  IEquatable<UserRoutingStatusNotificationRoutingStatus>
     {
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -62,27 +64,79 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusNotificationRoutingStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="Status">Status.</param>
+        
+        
+        
         /// <param name="StartTime">StartTime.</param>
+        
+        
         public UserRoutingStatusNotificationRoutingStatus(StatusEnum? Status = null, DateTime? StartTime = null)
         {
-            this.Status = Status;
-            this.StartTime = StartTime;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Status = Status;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartTime = StartTime;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -91,8 +145,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserRoutingStatusNotificationRoutingStatus {\n");
+            
             sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,10 +209,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+                
                 return hash;
             }
         }

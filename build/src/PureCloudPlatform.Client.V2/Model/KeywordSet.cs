@@ -18,6 +18,31 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KeywordSet :  IEquatable<KeywordSet>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ParticipantPurposes
         /// </summary>
@@ -44,23 +69,93 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CUSTOMER")]
             Customer
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="KeywordSet" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KeywordSet() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="KeywordSet" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Queues">Queues.</param>
+        
+        
+        
         /// <param name="Language">Language code, such as &#39;en-US&#39; (required).</param>
+        
+        
+        
         /// <param name="Agents">Agents.</param>
+        
+        
+        
         /// <param name="Keywords">The list of keywords to be used for keyword spotting. (required).</param>
+        
+        
+        
         /// <param name="ParticipantPurposes">The types of participants to use keyword spotting on. (required).</param>
+        
+        
+        
+        
         public KeywordSet(string Name = null, string Description = null, List<Queue> Queues = null, string Language = null, List<User> Agents = null, List<Keyword> Keywords = null, List<ParticipantPurposesEnum> ParticipantPurposes = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Language" is required (not null)
             if (Language == null)
             {
@@ -70,6 +165,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Language = Language;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Keywords" is required (not null)
             if (Keywords == null)
             {
@@ -79,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Keywords = Keywords;
             }
+            
+            
+            
+            
+            
             // to ensure "ParticipantPurposes" is required (not null)
             if (ParticipantPurposes == null)
             {
@@ -88,11 +197,67 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.ParticipantPurposes = ParticipantPurposes;
             }
-            this.Name = Name;
-            this.Description = Description;
-            this.Queues = Queues;
-            this.Agents = Agents;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Queues = Queues;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Agents = Agents;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -100,50 +265,76 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Queues
         /// </summary>
         [DataMember(Name="queues", EmitDefaultValue=false)]
         public List<Queue> Queues { get; set; }
+        
+        
+        
         /// <summary>
         /// Language code, such as &#39;en-US&#39;
         /// </summary>
         /// <value>Language code, such as &#39;en-US&#39;</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Agents
         /// </summary>
         [DataMember(Name="agents", EmitDefaultValue=false)]
         public List<User> Agents { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of keywords to be used for keyword spotting.
         /// </summary>
         /// <value>The list of keywords to be used for keyword spotting.</value>
         [DataMember(Name="keywords", EmitDefaultValue=false)]
         public List<Keyword> Keywords { get; set; }
+        
+        
+        
         /// <summary>
         /// The types of participants to use keyword spotting on.
         /// </summary>
         /// <value>The types of participants to use keyword spotting on.</value>
         [DataMember(Name="participantPurposes", EmitDefaultValue=false)]
         public List<ParticipantPurposesEnum> ParticipantPurposes { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,15 +343,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KeywordSet {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Queues: ").Append(Queues).Append("\n");
+            
             sb.Append("  Language: ").Append(Language).Append("\n");
+            
             sb.Append("  Agents: ").Append(Agents).Append("\n");
+            
             sb.Append("  Keywords: ").Append(Keywords).Append("\n");
+            
             sb.Append("  ParticipantPurposes: ").Append(ParticipantPurposes).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -255,24 +456,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Queues != null)
                     hash = hash * 59 + this.Queues.GetHashCode();
+                
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+                
                 if (this.Agents != null)
                     hash = hash * 59 + this.Agents.GetHashCode();
+                
                 if (this.Keywords != null)
                     hash = hash * 59 + this.Keywords.GetHashCode();
+                
                 if (this.ParticipantPurposes != null)
                     hash = hash * 59 + this.ParticipantPurposes.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

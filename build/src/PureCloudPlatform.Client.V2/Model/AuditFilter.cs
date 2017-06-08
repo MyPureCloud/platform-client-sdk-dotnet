@@ -18,20 +18,60 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AuditFilter :  IEquatable<AuditFilter>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditFilter" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AuditFilter() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AuditFilter" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">The name of the field by which to filter. (required).</param>
+        
+        
+        
         /// <param name="Type">The type of the filter, DATE or STRING. (required).</param>
+        
+        
+        
         /// <param name="_Operator">The operation that the filter performs. (required).</param>
+        
+        
+        
         /// <param name="Values">The values to make the filter comparison against. (required).</param>
+        
+        
         public AuditFilter(string Name = null, string Type = null, string _Operator = null, List<string> Values = null)
         {
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -41,6 +81,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -50,6 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
+            
+            
+            
+            
+            
             // to ensure "_Operator" is required (not null)
             if (_Operator == null)
             {
@@ -59,6 +109,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this._Operator = _Operator;
             }
+            
+            
+            
+            
+            
             // to ensure "Values" is required (not null)
             if (Values == null)
             {
@@ -68,7 +123,29 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Values = Values;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The name of the field by which to filter.
@@ -76,24 +153,35 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the field by which to filter.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The type of the filter, DATE or STRING.
         /// </summary>
         /// <value>The type of the filter, DATE or STRING.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// The operation that the filter performs.
         /// </summary>
         /// <value>The operation that the filter performs.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public string _Operator { get; set; }
+        
+        
+        
         /// <summary>
         /// The values to make the filter comparison against.
         /// </summary>
         /// <value>The values to make the filter comparison against.</value>
         [DataMember(Name="values", EmitDefaultValue=false)]
         public List<string> Values { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,10 +190,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AuditFilter {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Values: ").Append(Values).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,14 +268,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Values != null)
                     hash = hash * 59 + this.Values.GetHashCode();
+                
                 return hash;
             }
         }

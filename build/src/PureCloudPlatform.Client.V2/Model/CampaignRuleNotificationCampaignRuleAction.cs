@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleNotificationCampaignRuleAction :  IEquatable<CampaignRuleNotificationCampaignRuleAction>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionType
         /// </summary>
@@ -68,48 +76,163 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RECYCLE_CAMPAIGN")]
             RecycleCampaign
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionType
         /// </summary>
         [DataMember(Name="actionType", EmitDefaultValue=false)]
         public ActionTypeEnum? ActionType { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleNotificationCampaignRuleAction" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Parameters">Parameters.</param>
+        
+        
+        
         /// <param name="ActionType">ActionType.</param>
+        
+        
+        
         /// <param name="CampaignRuleActionEntities">CampaignRuleActionEntities.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public CampaignRuleNotificationCampaignRuleAction(string Id = null, Dictionary<string, string> Parameters = null, ActionTypeEnum? ActionType = null, CampaignRuleNotificationCampaignRuleActionEntities CampaignRuleActionEntities = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.Parameters = Parameters;
-            this.ActionType = ActionType;
-            this.CampaignRuleActionEntities = CampaignRuleActionEntities;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Parameters = Parameters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActionType = ActionType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CampaignRuleActionEntities = CampaignRuleActionEntities;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public Dictionary<string, string> Parameters { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignRuleActionEntities
         /// </summary>
         [DataMember(Name="campaignRuleActionEntities", EmitDefaultValue=false)]
         public CampaignRuleNotificationCampaignRuleActionEntities CampaignRuleActionEntities { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,11 +241,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleNotificationCampaignRuleAction {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
+            
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
+            
             sb.Append("  CampaignRuleActionEntities: ").Append(CampaignRuleActionEntities).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -197,16 +326,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
+                
                 if (this.ActionType != null)
                     hash = hash * 59 + this.ActionType.GetHashCode();
+                
                 if (this.CampaignRuleActionEntities != null)
                     hash = hash * 59 + this.CampaignRuleActionEntities.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

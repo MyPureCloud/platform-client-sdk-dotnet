@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IVoicemailApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Delete a message.
         /// </summary>
@@ -35,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteVoicemailMessageWithHttpInfo (string messageId);
+        
         /// <summary>
         /// Delete all voicemail messages
         /// </summary>
@@ -54,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteVoicemailMessagesWithHttpInfo ();
+        
         /// <summary>
         /// Get the group&#39;s mailbox information
         /// </summary>
@@ -75,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">groupId</param>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         ApiResponse<VoicemailMailboxInfo> GetVoicemailGroupMailboxWithHttpInfo (string groupId);
+        
         /// <summary>
         /// List voicemail messages
         /// </summary>
@@ -100,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         ApiResponse<VoicemailMessageEntityListing> GetVoicemailGroupMessagesWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get a group&#39;s voicemail policy
         /// </summary>
@@ -121,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
         ApiResponse<VoicemailGroupPolicy> GetVoicemailGroupPolicyWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information
         /// </summary>
@@ -140,6 +147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         ApiResponse<VoicemailMailboxInfo> GetVoicemailMailboxWithHttpInfo ();
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information
         /// </summary>
@@ -159,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         ApiResponse<VoicemailMailboxInfo> GetVoicemailMeMailboxWithHttpInfo ();
+        
         /// <summary>
         /// List voicemail messages
         /// </summary>
@@ -182,6 +191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         ApiResponse<VoicemailMessageEntityListing> GetVoicemailMeMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get the current user&#39;s voicemail policy
         /// </summary>
@@ -201,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         ApiResponse<VoicemailUserPolicy> GetVoicemailMePolicyWithHttpInfo ();
+        
         /// <summary>
         /// Get message.
         /// </summary>
@@ -224,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
         ApiResponse<VoicemailMessage> GetVoicemailMessageWithHttpInfo (string messageId, List<string> expand = null);
+        
         /// <summary>
         /// Get media playback URI for this message
         /// </summary>
@@ -247,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
         ApiResponse<VoicemailMediaInfo> GetVoicemailMessageMediaWithHttpInfo (string messageId, string formatId = null);
+        
         /// <summary>
         /// List voicemail messages
         /// </summary>
@@ -270,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         ApiResponse<VoicemailMessageEntityListing> GetVoicemailMessagesWithHttpInfo (string ids = null, List<string> expand = null);
+        
         /// <summary>
         /// Get a policy
         /// </summary>
@@ -289,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
         ApiResponse<VoicemailOrganizationPolicy> GetVoicemailPolicyWithHttpInfo ();
+        
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search
         /// </summary>
@@ -312,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
         ApiResponse<VoicemailsSearchResponse> GetVoicemailSearchWithHttpInfo (string q64, List<string> expand = null);
+        
         /// <summary>
         /// Get a user&#39;s voicemail policy
         /// </summary>
@@ -333,6 +349,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         ApiResponse<VoicemailUserPolicy> GetVoicemailUserpolicyWithHttpInfo (string userId);
+        
         /// <summary>
         /// Update a group&#39;s voicemail policy
         /// </summary>
@@ -356,6 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
         ApiResponse<VoicemailGroupPolicy> PatchVoicemailGroupPolicyWithHttpInfo (string groupId, VoicemailGroupPolicy body);
+        
         /// <summary>
         /// Update the current user&#39;s voicemail policy
         /// </summary>
@@ -377,6 +395,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         ApiResponse<VoicemailUserPolicy> PatchVoicemailMePolicyWithHttpInfo (VoicemailUserPolicy body);
+        
         /// <summary>
         /// Update a user&#39;s voicemail policy
         /// </summary>
@@ -400,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         ApiResponse<VoicemailUserPolicy> PatchVoicemailUserpolicyWithHttpInfo (string userId, VoicemailUserPolicy body);
+        
         /// <summary>
         /// Copy a voicemail message to a user or group
         /// </summary>
@@ -421,6 +441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
         ApiResponse<VoicemailMessage> PostVoicemailMessagesWithHttpInfo (CopyVoicemailMessage body = null);
+        
         /// <summary>
         /// Search voicemails
         /// </summary>
@@ -442,6 +463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
         ApiResponse<VoicemailsSearchResponse> PostVoicemailSearchWithHttpInfo (VoicemailSearchRequest body);
+        
         /// <summary>
         /// Update a message.
         /// </summary>
@@ -465,6 +487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>ApiResponse of VoicemailMessage</returns>
         ApiResponse<VoicemailMessage> PutVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body);
+        
         /// <summary>
         /// Update a policy
         /// </summary>
@@ -486,8 +509,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
         ApiResponse<VoicemailOrganizationPolicy> PutVoicemailPolicyWithHttpInfo (VoicemailOrganizationPolicy body);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Delete a message.
         /// </summary>
@@ -509,6 +535,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="messageId">Message ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId);
+        
         /// <summary>
         /// Delete all voicemail messages
         /// </summary>
@@ -528,6 +555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessagesAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Get the group&#39;s mailbox information
         /// </summary>
@@ -549,6 +577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">groupId</param>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailGroupMailboxAsyncWithHttpInfo (string groupId);
+        
         /// <summary>
         /// List voicemail messages
         /// </summary>
@@ -574,6 +603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailGroupMessagesAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get a group&#39;s voicemail policy
         /// </summary>
@@ -595,6 +625,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="groupId">Group ID</param>
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> GetVoicemailGroupPolicyAsyncWithHttpInfo (string groupId);
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information
         /// </summary>
@@ -614,6 +645,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMailboxAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information
         /// </summary>
@@ -633,6 +665,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMeMailboxAsyncWithHttpInfo ();
+        
         /// <summary>
         /// List voicemail messages
         /// </summary>
@@ -656,6 +689,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMeMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get the current user&#39;s voicemail policy
         /// </summary>
@@ -675,6 +709,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailMePolicyAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Get message.
         /// </summary>
@@ -698,6 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetVoicemailMessageAsyncWithHttpInfo (string messageId, List<string> expand = null);
+        
         /// <summary>
         /// Get media playback URI for this message
         /// </summary>
@@ -721,6 +757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format. (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetVoicemailMessageMediaAsyncWithHttpInfo (string messageId, string formatId = null);
+        
         /// <summary>
         /// List voicemail messages
         /// </summary>
@@ -744,6 +781,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">If the caller is a known user, which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMessagesAsyncWithHttpInfo (string ids = null, List<string> expand = null);
+        
         /// <summary>
         /// Get a policy
         /// </summary>
@@ -763,6 +801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailPolicyAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search
         /// </summary>
@@ -786,6 +825,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">expand (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetVoicemailSearchAsyncWithHttpInfo (string q64, List<string> expand = null);
+        
         /// <summary>
         /// Get a user&#39;s voicemail policy
         /// </summary>
@@ -807,6 +847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailUserpolicyAsyncWithHttpInfo (string userId);
+        
         /// <summary>
         /// Update a group&#39;s voicemail policy
         /// </summary>
@@ -830,6 +871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The group&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> PatchVoicemailGroupPolicyAsyncWithHttpInfo (string groupId, VoicemailGroupPolicy body);
+        
         /// <summary>
         /// Update the current user&#39;s voicemail policy
         /// </summary>
@@ -851,6 +893,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailMePolicyAsyncWithHttpInfo (VoicemailUserPolicy body);
+        
         /// <summary>
         /// Update a user&#39;s voicemail policy
         /// </summary>
@@ -874,6 +917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user&#39;s voicemail policy</param>
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailUserpolicyAsyncWithHttpInfo (string userId, VoicemailUserPolicy body);
+        
         /// <summary>
         /// Copy a voicemail message to a user or group
         /// </summary>
@@ -895,6 +939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PostVoicemailMessagesAsyncWithHttpInfo (CopyVoicemailMessage body = null);
+        
         /// <summary>
         /// Search voicemails
         /// </summary>
@@ -916,6 +961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Search request options</param>
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostVoicemailSearchAsyncWithHttpInfo (VoicemailSearchRequest body);
+        
         /// <summary>
         /// Update a message.
         /// </summary>
@@ -939,6 +985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">VoicemailMessage</param>
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body);
+        
         /// <summary>
         /// Update a policy
         /// </summary>
@@ -960,7 +1007,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
         System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutVoicemailPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -1050,6 +1099,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Delete a message. 
         /// </summary>
@@ -1069,9 +1119,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteVoicemailMessageWithHttpInfo (string messageId)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->DeleteVoicemailMessage");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1083,13 +1137,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1098,14 +1156,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1127,6 +1196,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Delete a message. 
         /// </summary>
@@ -1147,9 +1217,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessageAsyncWithHttpInfo (string messageId)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->DeleteVoicemailMessage");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1161,13 +1235,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1176,14 +1254,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1205,6 +1295,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Delete all voicemail messages 
         /// </summary>
@@ -1222,6 +1314,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteVoicemailMessagesWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1233,13 +1326,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1248,13 +1345,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1276,6 +1383,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Delete all voicemail messages 
         /// </summary>
@@ -1294,6 +1402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessagesAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1305,13 +1414,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1320,13 +1433,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1348,6 +1472,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Get the group&#39;s mailbox information 
         /// </summary>
@@ -1368,9 +1494,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         public ApiResponse< VoicemailMailboxInfo > GetVoicemailGroupMailboxWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMailbox");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/mailbox";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1382,13 +1512,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1397,14 +1531,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1426,6 +1571,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the group&#39;s mailbox information 
         /// </summary>
@@ -1447,9 +1593,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailGroupMailboxAsyncWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMailbox");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/mailbox";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1461,13 +1611,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1476,14 +1630,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1505,6 +1671,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// List voicemail messages 
         /// </summary>
@@ -1529,9 +1697,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         public ApiResponse< VoicemailMessageEntityListing > GetVoicemailGroupMessagesWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMessages");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1543,13 +1719,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1558,16 +1738,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1589,6 +1782,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// List voicemail messages 
         /// </summary>
@@ -1614,9 +1808,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailGroupMessagesAsyncWithHttpInfo (string groupId, int? pageSize = null, int? pageNumber = null)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMessages");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1628,13 +1830,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1643,16 +1849,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1674,6 +1894,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a group&#39;s voicemail policy 
         /// </summary>
@@ -1694,9 +1916,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
         public ApiResponse< VoicemailGroupPolicy > GetVoicemailGroupPolicyWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupPolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1708,13 +1934,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1723,14 +1953,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1752,6 +1993,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a group&#39;s voicemail policy 
         /// </summary>
@@ -1773,9 +2015,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> GetVoicemailGroupPolicyAsyncWithHttpInfo (string groupId)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupPolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1787,13 +2033,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1802,14 +2052,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1831,6 +2093,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information 
         /// </summary>
@@ -1849,6 +2113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         public ApiResponse< VoicemailMailboxInfo > GetVoicemailMailboxWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/mailbox";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1860,13 +2125,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1875,13 +2144,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1903,6 +2182,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information 
         /// </summary>
@@ -1922,6 +2202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMailboxAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/mailbox";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1933,13 +2214,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1948,13 +2233,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1976,6 +2272,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information 
         /// </summary>
@@ -1994,6 +2292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMailboxInfo</returns>
         public ApiResponse< VoicemailMailboxInfo > GetVoicemailMeMailboxWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/me/mailbox";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2005,13 +2304,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2020,13 +2323,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2048,6 +2361,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the current user&#39;s mailbox information 
         /// </summary>
@@ -2067,6 +2381,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMailboxInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMeMailboxAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/me/mailbox";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2078,13 +2393,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2093,13 +2412,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2121,6 +2451,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// List voicemail messages 
         /// </summary>
@@ -2143,6 +2475,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         public ApiResponse< VoicemailMessageEntityListing > GetVoicemailMeMessagesWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/me/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2154,13 +2491,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2169,15 +2510,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2199,6 +2552,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// List voicemail messages 
         /// </summary>
@@ -2222,6 +2576,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMeMessagesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/me/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2233,13 +2592,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2248,15 +2611,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2278,6 +2654,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the current user&#39;s voicemail policy 
         /// </summary>
@@ -2296,6 +2674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         public ApiResponse< VoicemailUserPolicy > GetVoicemailMePolicyWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/me/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2307,13 +2686,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2322,13 +2705,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2350,6 +2743,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the current user&#39;s voicemail policy 
         /// </summary>
@@ -2369,6 +2763,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailMePolicyAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/me/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2380,13 +2775,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2395,13 +2794,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2423,6 +2833,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get message. 
         /// </summary>
@@ -2445,9 +2857,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMessage</returns>
         public ApiResponse< VoicemailMessage > GetVoicemailMessageWithHttpInfo (string messageId, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessage");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2459,13 +2877,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2474,15 +2896,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2504,6 +2938,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get message. 
         /// </summary>
@@ -2527,9 +2962,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetVoicemailMessageAsyncWithHttpInfo (string messageId, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessage");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2541,13 +2982,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2556,15 +3001,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2586,6 +3044,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get media playback URI for this message 
         /// </summary>
@@ -2608,9 +3068,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMediaInfo</returns>
         public ApiResponse< VoicemailMediaInfo > GetVoicemailMessageMediaWithHttpInfo (string messageId, string formatId = null)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessageMedia");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2622,13 +3088,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2637,15 +3107,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2667,6 +3149,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get media playback URI for this message 
         /// </summary>
@@ -2690,9 +3173,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMediaInfo)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMediaInfo>> GetVoicemailMessageMediaAsyncWithHttpInfo (string messageId, string formatId = null)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessageMedia");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2704,13 +3193,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2719,15 +3212,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2749,6 +3255,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// List voicemail messages 
         /// </summary>
@@ -2771,6 +3279,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMessageEntityListing</returns>
         public ApiResponse< VoicemailMessageEntityListing > GetVoicemailMessagesWithHttpInfo (string ids = null, List<string> expand = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2782,13 +3295,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2797,15 +3314,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2827,6 +3356,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// List voicemail messages 
         /// </summary>
@@ -2850,6 +3380,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMessageEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMessagesAsyncWithHttpInfo (string ids = null, List<string> expand = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2861,13 +3396,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2876,15 +3415,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2906,6 +3458,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a policy 
         /// </summary>
@@ -2924,6 +3478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
         public ApiResponse< VoicemailOrganizationPolicy > GetVoicemailPolicyWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2935,13 +3490,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2950,13 +3509,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2978,6 +3547,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a policy 
         /// </summary>
@@ -2997,6 +3567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailPolicyAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/voicemail/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3008,13 +3579,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3023,13 +3598,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3051,6 +3637,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search 
         /// </summary>
@@ -3073,9 +3661,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
         public ApiResponse< VoicemailsSearchResponse > GetVoicemailSearchWithHttpInfo (string q64, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling VoicemailApi->GetVoicemailSearch");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3087,13 +3681,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3102,15 +3700,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3132,6 +3742,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Search voicemails using the q64 value returned from a previous search 
         /// </summary>
@@ -3155,9 +3766,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> GetVoicemailSearchAsyncWithHttpInfo (string q64, List<string> expand = null)
         {
+            
+            
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling VoicemailApi->GetVoicemailSearch");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3169,13 +3786,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3184,15 +3805,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3214,6 +3848,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a user&#39;s voicemail policy 
         /// </summary>
@@ -3234,9 +3870,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         public ApiResponse< VoicemailUserPolicy > GetVoicemailUserpolicyWithHttpInfo (string userId)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserpolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3248,13 +3888,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3263,14 +3907,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3292,6 +3947,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a user&#39;s voicemail policy 
         /// </summary>
@@ -3313,9 +3969,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailUserpolicyAsyncWithHttpInfo (string userId)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserpolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3327,13 +3987,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3342,14 +4006,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3371,6 +4047,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update a group&#39;s voicemail policy 
         /// </summary>
@@ -3393,12 +4071,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailGroupPolicy</returns>
         public ApiResponse< VoicemailGroupPolicy > PatchVoicemailGroupPolicyWithHttpInfo (string groupId, VoicemailGroupPolicy body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->PatchVoicemailGroupPolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailGroupPolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3410,13 +4095,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3425,7 +4114,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3434,13 +4129,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3462,6 +4163,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update a group&#39;s voicemail policy 
         /// </summary>
@@ -3485,12 +4187,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailGroupPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailGroupPolicy>> PatchVoicemailGroupPolicyAsyncWithHttpInfo (string groupId, VoicemailGroupPolicy body)
         {
+            
+            
             // verify the required parameter 'groupId' is set
             if (groupId == null)
                 throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->PatchVoicemailGroupPolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailGroupPolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3502,13 +4211,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3517,7 +4230,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (groupId != null) localVarPathParams.Add("groupId", Configuration.ApiClient.ParameterToString(groupId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3526,13 +4245,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3554,6 +4280,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update the current user&#39;s voicemail policy 
         /// </summary>
@@ -3574,9 +4302,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         public ApiResponse< VoicemailUserPolicy > PatchVoicemailMePolicyWithHttpInfo (VoicemailUserPolicy body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMePolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/me/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3588,13 +4320,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3603,6 +4339,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3611,13 +4352,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3639,6 +4386,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update the current user&#39;s voicemail policy 
         /// </summary>
@@ -3660,9 +4408,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailMePolicyAsyncWithHttpInfo (VoicemailUserPolicy body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMePolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/me/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3674,13 +4426,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3689,6 +4445,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3697,13 +4458,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3725,6 +4493,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update a user&#39;s voicemail policy 
         /// </summary>
@@ -3747,12 +4517,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailUserPolicy</returns>
         public ApiResponse< VoicemailUserPolicy > PatchVoicemailUserpolicyWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->PatchVoicemailUserpolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailUserpolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3764,13 +4541,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3779,7 +4560,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3788,13 +4575,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3816,6 +4609,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update a user&#39;s voicemail policy 
         /// </summary>
@@ -3839,12 +4633,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailUserPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailUserpolicyAsyncWithHttpInfo (string userId, VoicemailUserPolicy body)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->PatchVoicemailUserpolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailUserpolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3856,13 +4657,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3871,7 +4676,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3880,13 +4691,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3908,6 +4726,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Copy a voicemail message to a user or group 
         /// </summary>
@@ -3928,6 +4748,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMessage</returns>
         public ApiResponse< VoicemailMessage > PostVoicemailMessagesWithHttpInfo (CopyVoicemailMessage body = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3939,13 +4762,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3954,6 +4781,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -3962,13 +4794,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3990,6 +4828,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Copy a voicemail message to a user or group 
         /// </summary>
@@ -4011,6 +4850,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PostVoicemailMessagesAsyncWithHttpInfo (CopyVoicemailMessage body = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4022,13 +4864,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4037,6 +4883,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4045,13 +4896,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4073,6 +4931,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Search voicemails 
         /// </summary>
@@ -4093,9 +4953,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailsSearchResponse</returns>
         public ApiResponse< VoicemailsSearchResponse > PostVoicemailSearchWithHttpInfo (VoicemailSearchRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PostVoicemailSearch");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4107,13 +4971,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4122,6 +4990,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4130,13 +5003,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4158,6 +5037,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Search voicemails 
         /// </summary>
@@ -4179,9 +5059,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailsSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostVoicemailSearchAsyncWithHttpInfo (VoicemailSearchRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PostVoicemailSearch");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/search";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4193,13 +5077,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4208,6 +5096,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4216,13 +5109,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4244,6 +5144,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update a message. 
         /// </summary>
@@ -4266,12 +5168,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailMessage</returns>
         public ApiResponse< VoicemailMessage > PutVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PutVoicemailMessage");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailMessage");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4283,13 +5192,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4298,7 +5211,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4307,13 +5226,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4335,6 +5260,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update a message. 
         /// </summary>
@@ -4358,12 +5284,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PutVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body)
         {
+            
+            
             // verify the required parameter 'messageId' is set
             if (messageId == null)
                 throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PutVoicemailMessage");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailMessage");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/messages/{messageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4375,13 +5308,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4390,7 +5327,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4399,13 +5342,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4427,6 +5377,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update a policy 
         /// </summary>
@@ -4447,9 +5399,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of VoicemailOrganizationPolicy</returns>
         public ApiResponse< VoicemailOrganizationPolicy > PutVoicemailPolicyWithHttpInfo (VoicemailOrganizationPolicy body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailPolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4461,13 +5417,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4476,6 +5436,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4484,13 +5449,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4512,6 +5483,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update a policy 
         /// </summary>
@@ -4533,9 +5505,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (VoicemailOrganizationPolicy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> PutVoicemailPolicyAsyncWithHttpInfo (VoicemailOrganizationPolicy body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailPolicy");
+            
+            
 
             var localVarPath = "/api/v2/voicemail/policy";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4547,13 +5523,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4562,6 +5542,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4570,13 +5555,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4598,5 +5590,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

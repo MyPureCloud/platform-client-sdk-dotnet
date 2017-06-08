@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FlowVersion :  IEquatable<FlowVersion>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -50,37 +64,255 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SAVE")]
             Save
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowVersion" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="CommitVersion">CommitVersion.</param>
+        
+        
+        
         /// <param name="ConfigurationVersion">ConfigurationVersion.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="Secure">Secure.</param>
+        
+        
+        
         /// <param name="CreatedBy">CreatedBy.</param>
+        
+        
+        
         /// <param name="ConfigurationUri">ConfigurationUri.</param>
+        
+        
+        
         /// <param name="DateCreated">DateCreated.</param>
+        
+        
+        
         /// <param name="GenerationId">GenerationId.</param>
+        
+        
+        
         /// <param name="PublishResultUri">PublishResultUri.</param>
+        
+        
+        
+        
         public FlowVersion(string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, User CreatedBy = null, string ConfigurationUri = null, long? DateCreated = null, string GenerationId = null, string PublishResultUri = null)
         {
-            this.Name = Name;
-            this.CommitVersion = CommitVersion;
-            this.ConfigurationVersion = ConfigurationVersion;
-            this.Type = Type;
-            this.Secure = Secure;
-            this.CreatedBy = CreatedBy;
-            this.ConfigurationUri = ConfigurationUri;
-            this.DateCreated = DateCreated;
-            this.GenerationId = GenerationId;
-            this.PublishResultUri = PublishResultUri;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CommitVersion = CommitVersion;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConfigurationVersion = ConfigurationVersion;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Secure = Secure;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConfigurationUri = ConfigurationUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.GenerationId = GenerationId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PublishResultUri = PublishResultUri;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -88,57 +320,91 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CommitVersion
         /// </summary>
         [DataMember(Name="commitVersion", EmitDefaultValue=false)]
         public string CommitVersion { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConfigurationVersion
         /// </summary>
         [DataMember(Name="configurationVersion", EmitDefaultValue=false)]
         public string ConfigurationVersion { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Secure
         /// </summary>
         [DataMember(Name="secure", EmitDefaultValue=false)]
         public bool? Secure { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConfigurationUri
         /// </summary>
         [DataMember(Name="configurationUri", EmitDefaultValue=false)]
         public string ConfigurationUri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public long? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets GenerationId
         /// </summary>
         [DataMember(Name="generationId", EmitDefaultValue=false)]
         public string GenerationId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PublishResultUri
         /// </summary>
         [DataMember(Name="publishResultUri", EmitDefaultValue=false)]
         public string PublishResultUri { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -147,18 +413,31 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowVersion {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  CommitVersion: ").Append(CommitVersion).Append("\n");
+            
             sb.Append("  ConfigurationVersion: ").Append(ConfigurationVersion).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Secure: ").Append(Secure).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  ConfigurationUri: ").Append(ConfigurationUri).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  GenerationId: ").Append(GenerationId).Append("\n");
+            
             sb.Append("  PublishResultUri: ").Append(PublishResultUri).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -268,30 +547,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.CommitVersion != null)
                     hash = hash * 59 + this.CommitVersion.GetHashCode();
+                
                 if (this.ConfigurationVersion != null)
                     hash = hash * 59 + this.ConfigurationVersion.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Secure != null)
                     hash = hash * 59 + this.Secure.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.ConfigurationUri != null)
                     hash = hash * 59 + this.ConfigurationUri.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.GenerationId != null)
                     hash = hash * 59 + this.GenerationId.GetHashCode();
+                
                 if (this.PublishResultUri != null)
                     hash = hash * 59 + this.PublishResultUri.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

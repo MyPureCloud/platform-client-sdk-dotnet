@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterNotificationFilterPredicate :  IEquatable<ContactListFilterNotificationFilterPredicate>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ColumnType
         /// </summary>
@@ -44,6 +49,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ALPHABETIC")]
             Alphabetic
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
@@ -130,62 +139,223 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "IN")]
             In
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ColumnType
         /// </summary>
         [DataMember(Name="columnType", EmitDefaultValue=false)]
         public ColumnTypeEnum? ColumnType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotificationFilterPredicate" /> class.
         /// </summary>
+        
+        
         /// <param name="Column">Column.</param>
+        
+        
+        
         /// <param name="ColumnType">ColumnType.</param>
+        
+        
+        
         /// <param name="_Operator">_Operator.</param>
+        
+        
+        
         /// <param name="Value">Value.</param>
+        
+        
+        
         /// <param name="Range">Range.</param>
+        
+        
+        
         /// <param name="Inverted">Inverted.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ContactListFilterNotificationFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, ContactListFilterNotificationRange Range = null, bool? Inverted = null, Object AdditionalProperties = null)
         {
-            this.Column = Column;
-            this.ColumnType = ColumnType;
-            this._Operator = _Operator;
-            this.Value = Value;
-            this.Range = Range;
-            this.Inverted = Inverted;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Column = Column;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ColumnType = ColumnType;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Range = Range;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Inverted = Inverted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Column
         /// </summary>
         [DataMember(Name="column", EmitDefaultValue=false)]
         public string Column { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Range
         /// </summary>
         [DataMember(Name="range", EmitDefaultValue=false)]
         public ContactListFilterNotificationRange Range { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Inverted
         /// </summary>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -194,13 +364,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterNotificationFilterPredicate {\n");
+            
             sb.Append("  Column: ").Append(Column).Append("\n");
+            
             sb.Append("  ColumnType: ").Append(ColumnType).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  Range: ").Append(Range).Append("\n");
+            
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -285,20 +463,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Column != null)
                     hash = hash * 59 + this.Column.GetHashCode();
+                
                 if (this.ColumnType != null)
                     hash = hash * 59 + this.ColumnType.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
+                
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,29 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Response :  IEquatable<Response>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The interaction type for this response.
         /// </summary>
@@ -51,31 +74,114 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "twitter")]
             Twitter
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The interaction type for this response.
         /// </summary>
         /// <value>The interaction type for this response.</value>
         [DataMember(Name="interactionType", EmitDefaultValue=false)]
         public InteractionTypeEnum? InteractionType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Response" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Response() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Response" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Version">Version number required for updates..</param>
+        
+        
+        
         /// <param name="Libraries">One or more libraries response is associated with. (required).</param>
+        
+        
+        
         /// <param name="Texts">One or more texts associated with the response. (required).</param>
+        
+        
+        
         /// <param name="CreatedBy">User that created the response.</param>
+        
+        
+        
         /// <param name="DateCreated">The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="InteractionType">The interaction type for this response..</param>
+        
+        
+        
         /// <param name="Substitutions">Details about any text substitutions used in the texts for this response..</param>
+        
+        
+        
         /// <param name="SubstitutionsSchema">Metadata about the text substitutions in json schema format..</param>
+        
+        
+        
+        
         public Response(string Name = null, int? Version = null, List<UriReference> Libraries = null, List<ResponseText> Texts = null, User CreatedBy = null, DateTime? DateCreated = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Libraries" is required (not null)
             if (Libraries == null)
             {
@@ -85,6 +191,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Libraries = Libraries;
             }
+            
+            
+            
+            
+            
             // to ensure "Texts" is required (not null)
             if (Texts == null)
             {
@@ -94,14 +205,110 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Texts = Texts;
             }
-            this.Name = Name;
-            this.Version = Version;
-            this.CreatedBy = CreatedBy;
-            this.DateCreated = DateCreated;
-            this.InteractionType = InteractionType;
-            this.Substitutions = Substitutions;
-            this.SubstitutionsSchema = SubstitutionsSchema;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InteractionType = InteractionType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Substitutions = Substitutions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SubstitutionsSchema = SubstitutionsSchema;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -109,59 +316,90 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Version number required for updates.
         /// </summary>
         /// <value>Version number required for updates.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// One or more libraries response is associated with.
         /// </summary>
         /// <value>One or more libraries response is associated with.</value>
         [DataMember(Name="libraries", EmitDefaultValue=false)]
         public List<UriReference> Libraries { get; set; }
+        
+        
+        
         /// <summary>
         /// One or more texts associated with the response.
         /// </summary>
         /// <value>One or more texts associated with the response.</value>
         [DataMember(Name="texts", EmitDefaultValue=false)]
         public List<ResponseText> Texts { get; set; }
+        
+        
+        
         /// <summary>
         /// User that created the response
         /// </summary>
         /// <value>User that created the response</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public User CreatedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date and time the response was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Details about any text substitutions used in the texts for this response.
         /// </summary>
         /// <value>Details about any text substitutions used in the texts for this response.</value>
         [DataMember(Name="substitutions", EmitDefaultValue=false)]
         public List<ResponseSubstitution> Substitutions { get; set; }
+        
+        
+        
         /// <summary>
         /// Metadata about the text substitutions in json schema format.
         /// </summary>
         /// <value>Metadata about the text substitutions in json schema format.</value>
         [DataMember(Name="substitutionsSchema", EmitDefaultValue=false)]
         public JsonSchemaDocument SubstitutionsSchema { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,17 +408,29 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Response {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  Libraries: ").Append(Libraries).Append("\n");
+            
             sb.Append("  Texts: ").Append(Texts).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  InteractionType: ").Append(InteractionType).Append("\n");
+            
             sb.Append("  Substitutions: ").Append(Substitutions).Append("\n");
+            
             sb.Append("  SubstitutionsSchema: ").Append(SubstitutionsSchema).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -285,28 +535,40 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.Libraries != null)
                     hash = hash * 59 + this.Libraries.GetHashCode();
+                
                 if (this.Texts != null)
                     hash = hash * 59 + this.Texts.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.InteractionType != null)
                     hash = hash * 59 + this.InteractionType.GetHashCode();
+                
                 if (this.Substitutions != null)
                     hash = hash * 59 + this.Substitutions.GetHashCode();
+                
                 if (this.SubstitutionsSchema != null)
                     hash = hash * 59 + this.SubstitutionsSchema.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

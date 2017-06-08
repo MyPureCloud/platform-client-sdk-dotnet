@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserPresenceNotificationPresenceDefinition :  IEquatable<UserPresenceNotificationPresenceDefinition>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPresenceNotificationPresenceDefinition" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="SystemPresence">SystemPresence.</param>
+        
+        
         public UserPresenceNotificationPresenceDefinition(string Id = null, string SystemPresence = null)
         {
-            this.Id = Id;
-            this.SystemPresence = SystemPresence;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SystemPresence = SystemPresence;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SystemPresence
         /// </summary>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public string SystemPresence { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserPresenceNotificationPresenceDefinition {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
+                
                 return hash;
             }
         }

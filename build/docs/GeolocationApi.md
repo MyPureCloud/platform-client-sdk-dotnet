@@ -38,12 +38,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new GeolocationApi();
+            
 
             try
             {
+                
                 // Get a organization's GeolocationSettings
+                
                 GeolocationSettings result = apiInstance.GetGeolocationsSettings();
                 Debug.WriteLine(result);
             }
@@ -89,14 +93,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new GeolocationApi();
+            
+            
             var userId = userId_example;  // string | user Id
+            
+            
+            
+            
             var clientId = clientId_example;  // string | client Id
+            
+            
+            
 
             try
             {
+                
                 // Get a user's Geolocation
+                
                 Geolocation result = apiInstance.GetUserGeolocation(userId, clientId);
                 Debug.WriteLine(result);
             }
@@ -147,13 +163,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new GeolocationApi();
+            
+            
+            
             var body = new GeolocationSettings(); // GeolocationSettings | Geolocation settings
+            
+            
 
             try
             {
+                
                 // Patch a organization's GeolocationSettings
+                
                 GeolocationSettings result = apiInstance.PatchGeolocationsSettings(body);
                 Debug.WriteLine(result);
             }
@@ -203,15 +227,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new GeolocationApi();
+            
+            
             var userId = userId_example;  // string | user Id
+            
+            
+            
+            
             var clientId = clientId_example;  // string | client Id
+            
+            
+            
+            
+            
             var body = new Geolocation(); // Geolocation | Geolocation
+            
+            
 
             try
             {
+                
                 // Patch a user's Geolocation
+                
                 Geolocation result = apiInstance.PatchUserGeolocation(userId, clientId, body);
                 Debug.WriteLine(result);
             }

@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayDataUpdateNotificationScheduleDataPerInterval :  IEquatable<IntradayDataUpdateNotificationScheduleDataPerInterval>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationScheduleDataPerInterval" /> class.
         /// </summary>
+        
+        
         /// <param name="OnQueueTimeSeconds">OnQueueTimeSeconds.</param>
+        
+        
+        
         /// <param name="ScheduledTimeSeconds">ScheduledTimeSeconds.</param>
+        
+        
         public IntradayDataUpdateNotificationScheduleDataPerInterval(int? OnQueueTimeSeconds = null, int? ScheduledTimeSeconds = null)
         {
-            this.OnQueueTimeSeconds = OnQueueTimeSeconds;
-            this.ScheduledTimeSeconds = ScheduledTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.OnQueueTimeSeconds = OnQueueTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScheduledTimeSeconds = ScheduledTimeSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets OnQueueTimeSeconds
         /// </summary>
         [DataMember(Name="onQueueTimeSeconds", EmitDefaultValue=false)]
         public int? OnQueueTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScheduledTimeSeconds
         /// </summary>
         [DataMember(Name="scheduledTimeSeconds", EmitDefaultValue=false)]
         public int? ScheduledTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayDataUpdateNotificationScheduleDataPerInterval {\n");
+            
             sb.Append("  OnQueueTimeSeconds: ").Append(OnQueueTimeSeconds).Append("\n");
+            
             sb.Append("  ScheduledTimeSeconds: ").Append(ScheduledTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.OnQueueTimeSeconds != null)
                     hash = hash * 59 + this.OnQueueTimeSeconds.GetHashCode();
+                
                 if (this.ScheduledTimeSeconds != null)
                     hash = hash * 59 + this.ScheduledTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

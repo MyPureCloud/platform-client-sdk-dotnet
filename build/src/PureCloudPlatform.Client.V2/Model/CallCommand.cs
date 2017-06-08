@@ -18,17 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallCommand :  IEquatable<CallCommand>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallCommand" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CallCommand() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallCommand" /> class.
         /// </summary>
+        
+        
         /// <param name="CallNumber">The phone number to dial for this call. (required).</param>
+        
+        
         public CallCommand(string CallNumber = null)
         {
+            
+            
+            
             // to ensure "CallNumber" is required (not null)
             if (CallNumber == null)
             {
@@ -38,7 +54,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.CallNumber = CallNumber;
             }
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The phone number to dial for this call.
@@ -46,6 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The phone number to dial for this call.</value>
         [DataMember(Name="callNumber", EmitDefaultValue=false)]
         public string CallNumber { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallCommand {\n");
+            
             sb.Append("  CallNumber: ").Append(CallNumber).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,8 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.CallNumber != null)
                     hash = hash * 59 + this.CallNumber.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkMetricsNetworkTypeIp :  IEquatable<TrunkMetricsNetworkTypeIp>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsNetworkTypeIp" /> class.
         /// </summary>
+        
+        
         /// <param name="Address">Assigned IP Address for the interface.</param>
+        
+        
+        
         /// <param name="ErrorInfo">Information about the error..</param>
+        
+        
         public TrunkMetricsNetworkTypeIp(string Address = null, TrunkErrorInfo ErrorInfo = null)
         {
-            this.Address = Address;
-            this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Address = Address;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Assigned IP Address for the interface
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Assigned IP Address for the interface</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
+        
+        
+        
         /// <summary>
         /// Information about the error.
         /// </summary>
         /// <value>Information about the error.</value>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public TrunkErrorInfo ErrorInfo { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkMetricsNetworkTypeIp {\n");
+            
             sb.Append("  Address: ").Append(Address).Append("\n");
+            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+                
                 return hash;
             }
         }

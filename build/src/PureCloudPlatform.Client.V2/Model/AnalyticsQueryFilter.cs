@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsQueryFilter :  IEquatable<AnalyticsQueryFilter>
     {
+        
+        
         /// <summary>
         /// Boolean operation to apply to the provided predicates and clauses
         /// </summary>
@@ -45,25 +47,57 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "or")]
             Or
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Boolean operation to apply to the provided predicates and clauses
         /// </summary>
         /// <value>Boolean operation to apply to the provided predicates and clauses</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryFilter" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AnalyticsQueryFilter() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryFilter" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Boolean operation to apply to the provided predicates and clauses (required).</param>
+        
+        
+        
         /// <param name="Clauses">Boolean &#39;and/or&#39; logic with up to two-levels of nesting.</param>
+        
+        
+        
         /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric..</param>
+        
+        
         public AnalyticsQueryFilter(TypeEnum? Type = null, List<AnalyticsQueryClause> Clauses = null, List<AnalyticsQueryPredicate> Predicates = null)
         {
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -73,9 +107,45 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
-            this.Clauses = Clauses;
-            this.Predicates = Predicates;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Clauses = Clauses;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Predicates = Predicates;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Boolean &#39;and/or&#39; logic with up to two-levels of nesting
@@ -83,12 +153,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Boolean &#39;and/or&#39; logic with up to two-levels of nesting</value>
         [DataMember(Name="clauses", EmitDefaultValue=false)]
         public List<AnalyticsQueryClause> Clauses { get; set; }
+        
+        
+        
         /// <summary>
         /// Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric.
         /// </summary>
         /// <value>Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric.</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<AnalyticsQueryPredicate> Predicates { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -97,9 +172,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsQueryFilter {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Clauses: ").Append(Clauses).Append("\n");
+            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,12 +243,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Clauses != null)
                     hash = hash * 59 + this.Clauses.GetHashCode();
+                
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+                
                 return hash;
             }
         }

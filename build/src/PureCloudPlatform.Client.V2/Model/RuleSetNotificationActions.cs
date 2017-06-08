@@ -18,48 +18,170 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RuleSetNotificationActions :  IEquatable<RuleSetNotificationActions>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationActions" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="ActionTypeName">ActionTypeName.</param>
+        
+        
+        
         /// <param name="UpdateOption">UpdateOption.</param>
+        
+        
+        
         /// <param name="Properties">Properties.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public RuleSetNotificationActions(string Type = null, string ActionTypeName = null, string UpdateOption = null, Dictionary<string, string> Properties = null, Object AdditionalProperties = null)
         {
-            this.Type = Type;
-            this.ActionTypeName = ActionTypeName;
-            this.UpdateOption = UpdateOption;
-            this.Properties = Properties;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActionTypeName = ActionTypeName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UpdateOption = UpdateOption;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Properties = Properties;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionTypeName
         /// </summary>
         [DataMember(Name="actionTypeName", EmitDefaultValue=false)]
         public string ActionTypeName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UpdateOption
         /// </summary>
         [DataMember(Name="updateOption", EmitDefaultValue=false)]
         public string UpdateOption { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, string> Properties { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +190,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RuleSetNotificationActions {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  ActionTypeName: ").Append(ActionTypeName).Append("\n");
+            
             sb.Append("  UpdateOption: ").Append(UpdateOption).Append("\n");
+            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,16 +275,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.ActionTypeName != null)
                     hash = hash * 59 + this.ActionTypeName.GetHashCode();
+                
                 if (this.UpdateOption != null)
                     hash = hash * 59 + this.UpdateOption.GetHashCode();
+                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

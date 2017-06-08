@@ -18,17 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseQueryResults :  IEquatable<ResponseQueryResults>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ResponseQueryResults() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseQueryResults" /> class.
         /// </summary>
+        
+        
         /// <param name="Results">Contains the query results (required).</param>
+        
+        
         public ResponseQueryResults(ResponseEntityList Results = null)
         {
+            
+            
+            
             // to ensure "Results" is required (not null)
             if (Results == null)
             {
@@ -38,7 +54,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Results = Results;
             }
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Contains the query results
@@ -46,6 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Contains the query results</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public ResponseEntityList Results { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseQueryResults {\n");
+            
             sb.Append("  Results: ").Append(Results).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,8 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+                
                 return hash;
             }
         }

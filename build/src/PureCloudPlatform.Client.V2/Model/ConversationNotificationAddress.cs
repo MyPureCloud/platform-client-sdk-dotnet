@@ -18,55 +18,200 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationAddress :  IEquatable<ConversationNotificationAddress>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationAddress" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="NameRaw">NameRaw.</param>
+        
+        
+        
         /// <param name="AddressNormalized">AddressNormalized.</param>
+        
+        
+        
         /// <param name="AddressRaw">AddressRaw.</param>
+        
+        
+        
         /// <param name="AddressDisplayable">AddressDisplayable.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ConversationNotificationAddress(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null, Object AdditionalProperties = null)
         {
-            this.Name = Name;
-            this.NameRaw = NameRaw;
-            this.AddressNormalized = AddressNormalized;
-            this.AddressRaw = AddressRaw;
-            this.AddressDisplayable = AddressDisplayable;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NameRaw = NameRaw;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressNormalized = AddressNormalized;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressRaw = AddressRaw;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressDisplayable = AddressDisplayable;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NameRaw
         /// </summary>
         [DataMember(Name="nameRaw", EmitDefaultValue=false)]
         public string NameRaw { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AddressNormalized
         /// </summary>
         [DataMember(Name="addressNormalized", EmitDefaultValue=false)]
         public string AddressNormalized { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AddressRaw
         /// </summary>
         [DataMember(Name="addressRaw", EmitDefaultValue=false)]
         public string AddressRaw { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AddressDisplayable
         /// </summary>
         [DataMember(Name="addressDisplayable", EmitDefaultValue=false)]
         public string AddressDisplayable { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +220,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationAddress {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  NameRaw: ").Append(NameRaw).Append("\n");
+            
             sb.Append("  AddressNormalized: ").Append(AddressNormalized).Append("\n");
+            
             sb.Append("  AddressRaw: ").Append(AddressRaw).Append("\n");
+            
             sb.Append("  AddressDisplayable: ").Append(AddressDisplayable).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,18 +312,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.NameRaw != null)
                     hash = hash * 59 + this.NameRaw.GetHashCode();
+                
                 if (this.AddressNormalized != null)
                     hash = hash * 59 + this.AddressNormalized.GetHashCode();
+                
                 if (this.AddressRaw != null)
                     hash = hash * 59 + this.AddressRaw.GetHashCode();
+                
                 if (this.AddressDisplayable != null)
                     hash = hash * 59 + this.AddressDisplayable.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

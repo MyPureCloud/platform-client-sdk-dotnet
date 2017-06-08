@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerRule :  IEquatable<DialerRule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The category of the rule
         /// </summary>
@@ -45,27 +56,75 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DIALER_WRAPUP")]
             Wrapup
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The category of the rule
         /// </summary>
         /// <value>The category of the rule</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DialerRule() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerRule" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The name of the rule (required).</param>
+        
+        
+        
         /// <param name="Order">The ranked order of the rule; rules are processed from lowest number to highest.</param>
+        
+        
+        
         /// <param name="Category">The category of the rule (required).</param>
+        
+        
+        
         /// <param name="Conditions">The list of rule conditions; all must evaluate to true to trigger the rule actions (required).</param>
+        
+        
+        
         /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
+        
+        
         public DialerRule(string Name = null, int? Order = null, CategoryEnum? Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -75,6 +134,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Category" is required (not null)
             if (Category == null)
             {
@@ -84,6 +152,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Category = Category;
             }
+            
+            
+            
+            
+            
             // to ensure "Conditions" is required (not null)
             if (Conditions == null)
             {
@@ -93,9 +166,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Conditions = Conditions;
             }
-            this.Order = Order;
-            this.Actions = Actions;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Order = Order;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Actions = Actions;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The identifier of the rule
@@ -103,30 +216,46 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The identifier of the rule</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The name of the rule
         /// </summary>
         /// <value>The name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The ranked order of the rule; rules are processed from lowest number to highest
         /// </summary>
         /// <value>The ranked order of the rule; rules are processed from lowest number to highest</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The list of rule conditions; all must evaluate to true to trigger the rule actions
         /// </summary>
         /// <value>The list of rule conditions; all must evaluate to true to trigger the rule actions</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<Condition> Conditions { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of rule actions to be taken if the conditions are true
         /// </summary>
         /// <value>The list of rule actions to be taken if the conditions are true</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<DialerAction> Actions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,12 +264,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerRule {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Order: ").Append(Order).Append("\n");
+            
             sb.Append("  Category: ").Append(Category).Append("\n");
+            
             sb.Append("  Conditions: ").Append(Conditions).Append("\n");
+            
             sb.Append("  Actions: ").Append(Actions).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,18 +356,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Order != null)
                     hash = hash * 59 + this.Order.GetHashCode();
+                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
+                
                 if (this.Conditions != null)
                     hash = hash * 59 + this.Conditions.GetHashCode();
+                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
+                
                 return hash;
             }
         }

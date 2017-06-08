@@ -18,6 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayQueue :  IEquatable<IntradayQueue>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaTypes
         /// </summary>
@@ -50,18 +60,79 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Email")]
             Email
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayQueue" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Queue ID.</param>
+        
+        
+        
         /// <param name="Name">Queue name.</param>
+        
+        
+        
         /// <param name="MediaTypes">The media types valid for this queue as defined by the service goal groups in this management unit.</param>
+        
+        
         public IntradayQueue(string Id = null, string Name = null, List<MediaTypesEnum> MediaTypes = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.MediaTypes = MediaTypes;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MediaTypes = MediaTypes;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Queue ID
@@ -69,18 +140,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Queue ID</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Queue name
         /// </summary>
         /// <value>Queue name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The media types valid for this queue as defined by the service goal groups in this management unit
         /// </summary>
         /// <value>The media types valid for this queue as defined by the service goal groups in this management unit</value>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
         public List<MediaTypesEnum> MediaTypes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -89,9 +168,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayQueue {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  MediaTypes: ").Append(MediaTypes).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -156,12 +239,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.MediaTypes != null)
                     hash = hash * 59 + this.MediaTypes.GetHashCode();
+                
                 return hash;
             }
         }

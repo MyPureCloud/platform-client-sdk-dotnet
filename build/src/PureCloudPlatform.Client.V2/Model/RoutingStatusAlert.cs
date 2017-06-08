@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingStatusAlert :  IEquatable<RoutingStatusAlert>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The routing status on which to alert.
         /// </summary>
@@ -63,6 +74,27 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -95,28 +127,94 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The routing status on which to alert.
         /// </summary>
         /// <value>The routing status on which to alert.</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatusAlert" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RoutingStatusAlert() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatusAlert" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name of the rule (required).</param>
+        
+        
+        
         /// <param name="Agent">The agent whose routing status will be watched. (required).</param>
+        
+        
+        
         /// <param name="RoutingStatus">The routing status on which to alert. (required).</param>
+        
+        
+        
         /// <param name="RoutingLimitInSeconds">The number of seconds to wait before alerting based upon the agent&#39;s routing status. (required).</param>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <param name="NotificationUsers">The ids of users who were notified of alarm state change. (required).</param>
+        
+        
+        
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
+        
+        
+        
+        
         public RoutingStatusAlert(string Name = null, User Agent = null, RoutingStatusEnum? RoutingStatus = null, int? RoutingLimitInSeconds = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -126,6 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "Agent" is required (not null)
             if (Agent == null)
             {
@@ -135,6 +238,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Agent = Agent;
             }
+            
+            
+            
+            
+            
             // to ensure "RoutingStatus" is required (not null)
             if (RoutingStatus == null)
             {
@@ -144,6 +252,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.RoutingStatus = RoutingStatus;
             }
+            
+            
+            
+            
+            
             // to ensure "RoutingLimitInSeconds" is required (not null)
             if (RoutingLimitInSeconds == null)
             {
@@ -153,6 +266,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.RoutingLimitInSeconds = RoutingLimitInSeconds;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "NotificationUsers" is required (not null)
             if (NotificationUsers == null)
             {
@@ -162,6 +286,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.NotificationUsers = NotificationUsers;
             }
+            
+            
+            
+            
+            
             // to ensure "AlertTypes" is required (not null)
             if (AlertTypes == null)
             {
@@ -171,7 +300,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.AlertTypes = AlertTypes;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -179,60 +350,91 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Name of the rule
         /// </summary>
         /// <value>Name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The agent whose routing status will be watched.
         /// </summary>
         /// <value>The agent whose routing status will be watched.</value>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public User Agent { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The number of seconds to wait before alerting based upon the agent&#39;s routing status.
         /// </summary>
         /// <value>The number of seconds to wait before alerting based upon the agent&#39;s routing status.</value>
         [DataMember(Name="routingLimitInSeconds", EmitDefaultValue=false)]
         public int? RoutingLimitInSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The id of the rule.
         /// </summary>
         /// <value>The id of the rule.</value>
         [DataMember(Name="ruleId", EmitDefaultValue=false)]
         public string RuleId { get; private set; }
+        
+        
+        
         /// <summary>
         /// The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; private set; }
+        
+        
+        
         /// <summary>
         /// The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; private set; }
+        
+        
+        
         /// <summary>
         /// The ids of users who were notified of alarm state change.
         /// </summary>
         /// <value>The ids of users who were notified of alarm state change.</value>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
+        
+        
+        
         /// <summary>
         /// A collection of notification methods.
         /// </summary>
         /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -241,17 +443,29 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingStatusAlert {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Agent: ").Append(Agent).Append("\n");
+            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            
             sb.Append("  RoutingLimitInSeconds: ").Append(RoutingLimitInSeconds).Append("\n");
+            
             sb.Append("  RuleId: ").Append(RuleId).Append("\n");
+            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
+            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -356,28 +570,40 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
+                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
                 if (this.RoutingLimitInSeconds != null)
                     hash = hash * 59 + this.RoutingLimitInSeconds.GetHashCode();
+                
                 if (this.RuleId != null)
                     hash = hash * 59 + this.RuleId.GetHashCode();
+                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
+                
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
+                
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
+                
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

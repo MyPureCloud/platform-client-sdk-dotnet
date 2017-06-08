@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecordingSettings :  IEquatable<RecordingSettings>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecordingSettings" /> class.
         /// </summary>
+        
+        
         /// <param name="MaxSimultaneousStreams">MaxSimultaneousStreams.</param>
+        
+        
         public RecordingSettings(int? MaxSimultaneousStreams = null)
         {
-            this.MaxSimultaneousStreams = MaxSimultaneousStreams;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.MaxSimultaneousStreams = MaxSimultaneousStreams;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets MaxSimultaneousStreams
         /// </summary>
         [DataMember(Name="maxSimultaneousStreams", EmitDefaultValue=false)]
         public int? MaxSimultaneousStreams { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecordingSettings {\n");
+            
             sb.Append("  MaxSimultaneousStreams: ").Append(MaxSimultaneousStreams).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.MaxSimultaneousStreams != null)
                     hash = hash * 59 + this.MaxSimultaneousStreams.GetHashCode();
+                
                 return hash;
             }
         }

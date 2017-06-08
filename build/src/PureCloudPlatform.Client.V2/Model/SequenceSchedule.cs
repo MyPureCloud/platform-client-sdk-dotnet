@@ -18,21 +18,111 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SequenceSchedule :  IEquatable<SequenceSchedule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SequenceSchedule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SequenceSchedule() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SequenceSchedule" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
+        
+        
+        
+        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        
+        
+        
         /// <param name="Intervals">a list of start and end times (required).</param>
+        
+        
+        
         /// <param name="TimeZone">time zone identifier to be applied to the intervals; for example Africa/Abidjan (required).</param>
+        
+        
+        
         /// <param name="Sequence">identifier of the sequence to be scheduled (required).</param>
+        
+        
+        
+        
         public SequenceSchedule(string Name = null, int? Version = null, List<ScheduleInterval> Intervals = null, string TimeZone = null, UriReference Sequence = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Intervals" is required (not null)
             if (Intervals == null)
             {
@@ -42,6 +132,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Intervals = Intervals;
             }
+            
+            
+            
+            
+            
             // to ensure "TimeZone" is required (not null)
             if (TimeZone == null)
             {
@@ -51,6 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.TimeZone = TimeZone;
             }
+            
+            
+            
+            
+            
             // to ensure "Sequence" is required (not null)
             if (Sequence == null)
             {
@@ -60,9 +160,53 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Sequence = Sequence;
             }
-            this.Name = Name;
-            this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -70,53 +214,79 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
+        
+        
+        
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+        
+        
+        
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// a list of start and end times
         /// </summary>
         /// <value>a list of start and end times</value>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
         public List<ScheduleInterval> Intervals { get; set; }
+        
+        
+        
         /// <summary>
         /// time zone identifier to be applied to the intervals; for example Africa/Abidjan
         /// </summary>
         /// <value>time zone identifier to be applied to the intervals; for example Africa/Abidjan</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
+        
+        
+        
         /// <summary>
         /// identifier of the sequence to be scheduled
         /// </summary>
         /// <value>identifier of the sequence to be scheduled</value>
         [DataMember(Name="sequence", EmitDefaultValue=false)]
         public UriReference Sequence { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -125,15 +295,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SequenceSchedule {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  Intervals: ").Append(Intervals).Append("\n");
+            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+            
             sb.Append("  Sequence: ").Append(Sequence).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -228,24 +408,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.Intervals != null)
                     hash = hash * 59 + this.Intervals.GetHashCode();
+                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
+                
                 if (this.Sequence != null)
                     hash = hash * 59 + this.Sequence.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

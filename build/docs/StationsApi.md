@@ -37,13 +37,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new StationsApi();
+            
+            
             var stationId = stationId_example;  // string | Station ID
+            
+            
+            
 
             try
             {
+                
                 // Unassigns the user assigned to this station
+                
                 apiInstance.DeleteStationAssociateduser(stationId);
             }
             catch (Exception e)
@@ -92,13 +100,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new StationsApi();
+            
+            
             var stationId = stationId_example;  // string | Station ID
+            
+            
+            
 
             try
             {
+                
                 // Get station.
+                
                 Station result = apiInstance.GetStation(stationId);
                 Debug.WriteLine(result);
             }
@@ -148,20 +164,56 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new StationsApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var userSelectable = userSelectable_example;  // string | True for stations that the user can select otherwise false (optional) 
+            
+            
+            
+            
             var webRtcUserId = webRtcUserId_example;  // string | Filter for the webRtc station of the webRtcUserId (optional) 
+            
+            
+            
+            
             var id = id_example;  // string | Comma separated list of stationIds (optional) 
+            
+            
+            
+            
             var lineAppearanceId = lineAppearanceId_example;  // string | lineAppearanceId (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of available stations.
+                
                 StationEntityListing result = apiInstance.GetStations(pageSize, pageNumber, sortBy, name, userSelectable, webRtcUserId, id, lineAppearanceId);
                 Debug.WriteLine(result);
             }

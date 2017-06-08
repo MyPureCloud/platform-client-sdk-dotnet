@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RecallEntry :  IEquatable<RecallEntry>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RecallEntry" /> class.
         /// </summary>
+        
+        
         /// <param name="NbrAttempts">NbrAttempts.</param>
+        
+        
+        
         /// <param name="MinutesBetweenAttempts">MinutesBetweenAttempts.</param>
+        
+        
         public RecallEntry(int? NbrAttempts = null, int? MinutesBetweenAttempts = null)
         {
-            this.NbrAttempts = NbrAttempts;
-            this.MinutesBetweenAttempts = MinutesBetweenAttempts;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.NbrAttempts = NbrAttempts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MinutesBetweenAttempts = MinutesBetweenAttempts;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets NbrAttempts
         /// </summary>
         [DataMember(Name="nbrAttempts", EmitDefaultValue=false)]
         public int? NbrAttempts { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MinutesBetweenAttempts
         /// </summary>
         [DataMember(Name="minutesBetweenAttempts", EmitDefaultValue=false)]
         public int? MinutesBetweenAttempts { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RecallEntry {\n");
+            
             sb.Append("  NbrAttempts: ").Append(NbrAttempts).Append("\n");
+            
             sb.Append("  MinutesBetweenAttempts: ").Append(MinutesBetweenAttempts).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.NbrAttempts != null)
                     hash = hash * 59 + this.NbrAttempts.GetHashCode();
+                
                 if (this.MinutesBetweenAttempts != null)
                     hash = hash * 59 + this.MinutesBetweenAttempts.GetHashCode();
+                
                 return hash;
             }
         }

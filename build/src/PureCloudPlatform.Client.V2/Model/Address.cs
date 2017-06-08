@@ -18,22 +18,130 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Address :  IEquatable<Address>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Address" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">This will be nameRaw if present, or a locality lookup of the address field otherwise..</param>
+        
+        
+        
         /// <param name="NameRaw">The name as close to the bits on the wire as possible..</param>
+        
+        
+        
         /// <param name="AddressNormalized">The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
+        
+        
+        
         /// <param name="AddressRaw">The address as close to the bits on the wire as possible..</param>
+        
+        
+        
         /// <param name="AddressDisplayable">The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table..</param>
+        
+        
         public Address(string Name = null, string NameRaw = null, string AddressNormalized = null, string AddressRaw = null, string AddressDisplayable = null)
         {
-            this.Name = Name;
-            this.NameRaw = NameRaw;
-            this.AddressNormalized = AddressNormalized;
-            this.AddressRaw = AddressRaw;
-            this.AddressDisplayable = AddressDisplayable;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NameRaw = NameRaw;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressNormalized = AddressNormalized;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressRaw = AddressRaw;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressDisplayable = AddressDisplayable;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// This will be nameRaw if present, or a locality lookup of the address field otherwise.
@@ -41,30 +149,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>This will be nameRaw if present, or a locality lookup of the address field otherwise.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The name as close to the bits on the wire as possible.
         /// </summary>
         /// <value>The name as close to the bits on the wire as possible.</value>
         [DataMember(Name="nameRaw", EmitDefaultValue=false)]
         public string NameRaw { get; set; }
+        
+        
+        
         /// <summary>
         /// The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.
         /// </summary>
         /// <value>The normalized address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.</value>
         [DataMember(Name="addressNormalized", EmitDefaultValue=false)]
         public string AddressNormalized { get; set; }
+        
+        
+        
         /// <summary>
         /// The address as close to the bits on the wire as possible.
         /// </summary>
         /// <value>The address as close to the bits on the wire as possible.</value>
         [DataMember(Name="addressRaw", EmitDefaultValue=false)]
         public string AddressRaw { get; set; }
+        
+        
+        
         /// <summary>
         /// The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.
         /// </summary>
         /// <value>The displayable address. This field is acquired from the Address Normalization Table.  The addressRaw could have gone through some transformations, such as only using the numeric portion, before being run through the Address Normalization Table.</value>
         [DataMember(Name="addressDisplayable", EmitDefaultValue=false)]
         public string AddressDisplayable { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,11 +195,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Address {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  NameRaw: ").Append(NameRaw).Append("\n");
+            
             sb.Append("  AddressNormalized: ").Append(AddressNormalized).Append("\n");
+            
             sb.Append("  AddressRaw: ").Append(AddressRaw).Append("\n");
+            
             sb.Append("  AddressDisplayable: ").Append(AddressDisplayable).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,16 +280,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.NameRaw != null)
                     hash = hash * 59 + this.NameRaw.GetHashCode();
+                
                 if (this.AddressNormalized != null)
                     hash = hash * 59 + this.AddressNormalized.GetHashCode();
+                
                 if (this.AddressRaw != null)
                     hash = hash * 59 + this.AddressRaw.GetHashCode();
+                
                 if (this.AddressDisplayable != null)
                     hash = hash * 59 + this.AddressDisplayable.GetHashCode();
+                
                 return hash;
             }
         }

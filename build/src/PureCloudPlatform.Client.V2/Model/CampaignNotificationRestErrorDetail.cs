@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignNotificationRestErrorDetail :  IEquatable<CampaignNotificationRestErrorDetail>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignNotificationRestErrorDetail" /> class.
         /// </summary>
+        
+        
         /// <param name="Error">Error.</param>
+        
+        
+        
         /// <param name="Details">Details.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public CampaignNotificationRestErrorDetail(string Error = null, string Details = null, Object AdditionalProperties = null)
         {
-            this.Error = Error;
-            this.Details = Details;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Error = Error;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Details = Details;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Error
         /// </summary>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Details
         /// </summary>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignNotificationRestErrorDetail {\n");
+            
             sb.Append("  Error: ").Append(Error).Append("\n");
+            
             sb.Append("  Details: ").Append(Details).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
+                
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

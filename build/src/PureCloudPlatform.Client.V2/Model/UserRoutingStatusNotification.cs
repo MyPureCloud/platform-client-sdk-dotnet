@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserRoutingStatusNotification :  IEquatable<UserRoutingStatusNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="RoutingStatus">RoutingStatus.</param>
+        
+        
         public UserRoutingStatusNotification(UserRoutingStatusNotificationRoutingStatus RoutingStatus = null)
         {
-            this.RoutingStatus = RoutingStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RoutingStatus = RoutingStatus;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public UserRoutingStatusNotificationRoutingStatus RoutingStatus { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserRoutingStatusNotification {\n");
+            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
                 return hash;
             }
         }

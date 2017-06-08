@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IRecordingApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Delete annotation
         /// </summary>
@@ -39,6 +41,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        
         /// <summary>
         /// Deletes a single orphan recording
         /// </summary>
@@ -60,6 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
         ApiResponse<OrphanRecording> DeleteOrphanrecordingWithHttpInfo (string orphanId);
+        
         /// <summary>
         /// Delete media retention policies
         /// </summary>
@@ -81,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ids"></param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids);
+        
         /// <summary>
         /// Delete a media retention policy
         /// </summary>
@@ -102,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId);
+        
         /// <summary>
         /// Gets a specific recording.
         /// </summary>
@@ -131,6 +137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
         ApiResponse<Recording> GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        
         /// <summary>
         /// Get annotation
         /// </summary>
@@ -156,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>ApiResponse of Annotation</returns>
         ApiResponse<Annotation> GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        
         /// <summary>
         /// Get annotations for recording
         /// </summary>
@@ -179,6 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
         ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
+        
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
@@ -204,6 +213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        
         /// <summary>
         /// Gets a single orphan recording
         /// </summary>
@@ -225,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>ApiResponse of OrphanRecording</returns>
         ApiResponse<OrphanRecording> GetOrphanrecordingWithHttpInfo (string orphanId);
+        
         /// <summary>
         /// Gets the media of a single orphan recording
         /// </summary>
@@ -252,6 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
         ApiResponse<Recording> GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, bool? download = null, string fileName = null);
+        
         /// <summary>
         /// Gets all orphan recordings
         /// </summary>
@@ -287,6 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
         ApiResponse<OrphanRecordingListing> GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
+        
         /// <summary>
         /// Get the local encryption settings
         /// </summary>
@@ -308,6 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="settingsId">Settings Id</param>
         /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
         ApiResponse<LocalEncryptionConfiguration> GetRecordingLocalkeysSettingWithHttpInfo (string settingsId);
+        
         /// <summary>
         /// gets a list local key settings data
         /// </summary>
@@ -327,11 +341,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of LocalEncryptionConfigurationListing</returns>
         ApiResponse<LocalEncryptionConfigurationListing> GetRecordingLocalkeysSettingsWithHttpInfo ();
+        
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
         /// <remarks>
-        /// for a less verbose response, add summary&#x3D;true to this endpoint
+        /// for a less verbose response, add summary=true to this endpoint
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -341,7 +356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>PolicyEntityListing</returns>
@@ -351,7 +366,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
         /// <remarks>
-        /// for a less verbose response, add summary&#x3D;true to this endpoint
+        /// for a less verbose response, add summary=true to this endpoint
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -361,11 +376,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
         ApiResponse<PolicyEntityListing> GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        
         /// <summary>
         /// Get a media retention policy
         /// </summary>
@@ -387,6 +403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <returns>ApiResponse of Policy</returns>
         ApiResponse<Policy> GetRecordingMediaretentionpolicyWithHttpInfo (string policyId);
+        
         /// <summary>
         /// Get encryption key list
         /// </summary>
@@ -410,6 +427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
         ApiResponse<EncryptionKeyEntityListing> GetRecordingRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get key rotation schedule
         /// </summary>
@@ -429,6 +447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
         ApiResponse<KeyRotationSchedule> GetRecordingRecordingkeysRotationscheduleWithHttpInfo ();
+        
         /// <summary>
         /// Get the Recording Settings for the Organization
         /// </summary>
@@ -450,6 +469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
         ApiResponse<RecordingSettings> GetRecordingSettingsWithHttpInfo (bool? createDefault = null);
+        
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions
         /// </summary>
@@ -473,6 +493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
         ApiResponse<ScreenRecordingSessionListing> GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Patch a media retention policy
         /// </summary>
@@ -496,6 +517,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
         ApiResponse<Policy> PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body);
+        
         /// <summary>
         /// Update a screen recording session
         /// </summary>
@@ -519,6 +541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PatchRecordingsScreensessionWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
+        
         /// <summary>
         /// Create annotation
         /// </summary>
@@ -544,6 +567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
         ApiResponse<Annotation> PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
+        
         /// <summary>
         /// create a local recording key
         /// </summary>
@@ -565,6 +589,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Local Encryption body</param>
         /// <returns>ApiResponse of EncryptionKey</returns>
         ApiResponse<EncryptionKey> PostRecordingLocalkeysWithHttpInfo (LocalEncryptionKeyRequest body);
+        
         /// <summary>
         /// create settings for local key creation
         /// </summary>
@@ -586,6 +611,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Local Encryption Configuration</param>
         /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
         ApiResponse<LocalEncryptionConfiguration> PostRecordingLocalkeysSettingsWithHttpInfo (LocalEncryptionConfiguration body);
+        
         /// <summary>
         /// Create media retention policy
         /// </summary>
@@ -607,6 +633,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
         ApiResponse<Policy> PostRecordingMediaretentionpoliciesWithHttpInfo (PolicyCreate body);
+        
         /// <summary>
         /// Create encryption key
         /// </summary>
@@ -626,6 +653,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of EncryptionKey</returns>
         ApiResponse<EncryptionKey> PostRecordingRecordingkeysWithHttpInfo ();
+        
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
@@ -651,6 +679,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <returns>ApiResponse of Recording</returns>
         ApiResponse<Recording> PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body);
+        
         /// <summary>
         /// Update annotation
         /// </summary>
@@ -678,6 +707,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">annotation</param>
         /// <returns>ApiResponse of Annotation</returns>
         ApiResponse<Annotation> PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
+        
         /// <summary>
         /// Updates an orphan recording to a regular recording with retention values
         /// </summary>
@@ -701,6 +731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Recording</returns>
         ApiResponse<Recording> PutOrphanrecordingWithHttpInfo (string orphanId, OrphanUpdateRequest body = null);
+        
         /// <summary>
         /// Update the local encryption settings
         /// </summary>
@@ -724,6 +755,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Local Encryption metadata</param>
         /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
         ApiResponse<LocalEncryptionConfiguration> PutRecordingLocalkeysSettingWithHttpInfo (string settingsId, LocalEncryptionConfiguration body);
+        
         /// <summary>
         /// Update a media retention policy
         /// </summary>
@@ -747,6 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>ApiResponse of Policy</returns>
         ApiResponse<Policy> PutRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body);
+        
         /// <summary>
         /// Update key rotation schedule
         /// </summary>
@@ -768,6 +801,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
         ApiResponse<KeyRotationSchedule> PutRecordingRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body);
+        
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -789,8 +823,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recording settings</param>
         /// <returns>ApiResponse of RecordingSettings</returns>
         ApiResponse<RecordingSettings> PutRecordingSettingsWithHttpInfo (RecordingSettings body);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Delete annotation
         /// </summary>
@@ -816,6 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        
         /// <summary>
         /// Deletes a single orphan recording
         /// </summary>
@@ -837,6 +875,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId);
+        
         /// <summary>
         /// Delete media retention policies
         /// </summary>
@@ -858,6 +897,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ids"></param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids);
+        
         /// <summary>
         /// Delete a media retention policy
         /// </summary>
@@ -879,6 +919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId);
+        
         /// <summary>
         /// Gets a specific recording.
         /// </summary>
@@ -908,6 +949,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
         System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null);
+        
         /// <summary>
         /// Get annotation
         /// </summary>
@@ -933,6 +975,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="annotationId">Annotation ID</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId);
+        
         /// <summary>
         /// Get annotations for recording
         /// </summary>
@@ -956,6 +999,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
+        
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
@@ -981,6 +1025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
+        
         /// <summary>
         /// Gets a single orphan recording
         /// </summary>
@@ -1002,6 +1047,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="orphanId">Orphan ID</param>
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId);
+        
         /// <summary>
         /// Gets the media of a single orphan recording
         /// </summary>
@@ -1029,6 +1075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="fileName">the name of the downloaded fileName (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
         System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, bool? download = null, string fileName = null);
+        
         /// <summary>
         /// Gets all orphan recordings
         /// </summary>
@@ -1064,6 +1111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="media">Filter resulting orphans based on their media type (optional)</param>
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null);
+        
         /// <summary>
         /// Get the local encryption settings
         /// </summary>
@@ -1085,6 +1133,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="settingsId">Settings Id</param>
         /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> GetRecordingLocalkeysSettingAsyncWithHttpInfo (string settingsId);
+        
         /// <summary>
         /// gets a list local key settings data
         /// </summary>
@@ -1104,11 +1153,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (LocalEncryptionConfigurationListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfigurationListing>> GetRecordingLocalkeysSettingsAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
         /// <remarks>
-        /// for a less verbose response, add summary&#x3D;true to this endpoint
+        /// for a less verbose response, add summary=true to this endpoint
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -1118,7 +1168,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
@@ -1128,7 +1178,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets media retention policy list with query options to filter on name and enabled.
         /// </summary>
         /// <remarks>
-        /// for a less verbose response, add summary&#x3D;true to this endpoint
+        /// for a less verbose response, add summary=true to this endpoint
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -1138,11 +1188,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null);
+        
         /// <summary>
         /// Get a media retention policy
         /// </summary>
@@ -1164,6 +1215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="policyId">Policy ID</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
         System.Threading.Tasks.Task<ApiResponse<Policy>> GetRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId);
+        
         /// <summary>
         /// Get encryption key list
         /// </summary>
@@ -1187,6 +1239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Get key rotation schedule
         /// </summary>
@@ -1206,6 +1259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Get the Recording Settings for the Organization
         /// </summary>
@@ -1227,6 +1281,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="createDefault">If no settings are found, a new one is created with default values (optional, default to false)</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> GetRecordingSettingsAsyncWithHttpInfo (bool? createDefault = null);
+        
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions
         /// </summary>
@@ -1250,6 +1305,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        
         /// <summary>
         /// Patch a media retention policy
         /// </summary>
@@ -1273,6 +1329,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
         System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body);
+        
         /// <summary>
         /// Update a screen recording session
         /// </summary>
@@ -1296,6 +1353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchRecordingsScreensessionAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null);
+        
         /// <summary>
         /// Create annotation
         /// </summary>
@@ -1321,6 +1379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
+        
         /// <summary>
         /// create a local recording key
         /// </summary>
@@ -1342,6 +1401,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Local Encryption body</param>
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
         System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingLocalkeysAsyncWithHttpInfo (LocalEncryptionKeyRequest body);
+        
         /// <summary>
         /// create settings for local key creation
         /// </summary>
@@ -1363,6 +1423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Local Encryption Configuration</param>
         /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PostRecordingLocalkeysSettingsAsyncWithHttpInfo (LocalEncryptionConfiguration body);
+        
         /// <summary>
         /// Create media retention policy
         /// </summary>
@@ -1384,6 +1445,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
         System.Threading.Tasks.Task<ApiResponse<Policy>> PostRecordingMediaretentionpoliciesAsyncWithHttpInfo (PolicyCreate body);
+        
         /// <summary>
         /// Create encryption key
         /// </summary>
@@ -1403,6 +1465,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
         System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingRecordingkeysAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Updates the retention records on a recording.
         /// </summary>
@@ -1428,6 +1491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">recording</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
         System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body);
+        
         /// <summary>
         /// Update annotation
         /// </summary>
@@ -1455,6 +1519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">annotation</param>
         /// <returns>Task of ApiResponse (Annotation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body);
+        
         /// <summary>
         /// Updates an orphan recording to a regular recording with retention values
         /// </summary>
@@ -1478,6 +1543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Recording)</returns>
         System.Threading.Tasks.Task<ApiResponse<Recording>> PutOrphanrecordingAsyncWithHttpInfo (string orphanId, OrphanUpdateRequest body = null);
+        
         /// <summary>
         /// Update the local encryption settings
         /// </summary>
@@ -1501,6 +1567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Local Encryption metadata</param>
         /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
         System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PutRecordingLocalkeysSettingAsyncWithHttpInfo (string settingsId, LocalEncryptionConfiguration body);
+        
         /// <summary>
         /// Update a media retention policy
         /// </summary>
@@ -1524,6 +1591,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Policy</param>
         /// <returns>Task of ApiResponse (Policy)</returns>
         System.Threading.Tasks.Task<ApiResponse<Policy>> PutRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body);
+        
         /// <summary>
         /// Update key rotation schedule
         /// </summary>
@@ -1545,6 +1613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">KeyRotationSchedule</param>
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body);
+        
         /// <summary>
         /// Update the Recording Settings for the Organization
         /// </summary>
@@ -1566,7 +1635,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Recording settings</param>
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
         System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutRecordingSettingsAsyncWithHttpInfo (RecordingSettings body);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -1656,6 +1727,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Delete annotation 
         /// </summary>
@@ -1679,15 +1751,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1699,13 +1781,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1714,16 +1800,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
             if (annotationId != null) localVarPathParams.Add("annotationId", Configuration.ApiClient.ParameterToString(annotationId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1745,6 +1844,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Delete annotation 
         /// </summary>
@@ -1769,15 +1869,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->DeleteConversationRecordingAnnotation");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1789,13 +1899,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1804,16 +1918,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
             if (annotationId != null) localVarPathParams.Add("annotationId", Configuration.ApiClient.ParameterToString(annotationId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1835,6 +1963,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Deletes a single orphan recording 
         /// </summary>
@@ -1855,9 +1985,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OrphanRecording</returns>
         public ApiResponse< OrphanRecording > DeleteOrphanrecordingWithHttpInfo (string orphanId)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->DeleteOrphanrecording");
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1869,13 +2003,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1884,14 +2022,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1913,6 +2062,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Deletes a single orphan recording 
         /// </summary>
@@ -1934,9 +2084,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> DeleteOrphanrecordingAsyncWithHttpInfo (string orphanId)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->DeleteOrphanrecording");
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1948,13 +2102,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1963,14 +2121,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1992,6 +2162,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
         /// </summary>
@@ -2011,9 +2183,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteRecordingMediaretentionpoliciesWithHttpInfo (string ids)
         {
+            
+            
             // verify the required parameter 'ids' is set
             if (ids == null)
                 throw new ApiException(400, "Missing required parameter 'ids' when calling RecordingApi->DeleteRecordingMediaretentionpolicies");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2025,13 +2201,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2040,14 +2220,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2069,6 +2260,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Delete media retention policies Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
         /// </summary>
@@ -2089,9 +2281,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpoliciesAsyncWithHttpInfo (string ids)
         {
+            
+            
             // verify the required parameter 'ids' is set
             if (ids == null)
                 throw new ApiException(400, "Missing required parameter 'ids' when calling RecordingApi->DeleteRecordingMediaretentionpolicies");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2103,13 +2299,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2118,14 +2318,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (ids != null) localVarQueryParams.Add("ids", Configuration.ApiClient.ParameterToString(ids)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2147,6 +2359,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Delete a media retention policy 
         /// </summary>
@@ -2166,9 +2380,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteRecordingMediaretentionpolicyWithHttpInfo (string policyId)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2180,13 +2398,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2195,14 +2417,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2224,6 +2457,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Delete a media retention policy 
         /// </summary>
@@ -2244,9 +2478,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->DeleteRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2258,13 +2496,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2273,14 +2515,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2302,6 +2556,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Gets a specific recording. 
         /// </summary>
@@ -2330,12 +2586,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Recording</returns>
         public ApiResponse< Recording > GetConversationRecordingWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecording");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecording");
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2347,13 +2616,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2362,18 +2635,33 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
             if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+            
             if (fileName != null) localVarQueryParams.Add("fileName", Configuration.ApiClient.ParameterToString(fileName)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2395,6 +2683,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Gets a specific recording. 
         /// </summary>
@@ -2424,12 +2713,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Recording)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecording");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecording");
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2441,13 +2743,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2456,18 +2762,34 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
             if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+            
             if (fileName != null) localVarQueryParams.Add("fileName", Configuration.ApiClient.ParameterToString(fileName)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2489,6 +2811,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get annotation 
         /// </summary>
@@ -2513,15 +2837,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Annotation</returns>
         public ApiResponse< Annotation > GetConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->GetConversationRecordingAnnotation");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2533,13 +2867,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2548,16 +2886,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
             if (annotationId != null) localVarPathParams.Add("annotationId", Configuration.ApiClient.ParameterToString(annotationId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2579,6 +2930,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get annotation 
         /// </summary>
@@ -2604,15 +2956,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Annotation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Annotation>> GetConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->GetConversationRecordingAnnotation");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2624,13 +2986,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2639,16 +3005,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
             if (annotationId != null) localVarPathParams.Add("annotationId", Configuration.ApiClient.ParameterToString(annotationId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2670,6 +3050,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get annotations for recording 
         /// </summary>
@@ -2692,12 +3074,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;Annotation&gt;</returns>
         public ApiResponse< List<Annotation> > GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotations");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotations");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2709,13 +3098,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2724,15 +3117,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2754,6 +3159,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get annotations for recording 
         /// </summary>
@@ -2777,12 +3183,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingAnnotations");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingAnnotations");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2794,13 +3207,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2809,15 +3226,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2839,6 +3269,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings. 
         /// </summary>
@@ -2863,9 +3295,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordings");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2877,13 +3317,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2892,16 +3336,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
+            
             if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2923,6 +3380,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings. 
         /// </summary>
@@ -2948,9 +3406,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordings");
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2962,13 +3428,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2977,16 +3447,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
+            
             if (maxWaitMs != null) localVarQueryParams.Add("maxWaitMs", Configuration.ApiClient.ParameterToString(maxWaitMs)); // query parameter
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3008,6 +3492,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Gets a single orphan recording 
         /// </summary>
@@ -3028,9 +3514,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OrphanRecording</returns>
         public ApiResponse< OrphanRecording > GetOrphanrecordingWithHttpInfo (string orphanId)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanrecording");
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3042,13 +3532,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3057,14 +3551,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3086,6 +3591,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Gets a single orphan recording 
         /// </summary>
@@ -3107,9 +3613,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OrphanRecording)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecording>> GetOrphanrecordingAsyncWithHttpInfo (string orphanId)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanrecording");
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3121,13 +3631,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3136,14 +3650,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3165,6 +3691,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Gets the media of a single orphan recording A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
         /// </summary>
@@ -3191,9 +3719,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Recording</returns>
         public ApiResponse< Recording > GetOrphanrecordingMediaWithHttpInfo (string orphanId, string formatId = null, bool? download = null, string fileName = null)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanrecordingMedia");
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3205,13 +3743,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3220,17 +3762,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
             if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+            
             if (fileName != null) localVarQueryParams.Add("fileName", Configuration.ApiClient.ParameterToString(fileName)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3252,6 +3808,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Gets the media of a single orphan recording A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
         /// </summary>
@@ -3279,9 +3836,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Recording)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetOrphanrecordingMediaAsyncWithHttpInfo (string orphanId, string formatId = null, bool? download = null, string fileName = null)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->GetOrphanrecordingMedia");
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}/media";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3293,13 +3860,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3308,17 +3879,32 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
             if (formatId != null) localVarQueryParams.Add("formatId", Configuration.ApiClient.ParameterToString(formatId)); // query parameter
+            
             if (download != null) localVarQueryParams.Add("download", Configuration.ApiClient.ParameterToString(download)); // query parameter
+            
             if (fileName != null) localVarQueryParams.Add("fileName", Configuration.ApiClient.ParameterToString(fileName)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3340,6 +3926,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Gets all orphan recordings 
         /// </summary>
@@ -3374,6 +3962,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of OrphanRecordingListing</returns>
         public ApiResponse< OrphanRecordingListing > GetOrphanrecordingsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3385,13 +3990,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3400,21 +4009,39 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            
             if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
+            
             if (hasConversation != null) localVarQueryParams.Add("hasConversation", Configuration.ApiClient.ParameterToString(hasConversation)); // query parameter
+            
             if (media != null) localVarQueryParams.Add("media", Configuration.ApiClient.ParameterToString(media)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3436,6 +4063,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Gets all orphan recordings 
         /// </summary>
@@ -3471,6 +4099,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (OrphanRecordingListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrphanRecordingListing>> GetOrphanrecordingsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3482,13 +4127,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3497,21 +4146,40 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            
             if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
+            
             if (hasConversation != null) localVarQueryParams.Add("hasConversation", Configuration.ApiClient.ParameterToString(hasConversation)); // query parameter
+            
             if (media != null) localVarQueryParams.Add("media", Configuration.ApiClient.ParameterToString(media)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3533,6 +4201,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the local encryption settings 
         /// </summary>
@@ -3553,9 +4223,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
         public ApiResponse< LocalEncryptionConfiguration > GetRecordingLocalkeysSettingWithHttpInfo (string settingsId)
         {
+            
+            
             // verify the required parameter 'settingsId' is set
             if (settingsId == null)
                 throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->GetRecordingLocalkeysSetting");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3567,13 +4241,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3582,14 +4260,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3611,6 +4300,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the local encryption settings 
         /// </summary>
@@ -3632,9 +4322,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> GetRecordingLocalkeysSettingAsyncWithHttpInfo (string settingsId)
         {
+            
+            
             // verify the required parameter 'settingsId' is set
             if (settingsId == null)
                 throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->GetRecordingLocalkeysSetting");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3646,13 +4340,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3661,14 +4359,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3690,6 +4400,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// gets a list local key settings data 
         /// </summary>
@@ -3708,6 +4420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LocalEncryptionConfigurationListing</returns>
         public ApiResponse< LocalEncryptionConfigurationListing > GetRecordingLocalkeysSettingsWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3719,13 +4432,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3734,13 +4451,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3762,6 +4489,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// gets a list local key settings data 
         /// </summary>
@@ -3781,6 +4509,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LocalEncryptionConfigurationListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfigurationListing>> GetRecordingLocalkeysSettingsAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3792,13 +4521,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3807,13 +4540,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3835,8 +4579,10 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
-        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary&#x3D;true to this endpoint
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3846,7 +4592,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>PolicyEntityListing</returns>
@@ -3857,7 +4603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary&#x3D;true to this endpoint
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3867,12 +4613,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>ApiResponse of PolicyEntityListing</returns>
         public ApiResponse< PolicyEntityListing > GetRecordingMediaretentionpoliciesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3884,13 +4651,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -3899,23 +4670,43 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            
             if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
+            
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
             if (enabled != null) localVarQueryParams.Add("enabled", Configuration.ApiClient.ParameterToString(enabled)); // query parameter
+            
             if (summary != null) localVarQueryParams.Add("summary", Configuration.ApiClient.ParameterToString(summary)); // query parameter
+            
             if (hasErrors != null) localVarQueryParams.Add("hasErrors", Configuration.ApiClient.ParameterToString(hasErrors)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3937,8 +4728,9 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
-        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary&#x3D;true to this endpoint
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3948,7 +4740,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of PolicyEntityListing</returns>
@@ -3960,7 +4752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary&#x3D;true to this endpoint
+        /// Gets media retention policy list with query options to filter on name and enabled. for a less verbose response, add summary=true to this endpoint
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">The total page size requested (optional, default to 25)</param>
@@ -3970,12 +4762,33 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <param name="name">the policy name - used for filtering results in searches. (optional)</param>
-        /// <param name="enabled">checks to see if policy is enabled - use enabled &#x3D; true or enabled &#x3D; false (optional)</param>
+        /// <param name="enabled">checks to see if policy is enabled - use enabled = true or enabled = false (optional)</param>
         /// <param name="summary">provides a less verbose response of policy lists. (optional, default to false)</param>
         /// <param name="hasErrors">provides a way to fetch all policies with errors or policies that do not have errors (optional)</param>
         /// <returns>Task of ApiResponse (PolicyEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PolicyEntityListing>> GetRecordingMediaretentionpoliciesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3987,13 +4800,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4002,23 +4819,44 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
+            
             if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
+            
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
             if (enabled != null) localVarQueryParams.Add("enabled", Configuration.ApiClient.ParameterToString(enabled)); // query parameter
+            
             if (summary != null) localVarQueryParams.Add("summary", Configuration.ApiClient.ParameterToString(summary)); // query parameter
+            
             if (hasErrors != null) localVarQueryParams.Add("hasErrors", Configuration.ApiClient.ParameterToString(hasErrors)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4040,6 +4878,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a media retention policy 
         /// </summary>
@@ -4060,9 +4900,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Policy</returns>
         public ApiResponse< Policy > GetRecordingMediaretentionpolicyWithHttpInfo (string policyId)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4074,13 +4918,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4089,14 +4937,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4118,6 +4977,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a media retention policy 
         /// </summary>
@@ -4139,9 +4999,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Policy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> GetRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->GetRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4153,13 +5017,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4168,14 +5036,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4197,6 +5077,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get encryption key list 
         /// </summary>
@@ -4219,6 +5101,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of EncryptionKeyEntityListing</returns>
         public ApiResponse< EncryptionKeyEntityListing > GetRecordingRecordingkeysWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4230,13 +5117,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4245,15 +5136,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4275,6 +5178,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get encryption key list 
         /// </summary>
@@ -4298,6 +5202,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EncryptionKeyEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EncryptionKeyEntityListing>> GetRecordingRecordingkeysAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4309,13 +5218,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4324,15 +5237,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4354,6 +5280,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get key rotation schedule 
         /// </summary>
@@ -4372,6 +5300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
         public ApiResponse< KeyRotationSchedule > GetRecordingRecordingkeysRotationscheduleWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4383,13 +5312,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4398,13 +5331,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4426,6 +5369,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get key rotation schedule 
         /// </summary>
@@ -4445,6 +5389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> GetRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4456,13 +5401,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4471,13 +5420,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4499,6 +5459,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the Recording Settings for the Organization 
         /// </summary>
@@ -4519,6 +5481,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of RecordingSettings</returns>
         public ApiResponse< RecordingSettings > GetRecordingSettingsWithHttpInfo (bool? createDefault = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/recording/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4530,13 +5495,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4545,14 +5514,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (createDefault != null) localVarQueryParams.Add("createDefault", Configuration.ApiClient.ParameterToString(createDefault)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4574,6 +5554,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the Recording Settings for the Organization 
         /// </summary>
@@ -4595,6 +5576,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> GetRecordingSettingsAsyncWithHttpInfo (bool? createDefault = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/recording/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4606,13 +5590,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4621,14 +5609,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (createDefault != null) localVarQueryParams.Add("createDefault", Configuration.ApiClient.ParameterToString(createDefault)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4650,6 +5650,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions 
         /// </summary>
@@ -4672,6 +5674,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ScreenRecordingSessionListing</returns>
         public ApiResponse< ScreenRecordingSessionListing > GetRecordingsScreensessionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recordings/screensessions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4683,13 +5690,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4698,15 +5709,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4728,6 +5751,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Retrieves a paged listing of screen recording sessions 
         /// </summary>
@@ -4751,6 +5775,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ScreenRecordingSessionListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScreenRecordingSessionListing>> GetRecordingsScreensessionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recordings/screensessions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4762,13 +5791,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4777,15 +5810,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4807,6 +5853,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Patch a media retention policy 
         /// </summary>
@@ -4829,12 +5877,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Policy</returns>
         public ApiResponse< Policy > PatchRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchRecordingMediaretentionpolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4846,13 +5901,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4861,7 +5920,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4870,13 +5935,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4898,6 +5969,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Patch a media retention policy 
         /// </summary>
@@ -4921,12 +5993,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Policy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> PatchRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PatchRecordingMediaretentionpolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PatchRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -4938,13 +6017,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -4953,7 +6036,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -4962,13 +6051,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4990,6 +6086,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update a screen recording session 
         /// </summary>
@@ -5011,9 +6109,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchRecordingsScreensessionWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         {
+            
+            
             // verify the required parameter 'recordingSessionId' is set
             if (recordingSessionId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingSessionId' when calling RecordingApi->PatchRecordingsScreensession");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recordings/screensessions/{recordingSessionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5025,13 +6129,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5040,7 +6148,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (recordingSessionId != null) localVarPathParams.Add("recordingSessionId", Configuration.ApiClient.ParameterToString(recordingSessionId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5049,13 +6163,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5077,6 +6197,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Update a screen recording session 
         /// </summary>
@@ -5099,9 +6220,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchRecordingsScreensessionAsyncWithHttpInfo (string recordingSessionId, ScreenRecordingSessionRequest body = null)
         {
+            
+            
             // verify the required parameter 'recordingSessionId' is set
             if (recordingSessionId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingSessionId' when calling RecordingApi->PatchRecordingsScreensession");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/recordings/screensessions/{recordingSessionId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5113,13 +6240,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5128,7 +6259,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (recordingSessionId != null) localVarPathParams.Add("recordingSessionId", Configuration.ApiClient.ParameterToString(recordingSessionId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5137,13 +6274,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5165,6 +6309,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Create annotation 
         /// </summary>
@@ -5189,15 +6335,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Annotation</returns>
         public ApiResponse< Annotation > PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PostConversationRecordingAnnotations");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationRecordingAnnotations");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationRecordingAnnotations");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5209,13 +6365,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5224,8 +6384,15 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5234,13 +6401,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5262,6 +6435,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Create annotation 
         /// </summary>
@@ -5287,15 +6461,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Annotation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PostConversationRecordingAnnotations");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PostConversationRecordingAnnotations");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostConversationRecordingAnnotations");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5307,13 +6491,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5322,8 +6510,15 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5332,13 +6527,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5360,6 +6562,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// create a local recording key 
         /// </summary>
@@ -5380,9 +6584,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of EncryptionKey</returns>
         public ApiResponse< EncryptionKey > PostRecordingLocalkeysWithHttpInfo (LocalEncryptionKeyRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingLocalkeys");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5394,13 +6602,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5409,6 +6621,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5417,13 +6634,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5445,6 +6668,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// create a local recording key 
         /// </summary>
@@ -5466,9 +6690,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingLocalkeysAsyncWithHttpInfo (LocalEncryptionKeyRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingLocalkeys");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5480,13 +6708,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5495,6 +6727,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5503,13 +6740,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5531,6 +6775,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// create settings for local key creation 
         /// </summary>
@@ -5551,9 +6797,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
         public ApiResponse< LocalEncryptionConfiguration > PostRecordingLocalkeysSettingsWithHttpInfo (LocalEncryptionConfiguration body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingLocalkeysSettings");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5565,13 +6815,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5580,6 +6834,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5588,13 +6847,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5616,6 +6881,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// create settings for local key creation 
         /// </summary>
@@ -5637,9 +6903,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PostRecordingLocalkeysSettingsAsyncWithHttpInfo (LocalEncryptionConfiguration body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingLocalkeysSettings");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5651,13 +6921,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5666,6 +6940,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5674,13 +6953,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5702,6 +6988,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Create media retention policy 
         /// </summary>
@@ -5722,9 +7010,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Policy</returns>
         public ApiResponse< Policy > PostRecordingMediaretentionpoliciesWithHttpInfo (PolicyCreate body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingMediaretentionpolicies");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5736,13 +7028,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5751,6 +7047,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5759,13 +7060,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5787,6 +7094,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Create media retention policy 
         /// </summary>
@@ -5808,9 +7116,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Policy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> PostRecordingMediaretentionpoliciesAsyncWithHttpInfo (PolicyCreate body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PostRecordingMediaretentionpolicies");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5822,13 +7134,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5837,6 +7153,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -5845,13 +7166,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5873,6 +7201,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Create encryption key 
         /// </summary>
@@ -5891,6 +7221,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of EncryptionKey</returns>
         public ApiResponse< EncryptionKey > PostRecordingRecordingkeysWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5902,13 +7233,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5917,13 +7252,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5945,6 +7290,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Create encryption key 
         /// </summary>
@@ -5964,6 +7310,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EncryptionKey)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EncryptionKey>> PostRecordingRecordingkeysAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5975,13 +7322,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -5990,13 +7341,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6018,6 +7380,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
         /// </summary>
@@ -6042,15 +7406,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Recording</returns>
         public ApiResponse< Recording > PutConversationRecordingWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecording");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecording");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecording");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6062,13 +7436,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6077,8 +7455,15 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6087,13 +7472,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6115,6 +7506,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Updates the retention records on a recording. Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
         /// </summary>
@@ -6140,15 +7532,25 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Recording)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> PutConversationRecordingAsyncWithHttpInfo (string conversationId, string recordingId, Recording body)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecording");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecording");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecording");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6160,13 +7562,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6175,8 +7581,15 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6185,13 +7598,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6213,6 +7633,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update annotation 
         /// </summary>
@@ -6239,18 +7661,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Annotation</returns>
         public ApiResponse< Annotation > PutConversationRecordingAnnotationWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6262,13 +7697,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6277,9 +7716,17 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
             if (annotationId != null) localVarPathParams.Add("annotationId", Configuration.ApiClient.ParameterToString(annotationId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6288,13 +7735,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6316,6 +7769,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update annotation 
         /// </summary>
@@ -6343,18 +7797,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Annotation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Annotation>> PutConversationRecordingAnnotationAsyncWithHttpInfo (string conversationId, string recordingId, string annotationId, Annotation body)
         {
+            
+            
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'recordingId' is set
             if (recordingId == null)
                 throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'annotationId' is set
             if (annotationId == null)
                 throw new ApiException(400, "Missing required parameter 'annotationId' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutConversationRecordingAnnotation");
+            
+            
 
             var localVarPath = "/api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6366,13 +7833,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6381,9 +7852,17 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId)); // path parameter
+            
             if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId)); // path parameter
+            
             if (annotationId != null) localVarPathParams.Add("annotationId", Configuration.ApiClient.ParameterToString(annotationId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6392,13 +7871,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6420,6 +7906,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Updates an orphan recording to a regular recording with retention values If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
         /// </summary>
@@ -6442,9 +7930,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Recording</returns>
         public ApiResponse< Recording > PutOrphanrecordingWithHttpInfo (string orphanId, OrphanUpdateRequest body = null)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->PutOrphanrecording");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6456,13 +7950,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6471,7 +7969,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6480,13 +7984,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6508,6 +8018,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Updates an orphan recording to a regular recording with retention values If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
         /// </summary>
@@ -6531,9 +8042,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Recording)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Recording>> PutOrphanrecordingAsyncWithHttpInfo (string orphanId, OrphanUpdateRequest body = null)
         {
+            
+            
             // verify the required parameter 'orphanId' is set
             if (orphanId == null)
                 throw new ApiException(400, "Missing required parameter 'orphanId' when calling RecordingApi->PutOrphanrecording");
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/orphanrecordings/{orphanId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6545,13 +8062,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6560,7 +8081,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (orphanId != null) localVarPathParams.Add("orphanId", Configuration.ApiClient.ParameterToString(orphanId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6569,13 +8096,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6597,6 +8131,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update the local encryption settings 
         /// </summary>
@@ -6619,12 +8155,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LocalEncryptionConfiguration</returns>
         public ApiResponse< LocalEncryptionConfiguration > PutRecordingLocalkeysSettingWithHttpInfo (string settingsId, LocalEncryptionConfiguration body)
         {
+            
+            
             // verify the required parameter 'settingsId' is set
             if (settingsId == null)
                 throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->PutRecordingLocalkeysSetting");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingLocalkeysSetting");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6636,13 +8179,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6651,7 +8198,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6660,13 +8213,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6688,6 +8247,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update the local encryption settings 
         /// </summary>
@@ -6711,12 +8271,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LocalEncryptionConfiguration)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LocalEncryptionConfiguration>> PutRecordingLocalkeysSettingAsyncWithHttpInfo (string settingsId, LocalEncryptionConfiguration body)
         {
+            
+            
             // verify the required parameter 'settingsId' is set
             if (settingsId == null)
                 throw new ApiException(400, "Missing required parameter 'settingsId' when calling RecordingApi->PutRecordingLocalkeysSetting");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingLocalkeysSetting");
+            
+            
 
             var localVarPath = "/api/v2/recording/localkeys/settings/{settingsId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6728,13 +8295,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6743,7 +8314,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (settingsId != null) localVarPathParams.Add("settingsId", Configuration.ApiClient.ParameterToString(settingsId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6752,13 +8329,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6780,6 +8364,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update a media retention policy 
         /// </summary>
@@ -6802,12 +8388,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Policy</returns>
         public ApiResponse< Policy > PutRecordingMediaretentionpolicyWithHttpInfo (string policyId, Policy body)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutRecordingMediaretentionpolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6819,13 +8412,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6834,7 +8431,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6843,13 +8446,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6871,6 +8480,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update a media retention policy 
         /// </summary>
@@ -6894,12 +8504,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Policy)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Policy>> PutRecordingMediaretentionpolicyAsyncWithHttpInfo (string policyId, Policy body)
         {
+            
+            
             // verify the required parameter 'policyId' is set
             if (policyId == null)
                 throw new ApiException(400, "Missing required parameter 'policyId' when calling RecordingApi->PutRecordingMediaretentionpolicy");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingMediaretentionpolicy");
+            
+            
 
             var localVarPath = "/api/v2/recording/mediaretentionpolicies/{policyId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6911,13 +8528,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -6926,7 +8547,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (policyId != null) localVarPathParams.Add("policyId", Configuration.ApiClient.ParameterToString(policyId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -6935,13 +8562,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6963,6 +8597,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update key rotation schedule 
         /// </summary>
@@ -6983,9 +8619,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of KeyRotationSchedule</returns>
         public ApiResponse< KeyRotationSchedule > PutRecordingRecordingkeysRotationscheduleWithHttpInfo (KeyRotationSchedule body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingRecordingkeysRotationschedule");
+            
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6997,13 +8637,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7012,6 +8656,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7020,13 +8669,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -7048,6 +8703,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update key rotation schedule 
         /// </summary>
@@ -7069,9 +8725,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (KeyRotationSchedule)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<KeyRotationSchedule>> PutRecordingRecordingkeysRotationscheduleAsyncWithHttpInfo (KeyRotationSchedule body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingRecordingkeysRotationschedule");
+            
+            
 
             var localVarPath = "/api/v2/recording/recordingkeys/rotationschedule";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7083,13 +8743,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7098,6 +8762,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7106,13 +8775,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -7134,6 +8810,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update the Recording Settings for the Organization 
         /// </summary>
@@ -7154,9 +8832,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of RecordingSettings</returns>
         public ApiResponse< RecordingSettings > PutRecordingSettingsWithHttpInfo (RecordingSettings body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingSettings");
+            
+            
 
             var localVarPath = "/api/v2/recording/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7168,13 +8850,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7183,6 +8869,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7191,13 +8882,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -7219,6 +8916,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update the Recording Settings for the Organization 
         /// </summary>
@@ -7240,9 +8938,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (RecordingSettings)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<RecordingSettings>> PutRecordingSettingsAsyncWithHttpInfo (RecordingSettings body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling RecordingApi->PutRecordingSettings");
+            
+            
 
             var localVarPath = "/api/v2/recording/settings";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7254,13 +8956,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -7269,6 +8975,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -7277,13 +8988,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -7305,5 +9023,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

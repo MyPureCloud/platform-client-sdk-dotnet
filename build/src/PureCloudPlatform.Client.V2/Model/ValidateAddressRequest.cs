@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ValidateAddressRequest :  IEquatable<ValidateAddressRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ValidateAddressRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="Address">Address schema.</param>
+        
+        
         public ValidateAddressRequest(StreetAddress Address = null)
         {
-            this.Address = Address;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Address = Address;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Address schema
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Address schema</value>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public StreetAddress Address { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ValidateAddressRequest {\n");
+            
             sb.Append("  Address: ").Append(Address).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
                 return hash;
             }
         }

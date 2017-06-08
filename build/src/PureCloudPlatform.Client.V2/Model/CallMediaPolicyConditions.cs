@@ -18,6 +18,25 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallMediaPolicyConditions :  IEquatable<CallMediaPolicyConditions>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Directions
         /// </summary>
@@ -44,62 +63,214 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OUTBOUND")]
             Outbound
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallMediaPolicyConditions" /> class.
         /// </summary>
+        
+        
         /// <param name="ForUsers">ForUsers.</param>
+        
+        
+        
         /// <param name="DateRanges">DateRanges.</param>
+        
+        
+        
         /// <param name="ForQueues">ForQueues.</param>
+        
+        
+        
         /// <param name="WrapupCodes">WrapupCodes.</param>
+        
+        
+        
         /// <param name="TimeAllowed">TimeAllowed.</param>
+        
+        
+        
         /// <param name="Directions">Directions.</param>
+        
+        
+        
         /// <param name="Duration">Duration.</param>
+        
+        
         public CallMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, TimeAllowed TimeAllowed = null, List<DirectionsEnum> Directions = null, DurationCondition Duration = null)
         {
-            this.ForUsers = ForUsers;
-            this.DateRanges = DateRanges;
-            this.ForQueues = ForQueues;
-            this.WrapupCodes = WrapupCodes;
-            this.TimeAllowed = TimeAllowed;
-            this.Directions = Directions;
-            this.Duration = Duration;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ForUsers = ForUsers;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateRanges = DateRanges;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ForQueues = ForQueues;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupCodes = WrapupCodes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeAllowed = TimeAllowed;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Directions = Directions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Duration = Duration;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ForUsers
         /// </summary>
         [DataMember(Name="forUsers", EmitDefaultValue=false)]
         public List<User> ForUsers { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateRanges
         /// </summary>
         [DataMember(Name="dateRanges", EmitDefaultValue=false)]
         public List<string> DateRanges { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ForQueues
         /// </summary>
         [DataMember(Name="forQueues", EmitDefaultValue=false)]
         public List<Queue> ForQueues { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupCodes
         /// </summary>
         [DataMember(Name="wrapupCodes", EmitDefaultValue=false)]
         public List<WrapupCode> WrapupCodes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TimeAllowed
         /// </summary>
         [DataMember(Name="timeAllowed", EmitDefaultValue=false)]
         public TimeAllowed TimeAllowed { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Directions
         /// </summary>
         [DataMember(Name="directions", EmitDefaultValue=false)]
         public List<DirectionsEnum> Directions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Duration
         /// </summary>
         [DataMember(Name="duration", EmitDefaultValue=false)]
         public DurationCondition Duration { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,13 +279,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallMediaPolicyConditions {\n");
+            
             sb.Append("  ForUsers: ").Append(ForUsers).Append("\n");
+            
             sb.Append("  DateRanges: ").Append(DateRanges).Append("\n");
+            
             sb.Append("  ForQueues: ").Append(ForQueues).Append("\n");
+            
             sb.Append("  WrapupCodes: ").Append(WrapupCodes).Append("\n");
+            
             sb.Append("  TimeAllowed: ").Append(TimeAllowed).Append("\n");
+            
             sb.Append("  Directions: ").Append(Directions).Append("\n");
+            
             sb.Append("  Duration: ").Append(Duration).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,20 +378,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ForUsers != null)
                     hash = hash * 59 + this.ForUsers.GetHashCode();
+                
                 if (this.DateRanges != null)
                     hash = hash * 59 + this.DateRanges.GetHashCode();
+                
                 if (this.ForQueues != null)
                     hash = hash * 59 + this.ForQueues.GetHashCode();
+                
                 if (this.WrapupCodes != null)
                     hash = hash * 59 + this.WrapupCodes.GetHashCode();
+                
                 if (this.TimeAllowed != null)
                     hash = hash * 59 + this.TimeAllowed.GetHashCode();
+                
                 if (this.Directions != null)
                     hash = hash * 59 + this.Directions.GetHashCode();
+                
                 if (this.Duration != null)
                     hash = hash * 59 + this.Duration.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterPredicate :  IEquatable<ContactListFilterPredicate>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Whether the contact column contains numeric or alphabetic data
         /// </summary>
@@ -45,6 +50,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "alphabetic")]
             Alphabetic
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
@@ -131,35 +140,158 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "IN")]
             In
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Whether the contact column contains numeric or alphabetic data
         /// </summary>
         /// <value>Whether the contact column contains numeric or alphabetic data</value>
         [DataMember(Name="columnType", EmitDefaultValue=false)]
         public ColumnTypeEnum? ColumnType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterPredicate" /> class.
         /// </summary>
+        
+        
         /// <param name="Column">Contact List column that must match a contact list column in the ContactListFilter&#39;s contactList object.</param>
+        
+        
+        
         /// <param name="ColumnType">Whether the contact column contains numeric or alphabetic data.</param>
+        
+        
+        
         /// <param name="_Operator">_Operator.</param>
+        
+        
+        
         /// <param name="Value">Contact List value to operate on. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes)..</param>
+        
+        
+        
         /// <param name="Range">Range is only required for ContactListFilterComparisonOperator&#39;s BETWEEN and IN.</param>
+        
+        
+        
         /// <param name="Inverted">Inverts the result of the predicate (i.e., if the predicate returns true, inverting it will return false)..</param>
+        
+        
         public ContactListFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? _Operator = null, string Value = null, ContactListFilterRange Range = null, bool? Inverted = null)
         {
-            this.Column = Column;
-            this.ColumnType = ColumnType;
-            this._Operator = _Operator;
-            this.Value = Value;
-            this.Range = Range;
-            this.Inverted = Inverted;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Column = Column;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ColumnType = ColumnType;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Range = Range;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Inverted = Inverted;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Contact List column that must match a contact list column in the ContactListFilter&#39;s contactList object
@@ -167,24 +299,39 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Contact List column that must match a contact list column in the ContactListFilter&#39;s contactList object</value>
         [DataMember(Name="column", EmitDefaultValue=false)]
         public string Column { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Contact List value to operate on. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).
         /// </summary>
         /// <value>Contact List value to operate on. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
         /// <summary>
         /// Range is only required for ContactListFilterComparisonOperator&#39;s BETWEEN and IN
         /// </summary>
         /// <value>Range is only required for ContactListFilterComparisonOperator&#39;s BETWEEN and IN</value>
         [DataMember(Name="range", EmitDefaultValue=false)]
         public ContactListFilterRange Range { get; set; }
+        
+        
+        
         /// <summary>
         /// Inverts the result of the predicate (i.e., if the predicate returns true, inverting it will return false).
         /// </summary>
         /// <value>Inverts the result of the predicate (i.e., if the predicate returns true, inverting it will return false).</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -193,12 +340,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterPredicate {\n");
+            
             sb.Append("  Column: ").Append(Column).Append("\n");
+            
             sb.Append("  ColumnType: ").Append(ColumnType).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  Range: ").Append(Range).Append("\n");
+            
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,18 +432,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Column != null)
                     hash = hash * 59 + this.Column.GetHashCode();
+                
                 if (this.ColumnType != null)
                     hash = hash * 59 + this.ColumnType.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
+                
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
+                
                 return hash;
             }
         }

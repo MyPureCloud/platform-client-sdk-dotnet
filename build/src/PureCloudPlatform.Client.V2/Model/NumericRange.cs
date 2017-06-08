@@ -18,20 +18,108 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class NumericRange :  IEquatable<NumericRange>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="NumericRange" /> class.
         /// </summary>
+        
+        
         /// <param name="Gt">Greater than.</param>
+        
+        
+        
         /// <param name="Gte">Greater than or equal to.</param>
+        
+        
+        
         /// <param name="Lt">Less than.</param>
+        
+        
+        
         /// <param name="Lte">Less than or equal to.</param>
+        
+        
         public NumericRange(double? Gt = null, double? Gte = null, double? Lt = null, double? Lte = null)
         {
-            this.Gt = Gt;
-            this.Gte = Gte;
-            this.Lt = Lt;
-            this.Lte = Lte;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Gt = Gt;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Gte = Gte;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Lt = Lt;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Lte = Lte;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Greater than
@@ -39,24 +127,35 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Greater than</value>
         [DataMember(Name="gt", EmitDefaultValue=false)]
         public double? Gt { get; set; }
+        
+        
+        
         /// <summary>
         /// Greater than or equal to
         /// </summary>
         /// <value>Greater than or equal to</value>
         [DataMember(Name="gte", EmitDefaultValue=false)]
         public double? Gte { get; set; }
+        
+        
+        
         /// <summary>
         /// Less than
         /// </summary>
         /// <value>Less than</value>
         [DataMember(Name="lt", EmitDefaultValue=false)]
         public double? Lt { get; set; }
+        
+        
+        
         /// <summary>
         /// Less than or equal to
         /// </summary>
         /// <value>Less than or equal to</value>
         [DataMember(Name="lte", EmitDefaultValue=false)]
         public double? Lte { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -65,10 +164,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class NumericRange {\n");
+            
             sb.Append("  Gt: ").Append(Gt).Append("\n");
+            
             sb.Append("  Gte: ").Append(Gte).Append("\n");
+            
             sb.Append("  Lt: ").Append(Lt).Append("\n");
+            
             sb.Append("  Lte: ").Append(Lte).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,14 +242,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Gt != null)
                     hash = hash * 59 + this.Gt.GetHashCode();
+                
                 if (this.Gte != null)
                     hash = hash * 59 + this.Gte.GetHashCode();
+                
                 if (this.Lt != null)
                     hash = hash * 59 + this.Lt.GetHashCode();
+                
                 if (this.Lte != null)
                     hash = hash * 59 + this.Lte.GetHashCode();
+                
                 return hash;
             }
         }

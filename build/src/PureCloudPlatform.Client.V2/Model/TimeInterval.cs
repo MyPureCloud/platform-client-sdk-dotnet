@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeInterval :  IEquatable<TimeInterval>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeInterval" /> class.
         /// </summary>
+        
+        
         /// <param name="Days">Days.</param>
+        
+        
+        
         /// <param name="Hours">Hours.</param>
+        
+        
         public TimeInterval(int? Days = null, int? Hours = null)
         {
-            this.Days = Days;
-            this.Hours = Hours;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Days = Days;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Hours = Hours;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Hours
         /// </summary>
         [DataMember(Name="hours", EmitDefaultValue=false)]
         public int? Hours { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeInterval {\n");
+            
             sb.Append("  Days: ").Append(Days).Append("\n");
+            
             sb.Append("  Hours: ").Append(Hours).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Days != null)
                     hash = hash * 59 + this.Days.GetHashCode();
+                
                 if (this.Hours != null)
                     hash = hash * 59 + this.Hours.GetHashCode();
+                
                 return hash;
             }
         }

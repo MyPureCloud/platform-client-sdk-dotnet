@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallConversationNotification :  IEquatable<CallConversationNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -50,48 +64,157 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paused")]
             Paused
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallConversationNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Participants">Participants.</param>
+        
+        
+        
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
+        
+        
+        
         /// <param name="RecordingState">RecordingState.</param>
+        
+        
         public CallConversationNotification(string Id = null, string Name = null, List<CallConversationNotificationParticipants> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Participants = Participants;
-            this.OtherMediaUris = OtherMediaUris;
-            this.RecordingState = RecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Participants = Participants;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OtherMediaUris = OtherMediaUris;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingState = RecordingState;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Participants
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<CallConversationNotificationParticipants> Participants { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets OtherMediaUris
         /// </summary>
         [DataMember(Name="otherMediaUris", EmitDefaultValue=false)]
         public List<string> OtherMediaUris { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,11 +223,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallConversationNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
+            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -179,16 +308,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+                
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
+                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserScheduleAdherence :  IEquatable<UserScheduleAdherence>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -81,6 +95,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unavailable")]
             Unavailable
         }
+        
+        
+        
+        
         /// <summary>
         /// Actual underlying system presence value
         /// </summary>
@@ -156,6 +174,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Break")]
             Break
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
         /// </summary>
@@ -201,6 +226,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
+        
+        
+        
+        
         /// <summary>
         /// Activity in which the user is actually engaged
         /// </summary>
@@ -264,6 +293,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unavailable")]
             Unavailable
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The user's current adherence state
         /// </summary>
@@ -303,6 +339,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
+        
+        
+        
+        
         /// <summary>
         /// The impact of the user's current adherenceState
         /// </summary>
@@ -342,54 +382,215 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "Unknown")]
             Unknown
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
         /// <value>Activity for which the user is scheduled</value>
         [DataMember(Name="scheduledActivityCategory", EmitDefaultValue=false)]
         public ScheduledActivityCategoryEnum? ScheduledActivityCategory { get; set; }
+        
+        
+        
         /// <summary>
         /// Actual underlying system presence value
         /// </summary>
         /// <value>Actual underlying system presence value</value>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public SystemPresenceEnum? SystemPresence { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue
         /// </summary>
         /// <value>Actual underlying routing status, used to determine whether a user is actually in adherence when OnQueue</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// Activity in which the user is actually engaged
         /// </summary>
         /// <value>Activity in which the user is actually engaged</value>
         [DataMember(Name="actualActivityCategory", EmitDefaultValue=false)]
         public ActualActivityCategoryEnum? ActualActivityCategory { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The user's current adherence state
         /// </summary>
         /// <value>The user's current adherence state</value>
         [DataMember(Name="adherenceState", EmitDefaultValue=false)]
         public AdherenceStateEnum? AdherenceState { get; set; }
+        
+        
+        
         /// <summary>
         /// The impact of the user's current adherenceState
         /// </summary>
         /// <value>The impact of the user's current adherenceState</value>
         [DataMember(Name="impact", EmitDefaultValue=false)]
         public ImpactEnum? Impact { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleAdherence" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="User">The user for whom this status applies.</param>
+        
+        
+        
         /// <param name="ManagementUnit">The management unit to which this user belongs.</param>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         public UserScheduleAdherence(string Name = null, User User = null, ManagementUnit ManagementUnit = null)
         {
-            this.Name = Name;
-            this.User = User;
-            this.ManagementUnit = ManagementUnit;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ManagementUnit = ManagementUnit;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -397,47 +598,82 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The user for whom this status applies
         /// </summary>
         /// <value>The user for whom this status applies</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
         /// <summary>
         /// The management unit to which this user belongs
         /// </summary>
         /// <value>The management unit to which this user belongs</value>
         [DataMember(Name="managementUnit", EmitDefaultValue=false)]
         public ManagementUnit ManagementUnit { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Organization Secondary Presence Id.
         /// </summary>
         /// <value>Organization Secondary Presence Id.</value>
         [DataMember(Name="organizationSecondaryPresenceId", EmitDefaultValue=false)]
         public string OrganizationSecondaryPresenceId { get; private set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Whether the user is marked OutOfOffice
         /// </summary>
         /// <value>Whether the user is marked OutOfOffice</value>
         [DataMember(Name="isOutOfOffice", EmitDefaultValue=false)]
         public bool? IsOutOfOffice { get; private set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Time when the user entered the current adherenceState in ISO-8601 format
         /// </summary>
         /// <value>Time when the user entered the current adherenceState in ISO-8601 format</value>
         [DataMember(Name="timeOfAdherenceChange", EmitDefaultValue=false)]
         public string TimeOfAdherenceChange { get; private set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -446,20 +682,35 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserScheduleAdherence {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
+            
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
+            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
+            
             sb.Append("  OrganizationSecondaryPresenceId: ").Append(OrganizationSecondaryPresenceId).Append("\n");
+            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
+            
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
+            
             sb.Append("  AdherenceState: ").Append(AdherenceState).Append("\n");
+            
             sb.Append("  Impact: ").Append(Impact).Append("\n");
+            
             sb.Append("  TimeOfAdherenceChange: ").Append(TimeOfAdherenceChange).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -579,34 +830,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
+                
                 if (this.ScheduledActivityCategory != null)
                     hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();
+                
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
+                
                 if (this.OrganizationSecondaryPresenceId != null)
                     hash = hash * 59 + this.OrganizationSecondaryPresenceId.GetHashCode();
+                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
                 if (this.ActualActivityCategory != null)
                     hash = hash * 59 + this.ActualActivityCategory.GetHashCode();
+                
                 if (this.IsOutOfOffice != null)
                     hash = hash * 59 + this.IsOutOfOffice.GetHashCode();
+                
                 if (this.AdherenceState != null)
                     hash = hash * 59 + this.AdherenceState.GetHashCode();
+                
                 if (this.Impact != null)
                     hash = hash * 59 + this.Impact.GetHashCode();
+                
                 if (this.TimeOfAdherenceChange != null)
                     hash = hash * 59 + this.TimeOfAdherenceChange.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

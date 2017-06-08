@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableLanguageList :  IEquatable<AvailableLanguageList>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableLanguageList" /> class.
         /// </summary>
+        
+        
         /// <param name="Languages">Languages.</param>
+        
+        
         public AvailableLanguageList(List<string> Languages = null)
         {
-            this.Languages = Languages;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Languages = Languages;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Languages
         /// </summary>
         [DataMember(Name="languages", EmitDefaultValue=false)]
         public List<string> Languages { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableLanguageList {\n");
+            
             sb.Append("  Languages: ").Append(Languages).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Languages != null)
                     hash = hash * 59 + this.Languages.GetHashCode();
+                
                 return hash;
             }
         }

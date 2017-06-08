@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingStatusRule :  IEquatable<RoutingStatusRule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The routing status on which to alert.
         /// </summary>
@@ -63,6 +74,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -95,29 +124,92 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The routing status on which to alert.
         /// </summary>
         /// <value>The routing status on which to alert.</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatusRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RoutingStatusRule() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatusRule" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name of the rule (required).</param>
+        
+        
+        
         /// <param name="Agent">The agent whose routing status will be watched. (required).</param>
+        
+        
+        
         /// <param name="RoutingStatus">The routing status on which to alert. (required).</param>
+        
+        
+        
         /// <param name="RoutingLimitInSeconds">The number of seconds to wait before alerting based upon the agent&#39;s routing status. (required).</param>
+        
+        
+        
         /// <param name="Enabled">Indicates if the rule is enabled. (required).</param>
+        
+        
+        
+        
+        
         /// <param name="NotificationUsers">The ids of users who will be notified of alarm state change. (required).</param>
+        
+        
+        
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
+        
+        
+        
+        
         public RoutingStatusRule(string Name = null, User Agent = null, RoutingStatusEnum? RoutingStatus = null, int? RoutingLimitInSeconds = null, bool? Enabled = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -127,6 +219,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "Agent" is required (not null)
             if (Agent == null)
             {
@@ -136,6 +233,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Agent = Agent;
             }
+            
+            
+            
+            
+            
             // to ensure "RoutingStatus" is required (not null)
             if (RoutingStatus == null)
             {
@@ -145,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.RoutingStatus = RoutingStatus;
             }
+            
+            
+            
+            
+            
             // to ensure "RoutingLimitInSeconds" is required (not null)
             if (RoutingLimitInSeconds == null)
             {
@@ -154,6 +261,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.RoutingLimitInSeconds = RoutingLimitInSeconds;
             }
+            
+            
+            
+            
+            
             // to ensure "Enabled" is required (not null)
             if (Enabled == null)
             {
@@ -163,6 +275,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Enabled = Enabled;
             }
+            
+            
+            
+            
+            
+            
+            
             // to ensure "NotificationUsers" is required (not null)
             if (NotificationUsers == null)
             {
@@ -172,6 +291,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.NotificationUsers = NotificationUsers;
             }
+            
+            
+            
+            
+            
             // to ensure "AlertTypes" is required (not null)
             if (AlertTypes == null)
             {
@@ -181,7 +305,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.AlertTypes = AlertTypes;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -189,54 +355,82 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Name of the rule
         /// </summary>
         /// <value>Name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The agent whose routing status will be watched.
         /// </summary>
         /// <value>The agent whose routing status will be watched.</value>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public User Agent { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The number of seconds to wait before alerting based upon the agent&#39;s routing status.
         /// </summary>
         /// <value>The number of seconds to wait before alerting based upon the agent&#39;s routing status.</value>
         [DataMember(Name="routingLimitInSeconds", EmitDefaultValue=false)]
         public int? RoutingLimitInSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Indicates if the rule is enabled.
         /// </summary>
         /// <value>Indicates if the rule is enabled.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
         /// <summary>
         /// Indicates if the rule is in alarm state.
         /// </summary>
         /// <value>Indicates if the rule is in alarm state.</value>
         [DataMember(Name="inAlarm", EmitDefaultValue=false)]
         public bool? InAlarm { get; private set; }
+        
+        
+        
         /// <summary>
         /// The ids of users who will be notified of alarm state change.
         /// </summary>
         /// <value>The ids of users who will be notified of alarm state change.</value>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
+        
+        
+        
         /// <summary>
         /// A collection of notification methods.
         /// </summary>
         /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -245,16 +439,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingStatusRule {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Agent: ").Append(Agent).Append("\n");
+            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            
             sb.Append("  RoutingLimitInSeconds: ").Append(RoutingLimitInSeconds).Append("\n");
+            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
+            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
+            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -354,26 +559,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
+                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
                 if (this.RoutingLimitInSeconds != null)
                     hash = hash * 59 + this.RoutingLimitInSeconds.GetHashCode();
+                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
                 if (this.InAlarm != null)
                     hash = hash * 59 + this.InAlarm.GetHashCode();
+                
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
+                
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

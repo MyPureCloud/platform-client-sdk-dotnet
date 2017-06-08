@@ -40,13 +40,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OAuthApi();
+            
+            
             var clientId = clientId_example;  // string | Client ID
+            
+            
+            
 
             try
             {
+                
                 // Delete OAuth Client
+                
                 apiInstance.DeleteOauthClient(clientId);
             }
             catch (Exception e)
@@ -95,13 +103,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OAuthApi();
+            
+            
             var clientId = clientId_example;  // string | Client ID
+            
+            
+            
 
             try
             {
+                
                 // Get OAuth Client
+                
                 OAuthClient result = apiInstance.GetOauthClient(clientId);
                 Debug.WriteLine(result);
             }
@@ -151,12 +167,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OAuthApi();
+            
 
             try
             {
+                
                 // The list of OAuth clients
+                
                 OAuthClientEntityListing result = apiInstance.GetOauthClients();
                 Debug.WriteLine(result);
             }
@@ -202,13 +222,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OAuthApi();
+            
+            
             var clientId = clientId_example;  // string | Client ID
+            
+            
+            
 
             try
             {
+                
                 // Regenerate Client Secret
+                
                 OAuthClient result = apiInstance.PostOauthClientSecret(clientId);
                 Debug.WriteLine(result);
             }
@@ -258,13 +286,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OAuthApi();
+            
+            
+            
             var body = new OAuthClient(); // OAuthClient | Client
+            
+            
 
             try
             {
+                
                 // Create OAuth client
+                
                 OAuthClient result = apiInstance.PostOauthClients(body);
                 Debug.WriteLine(result);
             }
@@ -314,14 +350,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new OAuthApi();
+            
+            
             var clientId = clientId_example;  // string | Client ID
+            
+            
+            
+            
+            
             var body = new OAuthClient(); // OAuthClient | Client
+            
+            
 
             try
             {
+                
                 // Update OAuth Client
+                
                 OAuthClient result = apiInstance.PutOauthClient(clientId, body);
                 Debug.WriteLine(result);
             }

@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserPresenceAlert :  IEquatable<UserPresenceAlert>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates to which presence type the presence value belongs.
         /// </summary>
@@ -45,6 +56,30 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ORGANIZATION")]
             Organization
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -77,30 +112,109 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates to which presence type the presence value belongs.
         /// </summary>
         /// <value>Indicates to which presence type the presence value belongs.</value>
         [DataMember(Name="presenceType", EmitDefaultValue=false)]
         public PresenceTypeEnum? PresenceType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPresenceAlert" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UserPresenceAlert() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserPresenceAlert" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name of the rule (required).</param>
+        
+        
+        
         /// <param name="PresenceUser">The user whose presence will be watched. (required).</param>
+        
+        
+        
         /// <param name="PresenceType">Indicates to which presence type the presence value belongs. (required).</param>
+        
+        
+        
         /// <param name="PresenceValue">The Org&#39;s UUID or Systems enum constance indicating the presence of concern. (required).</param>
+        
+        
+        
         /// <param name="PresenceLimitInSeconds">The number of seconds to wait before alerting based upon the user&#39;s presence. (required).</param>
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <param name="NotificationUsers">The ids of users who were notified of alarm state change. (required).</param>
+        
+        
+        
         /// <param name="AlertTypes">A collection of notification methods. (required).</param>
+        
+        
+        
         /// <param name="RuleUri">RuleUri.</param>
+        
+        
+        
+        
         public UserPresenceAlert(string Name = null, User PresenceUser = null, PresenceTypeEnum? PresenceType = null, string PresenceValue = null, int? PresenceLimitInSeconds = null, List<User> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, string RuleUri = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -110,6 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "PresenceUser" is required (not null)
             if (PresenceUser == null)
             {
@@ -119,6 +238,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.PresenceUser = PresenceUser;
             }
+            
+            
+            
+            
+            
             // to ensure "PresenceType" is required (not null)
             if (PresenceType == null)
             {
@@ -128,6 +252,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.PresenceType = PresenceType;
             }
+            
+            
+            
+            
+            
             // to ensure "PresenceValue" is required (not null)
             if (PresenceValue == null)
             {
@@ -137,6 +266,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.PresenceValue = PresenceValue;
             }
+            
+            
+            
+            
+            
             // to ensure "PresenceLimitInSeconds" is required (not null)
             if (PresenceLimitInSeconds == null)
             {
@@ -146,6 +280,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.PresenceLimitInSeconds = PresenceLimitInSeconds;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "NotificationUsers" is required (not null)
             if (NotificationUsers == null)
             {
@@ -155,6 +300,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.NotificationUsers = NotificationUsers;
             }
+            
+            
+            
+            
+            
             // to ensure "AlertTypes" is required (not null)
             if (AlertTypes == null)
             {
@@ -164,8 +314,66 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.AlertTypes = AlertTypes;
             }
-            this.RuleUri = RuleUri;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RuleUri = RuleUri;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -173,71 +381,108 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Name of the rule
         /// </summary>
         /// <value>Name of the rule</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The user whose presence will be watched.
         /// </summary>
         /// <value>The user whose presence will be watched.</value>
         [DataMember(Name="presenceUser", EmitDefaultValue=false)]
         public User PresenceUser { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The Org&#39;s UUID or Systems enum constance indicating the presence of concern.
         /// </summary>
         /// <value>The Org&#39;s UUID or Systems enum constance indicating the presence of concern.</value>
         [DataMember(Name="presenceValue", EmitDefaultValue=false)]
         public string PresenceValue { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of seconds to wait before alerting based upon the user&#39;s presence.
         /// </summary>
         /// <value>The number of seconds to wait before alerting based upon the user&#39;s presence.</value>
         [DataMember(Name="presenceLimitInSeconds", EmitDefaultValue=false)]
         public int? PresenceLimitInSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The id of the rule.
         /// </summary>
         /// <value>The id of the rule.</value>
         [DataMember(Name="ruleId", EmitDefaultValue=false)]
         public string RuleId { get; private set; }
+        
+        
+        
         /// <summary>
         /// The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date/time the alert was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; private set; }
+        
+        
+        
         /// <summary>
         /// The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date/time the owning rule exiting in alarm status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; private set; }
+        
+        
+        
         /// <summary>
         /// The ids of users who were notified of alarm state change.
         /// </summary>
         /// <value>The ids of users who were notified of alarm state change.</value>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<User> NotificationUsers { get; set; }
+        
+        
+        
         /// <summary>
         /// A collection of notification methods.
         /// </summary>
         /// <value>A collection of notification methods.</value>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RuleUri
         /// </summary>
         [DataMember(Name="ruleUri", EmitDefaultValue=false)]
         public string RuleUri { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -246,19 +491,33 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserPresenceAlert {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  PresenceUser: ").Append(PresenceUser).Append("\n");
+            
             sb.Append("  PresenceType: ").Append(PresenceType).Append("\n");
+            
             sb.Append("  PresenceValue: ").Append(PresenceValue).Append("\n");
+            
             sb.Append("  PresenceLimitInSeconds: ").Append(PresenceLimitInSeconds).Append("\n");
+            
             sb.Append("  RuleId: ").Append(RuleId).Append("\n");
+            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
+            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
+            
             sb.Append("  RuleUri: ").Append(RuleUri).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -373,32 +632,46 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.PresenceUser != null)
                     hash = hash * 59 + this.PresenceUser.GetHashCode();
+                
                 if (this.PresenceType != null)
                     hash = hash * 59 + this.PresenceType.GetHashCode();
+                
                 if (this.PresenceValue != null)
                     hash = hash * 59 + this.PresenceValue.GetHashCode();
+                
                 if (this.PresenceLimitInSeconds != null)
                     hash = hash * 59 + this.PresenceLimitInSeconds.GetHashCode();
+                
                 if (this.RuleId != null)
                     hash = hash * 59 + this.RuleId.GetHashCode();
+                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
+                
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
+                
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
+                
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
+                
                 if (this.RuleUri != null)
                     hash = hash * 59 + this.RuleUri.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

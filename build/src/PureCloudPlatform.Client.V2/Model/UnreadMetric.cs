@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UnreadMetric :  IEquatable<UnreadMetric>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UnreadMetric" /> class.
         /// </summary>
+        
+        
         /// <param name="Count">The count of unread alerts for a specific rule type..</param>
+        
+        
         public UnreadMetric(int? Count = null)
         {
-            this.Count = Count;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Count = Count;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The count of unread alerts for a specific rule type.
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The count of unread alerts for a specific rule type.</value>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UnreadMetric {\n");
+            
             sb.Append("  Count: ").Append(Count).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+                
                 return hash;
             }
         }

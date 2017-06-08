@@ -18,19 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ResponseSubstitution :  IEquatable<ResponseSubstitution>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSubstitution" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ResponseSubstitution() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ResponseSubstitution" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Response substitution identifier. (required).</param>
+        
+        
+        
         /// <param name="Description">Response substitution description..</param>
+        
+        
+        
         /// <param name="DefaultValue">Response substitution default value..</param>
+        
+        
         public ResponseSubstitution(string Id = null, string Description = null, string DefaultValue = null)
         {
+            
+            
+            
             // to ensure "Id" is required (not null)
             if (Id == null)
             {
@@ -40,9 +72,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Id = Id;
             }
-            this.Description = Description;
-            this.DefaultValue = DefaultValue;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DefaultValue = DefaultValue;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Response substitution identifier.
@@ -50,18 +116,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Response substitution identifier.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Response substitution description.
         /// </summary>
         /// <value>Response substitution description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Response substitution default value.
         /// </summary>
         /// <value>Response substitution default value.</value>
         [DataMember(Name="defaultValue", EmitDefaultValue=false)]
         public string DefaultValue { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,9 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ResponseSubstitution {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  DefaultValue: ").Append(DefaultValue).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,12 +215,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.DefaultValue != null)
                     hash = hash * 59 + this.DefaultValue.GetHashCode();
+                
                 return hash;
             }
         }

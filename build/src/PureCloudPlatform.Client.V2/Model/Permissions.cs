@@ -18,18 +18,55 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Permissions :  IEquatable<Permissions>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Permissions" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Permissions() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Permissions" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Ids">List of permission ids. (required).</param>
+        
+        
         public Permissions(string Name = null, List<string> Ids = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Ids" is required (not null)
             if (Ids == null)
             {
@@ -39,8 +76,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Ids = Ids;
             }
-            this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -48,17 +105,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// List of permission ids.
         /// </summary>
         /// <value>List of permission ids.</value>
         [DataMember(Name="ids", EmitDefaultValue=false)]
         public List<string> Ids { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,9 +132,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Permissions {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Ids: ").Append(Ids).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,12 +203,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Ids != null)
                     hash = hash * 59 + this.Ids.GetHashCode();
+                
                 return hash;
             }
         }

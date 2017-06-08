@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallConversation :  IEquatable<CallConversation>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -50,25 +64,123 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paused")]
             Paused
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallConversation" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Participants">The list of participants involved in the conversation..</param>
+        
+        
+        
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
+        
+        
+        
         /// <param name="RecordingState">RecordingState.</param>
+        
+        
+        
+        
         public CallConversation(string Name = null, List<CallMediaParticipant> Participants = null, List<string> OtherMediaUris = null, RecordingStateEnum? RecordingState = null)
         {
-            this.Name = Name;
-            this.Participants = Participants;
-            this.OtherMediaUris = OtherMediaUris;
-            this.RecordingState = RecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Participants = Participants;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OtherMediaUris = OtherMediaUris;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingState = RecordingState;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -76,29 +188,45 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of participants involved in the conversation.
         /// </summary>
         /// <value>The list of participants involved in the conversation.</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<CallMediaParticipant> Participants { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of other media channels involved in the conversation.
         /// </summary>
         /// <value>The list of other media channels involved in the conversation.</value>
         [DataMember(Name="otherMediaUris", EmitDefaultValue=false)]
         public List<string> OtherMediaUris { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,12 +235,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallConversation {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
+            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -192,18 +327,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+                
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
+                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneNumberColumn :  IEquatable<PhoneNumberColumn>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberColumn" /> class.
         /// </summary>
+        
+        
         /// <param name="ColumnName">ColumnName.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
         public PhoneNumberColumn(string ColumnName = null, string Type = null)
         {
-            this.ColumnName = ColumnName;
-            this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ColumnName = ColumnName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ColumnName
         /// </summary>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneNumberColumn {\n");
+            
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ColumnName != null)
                     hash = hash * 59 + this.ColumnName.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 return hash;
             }
         }

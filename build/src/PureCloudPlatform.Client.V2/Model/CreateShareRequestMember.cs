@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateShareRequestMember :  IEquatable<CreateShareRequestMember>
     {
+        
+        
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
@@ -50,27 +52,79 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
         [DataMember(Name="memberType", EmitDefaultValue=false)]
         public MemberTypeEnum? MemberType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareRequestMember" /> class.
         /// </summary>
+        
+        
         /// <param name="MemberType">MemberType.</param>
+        
+        
+        
         /// <param name="Member">Member.</param>
+        
+        
         public CreateShareRequestMember(MemberTypeEnum? MemberType = null, MemberEntity Member = null)
         {
-            this.MemberType = MemberType;
-            this.Member = Member;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.MemberType = MemberType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Member = Member;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public MemberEntity Member { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,8 +133,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateShareRequestMember {\n");
+            
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
+            
             sb.Append("  Member: ").Append(Member).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,10 +197,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.MemberType != null)
                     hash = hash * 59 + this.MemberType.GetHashCode();
+                
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
+                
                 return hash;
             }
         }

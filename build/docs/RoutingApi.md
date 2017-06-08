@@ -78,13 +78,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var domainId = domainId_example;  // string | domain ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a domain
+                
                 apiInstance.DeleteRoutingEmailDomain(domainId);
             }
             catch (Exception e)
@@ -133,14 +141,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var domainName = domainName_example;  // string | email domain
+            
+            
+            
+            
             var routeId = routeId_example;  // string | route ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a route
+                
                 apiInstance.DeleteRoutingEmailDomainRoute(domainName, routeId);
             }
             catch (Exception e)
@@ -190,14 +210,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
             var forceDelete = true;  // bool? | forceDelete (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Delete a queue
+                
                 apiInstance.DeleteRoutingQueue(queueId, forceDelete);
             }
             catch (Exception e)
@@ -247,14 +279,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
             var memberId = memberId_example;  // string | Member ID
+            
+            
+            
 
             try
             {
+                
                 // Delete queue member
+                
                 apiInstance.DeleteRoutingQueueUser(queueId, memberId);
             }
             catch (Exception e)
@@ -304,14 +348,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
             var codeId = codeId_example;  // string | Code ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a wrap-up code from a queue
+                
                 apiInstance.DeleteRoutingQueueWrapupcode(queueId, codeId);
             }
             catch (Exception e)
@@ -361,13 +417,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var skillId = skillId_example;  // string | Skill ID
+            
+            
+            
 
             try
             {
+                
                 // Delete Routing Skill
+                
                 apiInstance.DeleteRoutingSkill(skillId);
             }
             catch (Exception e)
@@ -416,12 +480,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
 
             try
             {
+                
                 // Delete utilization settings and revert to system defaults.
+                
                 apiInstance.DeleteRoutingUtilization();
             }
             catch (Exception e)
@@ -466,13 +534,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var codeId = codeId_example;  // string | Wrapup Code ID
+            
+            
+            
 
             try
             {
+                
                 // Delete wrap-up code
+                
                 apiInstance.DeleteRoutingWrapupcode(codeId);
             }
             catch (Exception e)
@@ -521,14 +597,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var skillId = skillId_example;  // string | skillId
+            
+            
+            
 
             try
             {
+                
                 // Remove routing skill from user
+                
                 apiInstance.DeleteUserRoutingskill(userId, skillId);
             }
             catch (Exception e)
@@ -578,13 +666,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var domainId = domainId_example;  // string | domain ID
+            
+            
+            
 
             try
             {
+                
                 // Get domain
+                
                 InboundDomain result = apiInstance.GetRoutingEmailDomain(domainId);
                 Debug.WriteLine(result);
             }
@@ -634,14 +730,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var domainName = domainName_example;  // string | email domain
+            
+            
+            
+            
             var routeId = routeId_example;  // string | route ID
+            
+            
+            
 
             try
             {
+                
                 // Get a route
+                
                 InboundRoute result = apiInstance.GetRoutingEmailDomainRoute(domainName, routeId);
                 Debug.WriteLine(result);
             }
@@ -692,16 +800,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var domainName = domainName_example;  // string | email domain
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pattern = pattern_example;  // string | Filter routes by the route's pattern property (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get routes
+                
                 InboundRouteEntityListing result = apiInstance.GetRoutingEmailDomainRoutes(domainName, pageSize, pageNumber, pattern);
                 Debug.WriteLine(result);
             }
@@ -754,12 +882,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
 
             try
             {
+                
                 // Get domains
+                
                 InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains();
                 Debug.WriteLine(result);
             }
@@ -805,12 +937,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
 
             try
             {
+                
                 // Get email setup
+                
                 EmailSetup result = apiInstance.GetRoutingEmailSetup();
                 Debug.WriteLine(result);
             }
@@ -856,16 +992,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of supported languages.
+                
                 LanguageEntityListing result = apiInstance.GetRoutingLanguages(pageSize, pageNumber, sortOrder, name);
                 Debug.WriteLine(result);
             }
@@ -885,7 +1041,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **name** | **string**| Name | [optional]  |
 {: class="table table-striped"}
 
@@ -918,13 +1074,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
 
             try
             {
+                
                 // Get details about this queue.
+                
                 Queue result = apiInstance.GetRoutingQueue(queueId);
                 Debug.WriteLine(result);
             }
@@ -974,14 +1138,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | queueId
+            
+            
+            
+            
             var conversationId = conversationId_example;  // string | conversationId (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get Estimated Wait Time
+                
                 EstimatedWaitTimePredictions result = apiInstance.GetRoutingQueueEstimatedwaittime(queueId, conversationId);
                 Debug.WriteLine(result);
             }
@@ -1032,14 +1208,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | queueId
+            
+            
+            
+            
             var mediaType = mediaType_example;  // string | mediaType
+            
+            
+            
 
             try
             {
+                
                 // Get Estimated Wait Time
+                
                 EstimatedWaitTimePredictions result = apiInstance.GetRoutingQueueMediatypeEstimatedwaittime(queueId, mediaType);
                 Debug.WriteLine(result);
             }
@@ -1090,24 +1278,76 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            
+            
+            
             var joined = true;  // bool? | Filter by joined status (optional) 
+            
+            
+            
+            
             var name = name_example;  // string | Filter by queue member name (optional) 
+            
+            
+            
+            
+            
             var profileSkills = new List<string>(); // List<string> | Filter by profile skill (optional) 
+            
+            
+            
+            
             var skills = new List<string>(); // List<string> | Filter by skill (optional) 
+            
+            
+            
+            
             var languages = new List<string>(); // List<string> | Filter by language (optional) 
+            
+            
+            
+            
             var routingStatus = new List<string>(); // List<string> | Filter by routing status (optional) 
+            
+            
+            
+            
             var presence = new List<string>(); // List<string> | Filter by presence (optional) 
+            
+            
 
             try
             {
+                
                 // Get the members of this queue
+                
                 QueueMemberEntityListing result = apiInstance.GetRoutingQueueUsers(queueId, pageSize, pageNumber, sortBy, expand, joined, name, profileSkills, skills, languages, routingStatus, presence);
                 Debug.WriteLine(result);
             }
@@ -1129,7 +1369,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string.html)| Filter by profile skill | [optional]  |
@@ -1168,13 +1408,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
 
             try
             {
+                
                 // Get the wrap-up codes for a queue
+                
                 WrapupCodeEntityListing result = apiInstance.GetRoutingQueueWrapupcodes(queueId);
                 Debug.WriteLine(result);
             }
@@ -1224,17 +1472,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var active = true;  // bool? | Active (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get list of queues.
+                
                 QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, active);
                 Debug.WriteLine(result);
             }
@@ -1288,13 +1560,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var skillId = skillId_example;  // string | Skill ID
+            
+            
+            
 
             try
             {
+                
                 // Get Routing Skill
+                
                 RoutingSkill result = apiInstance.GetRoutingSkill(skillId);
                 Debug.WriteLine(result);
             }
@@ -1344,15 +1624,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var name = name_example;  // string | Filter for results that start with this value (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of routing skills.
+                
                 SkillEntityListing result = apiInstance.GetRoutingSkills(pageSize, pageNumber, name);
                 Debug.WriteLine(result);
             }
@@ -1404,12 +1700,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
 
             try
             {
+                
                 // Get the utilization settings.
+                
                 Utilization result = apiInstance.GetRoutingUtilization();
                 Debug.WriteLine(result);
             }
@@ -1455,13 +1755,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var codeId = codeId_example;  // string | Wrapup Code ID
+            
+            
+            
 
             try
             {
+                
                 // Get details about this wrap-up code.
+                
                 WrapupCode result = apiInstance.GetRoutingWrapupcode(codeId);
                 Debug.WriteLine(result);
             }
@@ -1511,15 +1819,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
 
             try
             {
+                
                 // Get list of wrapup codes.
+                
                 WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, sortBy);
                 Debug.WriteLine(result);
             }
@@ -1571,16 +1895,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            
+            
+            
 
             try
             {
+                
                 // List routing skills for user
+                
                 UserSkillEntityListing result = apiInstance.GetUserRoutingskills(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1601,7 +1945,7 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 ### Return type
@@ -1633,15 +1977,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
             var memberId = memberId_example;  // string | Member ID
+            
+            
+            
+            
+            
             var body = new QueueMember(); // QueueMember | Queue Member
+            
+            
 
             try
             {
+                
                 // Update the ring number of joined status for a User in a Queue
+                
                 QueueMember result = apiInstance.PatchRoutingQueueUser(queueId, memberId, body);
                 Debug.WriteLine(result);
             }
@@ -1693,14 +2053,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
+            
             var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
+            
+            
 
             try
             {
+                
                 // Join or unjoin a set of users for a queue
+                
                 QueueMemberEntityListing result = apiInstance.PatchRoutingQueueUsers(queueId, body);
                 Debug.WriteLine(result);
             }
@@ -1751,13 +2123,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
+            
             var body = new ObservationQuery(); // ObservationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for queue observations
+                
                 QualifierMappingObservationQueryResponse result = apiInstance.PostAnalyticsQueuesObservationsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1807,14 +2187,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var domainName = domainName_example;  // string | email domain
+            
+            
+            
+            
+            
             var body = new InboundRoute(); // InboundRoute | Route
+            
+            
 
             try
             {
+                
                 // Create a route
+                
                 InboundRoute result = apiInstance.PostRoutingEmailDomainRoutes(domainName, body);
                 Debug.WriteLine(result);
             }
@@ -1865,13 +2257,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
+            
             var body = new InboundDomain(); // InboundDomain | Domain
+            
+            
 
             try
             {
+                
                 // Create a domain
+                
                 InboundDomain result = apiInstance.PostRoutingEmailDomains(body);
                 Debug.WriteLine(result);
             }
@@ -1921,13 +2321,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
+            
             var body = new Language(); // Language | Language
+            
+            
 
             try
             {
+                
                 // Create Language
+                
                 Language result = apiInstance.PostRoutingLanguages(body);
                 Debug.WriteLine(result);
             }
@@ -1977,15 +2385,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
+            
             var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
+            
+            
+            
             var delete = true;  // bool? | True to delete queue members (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Bulk add or delete up to 100 queue members
+                
                 string result = apiInstance.PostRoutingQueueUsers(queueId, body, delete);
                 Debug.WriteLine(result);
             }
@@ -2037,14 +2461,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
+            
             var body = new List<WrapupCode>(); // List<WrapupCode> | List of wrapup codes
+            
+            
 
             try
             {
+                
                 // Add up to 100 wrap-up codes to a queue
+                
                 List&lt;WrapupCode&gt; result = apiInstance.PostRoutingQueueWrapupcodes(queueId, body);
                 Debug.WriteLine(result);
             }
@@ -2095,13 +2531,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
+            
             var body = new CreateQueueRequest(); // CreateQueueRequest | Queue
+            
+            
 
             try
             {
+                
                 // Create queue
+                
                 Queue result = apiInstance.PostRoutingQueues(body);
                 Debug.WriteLine(result);
             }
@@ -2151,13 +2595,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
+            
             var body = new RoutingSkill(); // RoutingSkill | Skill
+            
+            
 
             try
             {
+                
                 // Create Skill
+                
                 RoutingSkill result = apiInstance.PostRoutingSkills(body);
                 Debug.WriteLine(result);
             }
@@ -2207,13 +2659,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
+            
             var body = new WrapupCode(); // WrapupCode | WrapupCode
+            
+            
 
             try
             {
+                
                 // Create a wrap-up code
+                
                 WrapupCode result = apiInstance.PostRoutingWrapupcodes(body);
                 Debug.WriteLine(result);
             }
@@ -2263,14 +2723,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new UserRoutingSkillPost(); // UserRoutingSkillPost | Skill
+            
+            
 
             try
             {
+                
                 // Add routing skill to user
+                
                 UserRoutingSkill result = apiInstance.PostUserRoutingskills(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2321,15 +2793,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var domainName = domainName_example;  // string | email domain
+            
+            
+            
+            
             var routeId = routeId_example;  // string | route ID
+            
+            
+            
+            
+            
             var body = new InboundRoute(); // InboundRoute | Route
+            
+            
 
             try
             {
+                
                 // Update a route
+                
                 InboundRoute result = apiInstance.PutRoutingEmailDomainRoute(domainName, routeId, body);
                 Debug.WriteLine(result);
             }
@@ -2381,14 +2869,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
+            
             var body = new Queue(); // Queue | Queue
+            
+            
 
             try
             {
+                
                 // Update a queue
+                
                 Queue result = apiInstance.PutRoutingQueue(queueId, body);
                 Debug.WriteLine(result);
             }
@@ -2439,13 +2939,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
+            
             var body = new Utilization(); // Utilization | utilization
+            
+            
 
             try
             {
+                
                 // Update the utilization settings.
+                
                 Utilization result = apiInstance.PutRoutingUtilization(body);
                 Debug.WriteLine(result);
             }
@@ -2495,14 +3003,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var codeId = codeId_example;  // string | Wrapup Code ID
+            
+            
+            
+            
+            
             var body = new WrapupCode(); // WrapupCode | WrapupCode
+            
+            
 
             try
             {
+                
                 // Update wrap-up code
+                
                 WrapupCode result = apiInstance.PutRoutingWrapupcode(codeId, body);
                 Debug.WriteLine(result);
             }
@@ -2553,15 +3073,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new RoutingApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var skillId = skillId_example;  // string | skillId
+            
+            
+            
+            
+            
             var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
+            
+            
 
             try
             {
+                
                 // Update routing skill proficiency or state.
+                
                 UserRoutingSkill result = apiInstance.PutUserRoutingskill(userId, skillId, body);
                 Debug.WriteLine(result);
             }

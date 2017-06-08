@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CommandStatus :  IEquatable<CommandStatus>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
@@ -62,6 +76,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CANCELED")]
             Canceled
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CommandType
         /// </summary>
@@ -136,34 +154,170 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "REPLACEDOCUMENT")]
             Replacedocument
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StatusCode
         /// </summary>
         [DataMember(Name="statusCode", EmitDefaultValue=false)]
         public StatusCodeEnum? StatusCode { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CommandType
         /// </summary>
         [DataMember(Name="commandType", EmitDefaultValue=false)]
         public CommandTypeEnum? CommandType { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CommandStatus" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Expiration">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="UserId">UserId.</param>
+        
+        
+        
         /// <param name="StatusCode">StatusCode.</param>
+        
+        
+        
         /// <param name="CommandType">CommandType.</param>
+        
+        
+        
         /// <param name="Document">Document.</param>
+        
+        
+        
+        
         public CommandStatus(string Name = null, DateTime? Expiration = null, string UserId = null, StatusCodeEnum? StatusCode = null, CommandTypeEnum? CommandType = null, Document Document = null)
         {
-            this.Name = Name;
-            this.Expiration = Expiration;
-            this.UserId = UserId;
-            this.StatusCode = StatusCode;
-            this.CommandType = CommandType;
-            this.Document = Document;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Expiration = Expiration;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UserId = UserId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StatusCode = StatusCode;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CommandType = CommandType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Document = Document;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -171,33 +325,54 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="expiration", EmitDefaultValue=false)]
         public DateTime? Expiration { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Document
         /// </summary>
         [DataMember(Name="document", EmitDefaultValue=false)]
         public Document Document { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,14 +381,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CommandStatus {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Expiration: ").Append(Expiration).Append("\n");
+            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            
             sb.Append("  StatusCode: ").Append(StatusCode).Append("\n");
+            
             sb.Append("  CommandType: ").Append(CommandType).Append("\n");
+            
             sb.Append("  Document: ").Append(Document).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -303,22 +487,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Expiration != null)
                     hash = hash * 59 + this.Expiration.GetHashCode();
+                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+                
                 if (this.StatusCode != null)
                     hash = hash * 59 + this.StatusCode.GetHashCode();
+                
                 if (this.CommandType != null)
                     hash = hash * 59 + this.CommandType.GetHashCode();
+                
                 if (this.Document != null)
                     hash = hash * 59 + this.Document.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

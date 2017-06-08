@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Condition :  IEquatable<Condition>
     {
+        
+        
         /// <summary>
         /// The type of the condition
         /// </summary>
@@ -69,6 +71,19 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "contactPropertyCondition")]
             Contactpropertycondition
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Determines the type of the value associated with the condition
         /// </summary>
@@ -108,6 +123,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PERIOD")]
             Period
         }
+        
+        
+        
+        
         /// <summary>
         /// An operation type for condition evaluation
         /// </summary>
@@ -183,44 +202,260 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AFTER")]
             After
         }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Determines the type of the property associated with the condition
+        /// </summary>
+        /// <value>Determines the type of the property associated with the condition</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum PropertyTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum ByColumn for "LAST_ATTEMPT_BY_COLUMN"
+            /// </summary>
+            [EnumMember(Value = "LAST_ATTEMPT_BY_COLUMN")]
+            ByColumn,
+            
+            /// <summary>
+            /// Enum Overall for "LAST_ATTEMPT_OVERALL"
+            /// </summary>
+            [EnumMember(Value = "LAST_ATTEMPT_OVERALL")]
+            Overall
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The type of the condition
         /// </summary>
         /// <value>The type of the condition</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Determines the type of the value associated with the condition
         /// </summary>
         /// <value>Determines the type of the value associated with the condition</value>
         [DataMember(Name="valueType", EmitDefaultValue=false)]
         public ValueTypeEnum? ValueType { get; set; }
+        
+        
+        
         /// <summary>
         /// An operation type for condition evaluation
         /// </summary>
         /// <value>An operation type for condition evaluation</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Determines the type of the property associated with the condition
+        /// </summary>
+        /// <value>Determines the type of the property associated with the condition</value>
+        [DataMember(Name="propertyType", EmitDefaultValue=false)]
+        public PropertyTypeEnum? PropertyType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Condition" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">The type of the condition.</param>
+        
+        
+        
         /// <param name="Inverted">Indicates whether to evaluate for the opposite of the stated condition; default is false.</param>
+        
+        
+        
         /// <param name="AttributeName">An attribute name associated with the condition (applies only to certain rule conditions).</param>
+        
+        
+        
         /// <param name="Value">A value associated with the condition. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes)..</param>
+        
+        
+        
         /// <param name="ValueType">Determines the type of the value associated with the condition.</param>
+        
+        
+        
         /// <param name="_Operator">An operation type for condition evaluation.</param>
+        
+        
+        
         /// <param name="Codes">List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;).</param>
-        public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null)
+        
+        
+        
+        /// <param name="PropertyType">Determines the type of the property associated with the condition.</param>
+        
+        
+        
+        /// <param name="Property">A value associated with the property type of this condition.</param>
+        
+        
+        public Condition(TypeEnum? Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null)
         {
-            this.Type = Type;
-            this.Inverted = Inverted;
-            this.AttributeName = AttributeName;
-            this.Value = Value;
-            this.ValueType = ValueType;
-            this._Operator = _Operator;
-            this.Codes = Codes;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Inverted = Inverted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AttributeName = AttributeName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ValueType = ValueType;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Codes = Codes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PropertyType = PropertyType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Property = Property;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Indicates whether to evaluate for the opposite of the stated condition; default is false
@@ -228,24 +463,50 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Indicates whether to evaluate for the opposite of the stated condition; default is false</value>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
+        
+        
+        
         /// <summary>
         /// An attribute name associated with the condition (applies only to certain rule conditions)
         /// </summary>
         /// <value>An attribute name associated with the condition (applies only to certain rule conditions)</value>
         [DataMember(Name="attributeName", EmitDefaultValue=false)]
         public string AttributeName { get; set; }
+        
+        
+        
         /// <summary>
         /// A value associated with the condition. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).
         /// </summary>
         /// <value>A value associated with the condition. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)
         /// </summary>
         /// <value>List of wrap-up code identifiers (used only in conditions of type &#39;wrapupCondition&#39;)</value>
         [DataMember(Name="codes", EmitDefaultValue=false)]
         public List<string> Codes { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// A value associated with the property type of this condition
+        /// </summary>
+        /// <value>A value associated with the property type of this condition</value>
+        [DataMember(Name="property", EmitDefaultValue=false)]
+        public string Property { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -254,13 +515,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Condition {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
+            
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Codes: ").Append(Codes).Append("\n");
+            
+            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
+            
+            sb.Append("  Property: ").Append(Property).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -331,6 +604,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Codes == other.Codes ||
                     this.Codes != null &&
                     this.Codes.SequenceEqual(other.Codes)
+                ) &&
+                (
+                    this.PropertyType == other.PropertyType ||
+                    this.PropertyType != null &&
+                    this.PropertyType.Equals(other.PropertyType)
+                ) &&
+                (
+                    this.Property == other.Property ||
+                    this.Property != null &&
+                    this.Property.Equals(other.Property)
                 );
         }
 
@@ -345,20 +628,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
+                
                 if (this.AttributeName != null)
                     hash = hash * 59 + this.AttributeName.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.ValueType != null)
                     hash = hash * 59 + this.ValueType.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Codes != null)
                     hash = hash * 59 + this.Codes.GetHashCode();
+                
+                if (this.PropertyType != null)
+                    hash = hash * 59 + this.PropertyType.GetHashCode();
+                
+                if (this.Property != null)
+                    hash = hash * 59 + this.Property.GetHashCode();
+                
                 return hash;
             }
         }

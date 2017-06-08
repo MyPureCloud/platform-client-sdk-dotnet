@@ -18,20 +18,60 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentUpload :  IEquatable<DocumentUpload>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DocumentUpload() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentUpload" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">The name of the document (required).</param>
+        
+        
+        
         /// <param name="Workspace">The workspace the document will be uploaded to (required).</param>
+        
+        
+        
         /// <param name="Tags">Tags.</param>
+        
+        
+        
         /// <param name="TagIds">TagIds.</param>
+        
+        
         public DocumentUpload(string Name = null, UriReference Workspace = null, List<string> Tags = null, List<string> TagIds = null)
         {
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -41,6 +81,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "Workspace" is required (not null)
             if (Workspace == null)
             {
@@ -50,9 +95,47 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Workspace = Workspace;
             }
-            this.Tags = Tags;
-            this.TagIds = TagIds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Tags = Tags;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TagIds = TagIds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The name of the document
@@ -60,22 +143,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the document</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The workspace the document will be uploaded to
         /// </summary>
         /// <value>The workspace the document will be uploaded to</value>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TagIds
         /// </summary>
         [DataMember(Name="tagIds", EmitDefaultValue=false)]
         public List<string> TagIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,10 +178,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentUpload {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
+            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
+            
             sb.Append("  TagIds: ").Append(TagIds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -157,14 +256,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
+                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
+                
                 if (this.TagIds != null)
                     hash = hash * 59 + this.TagIds.GetHashCode();
+                
                 return hash;
             }
         }

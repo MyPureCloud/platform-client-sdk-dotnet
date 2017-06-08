@@ -18,76 +18,290 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ChatMessage :  IEquatable<ChatMessage>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ChatMessage" /> class.
         /// </summary>
+        
+        
         /// <param name="Body">Body.</param>
+        
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="To">To.</param>
+        
+        
+        
         /// <param name="From">From.</param>
+        
+        
+        
         /// <param name="Utc">Utc.</param>
+        
+        
+        
         /// <param name="Chat">Chat.</param>
+        
+        
+        
         /// <param name="Message">Message.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="User">User.</param>
+        
+        
         public ChatMessage(string Body = null, string Id = null, string To = null, string From = null, string Utc = null, string Chat = null, string Message = null, string Type = null, ChatMessageUser User = null)
         {
-            this.Body = Body;
-            this.Id = Id;
-            this.To = To;
-            this.From = From;
-            this.Utc = Utc;
-            this.Chat = Chat;
-            this.Message = Message;
-            this.Type = Type;
-            this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Body = Body;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.To = To;
+            
+            
+            
+            
+            
+            
+            
+            
+this.From = From;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Utc = Utc;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Chat = Chat;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Message = Message;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Body
         /// </summary>
         [DataMember(Name="body", EmitDefaultValue=false)]
         public string Body { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets To
         /// </summary>
         [DataMember(Name="to", EmitDefaultValue=false)]
         public string To { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets From
         /// </summary>
         [DataMember(Name="from", EmitDefaultValue=false)]
         public string From { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Utc
         /// </summary>
         [DataMember(Name="utc", EmitDefaultValue=false)]
         public string Utc { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public string Chat { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public ChatMessageUser User { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,15 +310,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ChatMessage {\n");
+            
             sb.Append("  Body: ").Append(Body).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  To: ").Append(To).Append("\n");
+            
             sb.Append("  From: ").Append(From).Append("\n");
+            
             sb.Append("  Utc: ").Append(Utc).Append("\n");
+            
             sb.Append("  Chat: ").Append(Chat).Append("\n");
+            
             sb.Append("  Message: ").Append(Message).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -199,24 +423,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Body != null)
                     hash = hash * 59 + this.Body.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.To != null)
                     hash = hash * 59 + this.To.GetHashCode();
+                
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
+                
                 if (this.Utc != null)
                     hash = hash * 59 + this.Utc.GetHashCode();
+                
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
+                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerAction :  IEquatable<DialerAction>
     {
+        
+        
         /// <summary>
         /// Type of the action
         /// </summary>
@@ -45,6 +47,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "modifyContactAttribute")]
             Modifycontactattribute
         }
+        
+        
+        
+        
         /// <summary>
         /// Identifier of the action
         /// </summary>
@@ -114,6 +120,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SET_SKILLS")]
             SetSkills
         }
+        
+        
+        
+        
         /// <summary>
         /// Indicator of the type of update action (applicable only to certain types of actions)
         /// </summary>
@@ -153,38 +163,74 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CURRENT_TIME")]
             CurrentTime
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Type of the action
         /// </summary>
         /// <value>Type of the action</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Identifier of the action
         /// </summary>
         /// <value>Identifier of the action</value>
         [DataMember(Name="actionTypeName", EmitDefaultValue=false)]
         public ActionTypeNameEnum? ActionTypeName { get; set; }
+        
+        
+        
         /// <summary>
         /// Indicator of the type of update action (applicable only to certain types of actions)
         /// </summary>
         /// <value>Indicator of the type of update action (applicable only to certain types of actions)</value>
         [DataMember(Name="updateOption", EmitDefaultValue=false)]
         public UpdateOptionEnum? UpdateOption { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAction" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected DialerAction() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerAction" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Type of the action (required).</param>
+        
+        
+        
         /// <param name="ActionTypeName">Identifier of the action (required).</param>
+        
+        
+        
         /// <param name="UpdateOption">Indicator of the type of update action (applicable only to certain types of actions).</param>
+        
+        
+        
         /// <param name="Properties">Map of key-value pairs pertinent to the action (different actions require different properties).</param>
+        
+        
         public DialerAction(TypeEnum? Type = null, ActionTypeNameEnum? ActionTypeName = null, UpdateOptionEnum? UpdateOption = null, Dictionary<string, string> Properties = null)
         {
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -194,6 +240,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
+            
+            
+            
+            
+            
             // to ensure "ActionTypeName" is required (not null)
             if (ActionTypeName == null)
             {
@@ -203,9 +254,53 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.ActionTypeName = ActionTypeName;
             }
-            this.UpdateOption = UpdateOption;
-            this.Properties = Properties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.UpdateOption = UpdateOption;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Properties = Properties;
+            
+            
+            
+            
         }
+        
+        
+        
+        
+        
+        
+        
+        
         
         /// <summary>
         /// Map of key-value pairs pertinent to the action (different actions require different properties)
@@ -213,6 +308,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Map of key-value pairs pertinent to the action (different actions require different properties)</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, string> Properties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -221,10 +318,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerAction {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  ActionTypeName: ").Append(ActionTypeName).Append("\n");
+            
             sb.Append("  UpdateOption: ").Append(UpdateOption).Append("\n");
+            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -294,14 +396,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.ActionTypeName != null)
                     hash = hash * 59 + this.ActionTypeName.GetHashCode();
+                
                 if (this.UpdateOption != null)
                     hash = hash * 59 + this.UpdateOption.GetHashCode();
+                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+                
                 return hash;
             }
         }

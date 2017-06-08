@@ -38,15 +38,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new SuggestApi();
+            
+            
             var q64 = q64_example;  // string | q64
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
+            
             var profile = true;  // bool? | profile (optional)  (default to true)
+            
+            
+            
 
             try
             {
+                
                 // Search using the q64 value returned from a previous search.
+                
                 JsonNodeSearchResponse result = apiInstance.GetSearch(q64, expand, profile);
                 Debug.WriteLine(result);
             }
@@ -65,7 +81,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -98,15 +114,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new SuggestApi();
+            
+            
             var q64 = q64_example;  // string | q64
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
+            
             var profile = true;  // bool? | profile (optional)  (default to true)
+            
+            
+            
 
             try
             {
+                
                 // Suggest resources using the q64 value returned from a previous suggest query.
+                
                 JsonNodeSearchResponse result = apiInstance.GetSearchSuggest(q64, expand, profile);
                 Debug.WriteLine(result);
             }
@@ -125,7 +157,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **q64** | **string**| q64 |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, callerUser.routingStatus, callerUser.primaryPresence, callerUser.conversationSummary, callerUser.outOfOffice, callerUser.geolocation |
 | **profile** | **bool?**| profile | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -158,14 +190,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new SuggestApi();
+            
+            
+            
             var body = new SearchRequest(); // SearchRequest | Search request options
+            
+            
+            
             var profile = true;  // bool? | profile (optional)  (default to true)
+            
+            
+            
 
             try
             {
+                
                 // Search resources.
+                
                 JsonNodeSearchResponse result = apiInstance.PostSearch(body, profile);
                 Debug.WriteLine(result);
             }
@@ -216,14 +260,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new SuggestApi();
+            
+            
+            
             var body = new SuggestSearchRequest(); // SuggestSearchRequest | Search request options
+            
+            
+            
             var profile = true;  // bool? | profile (optional)  (default to true)
+            
+            
+            
 
             try
             {
+                
                 // Suggest resources.
+                
                 JsonNodeSearchResponse result = apiInstance.PostSearchSuggest(body, profile);
                 Debug.WriteLine(result);
             }

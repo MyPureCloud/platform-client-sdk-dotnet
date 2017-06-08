@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserParam :  IEquatable<UserParam>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserParam" /> class.
         /// </summary>
+        
+        
         /// <param name="Key">Key.</param>
+        
+        
+        
         /// <param name="Value">Value.</param>
+        
+        
         public UserParam(string Key = null, string Value = null)
         {
-            this.Key = Key;
-            this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Key = Key;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserParam {\n");
+            
             sb.Append("  Key: ").Append(Key).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Key != null)
                     hash = hash * 59 + this.Key.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 return hash;
             }
         }

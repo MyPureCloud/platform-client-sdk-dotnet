@@ -18,22 +18,152 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AgentEvaluatorActivity :  IEquatable<AgentEvaluatorActivity>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentEvaluatorActivity" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Agent">Agent.</param>
+        
+        
+        
         /// <param name="Evaluator">Evaluator.</param>
+        
+        
+        
         /// <param name="NumEvaluations">NumEvaluations.</param>
+        
+        
+        
         /// <param name="AverageEvaluationScore">AverageEvaluationScore.</param>
+        
+        
+        
+        
         public AgentEvaluatorActivity(string Name = null, User Agent = null, User Evaluator = null, int? NumEvaluations = null, int? AverageEvaluationScore = null)
         {
-            this.Name = Name;
-            this.Agent = Agent;
-            this.Evaluator = Evaluator;
-            this.NumEvaluations = NumEvaluations;
-            this.AverageEvaluationScore = AverageEvaluationScore;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Agent = Agent;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Evaluator = Evaluator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumEvaluations = NumEvaluations;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageEvaluationScore = AverageEvaluationScore;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -41,37 +171,57 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Agent
         /// </summary>
         [DataMember(Name="agent", EmitDefaultValue=false)]
         public User Agent { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Evaluator
         /// </summary>
         [DataMember(Name="evaluator", EmitDefaultValue=false)]
         public User Evaluator { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumEvaluations
         /// </summary>
         [DataMember(Name="numEvaluations", EmitDefaultValue=false)]
         public int? NumEvaluations { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AverageEvaluationScore
         /// </summary>
         [DataMember(Name="averageEvaluationScore", EmitDefaultValue=false)]
         public int? AverageEvaluationScore { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,13 +230,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AgentEvaluatorActivity {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Agent: ").Append(Agent).Append("\n");
+            
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
+            
             sb.Append("  NumEvaluations: ").Append(NumEvaluations).Append("\n");
+            
             sb.Append("  AverageEvaluationScore: ").Append(AverageEvaluationScore).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,20 +329,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Agent != null)
                     hash = hash * 59 + this.Agent.GetHashCode();
+                
                 if (this.Evaluator != null)
                     hash = hash * 59 + this.Evaluator.GetHashCode();
+                
                 if (this.NumEvaluations != null)
                     hash = hash * 59 + this.NumEvaluations.GetHashCode();
+                
                 if (this.AverageEvaluationScore != null)
                     hash = hash * 59 + this.AverageEvaluationScore.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

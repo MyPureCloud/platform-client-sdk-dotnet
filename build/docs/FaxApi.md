@@ -40,13 +40,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new FaxApi();
+            
+            
             var documentId = documentId_example;  // string | Document ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a fax document.
+                
                 apiInstance.DeleteFaxDocument(documentId);
             }
             catch (Exception e)
@@ -95,13 +103,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new FaxApi();
+            
+            
             var documentId = documentId_example;  // string | Document ID
+            
+            
+            
 
             try
             {
+                
                 // Get a document.
+                
                 FaxDocument result = apiInstance.GetFaxDocument(documentId);
                 Debug.WriteLine(result);
             }
@@ -151,13 +167,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new FaxApi();
+            
+            
             var documentId = documentId_example;  // string | Document ID
+            
+            
+            
 
             try
             {
+                
                 // Download a fax document.
+                
                 DownloadResponse result = apiInstance.GetFaxDocumentContent(documentId);
                 Debug.WriteLine(result);
             }
@@ -207,14 +231,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new FaxApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Get a list of fax documents.
+                
                 FaxDocumentEntityListing result = apiInstance.GetFaxDocuments(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -265,12 +301,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new FaxApi();
+            
 
             try
             {
+                
                 // Get fax summary
+                
                 FaxSummary result = apiInstance.GetFaxSummary();
                 Debug.WriteLine(result);
             }
@@ -316,14 +356,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new FaxApi();
+            
+            
             var documentId = documentId_example;  // string | Document ID
+            
+            
+            
+            
+            
             var body = new FaxDocument(); // FaxDocument | Document
+            
+            
 
             try
             {
+                
                 // Update a fax document.
+                
                 FaxDocument result = apiInstance.PutFaxDocument(documentId, body);
                 Debug.WriteLine(result);
             }

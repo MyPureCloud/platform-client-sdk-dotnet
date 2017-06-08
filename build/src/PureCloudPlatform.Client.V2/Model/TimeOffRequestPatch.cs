@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TimeOffRequestPatch :  IEquatable<TimeOffRequestPatch>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestPatch" /> class.
         /// </summary>
+        
+        
         /// <param name="MarkedAsRead">MarkedAsRead.</param>
+        
+        
         public TimeOffRequestPatch(bool? MarkedAsRead = null)
         {
-            this.MarkedAsRead = MarkedAsRead;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.MarkedAsRead = MarkedAsRead;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets MarkedAsRead
         /// </summary>
         [DataMember(Name="markedAsRead", EmitDefaultValue=false)]
         public bool? MarkedAsRead { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TimeOffRequestPatch {\n");
+            
             sb.Append("  MarkedAsRead: ").Append(MarkedAsRead).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.MarkedAsRead != null)
                     hash = hash * 59 + this.MarkedAsRead.GetHashCode();
+                
                 return hash;
             }
         }

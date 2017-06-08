@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayDataUpdateNotificationIntradayMetric :  IEquatable<IntradayDataUpdateNotificationIntradayMetric>
     {
+        
+        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
@@ -68,27 +70,79 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PERFORMANCE_PREDICTION_QUEUE_DATA")]
             PerformancePredictionQueueData
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationIntradayMetric" /> class.
         /// </summary>
+        
+        
         /// <param name="Category">Category.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
         public IntradayDataUpdateNotificationIntradayMetric(CategoryEnum? Category = null, string Version = null)
         {
-            this.Category = Category;
-            this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Category = Category;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -97,8 +151,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayDataUpdateNotificationIntradayMetric {\n");
+            
             sb.Append("  Category: ").Append(Category).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,10 +215,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 return hash;
             }
         }

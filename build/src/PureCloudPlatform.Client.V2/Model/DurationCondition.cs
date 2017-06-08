@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DurationCondition :  IEquatable<DurationCondition>
     {
+        
+        
         /// <summary>
         /// Gets or Sets DurationTarget
         /// </summary>
@@ -44,34 +46,109 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DURATION_RANGE")]
             DurationRange
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DurationTarget
         /// </summary>
         [DataMember(Name="durationTarget", EmitDefaultValue=false)]
         public DurationTargetEnum? DurationTarget { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DurationCondition" /> class.
         /// </summary>
+        
+        
         /// <param name="DurationTarget">DurationTarget.</param>
+        
+        
+        
         /// <param name="DurationOperator">DurationOperator.</param>
+        
+        
+        
         /// <param name="DurationRange">DurationRange.</param>
+        
+        
         public DurationCondition(DurationTargetEnum? DurationTarget = null, string DurationOperator = null, string DurationRange = null)
         {
-            this.DurationTarget = DurationTarget;
-            this.DurationOperator = DurationOperator;
-            this.DurationRange = DurationRange;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationTarget = DurationTarget;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationOperator = DurationOperator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationRange = DurationRange;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets DurationOperator
         /// </summary>
         [DataMember(Name="durationOperator", EmitDefaultValue=false)]
         public string DurationOperator { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DurationRange
         /// </summary>
         [DataMember(Name="durationRange", EmitDefaultValue=false)]
         public string DurationRange { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,9 +157,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DurationCondition {\n");
+            
             sb.Append("  DurationTarget: ").Append(DurationTarget).Append("\n");
+            
             sb.Append("  DurationOperator: ").Append(DurationOperator).Append("\n");
+            
             sb.Append("  DurationRange: ").Append(DurationRange).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,12 +228,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.DurationTarget != null)
                     hash = hash * 59 + this.DurationTarget.GetHashCode();
+                
                 if (this.DurationOperator != null)
                     hash = hash * 59 + this.DurationOperator.GetHashCode();
+                
                 if (this.DurationRange != null)
                     hash = hash * 59 + this.DurationRange.GetHashCode();
+                
                 return hash;
             }
         }

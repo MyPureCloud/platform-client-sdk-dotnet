@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MediaSetting :  IEquatable<MediaSetting>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaSetting" /> class.
         /// </summary>
+        
+        
         /// <param name="AlertingTimeoutSeconds">AlertingTimeoutSeconds.</param>
+        
+        
+        
         /// <param name="ServiceLevel">ServiceLevel.</param>
+        
+        
         public MediaSetting(int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null)
         {
-            this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
-            this.ServiceLevel = ServiceLevel;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ServiceLevel = ServiceLevel;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets AlertingTimeoutSeconds
         /// </summary>
         [DataMember(Name="alertingTimeoutSeconds", EmitDefaultValue=false)]
         public int? AlertingTimeoutSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ServiceLevel
         /// </summary>
         [DataMember(Name="serviceLevel", EmitDefaultValue=false)]
         public ServiceLevel ServiceLevel { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaSetting {\n");
+            
             sb.Append("  AlertingTimeoutSeconds: ").Append(AlertingTimeoutSeconds).Append("\n");
+            
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.AlertingTimeoutSeconds != null)
                     hash = hash * 59 + this.AlertingTimeoutSeconds.GetHashCode();
+                
                 if (this.ServiceLevel != null)
                     hash = hash * 59 + this.ServiceLevel.GetHashCode();
+                
                 return hash;
             }
         }

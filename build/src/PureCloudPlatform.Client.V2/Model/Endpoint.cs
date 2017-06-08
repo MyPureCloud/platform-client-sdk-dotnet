@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Endpoint :  IEquatable<Endpoint>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -50,37 +76,165 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Endpoint" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Endpoint() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Endpoint" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name (required).</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="ModifiedBy">ModifiedBy.</param>
+        
+        
+        
         /// <param name="CreatedBy">CreatedBy.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        
+        
+        
         /// <param name="CreatedByApp">CreatedByApp.</param>
+        
+        
+        
         /// <param name="Count">Count.</param>
+        
+        
+        
         /// <param name="Properties">Properties.</param>
+        
+        
+        
         /// <param name="Schema">Schema (required).</param>
+        
+        
+        
         /// <param name="Enabled">Enabled.</param>
+        
+        
+        
         /// <param name="Site">Site.</param>
+        
+        
+        
         /// <param name="Dids">Dids.</param>
+        
+        
+        
+        
         public Endpoint(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, int? Count = null, Dictionary<string, Object> Properties = null, UriReference Schema = null, bool? Enabled = null, UriReference Site = null, List<string> Dids = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -90,6 +244,55 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Schema" is required (not null)
             if (Schema == null)
             {
@@ -99,21 +302,165 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Schema = Schema;
             }
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.Count = Count;
-            this.Properties = Properties;
-            this.Enabled = Enabled;
-            this.Site = Site;
-            this.Dids = Dids;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedByApp = ModifiedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedByApp = CreatedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Count = Count;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Properties = Properties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Enabled = Enabled;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Site = Site;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Dids = Dids;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -121,91 +468,143 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Name
         /// </summary>
         /// <value>Name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public int? Count { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, Object> Properties { get; set; }
+        
+        
+        
         /// <summary>
         /// Schema
         /// </summary>
         /// <value>Schema</value>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public UriReference Schema { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Site
         /// </summary>
         [DataMember(Name="site", EmitDefaultValue=false)]
         public UriReference Site { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Dids
         /// </summary>
         [DataMember(Name="dids", EmitDefaultValue=false)]
         public List<string> Dids { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -214,24 +613,43 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Endpoint {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
+            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
+            
             sb.Append("  Count: ").Append(Count).Append("\n");
+            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            
             sb.Append("  Schema: ").Append(Schema).Append("\n");
+            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            
             sb.Append("  Site: ").Append(Site).Append("\n");
+            
             sb.Append("  Dids: ").Append(Dids).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -371,42 +789,61 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
+                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
+                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+                
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
+                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
                 if (this.Site != null)
                     hash = hash * 59 + this.Site.GetHashCode();
+                
                 if (this.Dids != null)
                     hash = hash * 59 + this.Dids.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

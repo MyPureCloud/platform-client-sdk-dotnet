@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateShareRequest :  IEquatable<CreateShareRequest>
     {
+        
+        
         /// <summary>
         /// The share entity type
         /// </summary>
@@ -39,6 +41,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "DOCUMENT")]
             Document
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
@@ -71,32 +80,75 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PUBLIC")]
             Public
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The share entity type
         /// </summary>
         /// <value>The share entity type</value>
         [DataMember(Name="sharedEntityType", EmitDefaultValue=false)]
         public SharedEntityTypeEnum? SharedEntityType { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets MemberType
         /// </summary>
         [DataMember(Name="memberType", EmitDefaultValue=false)]
         public MemberTypeEnum? MemberType { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateShareRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateShareRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="SharedEntityType">The share entity type (required).</param>
+        
+        
+        
         /// <param name="SharedEntity">The entity that will be shared (required).</param>
+        
+        
+        
         /// <param name="MemberType">MemberType.</param>
+        
+        
+        
         /// <param name="Member">The member that will have access to this share. Only required if a list of members is not provided..</param>
+        
+        
+        
         /// <param name="Members">Members.</param>
+        
+        
         public CreateShareRequest(SharedEntityTypeEnum? SharedEntityType = null, SharedEntity SharedEntity = null, MemberTypeEnum? MemberType = null, SharedEntity Member = null, List<CreateShareRequestMember> Members = null)
         {
+            
+            
+            
             // to ensure "SharedEntityType" is required (not null)
             if (SharedEntityType == null)
             {
@@ -106,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.SharedEntityType = SharedEntityType;
             }
+            
+            
+            
+            
+            
             // to ensure "SharedEntity" is required (not null)
             if (SharedEntity == null)
             {
@@ -115,10 +172,62 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.SharedEntity = SharedEntity;
             }
-            this.MemberType = MemberType;
-            this.Member = Member;
-            this.Members = Members;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.MemberType = MemberType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Member = Member;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Members = Members;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// The entity that will be shared
@@ -126,17 +235,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The entity that will be shared</value>
         [DataMember(Name="sharedEntity", EmitDefaultValue=false)]
         public SharedEntity SharedEntity { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The member that will have access to this share. Only required if a list of members is not provided.
         /// </summary>
         /// <value>The member that will have access to this share. Only required if a list of members is not provided.</value>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public SharedEntity Member { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Members
         /// </summary>
         [DataMember(Name="members", EmitDefaultValue=false)]
         public List<CreateShareRequestMember> Members { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -145,11 +264,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateShareRequest {\n");
+            
             sb.Append("  SharedEntityType: ").Append(SharedEntityType).Append("\n");
+            
             sb.Append("  SharedEntity: ").Append(SharedEntity).Append("\n");
+            
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
+            
             sb.Append("  Member: ").Append(Member).Append("\n");
+            
             sb.Append("  Members: ").Append(Members).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -224,16 +349,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.SharedEntityType != null)
                     hash = hash * 59 + this.SharedEntityType.GetHashCode();
+                
                 if (this.SharedEntity != null)
                     hash = hash * 59 + this.SharedEntity.GetHashCode();
+                
                 if (this.MemberType != null)
                     hash = hash * 59 + this.MemberType.GetHashCode();
+                
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
+                
                 if (this.Members != null)
                     hash = hash * 59 + this.Members.GetHashCode();
+                
                 return hash;
             }
         }

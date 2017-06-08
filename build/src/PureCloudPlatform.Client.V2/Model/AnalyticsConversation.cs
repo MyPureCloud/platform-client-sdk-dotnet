@@ -18,50 +18,172 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsConversation :  IEquatable<AnalyticsConversation>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversation" /> class.
         /// </summary>
+        
+        
         /// <param name="ConversationId">ConversationId.</param>
+        
+        
+        
         /// <param name="ConversationStart">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="ConversationEnd">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="Participants">Participants.</param>
+        
+        
+        
         /// <param name="Evaluations">Evaluations.</param>
+        
+        
         public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null)
         {
-            this.ConversationId = ConversationId;
-            this.ConversationStart = ConversationStart;
-            this.ConversationEnd = ConversationEnd;
-            this.Participants = Participants;
-            this.Evaluations = Evaluations;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConversationId = ConversationId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConversationStart = ConversationStart;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConversationEnd = ConversationEnd;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Participants = Participants;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Evaluations = Evaluations;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ConversationId
         /// </summary>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="conversationStart", EmitDefaultValue=false)]
         public DateTime? ConversationStart { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="conversationEnd", EmitDefaultValue=false)]
         public DateTime? ConversationEnd { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Participants
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<AnalyticsParticipant> Participants { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Evaluations
         /// </summary>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
         public List<AnalyticsEvaluation> Evaluations { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,11 +192,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversation {\n");
+            
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            
             sb.Append("  ConversationStart: ").Append(ConversationStart).Append("\n");
+            
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
+            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,16 +277,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ConversationId != null)
                     hash = hash * 59 + this.ConversationId.GetHashCode();
+                
                 if (this.ConversationStart != null)
                     hash = hash * 59 + this.ConversationStart.GetHashCode();
+                
                 if (this.ConversationEnd != null)
                     hash = hash * 59 + this.ConversationEnd.GetHashCode();
+                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+                
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationChats :  IEquatable<ConversationNotificationChats>
     {
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -80,6 +82,28 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NONE")]
             None
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -190,97 +214,358 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UNCALLABLE")]
             Uncallable
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationChats" /> class.
         /// </summary>
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Provider">Provider.</param>
+        
+        
+        
         /// <param name="ScriptId">ScriptId.</param>
+        
+        
+        
         /// <param name="PeerId">PeerId.</param>
+        
+        
+        
         /// <param name="RoomId">RoomId.</param>
+        
+        
+        
         /// <param name="Held">Held.</param>
+        
+        
+        
         /// <param name="DisconnectType">DisconnectType.</param>
+        
+        
+        
         /// <param name="StartHoldTime">StartHoldTime.</param>
+        
+        
+        
         /// <param name="ConnectedTime">ConnectedTime.</param>
+        
+        
+        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ConversationNotificationChats(StateEnum? State = null, string Id = null, string Provider = null, string ScriptId = null, string PeerId = null, string RoomId = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
-            this.State = State;
-            this.Id = Id;
-            this.Provider = Provider;
-            this.ScriptId = ScriptId;
-            this.PeerId = PeerId;
-            this.RoomId = RoomId;
-            this.Held = Held;
-            this.DisconnectType = DisconnectType;
-            this.StartHoldTime = StartHoldTime;
-            this.ConnectedTime = ConnectedTime;
-            this.DisconnectedTime = DisconnectedTime;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provider = Provider;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScriptId = ScriptId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PeerId = PeerId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RoomId = RoomId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Held = Held;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectType = DisconnectType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartHoldTime = StartHoldTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedTime = ConnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectedTime = DisconnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PeerId
         /// </summary>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RoomId
         /// </summary>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -289,18 +574,31 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationChats {\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
+            
             sb.Append("  Held: ").Append(Held).Append("\n");
+            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -410,30 +708,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();
+                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
+                
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

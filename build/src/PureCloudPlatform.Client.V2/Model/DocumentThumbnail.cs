@@ -18,41 +18,140 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentThumbnail :  IEquatable<DocumentThumbnail>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentThumbnail" /> class.
         /// </summary>
+        
+        
         /// <param name="Resolution">Resolution.</param>
+        
+        
+        
         /// <param name="ImageUri">ImageUri.</param>
+        
+        
+        
         /// <param name="Height">Height.</param>
+        
+        
+        
         /// <param name="Width">Width.</param>
+        
+        
         public DocumentThumbnail(string Resolution = null, string ImageUri = null, int? Height = null, int? Width = null)
         {
-            this.Resolution = Resolution;
-            this.ImageUri = ImageUri;
-            this.Height = Height;
-            this.Width = Width;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Resolution = Resolution;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ImageUri = ImageUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Height = Height;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Width = Width;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Resolution
         /// </summary>
         [DataMember(Name="resolution", EmitDefaultValue=false)]
         public string Resolution { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ImageUri
         /// </summary>
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Height
         /// </summary>
         [DataMember(Name="height", EmitDefaultValue=false)]
         public int? Height { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Width
         /// </summary>
         [DataMember(Name="width", EmitDefaultValue=false)]
         public int? Width { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,10 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DocumentThumbnail {\n");
+            
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
+            
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
+            
             sb.Append("  Height: ").Append(Height).Append("\n");
+            
             sb.Append("  Width: ").Append(Width).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,14 +238,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Resolution != null)
                     hash = hash * 59 + this.Resolution.GetHashCode();
+                
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
+                
                 if (this.Height != null)
                     hash = hash * 59 + this.Height.GetHashCode();
+                
                 if (this.Width != null)
                     hash = hash * 59 + this.Width.GetHashCode();
+                
                 return hash;
             }
         }

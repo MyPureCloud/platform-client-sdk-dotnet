@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Voicemail :  IEquatable<Voicemail>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Voicemail" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">The voicemail id.</param>
+        
+        
         public Voicemail(string Id = null)
         {
-            this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The voicemail id
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The voicemail id</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Voicemail {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 return hash;
             }
         }

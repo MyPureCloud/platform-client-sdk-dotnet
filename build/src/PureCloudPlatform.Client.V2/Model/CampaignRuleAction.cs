@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleAction :  IEquatable<CampaignRuleAction>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionType
         /// </summary>
@@ -74,41 +82,133 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "setCampaignDialingMode")]
             Setcampaigndialingmode
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionType
         /// </summary>
         [DataMember(Name="actionType", EmitDefaultValue=false)]
         public ActionTypeEnum? ActionType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleAction" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Parameters">Parameters.</param>
+        
+        
+        
         /// <param name="ActionType">ActionType.</param>
+        
+        
+        
         /// <param name="CampaignRuleActionEntities">CampaignRuleActionEntities.</param>
+        
+        
         public CampaignRuleAction(string Id = null, CampaignRuleParameters Parameters = null, ActionTypeEnum? ActionType = null, CampaignRuleActionEntities CampaignRuleActionEntities = null)
         {
-            this.Id = Id;
-            this.Parameters = Parameters;
-            this.ActionType = ActionType;
-            this.CampaignRuleActionEntities = CampaignRuleActionEntities;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Parameters = Parameters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActionType = ActionType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CampaignRuleActionEntities = CampaignRuleActionEntities;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Parameters
         /// </summary>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public CampaignRuleParameters Parameters { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignRuleActionEntities
         /// </summary>
         [DataMember(Name="campaignRuleActionEntities", EmitDefaultValue=false)]
         public CampaignRuleActionEntities CampaignRuleActionEntities { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -117,10 +217,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleAction {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
+            
             sb.Append("  ActionType: ").Append(ActionType).Append("\n");
+            
             sb.Append("  CampaignRuleActionEntities: ").Append(CampaignRuleActionEntities).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -190,14 +295,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();
+                
                 if (this.ActionType != null)
                     hash = hash * 59 + this.ActionType.GetHashCode();
+                
                 if (this.CampaignRuleActionEntities != null)
                     hash = hash * 59 + this.CampaignRuleActionEntities.GetHashCode();
+                
                 return hash;
             }
         }

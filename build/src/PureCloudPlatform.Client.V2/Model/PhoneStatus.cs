@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneStatus :  IEquatable<PhoneStatus>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The Operational Status of this phone
         /// </summary>
@@ -51,6 +59,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
+        
+        
+        
+        
         /// <summary>
         /// The status of the primary or secondary Edges assigned to the phone lines.
         /// </summary>
@@ -90,6 +102,19 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NO_EDGES")]
             NoEdges
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The phone status's edge assignment type.
         /// </summary>
@@ -117,46 +142,217 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SECONDARY")]
             Secondary
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The Operational Status of this phone
         /// </summary>
         /// <value>The Operational Status of this phone</value>
         [DataMember(Name="operationalStatus", EmitDefaultValue=false)]
         public OperationalStatusEnum? OperationalStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// The status of the primary or secondary Edges assigned to the phone lines.
         /// </summary>
         /// <value>The status of the primary or secondary Edges assigned to the phone lines.</value>
         [DataMember(Name="edgesStatus", EmitDefaultValue=false)]
         public EdgesStatusEnum? EdgesStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The phone status's edge assignment type.
         /// </summary>
         /// <value>The phone status's edge assignment type.</value>
         [DataMember(Name="phoneAssignmentToEdgeType", EmitDefaultValue=false)]
         public PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneStatus" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="OperationalStatus">The Operational Status of this phone.</param>
+        
+        
+        
         /// <param name="EdgesStatus">The status of the primary or secondary Edges assigned to the phone lines..</param>
+        
+        
+        
         /// <param name="EventCreationTime">Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
+        
+        
+        
         /// <param name="Provision">Provision information for this phone.</param>
+        
+        
+        
         /// <param name="LineStatuses">A list of LineStatus information for each of the lines of this phone.</param>
+        
+        
+        
         /// <param name="PhoneAssignmentToEdgeType">The phone status&#39;s edge assignment type..</param>
+        
+        
+        
         /// <param name="Edge">The URI of the edge that provided this status information..</param>
+        
+        
+        
+        
         public PhoneStatus(string Name = null, OperationalStatusEnum? OperationalStatus = null, EdgesStatusEnum? EdgesStatus = null, string EventCreationTime = null, ProvisionInfo Provision = null, List<LineStatus> LineStatuses = null, PhoneAssignmentToEdgeTypeEnum? PhoneAssignmentToEdgeType = null, UriReference Edge = null)
         {
-            this.Name = Name;
-            this.OperationalStatus = OperationalStatus;
-            this.EdgesStatus = EdgesStatus;
-            this.EventCreationTime = EventCreationTime;
-            this.Provision = Provision;
-            this.LineStatuses = LineStatuses;
-            this.PhoneAssignmentToEdgeType = PhoneAssignmentToEdgeType;
-            this.Edge = Edge;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OperationalStatus = OperationalStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EdgesStatus = EdgesStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EventCreationTime = EventCreationTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provision = Provision;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LineStatuses = LineStatuses;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PhoneAssignmentToEdgeType = PhoneAssignmentToEdgeType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Edge = Edge;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -164,41 +360,67 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London
         /// </summary>
         /// <value>Event Creation Time represents an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London</value>
         [DataMember(Name="eventCreationTime", EmitDefaultValue=false)]
         public string EventCreationTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Provision information for this phone
         /// </summary>
         /// <value>Provision information for this phone</value>
         [DataMember(Name="provision", EmitDefaultValue=false)]
         public ProvisionInfo Provision { get; set; }
+        
+        
+        
         /// <summary>
         /// A list of LineStatus information for each of the lines of this phone
         /// </summary>
         /// <value>A list of LineStatus information for each of the lines of this phone</value>
         [DataMember(Name="lineStatuses", EmitDefaultValue=false)]
         public List<LineStatus> LineStatuses { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The URI of the edge that provided this status information.
         /// </summary>
         /// <value>The URI of the edge that provided this status information.</value>
         [DataMember(Name="edge", EmitDefaultValue=false)]
         public UriReference Edge { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -207,16 +429,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneStatus {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  OperationalStatus: ").Append(OperationalStatus).Append("\n");
+            
             sb.Append("  EdgesStatus: ").Append(EdgesStatus).Append("\n");
+            
             sb.Append("  EventCreationTime: ").Append(EventCreationTime).Append("\n");
+            
             sb.Append("  Provision: ").Append(Provision).Append("\n");
+            
             sb.Append("  LineStatuses: ").Append(LineStatuses).Append("\n");
+            
             sb.Append("  PhoneAssignmentToEdgeType: ").Append(PhoneAssignmentToEdgeType).Append("\n");
+            
             sb.Append("  Edge: ").Append(Edge).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -316,26 +549,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.OperationalStatus != null)
                     hash = hash * 59 + this.OperationalStatus.GetHashCode();
+                
                 if (this.EdgesStatus != null)
                     hash = hash * 59 + this.EdgesStatus.GetHashCode();
+                
                 if (this.EventCreationTime != null)
                     hash = hash * 59 + this.EventCreationTime.GetHashCode();
+                
                 if (this.Provision != null)
                     hash = hash * 59 + this.Provision.GetHashCode();
+                
                 if (this.LineStatuses != null)
                     hash = hash * 59 + this.LineStatuses.GetHashCode();
+                
                 if (this.PhoneAssignmentToEdgeType != null)
                     hash = hash * 59 + this.PhoneAssignmentToEdgeType.GetHashCode();
+                
                 if (this.Edge != null)
                     hash = hash * 59 + this.Edge.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

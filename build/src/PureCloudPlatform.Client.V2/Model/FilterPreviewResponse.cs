@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FilterPreviewResponse :  IEquatable<FilterPreviewResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FilterPreviewResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="FilteredContacts">FilteredContacts.</param>
+        
+        
+        
         /// <param name="TotalContacts">TotalContacts.</param>
+        
+        
+        
         /// <param name="Preview">Preview.</param>
+        
+        
         public FilterPreviewResponse(long? FilteredContacts = null, long? TotalContacts = null, List<DialerContact> Preview = null)
         {
-            this.FilteredContacts = FilteredContacts;
-            this.TotalContacts = TotalContacts;
-            this.Preview = Preview;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.FilteredContacts = FilteredContacts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalContacts = TotalContacts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Preview = Preview;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets FilteredContacts
         /// </summary>
         [DataMember(Name="filteredContacts", EmitDefaultValue=false)]
         public long? FilteredContacts { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TotalContacts
         /// </summary>
         [DataMember(Name="totalContacts", EmitDefaultValue=false)]
         public long? TotalContacts { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Preview
         /// </summary>
         [DataMember(Name="preview", EmitDefaultValue=false)]
         public List<DialerContact> Preview { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FilterPreviewResponse {\n");
+            
             sb.Append("  FilteredContacts: ").Append(FilteredContacts).Append("\n");
+            
             sb.Append("  TotalContacts: ").Append(TotalContacts).Append("\n");
+            
             sb.Append("  Preview: ").Append(Preview).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.FilteredContacts != null)
                     hash = hash * 59 + this.FilteredContacts.GetHashCode();
+                
                 if (this.TotalContacts != null)
                     hash = hash * 59 + this.TotalContacts.GetHashCode();
+                
                 if (this.Preview != null)
                     hash = hash * 59 + this.Preview.GetHashCode();
+                
                 return hash;
             }
         }

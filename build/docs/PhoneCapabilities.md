@@ -13,6 +13,7 @@ title: PhoneCapabilities
 | **HardwareIdType** | **string** |  | [optional] |
 | **AllowReboot** | **bool?** |  | [optional] |
 | **NoRebalance** | **bool?** |  | [optional] |
+| **NoCloudProvisioning** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

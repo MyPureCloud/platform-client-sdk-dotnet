@@ -45,13 +45,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var libraryId = libraryId_example;  // string | Library ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an existing response library.
+                
                 apiInstance.DeleteResponsemanagementLibrary(libraryId);
             }
             catch (Exception e)
@@ -100,13 +108,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var responseId = responseId_example;  // string | Response ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an existing response.
+                
                 apiInstance.DeleteResponsemanagementResponse(responseId);
             }
             catch (Exception e)
@@ -155,14 +171,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Gets a list of existing response libraries.
+                
                 LibraryEntityListing result = apiInstance.GetResponsemanagementLibraries(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -213,13 +241,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var libraryId = libraryId_example;  // string | Library ID
+            
+            
+            
 
             try
             {
+                
                 // Get details about an existing response library.
+                
                 Library result = apiInstance.GetResponsemanagementLibrary(libraryId);
                 Debug.WriteLine(result);
             }
@@ -269,14 +305,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var responseId = responseId_example;  // string | Response ID
+            
+            
+            
+            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get details about an existing response.
+                
                 Response result = apiInstance.GetResponsemanagementResponse(responseId, expand);
                 Debug.WriteLine(result);
             }
@@ -295,7 +343,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional]  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
 {: class="table table-striped"}
 
 ### Return type
@@ -327,16 +375,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var libraryId = libraryId_example;  // string | Library ID
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Gets a list of existing responses.
+                
                 ResponseEntityListing result = apiInstance.GetResponsemanagementResponses(libraryId, pageNumber, pageSize, expand);
                 Debug.WriteLine(result);
             }
@@ -357,7 +425,7 @@ namespace Example
 | **libraryId** | **string**| Library ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **expand** | **string**| Expand instructions for the return value. | [optional]  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
 {: class="table table-striped"}
 
 ### Return type
@@ -389,13 +457,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
+            
             var body = new Library(); // Library | Library
+            
+            
 
             try
             {
+                
                 // Create a response library.
+                
                 Library result = apiInstance.PostResponsemanagementLibraries(body);
                 Debug.WriteLine(result);
             }
@@ -445,14 +521,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
+            
             var body = new Response(); // Response | Response
+            
+            
+            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Create a response.
+                
                 Response result = apiInstance.PostResponsemanagementResponses(body, expand);
                 Debug.WriteLine(result);
             }
@@ -471,7 +559,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**Response**](Response.html)| Response |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional]  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
 {: class="table table-striped"}
 
 ### Return type
@@ -503,13 +591,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
+            
             var body = new ResponseQueryRequest(); // ResponseQueryRequest | Response
+            
+            
 
             try
             {
+                
                 // Query responses
+                
                 ResponseQueryResults result = apiInstance.PostResponsemanagementResponsesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -559,14 +655,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var libraryId = libraryId_example;  // string | Library ID
+            
+            
+            
+            
+            
             var body = new Library(); // Library | Library
+            
+            
 
             try
             {
+                
                 // Update an existing response library.
+                
                 Library result = apiInstance.PutResponsemanagementLibrary(libraryId, body);
                 Debug.WriteLine(result);
             }
@@ -617,15 +725,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ResponseManagementApi();
+            
+            
             var responseId = responseId_example;  // string | Response ID
+            
+            
+            
+            
+            
             var body = new Response(); // Response | Response
+            
+            
+            
             var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Update an existing response.
+                
                 Response result = apiInstance.PutResponsemanagementResponse(responseId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -645,7 +769,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **responseId** | **string**| Response ID |  |
 | **body** | [**Response**](Response.html)| Response |  |
-| **expand** | **string**| Expand instructions for the return value. | [optional]  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: substitutionsSchema |
 {: class="table table-striped"}
 
 ### Return type

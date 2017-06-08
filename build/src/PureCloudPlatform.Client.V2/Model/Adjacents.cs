@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Adjacents :  IEquatable<Adjacents>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Adjacents" /> class.
         /// </summary>
+        
+        
         /// <param name="Superiors">Superiors.</param>
+        
+        
+        
         /// <param name="Siblings">Siblings.</param>
+        
+        
+        
         /// <param name="DirectReports">DirectReports.</param>
+        
+        
         public Adjacents(List<User> Superiors = null, List<User> Siblings = null, List<User> DirectReports = null)
         {
-            this.Superiors = Superiors;
-            this.Siblings = Siblings;
-            this.DirectReports = DirectReports;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Superiors = Superiors;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Siblings = Siblings;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DirectReports = DirectReports;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Superiors
         /// </summary>
         [DataMember(Name="superiors", EmitDefaultValue=false)]
         public List<User> Superiors { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Siblings
         /// </summary>
         [DataMember(Name="siblings", EmitDefaultValue=false)]
         public List<User> Siblings { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DirectReports
         /// </summary>
         [DataMember(Name="directReports", EmitDefaultValue=false)]
         public List<User> DirectReports { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Adjacents {\n");
+            
             sb.Append("  Superiors: ").Append(Superiors).Append("\n");
+            
             sb.Append("  Siblings: ").Append(Siblings).Append("\n");
+            
             sb.Append("  DirectReports: ").Append(DirectReports).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Superiors != null)
                     hash = hash * 59 + this.Superiors.GetHashCode();
+                
                 if (this.Siblings != null)
                     hash = hash * 59 + this.Siblings.GetHashCode();
+                
                 if (this.DirectReports != null)
                     hash = hash * 59 + this.DirectReports.GetHashCode();
+                
                 return hash;
             }
         }

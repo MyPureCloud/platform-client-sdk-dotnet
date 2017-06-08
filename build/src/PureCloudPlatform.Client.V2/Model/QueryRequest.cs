@@ -18,69 +18,260 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueryRequest :  IEquatable<QueryRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueryRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="QueryPhrase">QueryPhrase.</param>
+        
+        
+        
         /// <param name="PageNumber">PageNumber.</param>
+        
+        
+        
         /// <param name="PageSize">PageSize.</param>
+        
+        
+        
         /// <param name="FacetNameRequests">FacetNameRequests.</param>
+        
+        
+        
         /// <param name="Sort">Sort.</param>
+        
+        
+        
         /// <param name="Filters">Filters.</param>
+        
+        
+        
         /// <param name="AttributeFilters">AttributeFilters.</param>
+        
+        
+        
         /// <param name="IncludeShares">IncludeShares.</param>
+        
+        
         public QueryRequest(string QueryPhrase = null, int? PageNumber = null, int? PageSize = null, List<string> FacetNameRequests = null, List<SortItem> Sort = null, List<ContentFilterItem> Filters = null, List<AttributeFilterItem> AttributeFilters = null, bool? IncludeShares = null)
         {
-            this.QueryPhrase = QueryPhrase;
-            this.PageNumber = PageNumber;
-            this.PageSize = PageSize;
-            this.FacetNameRequests = FacetNameRequests;
-            this.Sort = Sort;
-            this.Filters = Filters;
-            this.AttributeFilters = AttributeFilters;
-            this.IncludeShares = IncludeShares;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.QueryPhrase = QueryPhrase;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PageNumber = PageNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PageSize = PageSize;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FacetNameRequests = FacetNameRequests;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Sort = Sort;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Filters = Filters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AttributeFilters = AttributeFilters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IncludeShares = IncludeShares;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets QueryPhrase
         /// </summary>
         [DataMember(Name="queryPhrase", EmitDefaultValue=false)]
         public string QueryPhrase { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PageNumber
         /// </summary>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PageSize
         /// </summary>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FacetNameRequests
         /// </summary>
         [DataMember(Name="facetNameRequests", EmitDefaultValue=false)]
         public List<string> FacetNameRequests { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Sort
         /// </summary>
         [DataMember(Name="sort", EmitDefaultValue=false)]
         public List<SortItem> Sort { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Filters
         /// </summary>
         [DataMember(Name="filters", EmitDefaultValue=false)]
         public List<ContentFilterItem> Filters { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AttributeFilters
         /// </summary>
         [DataMember(Name="attributeFilters", EmitDefaultValue=false)]
         public List<AttributeFilterItem> AttributeFilters { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets IncludeShares
         /// </summary>
         [DataMember(Name="includeShares", EmitDefaultValue=false)]
         public bool? IncludeShares { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -89,14 +280,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueryRequest {\n");
+            
             sb.Append("  QueryPhrase: ").Append(QueryPhrase).Append("\n");
+            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            
             sb.Append("  FacetNameRequests: ").Append(FacetNameRequests).Append("\n");
+            
             sb.Append("  Sort: ").Append(Sort).Append("\n");
+            
             sb.Append("  Filters: ").Append(Filters).Append("\n");
+            
             sb.Append("  AttributeFilters: ").Append(AttributeFilters).Append("\n");
+            
             sb.Append("  IncludeShares: ").Append(IncludeShares).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,22 +386,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.QueryPhrase != null)
                     hash = hash * 59 + this.QueryPhrase.GetHashCode();
+                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
+                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
+                
                 if (this.FacetNameRequests != null)
                     hash = hash * 59 + this.FacetNameRequests.GetHashCode();
+                
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();
+                
                 if (this.Filters != null)
                     hash = hash * 59 + this.Filters.GetHashCode();
+                
                 if (this.AttributeFilters != null)
                     hash = hash * 59 + this.AttributeFilters.GetHashCode();
+                
                 if (this.IncludeShares != null)
                     hash = hash * 59 + this.IncludeShares.GetHashCode();
+                
                 return hash;
             }
         }

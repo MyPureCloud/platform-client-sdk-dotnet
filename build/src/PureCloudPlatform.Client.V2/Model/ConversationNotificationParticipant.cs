@@ -18,209 +18,860 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationParticipant :  IEquatable<ConversationNotificationParticipant>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationParticipant" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="ConnectedTime">ConnectedTime.</param>
+        
+        
+        
         /// <param name="EndTime">EndTime.</param>
+        
+        
+        
         /// <param name="UserId">UserId.</param>
+        
+        
+        
         /// <param name="ExternalContactId">ExternalContactId.</param>
+        
+        
+        
         /// <param name="ExternalOrganizationId">ExternalOrganizationId.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="QueueId">QueueId.</param>
+        
+        
+        
         /// <param name="GroupId">GroupId.</param>
+        
+        
+        
         /// <param name="Purpose">Purpose.</param>
+        
+        
+        
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
+        
+        
+        
         /// <param name="Address">Address.</param>
+        
+        
+        
         /// <param name="WrapupRequired">WrapupRequired.</param>
+        
+        
+        
         /// <param name="WrapupExpected">WrapupExpected.</param>
+        
+        
+        
         /// <param name="WrapupPrompt">WrapupPrompt.</param>
+        
+        
+        
         /// <param name="WrapupTimeoutMs">WrapupTimeoutMs.</param>
+        
+        
+        
         /// <param name="Wrapup">Wrapup.</param>
+        
+        
+        
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
+        
+        
+        
         /// <param name="Attributes">Attributes.</param>
+        
+        
+        
         /// <param name="Calls">Calls.</param>
+        
+        
+        
         /// <param name="Callbacks">Callbacks.</param>
+        
+        
+        
         /// <param name="Chats">Chats.</param>
+        
+        
+        
         /// <param name="Cobrowsesessions">Cobrowsesessions.</param>
+        
+        
+        
         /// <param name="Emails">Emails.</param>
+        
+        
+        
         /// <param name="Screenshares">Screenshares.</param>
+        
+        
+        
         /// <param name="SocialExpressions">SocialExpressions.</param>
+        
+        
+        
         /// <param name="Videos">Videos.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ConversationNotificationParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.ConnectedTime = ConnectedTime;
-            this.EndTime = EndTime;
-            this.UserId = UserId;
-            this.ExternalContactId = ExternalContactId;
-            this.ExternalOrganizationId = ExternalOrganizationId;
-            this.Name = Name;
-            this.QueueId = QueueId;
-            this.GroupId = GroupId;
-            this.Purpose = Purpose;
-            this.ConsultParticipantId = ConsultParticipantId;
-            this.Address = Address;
-            this.WrapupRequired = WrapupRequired;
-            this.WrapupExpected = WrapupExpected;
-            this.WrapupPrompt = WrapupPrompt;
-            this.WrapupTimeoutMs = WrapupTimeoutMs;
-            this.Wrapup = Wrapup;
-            this.MonitoredParticipantId = MonitoredParticipantId;
-            this.Attributes = Attributes;
-            this.Calls = Calls;
-            this.Callbacks = Callbacks;
-            this.Chats = Chats;
-            this.Cobrowsesessions = Cobrowsesessions;
-            this.Emails = Emails;
-            this.Screenshares = Screenshares;
-            this.SocialExpressions = SocialExpressions;
-            this.Videos = Videos;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedTime = ConnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndTime = EndTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UserId = UserId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalContactId = ExternalContactId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalOrganizationId = ExternalOrganizationId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.QueueId = QueueId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.GroupId = GroupId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Purpose = Purpose;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConsultParticipantId = ConsultParticipantId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Address = Address;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupRequired = WrapupRequired;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupExpected = WrapupExpected;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupPrompt = WrapupPrompt;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupTimeoutMs = WrapupTimeoutMs;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Wrapup = Wrapup;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MonitoredParticipantId = MonitoredParticipantId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Attributes = Attributes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Calls = Calls;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Callbacks = Callbacks;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Chats = Chats;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Cobrowsesessions = Cobrowsesessions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Emails = Emails;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Screenshares = Screenshares;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SocialExpressions = SocialExpressions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Videos = Videos;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExternalContactId
         /// </summary>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExternalOrganizationId
         /// </summary>
         [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
         public string ExternalOrganizationId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets QueueId
         /// </summary>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets GroupId
         /// </summary>
         [DataMember(Name="groupId", EmitDefaultValue=false)]
         public string GroupId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public string Purpose { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConsultParticipantId
         /// </summary>
         [DataMember(Name="consultParticipantId", EmitDefaultValue=false)]
         public string ConsultParticipantId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupRequired
         /// </summary>
         [DataMember(Name="wrapupRequired", EmitDefaultValue=false)]
         public bool? WrapupRequired { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupExpected
         /// </summary>
         [DataMember(Name="wrapupExpected", EmitDefaultValue=false)]
         public bool? WrapupExpected { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupPrompt
         /// </summary>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public string WrapupPrompt { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets WrapupTimeoutMs
         /// </summary>
         [DataMember(Name="wrapupTimeoutMs", EmitDefaultValue=false)]
         public int? WrapupTimeoutMs { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Wrapup
         /// </summary>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public ConversationNotificationWrapup Wrapup { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MonitoredParticipantId
         /// </summary>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
         public string MonitoredParticipantId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Calls
         /// </summary>
         [DataMember(Name="calls", EmitDefaultValue=false)]
         public List<ConversationNotificationCalls> Calls { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Callbacks
         /// </summary>
         [DataMember(Name="callbacks", EmitDefaultValue=false)]
         public List<ConversationNotificationCallbacks> Callbacks { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Chats
         /// </summary>
         [DataMember(Name="chats", EmitDefaultValue=false)]
         public List<ConversationNotificationChats> Chats { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Cobrowsesessions
         /// </summary>
         [DataMember(Name="cobrowsesessions", EmitDefaultValue=false)]
         public List<ConversationNotificationCobrowsesessions> Cobrowsesessions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Emails
         /// </summary>
         [DataMember(Name="emails", EmitDefaultValue=false)]
         public List<ConversationNotificationEmails> Emails { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Screenshares
         /// </summary>
         [DataMember(Name="screenshares", EmitDefaultValue=false)]
         public List<ConversationNotificationScreenshares> Screenshares { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SocialExpressions
         /// </summary>
         [DataMember(Name="socialExpressions", EmitDefaultValue=false)]
         public List<ConversationNotificationSocialExpressions> SocialExpressions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Videos
         /// </summary>
         [DataMember(Name="videos", EmitDefaultValue=false)]
         public List<ConversationNotificationVideos> Videos { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -229,34 +880,63 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationParticipant {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            
             sb.Append("  GroupId: ").Append(GroupId).Append("\n");
+            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
+            
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
+            
             sb.Append("  Address: ").Append(Address).Append("\n");
+            
             sb.Append("  WrapupRequired: ").Append(WrapupRequired).Append("\n");
+            
             sb.Append("  WrapupExpected: ").Append(WrapupExpected).Append("\n");
+            
             sb.Append("  WrapupPrompt: ").Append(WrapupPrompt).Append("\n");
+            
             sb.Append("  WrapupTimeoutMs: ").Append(WrapupTimeoutMs).Append("\n");
+            
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            
             sb.Append("  Calls: ").Append(Calls).Append("\n");
+            
             sb.Append("  Callbacks: ").Append(Callbacks).Append("\n");
+            
             sb.Append("  Chats: ").Append(Chats).Append("\n");
+            
             sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
+            
             sb.Append("  Emails: ").Append(Emails).Append("\n");
+            
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
+            
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
+            
             sb.Append("  Videos: ").Append(Videos).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -446,62 +1126,91 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+                
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+                
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
+                
                 if (this.GroupId != null)
                     hash = hash * 59 + this.GroupId.GetHashCode();
+                
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
+                
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
                 if (this.WrapupRequired != null)
                     hash = hash * 59 + this.WrapupRequired.GetHashCode();
+                
                 if (this.WrapupExpected != null)
                     hash = hash * 59 + this.WrapupExpected.GetHashCode();
+                
                 if (this.WrapupPrompt != null)
                     hash = hash * 59 + this.WrapupPrompt.GetHashCode();
+                
                 if (this.WrapupTimeoutMs != null)
                     hash = hash * 59 + this.WrapupTimeoutMs.GetHashCode();
+                
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
+                
                 if (this.Calls != null)
                     hash = hash * 59 + this.Calls.GetHashCode();
+                
                 if (this.Callbacks != null)
                     hash = hash * 59 + this.Callbacks.GetHashCode();
+                
                 if (this.Chats != null)
                     hash = hash * 59 + this.Chats.GetHashCode();
+                
                 if (this.Cobrowsesessions != null)
                     hash = hash * 59 + this.Cobrowsesessions.GetHashCode();
+                
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
+                
                 if (this.Screenshares != null)
                     hash = hash * 59 + this.Screenshares.GetHashCode();
+                
                 if (this.SocialExpressions != null)
                     hash = hash * 59 + this.SocialExpressions.GetHashCode();
+                
                 if (this.Videos != null)
                     hash = hash * 59 + this.Videos.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

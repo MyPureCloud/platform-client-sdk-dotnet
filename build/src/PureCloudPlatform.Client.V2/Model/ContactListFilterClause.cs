@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterClause :  IEquatable<ContactListFilterClause>
     {
+        
+        
         /// <summary>
         /// The filter type tells the api how to compare between predicates
         /// </summary>
@@ -45,28 +47,80 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OR")]
             Or
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The filter type tells the api how to compare between predicates
         /// </summary>
         /// <value>The filter type tells the api how to compare between predicates</value>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterClause" /> class.
         /// </summary>
+        
+        
         /// <param name="FilterType">The filter type tells the api how to compare between predicates.</param>
+        
+        
+        
         /// <param name="Predicates">Predicates.</param>
+        
+        
         public ContactListFilterClause(FilterTypeEnum? FilterType = null, List<ContactListFilterPredicate> Predicates = null)
         {
-            this.FilterType = FilterType;
-            this.Predicates = Predicates;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.FilterType = FilterType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Predicates = Predicates;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Predicates
         /// </summary>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<ContactListFilterPredicate> Predicates { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,8 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterClause {\n");
+            
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
+            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,10 +193,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.FilterType != null)
                     hash = hash * 59 + this.FilterType.GetHashCode();
+                
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+                
                 return hash;
             }
         }

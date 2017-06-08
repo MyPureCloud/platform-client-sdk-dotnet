@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmIntradayQueueListing :  IEquatable<WfmIntradayQueueListing>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets NoDataReason
         /// </summary>
@@ -50,27 +55,76 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NoSourceForecast")]
             Nosourceforecast
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets NoDataReason
         /// </summary>
         [DataMember(Name="noDataReason", EmitDefaultValue=false)]
         public NoDataReasonEnum? NoDataReason { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmIntradayQueueListing" /> class.
         /// </summary>
+        
+        
         /// <param name="Entities">Entities.</param>
+        
+        
+        
         /// <param name="NoDataReason">NoDataReason.</param>
+        
+        
         public WfmIntradayQueueListing(List<IntradayQueue> Entities = null, NoDataReasonEnum? NoDataReason = null)
         {
-            this.Entities = Entities;
-            this.NoDataReason = NoDataReason;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Entities = Entities;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NoDataReason = NoDataReason;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<IntradayQueue> Entities { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -79,8 +133,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WfmIntradayQueueListing {\n");
+            
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            
             sb.Append("  NoDataReason: ").Append(NoDataReason).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -140,10 +197,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+                
                 if (this.NoDataReason != null)
                     hash = hash * 59 + this.NoDataReason.GetHashCode();
+                
                 return hash;
             }
         }

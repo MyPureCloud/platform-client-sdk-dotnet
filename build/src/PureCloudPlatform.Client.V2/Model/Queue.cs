@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Queue :  IEquatable<Queue>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -50,6 +76,25 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
@@ -83,47 +128,230 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ALL")]
             All
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The skill evaluation method to use when routing conversations.
         /// </summary>
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Queue" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Queue() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Queue" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="ModifiedBy">ModifiedBy.</param>
+        
+        
+        
         /// <param name="CreatedBy">CreatedBy.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        
+        
+        
         /// <param name="CreatedByApp">CreatedByApp.</param>
+        
+        
+        
         /// <param name="MediaSettings">The media settings for the queue. (required).</param>
+        
+        
+        
         /// <param name="Bullseye">The bulls-eye settings for the queue..</param>
+        
+        
+        
         /// <param name="AcwSettings">The ACW settings for the queue. (required).</param>
+        
+        
+        
         /// <param name="SkillEvaluationMethod">The skill evaluation method to use when routing conversations. (required).</param>
+        
+        
+        
         /// <param name="QueueFlow">The in-queue flow to use for conversations waiting in queue..</param>
+        
+        
+        
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
+        
+        
+        
         /// <param name="CallingPartyNumber">The phone number to use for caller identification for outbound calls from this queue..</param>
+        
+        
+        
         /// <param name="DefaultScripts">The default script Ids for the communication types..</param>
+        
+        
+        
         /// <param name="OutboundEmailAddress">OutboundEmailAddress.</param>
+        
+        
+        
         /// <param name="MemberCount">MemberCount.</param>
+        
+        
+        
+        
         public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "MediaSettings" is required (not null)
             if (MediaSettings == null)
             {
@@ -133,6 +361,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.MediaSettings = MediaSettings;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "AcwSettings" is required (not null)
             if (AcwSettings == null)
             {
@@ -142,6 +379,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.AcwSettings = AcwSettings;
             }
+            
+            
+            
+            
+            
             // to ensure "SkillEvaluationMethod" is required (not null)
             if (SkillEvaluationMethod == null)
             {
@@ -151,24 +393,208 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.SkillEvaluationMethod = SkillEvaluationMethod;
             }
-            this.Name = Name;
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.Bullseye = Bullseye;
-            this.QueueFlow = QueueFlow;
-            this.CallingPartyName = CallingPartyName;
-            this.CallingPartyNumber = CallingPartyNumber;
-            this.DefaultScripts = DefaultScripts;
-            this.OutboundEmailAddress = OutboundEmailAddress;
-            this.MemberCount = MemberCount;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedByApp = ModifiedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedByApp = CreatedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Bullseye = Bullseye;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.QueueFlow = QueueFlow;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallingPartyName = CallingPartyName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallingPartyNumber = CallingPartyNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DefaultScripts = DefaultScripts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OutboundEmailAddress = OutboundEmailAddress;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MemberCount = MemberCount;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -176,111 +602,174 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// The media settings for the queue.
         /// </summary>
         /// <value>The media settings for the queue.</value>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
         public Dictionary<string, MediaSetting> MediaSettings { get; set; }
+        
+        
+        
         /// <summary>
         /// The bulls-eye settings for the queue.
         /// </summary>
         /// <value>The bulls-eye settings for the queue.</value>
         [DataMember(Name="bullseye", EmitDefaultValue=false)]
         public Bullseye Bullseye { get; set; }
+        
+        
+        
         /// <summary>
         /// The ACW settings for the queue.
         /// </summary>
         /// <value>The ACW settings for the queue.</value>
         [DataMember(Name="acwSettings", EmitDefaultValue=false)]
         public AcwSettings AcwSettings { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The in-queue flow to use for conversations waiting in queue.
         /// </summary>
         /// <value>The in-queue flow to use for conversations waiting in queue.</value>
         [DataMember(Name="queueFlow", EmitDefaultValue=false)]
         public UriReference QueueFlow { get; set; }
+        
+        
+        
         /// <summary>
         /// The name to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The name to use for caller identification for outbound calls from this queue.</value>
         [DataMember(Name="callingPartyName", EmitDefaultValue=false)]
         public string CallingPartyName { get; set; }
+        
+        
+        
         /// <summary>
         /// The phone number to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The phone number to use for caller identification for outbound calls from this queue.</value>
         [DataMember(Name="callingPartyNumber", EmitDefaultValue=false)]
         public string CallingPartyNumber { get; set; }
+        
+        
+        
         /// <summary>
         /// The default script Ids for the communication types.
         /// </summary>
         /// <value>The default script Ids for the communication types.</value>
         [DataMember(Name="defaultScripts", EmitDefaultValue=false)]
         public Dictionary<string, Script> DefaultScripts { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets OutboundEmailAddress
         /// </summary>
         [DataMember(Name="outboundEmailAddress", EmitDefaultValue=false)]
         public QueueEmailAddress OutboundEmailAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MemberCount
         /// </summary>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public int? MemberCount { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -289,28 +778,51 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Queue {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
+            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
+            
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
+            
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
+            
             sb.Append("  AcwSettings: ").Append(AcwSettings).Append("\n");
+            
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
+            
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
+            
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
+            
             sb.Append("  CallingPartyNumber: ").Append(CallingPartyNumber).Append("\n");
+            
             sb.Append("  DefaultScripts: ").Append(DefaultScripts).Append("\n");
+            
             sb.Append("  OutboundEmailAddress: ").Append(OutboundEmailAddress).Append("\n");
+            
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -470,50 +982,73 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
+                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
+                
                 if (this.MediaSettings != null)
                     hash = hash * 59 + this.MediaSettings.GetHashCode();
+                
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();
+                
                 if (this.AcwSettings != null)
                     hash = hash * 59 + this.AcwSettings.GetHashCode();
+                
                 if (this.SkillEvaluationMethod != null)
                     hash = hash * 59 + this.SkillEvaluationMethod.GetHashCode();
+                
                 if (this.QueueFlow != null)
                     hash = hash * 59 + this.QueueFlow.GetHashCode();
+                
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();
+                
                 if (this.CallingPartyNumber != null)
                     hash = hash * 59 + this.CallingPartyNumber.GetHashCode();
+                
                 if (this.DefaultScripts != null)
                     hash = hash * 59 + this.DefaultScripts.GetHashCode();
+                
                 if (this.OutboundEmailAddress != null)
                     hash = hash * 59 + this.OutboundEmailAddress.GetHashCode();
+                
                 if (this.MemberCount != null)
                     hash = hash * 59 + this.MemberCount.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

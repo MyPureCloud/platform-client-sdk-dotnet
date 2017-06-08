@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsQueryClause :  IEquatable<AnalyticsQueryClause>
     {
+        
+        
         /// <summary>
         /// Boolean operation to apply to the provided predicates
         /// </summary>
@@ -45,24 +47,48 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "or")]
             Or
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Boolean operation to apply to the provided predicates
         /// </summary>
         /// <value>Boolean operation to apply to the provided predicates</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryClause" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AnalyticsQueryClause() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsQueryClause" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Boolean operation to apply to the provided predicates (required).</param>
+        
+        
+        
         /// <param name="Predicates">Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric. (required).</param>
+        
+        
         public AnalyticsQueryClause(TypeEnum? Type = null, List<AnalyticsQueryPredicate> Predicates = null)
         {
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -72,6 +98,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
+            
+            
+            
+            
+            
             // to ensure "Predicates" is required (not null)
             if (Predicates == null)
             {
@@ -81,7 +112,23 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Predicates = Predicates;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric.
@@ -89,6 +136,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Like a three-word sentence: (attribute-name) (operator) (target-value). These can be one of three types: dimension, property, metric.</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<AnalyticsQueryPredicate> Predicates { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -97,8 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsQueryClause {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,10 +210,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+                
                 return hash;
             }
         }

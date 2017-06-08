@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleParameters :  IEquatable<CampaignRuleParameters>
     {
+        
+        
         /// <summary>
         /// The operator for comparison. Required for all campaign rule conditions
         /// </summary>
@@ -63,6 +65,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "lessThanEqualTo")]
             Lessthanequalto
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The priority to set the campaign to. Required for 'set campaign priority' actions
         /// </summary>
@@ -108,6 +117,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "5")]
             _5
         }
+        
+        
+        
+        
         /// <summary>
         /// The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions
         /// </summary>
@@ -153,38 +166,121 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "progressive")]
             Progressive
         }
+        
+        
+        
+        
+        
         /// <summary>
         /// The operator for comparison. Required for all campaign rule conditions
         /// </summary>
         /// <value>The operator for comparison. Required for all campaign rule conditions</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The priority to set the campaign to. Required for 'set campaign priority' actions
         /// </summary>
         /// <value>The priority to set the campaign to. Required for 'set campaign priority' actions</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public PriorityEnum? Priority { get; set; }
+        
+        
+        
         /// <summary>
         /// The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions
         /// </summary>
         /// <value>The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions</value>
         [DataMember(Name="dialingMode", EmitDefaultValue=false)]
         public DialingModeEnum? DialingMode { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleParameters" /> class.
         /// </summary>
+        
+        
         /// <param name="_Operator">The operator for comparison. Required for all campaign rule conditions.</param>
+        
+        
+        
         /// <param name="Value">The value for comparison. Required for all campaign rule conditions.</param>
+        
+        
+        
         /// <param name="Priority">The priority to set the campaign to. Required for &#39;set campaign priority&#39; actions.</param>
+        
+        
+        
         /// <param name="DialingMode">The dialing mode to set the campaign to. Reqired for &#39;set campaign dialing mode&#39; actions.</param>
+        
+        
         public CampaignRuleParameters(OperatorEnum? _Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null)
         {
-            this._Operator = _Operator;
-            this.Value = Value;
-            this.Priority = Priority;
-            this.DialingMode = DialingMode;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Priority = Priority;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DialingMode = DialingMode;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// The value for comparison. Required for all campaign rule conditions
@@ -192,6 +288,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The value for comparison. Required for all campaign rule conditions</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -200,10 +302,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleParameters {\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -273,14 +380,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                
                 if (this.DialingMode != null)
                     hash = hash * 59 + this.DialingMode.GetHashCode();
+                
                 return hash;
             }
         }

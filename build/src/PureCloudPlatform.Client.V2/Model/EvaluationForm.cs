@@ -18,23 +18,103 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationForm :  IEquatable<EvaluationForm>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EvaluationForm() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The evaluation form name (required).</param>
+        
+        
+        
         /// <param name="Type">The form type (evaluation) (required).</param>
+        
+        
+        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="Published">Published.</param>
+        
+        
+        
         /// <param name="ContextId">ContextId.</param>
+        
+        
+        
         /// <param name="QuestionGroups">A list of question groups (required).</param>
+        
+        
+        
         /// <param name="PublishedVersions">PublishedVersions.</param>
+        
+        
+        
+        
         public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -44,6 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -53,6 +138,23 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "QuestionGroups" is required (not null)
             if (QuestionGroups == null)
             {
@@ -62,11 +164,71 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.QuestionGroups = QuestionGroups;
             }
-            this.ModifiedDate = ModifiedDate;
-            this.Published = Published;
-            this.ContextId = ContextId;
-            this.PublishedVersions = PublishedVersions;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedDate = ModifiedDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Published = Published;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContextId = ContextId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.PublishedVersions = PublishedVersions;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -74,51 +236,77 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The evaluation form name
         /// </summary>
         /// <value>The evaluation form name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The form type (evaluation)
         /// </summary>
         /// <value>The form type (evaluation)</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Published
         /// </summary>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContextId
         /// </summary>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
+        
+        
+        
         /// <summary>
         /// A list of question groups
         /// </summary>
         /// <value>A list of question groups</value>
         [DataMember(Name="questionGroups", EmitDefaultValue=false)]
         public List<QuestionGroup> QuestionGroups { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PublishedVersions
         /// </summary>
         [DataMember(Name="publishedVersions", EmitDefaultValue=false)]
         public DomainEntityListingEvaluationForm PublishedVersions { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -127,15 +315,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluationForm {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            
             sb.Append("  Published: ").Append(Published).Append("\n");
+            
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
+            
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
+            
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -230,24 +428,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+                
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
+                
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
+                
                 if (this.QuestionGroups != null)
                     hash = hash * 59 + this.QuestionGroups.GetHashCode();
+                
                 if (this.PublishedVersions != null)
                     hash = hash * 59 + this.PublishedVersions.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

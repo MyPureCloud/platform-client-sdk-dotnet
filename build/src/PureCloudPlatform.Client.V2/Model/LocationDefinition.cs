@@ -18,6 +18,23 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LocationDefinition :  IEquatable<LocationDefinition>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
@@ -45,32 +62,187 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Current activity status of the location.
         /// </summary>
         /// <value>Current activity status of the location.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocationDefinition" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Address">Address.</param>
+        
+        
+        
         /// <param name="AddressVerified">AddressVerified.</param>
+        
+        
+        
         /// <param name="EmergencyNumber">EmergencyNumber.</param>
+        
+        
+        
         /// <param name="State">Current activity status of the location..</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="Path">Path.</param>
+        
+        
+        
+        
         public LocationDefinition(string Name = null, LocationAddress Address = null, bool? AddressVerified = null, LocationEmergencyNumber EmergencyNumber = null, StateEnum? State = null, int? Version = null, List<string> Path = null)
         {
-            this.Name = Name;
-            this.Address = Address;
-            this.AddressVerified = AddressVerified;
-            this.EmergencyNumber = EmergencyNumber;
-            this.State = State;
-            this.Version = Version;
-            this.Path = Path;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Address = Address;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressVerified = AddressVerified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EmergencyNumber = EmergencyNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Path = Path;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -78,42 +250,67 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public LocationAddress Address { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AddressVerified
         /// </summary>
         [DataMember(Name="addressVerified", EmitDefaultValue=false)]
         public bool? AddressVerified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EmergencyNumber
         /// </summary>
         [DataMember(Name="emergencyNumber", EmitDefaultValue=false)]
         public LocationEmergencyNumber EmergencyNumber { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Path
         /// </summary>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public List<string> Path { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -122,15 +319,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LocationDefinition {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Address: ").Append(Address).Append("\n");
+            
             sb.Append("  AddressVerified: ").Append(AddressVerified).Append("\n");
+            
             sb.Append("  EmergencyNumber: ").Append(EmergencyNumber).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  Path: ").Append(Path).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -225,24 +432,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
                 if (this.AddressVerified != null)
                     hash = hash * 59 + this.AddressVerified.GetHashCode();
+                
                 if (this.EmergencyNumber != null)
                     hash = hash * 59 + this.EmergencyNumber.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

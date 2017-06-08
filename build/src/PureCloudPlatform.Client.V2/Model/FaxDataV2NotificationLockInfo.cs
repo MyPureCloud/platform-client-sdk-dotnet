@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FaxDataV2NotificationLockInfo :  IEquatable<FaxDataV2NotificationLockInfo>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxDataV2NotificationLockInfo" /> class.
         /// </summary>
+        
+        
         /// <param name="LockedBy">LockedBy.</param>
+        
+        
+        
         /// <param name="DateCreated">DateCreated.</param>
+        
+        
+        
         /// <param name="DateExpires">DateExpires.</param>
+        
+        
         public FaxDataV2NotificationLockInfo(FaxDataV2NotificationUserData LockedBy = null, DateTime? DateCreated = null, DateTime? DateExpires = null)
         {
-            this.LockedBy = LockedBy;
-            this.DateCreated = DateCreated;
-            this.DateExpires = DateExpires;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.LockedBy = LockedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateExpires = DateExpires;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets LockedBy
         /// </summary>
         [DataMember(Name="lockedBy", EmitDefaultValue=false)]
         public FaxDataV2NotificationUserData LockedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateExpires
         /// </summary>
         [DataMember(Name="dateExpires", EmitDefaultValue=false)]
         public DateTime? DateExpires { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaxDataV2NotificationLockInfo {\n");
+            
             sb.Append("  LockedBy: ").Append(LockedBy).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateExpires: ").Append(DateExpires).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.LockedBy != null)
                     hash = hash * 59 + this.LockedBy.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateExpires != null)
                     hash = hash * 59 + this.DateExpires.GetHashCode();
+                
                 return hash;
             }
         }

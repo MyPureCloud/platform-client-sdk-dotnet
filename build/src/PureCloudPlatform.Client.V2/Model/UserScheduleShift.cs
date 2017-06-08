@@ -18,18 +18,86 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserScheduleShift :  IEquatable<UserScheduleShift>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleShift" /> class.
         /// </summary>
+        
+        
         /// <param name="StartDate">Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="LengthInMinutes">Length of this shift in minutes.</param>
+        
+        
+        
         /// <param name="Activities">List of activities in this shift.</param>
+        
+        
         public UserScheduleShift(DateTime? StartDate = null, int? LengthInMinutes = null, List<UserScheduleActivity> Activities = null)
         {
-            this.StartDate = StartDate;
-            this.LengthInMinutes = LengthInMinutes;
-            this.Activities = Activities;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartDate = StartDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LengthInMinutes = LengthInMinutes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Activities = Activities;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -37,18 +105,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
+        
+        
+        
         /// <summary>
         /// Length of this shift in minutes
         /// </summary>
         /// <value>Length of this shift in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
         public int? LengthInMinutes { get; set; }
+        
+        
+        
         /// <summary>
         /// List of activities in this shift
         /// </summary>
         /// <value>List of activities in this shift</value>
         [DataMember(Name="activities", EmitDefaultValue=false)]
         public List<UserScheduleActivity> Activities { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -57,9 +133,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserScheduleShift {\n");
+            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
+            
             sb.Append("  Activities: ").Append(Activities).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,12 +204,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
+                
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
+                
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,12 +18,86 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VoicemailMailboxInfo :  IEquatable<VoicemailMailboxInfo>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" /> class.
         /// </summary>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         public VoicemailMailboxInfo()
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The total number of bytes for all voicemail message audio recordings
@@ -31,36 +105,53 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The total number of bytes for all voicemail message audio recordings</value>
         [DataMember(Name="usageSizeBytes", EmitDefaultValue=false)]
         public long? UsageSizeBytes { get; private set; }
+        
+        
+        
         /// <summary>
         /// The total number of voicemail messages
         /// </summary>
         /// <value>The total number of voicemail messages</value>
         [DataMember(Name="totalCount", EmitDefaultValue=false)]
         public int? TotalCount { get; private set; }
+        
+        
+        
         /// <summary>
         /// The total number of voicemail messages marked as unread
         /// </summary>
         /// <value>The total number of voicemail messages marked as unread</value>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
         public int? UnreadCount { get; private set; }
+        
+        
+        
         /// <summary>
         /// The total number of voicemail messages marked as deleted
         /// </summary>
         /// <value>The total number of voicemail messages marked as deleted</value>
         [DataMember(Name="deletedCount", EmitDefaultValue=false)]
         public int? DeletedCount { get; private set; }
+        
+        
+        
         /// <summary>
         /// The date of the oldest voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date of the oldest voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; private set; }
+        
+        
+        
         /// <summary>
         /// The date of the most recent voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The date of the most recent voicemail message. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,12 +160,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VoicemailMailboxInfo {\n");
+            
             sb.Append("  UsageSizeBytes: ").Append(UsageSizeBytes).Append("\n");
+            
             sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
+            
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
+            
             sb.Append("  DeletedCount: ").Append(DeletedCount).Append("\n");
+            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
+            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,18 +252,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.UsageSizeBytes != null)
                     hash = hash * 59 + this.UsageSizeBytes.GetHashCode();
+                
                 if (this.TotalCount != null)
                     hash = hash * 59 + this.TotalCount.GetHashCode();
+                
                 if (this.UnreadCount != null)
                     hash = hash * 59 + this.UnreadCount.GetHashCode();
+                
                 if (this.DeletedCount != null)
                     hash = hash * 59 + this.DeletedCount.GetHashCode();
+                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
+                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+                
                 return hash;
             }
         }

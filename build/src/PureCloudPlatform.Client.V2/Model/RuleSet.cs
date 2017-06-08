@@ -18,21 +18,119 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RuleSet :  IEquatable<RuleSet>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSet" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RuleSet() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSet" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
+        
+        
+        
+        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        
+        
+        
         /// <param name="ContactList">The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions.</param>
+        
+        
+        
         /// <param name="Queue">The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions.</param>
+        
+        
+        
         /// <param name="Rules">The list of rules (required).</param>
+        
+        
+        
+        
         public RuleSet(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, List<DialerRule> Rules = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Rules" is required (not null)
             if (Rules == null)
             {
@@ -42,11 +140,63 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Rules = Rules;
             }
-            this.Name = Name;
-            this.Version = Version;
-            this.ContactList = ContactList;
-            this.Queue = Queue;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactList = ContactList;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Queue = Queue;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -54,53 +204,79 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
+        
+        
+        
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+        
+        
+        
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions
         /// </summary>
         /// <value>The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
+        
+        
+        
         /// <summary>
         /// The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions
         /// </summary>
         /// <value>The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public UriReference Queue { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of rules
         /// </summary>
         /// <value>The list of rules</value>
         [DataMember(Name="rules", EmitDefaultValue=false)]
         public List<DialerRule> Rules { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -109,15 +285,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RuleSet {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
+            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            
             sb.Append("  Rules: ").Append(Rules).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -212,24 +398,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
+                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
                 if (this.Rules != null)
                     hash = hash * 59 + this.Rules.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

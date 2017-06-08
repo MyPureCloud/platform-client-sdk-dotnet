@@ -18,18 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneColumn :  IEquatable<PhoneColumn>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneColumn" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PhoneColumn() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneColumn" /> class.
         /// </summary>
+        
+        
         /// <param name="ColumnName">name of the phone column (required).</param>
+        
+        
+        
         /// <param name="Type">type of the phone column, for example, &#39;cell&#39; or &#39;home&#39; (required).</param>
+        
+        
         public PhoneColumn(string ColumnName = null, string Type = null)
         {
+            
+            
+            
             // to ensure "ColumnName" is required (not null)
             if (ColumnName == null)
             {
@@ -39,6 +63,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.ColumnName = ColumnName;
             }
+            
+            
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -48,7 +77,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// name of the phone column
@@ -56,12 +99,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>name of the phone column</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
+        
+        
+        
         /// <summary>
         /// type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;
         /// </summary>
         /// <value>type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,8 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneColumn {\n");
+            
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,10 +182,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ColumnName != null)
                     hash = hash * 59 + this.ColumnName.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 return hash;
             }
         }

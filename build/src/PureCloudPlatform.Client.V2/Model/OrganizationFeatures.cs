@@ -18,104 +18,410 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OrganizationFeatures :  IEquatable<OrganizationFeatures>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganizationFeatures" /> class.
         /// </summary>
+        
+        
         /// <param name="RealtimeCIC">RealtimeCIC.</param>
+        
+        
+        
         /// <param name="Purecloud">Purecloud.</param>
+        
+        
+        
         /// <param name="Hipaa">Hipaa.</param>
+        
+        
+        
         /// <param name="UcEnabled">UcEnabled.</param>
+        
+        
+        
         /// <param name="Pci">Pci.</param>
+        
+        
+        
         /// <param name="PurecloudVoice">PurecloudVoice.</param>
+        
+        
+        
         /// <param name="XmppFederation">XmppFederation.</param>
+        
+        
+        
         /// <param name="Chat">Chat.</param>
+        
+        
+        
         /// <param name="InformalPhotos">InformalPhotos.</param>
+        
+        
+        
         /// <param name="Directory">Directory.</param>
+        
+        
+        
         /// <param name="ContactCenter">ContactCenter.</param>
+        
+        
+        
         /// <param name="UnifiedCommunications">UnifiedCommunications.</param>
+        
+        
+        
         /// <param name="Custserv">Custserv.</param>
+        
+        
         public OrganizationFeatures(bool? RealtimeCIC = null, bool? Purecloud = null, bool? Hipaa = null, bool? UcEnabled = null, bool? Pci = null, bool? PurecloudVoice = null, bool? XmppFederation = null, bool? Chat = null, bool? InformalPhotos = null, bool? Directory = null, bool? ContactCenter = null, bool? UnifiedCommunications = null, bool? Custserv = null)
         {
-            this.RealtimeCIC = RealtimeCIC;
-            this.Purecloud = Purecloud;
-            this.Hipaa = Hipaa;
-            this.UcEnabled = UcEnabled;
-            this.Pci = Pci;
-            this.PurecloudVoice = PurecloudVoice;
-            this.XmppFederation = XmppFederation;
-            this.Chat = Chat;
-            this.InformalPhotos = InformalPhotos;
-            this.Directory = Directory;
-            this.ContactCenter = ContactCenter;
-            this.UnifiedCommunications = UnifiedCommunications;
-            this.Custserv = Custserv;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RealtimeCIC = RealtimeCIC;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Purecloud = Purecloud;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Hipaa = Hipaa;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UcEnabled = UcEnabled;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Pci = Pci;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PurecloudVoice = PurecloudVoice;
+            
+            
+            
+            
+            
+            
+            
+            
+this.XmppFederation = XmppFederation;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Chat = Chat;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InformalPhotos = InformalPhotos;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Directory = Directory;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactCenter = ContactCenter;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UnifiedCommunications = UnifiedCommunications;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Custserv = Custserv;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets RealtimeCIC
         /// </summary>
         [DataMember(Name="realtimeCIC", EmitDefaultValue=false)]
         public bool? RealtimeCIC { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Purecloud
         /// </summary>
         [DataMember(Name="purecloud", EmitDefaultValue=false)]
         public bool? Purecloud { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Hipaa
         /// </summary>
         [DataMember(Name="hipaa", EmitDefaultValue=false)]
         public bool? Hipaa { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UcEnabled
         /// </summary>
         [DataMember(Name="ucEnabled", EmitDefaultValue=false)]
         public bool? UcEnabled { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Pci
         /// </summary>
         [DataMember(Name="pci", EmitDefaultValue=false)]
         public bool? Pci { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PurecloudVoice
         /// </summary>
         [DataMember(Name="purecloudVoice", EmitDefaultValue=false)]
         public bool? PurecloudVoice { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets XmppFederation
         /// </summary>
         [DataMember(Name="xmppFederation", EmitDefaultValue=false)]
         public bool? XmppFederation { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
         public bool? Chat { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets InformalPhotos
         /// </summary>
         [DataMember(Name="informalPhotos", EmitDefaultValue=false)]
         public bool? InformalPhotos { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Directory
         /// </summary>
         [DataMember(Name="directory", EmitDefaultValue=false)]
         public bool? Directory { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactCenter
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
         public bool? ContactCenter { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UnifiedCommunications
         /// </summary>
         [DataMember(Name="unifiedCommunications", EmitDefaultValue=false)]
         public bool? UnifiedCommunications { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Custserv
         /// </summary>
         [DataMember(Name="custserv", EmitDefaultValue=false)]
         public bool? Custserv { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,19 +430,33 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrganizationFeatures {\n");
+            
             sb.Append("  RealtimeCIC: ").Append(RealtimeCIC).Append("\n");
+            
             sb.Append("  Purecloud: ").Append(Purecloud).Append("\n");
+            
             sb.Append("  Hipaa: ").Append(Hipaa).Append("\n");
+            
             sb.Append("  UcEnabled: ").Append(UcEnabled).Append("\n");
+            
             sb.Append("  Pci: ").Append(Pci).Append("\n");
+            
             sb.Append("  PurecloudVoice: ").Append(PurecloudVoice).Append("\n");
+            
             sb.Append("  XmppFederation: ").Append(XmppFederation).Append("\n");
+            
             sb.Append("  Chat: ").Append(Chat).Append("\n");
+            
             sb.Append("  InformalPhotos: ").Append(InformalPhotos).Append("\n");
+            
             sb.Append("  Directory: ").Append(Directory).Append("\n");
+            
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
+            
             sb.Append("  UnifiedCommunications: ").Append(UnifiedCommunications).Append("\n");
+            
             sb.Append("  Custserv: ").Append(Custserv).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -251,32 +571,46 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.RealtimeCIC != null)
                     hash = hash * 59 + this.RealtimeCIC.GetHashCode();
+                
                 if (this.Purecloud != null)
                     hash = hash * 59 + this.Purecloud.GetHashCode();
+                
                 if (this.Hipaa != null)
                     hash = hash * 59 + this.Hipaa.GetHashCode();
+                
                 if (this.UcEnabled != null)
                     hash = hash * 59 + this.UcEnabled.GetHashCode();
+                
                 if (this.Pci != null)
                     hash = hash * 59 + this.Pci.GetHashCode();
+                
                 if (this.PurecloudVoice != null)
                     hash = hash * 59 + this.PurecloudVoice.GetHashCode();
+                
                 if (this.XmppFederation != null)
                     hash = hash * 59 + this.XmppFederation.GetHashCode();
+                
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();
+                
                 if (this.InformalPhotos != null)
                     hash = hash * 59 + this.InformalPhotos.GetHashCode();
+                
                 if (this.Directory != null)
                     hash = hash * 59 + this.Directory.GetHashCode();
+                
                 if (this.ContactCenter != null)
                     hash = hash * 59 + this.ContactCenter.GetHashCode();
+                
                 if (this.UnifiedCommunications != null)
                     hash = hash * 59 + this.UnifiedCommunications.GetHashCode();
+                
                 if (this.Custserv != null)
                     hash = hash * 59 + this.Custserv.GetHashCode();
+                
                 return hash;
             }
         }

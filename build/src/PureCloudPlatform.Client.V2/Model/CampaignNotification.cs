@@ -18,6 +18,29 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignNotification :  IEquatable<CampaignNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DialingMode
         /// </summary>
@@ -62,6 +85,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PROGRESSIVE")]
             Progressive
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignStatus
         /// </summary>
@@ -106,230 +139,919 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "INVALID")]
             Invalid
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DialingMode
         /// </summary>
         [DataMember(Name="dialingMode", EmitDefaultValue=false)]
         public DialingModeEnum? DialingMode { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignStatus
         /// </summary>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="DateCreated">DateCreated.</param>
+        
+        
+        
         /// <param name="DateModified">DateModified.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="ContactList">ContactList.</param>
+        
+        
+        
         /// <param name="Queue">Queue.</param>
+        
+        
+        
         /// <param name="DialingMode">DialingMode.</param>
+        
+        
+        
         /// <param name="Script">Script.</param>
+        
+        
+        
         /// <param name="EdgeGroup">EdgeGroup.</param>
+        
+        
+        
         /// <param name="CampaignStatus">CampaignStatus.</param>
+        
+        
+        
         /// <param name="PhoneColumns">PhoneColumns.</param>
+        
+        
+        
         /// <param name="AbandonRate">AbandonRate.</param>
+        
+        
+        
         /// <param name="DncLists">DncLists.</param>
+        
+        
+        
         /// <param name="CallableTimeSet">CallableTimeSet.</param>
+        
+        
+        
         /// <param name="CallAnalysisResponseSet">CallAnalysisResponseSet.</param>
+        
+        
+        
         /// <param name="CallerName">CallerName.</param>
+        
+        
+        
         /// <param name="CallerAddress">CallerAddress.</param>
+        
+        
+        
         /// <param name="OutboundLineCount">OutboundLineCount.</param>
+        
+        
+        
         /// <param name="Errors">Errors.</param>
+        
+        
+        
         /// <param name="RuleSets">RuleSets.</param>
+        
+        
+        
         /// <param name="SkipPreviewDisabled">SkipPreviewDisabled.</param>
+        
+        
+        
         /// <param name="PreviewTimeOutSeconds">PreviewTimeOutSeconds.</param>
+        
+        
+        
         /// <param name="SingleNumberPreview">SingleNumberPreview.</param>
+        
+        
+        
         /// <param name="ContactSort">ContactSort.</param>
+        
+        
+        
         /// <param name="ContactSorts">ContactSorts.</param>
+        
+        
+        
         /// <param name="NoAnswerTimeout">NoAnswerTimeout.</param>
+        
+        
+        
         /// <param name="CallAnalysisLanguage">CallAnalysisLanguage.</param>
+        
+        
+        
         /// <param name="Priority">Priority.</param>
+        
+        
+        
         /// <param name="ContactListFilters">ContactListFilters.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, List<CampaignNotificationContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<CampaignNotificationUriReference> ContactListFilters = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
-            this.ContactList = ContactList;
-            this.Queue = Queue;
-            this.DialingMode = DialingMode;
-            this.Script = Script;
-            this.EdgeGroup = EdgeGroup;
-            this.CampaignStatus = CampaignStatus;
-            this.PhoneColumns = PhoneColumns;
-            this.AbandonRate = AbandonRate;
-            this.DncLists = DncLists;
-            this.CallableTimeSet = CallableTimeSet;
-            this.CallAnalysisResponseSet = CallAnalysisResponseSet;
-            this.CallerName = CallerName;
-            this.CallerAddress = CallerAddress;
-            this.OutboundLineCount = OutboundLineCount;
-            this.Errors = Errors;
-            this.RuleSets = RuleSets;
-            this.SkipPreviewDisabled = SkipPreviewDisabled;
-            this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
-            this.SingleNumberPreview = SingleNumberPreview;
-            this.ContactSort = ContactSort;
-            this.ContactSorts = ContactSorts;
-            this.NoAnswerTimeout = NoAnswerTimeout;
-            this.CallAnalysisLanguage = CallAnalysisLanguage;
-            this.Priority = Priority;
-            this.ContactListFilters = ContactListFilters;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactList = ContactList;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Queue = Queue;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DialingMode = DialingMode;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Script = Script;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EdgeGroup = EdgeGroup;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CampaignStatus = CampaignStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PhoneColumns = PhoneColumns;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AbandonRate = AbandonRate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DncLists = DncLists;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallableTimeSet = CallableTimeSet;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallAnalysisResponseSet = CallAnalysisResponseSet;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallerName = CallerName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallerAddress = CallerAddress;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OutboundLineCount = OutboundLineCount;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Errors = Errors;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RuleSets = RuleSets;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SkipPreviewDisabled = SkipPreviewDisabled;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PreviewTimeOutSeconds = PreviewTimeOutSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SingleNumberPreview = SingleNumberPreview;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactSort = ContactSort;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactSorts = ContactSorts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NoAnswerTimeout = NoAnswerTimeout;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallAnalysisLanguage = CallAnalysisLanguage;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Priority = Priority;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactListFilters = ContactListFilters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateModified
         /// </summary>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public DocumentDataV2NotificationCreatedBy ContactList { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public CampaignNotificationUriReference Queue { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Script
         /// </summary>
         [DataMember(Name="script", EmitDefaultValue=false)]
         public CampaignNotificationUriReference Script { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EdgeGroup
         /// </summary>
         [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
         public CampaignNotificationUriReference EdgeGroup { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets PhoneColumns
         /// </summary>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<CampaignNotificationPhoneColumns> PhoneColumns { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AbandonRate
         /// </summary>
         [DataMember(Name="abandonRate", EmitDefaultValue=false)]
         public double? AbandonRate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DncLists
         /// </summary>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<CampaignNotificationUriReference> DncLists { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CallableTimeSet
         /// </summary>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public CampaignNotificationUriReference CallableTimeSet { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CallAnalysisResponseSet
         /// </summary>
         [DataMember(Name="callAnalysisResponseSet", EmitDefaultValue=false)]
         public CampaignNotificationUriReference CallAnalysisResponseSet { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CallerName
         /// </summary>
         [DataMember(Name="callerName", EmitDefaultValue=false)]
         public string CallerName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CallerAddress
         /// </summary>
         [DataMember(Name="callerAddress", EmitDefaultValue=false)]
         public string CallerAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets OutboundLineCount
         /// </summary>
         [DataMember(Name="outboundLineCount", EmitDefaultValue=false)]
         public int? OutboundLineCount { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Errors
         /// </summary>
         [DataMember(Name="errors", EmitDefaultValue=false)]
         public List<CampaignNotificationErrors> Errors { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RuleSets
         /// </summary>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<CampaignNotificationUriReference> RuleSets { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SkipPreviewDisabled
         /// </summary>
         [DataMember(Name="skipPreviewDisabled", EmitDefaultValue=false)]
         public bool? SkipPreviewDisabled { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PreviewTimeOutSeconds
         /// </summary>
         [DataMember(Name="previewTimeOutSeconds", EmitDefaultValue=false)]
         public int? PreviewTimeOutSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SingleNumberPreview
         /// </summary>
         [DataMember(Name="singleNumberPreview", EmitDefaultValue=false)]
         public bool? SingleNumberPreview { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactSort
         /// </summary>
         [DataMember(Name="contactSort", EmitDefaultValue=false)]
         public CampaignNotificationContactSort ContactSort { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactSorts
         /// </summary>
         [DataMember(Name="contactSorts", EmitDefaultValue=false)]
         public List<CampaignNotificationContactSort> ContactSorts { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NoAnswerTimeout
         /// </summary>
         [DataMember(Name="noAnswerTimeout", EmitDefaultValue=false)]
         public int? NoAnswerTimeout { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CallAnalysisLanguage
         /// </summary>
         [DataMember(Name="callAnalysisLanguage", EmitDefaultValue=false)]
         public string CallAnalysisLanguage { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Priority
         /// </summary>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactListFilters
         /// </summary>
         [DataMember(Name="contactListFilters", EmitDefaultValue=false)]
         public List<CampaignNotificationUriReference> ContactListFilters { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -338,37 +1060,69 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
+            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            
             sb.Append("  DialingMode: ").Append(DialingMode).Append("\n");
+            
             sb.Append("  Script: ").Append(Script).Append("\n");
+            
             sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
+            
             sb.Append("  CampaignStatus: ").Append(CampaignStatus).Append("\n");
+            
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
+            
             sb.Append("  AbandonRate: ").Append(AbandonRate).Append("\n");
+            
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
+            
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
+            
             sb.Append("  CallAnalysisResponseSet: ").Append(CallAnalysisResponseSet).Append("\n");
+            
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
+            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
+            
             sb.Append("  OutboundLineCount: ").Append(OutboundLineCount).Append("\n");
+            
             sb.Append("  Errors: ").Append(Errors).Append("\n");
+            
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
+            
             sb.Append("  SkipPreviewDisabled: ").Append(SkipPreviewDisabled).Append("\n");
+            
             sb.Append("  PreviewTimeOutSeconds: ").Append(PreviewTimeOutSeconds).Append("\n");
+            
             sb.Append("  SingleNumberPreview: ").Append(SingleNumberPreview).Append("\n");
+            
             sb.Append("  ContactSort: ").Append(ContactSort).Append("\n");
+            
             sb.Append("  ContactSorts: ").Append(ContactSorts).Append("\n");
+            
             sb.Append("  NoAnswerTimeout: ").Append(NoAnswerTimeout).Append("\n");
+            
             sb.Append("  CallAnalysisLanguage: ").Append(CallAnalysisLanguage).Append("\n");
+            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -573,68 +1327,100 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
+                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
                 if (this.DialingMode != null)
                     hash = hash * 59 + this.DialingMode.GetHashCode();
+                
                 if (this.Script != null)
                     hash = hash * 59 + this.Script.GetHashCode();
+                
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
+                
                 if (this.CampaignStatus != null)
                     hash = hash * 59 + this.CampaignStatus.GetHashCode();
+                
                 if (this.PhoneColumns != null)
                     hash = hash * 59 + this.PhoneColumns.GetHashCode();
+                
                 if (this.AbandonRate != null)
                     hash = hash * 59 + this.AbandonRate.GetHashCode();
+                
                 if (this.DncLists != null)
                     hash = hash * 59 + this.DncLists.GetHashCode();
+                
                 if (this.CallableTimeSet != null)
                     hash = hash * 59 + this.CallableTimeSet.GetHashCode();
+                
                 if (this.CallAnalysisResponseSet != null)
                     hash = hash * 59 + this.CallAnalysisResponseSet.GetHashCode();
+                
                 if (this.CallerName != null)
                     hash = hash * 59 + this.CallerName.GetHashCode();
+                
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
+                
                 if (this.OutboundLineCount != null)
                     hash = hash * 59 + this.OutboundLineCount.GetHashCode();
+                
                 if (this.Errors != null)
                     hash = hash * 59 + this.Errors.GetHashCode();
+                
                 if (this.RuleSets != null)
                     hash = hash * 59 + this.RuleSets.GetHashCode();
+                
                 if (this.SkipPreviewDisabled != null)
                     hash = hash * 59 + this.SkipPreviewDisabled.GetHashCode();
+                
                 if (this.PreviewTimeOutSeconds != null)
                     hash = hash * 59 + this.PreviewTimeOutSeconds.GetHashCode();
+                
                 if (this.SingleNumberPreview != null)
                     hash = hash * 59 + this.SingleNumberPreview.GetHashCode();
+                
                 if (this.ContactSort != null)
                     hash = hash * 59 + this.ContactSort.GetHashCode();
+                
                 if (this.ContactSorts != null)
                     hash = hash * 59 + this.ContactSorts.GetHashCode();
+                
                 if (this.NoAnswerTimeout != null)
                     hash = hash * 59 + this.NoAnswerTimeout.GetHashCode();
+                
                 if (this.CallAnalysisLanguage != null)
                     hash = hash * 59 + this.CallAnalysisLanguage.GetHashCode();
+                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                
                 if (this.ContactListFilters != null)
                     hash = hash * 59 + this.ContactListFilters.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

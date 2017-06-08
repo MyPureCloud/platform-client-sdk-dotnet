@@ -18,6 +18,23 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EventLog :  IEquatable<EventLog>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
@@ -50,6 +67,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ERROR")]
             Error
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
@@ -112,38 +133,211 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ORGANIZATION_CONFIGURATION")]
             OrganizationConfiguration
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public LevelEnum? Level { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Category
         /// </summary>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EventLog" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="ErrorEntity">ErrorEntity.</param>
+        
+        
+        
         /// <param name="RelatedEntity">RelatedEntity.</param>
+        
+        
+        
         /// <param name="Timestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="Level">Level.</param>
+        
+        
+        
         /// <param name="Category">Category.</param>
+        
+        
+        
         /// <param name="CorrelationId">CorrelationId.</param>
+        
+        
+        
         /// <param name="EventMessage">EventMessage.</param>
+        
+        
+        
+        
         public EventLog(string Name = null, UriReference ErrorEntity = null, UriReference RelatedEntity = null, DateTime? Timestamp = null, LevelEnum? Level = null, CategoryEnum? Category = null, string CorrelationId = null, EventMessage EventMessage = null)
         {
-            this.Name = Name;
-            this.ErrorEntity = ErrorEntity;
-            this.RelatedEntity = RelatedEntity;
-            this.Timestamp = Timestamp;
-            this.Level = Level;
-            this.Category = Category;
-            this.CorrelationId = CorrelationId;
-            this.EventMessage = EventMessage;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorEntity = ErrorEntity;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RelatedEntity = RelatedEntity;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Timestamp = Timestamp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Level = Level;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Category = Category;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CorrelationId = CorrelationId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EventMessage = EventMessage;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -151,43 +345,70 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorEntity
         /// </summary>
         [DataMember(Name="errorEntity", EmitDefaultValue=false)]
         public UriReference ErrorEntity { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RelatedEntity
         /// </summary>
         [DataMember(Name="relatedEntity", EmitDefaultValue=false)]
         public UriReference RelatedEntity { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public DateTime? Timestamp { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets CorrelationId
         /// </summary>
         [DataMember(Name="correlationId", EmitDefaultValue=false)]
         public string CorrelationId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EventMessage
         /// </summary>
         [DataMember(Name="eventMessage", EmitDefaultValue=false)]
         public EventMessage EventMessage { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -196,16 +417,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EventLog {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  ErrorEntity: ").Append(ErrorEntity).Append("\n");
+            
             sb.Append("  RelatedEntity: ").Append(RelatedEntity).Append("\n");
+            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
+            
             sb.Append("  Level: ").Append(Level).Append("\n");
+            
             sb.Append("  Category: ").Append(Category).Append("\n");
+            
             sb.Append("  CorrelationId: ").Append(CorrelationId).Append("\n");
+            
             sb.Append("  EventMessage: ").Append(EventMessage).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -305,26 +537,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.ErrorEntity != null)
                     hash = hash * 59 + this.ErrorEntity.GetHashCode();
+                
                 if (this.RelatedEntity != null)
                     hash = hash * 59 + this.RelatedEntity.GetHashCode();
+                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
+                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
+                
                 if (this.Category != null)
                     hash = hash * 59 + this.Category.GetHashCode();
+                
                 if (this.CorrelationId != null)
                     hash = hash * 59 + this.CorrelationId.GetHashCode();
+                
                 if (this.EventMessage != null)
                     hash = hash * 59 + this.EventMessage.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

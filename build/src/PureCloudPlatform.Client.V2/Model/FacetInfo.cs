@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FacetInfo :  IEquatable<FacetInfo>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetInfo" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">The name of the field that was faceted on..</param>
+        
+        
+        
         /// <param name="Entries">The entries resulting from this facet..</param>
+        
+        
         public FacetInfo(string Name = null, List<Entry> Entries = null)
         {
-            this.Name = Name;
-            this.Entries = Entries;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Entries = Entries;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The name of the field that was faceted on.
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the field that was faceted on.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The entries resulting from this facet.
         /// </summary>
         /// <value>The entries resulting from this facet.</value>
         [DataMember(Name="entries", EmitDefaultValue=false)]
         public List<Entry> Entries { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FacetInfo {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Entries: ").Append(Entries).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Entries != null)
                     hash = hash * 59 + this.Entries.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DefaultGreetingList :  IEquatable<DefaultGreetingList>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets OwnerType
         /// </summary>
@@ -50,33 +61,214 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets OwnerType
         /// </summary>
         [DataMember(Name="ownerType", EmitDefaultValue=false)]
         public OwnerTypeEnum? OwnerType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DefaultGreetingList" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Owner">Owner.</param>
+        
+        
+        
         /// <param name="OwnerType">OwnerType.</param>
+        
+        
+        
         /// <param name="Greetings">Greetings.</param>
+        
+        
+        
         /// <param name="CreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="CreatedBy">CreatedBy.</param>
+        
+        
+        
         /// <param name="ModifiedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="ModifiedBy">ModifiedBy.</param>
+        
+        
+        
+        
         public DefaultGreetingList(string Name = null, GreetingOwner Owner = null, OwnerTypeEnum? OwnerType = null, Dictionary<string, Greeting> Greetings = null, DateTime? CreatedDate = null, string CreatedBy = null, DateTime? ModifiedDate = null, string ModifiedBy = null)
         {
-            this.Name = Name;
-            this.Owner = Owner;
-            this.OwnerType = OwnerType;
-            this.Greetings = Greetings;
-            this.CreatedDate = CreatedDate;
-            this.CreatedBy = CreatedBy;
-            this.ModifiedDate = ModifiedDate;
-            this.ModifiedBy = ModifiedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Owner = Owner;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OwnerType = OwnerType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Greetings = Greetings;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedDate = CreatedDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedDate = ModifiedDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -84,49 +276,77 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Owner
         /// </summary>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public GreetingOwner Owner { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Greetings
         /// </summary>
         [DataMember(Name="greetings", EmitDefaultValue=false)]
         public Dictionary<string, Greeting> Greetings { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="createdDate", EmitDefaultValue=false)]
         public DateTime? CreatedDate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,16 +355,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DefaultGreetingList {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Owner: ").Append(Owner).Append("\n");
+            
             sb.Append("  OwnerType: ").Append(OwnerType).Append("\n");
+            
             sb.Append("  Greetings: ").Append(Greetings).Append("\n");
+            
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -244,26 +475,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Owner != null)
                     hash = hash * 59 + this.Owner.GetHashCode();
+                
                 if (this.OwnerType != null)
                     hash = hash * 59 + this.OwnerType.GetHashCode();
+                
                 if (this.Greetings != null)
                     hash = hash * 59 + this.Greetings.GetHashCode();
+                
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

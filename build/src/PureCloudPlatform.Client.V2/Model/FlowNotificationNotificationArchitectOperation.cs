@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FlowNotificationNotificationArchitectOperation :  IEquatable<FlowNotificationNotificationArchitectOperation>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionName
         /// </summary>
@@ -68,6 +79,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VALIDATE")]
             Validate
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionStatus
         /// </summary>
@@ -124,76 +139,277 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILURE")]
             Failure
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionName
         /// </summary>
         [DataMember(Name="actionName", EmitDefaultValue=false)]
         public ActionNameEnum? ActionName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionStatus
         /// </summary>
         [DataMember(Name="actionStatus", EmitDefaultValue=false)]
         public ActionStatusEnum? ActionStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowNotificationNotificationArchitectOperation" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Complete">Complete.</param>
+        
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="ActionName">ActionName.</param>
+        
+        
+        
         /// <param name="ActionStatus">ActionStatus.</param>
+        
+        
+        
         /// <param name="ErrorMessage">ErrorMessage.</param>
+        
+        
+        
         /// <param name="ErrorCode">ErrorCode.</param>
+        
+        
+        
         /// <param name="ErrorMessageParams">ErrorMessageParams.</param>
+        
+        
+        
         /// <param name="ErrorDetails">ErrorDetails.</param>
+        
+        
         public FlowNotificationNotificationArchitectOperation(string Id = null, bool? Complete = null, DependencyTrackingBuildNotificationNotificationUser User = null, ActionNameEnum? ActionName = null, ActionStatusEnum? ActionStatus = null, string ErrorMessage = null, string ErrorCode = null, PromptNotificationNotificationCurrentOperationErrorMessageParams ErrorMessageParams = null, List<PromptNotificationNotificationCurrentOperationErrorDetails> ErrorDetails = null)
         {
-            this.Id = Id;
-            this.Complete = Complete;
-            this.User = User;
-            this.ActionName = ActionName;
-            this.ActionStatus = ActionStatus;
-            this.ErrorMessage = ErrorMessage;
-            this.ErrorCode = ErrorCode;
-            this.ErrorMessageParams = ErrorMessageParams;
-            this.ErrorDetails = ErrorDetails;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Complete = Complete;
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActionName = ActionName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActionStatus = ActionStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorMessage = ErrorMessage;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorCode = ErrorCode;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorMessageParams = ErrorMessageParams;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorDetails = ErrorDetails;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Complete
         /// </summary>
         [DataMember(Name="complete", EmitDefaultValue=false)]
         public bool? Complete { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public DependencyTrackingBuildNotificationNotificationUser User { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorMessage
         /// </summary>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorMessageParams
         /// </summary>
         [DataMember(Name="errorMessageParams", EmitDefaultValue=false)]
         public PromptNotificationNotificationCurrentOperationErrorMessageParams ErrorMessageParams { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorDetails
         /// </summary>
         [DataMember(Name="errorDetails", EmitDefaultValue=false)]
         public List<PromptNotificationNotificationCurrentOperationErrorDetails> ErrorDetails { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -202,15 +418,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FlowNotificationNotificationArchitectOperation {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Complete: ").Append(Complete).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  ActionName: ").Append(ActionName).Append("\n");
+            
             sb.Append("  ActionStatus: ").Append(ActionStatus).Append("\n");
+            
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            
             sb.Append("  ErrorMessageParams: ").Append(ErrorMessageParams).Append("\n");
+            
             sb.Append("  ErrorDetails: ").Append(ErrorDetails).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -305,24 +531,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Complete != null)
                     hash = hash * 59 + this.Complete.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.ActionName != null)
                     hash = hash * 59 + this.ActionName.GetHashCode();
+                
                 if (this.ActionStatus != null)
                     hash = hash * 59 + this.ActionStatus.GetHashCode();
+                
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
+                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
+                
                 if (this.ErrorMessageParams != null)
                     hash = hash * 59 + this.ErrorMessageParams.GetHashCode();
+                
                 if (this.ErrorDetails != null)
                     hash = hash * 59 + this.ErrorDetails.GetHashCode();
+                
                 return hash;
             }
         }

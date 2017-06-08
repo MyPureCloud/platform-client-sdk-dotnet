@@ -79,14 +79,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var allResources = true;  // bool? | Whether or not to delete all the prompt resources (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Delete specified user prompt
+                
                 apiInstance.DeleteArchitectPrompt(promptId, allResources);
             }
             catch (Exception e)
@@ -136,14 +148,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var languageCode = languageCode_example;  // string | Language
+            
+            
+            
 
             try
             {
+                
                 // Delete specified user prompt resource
+                
                 apiInstance.DeleteArchitectPromptResource(promptId, languageCode);
             }
             catch (Exception e)
@@ -193,13 +217,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
+            
             var id = new List<string>(); // List<string> | List of Prompt IDs
+            
+            
 
             try
             {
+                
                 // Batch-delete a list of prompts
+                
                 Operation result = apiInstance.DeleteArchitectPrompts(id);
                 Debug.WriteLine(result);
             }
@@ -249,14 +281,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var languageCode = languageCode_example;  // string | Language
+            
+            
+            
 
             try
             {
+                
                 // Delete a system prompt resource override.
+                
                 apiInstance.DeleteArchitectSystempromptResource(promptId, languageCode);
             }
             catch (Exception e)
@@ -306,13 +350,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
 
             try
             {
+                
                 // Delete flow
+                
                 apiInstance.DeleteFlow(flowId);
             }
             catch (Exception e)
@@ -361,13 +413,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
+            
             var id = new List<string>(); // List<string> | List of Flow IDs
+            
+            
 
             try
             {
+                
                 // Batch-delete a list of flows
+                
                 Operation result = apiInstance.DeleteFlows(id);
                 Debug.WriteLine(result);
             }
@@ -417,20 +477,56 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var name = name_example;  // string | Object name to search for
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            
             var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
+            
+            
+            
             var consumedResources = true;  // bool? | Include resources each result item consumes (optional) 
+            
+            
+            
+            
             var consumingResources = true;  // bool? | Include resources that consume each result item (optional) 
+            
+            
+            
+            
+            
             var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
+            
+            
+            
+            
             var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
+            
+            
 
             try
             {
+                
                 // Get Dependency Tracking objects that have a given display name
+                
                 DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytracking(name, pageNumber, pageSize, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
                 Debug.WriteLine(result);
             }
@@ -451,11 +547,11 @@ namespace Example
 | **name** | **string**| Object name to search for |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional]  |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **consumedResources** | **bool?**| Include resources each result item consumes | [optional]  |
 | **consumingResources** | **bool?**| Include resources that consume each result item | [optional]  |
-| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional]  |
-| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional]  |
+| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -487,12 +583,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
 
             try
             {
+                
                 // Get Dependency Tracking build status for an organization
+                
                 DependencyStatus result = apiInstance.GetArchitectDependencytrackingBuild();
                 Debug.WriteLine(result);
             }
@@ -538,16 +638,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var id = id_example;  // string | Consuming object ID
+            
+            
+            
+            
             var version = version_example;  // string | Consuming object version
+            
+            
+            
+            
             var objectType = objectType_example;  // string | Consuming object type
+            
+            
+            
+            
+            
             var resourceType = new List<string>(); // List<string> | Types of consumed resources to show (optional) 
+            
+            
 
             try
             {
+                
                 // Get resources that are consumed by a given Dependency Tracking object
+                
                 ConsumedResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumedresources(id, version, objectType, resourceType);
                 Debug.WriteLine(result);
             }
@@ -567,8 +687,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **id** | **string**| Consuming object ID |  |
 | **version** | **string**| Consuming object version |  |
-| **objectType** | **string**| Consuming object type |  |
-| **resourceType** | [**List<string>**](string.html)| Types of consumed resources to show | [optional]  |
+| **objectType** | **string**| Consuming object type | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **resourceType** | [**List<string>**](string.html)| Types of consumed resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -600,15 +720,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var id = id_example;  // string | Consumed object ID
+            
+            
+            
+            
             var objectType = objectType_example;  // string | Consumed object type (only versioned object types are valid)
+            
+            
+            
+            
+            
             var resourceType = new List<string>(); // List<string> | Types of consuming resources to show (optional) 
+            
+            
 
             try
             {
+                
                 // Get resources that consume a given Dependency Tracking object
+                
                 ConsumingResourcesEntityListing result = apiInstance.GetArchitectDependencytrackingConsumingresources(id, objectType, resourceType);
                 Debug.WriteLine(result);
             }
@@ -627,8 +763,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **string**| Consumed object ID |  |
-| **objectType** | **string**| Consumed object type (only versioned object types are valid) |  |
-| **resourceType** | [**List<string>**](string.html)| Types of consuming resources to show | [optional]  |
+| **objectType** | **string**| Consumed object type (only versioned object types are valid) | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **resourceType** | [**List<string>**](string.html)| Types of consuming resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -660,19 +796,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var name = name_example;  // string | Name to search for (optional) 
+            
+            
+            
+            
+            
             var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
+            
+            
+            
             var flowFilter = flowFilter_example;  // string | Show only checkedIn or published flows (optional) 
+            
+            
+            
+            
             var consumedResources = true;  // bool? | Return consumed resources? (optional)  (default to false)
+            
+            
+            
+            
+            
             var consumedResourceType = new List<string>(); // List<string> | Resource type(s) to return (optional) 
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Get Dependency Tracking objects that consume deleted resources
+                
                 DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytrackingDeletedresourceconsumers(name, objectType, flowFilter, consumedResources, consumedResourceType, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -691,10 +859,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **name** | **string**| Name to search for | [optional]  |
-| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional]  |
-| **flowFilter** | **string**| Show only checkedIn or published flows | [optional]  |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **flowFilter** | **string**| Show only checkedIn or published flows | [optional] <br />**Values**: checkedIn, published |
 | **consumedResources** | **bool?**| Return consumed resources? | [optional] [default to false] |
-| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional]  |
+| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
@@ -728,19 +896,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var id = id_example;  // string | Object ID
+            
+            
+            
+            
             var version = version_example;  // string | Object version (optional) 
+            
+            
+            
+            
             var objectType = objectType_example;  // string | Object type (optional) 
+            
+            
+            
+            
             var consumedResources = true;  // bool? | Include resources this item consumes (optional) 
+            
+            
+            
+            
             var consumingResources = true;  // bool? | Include resources that consume this item (optional) 
+            
+            
+            
+            
+            
             var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
+            
+            
+            
+            
             var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
+            
+            
 
             try
             {
+                
                 // Get a Dependency Tracking object
+                
                 DependencyObject result = apiInstance.GetArchitectDependencytrackingObject(id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType);
                 Debug.WriteLine(result);
             }
@@ -760,11 +960,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **id** | **string**| Object ID |  |
 | **version** | **string**| Object version | [optional]  |
-| **objectType** | **string**| Object type | [optional]  |
+| **objectType** | **string**| Object type | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **consumedResources** | **bool?**| Include resources this item consumes | [optional]  |
 | **consumingResources** | **bool?**| Include resources that consume this item | [optional]  |
-| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional]  |
-| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional]  |
+| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -796,13 +996,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var typeId = typeId_example;  // string | Type ID
+            
+            
+            
 
             try
             {
+                
                 // Get a Dependency Tracking type.
+                
                 DependencyType result = apiInstance.GetArchitectDependencytrackingType(typeId);
                 Debug.WriteLine(result);
             }
@@ -852,14 +1060,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Get Dependency Tracking types.
+                
                 DependencyTypeEntityListing result = apiInstance.GetArchitectDependencytrackingTypes(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -910,18 +1130,46 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var name = name_example;  // string | Name to search for (optional) 
+            
+            
+            
+            
+            
             var objectType = new List<string>(); // List<string> | Object type(s) to search for (optional) 
+            
+            
+            
             var consumedResources = true;  // bool? | Return consumed resources? (optional)  (default to false)
+            
+            
+            
+            
+            
             var consumedResourceType = new List<string>(); // List<string> | Resource type(s) to return (optional) 
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Get Dependency Tracking objects that depend on updated resources
+                
                 DependencyObjectEntityListing result = apiInstance.GetArchitectDependencytrackingUpdatedresourceconsumers(name, objectType, consumedResources, consumedResourceType, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -940,9 +1188,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **name** | **string**| Name to search for | [optional]  |
-| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional]  |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **consumedResources** | **bool?**| Return consumed resources? | [optional] [default to false] |
-| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional]  |
+| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
@@ -976,13 +1224,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
 
             try
             {
+                
                 // Get specified user prompt
+                
                 Prompt result = apiInstance.GetArchitectPrompt(promptId);
                 Debug.WriteLine(result);
             }
@@ -1032,14 +1288,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var languageCode = languageCode_example;  // string | Language
+            
+            
+            
 
             try
             {
+                
                 // Get specified user prompt resource
+                
                 PromptAsset result = apiInstance.GetArchitectPromptResource(promptId, languageCode);
                 Debug.WriteLine(result);
             }
@@ -1090,15 +1358,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Get a pageable list of user prompt resources
+                
                 PromptAssetEntityListing result = apiInstance.GetArchitectPromptResources(promptId, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -1150,17 +1434,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var description = description_example;  // string | Description (optional) 
+            
+            
+            
+            
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a pageable list of user prompts
+                
                 PromptEntityListing result = apiInstance.GetArchitectPrompts(pageNumber, pageSize, name, description, nameOrDescription);
                 Debug.WriteLine(result);
             }
@@ -1214,13 +1522,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | promptId
+            
+            
+            
 
             try
             {
+                
                 // Get a system prompt
+                
                 SystemPrompt result = apiInstance.GetArchitectSystemprompt(promptId);
                 Debug.WriteLine(result);
             }
@@ -1270,14 +1586,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var languageCode = languageCode_example;  // string | Language
+            
+            
+            
 
             try
             {
+                
                 // Get a system prompt resource.
+                
                 SystemPromptAsset result = apiInstance.GetArchitectSystempromptResource(promptId, languageCode);
                 Debug.WriteLine(result);
             }
@@ -1328,17 +1656,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            
+            
+            
 
             try
             {
+                
                 // Get system prompt resources.
+                
                 SystemPromptAssetEntityListing result = apiInstance.GetArchitectSystempromptResources(promptId, pageNumber, pageSize, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1392,19 +1744,51 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var description = description_example;  // string | Description (optional) 
+            
+            
+            
+            
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get System Prompts
+                
                 SystemPromptEntityListing result = apiInstance.GetArchitectSystemprompts(pageNumber, pageSize, sortBy, sortOrder, name, description, nameOrDescription);
                 Debug.WriteLine(result);
             }
@@ -1460,14 +1844,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
             var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get flow
+                
                 Flow result = apiInstance.GetFlow(flowId, deleted);
                 Debug.WriteLine(result);
             }
@@ -1518,14 +1914,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
             var deleted = true;  // bool? | Include deleted flows (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get the latest configuration for flow
+                
                 Object result = apiInstance.GetFlowLatestconfiguration(flowId, deleted);
                 Debug.WriteLine(result);
             }
@@ -1576,15 +1984,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
             var versionId = versionId_example;  // string | Version ID
+            
+            
+            
+            
             var deleted = deleted_example;  // string | Include deleted flows (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get flow version
+                
                 FlowVersion result = apiInstance.GetFlowVersion(flowId, versionId, deleted);
                 Debug.WriteLine(result);
             }
@@ -1636,15 +2060,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
             var versionId = versionId_example;  // string | Version ID
+            
+            
+            
+            
             var deleted = deleted_example;  // string | Include deleted flows (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Create flow version configuration
+                
                 Object result = apiInstance.GetFlowVersionConfiguration(flowId, versionId, deleted);
                 Debug.WriteLine(result);
             }
@@ -1696,16 +2136,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var deleted = true;  // bool? | Include deleted flows (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get flow version list
+                
                 FlowVersionEntityListing result = apiInstance.GetFlowVersions(flowId, pageNumber, pageSize, deleted);
                 Debug.WriteLine(result);
             }
@@ -1758,27 +2218,91 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var type = type_example;  // string | Type
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            
+            
+            
+            
+            
             var id = new List<string>(); // List<string> | ID (optional) 
+            
+            
+            
             var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var description = description_example;  // string | Description (optional) 
+            
+            
+            
+            
             var nameOrDescription = nameOrDescription_example;  // string | Name or description (optional) 
+            
+            
+            
+            
             var publishVersionId = publishVersionId_example;  // string | Publish version ID (optional) 
+            
+            
+            
+            
             var editableBy = editableBy_example;  // string | Editable by (optional) 
+            
+            
+            
+            
             var lockedBy = lockedBy_example;  // string | Locked by (optional) 
+            
+            
+            
+            
             var secure = secure_example;  // string | Secure (optional) 
+            
+            
+            
+            
             var deleted = true;  // bool? | Include deleted (optional)  (default to false)
+            
+            
+            
+            
             var includeSchemas = true;  // bool? | Include variable schemas (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get a pageable list of flows, filtered by query parameters
+                
                 FlowEntityListing result = apiInstance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas);
                 Debug.WriteLine(result);
             }
@@ -1808,7 +2332,7 @@ namespace Example
 | **publishVersionId** | **string**| Publish version ID | [optional]  |
 | **editableBy** | **string**| Editable by | [optional]  |
 | **lockedBy** | **string**| Locked by | [optional]  |
-| **secure** | **string**| Secure | [optional]  |
+| **secure** | **string**| Secure | [optional] <br />**Values**: any, checkedin, published |
 | **deleted** | **bool?**| Include deleted | [optional] [default to false] |
 | **includeSchemas** | **bool?**| Include variable schemas | [optional] [default to false] |
 {: class="table table-striped"}
@@ -1842,12 +2366,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
 
             try
             {
+                
                 // Rebuild Dependency Tracking data for an organization
+                
                 apiInstance.PostArchitectDependencytrackingBuild();
             }
             catch (Exception e)
@@ -1892,14 +2420,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
+            
             var body = new PromptAssetCreate(); // PromptAssetCreate |  (optional) 
+            
+            
 
             try
             {
+                
                 // Create a new user prompt resource
+                
                 PromptAsset result = apiInstance.PostArchitectPromptResources(promptId, body);
                 Debug.WriteLine(result);
             }
@@ -1950,13 +2490,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
+            
             var body = new Prompt(); // Prompt |  (optional) 
+            
+            
 
             try
             {
+                
                 // Create a new user prompt
+                
                 Prompt result = apiInstance.PostArchitectPrompts(body);
                 Debug.WriteLine(result);
             }
@@ -2006,14 +2554,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
+            
             var body = new SystemPromptAsset(); // SystemPromptAsset |  (optional) 
+            
+            
 
             try
             {
+                
                 // Create system prompt resource override.
+                
                 SystemPromptAsset result = apiInstance.PostArchitectSystempromptResources(promptId, body);
                 Debug.WriteLine(result);
             }
@@ -2064,14 +2624,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
             var body = ;  // Object |  (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Create flow version
+                
                 FlowVersion result = apiInstance.PostFlowVersions(flowId, body);
                 Debug.WriteLine(result);
             }
@@ -2122,13 +2694,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
+            
             var body = new Flow(); // Flow |  (optional) 
+            
+            
 
             try
             {
+                
                 // Create flow
+                
                 Flow result = apiInstance.PostFlows(body);
                 Debug.WriteLine(result);
             }
@@ -2178,13 +2758,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flow = flow_example;  // string | Flow ID
+            
+            
+            
 
             try
             {
+                
                 // Check-in flow
+                
                 Flow result = apiInstance.PostFlowsActionsCheckin(flow);
                 Debug.WriteLine(result);
             }
@@ -2234,13 +2822,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flow = flow_example;  // string | Flow ID
+            
+            
+            
 
             try
             {
+                
                 // Check-out flow
+                
                 Flow result = apiInstance.PostFlowsActionsCheckout(flow);
                 Debug.WriteLine(result);
             }
@@ -2290,13 +2886,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flow = flow_example;  // string | Flow ID
+            
+            
+            
 
             try
             {
+                
                 // Deactivate flow
+                
                 Flow result = apiInstance.PostFlowsActionsDeactivate(flow);
                 Debug.WriteLine(result);
             }
@@ -2346,14 +2950,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flow = flow_example;  // string | Flow ID
+            
+            
+            
+            
             var version = version_example;  // string | version (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Publish flow
+                
                 Operation result = apiInstance.PostFlowsActionsPublish(flow, version);
                 Debug.WriteLine(result);
             }
@@ -2404,13 +3020,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flow = flow_example;  // string | Flow ID
+            
+            
+            
 
             try
             {
+                
                 // Revert flow
+                
                 Flow result = apiInstance.PostFlowsActionsRevert(flow);
                 Debug.WriteLine(result);
             }
@@ -2460,13 +3084,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flow = flow_example;  // string | Flow ID
+            
+            
+            
 
             try
             {
+                
                 // Unlock flow
+                
                 Flow result = apiInstance.PostFlowsActionsUnlock(flow);
                 Debug.WriteLine(result);
             }
@@ -2516,14 +3148,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
+            
             var body = new Prompt(); // Prompt |  (optional) 
+            
+            
 
             try
             {
+                
                 // Update specified user prompt
+                
                 Prompt result = apiInstance.PutArchitectPrompt(promptId, body);
                 Debug.WriteLine(result);
             }
@@ -2574,15 +3218,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var languageCode = languageCode_example;  // string | Language
+            
+            
+            
+            
+            
             var body = new PromptAsset(); // PromptAsset |  (optional) 
+            
+            
 
             try
             {
+                
                 // Update specified user prompt resource
+                
                 PromptAsset result = apiInstance.PutArchitectPromptResource(promptId, languageCode, body);
                 Debug.WriteLine(result);
             }
@@ -2634,15 +3294,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
             var languageCode = languageCode_example;  // string | Language
+            
+            
+            
+            
+            
             var body = new SystemPromptAsset(); // SystemPromptAsset |  (optional) 
+            
+            
 
             try
             {
+                
                 // Updates a system prompt resource override.
+                
                 SystemPromptAsset result = apiInstance.PutArchitectSystempromptResource(promptId, languageCode, body);
                 Debug.WriteLine(result);
             }
@@ -2694,14 +3370,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ArchitectApi();
+            
+            
             var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
+            
             var body = new Flow(); // Flow |  (optional) 
+            
+            
 
             try
             {
+                
                 // Update flow
+                
                 Flow result = apiInstance.PutFlow(flowId, body);
                 Debug.WriteLine(result);
             }

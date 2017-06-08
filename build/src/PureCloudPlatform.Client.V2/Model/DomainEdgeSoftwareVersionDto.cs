@@ -18,24 +18,174 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainEdgeSoftwareVersionDto :  IEquatable<DomainEdgeSoftwareVersionDto>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainEdgeSoftwareVersionDto" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="EdgeVersion">EdgeVersion.</param>
+        
+        
+        
         /// <param name="PublishDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="EdgeUri">EdgeUri.</param>
-        /// <param name="LatestRelease">LatestRelease.</param>
+        
+        
+        
         /// <param name="Current">Current.</param>
-        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? LatestRelease = null, bool? Current = null)
+        
+        
+        
+        /// <param name="LatestRelease">LatestRelease.</param>
+        
+        
+        
+        
+        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null)
         {
-            this.Name = Name;
-            this.EdgeVersion = EdgeVersion;
-            this.PublishDate = PublishDate;
-            this.EdgeUri = EdgeUri;
-            this.LatestRelease = LatestRelease;
-            this.Current = Current;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EdgeVersion = EdgeVersion;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PublishDate = PublishDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EdgeUri = EdgeUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Current = Current;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LatestRelease = LatestRelease;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -43,43 +193,66 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EdgeVersion
         /// </summary>
         [DataMember(Name="edgeVersion", EmitDefaultValue=false)]
         public string EdgeVersion { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="publishDate", EmitDefaultValue=false)]
         public DateTime? PublishDate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EdgeUri
         /// </summary>
         [DataMember(Name="edgeUri", EmitDefaultValue=false)]
         public string EdgeUri { get; set; }
-        /// <summary>
-        /// Gets or Sets LatestRelease
-        /// </summary>
-        [DataMember(Name="latestRelease", EmitDefaultValue=false)]
-        public bool? LatestRelease { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public bool? Current { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets LatestRelease
+        /// </summary>
+        [DataMember(Name="latestRelease", EmitDefaultValue=false)]
+        public bool? LatestRelease { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -88,14 +261,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainEdgeSoftwareVersionDto {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  EdgeVersion: ").Append(EdgeVersion).Append("\n");
+            
             sb.Append("  PublishDate: ").Append(PublishDate).Append("\n");
+            
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
-            sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
+            
             sb.Append("  Current: ").Append(Current).Append("\n");
+            
+            sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,14 +340,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EdgeUri.Equals(other.EdgeUri)
                 ) &&
                 (
-                    this.LatestRelease == other.LatestRelease ||
-                    this.LatestRelease != null &&
-                    this.LatestRelease.Equals(other.LatestRelease)
-                ) &&
-                (
                     this.Current == other.Current ||
                     this.Current != null &&
                     this.Current.Equals(other.Current)
+                ) &&
+                (
+                    this.LatestRelease == other.LatestRelease ||
+                    this.LatestRelease != null &&
+                    this.LatestRelease.Equals(other.LatestRelease)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -185,22 +367,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.EdgeVersion != null)
                     hash = hash * 59 + this.EdgeVersion.GetHashCode();
+                
                 if (this.PublishDate != null)
                     hash = hash * 59 + this.PublishDate.GetHashCode();
+                
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
-                if (this.LatestRelease != null)
-                    hash = hash * 59 + this.LatestRelease.GetHashCode();
+                
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
+                
+                if (this.LatestRelease != null)
+                    hash = hash * 59 + this.LatestRelease.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

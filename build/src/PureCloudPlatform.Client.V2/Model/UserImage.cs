@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserImage :  IEquatable<UserImage>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserImage" /> class.
         /// </summary>
+        
+        
         /// <param name="Resolution">Height and/or width of image. ex: 640x480 or x128.</param>
+        
+        
+        
         /// <param name="ImageUri">ImageUri.</param>
+        
+        
         public UserImage(string Resolution = null, string ImageUri = null)
         {
-            this.Resolution = Resolution;
-            this.ImageUri = ImageUri;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Resolution = Resolution;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ImageUri = ImageUri;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Height and/or width of image. ex: 640x480 or x128
@@ -35,11 +83,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Height and/or width of image. ex: 640x480 or x128</value>
         [DataMember(Name="resolution", EmitDefaultValue=false)]
         public string Resolution { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ImageUri
         /// </summary>
         [DataMember(Name="imageUri", EmitDefaultValue=false)]
         public string ImageUri { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,8 +101,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserImage {\n");
+            
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
+            
             sb.Append("  ImageUri: ").Append(ImageUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,10 +165,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Resolution != null)
                     hash = hash * 59 + this.Resolution.GetHashCode();
+                
                 if (this.ImageUri != null)
                     hash = hash * 59 + this.ImageUri.GetHashCode();
+                
                 return hash;
             }
         }

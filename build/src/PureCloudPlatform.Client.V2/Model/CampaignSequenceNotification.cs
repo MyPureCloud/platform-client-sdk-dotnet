@@ -18,6 +18,29 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignSequenceNotification :  IEquatable<CampaignSequenceNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
@@ -50,90 +73,328 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMPLETE")]
             Complete
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignSequenceNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="DateCreated">DateCreated.</param>
+        
+        
+        
         /// <param name="DateModified">DateModified.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="Campaigns">Campaigns.</param>
+        
+        
+        
         /// <param name="CurrentCampaign">CurrentCampaign.</param>
+        
+        
+        
         /// <param name="Status">Status.</param>
+        
+        
+        
         /// <param name="StopMessage">StopMessage.</param>
+        
+        
+        
         /// <param name="Repeat">Repeat.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public CampaignSequenceNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<DocumentDataV2NotificationCreatedBy> Campaigns = null, int? CurrentCampaign = null, StatusEnum? Status = null, string StopMessage = null, bool? Repeat = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
-            this.Campaigns = Campaigns;
-            this.CurrentCampaign = CurrentCampaign;
-            this.Status = Status;
-            this.StopMessage = StopMessage;
-            this.Repeat = Repeat;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Campaigns = Campaigns;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CurrentCampaign = CurrentCampaign;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Status = Status;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StopMessage = StopMessage;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Repeat = Repeat;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateModified
         /// </summary>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Campaigns
         /// </summary>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<DocumentDataV2NotificationCreatedBy> Campaigns { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CurrentCampaign
         /// </summary>
         [DataMember(Name="currentCampaign", EmitDefaultValue=false)]
         public int? CurrentCampaign { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StopMessage
         /// </summary>
         [DataMember(Name="stopMessage", EmitDefaultValue=false)]
         public string StopMessage { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Repeat
         /// </summary>
         [DataMember(Name="repeat", EmitDefaultValue=false)]
         public bool? Repeat { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -142,17 +403,29 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignSequenceNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
+            
             sb.Append("  CurrentCampaign: ").Append(CurrentCampaign).Append("\n");
+            
             sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("  StopMessage: ").Append(StopMessage).Append("\n");
+            
             sb.Append("  Repeat: ").Append(Repeat).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -257,28 +530,40 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.Campaigns != null)
                     hash = hash * 59 + this.Campaigns.GetHashCode();
+                
                 if (this.CurrentCampaign != null)
                     hash = hash * 59 + this.CurrentCampaign.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.StopMessage != null)
                     hash = hash * 59 + this.StopMessage.GetHashCode();
+                
                 if (this.Repeat != null)
                     hash = hash * 59 + this.Repeat.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

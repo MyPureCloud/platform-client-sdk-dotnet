@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallBasic :  IEquatable<CallBasic>
     {
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -99,6 +101,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The direction of the call
         /// </summary>
@@ -126,6 +135,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "outbound")]
             Outbound
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// State of recording on this call.
         /// </summary>
@@ -159,6 +175,28 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "paused")]
             Paused
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
@@ -270,78 +308,478 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uncallable")]
             Uncallable
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
         /// <value>The connection state of this communication.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The direction of the call
         /// </summary>
         /// <value>The direction of the call</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// State of recording on this call.
         /// </summary>
         /// <value>State of recording on this call.</value>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.
         /// </summary>
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallBasic" /> class.
         /// </summary>
+        
+        
         /// <param name="State">The connection state of this communication..</param>
+        
+        
+        
         /// <param name="Id">A globally unique identifier for this communication..</param>
+        
+        
+        
         /// <param name="Direction">The direction of the call.</param>
+        
+        
+        
         /// <param name="Recording">True if this call is being recorded..</param>
+        
+        
+        
         /// <param name="RecordingState">State of recording on this call..</param>
+        
+        
+        
         /// <param name="Muted">True if this call is muted so that remote participants can&#39;t hear any audio from this end..</param>
+        
+        
+        
         /// <param name="Confined">True if this call is held and the person on this side hears hold music..</param>
+        
+        
+        
         /// <param name="Held">True if this call is held and the person on this side hears silence..</param>
+        
+        
+        
         /// <param name="RecordingId">A globally unique identifier for the recording associated with this call..</param>
+        
+        
+        
         /// <param name="Segments">The time line of the participant&#39;s call, divided into activity segments..</param>
+        
+        
+        
         /// <param name="ErrorInfo">ErrorInfo.</param>
+        
+        
+        
         /// <param name="DisconnectType">System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects..</param>
+        
+        
+        
         /// <param name="StartHoldTime">The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DocumentId">If call is an outbound fax of a document from content management, then this is the id in content management..</param>
+        
+        
+        
         /// <param name="ConnectedTime">The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DisconnectedTime">The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DisconnectReasons">List of reasons that this call was disconnected. This will be set once the call disconnects..</param>
+        
+        
+        
         /// <param name="FaxStatus">Extra information on fax transmission..</param>
+        
+        
+        
         /// <param name="Provider">The source provider for the call..</param>
+        
+        
+        
         /// <param name="ScriptId">The UUID of the script to use..</param>
+        
+        
+        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
+        
+        
         public CallBasic(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null)
         {
-            this.State = State;
-            this.Id = Id;
-            this.Direction = Direction;
-            this.Recording = Recording;
-            this.RecordingState = RecordingState;
-            this.Muted = Muted;
-            this.Confined = Confined;
-            this.Held = Held;
-            this.RecordingId = RecordingId;
-            this.Segments = Segments;
-            this.ErrorInfo = ErrorInfo;
-            this.DisconnectType = DisconnectType;
-            this.StartHoldTime = StartHoldTime;
-            this.DocumentId = DocumentId;
-            this.ConnectedTime = ConnectedTime;
-            this.DisconnectedTime = DisconnectedTime;
-            this.DisconnectReasons = DisconnectReasons;
-            this.FaxStatus = FaxStatus;
-            this.Provider = Provider;
-            this.ScriptId = ScriptId;
-            this.PeerId = PeerId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Direction = Direction;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Recording = Recording;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingState = RecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Muted = Muted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Confined = Confined;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Held = Held;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingId = RecordingId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Segments = Segments;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectType = DisconnectType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartHoldTime = StartHoldTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DocumentId = DocumentId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedTime = ConnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectedTime = DisconnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectReasons = DisconnectReasons;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FaxStatus = FaxStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provider = Provider;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScriptId = ScriptId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PeerId = PeerId;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// A globally unique identifier for this communication.
@@ -349,101 +787,157 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// True if this call is being recorded.
         /// </summary>
         /// <value>True if this call is being recorded.</value>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// True if this call is muted so that remote participants can&#39;t hear any audio from this end.
         /// </summary>
         /// <value>True if this call is muted so that remote participants can&#39;t hear any audio from this end.</value>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
+        
+        
+        
         /// <summary>
         /// True if this call is held and the person on this side hears hold music.
         /// </summary>
         /// <value>True if this call is held and the person on this side hears hold music.</value>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
+        
+        
+        
         /// <summary>
         /// True if this call is held and the person on this side hears silence.
         /// </summary>
         /// <value>True if this call is held and the person on this side hears silence.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+        
+        
+        
         /// <summary>
         /// A globally unique identifier for the recording associated with this call.
         /// </summary>
         /// <value>A globally unique identifier for the recording associated with this call.</value>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
+        
+        
+        
         /// <summary>
         /// The time line of the participant&#39;s call, divided into activity segments.
         /// </summary>
         /// <value>The time line of the participant&#39;s call, divided into activity segments.</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<Segment> Segments { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ErrorBody ErrorInfo { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The timestamp the call was placed on hold in the cloud clock if the call is currently on hold. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
+        
+        
+        
         /// <summary>
         /// If call is an outbound fax of a document from content management, then this is the id in content management.
         /// </summary>
         /// <value>If call is an outbound fax of a document from content management, then this is the id in content management.</value>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
+        
+        
+        
         /// <summary>
         /// The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// List of reasons that this call was disconnected. This will be set once the call disconnects.
         /// </summary>
         /// <value>List of reasons that this call was disconnected. This will be set once the call disconnects.</value>
         [DataMember(Name="disconnectReasons", EmitDefaultValue=false)]
         public List<DisconnectReason> DisconnectReasons { get; set; }
+        
+        
+        
         /// <summary>
         /// Extra information on fax transmission.
         /// </summary>
         /// <value>Extra information on fax transmission.</value>
         [DataMember(Name="faxStatus", EmitDefaultValue=false)]
         public FaxStatus FaxStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// The source provider for the call.
         /// </summary>
         /// <value>The source provider for the call.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
         /// <summary>
         /// The UUID of the script to use.
         /// </summary>
         /// <value>The UUID of the script to use.</value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
+        
+        
+        
         /// <summary>
         /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -452,27 +946,49 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallBasic {\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            
             sb.Append("  Recording: ").Append(Recording).Append("\n");
+            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            
             sb.Append("  Muted: ").Append(Muted).Append("\n");
+            
             sb.Append("  Confined: ").Append(Confined).Append("\n");
+            
             sb.Append("  Held: ").Append(Held).Append("\n");
+            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
+            
             sb.Append("  Segments: ").Append(Segments).Append("\n");
+            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
+            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
+            
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -627,48 +1143,70 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
+                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
+                
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
+                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                
                 if (this.RecordingId != null)
                     hash = hash * 59 + this.RecordingId.GetHashCode();
+                
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
+                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
+                
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+                
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
+                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
                 if (this.DisconnectReasons != null)
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
+                
                 if (this.FaxStatus != null)
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
+                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
                 return hash;
             }
         }

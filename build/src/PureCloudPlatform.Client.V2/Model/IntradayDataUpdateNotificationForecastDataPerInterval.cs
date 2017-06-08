@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayDataUpdateNotificationForecastDataPerInterval :  IEquatable<IntradayDataUpdateNotificationForecastDataPerInterval>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationForecastDataPerInterval" /> class.
         /// </summary>
+        
+        
         /// <param name="Offered">Offered.</param>
+        
+        
+        
         /// <param name="AverageTalkTimeSeconds">AverageTalkTimeSeconds.</param>
+        
+        
+        
         /// <param name="AverageAfterCallWorkSeconds">AverageAfterCallWorkSeconds.</param>
+        
+        
         public IntradayDataUpdateNotificationForecastDataPerInterval(double? Offered = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null)
         {
-            this.Offered = Offered;
-            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Offered = Offered;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Offered
         /// </summary>
         [DataMember(Name="offered", EmitDefaultValue=false)]
         public double? Offered { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AverageTalkTimeSeconds
         /// </summary>
         [DataMember(Name="averageTalkTimeSeconds", EmitDefaultValue=false)]
         public double? AverageTalkTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AverageAfterCallWorkSeconds
         /// </summary>
         [DataMember(Name="averageAfterCallWorkSeconds", EmitDefaultValue=false)]
         public double? AverageAfterCallWorkSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayDataUpdateNotificationForecastDataPerInterval {\n");
+            
             sb.Append("  Offered: ").Append(Offered).Append("\n");
+            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
+            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Offered != null)
                     hash = hash * 59 + this.Offered.GetHashCode();
+                
                 if (this.AverageTalkTimeSeconds != null)
                     hash = hash * 59 + this.AverageTalkTimeSeconds.GetHashCode();
+                
                 if (this.AverageAfterCallWorkSeconds != null)
                     hash = hash * 59 + this.AverageAfterCallWorkSeconds.GetHashCode();
+                
                 return hash;
             }
         }

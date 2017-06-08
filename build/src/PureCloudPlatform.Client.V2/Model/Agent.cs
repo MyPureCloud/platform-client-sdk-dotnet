@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Agent :  IEquatable<Agent>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Agent" /> class.
         /// </summary>
+        
+        
         /// <param name="Stage">The current stage for this agent.</param>
+        
+        
         public Agent(string Stage = null)
         {
-            this.Stage = Stage;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Stage = Stage;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The current stage for this agent
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The current stage for this agent</value>
         [DataMember(Name="stage", EmitDefaultValue=false)]
         public string Stage { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Agent {\n");
+            
             sb.Append("  Stage: ").Append(Stage).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Stage != null)
                     hash = hash * 59 + this.Stage.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,41 +18,140 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallableTimeSetNotificationTimeSlots :  IEquatable<CallableTimeSetNotificationTimeSlots>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTimeSetNotificationTimeSlots" /> class.
         /// </summary>
+        
+        
         /// <param name="StartTime">StartTime.</param>
+        
+        
+        
         /// <param name="StopTime">StopTime.</param>
+        
+        
+        
         /// <param name="Day">Day.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public CallableTimeSetNotificationTimeSlots(string StartTime = null, string StopTime = null, int? Day = null, Object AdditionalProperties = null)
         {
-            this.StartTime = StartTime;
-            this.StopTime = StopTime;
-            this.Day = Day;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartTime = StartTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StopTime = StopTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Day = Day;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets StartTime
         /// </summary>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets StopTime
         /// </summary>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Day
         /// </summary>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,10 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableTimeSetNotificationTimeSlots {\n");
+            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            
             sb.Append("  StopTime: ").Append(StopTime).Append("\n");
+            
             sb.Append("  Day: ").Append(Day).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,14 +238,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+                
                 if (this.StopTime != null)
                     hash = hash * 59 + this.StopTime.GetHashCode();
+                
                 if (this.Day != null)
                     hash = hash * 59 + this.Day.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

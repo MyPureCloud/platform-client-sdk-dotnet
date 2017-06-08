@@ -18,18 +18,86 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeLogsJobRequest :  IEquatable<EdgeLogsJobRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="Path">A relative directory to the root Edge log folder to query from..</param>
+        
+        
+        
         /// <param name="Query">The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter..</param>
+        
+        
+        
         /// <param name="Recurse">Boolean whether or not to recurse into directories..</param>
+        
+        
         public EdgeLogsJobRequest(string Path = null, string Query = null, bool? Recurse = null)
         {
-            this.Path = Path;
-            this.Query = Query;
-            this.Recurse = Recurse;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Path = Path;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Query = Query;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Recurse = Recurse;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A relative directory to the root Edge log folder to query from.
@@ -37,18 +105,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A relative directory to the root Edge log folder to query from.</value>
         [DataMember(Name="path", EmitDefaultValue=false)]
         public string Path { get; set; }
+        
+        
+        
         /// <summary>
         /// The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter.
         /// </summary>
         /// <value>The pattern to use when searching for logs, which may include the wildcards {*, ?}.  Multiple search patterns may be combined using a pipe &#39;|&#39; as a delimiter.</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public string Query { get; set; }
+        
+        
+        
         /// <summary>
         /// Boolean whether or not to recurse into directories.
         /// </summary>
         /// <value>Boolean whether or not to recurse into directories.</value>
         [DataMember(Name="recurse", EmitDefaultValue=false)]
         public bool? Recurse { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -57,9 +133,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeLogsJobRequest {\n");
+            
             sb.Append("  Path: ").Append(Path).Append("\n");
+            
             sb.Append("  Query: ").Append(Query).Append("\n");
+            
             sb.Append("  Recurse: ").Append(Recurse).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,12 +204,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Path != null)
                     hash = hash * 59 + this.Path.GetHashCode();
+                
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
+                
                 if (this.Recurse != null)
                     hash = hash * 59 + this.Recurse.GetHashCode();
+                
                 return hash;
             }
         }

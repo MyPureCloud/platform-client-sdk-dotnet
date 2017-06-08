@@ -18,41 +18,140 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Section :  IEquatable<Section>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Section" /> class.
         /// </summary>
+        
+        
         /// <param name="FieldList">FieldList.</param>
+        
+        
+        
         /// <param name="InstructionText">InstructionText.</param>
+        
+        
+        
         /// <param name="Key">Key.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
         public Section(List<FieldList> FieldList = null, string InstructionText = null, string Key = null, string State = null)
         {
-            this.FieldList = FieldList;
-            this.InstructionText = InstructionText;
-            this.Key = Key;
-            this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.FieldList = FieldList;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InstructionText = InstructionText;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Key = Key;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets FieldList
         /// </summary>
         [DataMember(Name="fieldList", EmitDefaultValue=false)]
         public List<FieldList> FieldList { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets InstructionText
         /// </summary>
         [DataMember(Name="instructionText", EmitDefaultValue=false)]
         public string InstructionText { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Key
         /// </summary>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public string Key { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,10 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Section {\n");
+            
             sb.Append("  FieldList: ").Append(FieldList).Append("\n");
+            
             sb.Append("  InstructionText: ").Append(InstructionText).Append("\n");
+            
             sb.Append("  Key: ").Append(Key).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,14 +238,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.FieldList != null)
                     hash = hash * 59 + this.FieldList.GetHashCode();
+                
                 if (this.InstructionText != null)
                     hash = hash * 59 + this.InstructionText.GetHashCode();
+                
                 if (this.Key != null)
                     hash = hash * 59 + this.Key.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 return hash;
             }
         }

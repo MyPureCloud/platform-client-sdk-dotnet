@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalDataSource :  IEquatable<ExternalDataSource>
     {
+        
+        
         /// <summary>
         /// The platform that was the source of the data.  Example: a CRM like SALESFORCE.
         /// </summary>
@@ -39,22 +41,72 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SALESFORCE")]
             Salesforce
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The platform that was the source of the data.  Example: a CRM like SALESFORCE.
         /// </summary>
         /// <value>The platform that was the source of the data.  Example: a CRM like SALESFORCE.</value>
         [DataMember(Name="platform", EmitDefaultValue=false)]
         public PlatformEnum? Platform { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalDataSource" /> class.
         /// </summary>
+        
+        
         /// <param name="Platform">The platform that was the source of the data.  Example: a CRM like SALESFORCE..</param>
+        
+        
+        
         /// <param name="Url">An URL that links to the source record that contributed data to the associated entity..</param>
+        
+        
         public ExternalDataSource(PlatformEnum? Platform = null, string Url = null)
         {
-            this.Platform = Platform;
-            this.Url = Url;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Platform = Platform;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Url = Url;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// An URL that links to the source record that contributed data to the associated entity.
@@ -62,6 +114,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>An URL that links to the source record that contributed data to the associated entity.</value>
         [DataMember(Name="url", EmitDefaultValue=false)]
         public string Url { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,8 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExternalDataSource {\n");
+            
             sb.Append("  Platform: ").Append(Platform).Append("\n");
+            
             sb.Append("  Url: ").Append(Url).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,10 +188,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Platform != null)
                     hash = hash * 59 + this.Platform.GetHashCode();
+                
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,55 +18,230 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneCapabilities :  IEquatable<PhoneCapabilities>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneCapabilities" /> class.
         /// </summary>
+        
+        
         /// <param name="Provisions">Provisions.</param>
+        
+        
+        
         /// <param name="Registers">Registers.</param>
+        
+        
+        
         /// <param name="DualRegisters">DualRegisters.</param>
+        
+        
+        
         /// <param name="HardwareIdType">HardwareIdType.</param>
+        
+        
+        
         /// <param name="AllowReboot">AllowReboot.</param>
+        
+        
+        
         /// <param name="NoRebalance">NoRebalance.</param>
-        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null)
+        
+        
+        
+        /// <param name="NoCloudProvisioning">NoCloudProvisioning.</param>
+        
+        
+        public PhoneCapabilities(bool? Provisions = null, bool? Registers = null, bool? DualRegisters = null, string HardwareIdType = null, bool? AllowReboot = null, bool? NoRebalance = null, bool? NoCloudProvisioning = null)
         {
-            this.Provisions = Provisions;
-            this.Registers = Registers;
-            this.DualRegisters = DualRegisters;
-            this.HardwareIdType = HardwareIdType;
-            this.AllowReboot = AllowReboot;
-            this.NoRebalance = NoRebalance;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provisions = Provisions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Registers = Registers;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DualRegisters = DualRegisters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HardwareIdType = HardwareIdType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AllowReboot = AllowReboot;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NoRebalance = NoRebalance;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NoCloudProvisioning = NoCloudProvisioning;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Provisions
         /// </summary>
         [DataMember(Name="provisions", EmitDefaultValue=false)]
         public bool? Provisions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Registers
         /// </summary>
         [DataMember(Name="registers", EmitDefaultValue=false)]
         public bool? Registers { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DualRegisters
         /// </summary>
         [DataMember(Name="dualRegisters", EmitDefaultValue=false)]
         public bool? DualRegisters { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets HardwareIdType
         /// </summary>
         [DataMember(Name="hardwareIdType", EmitDefaultValue=false)]
         public string HardwareIdType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AllowReboot
         /// </summary>
         [DataMember(Name="allowReboot", EmitDefaultValue=false)]
         public bool? AllowReboot { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NoRebalance
         /// </summary>
         [DataMember(Name="noRebalance", EmitDefaultValue=false)]
         public bool? NoRebalance { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets NoCloudProvisioning
+        /// </summary>
+        [DataMember(Name="noCloudProvisioning", EmitDefaultValue=false)]
+        public bool? NoCloudProvisioning { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +250,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneCapabilities {\n");
+            
             sb.Append("  Provisions: ").Append(Provisions).Append("\n");
+            
             sb.Append("  Registers: ").Append(Registers).Append("\n");
+            
             sb.Append("  DualRegisters: ").Append(DualRegisters).Append("\n");
+            
             sb.Append("  HardwareIdType: ").Append(HardwareIdType).Append("\n");
+            
             sb.Append("  AllowReboot: ").Append(AllowReboot).Append("\n");
+            
             sb.Append("  NoRebalance: ").Append(NoRebalance).Append("\n");
+            
+            sb.Append("  NoCloudProvisioning: ").Append(NoCloudProvisioning).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,6 +330,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NoRebalance == other.NoRebalance ||
                     this.NoRebalance != null &&
                     this.NoRebalance.Equals(other.NoRebalance)
+                ) &&
+                (
+                    this.NoCloudProvisioning == other.NoCloudProvisioning ||
+                    this.NoCloudProvisioning != null &&
+                    this.NoCloudProvisioning.Equals(other.NoCloudProvisioning)
                 );
         }
 
@@ -160,18 +349,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Provisions != null)
                     hash = hash * 59 + this.Provisions.GetHashCode();
+                
                 if (this.Registers != null)
                     hash = hash * 59 + this.Registers.GetHashCode();
+                
                 if (this.DualRegisters != null)
                     hash = hash * 59 + this.DualRegisters.GetHashCode();
+                
                 if (this.HardwareIdType != null)
                     hash = hash * 59 + this.HardwareIdType.GetHashCode();
+                
                 if (this.AllowReboot != null)
                     hash = hash * 59 + this.AllowReboot.GetHashCode();
+                
                 if (this.NoRebalance != null)
                     hash = hash * 59 + this.NoRebalance.GetHashCode();
+                
+                if (this.NoCloudProvisioning != null)
+                    hash = hash * 59 + this.NoCloudProvisioning.GetHashCode();
+                
                 return hash;
             }
         }

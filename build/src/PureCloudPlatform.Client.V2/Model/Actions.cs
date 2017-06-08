@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Actions :  IEquatable<Actions>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Actions" /> class.
         /// </summary>
+        
+        
         /// <param name="SkillsToRemove">SkillsToRemove.</param>
+        
+        
         public Actions(List<SkillsToRemove> SkillsToRemove = null)
         {
-            this.SkillsToRemove = SkillsToRemove;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.SkillsToRemove = SkillsToRemove;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets SkillsToRemove
         /// </summary>
         [DataMember(Name="skillsToRemove", EmitDefaultValue=false)]
         public List<SkillsToRemove> SkillsToRemove { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Actions {\n");
+            
             sb.Append("  SkillsToRemove: ").Append(SkillsToRemove).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.SkillsToRemove != null)
                     hash = hash * 59 + this.SkillsToRemove.GetHashCode();
+                
                 return hash;
             }
         }

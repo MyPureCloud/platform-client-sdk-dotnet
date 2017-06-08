@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Site :  IEquatable<Site>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -50,40 +76,192 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Site" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Site() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Site" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The name of the entity. (required).</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="ModifiedBy">ModifiedBy.</param>
+        
+        
+        
         /// <param name="CreatedBy">CreatedBy.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="ModifiedByApp">ModifiedByApp.</param>
+        
+        
+        
         /// <param name="CreatedByApp">CreatedByApp.</param>
+        
+        
+        
         /// <param name="PrimarySites">PrimarySites.</param>
+        
+        
+        
         /// <param name="SecondarySites">SecondarySites.</param>
+        
+        
+        
         /// <param name="PrimaryEdges">PrimaryEdges.</param>
+        
+        
+        
         /// <param name="SecondaryEdges">SecondaryEdges.</param>
+        
+        
+        
         /// <param name="Addresses">Addresses.</param>
+        
+        
+        
         /// <param name="Edges">Edges.</param>
+        
+        
+        
         /// <param name="EdgeAutoUpdateConfig">Recurrance rule, time zone, and start/end settings for automatic edge updates for this site.</param>
+        
+        
+        
         /// <param name="Location">Location (required).</param>
+        
+        
+        
         /// <param name="Managed">Managed.</param>
+        
+        
+        
+        
         public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -93,6 +271,75 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Location" is required (not null)
             if (Location == null)
             {
@@ -102,24 +349,184 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Location = Location;
             }
-            this.Description = Description;
-            this.Version = Version;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.ModifiedBy = ModifiedBy;
-            this.CreatedBy = CreatedBy;
-            this.State = State;
-            this.ModifiedByApp = ModifiedByApp;
-            this.CreatedByApp = CreatedByApp;
-            this.PrimarySites = PrimarySites;
-            this.SecondarySites = SecondarySites;
-            this.PrimaryEdges = PrimaryEdges;
-            this.SecondaryEdges = SecondaryEdges;
-            this.Addresses = Addresses;
-            this.Edges = Edges;
-            this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
-            this.Managed = Managed;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedByApp = ModifiedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedByApp = CreatedByApp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PrimarySites = PrimarySites;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SecondarySites = SecondarySites;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PrimaryEdges = PrimaryEdges;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SecondaryEdges = SecondaryEdges;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Addresses = Addresses;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Edges = Edges;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Managed = Managed;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -127,107 +534,168 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The name of the entity.
         /// </summary>
         /// <value>The name of the entity.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedBy
         /// </summary>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedBy
         /// </summary>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ModifiedByApp
         /// </summary>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CreatedByApp
         /// </summary>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PrimarySites
         /// </summary>
         [DataMember(Name="primarySites", EmitDefaultValue=false)]
         public List<UriReference> PrimarySites { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SecondarySites
         /// </summary>
         [DataMember(Name="secondarySites", EmitDefaultValue=false)]
         public List<UriReference> SecondarySites { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PrimaryEdges
         /// </summary>
         [DataMember(Name="primaryEdges", EmitDefaultValue=false)]
         public List<Edge> PrimaryEdges { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SecondaryEdges
         /// </summary>
         [DataMember(Name="secondaryEdges", EmitDefaultValue=false)]
         public List<Edge> SecondaryEdges { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Edges
         /// </summary>
         [DataMember(Name="edges", EmitDefaultValue=false)]
         public List<Edge> Edges { get; set; }
+        
+        
+        
         /// <summary>
         /// Recurrance rule, time zone, and start/end settings for automatic edge updates for this site
         /// </summary>
         /// <value>Recurrance rule, time zone, and start/end settings for automatic edge updates for this site</value>
         [DataMember(Name="edgeAutoUpdateConfig", EmitDefaultValue=false)]
         public EdgeAutoUpdateConfig EdgeAutoUpdateConfig { get; set; }
+        
+        
+        
         /// <summary>
         /// Location
         /// </summary>
         /// <value>Location</value>
         [DataMember(Name="location", EmitDefaultValue=false)]
         public LocationDefinition Location { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Managed
         /// </summary>
         [DataMember(Name="managed", EmitDefaultValue=false)]
         public bool? Managed { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -236,27 +704,49 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Site {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
+            
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
+            
             sb.Append("  PrimarySites: ").Append(PrimarySites).Append("\n");
+            
             sb.Append("  SecondarySites: ").Append(SecondarySites).Append("\n");
+            
             sb.Append("  PrimaryEdges: ").Append(PrimaryEdges).Append("\n");
+            
             sb.Append("  SecondaryEdges: ").Append(SecondaryEdges).Append("\n");
+            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
+            
             sb.Append("  Edges: ").Append(Edges).Append("\n");
+            
             sb.Append("  EdgeAutoUpdateConfig: ").Append(EdgeAutoUpdateConfig).Append("\n");
+            
             sb.Append("  Location: ").Append(Location).Append("\n");
+            
             sb.Append("  Managed: ").Append(Managed).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -411,48 +901,70 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.ModifiedByApp != null)
                     hash = hash * 59 + this.ModifiedByApp.GetHashCode();
+                
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
+                
                 if (this.PrimarySites != null)
                     hash = hash * 59 + this.PrimarySites.GetHashCode();
+                
                 if (this.SecondarySites != null)
                     hash = hash * 59 + this.SecondarySites.GetHashCode();
+                
                 if (this.PrimaryEdges != null)
                     hash = hash * 59 + this.PrimaryEdges.GetHashCode();
+                
                 if (this.SecondaryEdges != null)
                     hash = hash * 59 + this.SecondaryEdges.GetHashCode();
+                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
+                
                 if (this.Edges != null)
                     hash = hash * 59 + this.Edges.GetHashCode();
+                
                 if (this.EdgeAutoUpdateConfig != null)
                     hash = hash * 59 + this.EdgeAutoUpdateConfig.GetHashCode();
+                
                 if (this.Location != null)
                     hash = hash * 59 + this.Location.GetHashCode();
+                
                 if (this.Managed != null)
                     hash = hash * 59 + this.Managed.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

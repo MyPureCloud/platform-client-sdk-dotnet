@@ -18,21 +18,69 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingData :  IEquatable<RoutingData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingData" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected RoutingData() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingData" /> class.
         /// </summary>
+        
+        
         /// <param name="QueueId">The identifier of the routing queue (required).</param>
+        
+        
+        
         /// <param name="LanguageId">The identifier of a language to be considered in routing.</param>
+        
+        
+        
         /// <param name="Priority">The priority for routing.</param>
+        
+        
+        
         /// <param name="SkillIds">A list of skill identifiers to be considered in routing.</param>
+        
+        
+        
         /// <param name="PreferredAgentIds">A list of agents to be preferred in routing.</param>
+        
+        
         public RoutingData(string QueueId = null, string LanguageId = null, int? Priority = null, List<string> SkillIds = null, List<string> PreferredAgentIds = null)
         {
+            
+            
+            
             // to ensure "QueueId" is required (not null)
             if (QueueId == null)
             {
@@ -42,11 +90,69 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.QueueId = QueueId;
             }
-            this.LanguageId = LanguageId;
-            this.Priority = Priority;
-            this.SkillIds = SkillIds;
-            this.PreferredAgentIds = PreferredAgentIds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.LanguageId = LanguageId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Priority = Priority;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SkillIds = SkillIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PreferredAgentIds = PreferredAgentIds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The identifier of the routing queue
@@ -54,30 +160,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The identifier of the routing queue</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
+        
+        
+        
         /// <summary>
         /// The identifier of a language to be considered in routing
         /// </summary>
         /// <value>The identifier of a language to be considered in routing</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
+        
+        
+        
         /// <summary>
         /// The priority for routing
         /// </summary>
         /// <value>The priority for routing</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
+        
+        
+        
         /// <summary>
         /// A list of skill identifiers to be considered in routing
         /// </summary>
         /// <value>A list of skill identifiers to be considered in routing</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
+        
+        
+        
         /// <summary>
         /// A list of agents to be preferred in routing
         /// </summary>
         /// <value>A list of agents to be preferred in routing</value>
         [DataMember(Name="preferredAgentIds", EmitDefaultValue=false)]
         public List<string> PreferredAgentIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,11 +206,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingData {\n");
+            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
+            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            
             sb.Append("  PreferredAgentIds: ").Append(PreferredAgentIds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -165,16 +291,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
+                
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
+                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
+                
                 if (this.PreferredAgentIds != null)
                     hash = hash * 59 + this.PreferredAgentIds.GetHashCode();
+                
                 return hash;
             }
         }

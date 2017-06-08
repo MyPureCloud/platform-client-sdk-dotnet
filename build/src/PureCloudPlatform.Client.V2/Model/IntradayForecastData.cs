@@ -18,18 +18,86 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayForecastData :  IEquatable<IntradayForecastData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayForecastData" /> class.
         /// </summary>
+        
+        
         /// <param name="Offered">The number of interactions routed into the queue for the given media type(s) for an agent to answer.</param>
+        
+        
+        
         /// <param name="AverageTalkTimeSeconds">The average time in seconds an agent spends interacting with a customer.</param>
+        
+        
+        
         /// <param name="AverageAfterCallWorkSeconds">The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction.</param>
+        
+        
         public IntradayForecastData(double? Offered = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null)
         {
-            this.Offered = Offered;
-            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Offered = Offered;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The number of interactions routed into the queue for the given media type(s) for an agent to answer
@@ -37,18 +105,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The number of interactions routed into the queue for the given media type(s) for an agent to answer</value>
         [DataMember(Name="offered", EmitDefaultValue=false)]
         public double? Offered { get; set; }
+        
+        
+        
         /// <summary>
         /// The average time in seconds an agent spends interacting with a customer
         /// </summary>
         /// <value>The average time in seconds an agent spends interacting with a customer</value>
         [DataMember(Name="averageTalkTimeSeconds", EmitDefaultValue=false)]
         public double? AverageTalkTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction
         /// </summary>
         /// <value>The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction</value>
         [DataMember(Name="averageAfterCallWorkSeconds", EmitDefaultValue=false)]
         public double? AverageAfterCallWorkSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -57,9 +133,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayForecastData {\n");
+            
             sb.Append("  Offered: ").Append(Offered).Append("\n");
+            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
+            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,12 +204,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Offered != null)
                     hash = hash * 59 + this.Offered.GetHashCode();
+                
                 if (this.AverageTalkTimeSeconds != null)
                     hash = hash * 59 + this.AverageTalkTimeSeconds.GetHashCode();
+                
                 if (this.AverageAfterCallWorkSeconds != null)
                     hash = hash * 59 + this.AverageAfterCallWorkSeconds.GetHashCode();
+                
                 return hash;
             }
         }

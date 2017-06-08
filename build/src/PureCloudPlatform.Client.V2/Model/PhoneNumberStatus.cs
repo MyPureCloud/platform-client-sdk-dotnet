@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PhoneNumberStatus :  IEquatable<PhoneNumberStatus>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumberStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="Callable">false if the phone number is not callable.</param>
+        
+        
         public PhoneNumberStatus(bool? Callable = null)
         {
-            this.Callable = Callable;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Callable = Callable;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// false if the phone number is not callable
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>false if the phone number is not callable</value>
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PhoneNumberStatus {\n");
+            
             sb.Append("  Callable: ").Append(Callable).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Callable != null)
                     hash = hash * 59 + this.Callable.GetHashCode();
+                
                 return hash;
             }
         }

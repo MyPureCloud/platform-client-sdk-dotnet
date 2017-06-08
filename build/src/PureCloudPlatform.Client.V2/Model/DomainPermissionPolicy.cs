@@ -18,69 +18,260 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainPermissionPolicy :  IEquatable<DomainPermissionPolicy>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermissionPolicy" /> class.
         /// </summary>
+        
+        
         /// <param name="Domain">Domain.</param>
+        
+        
+        
         /// <param name="EntityName">EntityName.</param>
+        
+        
+        
         /// <param name="PolicyName">PolicyName.</param>
+        
+        
+        
         /// <param name="PolicyDescription">PolicyDescription.</param>
+        
+        
+        
         /// <param name="ActionSet">ActionSet.</param>
+        
+        
+        
         /// <param name="NamedResources">NamedResources.</param>
+        
+        
+        
         /// <param name="AllowConditions">AllowConditions.</param>
+        
+        
+        
         /// <param name="ResourceConditionNode">ResourceConditionNode.</param>
+        
+        
         public DomainPermissionPolicy(string Domain = null, string EntityName = null, string PolicyName = null, string PolicyDescription = null, List<string> ActionSet = null, List<string> NamedResources = null, bool? AllowConditions = null, DomainResourceConditionNode ResourceConditionNode = null)
         {
-            this.Domain = Domain;
-            this.EntityName = EntityName;
-            this.PolicyName = PolicyName;
-            this.PolicyDescription = PolicyDescription;
-            this.ActionSet = ActionSet;
-            this.NamedResources = NamedResources;
-            this.AllowConditions = AllowConditions;
-            this.ResourceConditionNode = ResourceConditionNode;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Domain = Domain;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EntityName = EntityName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PolicyName = PolicyName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PolicyDescription = PolicyDescription;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActionSet = ActionSet;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NamedResources = NamedResources;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AllowConditions = AllowConditions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ResourceConditionNode = ResourceConditionNode;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PolicyName
         /// </summary>
         [DataMember(Name="policyName", EmitDefaultValue=false)]
         public string PolicyName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PolicyDescription
         /// </summary>
         [DataMember(Name="policyDescription", EmitDefaultValue=false)]
         public string PolicyDescription { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActionSet
         /// </summary>
         [DataMember(Name="actionSet", EmitDefaultValue=false)]
         public List<string> ActionSet { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NamedResources
         /// </summary>
         [DataMember(Name="namedResources", EmitDefaultValue=false)]
         public List<string> NamedResources { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AllowConditions
         /// </summary>
         [DataMember(Name="allowConditions", EmitDefaultValue=false)]
         public bool? AllowConditions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ResourceConditionNode
         /// </summary>
         [DataMember(Name="resourceConditionNode", EmitDefaultValue=false)]
         public DomainResourceConditionNode ResourceConditionNode { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -89,14 +280,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainPermissionPolicy {\n");
+            
             sb.Append("  Domain: ").Append(Domain).Append("\n");
+            
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
+            
             sb.Append("  PolicyName: ").Append(PolicyName).Append("\n");
+            
             sb.Append("  PolicyDescription: ").Append(PolicyDescription).Append("\n");
+            
             sb.Append("  ActionSet: ").Append(ActionSet).Append("\n");
+            
             sb.Append("  NamedResources: ").Append(NamedResources).Append("\n");
+            
             sb.Append("  AllowConditions: ").Append(AllowConditions).Append("\n");
+            
             sb.Append("  ResourceConditionNode: ").Append(ResourceConditionNode).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,22 +386,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
+                
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
+                
                 if (this.PolicyName != null)
                     hash = hash * 59 + this.PolicyName.GetHashCode();
+                
                 if (this.PolicyDescription != null)
                     hash = hash * 59 + this.PolicyDescription.GetHashCode();
+                
                 if (this.ActionSet != null)
                     hash = hash * 59 + this.ActionSet.GetHashCode();
+                
                 if (this.NamedResources != null)
                     hash = hash * 59 + this.NamedResources.GetHashCode();
+                
                 if (this.AllowConditions != null)
                     hash = hash * 59 + this.AllowConditions.GetHashCode();
+                
                 if (this.ResourceConditionNode != null)
                     hash = hash * 59 + this.ResourceConditionNode.GetHashCode();
+                
                 return hash;
             }
         }

@@ -36,12 +36,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TokensApi();
+            
 
             try
             {
+                
                 // Delete  auth token used to make the request.
+                
                 apiInstance.DeleteTokensMe();
             }
             catch (Exception e)
@@ -86,12 +90,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new TokensApi();
+            
 
             try
             {
+                
                 // Fetch information about the current token
+                
                 TokenInfo result = apiInstance.GetTokensMe();
                 Debug.WriteLine(result);
             }

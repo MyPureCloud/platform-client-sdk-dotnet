@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignScheduleNotificationIntervals :  IEquatable<CampaignScheduleNotificationIntervals>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignScheduleNotificationIntervals" /> class.
         /// </summary>
+        
+        
         /// <param name="Start">Start.</param>
+        
+        
+        
         /// <param name="End">End.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public CampaignScheduleNotificationIntervals(string Start = null, string End = null, Object AdditionalProperties = null)
         {
-            this.Start = Start;
-            this.End = End;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Start = Start;
+            
+            
+            
+            
+            
+            
+            
+            
+this.End = End;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Start
         /// </summary>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets End
         /// </summary>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignScheduleNotificationIntervals {\n");
+            
             sb.Append("  Start: ").Append(Start).Append("\n");
+            
             sb.Append("  End: ").Append(End).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Start != null)
                     hash = hash * 59 + this.Start.GetHashCode();
+                
                 if (this.End != null)
                     hash = hash * 59 + this.End.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

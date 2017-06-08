@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserScheduleAdherenceUpdateNotification :  IEquatable<UserScheduleAdherenceUpdateNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
@@ -74,83 +88,307 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OFFLINE")]
             Offline
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RoutingStatus
         /// </summary>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleAdherenceUpdateNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="ManagementUnitId">ManagementUnitId.</param>
+        
+        
+        
         /// <param name="ScheduledActivityCategory">ScheduledActivityCategory.</param>
+        
+        
+        
         /// <param name="SystemPresence">SystemPresence.</param>
+        
+        
+        
         /// <param name="RoutingStatus">RoutingStatus.</param>
+        
+        
+        
         /// <param name="ActualActivityCategory">ActualActivityCategory.</param>
+        
+        
+        
         /// <param name="IsOutOfOffice">IsOutOfOffice.</param>
+        
+        
+        
         /// <param name="AdherenceState">AdherenceState.</param>
+        
+        
+        
         /// <param name="Impact">Impact.</param>
+        
+        
+        
         /// <param name="AdherenceChangeTime">AdherenceChangeTime.</param>
+        
+        
         public UserScheduleAdherenceUpdateNotification(DocumentDataV2NotificationWorkspace User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, string AdherenceState = null, string Impact = null, string AdherenceChangeTime = null)
         {
-            this.User = User;
-            this.ManagementUnitId = ManagementUnitId;
-            this.ScheduledActivityCategory = ScheduledActivityCategory;
-            this.SystemPresence = SystemPresence;
-            this.RoutingStatus = RoutingStatus;
-            this.ActualActivityCategory = ActualActivityCategory;
-            this.IsOutOfOffice = IsOutOfOffice;
-            this.AdherenceState = AdherenceState;
-            this.Impact = Impact;
-            this.AdherenceChangeTime = AdherenceChangeTime;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ManagementUnitId = ManagementUnitId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScheduledActivityCategory = ScheduledActivityCategory;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SystemPresence = SystemPresence;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RoutingStatus = RoutingStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActualActivityCategory = ActualActivityCategory;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IsOutOfOffice = IsOutOfOffice;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdherenceState = AdherenceState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Impact = Impact;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdherenceChangeTime = AdherenceChangeTime;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public DocumentDataV2NotificationWorkspace User { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ManagementUnitId
         /// </summary>
         [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
         public string ManagementUnitId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScheduledActivityCategory
         /// </summary>
         [DataMember(Name="scheduledActivityCategory", EmitDefaultValue=false)]
         public string ScheduledActivityCategory { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SystemPresence
         /// </summary>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public string SystemPresence { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActualActivityCategory
         /// </summary>
         [DataMember(Name="actualActivityCategory", EmitDefaultValue=false)]
         public string ActualActivityCategory { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets IsOutOfOffice
         /// </summary>
         [DataMember(Name="isOutOfOffice", EmitDefaultValue=false)]
         public bool? IsOutOfOffice { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdherenceState
         /// </summary>
         [DataMember(Name="adherenceState", EmitDefaultValue=false)]
         public string AdherenceState { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Impact
         /// </summary>
         [DataMember(Name="impact", EmitDefaultValue=false)]
         public string Impact { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdherenceChangeTime
         /// </summary>
         [DataMember(Name="adherenceChangeTime", EmitDefaultValue=false)]
         public string AdherenceChangeTime { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -159,16 +397,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserScheduleAdherenceUpdateNotification {\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
+            
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
+            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
+            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            
             sb.Append("  ActualActivityCategory: ").Append(ActualActivityCategory).Append("\n");
+            
             sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
+            
             sb.Append("  AdherenceState: ").Append(AdherenceState).Append("\n");
+            
             sb.Append("  Impact: ").Append(Impact).Append("\n");
+            
             sb.Append("  AdherenceChangeTime: ").Append(AdherenceChangeTime).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -268,26 +517,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
+                
                 if (this.ScheduledActivityCategory != null)
                     hash = hash * 59 + this.ScheduledActivityCategory.GetHashCode();
+                
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
+                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
                 if (this.ActualActivityCategory != null)
                     hash = hash * 59 + this.ActualActivityCategory.GetHashCode();
+                
                 if (this.IsOutOfOffice != null)
                     hash = hash * 59 + this.IsOutOfOffice.GetHashCode();
+                
                 if (this.AdherenceState != null)
                     hash = hash * 59 + this.AdherenceState.GetHashCode();
+                
                 if (this.Impact != null)
                     hash = hash * 59 + this.Impact.GetHashCode();
+                
                 if (this.AdherenceChangeTime != null)
                     hash = hash * 59 + this.AdherenceChangeTime.GetHashCode();
+                
                 return hash;
             }
         }

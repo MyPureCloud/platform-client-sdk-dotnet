@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScreenRecordingSessionRequest :  IEquatable<ScreenRecordingSessionRequest>
     {
+        
+        
         /// <summary>
         /// The screen recording session's state.  Values can be: 'stopped'
         /// </summary>
@@ -39,24 +41,94 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "STOPPED")]
             Stopped
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The screen recording session's state.  Values can be: 'stopped'
         /// </summary>
         /// <value>The screen recording session's state.  Values can be: 'stopped'</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenRecordingSessionRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="State">The screen recording session&#39;s state.  Values can be: &#39;stopped&#39;.</param>
+        
+        
+        
         /// <param name="ArchiveDate">The screen recording session&#39;s archive date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="DeleteDate">The screen recording session&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
         public ScreenRecordingSessionRequest(StateEnum? State = null, DateTime? ArchiveDate = null, DateTime? DeleteDate = null)
         {
-            this.State = State;
-            this.ArchiveDate = ArchiveDate;
-            this.DeleteDate = DeleteDate;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ArchiveDate = ArchiveDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DeleteDate = DeleteDate;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// The screen recording session&#39;s archive date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -64,12 +136,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The screen recording session&#39;s archive date. Must be greater than 1 day from now if set. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="archiveDate", EmitDefaultValue=false)]
         public DateTime? ArchiveDate { get; set; }
+        
+        
+        
         /// <summary>
         /// The screen recording session&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The screen recording session&#39;s delete date. Must be greater than archiveDate if set, otherwise one day from now. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="deleteDate", EmitDefaultValue=false)]
         public DateTime? DeleteDate { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,9 +155,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScreenRecordingSessionRequest {\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  ArchiveDate: ").Append(ArchiveDate).Append("\n");
+            
             sb.Append("  DeleteDate: ").Append(DeleteDate).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,12 +226,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.ArchiveDate != null)
                     hash = hash * 59 + this.ArchiveDate.GetHashCode();
+                
                 if (this.DeleteDate != null)
                     hash = hash * 59 + this.DeleteDate.GetHashCode();
+                
                 return hash;
             }
         }

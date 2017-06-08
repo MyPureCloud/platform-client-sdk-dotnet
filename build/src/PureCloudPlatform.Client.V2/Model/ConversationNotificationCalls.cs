@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationCalls :  IEquatable<ConversationNotificationCalls>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -98,6 +103,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NONE")]
             None
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -130,6 +142,22 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PAUSED")]
             Paused
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -240,6 +268,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UNCALLABLE")]
             Uncallable
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
@@ -266,167 +301,649 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "INBOUND")]
             Inbound
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationCalls" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="Recording">Recording.</param>
+        
+        
+        
         /// <param name="RecordingState">RecordingState.</param>
+        
+        
+        
         /// <param name="Muted">Muted.</param>
+        
+        
+        
         /// <param name="Confined">Confined.</param>
+        
+        
+        
         /// <param name="Held">Held.</param>
+        
+        
+        
         /// <param name="ErrorInfo">ErrorInfo.</param>
+        
+        
+        
         /// <param name="DisconnectType">DisconnectType.</param>
+        
+        
+        
         /// <param name="StartHoldTime">StartHoldTime.</param>
+        
+        
+        
         /// <param name="Direction">Direction.</param>
+        
+        
+        
         /// <param name="DocumentId">DocumentId.</param>
+        
+        
+        
         /// <param name="Self">Self.</param>
+        
+        
+        
         /// <param name="Other">Other.</param>
+        
+        
+        
         /// <param name="Provider">Provider.</param>
+        
+        
+        
         /// <param name="ScriptId">ScriptId.</param>
+        
+        
+        
         /// <param name="PeerId">PeerId.</param>
+        
+        
+        
         /// <param name="ConnectedTime">ConnectedTime.</param>
+        
+        
+        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
+        
+        
+        
         /// <param name="DisconnectReasons">DisconnectReasons.</param>
+        
+        
+        
         /// <param name="FaxStatus">FaxStatus.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ConversationNotificationCalls(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.State = State;
-            this.Recording = Recording;
-            this.RecordingState = RecordingState;
-            this.Muted = Muted;
-            this.Confined = Confined;
-            this.Held = Held;
-            this.ErrorInfo = ErrorInfo;
-            this.DisconnectType = DisconnectType;
-            this.StartHoldTime = StartHoldTime;
-            this.Direction = Direction;
-            this.DocumentId = DocumentId;
-            this.Self = Self;
-            this.Other = Other;
-            this.Provider = Provider;
-            this.ScriptId = ScriptId;
-            this.PeerId = PeerId;
-            this.ConnectedTime = ConnectedTime;
-            this.DisconnectedTime = DisconnectedTime;
-            this.DisconnectReasons = DisconnectReasons;
-            this.FaxStatus = FaxStatus;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Recording = Recording;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingState = RecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Muted = Muted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Confined = Confined;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Held = Held;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectType = DisconnectType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartHoldTime = StartHoldTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Direction = Direction;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DocumentId = DocumentId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Self = Self;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Other = Other;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provider = Provider;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScriptId = ScriptId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PeerId = PeerId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedTime = ConnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectedTime = DisconnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectReasons = DisconnectReasons;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FaxStatus = FaxStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Recording
         /// </summary>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Muted
         /// </summary>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Confined
         /// </summary>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public ConversationNotificationErrorInfo ErrorInfo { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DocumentId
         /// </summary>
         [DataMember(Name="documentId", EmitDefaultValue=false)]
         public string DocumentId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Self
         /// </summary>
         [DataMember(Name="self", EmitDefaultValue=false)]
         public ConversationNotificationSelf Self { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Other
         /// </summary>
         [DataMember(Name="other", EmitDefaultValue=false)]
         public ConversationNotificationAddress Other { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PeerId
         /// </summary>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectReasons
         /// </summary>
         [DataMember(Name="disconnectReasons", EmitDefaultValue=false)]
         public List<ConversationNotificationDisconnectReasons> DisconnectReasons { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FaxStatus
         /// </summary>
         [DataMember(Name="faxStatus", EmitDefaultValue=false)]
         public ConversationNotificationFaxStatus FaxStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -435,28 +952,51 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationCalls {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Recording: ").Append(Recording).Append("\n");
+            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            
             sb.Append("  Muted: ").Append(Muted).Append("\n");
+            
             sb.Append("  Confined: ").Append(Confined).Append("\n");
+            
             sb.Append("  Held: ").Append(Held).Append("\n");
+            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            
             sb.Append("  DocumentId: ").Append(DocumentId).Append("\n");
+            
             sb.Append("  Self: ").Append(Self).Append("\n");
+            
             sb.Append("  Other: ").Append(Other).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
+            
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -616,50 +1156,73 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
+                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
+                
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
+                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
+                
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
                 if (this.DocumentId != null)
                     hash = hash * 59 + this.DocumentId.GetHashCode();
+                
                 if (this.Self != null)
                     hash = hash * 59 + this.Self.GetHashCode();
+                
                 if (this.Other != null)
                     hash = hash * 59 + this.Other.GetHashCode();
+                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
                 if (this.DisconnectReasons != null)
                     hash = hash * 59 + this.DisconnectReasons.GetHashCode();
+                
                 if (this.FaxStatus != null)
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,55 +18,200 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SystemPromptResourceNotificationNotification :  IEquatable<SystemPromptResourceNotificationNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SystemPromptResourceNotificationNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="PromptId">PromptId.</param>
+        
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Language">Language.</param>
+        
+        
+        
         /// <param name="MediaUri">MediaUri.</param>
+        
+        
+        
         /// <param name="UploadStatus">UploadStatus.</param>
+        
+        
+        
         /// <param name="DurationSeconds">DurationSeconds.</param>
+        
+        
         public SystemPromptResourceNotificationNotification(string PromptId = null, string Id = null, string Language = null, string MediaUri = null, string UploadStatus = null, double? DurationSeconds = null)
         {
-            this.PromptId = PromptId;
-            this.Id = Id;
-            this.Language = Language;
-            this.MediaUri = MediaUri;
-            this.UploadStatus = UploadStatus;
-            this.DurationSeconds = DurationSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.PromptId = PromptId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Language = Language;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MediaUri = MediaUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UploadStatus = UploadStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationSeconds = DurationSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets PromptId
         /// </summary>
         [DataMember(Name="promptId", EmitDefaultValue=false)]
         public string PromptId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public string UploadStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DurationSeconds
         /// </summary>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public double? DurationSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +220,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SystemPromptResourceNotificationNotification {\n");
+            
             sb.Append("  PromptId: ").Append(PromptId).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Language: ").Append(Language).Append("\n");
+            
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
+            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
+            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,18 +312,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.PromptId != null)
                     hash = hash * 59 + this.PromptId.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+                
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
+                
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
+                
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
+                
                 return hash;
             }
         }

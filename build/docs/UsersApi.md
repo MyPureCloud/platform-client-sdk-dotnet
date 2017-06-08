@@ -76,13 +76,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Delete user
+                
                 Empty result = apiInstance.DeleteUser(userId);
                 Debug.WriteLine(result);
             }
@@ -132,13 +140,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Removes all the roles from the user.
+                
                 apiInstance.DeleteUserRoles(userId);
             }
             catch (Exception e)
@@ -187,14 +203,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var skillId = skillId_example;  // string | skillId
+            
+            
+            
 
             try
             {
+                
                 // Remove routing skill from user
+                
                 apiInstance.DeleteUserRoutingskill(userId, skillId);
             }
             catch (Exception e)
@@ -244,13 +272,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Clear associated station
+                
                 apiInstance.DeleteUserStationAssociatedstation(userId);
             }
             catch (Exception e)
@@ -299,13 +335,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Clear default station
+                
                 apiInstance.DeleteUserStationDefaultstation(userId);
             }
             catch (Exception e)
@@ -354,13 +398,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var type = type_example;  // string | Field type
+            
+            
+            
 
             try
             {
+                
                 // Fetch field config for an entity type
+                
                 FieldConfig result = apiInstance.GetFieldconfig(type);
                 Debug.WriteLine(result);
             }
@@ -378,7 +430,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **type** | **string**| Field type |  |
+| **type** | **string**| Field type | <br />**Values**: person, group, org, externalContact |
 {: class="table table-striped"}
 
 ### Return type
@@ -387,7 +439,7 @@ namespace Example
 
 <a name="getuser"></a>
 
-## [**User**](User.html) GetUser (string userId, List<string> expand = null)
+## [**User**](User.html) GetUser (string userId, List<string> expand = null, string state = null)
 
 Get user.
 
@@ -410,15 +462,32 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
+            
+            var state = state_example;  // string | Search for a user with this state (optional)  (default to active)
+            
+            
+            
 
             try
             {
+                
                 // Get user.
-                User result = apiInstance.GetUser(userId, expand);
+                
+                User result = apiInstance.GetUser(userId, expand, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -436,7 +505,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **state** | **string**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
 ### Return type
@@ -468,14 +538,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get adjacents
+                
                 Adjacents result = apiInstance.GetUserAdjacents(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -494,7 +576,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 ### Return type
@@ -526,13 +608,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Get a user's CallForwarding
+                
                 CallForwarding result = apiInstance.GetUserCallforwarding(userId);
                 Debug.WriteLine(result);
             }
@@ -582,14 +672,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get direct reports
+                
                 List&lt;User&gt; result = apiInstance.GetUserDirectreports(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -608,7 +710,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 ### Return type
@@ -640,17 +742,41 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get favorites
+                
                 UserEntityListing result = apiInstance.GetUserFavorites(userId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
             }
@@ -672,7 +798,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 ### Return type
@@ -704,14 +830,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | user Id
+            
+            
+            
+            
             var clientId = clientId_example;  // string | client Id
+            
+            
+            
 
             try
             {
+                
                 // Get a user's Geolocation
+                
                 Geolocation result = apiInstance.GetUserGeolocation(userId, clientId);
                 Debug.WriteLine(result);
             }
@@ -762,13 +900,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Get a OutOfOffice
+                
                 OutOfOffice result = apiInstance.GetUserOutofoffice(userId);
                 Debug.WriteLine(result);
             }
@@ -818,13 +964,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // List profile skills for a user
+                
                 List&lt;string&gt; result = apiInstance.GetUserProfileskills(userId);
                 Debug.WriteLine(result);
             }
@@ -874,16 +1028,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var joined = true;  // bool? | Is joined to the queue (optional)  (default to true)
+            
+            
+            
 
             try
             {
+                
                 // Get queues for user
+                
                 UserQueueEntityListing result = apiInstance.GetUserQueues(userId, pageSize, pageNumber, joined);
                 Debug.WriteLine(result);
             }
@@ -936,13 +1110,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Returns a listing of roles and permissions for a user.
+                
                 UserAuthorization result = apiInstance.GetUserRoles(userId);
                 Debug.WriteLine(result);
             }
@@ -992,16 +1174,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            
+            
+            
 
             try
             {
+                
                 // List routing skills for user
+                
                 UserSkillEntityListing result = apiInstance.GetUserRoutingskills(userId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -1022,7 +1224,7 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 ### Return type
@@ -1054,13 +1256,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Fetch the routing status of a user
+                
                 RoutingStatus result = apiInstance.GetUserRoutingstatus(userId);
                 Debug.WriteLine(result);
             }
@@ -1110,13 +1320,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
 
             try
             {
+                
                 // Get station information for user
+                
                 UserStations result = apiInstance.GetUserStation(userId);
                 Debug.WriteLine(result);
             }
@@ -1166,14 +1384,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get superiors
+                
                 List&lt;User&gt; result = apiInstance.GetUserSuperiors(userId, expand);
                 Debug.WriteLine(result);
             }
@@ -1192,7 +1422,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
 {: class="table table-striped"}
 
 ### Return type
@@ -1224,18 +1454,46 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            
             var id = new List<string>(); // List<string> | id (optional) 
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
+            
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
+            
+            
+            
 
             try
             {
+                
                 // Get the list of available users.
+                
                 UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, sortOrder, expand, state);
                 Debug.WriteLine(result);
             }
@@ -1256,9 +1514,9 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **id** | [**List<string>**](string.html)| id | [optional]  |
-| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC] |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
-| **state** | **string**| Only list users of this state | [optional] [default to active] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+| **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, deleted |
 {: class="table table-striped"}
 
 ### Return type
@@ -1290,13 +1548,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            
+            
 
             try
             {
+                
                 // Get current user details.
+                
                 UserMe result = apiInstance.GetUsersMe(expand);
                 Debug.WriteLine(result);
             }
@@ -1314,7 +1580,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups, date, geolocationsettings, organization, presencedefinitions, locationdefinitions, orgauthorization, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token |
 {: class="table table-striped"}
 
 ### Return type
@@ -1346,14 +1612,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var q64 = q64_example;  // string | q64
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | expand (optional) 
+            
+            
 
             try
             {
+                
                 // Search users using the q64 value returned from a previous search
+                
                 UsersSearchResponse result = apiInstance.GetUsersSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -1404,14 +1682,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new UpdateUser(); // UpdateUser | User
+            
+            
 
             try
             {
+                
                 // Update user
+                
                 User result = apiInstance.PatchUser(userId, body);
                 Debug.WriteLine(result);
             }
@@ -1462,14 +1752,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new CallForwarding(); // CallForwarding | Call forwarding
+            
+            
 
             try
             {
+                
                 // Patch a user's CallForwarding
+                
                 CallForwarding result = apiInstance.PatchUserCallforwarding(userId, body);
                 Debug.WriteLine(result);
             }
@@ -1520,15 +1822,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | user Id
+            
+            
+            
+            
             var clientId = clientId_example;  // string | client Id
+            
+            
+            
+            
+            
             var body = new Geolocation(); // Geolocation | Geolocation
+            
+            
 
             try
             {
+                
                 // Patch a user's Geolocation
+                
                 Geolocation result = apiInstance.PatchUserGeolocation(userId, clientId, body);
                 Debug.WriteLine(result);
             }
@@ -1580,15 +1898,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new UserQueue(); // UserQueue | Queue Member
+            
+            
 
             try
             {
+                
                 // Join or unjoin a queue for a user
+                
                 UserQueue result = apiInstance.PatchUserQueue(queueId, userId, body);
                 Debug.WriteLine(result);
             }
@@ -1640,14 +1974,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new List<UserQueue>(); // List<UserQueue> | User Queues
+            
+            
 
             try
             {
+                
                 // Join or unjoin a set of queues for a user
+                
                 UserQueueEntityListing result = apiInstance.PatchUserQueues(userId, body);
                 Debug.WriteLine(result);
             }
@@ -1698,13 +2044,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
+            
             var body = new AggregationQuery(); // AggregationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for user aggregates
+                
                 PresenceQueryResponse result = apiInstance.PostAnalyticsUsersAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1754,13 +2108,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
+            
             var body = new UserDetailsQuery(); // UserDetailsQuery | query
+            
+            
 
             try
             {
+                
                 // Query for user details
+                
                 AnalyticsUserDetailsQueryResponse result = apiInstance.PostAnalyticsUsersDetailsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1810,13 +2172,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
+            
             var body = new ObservationQuery(); // ObservationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for user observations
+                
                 ObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1866,14 +2236,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new UserRoutingSkillPost(); // UserRoutingSkillPost | Skill
+            
+            
 
             try
             {
+                
                 // Add routing skill to user
+                
                 UserRoutingSkill result = apiInstance.PostUserRoutingskills(userId, body);
                 Debug.WriteLine(result);
             }
@@ -1924,13 +2306,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
+            
             var body = new CreateUser(); // CreateUser | User
+            
+            
 
             try
             {
+                
                 // Create user
+                
                 User result = apiInstance.PostUsers(body);
                 Debug.WriteLine(result);
             }
@@ -1980,13 +2370,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
+            
             var body = new UserSearchRequest(); // UserSearchRequest | Search request options
+            
+            
 
             try
             {
+                
                 // Search users
+                
                 UsersSearchResponse result = apiInstance.PostUsersSearch(body);
                 Debug.WriteLine(result);
             }
@@ -2036,14 +2434,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new CallForwarding(); // CallForwarding | Call forwarding
+            
+            
 
             try
             {
+                
                 // Update a user's CallForwarding
+                
                 CallForwarding result = apiInstance.PutUserCallforwarding(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2094,14 +2504,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new OutOfOffice(); // OutOfOffice | The updated UserPresence
+            
+            
 
             try
             {
+                
                 // Update an OutOfOffice
+                
                 OutOfOffice result = apiInstance.PutUserOutofoffice(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2152,14 +2574,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var body = ;  // List<string> | Skills (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Update profile skills for a user
+                
                 List&lt;string&gt; result = apiInstance.PutUserProfileskills(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2210,14 +2644,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var body = ;  // List<string> | List of roles
+            
+            
+            
 
             try
             {
+                
                 // Sets the user's roles
+                
                 UserAuthorization result = apiInstance.PutUserRoles(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2268,15 +2714,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var skillId = skillId_example;  // string | skillId
+            
+            
+            
+            
+            
             var body = new UserRoutingSkill(); // UserRoutingSkill | Skill
+            
+            
 
             try
             {
+                
                 // Update routing skill proficiency or state.
+                
                 UserRoutingSkill result = apiInstance.PutUserRoutingskill(userId, skillId, body);
                 Debug.WriteLine(result);
             }
@@ -2328,14 +2790,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
             var body = new RoutingStatus(); // RoutingStatus | Routing Status
+            
+            
 
             try
             {
+                
                 // Update the routing status of a user
+                
                 RoutingStatus result = apiInstance.PutUserRoutingstatus(userId, body);
                 Debug.WriteLine(result);
             }
@@ -2386,14 +2860,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var stationId = stationId_example;  // string | stationId
+            
+            
+            
 
             try
             {
+                
                 // Set associated station
+                
                 apiInstance.PutUserStationAssociatedstationStationId(userId, stationId);
             }
             catch (Exception e)
@@ -2443,14 +2929,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new UsersApi();
+            
+            
             var userId = userId_example;  // string | User ID
+            
+            
+            
+            
             var stationId = stationId_example;  // string | stationId
+            
+            
+            
 
             try
             {
+                
                 // Set default station
+                
                 apiInstance.PutUserStationDefaultstationStationId(userId, stationId);
             }
             catch (Exception e)

@@ -18,17 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Certificate :  IEquatable<Certificate>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Certificate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Certificate() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Certificate" /> class.
         /// </summary>
+        
+        
         /// <param name="_Certificate">The certificate to parse. (required).</param>
+        
+        
         public Certificate(string _Certificate = null)
         {
+            
+            
+            
             // to ensure "_Certificate" is required (not null)
             if (_Certificate == null)
             {
@@ -38,7 +54,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this._Certificate = _Certificate;
             }
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The certificate to parse.
@@ -46,6 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The certificate to parse.</value>
         [DataMember(Name="certificate", EmitDefaultValue=false)]
         public string _Certificate { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Certificate {\n");
+            
             sb.Append("  _Certificate: ").Append(_Certificate).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,8 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this._Certificate != null)
                     hash = hash * 59 + this._Certificate.GetHashCode();
+                
                 return hash;
             }
         }

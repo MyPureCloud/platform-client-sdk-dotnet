@@ -18,17 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConsultTransferResponse :  IEquatable<ConsultTransferResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConsultTransferResponse() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransferResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="DestinationParticipantId">Participant ID to whom the call is being transferred. (required).</param>
+        
+        
         public ConsultTransferResponse(string DestinationParticipantId = null)
         {
+            
+            
+            
             // to ensure "DestinationParticipantId" is required (not null)
             if (DestinationParticipantId == null)
             {
@@ -38,7 +54,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.DestinationParticipantId = DestinationParticipantId;
             }
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Participant ID to whom the call is being transferred.
@@ -46,6 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Participant ID to whom the call is being transferred.</value>
         [DataMember(Name="destinationParticipantId", EmitDefaultValue=false)]
         public string DestinationParticipantId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConsultTransferResponse {\n");
+            
             sb.Append("  DestinationParticipantId: ").Append(DestinationParticipantId).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,8 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.DestinationParticipantId != null)
                     hash = hash * 59 + this.DestinationParticipantId.GetHashCode();
+                
                 return hash;
             }
         }

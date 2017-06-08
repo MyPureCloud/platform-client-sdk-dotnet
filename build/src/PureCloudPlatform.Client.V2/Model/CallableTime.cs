@@ -18,18 +18,46 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallableTime :  IEquatable<CallableTime>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTime" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CallableTime() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTime" /> class.
         /// </summary>
+        
+        
         /// <param name="TimeSlots">intervals for which it is acceptable to place outbound calls.</param>
+        
+        
+        
         /// <param name="TimeZoneId">time zone identifier to be applied to the time slots; for example Africa/Abidjan (required).</param>
+        
+        
         public CallableTime(List<CampaignTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
+            
+            
+            
+            
+            
+            
+            
             // to ensure "TimeZoneId" is required (not null)
             if (TimeZoneId == null)
             {
@@ -39,8 +67,26 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.TimeZoneId = TimeZoneId;
             }
-            this.TimeSlots = TimeSlots;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeSlots = TimeSlots;
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// intervals for which it is acceptable to place outbound calls
@@ -48,12 +94,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>intervals for which it is acceptable to place outbound calls</value>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<CampaignTimeSlot> TimeSlots { get; set; }
+        
+        
+        
         /// <summary>
         /// time zone identifier to be applied to the time slots; for example Africa/Abidjan
         /// </summary>
         /// <value>time zone identifier to be applied to the time slots; for example Africa/Abidjan</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -62,8 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableTime {\n");
+            
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
+            
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,10 +177,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.TimeSlots != null)
                     hash = hash * 59 + this.TimeSlots.GetHashCode();
+                
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
+                
                 return hash;
             }
         }

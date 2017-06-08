@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTranslations :  IEquatable<AvailableTranslations>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTranslations" /> class.
         /// </summary>
+        
+        
         /// <param name="OrgSpecific">OrgSpecific.</param>
+        
+        
+        
         /// <param name="Builtin">Builtin.</param>
+        
+        
         public AvailableTranslations(List<string> OrgSpecific = null, List<string> Builtin = null)
         {
-            this.OrgSpecific = OrgSpecific;
-            this.Builtin = Builtin;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.OrgSpecific = OrgSpecific;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Builtin = Builtin;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets OrgSpecific
         /// </summary>
         [DataMember(Name="orgSpecific", EmitDefaultValue=false)]
         public List<string> OrgSpecific { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Builtin
         /// </summary>
         [DataMember(Name="builtin", EmitDefaultValue=false)]
         public List<string> Builtin { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableTranslations {\n");
+            
             sb.Append("  OrgSpecific: ").Append(OrgSpecific).Append("\n");
+            
             sb.Append("  Builtin: ").Append(Builtin).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.OrgSpecific != null)
                     hash = hash * 59 + this.OrgSpecific.GetHashCode();
+                
                 if (this.Builtin != null)
                     hash = hash * 59 + this.Builtin.GetHashCode();
+                
                 return hash;
             }
         }

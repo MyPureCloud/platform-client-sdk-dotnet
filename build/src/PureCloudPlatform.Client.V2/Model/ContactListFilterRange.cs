@@ -18,48 +18,170 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterRange :  IEquatable<ContactListFilterRange>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterRange" /> class.
         /// </summary>
+        
+        
         /// <param name="Min">Min.</param>
+        
+        
+        
         /// <param name="Max">Max.</param>
+        
+        
+        
         /// <param name="MinInclusive">MinInclusive.</param>
+        
+        
+        
         /// <param name="MaxInclusive">MaxInclusive.</param>
+        
+        
+        
         /// <param name="InSet">InSet.</param>
+        
+        
         public ContactListFilterRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null)
         {
-            this.Min = Min;
-            this.Max = Max;
-            this.MinInclusive = MinInclusive;
-            this.MaxInclusive = MaxInclusive;
-            this.InSet = InSet;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Min = Min;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Max = Max;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MinInclusive = MinInclusive;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MaxInclusive = MaxInclusive;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InSet = InSet;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Min
         /// </summary>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public string Min { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Max
         /// </summary>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public string Max { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MinInclusive
         /// </summary>
         [DataMember(Name="minInclusive", EmitDefaultValue=false)]
         public bool? MinInclusive { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MaxInclusive
         /// </summary>
         [DataMember(Name="maxInclusive", EmitDefaultValue=false)]
         public bool? MaxInclusive { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets InSet
         /// </summary>
         [DataMember(Name="inSet", EmitDefaultValue=false)]
         public List<string> InSet { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +190,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterRange {\n");
+            
             sb.Append("  Min: ").Append(Min).Append("\n");
+            
             sb.Append("  Max: ").Append(Max).Append("\n");
+            
             sb.Append("  MinInclusive: ").Append(MinInclusive).Append("\n");
+            
             sb.Append("  MaxInclusive: ").Append(MaxInclusive).Append("\n");
+            
             sb.Append("  InSet: ").Append(InSet).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,16 +275,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Min != null)
                     hash = hash * 59 + this.Min.GetHashCode();
+                
                 if (this.Max != null)
                     hash = hash * 59 + this.Max.GetHashCode();
+                
                 if (this.MinInclusive != null)
                     hash = hash * 59 + this.MinInclusive.GetHashCode();
+                
                 if (this.MaxInclusive != null)
                     hash = hash * 59 + this.MaxInclusive.GetHashCode();
+                
                 if (this.InSet != null)
                     hash = hash * 59 + this.InSet.GetHashCode();
+                
                 return hash;
             }
         }

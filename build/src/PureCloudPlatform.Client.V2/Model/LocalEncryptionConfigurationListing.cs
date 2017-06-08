@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LocalEncryptionConfigurationListing :  IEquatable<LocalEncryptionConfigurationListing>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LocalEncryptionConfigurationListing" /> class.
         /// </summary>
+        
+        
         /// <param name="Total">Total.</param>
+        
+        
+        
         /// <param name="Entities">Entities.</param>
+        
+        
+        
         /// <param name="SelfUri">SelfUri.</param>
+        
+        
         public LocalEncryptionConfigurationListing(long? Total = null, List<LocalEncryptionConfiguration> Entities = null, string SelfUri = null)
         {
-            this.Total = Total;
-            this.Entities = Entities;
-            this.SelfUri = SelfUri;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Total = Total;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Entities = Entities;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SelfUri = SelfUri;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<LocalEncryptionConfiguration> Entities { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LocalEncryptionConfigurationListing {\n");
+            
             sb.Append("  Total: ").Append(Total).Append("\n");
+            
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
+                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

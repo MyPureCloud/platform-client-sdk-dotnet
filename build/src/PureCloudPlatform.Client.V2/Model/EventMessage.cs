@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EventMessage :  IEquatable<EventMessage>
     {
+        
+        
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
@@ -170,55 +172,199 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "RECYCLE_CAMPAIGN")]
             RecycleCampaign
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public CodeEnum? Code { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EventMessage" /> class.
         /// </summary>
+        
+        
         /// <param name="Code">Code.</param>
+        
+        
+        
         /// <param name="Message">Message.</param>
+        
+        
+        
         /// <param name="MessageWithParams">MessageWithParams.</param>
+        
+        
+        
         /// <param name="MessageParams">MessageParams.</param>
+        
+        
+        
         /// <param name="DocumentationUri">DocumentationUri.</param>
+        
+        
+        
         /// <param name="ResourceURIs">ResourceURIs.</param>
+        
+        
         public EventMessage(CodeEnum? Code = null, string Message = null, string MessageWithParams = null, Dictionary<string, Object> MessageParams = null, string DocumentationUri = null, List<string> ResourceURIs = null)
         {
-            this.Code = Code;
-            this.Message = Message;
-            this.MessageWithParams = MessageWithParams;
-            this.MessageParams = MessageParams;
-            this.DocumentationUri = DocumentationUri;
-            this.ResourceURIs = ResourceURIs;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Code = Code;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Message = Message;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MessageWithParams = MessageWithParams;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MessageParams = MessageParams;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DocumentationUri = DocumentationUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ResourceURIs = ResourceURIs;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
         public string Message { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageWithParams
         /// </summary>
         [DataMember(Name="messageWithParams", EmitDefaultValue=false)]
         public string MessageWithParams { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageParams
         /// </summary>
         [DataMember(Name="messageParams", EmitDefaultValue=false)]
         public Dictionary<string, Object> MessageParams { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DocumentationUri
         /// </summary>
         [DataMember(Name="documentationUri", EmitDefaultValue=false)]
         public string DocumentationUri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ResourceURIs
         /// </summary>
         [DataMember(Name="resourceURIs", EmitDefaultValue=false)]
         public List<string> ResourceURIs { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -227,12 +373,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EventMessage {\n");
+            
             sb.Append("  Code: ").Append(Code).Append("\n");
+            
             sb.Append("  Message: ").Append(Message).Append("\n");
+            
             sb.Append("  MessageWithParams: ").Append(MessageWithParams).Append("\n");
+            
             sb.Append("  MessageParams: ").Append(MessageParams).Append("\n");
+            
             sb.Append("  DocumentationUri: ").Append(DocumentationUri).Append("\n");
+            
             sb.Append("  ResourceURIs: ").Append(ResourceURIs).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -312,18 +465,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
+                
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();
+                
                 if (this.MessageWithParams != null)
                     hash = hash * 59 + this.MessageWithParams.GetHashCode();
+                
                 if (this.MessageParams != null)
                     hash = hash * 59 + this.MessageParams.GetHashCode();
+                
                 if (this.DocumentationUri != null)
                     hash = hash * 59 + this.DocumentationUri.GetHashCode();
+                
                 if (this.ResourceURIs != null)
                     hash = hash * 59 + this.ResourceURIs.GetHashCode();
+                
                 return hash;
             }
         }

@@ -56,13 +56,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a scheduled report job.
+                
                 apiInstance.DeleteAnalyticsReportingSchedule(scheduleId);
             }
             catch (Exception e)
@@ -111,13 +119,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get a conversation by id
+                
                 AnalyticsConversation result = apiInstance.GetAnalyticsConversationDetails(conversationId);
                 Debug.WriteLine(result);
             }
@@ -167,15 +183,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var locale = locale_example;  // string | Locale (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get list of reporting metadata.
+                
                 ReportMetaDataEntityListing result = apiInstance.GetAnalyticsReportingMetadata(pageNumber, pageSize, locale);
                 Debug.WriteLine(result);
             }
@@ -227,14 +259,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var reportId = reportId_example;  // string | Report ID
+            
+            
+            
+            
             var locale = locale_example;  // string | Locale (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a reporting metadata.
+                
                 ReportMetaData result = apiInstance.GetAnalyticsReportingReportIdMetadata(reportId, locale);
                 Debug.WriteLine(result);
             }
@@ -285,12 +329,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
 
             try
             {
+                
                 // Get a list of report formats
+                
                 List&lt;string&gt; result = apiInstance.GetAnalyticsReportingReportformats();
                 Debug.WriteLine(result);
             }
@@ -336,13 +384,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
 
             try
             {
+                
                 // Get a scheduled report job.
+                
                 ReportSchedule result = apiInstance.GetAnalyticsReportingSchedule(scheduleId);
                 Debug.WriteLine(result);
             }
@@ -392,15 +448,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
+            
             var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? |  (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Get list of completed scheduled report jobs.
+                
                 ReportRunEntryEntityDomainListing result = apiInstance.GetAnalyticsReportingScheduleHistory(scheduleId, pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -452,13 +524,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
 
             try
             {
+                
                 // Get most recently completed scheduled report job.
+                
                 ReportRunEntry result = apiInstance.GetAnalyticsReportingScheduleHistoryLatest(scheduleId);
                 Debug.WriteLine(result);
             }
@@ -508,14 +588,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var runId = runId_example;  // string | Run ID
+            
+            
+            
+            
             var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
 
             try
             {
+                
                 // A completed scheduled report job
+                
                 ReportRunEntry result = apiInstance.GetAnalyticsReportingScheduleHistoryRunId(runId, scheduleId);
                 Debug.WriteLine(result);
             }
@@ -566,14 +658,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Get a list of scheduled report jobs
+                
                 ReportScheduleEntityListing result = apiInstance.GetAnalyticsReportingSchedules(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -624,12 +728,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
 
             try
             {
+                
                 // Get a list of report time periods.
+                
                 List&lt;string&gt; result = apiInstance.GetAnalyticsReportingTimeperiods();
                 Debug.WriteLine(result);
             }
@@ -675,14 +783,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
+            
+            
 
             try
             {
+                
                 // Index conversation properties
+                
                 PropertyIndexRequest result = apiInstance.PostAnalyticsConversationDetailsProperties(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -733,13 +853,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new AggregationQuery(); // AggregationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for conversation aggregates
+                
                 AggregateQueryResponse result = apiInstance.PostAnalyticsConversationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -789,13 +917,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new ConversationQuery(); // ConversationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for conversation details
+                
                 AnalyticsConversationQueryResponse result = apiInstance.PostAnalyticsConversationsDetailsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -845,13 +981,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new AggregationQuery(); // AggregationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for evaluation aggregates
+                
                 AggregateQueryResponse result = apiInstance.PostAnalyticsEvaluationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -901,13 +1045,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new ObservationQuery(); // ObservationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for queue observations
+                
                 QualifierMappingObservationQueryResponse result = apiInstance.PostAnalyticsQueuesObservationsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -957,13 +1109,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
 
             try
             {
+                
                 // Place a scheduled report immediately into the reporting queue
+                
                 RunNowResponse result = apiInstance.PostAnalyticsReportingScheduleRunreport(scheduleId);
                 Debug.WriteLine(result);
             }
@@ -1013,13 +1173,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new ReportSchedule(); // ReportSchedule | ReportSchedule
+            
+            
 
             try
             {
+                
                 // Create a scheduled report job
+                
                 ReportSchedule result = apiInstance.PostAnalyticsReportingSchedules(body);
                 Debug.WriteLine(result);
             }
@@ -1069,13 +1237,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new AggregationQuery(); // AggregationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for user aggregates
+                
                 PresenceQueryResponse result = apiInstance.PostAnalyticsUsersAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1125,13 +1301,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new UserDetailsQuery(); // UserDetailsQuery | query
+            
+            
 
             try
             {
+                
                 // Query for user details
+                
                 AnalyticsUserDetailsQueryResponse result = apiInstance.PostAnalyticsUsersDetailsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1181,13 +1365,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
+            
             var body = new ObservationQuery(); // ObservationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for user observations
+                
                 ObservationQueryResponse result = apiInstance.PostAnalyticsUsersObservationsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -1237,14 +1429,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AnalyticsApi();
+            
+            
             var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
+            
+            
             var body = new ReportSchedule(); // ReportSchedule | ReportSchedule
+            
+            
 
             try
             {
+                
                 // Update a scheduled report job.
+                
                 ReportSchedule result = apiInstance.PutAnalyticsReportingSchedule(scheduleId, body);
                 Debug.WriteLine(result);
             }

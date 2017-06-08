@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkspaceMember :  IEquatable<WorkspaceMember>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The workspace member type.
         /// </summary>
@@ -45,29 +56,108 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "GROUP")]
             Group
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The workspace member type.
         /// </summary>
         /// <value>The workspace member type.</value>
         [DataMember(Name="memberType", EmitDefaultValue=false)]
         public MemberTypeEnum? MemberType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMember" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WorkspaceMember() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceMember" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Workspace">Workspace.</param>
+        
+        
+        
         /// <param name="MemberType">The workspace member type. (required).</param>
+        
+        
+        
         /// <param name="Member">Member.</param>
+        
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="Group">Group.</param>
+        
+        
+        
         /// <param name="SecurityProfile">SecurityProfile.</param>
+        
+        
+        
+        
         public WorkspaceMember(string Name = null, UriReference Workspace = null, MemberTypeEnum? MemberType = null, UriReference Member = null, User User = null, Group Group = null, SecurityProfile SecurityProfile = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "MemberType" is required (not null)
             if (MemberType == null)
             {
@@ -77,13 +167,93 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.MemberType = MemberType;
             }
-            this.Name = Name;
-            this.Workspace = Workspace;
-            this.Member = Member;
-            this.User = User;
-            this.Group = Group;
-            this.SecurityProfile = SecurityProfile;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Workspace = Workspace;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Member = Member;
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Group = Group;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SecurityProfile = SecurityProfile;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -91,42 +261,67 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Workspace
         /// </summary>
         [DataMember(Name="workspace", EmitDefaultValue=false)]
         public UriReference Workspace { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Member
         /// </summary>
         [DataMember(Name="member", EmitDefaultValue=false)]
         public UriReference Member { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Group
         /// </summary>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public Group Group { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SecurityProfile
         /// </summary>
         [DataMember(Name="securityProfile", EmitDefaultValue=false)]
         public SecurityProfile SecurityProfile { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -135,15 +330,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkspaceMember {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
+            
             sb.Append("  MemberType: ").Append(MemberType).Append("\n");
+            
             sb.Append("  Member: ").Append(Member).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  Group: ").Append(Group).Append("\n");
+            
             sb.Append("  SecurityProfile: ").Append(SecurityProfile).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -238,24 +443,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();
+                
                 if (this.MemberType != null)
                     hash = hash * 59 + this.MemberType.GetHashCode();
+                
                 if (this.Member != null)
                     hash = hash * 59 + this.Member.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
+                
                 if (this.SecurityProfile != null)
                     hash = hash * 59 + this.SecurityProfile.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

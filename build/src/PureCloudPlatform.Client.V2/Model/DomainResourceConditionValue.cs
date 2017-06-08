@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainResourceConditionValue :  IEquatable<DomainResourceConditionValue>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -56,41 +67,130 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "QUEUE")]
             Queue
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainResourceConditionValue" /> class.
         /// </summary>
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="Queue">Queue.</param>
+        
+        
+        
         /// <param name="Value">Value.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
         public DomainResourceConditionValue(User User = null, Queue Queue = null, string Value = null, TypeEnum? Type = null)
         {
-            this.User = User;
-            this.Queue = Queue;
-            this.Value = Value;
-            this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Queue = Queue;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Queue
         /// </summary>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public Queue Queue { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -99,10 +199,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainResourceConditionValue {\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  Queue: ").Append(Queue).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,14 +277,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.Queue != null)
                     hash = hash * 59 + this.Queue.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 return hash;
             }
         }

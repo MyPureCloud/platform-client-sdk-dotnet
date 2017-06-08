@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayDataUpdateNotificationIntradayHistoricalAgentData :  IEquatable<IntradayDataUpdateNotificationIntradayHistoricalAgentData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationIntradayHistoricalAgentData" /> class.
         /// </summary>
+        
+        
         /// <param name="OnQueueTimeSeconds">OnQueueTimeSeconds.</param>
+        
+        
+        
         /// <param name="InteractingTimeSeconds">InteractingTimeSeconds.</param>
+        
+        
         public IntradayDataUpdateNotificationIntradayHistoricalAgentData(double? OnQueueTimeSeconds = null, double? InteractingTimeSeconds = null)
         {
-            this.OnQueueTimeSeconds = OnQueueTimeSeconds;
-            this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.OnQueueTimeSeconds = OnQueueTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets OnQueueTimeSeconds
         /// </summary>
         [DataMember(Name="onQueueTimeSeconds", EmitDefaultValue=false)]
         public double? OnQueueTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets InteractingTimeSeconds
         /// </summary>
         [DataMember(Name="interactingTimeSeconds", EmitDefaultValue=false)]
         public double? InteractingTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayDataUpdateNotificationIntradayHistoricalAgentData {\n");
+            
             sb.Append("  OnQueueTimeSeconds: ").Append(OnQueueTimeSeconds).Append("\n");
+            
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.OnQueueTimeSeconds != null)
                     hash = hash * 59 + this.OnQueueTimeSeconds.GetHashCode();
+                
                 if (this.InteractingTimeSeconds != null)
                     hash = hash * 59 + this.InteractingTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

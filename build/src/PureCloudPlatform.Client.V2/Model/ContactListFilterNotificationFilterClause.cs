@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterNotificationFilterClause :  IEquatable<ContactListFilterNotificationFilterClause>
     {
+        
+        
         /// <summary>
         /// Gets or Sets FilterType
         /// </summary>
@@ -44,34 +46,109 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OR")]
             Or
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets FilterType
         /// </summary>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotificationFilterClause" /> class.
         /// </summary>
+        
+        
         /// <param name="FilterType">FilterType.</param>
+        
+        
+        
         /// <param name="Predicates">Predicates.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ContactListFilterNotificationFilterClause(FilterTypeEnum? FilterType = null, List<ContactListFilterNotificationPredicates> Predicates = null, Object AdditionalProperties = null)
         {
-            this.FilterType = FilterType;
-            this.Predicates = Predicates;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.FilterType = FilterType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Predicates = Predicates;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Predicates
         /// </summary>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<ContactListFilterNotificationPredicates> Predicates { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,9 +157,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterNotificationFilterClause {\n");
+            
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
+            
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,12 +228,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.FilterType != null)
                     hash = hash * 59 + this.FilterType.GetHashCode();
+                
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReportRunEntry :  IEquatable<ReportRunEntry>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RunStatus
         /// </summary>
@@ -68,35 +82,233 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "FAILED_DATALIMIT")]
             FailedDatalimit
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RunStatus
         /// </summary>
         [DataMember(Name="runStatus", EmitDefaultValue=false)]
         public RunStatusEnum? RunStatus { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReportRunEntry" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="ReportId">ReportId.</param>
+        
+        
+        
         /// <param name="RunTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="RunStatus">RunStatus.</param>
+        
+        
+        
         /// <param name="ErrorMessage">ErrorMessage.</param>
+        
+        
+        
         /// <param name="RunDurationMsec">RunDurationMsec.</param>
+        
+        
+        
         /// <param name="ReportUrl">ReportUrl.</param>
+        
+        
+        
         /// <param name="ReportFormat">ReportFormat.</param>
+        
+        
+        
         /// <param name="ScheduleUri">ScheduleUri.</param>
+        
+        
+        
+        
         public ReportRunEntry(string Name = null, string ReportId = null, DateTime? RunTime = null, RunStatusEnum? RunStatus = null, string ErrorMessage = null, long? RunDurationMsec = null, string ReportUrl = null, string ReportFormat = null, string ScheduleUri = null)
         {
-            this.Name = Name;
-            this.ReportId = ReportId;
-            this.RunTime = RunTime;
-            this.RunStatus = RunStatus;
-            this.ErrorMessage = ErrorMessage;
-            this.RunDurationMsec = RunDurationMsec;
-            this.ReportUrl = ReportUrl;
-            this.ReportFormat = ReportFormat;
-            this.ScheduleUri = ScheduleUri;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ReportId = ReportId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RunTime = RunTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RunStatus = RunStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorMessage = ErrorMessage;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RunDurationMsec = RunDurationMsec;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ReportUrl = ReportUrl;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ReportFormat = ReportFormat;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScheduleUri = ScheduleUri;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -104,53 +316,84 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ReportId
         /// </summary>
         [DataMember(Name="reportId", EmitDefaultValue=false)]
         public string ReportId { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="runTime", EmitDefaultValue=false)]
         public DateTime? RunTime { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorMessage
         /// </summary>
         [DataMember(Name="errorMessage", EmitDefaultValue=false)]
         public string ErrorMessage { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RunDurationMsec
         /// </summary>
         [DataMember(Name="runDurationMsec", EmitDefaultValue=false)]
         public long? RunDurationMsec { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ReportUrl
         /// </summary>
         [DataMember(Name="reportUrl", EmitDefaultValue=false)]
         public string ReportUrl { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ReportFormat
         /// </summary>
         [DataMember(Name="reportFormat", EmitDefaultValue=false)]
         public string ReportFormat { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScheduleUri
         /// </summary>
         [DataMember(Name="scheduleUri", EmitDefaultValue=false)]
         public string ScheduleUri { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -159,17 +402,29 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReportRunEntry {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  ReportId: ").Append(ReportId).Append("\n");
+            
             sb.Append("  RunTime: ").Append(RunTime).Append("\n");
+            
             sb.Append("  RunStatus: ").Append(RunStatus).Append("\n");
+            
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
+            
             sb.Append("  RunDurationMsec: ").Append(RunDurationMsec).Append("\n");
+            
             sb.Append("  ReportUrl: ").Append(ReportUrl).Append("\n");
+            
             sb.Append("  ReportFormat: ").Append(ReportFormat).Append("\n");
+            
             sb.Append("  ScheduleUri: ").Append(ScheduleUri).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -274,28 +529,40 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.ReportId != null)
                     hash = hash * 59 + this.ReportId.GetHashCode();
+                
                 if (this.RunTime != null)
                     hash = hash * 59 + this.RunTime.GetHashCode();
+                
                 if (this.RunStatus != null)
                     hash = hash * 59 + this.RunStatus.GetHashCode();
+                
                 if (this.ErrorMessage != null)
                     hash = hash * 59 + this.ErrorMessage.GetHashCode();
+                
                 if (this.RunDurationMsec != null)
                     hash = hash * 59 + this.RunDurationMsec.GetHashCode();
+                
                 if (this.ReportUrl != null)
                     hash = hash * 59 + this.ReportUrl.GetHashCode();
+                
                 if (this.ReportFormat != null)
                     hash = hash * 59 + this.ReportFormat.GetHashCode();
+                
                 if (this.ScheduleUri != null)
                     hash = hash * 59 + this.ScheduleUri.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

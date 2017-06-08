@@ -18,18 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GroupMembersUpdate :  IEquatable<GroupMembersUpdate>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupMembersUpdate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected GroupMembersUpdate() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="GroupMembersUpdate" /> class.
         /// </summary>
+        
+        
         /// <param name="MemberIds">A list of the ids of the members to add. (required).</param>
+        
+        
+        
         /// <param name="Version">The current group version. (required).</param>
+        
+        
         public GroupMembersUpdate(List<string> MemberIds = null, int? Version = null)
         {
+            
+            
+            
             // to ensure "MemberIds" is required (not null)
             if (MemberIds == null)
             {
@@ -39,6 +63,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.MemberIds = MemberIds;
             }
+            
+            
+            
+            
+            
             // to ensure "Version" is required (not null)
             if (Version == null)
             {
@@ -48,7 +77,21 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A list of the ids of the members to add.
@@ -56,12 +99,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A list of the ids of the members to add.</value>
         [DataMember(Name="memberIds", EmitDefaultValue=false)]
         public List<string> MemberIds { get; set; }
+        
+        
+        
         /// <summary>
         /// The current group version.
         /// </summary>
         /// <value>The current group version.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,8 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GroupMembersUpdate {\n");
+            
             sb.Append("  MemberIds: ").Append(MemberIds).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -131,10 +182,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.MemberIds != null)
                     hash = hash * 59 + this.MemberIds.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 return hash;
             }
         }

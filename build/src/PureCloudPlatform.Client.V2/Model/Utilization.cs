@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Utilization :  IEquatable<Utilization>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Utilization" /> class.
         /// </summary>
+        
+        
         /// <param name="_Utilization">Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression.</param>
+        
+        
         public Utilization(Dictionary<string, OrgMediaUtilization> _Utilization = null)
         {
-            this._Utilization = _Utilization;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this._Utilization = _Utilization;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Map of media types to utilization settings.  Map keys can be: call, chat, email, or socialExpression</value>
         [DataMember(Name="utilization", EmitDefaultValue=false)]
         public Dictionary<string, OrgMediaUtilization> _Utilization { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Utilization {\n");
+            
             sb.Append("  _Utilization: ").Append(_Utilization).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this._Utilization != null)
                     hash = hash * 59 + this._Utilization.GetHashCode();
+                
                 return hash;
             }
         }

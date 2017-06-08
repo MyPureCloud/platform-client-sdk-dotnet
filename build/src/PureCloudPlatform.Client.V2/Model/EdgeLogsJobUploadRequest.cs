@@ -18,17 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeLogsJobUploadRequest :  IEquatable<EdgeLogsJobUploadRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EdgeLogsJobUploadRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeLogsJobUploadRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="FileIds">A list of file ids to upload. (required).</param>
+        
+        
         public EdgeLogsJobUploadRequest(List<string> FileIds = null)
         {
+            
+            
+            
             // to ensure "FileIds" is required (not null)
             if (FileIds == null)
             {
@@ -38,7 +54,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.FileIds = FileIds;
             }
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A list of file ids to upload.
@@ -46,6 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A list of file ids to upload.</value>
         [DataMember(Name="fileIds", EmitDefaultValue=false)]
         public List<string> FileIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeLogsJobUploadRequest {\n");
+            
             sb.Append("  FileIds: ").Append(FileIds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,8 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.FileIds != null)
                     hash = hash * 59 + this.FileIds.GetHashCode();
+                
                 return hash;
             }
         }

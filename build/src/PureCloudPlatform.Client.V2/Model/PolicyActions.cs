@@ -18,79 +18,293 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PolicyActions :  IEquatable<PolicyActions>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
         /// </summary>
-        /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default &#x3D; true.</param>
-        /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false.</param>
-        /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false.</param>
+        
+        
+        /// <param name="RetainRecording">true to retain the recording associated with the conversation. Default = true.</param>
+        
+        
+        
+        /// <param name="DeleteRecording">true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false.</param>
+        
+        
+        
+        /// <param name="AlwaysDelete">true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false.</param>
+        
+        
+        
         /// <param name="AssignEvaluations">AssignEvaluations.</param>
+        
+        
+        
         /// <param name="AssignMeteredEvaluations">AssignMeteredEvaluations.</param>
+        
+        
+        
         /// <param name="AssignCalibrations">AssignCalibrations.</param>
+        
+        
+        
         /// <param name="RetentionDuration">RetentionDuration.</param>
+        
+        
+        
         /// <param name="InitiateScreenRecording">InitiateScreenRecording.</param>
+        
+        
+        
         /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
+        
+        
         public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
         {
-            this.RetainRecording = RetainRecording;
-            this.DeleteRecording = DeleteRecording;
-            this.AlwaysDelete = AlwaysDelete;
-            this.AssignEvaluations = AssignEvaluations;
-            this.AssignMeteredEvaluations = AssignMeteredEvaluations;
-            this.AssignCalibrations = AssignCalibrations;
-            this.RetentionDuration = RetentionDuration;
-            this.InitiateScreenRecording = InitiateScreenRecording;
-            this.MediaTranscriptions = MediaTranscriptions;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RetainRecording = RetainRecording;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DeleteRecording = DeleteRecording;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AlwaysDelete = AlwaysDelete;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AssignEvaluations = AssignEvaluations;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AssignMeteredEvaluations = AssignMeteredEvaluations;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AssignCalibrations = AssignCalibrations;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RetentionDuration = RetentionDuration;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InitiateScreenRecording = InitiateScreenRecording;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MediaTranscriptions = MediaTranscriptions;
+            
+            
+            
+            
         }
         
+        
+        
         /// <summary>
-        /// true to retain the recording associated with the conversation. Default &#x3D; true
+        /// true to retain the recording associated with the conversation. Default = true
         /// </summary>
-        /// <value>true to retain the recording associated with the conversation. Default &#x3D; true</value>
+        /// <value>true to retain the recording associated with the conversation. Default = true</value>
         [DataMember(Name="retainRecording", EmitDefaultValue=false)]
         public bool? RetainRecording { get; set; }
+        
+        
+        
         /// <summary>
-        /// true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false
+        /// true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false
         /// </summary>
-        /// <value>true to delete the recording associated with the conversation. If retainRecording &#x3D; true, this will be ignored. Default &#x3D; false</value>
+        /// <value>true to delete the recording associated with the conversation. If retainRecording = true, this will be ignored. Default = false</value>
         [DataMember(Name="deleteRecording", EmitDefaultValue=false)]
         public bool? DeleteRecording { get; set; }
+        
+        
+        
         /// <summary>
-        /// true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false
+        /// true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false
         /// </summary>
-        /// <value>true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default &#x3D; false</value>
+        /// <value>true to delete the recording associated with the conversation regardless of the values of retainRecording or deleteRecording. Default = false</value>
         [DataMember(Name="alwaysDelete", EmitDefaultValue=false)]
         public bool? AlwaysDelete { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AssignEvaluations
         /// </summary>
         [DataMember(Name="assignEvaluations", EmitDefaultValue=false)]
         public List<EvaluationAssignment> AssignEvaluations { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AssignMeteredEvaluations
         /// </summary>
         [DataMember(Name="assignMeteredEvaluations", EmitDefaultValue=false)]
         public List<MeteredEvaluationAssignment> AssignMeteredEvaluations { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AssignCalibrations
         /// </summary>
         [DataMember(Name="assignCalibrations", EmitDefaultValue=false)]
         public List<CalibrationAssignment> AssignCalibrations { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RetentionDuration
         /// </summary>
         [DataMember(Name="retentionDuration", EmitDefaultValue=false)]
         public RetentionDuration RetentionDuration { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets InitiateScreenRecording
         /// </summary>
         [DataMember(Name="initiateScreenRecording", EmitDefaultValue=false)]
         public InitiateScreenRecording InitiateScreenRecording { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaTranscriptions
         /// </summary>
         [DataMember(Name="mediaTranscriptions", EmitDefaultValue=false)]
         public List<MediaTranscription> MediaTranscriptions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -99,15 +313,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PolicyActions {\n");
+            
             sb.Append("  RetainRecording: ").Append(RetainRecording).Append("\n");
+            
             sb.Append("  DeleteRecording: ").Append(DeleteRecording).Append("\n");
+            
             sb.Append("  AlwaysDelete: ").Append(AlwaysDelete).Append("\n");
+            
             sb.Append("  AssignEvaluations: ").Append(AssignEvaluations).Append("\n");
+            
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
+            
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
+            
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
+            
             sb.Append("  InitiateScreenRecording: ").Append(InitiateScreenRecording).Append("\n");
+            
             sb.Append("  MediaTranscriptions: ").Append(MediaTranscriptions).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -202,24 +426,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.RetainRecording != null)
                     hash = hash * 59 + this.RetainRecording.GetHashCode();
+                
                 if (this.DeleteRecording != null)
                     hash = hash * 59 + this.DeleteRecording.GetHashCode();
+                
                 if (this.AlwaysDelete != null)
                     hash = hash * 59 + this.AlwaysDelete.GetHashCode();
+                
                 if (this.AssignEvaluations != null)
                     hash = hash * 59 + this.AssignEvaluations.GetHashCode();
+                
                 if (this.AssignMeteredEvaluations != null)
                     hash = hash * 59 + this.AssignMeteredEvaluations.GetHashCode();
+                
                 if (this.AssignCalibrations != null)
                     hash = hash * 59 + this.AssignCalibrations.GetHashCode();
+                
                 if (this.RetentionDuration != null)
                     hash = hash * 59 + this.RetentionDuration.GetHashCode();
+                
                 if (this.InitiateScreenRecording != null)
                     hash = hash * 59 + this.InitiateScreenRecording.GetHashCode();
+                
                 if (this.MediaTranscriptions != null)
                     hash = hash * 59 + this.MediaTranscriptions.GetHashCode();
+                
                 return hash;
             }
         }

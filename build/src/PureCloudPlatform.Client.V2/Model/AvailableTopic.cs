@@ -18,40 +18,130 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTopic :  IEquatable<AvailableTopic>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTopic" /> class.
         /// </summary>
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
+        
+        
         /// <param name="RequiresPermissions">RequiresPermissions.</param>
+        
+        
+        
         /// <param name="Schema">Schema.</param>
+        
+        
         public AvailableTopic(string Description = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null)
         {
-            this.Description = Description;
-            this.RequiresPermissions = RequiresPermissions;
-            this.Schema = Schema;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RequiresPermissions = RequiresPermissions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Schema = Schema;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// The globally unique identifier for the object.
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RequiresPermissions
         /// </summary>
         [DataMember(Name="requiresPermissions", EmitDefaultValue=false)]
         public List<string> RequiresPermissions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Schema
         /// </summary>
         [DataMember(Name="schema", EmitDefaultValue=false)]
         public Dictionary<string, Object> Schema { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,10 +150,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableTopic {\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  RequiresPermissions: ").Append(RequiresPermissions).Append("\n");
+            
             sb.Append("  Schema: ").Append(Schema).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -133,14 +228,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.RequiresPermissions != null)
                     hash = hash * 59 + this.RequiresPermissions.GetHashCode();
+                
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
+                
                 return hash;
             }
         }

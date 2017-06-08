@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QueueEmailAddress :  IEquatable<QueueEmailAddress>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueEmailAddress" /> class.
         /// </summary>
+        
+        
         /// <param name="Domain">Domain.</param>
+        
+        
+        
         /// <param name="Route">Route.</param>
+        
+        
         public QueueEmailAddress(UriReference Domain = null, InboundRoute Route = null)
         {
-            this.Domain = Domain;
-            this.Route = Route;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Domain = Domain;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Route = Route;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public UriReference Domain { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Route
         /// </summary>
         [DataMember(Name="route", EmitDefaultValue=false)]
         public InboundRoute Route { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QueueEmailAddress {\n");
+            
             sb.Append("  Domain: ").Append(Domain).Append("\n");
+            
             sb.Append("  Route: ").Append(Route).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
+                
                 if (this.Route != null)
                     hash = hash * 59 + this.Route.GetHashCode();
+                
                 return hash;
             }
         }

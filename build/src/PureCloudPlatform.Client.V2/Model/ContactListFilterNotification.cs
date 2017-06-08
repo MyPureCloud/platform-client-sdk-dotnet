@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ContactListFilterNotification :  IEquatable<ContactListFilterNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets FilterType
         /// </summary>
@@ -44,83 +70,295 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OR")]
             Or
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets FilterType
         /// </summary>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListFilterNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="DateCreated">DateCreated.</param>
+        
+        
+        
         /// <param name="DateModified">DateModified.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="ContactList">ContactList.</param>
+        
+        
+        
         /// <param name="ContactListColumns">ContactListColumns.</param>
+        
+        
+        
         /// <param name="Clauses">Clauses.</param>
+        
+        
+        
         /// <param name="FilterType">FilterType.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ContactListFilterNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, List<string> ContactListColumns = null, List<ContactListFilterNotificationClauses> Clauses = null, FilterTypeEnum? FilterType = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
-            this.ContactList = ContactList;
-            this.ContactListColumns = ContactListColumns;
-            this.Clauses = Clauses;
-            this.FilterType = FilterType;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactList = ContactList;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactListColumns = ContactListColumns;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Clauses = Clauses;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FilterType = FilterType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateModified
         /// </summary>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactList
         /// </summary>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public DocumentDataV2NotificationCreatedBy ContactList { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactListColumns
         /// </summary>
         [DataMember(Name="contactListColumns", EmitDefaultValue=false)]
         public List<string> ContactListColumns { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Clauses
         /// </summary>
         [DataMember(Name="clauses", EmitDefaultValue=false)]
         public List<ContactListFilterNotificationClauses> Clauses { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -129,16 +367,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ContactListFilterNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
+            
             sb.Append("  ContactListColumns: ").Append(ContactListColumns).Append("\n");
+            
             sb.Append("  Clauses: ").Append(Clauses).Append("\n");
+            
             sb.Append("  FilterType: ").Append(FilterType).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -238,26 +487,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
+                
                 if (this.ContactListColumns != null)
                     hash = hash * 59 + this.ContactListColumns.GetHashCode();
+                
                 if (this.Clauses != null)
                     hash = hash * 59 + this.Clauses.GetHashCode();
+                
                 if (this.FilterType != null)
                     hash = hash * 59 + this.FilterType.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

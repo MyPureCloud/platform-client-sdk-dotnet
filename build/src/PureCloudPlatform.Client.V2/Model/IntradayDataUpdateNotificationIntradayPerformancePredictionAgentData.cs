@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayDataUpdateNotificationIntradayPerformancePredictionAgentData :  IEquatable<IntradayDataUpdateNotificationIntradayPerformancePredictionAgentData>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationIntradayPerformancePredictionAgentData" /> class.
         /// </summary>
+        
+        
         /// <param name="InteractingTimeSeconds">InteractingTimeSeconds.</param>
+        
+        
         public IntradayDataUpdateNotificationIntradayPerformancePredictionAgentData(double? InteractingTimeSeconds = null)
         {
-            this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets InteractingTimeSeconds
         /// </summary>
         [DataMember(Name="interactingTimeSeconds", EmitDefaultValue=false)]
         public double? InteractingTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayDataUpdateNotificationIntradayPerformancePredictionAgentData {\n");
+            
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.InteractingTimeSeconds != null)
                     hash = hash * 59 + this.InteractingTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

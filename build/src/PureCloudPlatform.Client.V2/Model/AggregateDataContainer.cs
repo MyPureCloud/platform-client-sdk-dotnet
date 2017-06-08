@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AggregateDataContainer :  IEquatable<AggregateDataContainer>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateDataContainer" /> class.
         /// </summary>
+        
+        
         /// <param name="Group">A mapping from dimension to value.</param>
+        
+        
+        
         /// <param name="Data">Data.</param>
+        
+        
         public AggregateDataContainer(Dictionary<string, string> Group = null, List<StatisticalResponse> Data = null)
         {
-            this.Group = Group;
-            this.Data = Data;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Group = Group;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Data = Data;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A mapping from dimension to value
@@ -35,11 +83,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A mapping from dimension to value</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public Dictionary<string, string> Group { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public List<StatisticalResponse> Data { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,8 +101,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AggregateDataContainer {\n");
+            
             sb.Append("  Group: ").Append(Group).Append("\n");
+            
             sb.Append("  Data: ").Append(Data).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,10 +165,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
+                
                 if (this.Data != null)
                     hash = hash * 59 + this.Data.GetHashCode();
+                
                 return hash;
             }
         }

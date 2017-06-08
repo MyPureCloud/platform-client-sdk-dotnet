@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsUserDetailsQueryResponse :  IEquatable<AnalyticsUserDetailsQueryResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserDetailsQueryResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="UserDetails">UserDetails.</param>
+        
+        
+        
         /// <param name="Aggregations">Aggregations.</param>
+        
+        
         public AnalyticsUserDetailsQueryResponse(List<AnalyticsUserDetail> UserDetails = null, List<AggregationResult> Aggregations = null)
         {
-            this.UserDetails = UserDetails;
-            this.Aggregations = Aggregations;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.UserDetails = UserDetails;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Aggregations = Aggregations;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets UserDetails
         /// </summary>
         [DataMember(Name="userDetails", EmitDefaultValue=false)]
         public List<AnalyticsUserDetail> UserDetails { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Aggregations
         /// </summary>
         [DataMember(Name="aggregations", EmitDefaultValue=false)]
         public List<AggregationResult> Aggregations { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsUserDetailsQueryResponse {\n");
+            
             sb.Append("  UserDetails: ").Append(UserDetails).Append("\n");
+            
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.UserDetails != null)
                     hash = hash * 59 + this.UserDetails.GetHashCode();
+                
                 if (this.Aggregations != null)
                     hash = hash * 59 + this.Aggregations.GetHashCode();
+                
                 return hash;
             }
         }

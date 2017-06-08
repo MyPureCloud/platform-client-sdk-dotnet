@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExportUriNotification :  IEquatable<ExportUriNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportUriNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Uri">Uri.</param>
+        
+        
+        
         /// <param name="ExportTimestamp">ExportTimestamp.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ExportUriNotification(string Uri = null, string ExportTimestamp = null, Object AdditionalProperties = null)
         {
-            this.Uri = Uri;
-            this.ExportTimestamp = ExportTimestamp;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Uri = Uri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExportTimestamp = ExportTimestamp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Uri
         /// </summary>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExportTimestamp
         /// </summary>
         [DataMember(Name="exportTimestamp", EmitDefaultValue=false)]
         public string ExportTimestamp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExportUriNotification {\n");
+            
             sb.Append("  Uri: ").Append(Uri).Append("\n");
+            
             sb.Append("  ExportTimestamp: ").Append(ExportTimestamp).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
+                
                 if (this.ExportTimestamp != null)
                     hash = hash * 59 + this.ExportTimestamp.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

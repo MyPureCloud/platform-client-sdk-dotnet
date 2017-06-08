@@ -18,41 +18,140 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FieldConfigs :  IEquatable<FieldConfigs>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FieldConfigs" /> class.
         /// </summary>
+        
+        
         /// <param name="Org">Org.</param>
+        
+        
+        
         /// <param name="Person">Person.</param>
+        
+        
+        
         /// <param name="Group">Group.</param>
+        
+        
+        
         /// <param name="ExternalContact">ExternalContact.</param>
+        
+        
         public FieldConfigs(FieldConfig Org = null, FieldConfig Person = null, FieldConfig Group = null, FieldConfig ExternalContact = null)
         {
-            this.Org = Org;
-            this.Person = Person;
-            this.Group = Group;
-            this.ExternalContact = ExternalContact;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Org = Org;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Person = Person;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Group = Group;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalContact = ExternalContact;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Org
         /// </summary>
         [DataMember(Name="org", EmitDefaultValue=false)]
         public FieldConfig Org { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Person
         /// </summary>
         [DataMember(Name="person", EmitDefaultValue=false)]
         public FieldConfig Person { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Group
         /// </summary>
         [DataMember(Name="group", EmitDefaultValue=false)]
         public FieldConfig Group { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExternalContact
         /// </summary>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
         public FieldConfig ExternalContact { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,10 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FieldConfigs {\n");
+            
             sb.Append("  Org: ").Append(Org).Append("\n");
+            
             sb.Append("  Person: ").Append(Person).Append("\n");
+            
             sb.Append("  Group: ").Append(Group).Append("\n");
+            
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,14 +238,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Org != null)
                     hash = hash * 59 + this.Org.GetHashCode();
+                
                 if (this.Person != null)
                     hash = hash * 59 + this.Person.GetHashCode();
+                
                 if (this.Group != null)
                     hash = hash * 59 + this.Group.GetHashCode();
+                
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationSocialExpression :  IEquatable<ConversationNotificationSocialExpression>
     {
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -80,6 +82,40 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NONE")]
             None
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -190,125 +226,466 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UNCALLABLE")]
             Uncallable
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationSocialExpression" /> class.
         /// </summary>
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="SocialMediaId">SocialMediaId.</param>
+        
+        
+        
         /// <param name="SocialMediaHub">SocialMediaHub.</param>
+        
+        
+        
         /// <param name="SocialUserName">SocialUserName.</param>
+        
+        
+        
         /// <param name="PreviewText">PreviewText.</param>
+        
+        
+        
         /// <param name="RecordingId">RecordingId.</param>
+        
+        
+        
         /// <param name="Held">Held.</param>
+        
+        
+        
         /// <param name="Provider">Provider.</param>
+        
+        
+        
         /// <param name="ScriptId">ScriptId.</param>
+        
+        
+        
         /// <param name="PeerId">PeerId.</param>
+        
+        
+        
         /// <param name="DisconnectType">DisconnectType.</param>
+        
+        
+        
         /// <param name="StartHoldTime">StartHoldTime.</param>
+        
+        
+        
         /// <param name="ConnectedTime">ConnectedTime.</param>
+        
+        
+        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ConversationNotificationSocialExpression(StateEnum? State = null, string Id = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null, string RecordingId = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
-            this.State = State;
-            this.Id = Id;
-            this.SocialMediaId = SocialMediaId;
-            this.SocialMediaHub = SocialMediaHub;
-            this.SocialUserName = SocialUserName;
-            this.PreviewText = PreviewText;
-            this.RecordingId = RecordingId;
-            this.Held = Held;
-            this.Provider = Provider;
-            this.ScriptId = ScriptId;
-            this.PeerId = PeerId;
-            this.DisconnectType = DisconnectType;
-            this.StartHoldTime = StartHoldTime;
-            this.ConnectedTime = ConnectedTime;
-            this.DisconnectedTime = DisconnectedTime;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SocialMediaId = SocialMediaId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SocialMediaHub = SocialMediaHub;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SocialUserName = SocialUserName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PreviewText = PreviewText;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingId = RecordingId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Held = Held;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provider = Provider;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScriptId = ScriptId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PeerId = PeerId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectType = DisconnectType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartHoldTime = StartHoldTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedTime = ConnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectedTime = DisconnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SocialMediaId
         /// </summary>
         [DataMember(Name="socialMediaId", EmitDefaultValue=false)]
         public string SocialMediaId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SocialMediaHub
         /// </summary>
         [DataMember(Name="socialMediaHub", EmitDefaultValue=false)]
         public string SocialMediaHub { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SocialUserName
         /// </summary>
         [DataMember(Name="socialUserName", EmitDefaultValue=false)]
         public string SocialUserName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PreviewText
         /// </summary>
         [DataMember(Name="previewText", EmitDefaultValue=false)]
         public string PreviewText { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingId
         /// </summary>
         [DataMember(Name="recordingId", EmitDefaultValue=false)]
         public string RecordingId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Held
         /// </summary>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PeerId
         /// </summary>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StartHoldTime
         /// </summary>
         [DataMember(Name="startHoldTime", EmitDefaultValue=false)]
         public DateTime? StartHoldTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -317,22 +694,39 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationSocialExpression {\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
+            
             sb.Append("  SocialMediaHub: ").Append(SocialMediaHub).Append("\n");
+            
             sb.Append("  SocialUserName: ").Append(SocialUserName).Append("\n");
+            
             sb.Append("  PreviewText: ").Append(PreviewText).Append("\n");
+            
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
+            
             sb.Append("  Held: ").Append(Held).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            
             sb.Append("  StartHoldTime: ").Append(StartHoldTime).Append("\n");
+            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -462,38 +856,55 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.SocialMediaId != null)
                     hash = hash * 59 + this.SocialMediaId.GetHashCode();
+                
                 if (this.SocialMediaHub != null)
                     hash = hash * 59 + this.SocialMediaHub.GetHashCode();
+                
                 if (this.SocialUserName != null)
                     hash = hash * 59 + this.SocialUserName.GetHashCode();
+                
                 if (this.PreviewText != null)
                     hash = hash * 59 + this.PreviewText.GetHashCode();
+                
                 if (this.RecordingId != null)
                     hash = hash * 59 + this.RecordingId.GetHashCode();
+                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
+                
                 if (this.StartHoldTime != null)
                     hash = hash * 59 + this.StartHoldTime.GetHashCode();
+                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

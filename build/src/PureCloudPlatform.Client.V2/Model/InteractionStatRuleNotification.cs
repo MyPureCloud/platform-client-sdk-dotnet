@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InteractionStatRuleNotification :  IEquatable<InteractionStatRuleNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Dimension
         /// </summary>
@@ -44,6 +52,16 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "userId")]
             Userid
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
@@ -118,6 +136,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "tAcw")]
             Tacw
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
@@ -150,6 +172,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "email")]
             Email
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumericRange
         /// </summary>
@@ -200,6 +226,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ne")]
             Ne
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Statistic
         /// </summary>
@@ -238,6 +268,24 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "max")]
             Max
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -270,111 +318,400 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Dimension
         /// </summary>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public DimensionEnum? Dimension { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaType
         /// </summary>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumericRange
         /// </summary>
         [DataMember(Name="numericRange", EmitDefaultValue=false)]
         public NumericRangeEnum? NumericRange { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Statistic
         /// </summary>
         [DataMember(Name="statistic", EmitDefaultValue=false)]
         public StatisticEnum? Statistic { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="InteractionStatRuleNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Dimension">Dimension.</param>
+        
+        
+        
         /// <param name="DimensionValue">DimensionValue.</param>
+        
+        
+        
         /// <param name="DimensionValueName">DimensionValueName.</param>
+        
+        
+        
         /// <param name="Metric">Metric.</param>
+        
+        
+        
         /// <param name="MediaType">MediaType.</param>
+        
+        
+        
         /// <param name="NumericRange">NumericRange.</param>
+        
+        
+        
         /// <param name="Statistic">Statistic.</param>
+        
+        
+        
         /// <param name="Value">Value.</param>
+        
+        
+        
         /// <param name="InAlarm">InAlarm.</param>
+        
+        
+        
         /// <param name="Enabled">Enabled.</param>
+        
+        
+        
         /// <param name="NotificationUsers">NotificationUsers.</param>
+        
+        
+        
         /// <param name="AlertTypes">AlertTypes.</param>
+        
+        
         public InteractionStatRuleNotification(string Id = null, string Name = null, DimensionEnum? Dimension = null, string DimensionValue = null, string DimensionValueName = null, MetricEnum? Metric = null, MediaTypeEnum? MediaType = null, NumericRangeEnum? NumericRange = null, StatisticEnum? Statistic = null, double? Value = null, bool? InAlarm = null, bool? Enabled = null, List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Dimension = Dimension;
-            this.DimensionValue = DimensionValue;
-            this.DimensionValueName = DimensionValueName;
-            this.Metric = Metric;
-            this.MediaType = MediaType;
-            this.NumericRange = NumericRange;
-            this.Statistic = Statistic;
-            this.Value = Value;
-            this.InAlarm = InAlarm;
-            this.Enabled = Enabled;
-            this.NotificationUsers = NotificationUsers;
-            this.AlertTypes = AlertTypes;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Dimension = Dimension;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DimensionValue = DimensionValue;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DimensionValueName = DimensionValueName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Metric = Metric;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MediaType = MediaType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumericRange = NumericRange;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Statistic = Statistic;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InAlarm = InAlarm;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Enabled = Enabled;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NotificationUsers = NotificationUsers;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AlertTypes = AlertTypes;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DimensionValue
         /// </summary>
         [DataMember(Name="dimensionValue", EmitDefaultValue=false)]
         public string DimensionValue { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DimensionValueName
         /// </summary>
         [DataMember(Name="dimensionValueName", EmitDefaultValue=false)]
         public string DimensionValueName { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public double? Value { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets InAlarm
         /// </summary>
         [DataMember(Name="inAlarm", EmitDefaultValue=false)]
         public bool? InAlarm { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NotificationUsers
         /// </summary>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -383,20 +720,35 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InteractionStatRuleNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
+            
             sb.Append("  DimensionValue: ").Append(DimensionValue).Append("\n");
+            
             sb.Append("  DimensionValueName: ").Append(DimensionValueName).Append("\n");
+            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
+            
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            
             sb.Append("  NumericRange: ").Append(NumericRange).Append("\n");
+            
             sb.Append("  Statistic: ").Append(Statistic).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
+            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
+            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -516,34 +868,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
+                
                 if (this.DimensionValue != null)
                     hash = hash * 59 + this.DimensionValue.GetHashCode();
+                
                 if (this.DimensionValueName != null)
                     hash = hash * 59 + this.DimensionValueName.GetHashCode();
+                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
+                
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+                
                 if (this.NumericRange != null)
                     hash = hash * 59 + this.NumericRange.GetHashCode();
+                
                 if (this.Statistic != null)
                     hash = hash * 59 + this.Statistic.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.InAlarm != null)
                     hash = hash * 59 + this.InAlarm.GetHashCode();
+                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
+                
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
+                
                 return hash;
             }
         }

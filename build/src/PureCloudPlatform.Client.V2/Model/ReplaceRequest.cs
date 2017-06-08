@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ReplaceRequest :  IEquatable<ReplaceRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplaceRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="ChangeNumber">ChangeNumber.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="AuthToken">AuthToken.</param>
+        
+        
         public ReplaceRequest(int? ChangeNumber = null, string Name = null, string AuthToken = null)
         {
-            this.ChangeNumber = ChangeNumber;
-            this.Name = Name;
-            this.AuthToken = AuthToken;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ChangeNumber = ChangeNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AuthToken = AuthToken;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ChangeNumber
         /// </summary>
         [DataMember(Name="changeNumber", EmitDefaultValue=false)]
         public int? ChangeNumber { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AuthToken
         /// </summary>
         [DataMember(Name="authToken", EmitDefaultValue=false)]
         public string AuthToken { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ReplaceRequest {\n");
+            
             sb.Append("  ChangeNumber: ").Append(ChangeNumber).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  AuthToken: ").Append(AuthToken).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ChangeNumber != null)
                     hash = hash * 59 + this.ChangeNumber.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.AuthToken != null)
                     hash = hash * 59 + this.AuthToken.GetHashCode();
+                
                 return hash;
             }
         }

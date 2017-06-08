@@ -18,55 +18,200 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ScreenShareConversationNotificationWrapup :  IEquatable<ScreenShareConversationNotificationWrapup>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ScreenShareConversationNotificationWrapup" /> class.
         /// </summary>
+        
+        
         /// <param name="Code">Code.</param>
+        
+        
+        
         /// <param name="Notes">Notes.</param>
+        
+        
+        
         /// <param name="Tags">Tags.</param>
+        
+        
+        
         /// <param name="DurationSeconds">DurationSeconds.</param>
+        
+        
+        
         /// <param name="EndTime">EndTime.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ScreenShareConversationNotificationWrapup(string Code = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, Object AdditionalProperties = null)
         {
-            this.Code = Code;
-            this.Notes = Notes;
-            this.Tags = Tags;
-            this.DurationSeconds = DurationSeconds;
-            this.EndTime = EndTime;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Code = Code;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Notes = Notes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Tags = Tags;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationSeconds = DurationSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndTime = EndTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Notes
         /// </summary>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DurationSeconds
         /// </summary>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public int? DurationSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EndTime
         /// </summary>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +220,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ScreenShareConversationNotificationWrapup {\n");
+            
             sb.Append("  Code: ").Append(Code).Append("\n");
+            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
+            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
+            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
+            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,18 +312,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
+                
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
+                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
+                
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
+                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

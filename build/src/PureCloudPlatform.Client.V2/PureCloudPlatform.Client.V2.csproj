@@ -3,12 +3,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B76EF21A-2758-4AA1-8C55-AA458A283C6A}</ProjectGuid>
+    <ProjectGuid>{663A9868-9250-4A8E-8DA7-7FE69A906BA0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PureCloud Platform Client SDK</RootNamespace>
     <AssemblyName>PureCloud Platform Client SDK</AssemblyName>
+    
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    
+    
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">

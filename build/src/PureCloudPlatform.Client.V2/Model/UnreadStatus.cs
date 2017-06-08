@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UnreadStatus :  IEquatable<UnreadStatus>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UnreadStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="Unread">Sets if the alert is read or unread..</param>
+        
+        
         public UnreadStatus(bool? Unread = null)
         {
-            this.Unread = Unread;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Unread = Unread;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Sets if the alert is read or unread.
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Sets if the alert is read or unread.</value>
         [DataMember(Name="unread", EmitDefaultValue=false)]
         public bool? Unread { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UnreadStatus {\n");
+            
             sb.Append("  Unread: ").Append(Unread).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Unread != null)
                     hash = hash * 59 + this.Unread.GetHashCode();
+                
                 return hash;
             }
         }

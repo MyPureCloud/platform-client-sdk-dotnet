@@ -68,13 +68,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a heart beat alert
+                
                 apiInstance.DeleteAlertingHeartbeatAlert(alertId);
             }
             catch (Exception e)
@@ -123,13 +131,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a heart beat rule.
+                
                 apiInstance.DeleteAlertingHeartbeatRule(ruleId);
             }
             catch (Exception e)
@@ -178,13 +194,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an interaction stats alert
+                
                 apiInstance.DeleteAlertingInteractionstatsAlert(alertId);
             }
             catch (Exception e)
@@ -233,13 +257,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an interaction stats rule.
+                
                 apiInstance.DeleteAlertingInteractionstatsRule(ruleId);
             }
             catch (Exception e)
@@ -288,13 +320,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a routing status alert
+                
                 apiInstance.DeleteAlertingRoutingstatusAlert(alertId);
             }
             catch (Exception e)
@@ -343,13 +383,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a routing status rule.
+                
                 apiInstance.DeleteAlertingRoutingstatusRule(ruleId);
             }
             catch (Exception e)
@@ -398,13 +446,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a user presence alert
+                
                 apiInstance.DeleteAlertingUserpresenceAlert(alertId);
             }
             catch (Exception e)
@@ -453,13 +509,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
 
             try
             {
+                
                 // Delete a user presence rule.
+                
                 apiInstance.DeleteAlertingUserpresenceRule(ruleId);
             }
             catch (Exception e)
@@ -508,14 +572,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a heart beat alert
+                
                 HeartBeatAlert result = apiInstance.GetAlertingHeartbeatAlert(alertId, expand);
                 Debug.WriteLine(result);
             }
@@ -534,7 +610,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -566,13 +642,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get heart beat alert list.
+                
                 HeartBeatAlertContainer result = apiInstance.GetAlertingHeartbeatAlerts(expand);
                 Debug.WriteLine(result);
             }
@@ -590,7 +674,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -622,14 +706,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a heart beat rule.
+                
                 HeartBeatRule result = apiInstance.GetAlertingHeartbeatRule(ruleId, expand);
                 Debug.WriteLine(result);
             }
@@ -648,7 +744,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -680,13 +776,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a heart beat rule list.
+                
                 HeartBeatRuleContainer result = apiInstance.GetAlertingHeartbeatRules(expand);
                 Debug.WriteLine(result);
             }
@@ -704,7 +808,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -736,14 +840,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get an interaction stats alert
+                
                 InteractionStatsAlert result = apiInstance.GetAlertingInteractionstatsAlert(alertId, expand);
                 Debug.WriteLine(result);
             }
@@ -762,7 +878,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -794,13 +910,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get interaction stats alert list.
+                
                 InteractionStatsAlertContainer result = apiInstance.GetAlertingInteractionstatsAlerts(expand);
                 Debug.WriteLine(result);
             }
@@ -818,7 +942,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -850,12 +974,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
 
             try
             {
+                
                 // Gets user unread count of interaction stats alerts.
+                
                 UnreadMetric result = apiInstance.GetAlertingInteractionstatsAlertsUnread();
                 Debug.WriteLine(result);
             }
@@ -901,14 +1029,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get an interaction stats rule.
+                
                 InteractionStatsRule result = apiInstance.GetAlertingInteractionstatsRule(ruleId, expand);
                 Debug.WriteLine(result);
             }
@@ -927,7 +1067,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -959,13 +1099,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get an interaction stats rule list.
+                
                 InteractionStatsRuleContainer result = apiInstance.GetAlertingInteractionstatsRules(expand);
                 Debug.WriteLine(result);
             }
@@ -983,7 +1131,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -1015,14 +1163,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a routing status alert
+                
                 RoutingStatusAlert result = apiInstance.GetAlertingRoutingstatusAlert(alertId, expand);
                 Debug.WriteLine(result);
             }
@@ -1041,7 +1201,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 ### Return type
@@ -1073,13 +1233,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get routing status alert list.
+                
                 RoutingStatusAlertContainer result = apiInstance.GetAlertingRoutingstatusAlerts(expand);
                 Debug.WriteLine(result);
             }
@@ -1097,7 +1265,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 ### Return type
@@ -1129,14 +1297,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a routing status rule.
+                
                 RoutingStatusRule result = apiInstance.GetAlertingRoutingstatusRule(ruleId, expand);
                 Debug.WriteLine(result);
             }
@@ -1155,7 +1335,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 ### Return type
@@ -1187,13 +1367,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a routing status rule list.
+                
                 RoutingStatusRuleContainer result = apiInstance.GetAlertingRoutingstatusRules(expand);
                 Debug.WriteLine(result);
             }
@@ -1211,7 +1399,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 ### Return type
@@ -1243,14 +1431,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a user presence alert
+                
                 UserPresenceAlert result = apiInstance.GetAlertingUserpresenceAlert(alertId, expand);
                 Debug.WriteLine(result);
             }
@@ -1269,7 +1469,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -1301,13 +1501,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get user presence alert list.
+                
                 UserPresenceAlertContainer result = apiInstance.GetAlertingUserpresenceAlerts(expand);
                 Debug.WriteLine(result);
             }
@@ -1325,7 +1533,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -1357,14 +1565,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a user presence rule.
+                
                 UserPresenceRule result = apiInstance.GetAlertingUserpresenceRule(ruleId, expand);
                 Debug.WriteLine(result);
             }
@@ -1383,7 +1603,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -1415,13 +1635,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get a user presence rule list.
+                
                 UserPresenceRuleContainer result = apiInstance.GetAlertingUserpresenceRules(expand);
                 Debug.WriteLine(result);
             }
@@ -1439,7 +1667,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -1471,14 +1699,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var body = new HeartBeatRule(); // HeartBeatRule | HeartBeatRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Create a heart beat rule.
+                
                 HeartBeatRule result = apiInstance.PostAlertingHeartbeatRules(body, expand);
                 Debug.WriteLine(result);
             }
@@ -1497,7 +1737,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -1529,14 +1769,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Create an interaction stats rule.
+                
                 InteractionStatsRule result = apiInstance.PostAlertingInteractionstatsRules(body, expand);
                 Debug.WriteLine(result);
             }
@@ -1555,7 +1807,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -1587,14 +1839,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var body = new RoutingStatusRule(); // RoutingStatusRule | RoutingStatusRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Create a routing status rule.
+                
                 RoutingStatusRule result = apiInstance.PostAlertingRoutingstatusRules(body, expand);
                 Debug.WriteLine(result);
             }
@@ -1613,7 +1877,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 ### Return type
@@ -1645,14 +1909,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
+            
             var body = new UserPresenceRule(); // UserPresenceRule | UserPresenceRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Create a user presence rule.
+                
                 UserPresenceRule result = apiInstance.PostAlertingUserpresenceRules(body, expand);
                 Debug.WriteLine(result);
             }
@@ -1671,7 +1947,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 ### Return type
@@ -1703,15 +1979,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var body = new HeartBeatRule(); // HeartBeatRule | HeartBeatRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Update a heart beat rule
+                
                 HeartBeatRule result = apiInstance.PutAlertingHeartbeatRule(ruleId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -1731,7 +2023,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
 | **body** | [**HeartBeatRule**](HeartBeatRule.html)| HeartBeatRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -1763,15 +2055,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var alertId = alertId_example;  // string | Alert ID
+            
+            
+            
+            
+            
             var body = new UnreadStatus(); // UnreadStatus | InteractionStatsAlert
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Update an interaction stats alert read status
+                
                 UnreadStatus result = apiInstance.PutAlertingInteractionstatsAlert(alertId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -1791,7 +2099,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **alertId** | **string**| Alert ID |  |
 | **body** | [**UnreadStatus**](UnreadStatus.html)| InteractionStatsAlert |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -1823,15 +2131,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var body = new InteractionStatsRule(); // InteractionStatsRule | AlertingRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Update an interaction stats rule
+                
                 InteractionStatsRule result = apiInstance.PutAlertingInteractionstatsRule(ruleId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -1851,7 +2175,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
 | **body** | [**InteractionStatsRule**](InteractionStatsRule.html)| AlertingRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers |
 {: class="table table-striped"}
 
 ### Return type
@@ -1883,15 +2207,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var body = new RoutingStatusRule(); // RoutingStatusRule | RoutingStatusRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Update a routing status rule
+                
                 RoutingStatusRule result = apiInstance.PutAlertingRoutingstatusRule(ruleId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -1911,7 +2251,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
 | **body** | [**RoutingStatusRule**](RoutingStatusRule.html)| RoutingStatusRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, agent |
 {: class="table table-striped"}
 
 ### Return type
@@ -1943,15 +2283,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AlertingApi();
+            
+            
             var ruleId = ruleId_example;  // string | Rule ID
+            
+            
+            
+            
+            
             var body = new UserPresenceRule(); // UserPresenceRule | UserPresenceRule
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Update a user presence rule
+                
                 UserPresenceRule result = apiInstance.PutAlertingUserpresenceRule(ruleId, body, expand);
                 Debug.WriteLine(result);
             }
@@ -1971,7 +2327,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| Rule ID |  |
 | **body** | [**UserPresenceRule**](UserPresenceRule.html)| UserPresenceRule |  |
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: notificationUsers, presenceUser |
 {: class="table table-striped"}
 
 ### Return type

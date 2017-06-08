@@ -18,55 +18,200 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QuestionScore :  IEquatable<QuestionScore>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QuestionScore" /> class.
         /// </summary>
+        
+        
         /// <param name="QuestionId">QuestionId.</param>
+        
+        
+        
         /// <param name="AnswerId">AnswerId.</param>
+        
+        
+        
         /// <param name="Score">Score.</param>
+        
+        
+        
         /// <param name="MarkedNA">MarkedNA.</param>
+        
+        
+        
         /// <param name="FailedKillQuestion">FailedKillQuestion.</param>
+        
+        
+        
         /// <param name="Comments">Comments.</param>
+        
+        
         public QuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? FailedKillQuestion = null, string Comments = null)
         {
-            this.QuestionId = QuestionId;
-            this.AnswerId = AnswerId;
-            this.Score = Score;
-            this.MarkedNA = MarkedNA;
-            this.FailedKillQuestion = FailedKillQuestion;
-            this.Comments = Comments;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.QuestionId = QuestionId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AnswerId = AnswerId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Score = Score;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MarkedNA = MarkedNA;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FailedKillQuestion = FailedKillQuestion;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Comments = Comments;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets QuestionId
         /// </summary>
         [DataMember(Name="questionId", EmitDefaultValue=false)]
         public string QuestionId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AnswerId
         /// </summary>
         [DataMember(Name="answerId", EmitDefaultValue=false)]
         public string AnswerId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Score
         /// </summary>
         [DataMember(Name="score", EmitDefaultValue=false)]
         public int? Score { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MarkedNA
         /// </summary>
         [DataMember(Name="markedNA", EmitDefaultValue=false)]
         public bool? MarkedNA { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FailedKillQuestion
         /// </summary>
         [DataMember(Name="failedKillQuestion", EmitDefaultValue=false)]
         public bool? FailedKillQuestion { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Comments
         /// </summary>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +220,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QuestionScore {\n");
+            
             sb.Append("  QuestionId: ").Append(QuestionId).Append("\n");
+            
             sb.Append("  AnswerId: ").Append(AnswerId).Append("\n");
+            
             sb.Append("  Score: ").Append(Score).Append("\n");
+            
             sb.Append("  MarkedNA: ").Append(MarkedNA).Append("\n");
+            
             sb.Append("  FailedKillQuestion: ").Append(FailedKillQuestion).Append("\n");
+            
             sb.Append("  Comments: ").Append(Comments).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,18 +312,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.QuestionId != null)
                     hash = hash * 59 + this.QuestionId.GetHashCode();
+                
                 if (this.AnswerId != null)
                     hash = hash * 59 + this.AnswerId.GetHashCode();
+                
                 if (this.Score != null)
                     hash = hash * 59 + this.Score.GetHashCode();
+                
                 if (this.MarkedNA != null)
                     hash = hash * 59 + this.MarkedNA.GetHashCode();
+                
                 if (this.FailedKillQuestion != null)
                     hash = hash * 59 + this.FailedKillQuestion.GetHashCode();
+                
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
+                
                 return hash;
             }
         }

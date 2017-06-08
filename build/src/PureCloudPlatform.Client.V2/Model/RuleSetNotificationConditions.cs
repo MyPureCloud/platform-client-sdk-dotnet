@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RuleSetNotificationConditions :  IEquatable<RuleSetNotificationConditions>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ValueType
         /// </summary>
@@ -56,6 +70,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PERIOD")]
             Period
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
@@ -130,69 +148,244 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "AFTER")]
             After
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ValueType
         /// </summary>
         [DataMember(Name="valueType", EmitDefaultValue=false)]
         public ValueTypeEnum? ValueType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetNotificationConditions" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="Inverted">Inverted.</param>
+        
+        
+        
         /// <param name="AttributeName">AttributeName.</param>
+        
+        
+        
         /// <param name="Value">Value.</param>
+        
+        
+        
         /// <param name="ValueType">ValueType.</param>
+        
+        
+        
         /// <param name="_Operator">_Operator.</param>
+        
+        
+        
         /// <param name="Codes">Codes.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public RuleSetNotificationConditions(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, Object AdditionalProperties = null)
         {
-            this.Type = Type;
-            this.Inverted = Inverted;
-            this.AttributeName = AttributeName;
-            this.Value = Value;
-            this.ValueType = ValueType;
-            this._Operator = _Operator;
-            this.Codes = Codes;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Inverted = Inverted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AttributeName = AttributeName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Value = Value;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ValueType = ValueType;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Codes = Codes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Inverted
         /// </summary>
         [DataMember(Name="inverted", EmitDefaultValue=false)]
         public bool? Inverted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AttributeName
         /// </summary>
         [DataMember(Name="attributeName", EmitDefaultValue=false)]
         public string AttributeName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Value
         /// </summary>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Codes
         /// </summary>
         [DataMember(Name="codes", EmitDefaultValue=false)]
         public List<string> Codes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -201,14 +394,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RuleSetNotificationConditions {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
+            
             sb.Append("  AttributeName: ").Append(AttributeName).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("  ValueType: ").Append(ValueType).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Codes: ").Append(Codes).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -298,22 +500,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Inverted != null)
                     hash = hash * 59 + this.Inverted.GetHashCode();
+                
                 if (this.AttributeName != null)
                     hash = hash * 59 + this.AttributeName.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 if (this.ValueType != null)
                     hash = hash * 59 + this.ValueType.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Codes != null)
                     hash = hash * 59 + this.Codes.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,28 +18,196 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FaxStatus :  IEquatable<FaxStatus>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="Direction">The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;..</param>
+        
+        
+        
         /// <param name="ExpectedPages">Total number of expected pages, if known..</param>
+        
+        
+        
         /// <param name="ActivePage">Active page of the transmission..</param>
+        
+        
+        
         /// <param name="LinesTransmitted">Number of lines that have completed transmission..</param>
+        
+        
+        
         /// <param name="BytesTransmitted">Number of bytes that have competed transmission..</param>
+        
+        
+        
         /// <param name="BaudRate">Current signaling rate of transmission, baud rate..</param>
+        
+        
+        
         /// <param name="PageErrors">Number of page errors..</param>
+        
+        
+        
         /// <param name="LineErrors">Number of line errors..</param>
+        
+        
         public FaxStatus(string Direction = null, long? ExpectedPages = null, long? ActivePage = null, long? LinesTransmitted = null, long? BytesTransmitted = null, long? BaudRate = null, long? PageErrors = null, long? LineErrors = null)
         {
-            this.Direction = Direction;
-            this.ExpectedPages = ExpectedPages;
-            this.ActivePage = ActivePage;
-            this.LinesTransmitted = LinesTransmitted;
-            this.BytesTransmitted = BytesTransmitted;
-            this.BaudRate = BaudRate;
-            this.PageErrors = PageErrors;
-            this.LineErrors = LineErrors;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Direction = Direction;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExpectedPages = ExpectedPages;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActivePage = ActivePage;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LinesTransmitted = LinesTransmitted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.BytesTransmitted = BytesTransmitted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.BaudRate = BaudRate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PageErrors = PageErrors;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LineErrors = LineErrors;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;.
@@ -47,48 +215,71 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The fax direction, either \&quot;send\&quot; or \&quot;receive\&quot;.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public string Direction { get; set; }
+        
+        
+        
         /// <summary>
         /// Total number of expected pages, if known.
         /// </summary>
         /// <value>Total number of expected pages, if known.</value>
         [DataMember(Name="expectedPages", EmitDefaultValue=false)]
         public long? ExpectedPages { get; set; }
+        
+        
+        
         /// <summary>
         /// Active page of the transmission.
         /// </summary>
         /// <value>Active page of the transmission.</value>
         [DataMember(Name="activePage", EmitDefaultValue=false)]
         public long? ActivePage { get; set; }
+        
+        
+        
         /// <summary>
         /// Number of lines that have completed transmission.
         /// </summary>
         /// <value>Number of lines that have completed transmission.</value>
         [DataMember(Name="linesTransmitted", EmitDefaultValue=false)]
         public long? LinesTransmitted { get; set; }
+        
+        
+        
         /// <summary>
         /// Number of bytes that have competed transmission.
         /// </summary>
         /// <value>Number of bytes that have competed transmission.</value>
         [DataMember(Name="bytesTransmitted", EmitDefaultValue=false)]
         public long? BytesTransmitted { get; set; }
+        
+        
+        
         /// <summary>
         /// Current signaling rate of transmission, baud rate.
         /// </summary>
         /// <value>Current signaling rate of transmission, baud rate.</value>
         [DataMember(Name="baudRate", EmitDefaultValue=false)]
         public long? BaudRate { get; set; }
+        
+        
+        
         /// <summary>
         /// Number of page errors.
         /// </summary>
         /// <value>Number of page errors.</value>
         [DataMember(Name="pageErrors", EmitDefaultValue=false)]
         public long? PageErrors { get; set; }
+        
+        
+        
         /// <summary>
         /// Number of line errors.
         /// </summary>
         /// <value>Number of line errors.</value>
         [DataMember(Name="lineErrors", EmitDefaultValue=false)]
         public long? LineErrors { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -97,14 +288,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaxStatus {\n");
+            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            
             sb.Append("  ExpectedPages: ").Append(ExpectedPages).Append("\n");
+            
             sb.Append("  ActivePage: ").Append(ActivePage).Append("\n");
+            
             sb.Append("  LinesTransmitted: ").Append(LinesTransmitted).Append("\n");
+            
             sb.Append("  BytesTransmitted: ").Append(BytesTransmitted).Append("\n");
+            
             sb.Append("  BaudRate: ").Append(BaudRate).Append("\n");
+            
             sb.Append("  PageErrors: ").Append(PageErrors).Append("\n");
+            
             sb.Append("  LineErrors: ").Append(LineErrors).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -194,22 +394,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
                 if (this.ExpectedPages != null)
                     hash = hash * 59 + this.ExpectedPages.GetHashCode();
+                
                 if (this.ActivePage != null)
                     hash = hash * 59 + this.ActivePage.GetHashCode();
+                
                 if (this.LinesTransmitted != null)
                     hash = hash * 59 + this.LinesTransmitted.GetHashCode();
+                
                 if (this.BytesTransmitted != null)
                     hash = hash * 59 + this.BytesTransmitted.GetHashCode();
+                
                 if (this.BaudRate != null)
                     hash = hash * 59 + this.BaudRate.GetHashCode();
+                
                 if (this.PageErrors != null)
                     hash = hash * 59 + this.PageErrors.GetHashCode();
+                
                 if (this.LineErrors != null)
                     hash = hash * 59 + this.LineErrors.GetHashCode();
+                
                 return hash;
             }
         }

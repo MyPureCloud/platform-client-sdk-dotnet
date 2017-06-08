@@ -18,22 +18,78 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateUser :  IEquatable<CreateUser>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUser" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateUser() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateUser" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">User&#39;s full name (required).</param>
+        
+        
+        
         /// <param name="Department">Department.</param>
+        
+        
+        
         /// <param name="Email">User&#39;s email and username (required).</param>
+        
+        
+        
         /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
+        
+        
+        
         /// <param name="Title">Title.</param>
+        
+        
+        
         /// <param name="Password">User&#39;s password (required).</param>
+        
+        
         public CreateUser(string Name = null, string Department = null, string Email = null, List<Contact> Addresses = null, string Title = null, string Password = null)
         {
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -43,6 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Email" is required (not null)
             if (Email == null)
             {
@@ -52,6 +117,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Email = Email;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Password" is required (not null)
             if (Password == null)
             {
@@ -61,10 +139,52 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Password = Password;
             }
-            this.Department = Department;
-            this.Addresses = Addresses;
-            this.Title = Title;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Department = Department;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Addresses = Addresses;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Title = Title;
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// User&#39;s full name
@@ -72,34 +192,51 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>User&#39;s full name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Department
         /// </summary>
         [DataMember(Name="department", EmitDefaultValue=false)]
         public string Department { get; set; }
+        
+        
+        
         /// <summary>
         /// User&#39;s email and username
         /// </summary>
         /// <value>User&#39;s email and username</value>
         [DataMember(Name="email", EmitDefaultValue=false)]
         public string Email { get; set; }
+        
+        
+        
         /// <summary>
         /// Email addresses and phone numbers for this user
         /// </summary>
         /// <value>Email addresses and phone numbers for this user</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
+        
+        
+        
         /// <summary>
         /// User&#39;s password
         /// </summary>
         /// <value>User&#39;s password</value>
         [DataMember(Name="password", EmitDefaultValue=false)]
         public string Password { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,12 +245,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateUser {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Department: ").Append(Department).Append("\n");
+            
             sb.Append("  Email: ").Append(Email).Append("\n");
+            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
+            
             sb.Append("  Title: ").Append(Title).Append("\n");
+            
             sb.Append("  Password: ").Append(Password).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -193,18 +337,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Department != null)
                     hash = hash * 59 + this.Department.GetHashCode();
+                
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
+                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
+                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
+                
                 if (this.Password != null)
                     hash = hash * 59 + this.Password.GetHashCode();
+                
                 return hash;
             }
         }

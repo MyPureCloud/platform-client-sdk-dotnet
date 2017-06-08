@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsProperty :  IEquatable<AnalyticsProperty>
     {
+        
+        
         /// <summary>
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
         /// </summary>
@@ -69,25 +71,57 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "uuid")]
             Uuid
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match
         /// </summary>
         /// <value>Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match</value>
         [DataMember(Name="propertyType", EmitDefaultValue=false)]
         public PropertyTypeEnum? PropertyType { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsProperty" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AnalyticsProperty() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsProperty" /> class.
         /// </summary>
+        
+        
         /// <param name="PropertyType">Indicates what the data type is (e.g. integer vs string) and therefore how to evaluate what would constitute a match (required).</param>
+        
+        
+        
         /// <param name="Property">User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property. (required).</param>
+        
+        
+        
         /// <param name="Value">What property value to match against (required).</param>
+        
+        
         public AnalyticsProperty(PropertyTypeEnum? PropertyType = null, string Property = null, string Value = null)
         {
+            
+            
+            
             // to ensure "PropertyType" is required (not null)
             if (PropertyType == null)
             {
@@ -97,6 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.PropertyType = PropertyType;
             }
+            
+            
+            
+            
+            
             // to ensure "Property" is required (not null)
             if (Property == null)
             {
@@ -106,6 +145,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Property = Property;
             }
+            
+            
+            
+            
+            
             // to ensure "Value" is required (not null)
             if (Value == null)
             {
@@ -115,7 +159,27 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Value = Value;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property.
@@ -123,12 +187,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>User-defined rather than intrinsic system-observed values. These are tagged onto segments by other components within PureCloud or by API users directly.  This is the name of the user-defined property.</value>
         [DataMember(Name="property", EmitDefaultValue=false)]
         public string Property { get; set; }
+        
+        
+        
         /// <summary>
         /// What property value to match against
         /// </summary>
         /// <value>What property value to match against</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -137,9 +206,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsProperty {\n");
+            
             sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
+            
             sb.Append("  Property: ").Append(Property).Append("\n");
+            
             sb.Append("  Value: ").Append(Value).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -204,12 +277,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.PropertyType != null)
                     hash = hash * 59 + this.PropertyType.GetHashCode();
+                
                 if (this.Property != null)
                     hash = hash * 59 + this.Property.GetHashCode();
+                
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+                
                 return hash;
             }
         }

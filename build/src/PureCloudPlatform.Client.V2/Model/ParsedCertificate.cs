@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ParsedCertificate :  IEquatable<ParsedCertificate>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ParsedCertificate" /> class.
         /// </summary>
+        
+        
         /// <param name="CertificateDetails">The details of the certificates that were parsed correctly..</param>
+        
+        
         public ParsedCertificate(List<CertificateDetails> CertificateDetails = null)
         {
-            this.CertificateDetails = CertificateDetails;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.CertificateDetails = CertificateDetails;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The details of the certificates that were parsed correctly.
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The details of the certificates that were parsed correctly.</value>
         [DataMember(Name="certificateDetails", EmitDefaultValue=false)]
         public List<CertificateDetails> CertificateDetails { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ParsedCertificate {\n");
+            
             sb.Append("  CertificateDetails: ").Append(CertificateDetails).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.CertificateDetails != null)
                     hash = hash * 59 + this.CertificateDetails.GetHashCode();
+                
                 return hash;
             }
         }

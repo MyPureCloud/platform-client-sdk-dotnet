@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Organization :  IEquatable<Organization>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The current state. Examples are active, inactive, deleted.
         /// </summary>
@@ -51,33 +77,150 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The current state. Examples are active, inactive, deleted.
         /// </summary>
         /// <value>The current state. Examples are active, inactive, deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Organization" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Organization() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Organization" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="DefaultLanguage">The default language for this organization. Example: &#39;en&#39;.</param>
+        
+        
+        
         /// <param name="DefaultCountryCode">The default country code for this organization. Example: &#39;US&#39;.</param>
+        
+        
+        
+        
+        
         /// <param name="ThirdPartyURI">ThirdPartyURI.</param>
+        
+        
+        
         /// <param name="Domain">Domain.</param>
+        
+        
+        
         /// <param name="Version">The current version of the organization. (required).</param>
+        
+        
+        
         /// <param name="State">The current state. Examples are active, inactive, deleted..</param>
+        
+        
+        
         /// <param name="DefaultSiteId">DefaultSiteId.</param>
+        
+        
+        
         /// <param name="SupportURI">Email address where support tickets are sent to..</param>
+        
+        
+        
         /// <param name="VoicemailEnabled">VoicemailEnabled.</param>
+        
+        
+        
+        
+        
         /// <param name="Features">The state of features available for the organization..</param>
+        
+        
         public Organization(string Name = null, string DefaultLanguage = null, string DefaultCountryCode = null, string ThirdPartyURI = null, string Domain = null, int? Version = null, StateEnum? State = null, string DefaultSiteId = null, string SupportURI = null, bool? VoicemailEnabled = null, Dictionary<string, bool?> Features = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Version" is required (not null)
             if (Version == null)
             {
@@ -87,17 +230,135 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
-            this.Name = Name;
-            this.DefaultLanguage = DefaultLanguage;
-            this.DefaultCountryCode = DefaultCountryCode;
-            this.ThirdPartyURI = ThirdPartyURI;
-            this.Domain = Domain;
-            this.State = State;
-            this.DefaultSiteId = DefaultSiteId;
-            this.SupportURI = SupportURI;
-            this.VoicemailEnabled = VoicemailEnabled;
-            this.Features = Features;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DefaultLanguage = DefaultLanguage;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DefaultCountryCode = DefaultCountryCode;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ThirdPartyURI = ThirdPartyURI;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Domain = Domain;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DefaultSiteId = DefaultSiteId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SupportURI = SupportURI;
+            
+            
+            
+            
+            
+            
+            
+            
+this.VoicemailEnabled = VoicemailEnabled;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Features = Features;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -105,73 +366,113 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The default language for this organization. Example: &#39;en&#39;
         /// </summary>
         /// <value>The default language for this organization. Example: &#39;en&#39;</value>
         [DataMember(Name="defaultLanguage", EmitDefaultValue=false)]
         public string DefaultLanguage { get; set; }
+        
+        
+        
         /// <summary>
         /// The default country code for this organization. Example: &#39;US&#39;
         /// </summary>
         /// <value>The default country code for this organization. Example: &#39;US&#39;</value>
         [DataMember(Name="defaultCountryCode", EmitDefaultValue=false)]
         public string DefaultCountryCode { get; set; }
+        
+        
+        
         /// <summary>
         /// The short name for the organization. This field is globally unique and cannot be changed.
         /// </summary>
         /// <value>The short name for the organization. This field is globally unique and cannot be changed.</value>
         [DataMember(Name="thirdPartyOrgName", EmitDefaultValue=false)]
         public string ThirdPartyOrgName { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ThirdPartyURI
         /// </summary>
         [DataMember(Name="thirdPartyURI", EmitDefaultValue=false)]
         public string ThirdPartyURI { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Domain
         /// </summary>
         [DataMember(Name="domain", EmitDefaultValue=false)]
         public string Domain { get; set; }
+        
+        
+        
         /// <summary>
         /// The current version of the organization.
         /// </summary>
         /// <value>The current version of the organization.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DefaultSiteId
         /// </summary>
         [DataMember(Name="defaultSiteId", EmitDefaultValue=false)]
         public string DefaultSiteId { get; set; }
+        
+        
+        
         /// <summary>
         /// Email address where support tickets are sent to.
         /// </summary>
         /// <value>Email address where support tickets are sent to.</value>
         [DataMember(Name="supportURI", EmitDefaultValue=false)]
         public string SupportURI { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets VoicemailEnabled
         /// </summary>
         [DataMember(Name="voicemailEnabled", EmitDefaultValue=false)]
         public bool? VoicemailEnabled { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
+        
         /// <summary>
         /// The state of features available for the organization.
         /// </summary>
         /// <value>The state of features available for the organization.</value>
         [DataMember(Name="features", EmitDefaultValue=false)]
         public Dictionary<string, bool?> Features { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -180,20 +481,35 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Organization {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DefaultLanguage: ").Append(DefaultLanguage).Append("\n");
+            
             sb.Append("  DefaultCountryCode: ").Append(DefaultCountryCode).Append("\n");
+            
             sb.Append("  ThirdPartyOrgName: ").Append(ThirdPartyOrgName).Append("\n");
+            
             sb.Append("  ThirdPartyURI: ").Append(ThirdPartyURI).Append("\n");
+            
             sb.Append("  Domain: ").Append(Domain).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  DefaultSiteId: ").Append(DefaultSiteId).Append("\n");
+            
             sb.Append("  SupportURI: ").Append(SupportURI).Append("\n");
+            
             sb.Append("  VoicemailEnabled: ").Append(VoicemailEnabled).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("  Features: ").Append(Features).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -313,34 +629,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DefaultLanguage != null)
                     hash = hash * 59 + this.DefaultLanguage.GetHashCode();
+                
                 if (this.DefaultCountryCode != null)
                     hash = hash * 59 + this.DefaultCountryCode.GetHashCode();
+                
                 if (this.ThirdPartyOrgName != null)
                     hash = hash * 59 + this.ThirdPartyOrgName.GetHashCode();
+                
                 if (this.ThirdPartyURI != null)
                     hash = hash * 59 + this.ThirdPartyURI.GetHashCode();
+                
                 if (this.Domain != null)
                     hash = hash * 59 + this.Domain.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.DefaultSiteId != null)
                     hash = hash * 59 + this.DefaultSiteId.GetHashCode();
+                
                 if (this.SupportURI != null)
                     hash = hash * 59 + this.SupportURI.GetHashCode();
+                
                 if (this.VoicemailEnabled != null)
                     hash = hash * 59 + this.VoicemailEnabled.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 if (this.Features != null)
                     hash = hash * 59 + this.Features.GetHashCode();
+                
                 return hash;
             }
         }

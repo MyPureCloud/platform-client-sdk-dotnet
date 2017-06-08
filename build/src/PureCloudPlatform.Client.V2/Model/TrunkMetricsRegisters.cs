@@ -18,20 +18,108 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkMetricsRegisters :  IEquatable<TrunkMetricsRegisters>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkMetricsRegisters" /> class.
         /// </summary>
+        
+        
         /// <param name="ProxyAddress">Server proxy address that this registers array element represents..</param>
+        
+        
+        
         /// <param name="RegisterState">True if last REGISTER message had positive response; false if error response or no response..</param>
+        
+        
+        
         /// <param name="RegisterStateTime">ISO 8601 format UTC absolute date &amp; time of the last change of the register state..</param>
+        
+        
+        
         /// <param name="ErrorInfo">ErrorInfo.</param>
+        
+        
         public TrunkMetricsRegisters(string ProxyAddress = null, bool? RegisterState = null, DateTime? RegisterStateTime = null, TrunkErrorInfo ErrorInfo = null)
         {
-            this.ProxyAddress = ProxyAddress;
-            this.RegisterState = RegisterState;
-            this.RegisterStateTime = RegisterStateTime;
-            this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ProxyAddress = ProxyAddress;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RegisterState = RegisterState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RegisterStateTime = RegisterStateTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Server proxy address that this registers array element represents.
@@ -39,23 +127,34 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Server proxy address that this registers array element represents.</value>
         [DataMember(Name="proxyAddress", EmitDefaultValue=false)]
         public string ProxyAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// True if last REGISTER message had positive response; false if error response or no response.
         /// </summary>
         /// <value>True if last REGISTER message had positive response; false if error response or no response.</value>
         [DataMember(Name="registerState", EmitDefaultValue=false)]
         public bool? RegisterState { get; set; }
+        
+        
+        
         /// <summary>
         /// ISO 8601 format UTC absolute date &amp; time of the last change of the register state.
         /// </summary>
         /// <value>ISO 8601 format UTC absolute date &amp; time of the last change of the register state.</value>
         [DataMember(Name="registerStateTime", EmitDefaultValue=false)]
         public DateTime? RegisterStateTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ErrorInfo
         /// </summary>
         [DataMember(Name="errorInfo", EmitDefaultValue=false)]
         public TrunkErrorInfo ErrorInfo { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -64,10 +163,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkMetricsRegisters {\n");
+            
             sb.Append("  ProxyAddress: ").Append(ProxyAddress).Append("\n");
+            
             sb.Append("  RegisterState: ").Append(RegisterState).Append("\n");
+            
             sb.Append("  RegisterStateTime: ").Append(RegisterStateTime).Append("\n");
+            
             sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,14 +241,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ProxyAddress != null)
                     hash = hash * 59 + this.ProxyAddress.GetHashCode();
+                
                 if (this.RegisterState != null)
                     hash = hash * 59 + this.RegisterState.GetHashCode();
+                
                 if (this.RegisterStateTime != null)
                     hash = hash * 59 + this.RegisterStateTime.GetHashCode();
+                
                 if (this.ErrorInfo != null)
                     hash = hash * 59 + this.ErrorInfo.GetHashCode();
+                
                 return hash;
             }
         }

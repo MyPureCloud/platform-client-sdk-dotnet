@@ -18,55 +18,200 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationDialerPreview :  IEquatable<ConversationNotificationDialerPreview>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationDialerPreview" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="ContactId">ContactId.</param>
+        
+        
+        
         /// <param name="ContactListId">ContactListId.</param>
+        
+        
+        
         /// <param name="CampaignId">CampaignId.</param>
+        
+        
+        
         /// <param name="PhoneNumberColumns">PhoneNumberColumns.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ConversationNotificationDialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<CampaignNotificationPhoneColumns> PhoneNumberColumns = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.ContactId = ContactId;
-            this.ContactListId = ContactListId;
-            this.CampaignId = CampaignId;
-            this.PhoneNumberColumns = PhoneNumberColumns;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactId = ContactId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactListId = ContactListId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CampaignId = CampaignId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PhoneNumberColumns = PhoneNumberColumns;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactId
         /// </summary>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContactListId
         /// </summary>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignId
         /// </summary>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PhoneNumberColumns
         /// </summary>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
         public List<CampaignNotificationPhoneColumns> PhoneNumberColumns { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +220,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationDialerPreview {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
+            
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
+            
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
+            
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,18 +312,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.ContactId != null)
                     hash = hash * 59 + this.ContactId.GetHashCode();
+                
                 if (this.ContactListId != null)
                     hash = hash * 59 + this.ContactListId.GetHashCode();
+                
                 if (this.CampaignId != null)
                     hash = hash * 59 + this.CampaignId.GetHashCode();
+                
                 if (this.PhoneNumberColumns != null)
                     hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

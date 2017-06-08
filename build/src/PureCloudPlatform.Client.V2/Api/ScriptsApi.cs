@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IScriptsApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Get a script
         /// </summary>
@@ -35,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>ApiResponse of Script</returns>
         ApiResponse<Script> GetScriptWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get a page
         /// </summary>
@@ -58,6 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageId">Page ID</param>
         /// <returns>ApiResponse of Page</returns>
         ApiResponse<Page> GetScriptPageWithHttpInfo (string scriptId, string pageId);
+        
         /// <summary>
         /// Get the list of pages
         /// </summary>
@@ -79,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>ApiResponse of List&lt;Page&gt;</returns>
         ApiResponse<List<Page>> GetScriptPagesWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get the list of scripts
         /// </summary>
@@ -114,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
         ApiResponse<ScriptEntityListing> GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null);
+        
         /// <summary>
         /// Get the published scripts.
         /// </summary>
@@ -145,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <returns>ApiResponse of ScriptEntityListing</returns>
         ApiResponse<ScriptEntityListing> GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null);
+        
         /// <summary>
         /// Get the published script.
         /// </summary>
@@ -166,6 +173,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>ApiResponse of Script</returns>
         ApiResponse<Script> GetScriptsPublishedScriptIdWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get the published page.
         /// </summary>
@@ -189,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageId">Page ID</param>
         /// <returns>ApiResponse of Page</returns>
         ApiResponse<Page> GetScriptsPublishedScriptIdPageWithHttpInfo (string scriptId, string pageId);
+        
         /// <summary>
         /// Get the list of published pages
         /// </summary>
@@ -210,6 +219,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>ApiResponse of List&lt;Page&gt;</returns>
         ApiResponse<List<Page>> GetScriptsPublishedScriptIdPagesWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get the published variables
         /// </summary>
@@ -237,8 +247,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">type (optional)</param>
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> GetScriptsPublishedScriptIdVariablesWithHttpInfo (string scriptId, string input = null, string output = null, string type = null);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Get a script
         /// </summary>
@@ -260,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>Task of ApiResponse (Script)</returns>
         System.Threading.Tasks.Task<ApiResponse<Script>> GetScriptAsyncWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get a page
         /// </summary>
@@ -283,6 +297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageId">Page ID</param>
         /// <returns>Task of ApiResponse (Page)</returns>
         System.Threading.Tasks.Task<ApiResponse<Page>> GetScriptPageAsyncWithHttpInfo (string scriptId, string pageId);
+        
         /// <summary>
         /// Get the list of pages
         /// </summary>
@@ -304,6 +319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>Task of ApiResponse (List&lt;Page&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Page>>> GetScriptPagesAsyncWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get the list of scripts
         /// </summary>
@@ -339,6 +355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">SortOrder (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null);
+        
         /// <summary>
         /// Get the published scripts.
         /// </summary>
@@ -370,6 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Secure flow id filter (optional)</param>
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null);
+        
         /// <summary>
         /// Get the published script.
         /// </summary>
@@ -391,6 +409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>Task of ApiResponse (Script)</returns>
         System.Threading.Tasks.Task<ApiResponse<Script>> GetScriptsPublishedScriptIdAsyncWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get the published page.
         /// </summary>
@@ -414,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageId">Page ID</param>
         /// <returns>Task of ApiResponse (Page)</returns>
         System.Threading.Tasks.Task<ApiResponse<Page>> GetScriptsPublishedScriptIdPageAsyncWithHttpInfo (string scriptId, string pageId);
+        
         /// <summary>
         /// Get the list of published pages
         /// </summary>
@@ -435,6 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptId">Script ID</param>
         /// <returns>Task of ApiResponse (List&lt;Page&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Page>>> GetScriptsPublishedScriptIdPagesAsyncWithHttpInfo (string scriptId);
+        
         /// <summary>
         /// Get the published variables
         /// </summary>
@@ -462,7 +483,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="type">type (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetScriptsPublishedScriptIdVariablesAsyncWithHttpInfo (string scriptId, string input = null, string output = null, string type = null);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -552,6 +575,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Get a script 
         /// </summary>
@@ -572,9 +596,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Script</returns>
         public ApiResponse< Script > GetScriptWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScript");
+            
+            
 
             var localVarPath = "/api/v2/scripts/{scriptId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -586,13 +614,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -601,14 +633,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -630,6 +673,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a script 
         /// </summary>
@@ -651,9 +695,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Script)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Script>> GetScriptAsyncWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScript");
+            
+            
 
             var localVarPath = "/api/v2/scripts/{scriptId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -665,13 +713,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -680,14 +732,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -709,6 +773,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get a page 
         /// </summary>
@@ -731,12 +797,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Page</returns>
         public ApiResponse< Page > GetScriptPageWithHttpInfo (string scriptId, string pageId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptPage");
+            
+            
+            
             // verify the required parameter 'pageId' is set
             if (pageId == null)
                 throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptPage");
+            
+            
 
             var localVarPath = "/api/v2/scripts/{scriptId}/pages/{pageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -748,13 +821,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -763,15 +840,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
             if (pageId != null) localVarPathParams.Add("pageId", Configuration.ApiClient.ParameterToString(pageId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -793,6 +882,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get a page 
         /// </summary>
@@ -816,12 +906,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Page)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Page>> GetScriptPageAsyncWithHttpInfo (string scriptId, string pageId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptPage");
+            
+            
+            
             // verify the required parameter 'pageId' is set
             if (pageId == null)
                 throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptPage");
+            
+            
 
             var localVarPath = "/api/v2/scripts/{scriptId}/pages/{pageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -833,13 +930,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -848,15 +949,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
             if (pageId != null) localVarPathParams.Add("pageId", Configuration.ApiClient.ParameterToString(pageId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -878,6 +992,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the list of pages 
         /// </summary>
@@ -898,9 +1014,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;Page&gt;</returns>
         public ApiResponse< List<Page> > GetScriptPagesWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptPages");
+            
+            
 
             var localVarPath = "/api/v2/scripts/{scriptId}/pages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -912,13 +1032,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -927,14 +1051,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -956,6 +1091,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the list of pages 
         /// </summary>
@@ -977,9 +1113,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;Page&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Page>>> GetScriptPagesAsyncWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptPages");
+            
+            
 
             var localVarPath = "/api/v2/scripts/{scriptId}/pages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -991,13 +1131,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1006,14 +1150,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1035,6 +1191,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the list of scripts 
         /// </summary>
@@ -1069,6 +1227,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ScriptEntityListing</returns>
         public ApiResponse< ScriptEntityListing > GetScriptsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/scripts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1080,13 +1255,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1095,21 +1274,39 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
             if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
+            
             if (flowId != null) localVarQueryParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // query parameter
+            
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1131,6 +1328,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the list of scripts 
         /// </summary>
@@ -1166,6 +1364,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/scripts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1177,13 +1392,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1192,21 +1411,40 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
             if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
+            
             if (flowId != null) localVarQueryParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // query parameter
+            
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1228,6 +1466,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the published scripts. 
         /// </summary>
@@ -1258,6 +1498,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ScriptEntityListing</returns>
         public ApiResponse< ScriptEntityListing > GetScriptsPublishedWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/scripts/published";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1269,13 +1522,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1284,19 +1541,35 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
             if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
+            
             if (flowId != null) localVarQueryParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1318,6 +1591,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the published scripts. 
         /// </summary>
@@ -1349,6 +1623,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ScriptEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/scripts/published";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1360,13 +1647,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1375,19 +1666,36 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
             if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
+            
             if (feature != null) localVarQueryParams.Add("feature", Configuration.ApiClient.ParameterToString(feature)); // query parameter
+            
             if (flowId != null) localVarQueryParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1409,6 +1717,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the published script. 
         /// </summary>
@@ -1429,9 +1739,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Script</returns>
         public ApiResponse< Script > GetScriptsPublishedScriptIdWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptId");
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1443,13 +1757,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1458,14 +1776,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1487,6 +1816,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the published script. 
         /// </summary>
@@ -1508,9 +1838,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Script)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Script>> GetScriptsPublishedScriptIdAsyncWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptId");
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1522,13 +1856,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1537,14 +1875,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1566,6 +1916,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the published page. 
         /// </summary>
@@ -1588,12 +1940,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Page</returns>
         public ApiResponse< Page > GetScriptsPublishedScriptIdPageWithHttpInfo (string scriptId, string pageId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdPage");
+            
+            
+            
             // verify the required parameter 'pageId' is set
             if (pageId == null)
                 throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptsPublishedScriptIdPage");
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}/pages/{pageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1605,13 +1964,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1620,15 +1983,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
             if (pageId != null) localVarPathParams.Add("pageId", Configuration.ApiClient.ParameterToString(pageId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1650,6 +2025,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the published page. 
         /// </summary>
@@ -1673,12 +2049,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Page)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Page>> GetScriptsPublishedScriptIdPageAsyncWithHttpInfo (string scriptId, string pageId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdPage");
+            
+            
+            
             // verify the required parameter 'pageId' is set
             if (pageId == null)
                 throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptsPublishedScriptIdPage");
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}/pages/{pageId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1690,13 +2073,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1705,15 +2092,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
             if (pageId != null) localVarPathParams.Add("pageId", Configuration.ApiClient.ParameterToString(pageId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1735,6 +2135,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the list of published pages 
         /// </summary>
@@ -1755,9 +2157,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;Page&gt;</returns>
         public ApiResponse< List<Page> > GetScriptsPublishedScriptIdPagesWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdPages");
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}/pages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1769,13 +2175,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1784,14 +2194,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1813,6 +2234,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the list of published pages 
         /// </summary>
@@ -1834,9 +2256,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;Page&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Page>>> GetScriptsPublishedScriptIdPagesAsyncWithHttpInfo (string scriptId)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdPages");
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}/pages";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1848,13 +2274,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1863,14 +2293,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1892,6 +2334,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get the published variables 
         /// </summary>
@@ -1918,9 +2362,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > GetScriptsPublishedScriptIdVariablesWithHttpInfo (string scriptId, string input = null, string output = null, string type = null)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdVariables");
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}/variables";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1932,13 +2386,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1947,17 +2405,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
             if (input != null) localVarQueryParams.Add("input", Configuration.ApiClient.ParameterToString(input)); // query parameter
+            
             if (output != null) localVarQueryParams.Add("output", Configuration.ApiClient.ParameterToString(output)); // query parameter
+            
             if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1979,6 +2451,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get the published variables 
         /// </summary>
@@ -2006,9 +2479,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetScriptsPublishedScriptIdVariablesAsyncWithHttpInfo (string scriptId, string input = null, string output = null, string type = null)
         {
+            
+            
             // verify the required parameter 'scriptId' is set
             if (scriptId == null)
                 throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdVariables");
+            
+            
+            
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/scripts/published/{scriptId}/variables";
             var localVarPathParams = new Dictionary<String, String>();
@@ -2020,13 +2503,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -2035,17 +2522,32 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (scriptId != null) localVarPathParams.Add("scriptId", Configuration.ApiClient.ParameterToString(scriptId)); // path parameter
+            
+            
             if (input != null) localVarQueryParams.Add("input", Configuration.ApiClient.ParameterToString(input)); // query parameter
+            
             if (output != null) localVarQueryParams.Add("output", Configuration.ApiClient.ParameterToString(output)); // query parameter
+            
             if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2067,5 +2569,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

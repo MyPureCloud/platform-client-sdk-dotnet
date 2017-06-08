@@ -18,6 +18,32 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AttemptLimitsNotification :  IEquatable<AttemptLimitsNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ResetPeriod
         /// </summary>
@@ -44,97 +70,355 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "TODAY")]
             Today
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ResetPeriod
         /// </summary>
         [DataMember(Name="resetPeriod", EmitDefaultValue=false)]
         public ResetPeriodEnum? ResetPeriod { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AttemptLimitsNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="DateCreated">DateCreated.</param>
+        
+        
+        
         /// <param name="DateModified">DateModified.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="MaxAttemptsPerContact">MaxAttemptsPerContact.</param>
+        
+        
+        
         /// <param name="MaxAttemptsPerNumber">MaxAttemptsPerNumber.</param>
+        
+        
+        
         /// <param name="TimeZoneId">TimeZoneId.</param>
+        
+        
+        
         /// <param name="ResetPeriod">ResetPeriod.</param>
+        
+        
+        
         /// <param name="RecallEntries">RecallEntries.</param>
+        
+        
+        
         /// <param name="BreadthFirstRecalls">BreadthFirstRecalls.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public AttemptLimitsNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, int? MaxAttemptsPerContact = null, int? MaxAttemptsPerNumber = null, string TimeZoneId = null, ResetPeriodEnum? ResetPeriod = null, Dictionary<string, AttemptLimitsNotificationRecallEntries> RecallEntries = null, bool? BreadthFirstRecalls = null, Object AdditionalProperties = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.DateCreated = DateCreated;
-            this.DateModified = DateModified;
-            this.Version = Version;
-            this.MaxAttemptsPerContact = MaxAttemptsPerContact;
-            this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
-            this.TimeZoneId = TimeZoneId;
-            this.ResetPeriod = ResetPeriod;
-            this.RecallEntries = RecallEntries;
-            this.BreadthFirstRecalls = BreadthFirstRecalls;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MaxAttemptsPerContact = MaxAttemptsPerContact;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MaxAttemptsPerNumber = MaxAttemptsPerNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeZoneId = TimeZoneId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ResetPeriod = ResetPeriod;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecallEntries = RecallEntries;
+            
+            
+            
+            
+            
+            
+            
+            
+this.BreadthFirstRecalls = BreadthFirstRecalls;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateCreated
         /// </summary>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DateModified
         /// </summary>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MaxAttemptsPerContact
         /// </summary>
         [DataMember(Name="maxAttemptsPerContact", EmitDefaultValue=false)]
         public int? MaxAttemptsPerContact { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MaxAttemptsPerNumber
         /// </summary>
         [DataMember(Name="maxAttemptsPerNumber", EmitDefaultValue=false)]
         public int? MaxAttemptsPerNumber { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TimeZoneId
         /// </summary>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecallEntries
         /// </summary>
         [DataMember(Name="recallEntries", EmitDefaultValue=false)]
         public Dictionary<string, AttemptLimitsNotificationRecallEntries> RecallEntries { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets BreadthFirstRecalls
         /// </summary>
         [DataMember(Name="breadthFirstRecalls", EmitDefaultValue=false)]
         public bool? BreadthFirstRecalls { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -143,18 +427,31 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AttemptLimitsNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  MaxAttemptsPerContact: ").Append(MaxAttemptsPerContact).Append("\n");
+            
             sb.Append("  MaxAttemptsPerNumber: ").Append(MaxAttemptsPerNumber).Append("\n");
+            
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
+            
             sb.Append("  ResetPeriod: ").Append(ResetPeriod).Append("\n");
+            
             sb.Append("  RecallEntries: ").Append(RecallEntries).Append("\n");
+            
             sb.Append("  BreadthFirstRecalls: ").Append(BreadthFirstRecalls).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -264,30 +561,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.MaxAttemptsPerContact != null)
                     hash = hash * 59 + this.MaxAttemptsPerContact.GetHashCode();
+                
                 if (this.MaxAttemptsPerNumber != null)
                     hash = hash * 59 + this.MaxAttemptsPerNumber.GetHashCode();
+                
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
+                
                 if (this.ResetPeriod != null)
                     hash = hash * 59 + this.ResetPeriod.GetHashCode();
+                
                 if (this.RecallEntries != null)
                     hash = hash * 59 + this.RecallEntries.GetHashCode();
+                
                 if (this.BreadthFirstRecalls != null)
                     hash = hash * 59 + this.BreadthFirstRecalls.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

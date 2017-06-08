@@ -18,30 +18,218 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateCallRequest :  IEquatable<CreateCallRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="PhoneNumber">The phone number to dial..</param>
+        
+        
+        
         /// <param name="CallFromQueueId">The queue ID to call on behalf of..</param>
+        
+        
+        
         /// <param name="CallQueueId">The queue ID to call..</param>
+        
+        
+        
         /// <param name="CallUserId">The user ID to call..</param>
+        
+        
+        
         /// <param name="Priority">The priority to assign to this call (if calling a queue)..</param>
+        
+        
+        
         /// <param name="LanguageId">The language skill ID to use for routing this call (if calling a queue)..</param>
+        
+        
+        
         /// <param name="RoutingSkillsIds">The skill ID&#39;s to use for routing this call (if calling a queue)..</param>
+        
+        
+        
         /// <param name="ConversationIds">The list of existing call conversations to merge into a new ad-hoc conference..</param>
+        
+        
+        
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
+        
+        
         public CreateCallRequest(string PhoneNumber = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null)
         {
-            this.PhoneNumber = PhoneNumber;
-            this.CallFromQueueId = CallFromQueueId;
-            this.CallQueueId = CallQueueId;
-            this.CallUserId = CallUserId;
-            this.Priority = Priority;
-            this.LanguageId = LanguageId;
-            this.RoutingSkillsIds = RoutingSkillsIds;
-            this.ConversationIds = ConversationIds;
-            this.Participants = Participants;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.PhoneNumber = PhoneNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallFromQueueId = CallFromQueueId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallQueueId = CallQueueId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallUserId = CallUserId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Priority = Priority;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LanguageId = LanguageId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RoutingSkillsIds = RoutingSkillsIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConversationIds = ConversationIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Participants = Participants;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The phone number to dial.
@@ -49,54 +237,80 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The phone number to dial.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
+        
+        
+        
         /// <summary>
         /// The queue ID to call on behalf of.
         /// </summary>
         /// <value>The queue ID to call on behalf of.</value>
         [DataMember(Name="callFromQueueId", EmitDefaultValue=false)]
         public string CallFromQueueId { get; set; }
+        
+        
+        
         /// <summary>
         /// The queue ID to call.
         /// </summary>
         /// <value>The queue ID to call.</value>
         [DataMember(Name="callQueueId", EmitDefaultValue=false)]
         public string CallQueueId { get; set; }
+        
+        
+        
         /// <summary>
         /// The user ID to call.
         /// </summary>
         /// <value>The user ID to call.</value>
         [DataMember(Name="callUserId", EmitDefaultValue=false)]
         public string CallUserId { get; set; }
+        
+        
+        
         /// <summary>
         /// The priority to assign to this call (if calling a queue).
         /// </summary>
         /// <value>The priority to assign to this call (if calling a queue).</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public int? Priority { get; set; }
+        
+        
+        
         /// <summary>
         /// The language skill ID to use for routing this call (if calling a queue).
         /// </summary>
         /// <value>The language skill ID to use for routing this call (if calling a queue).</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
+        
+        
+        
         /// <summary>
         /// The skill ID&#39;s to use for routing this call (if calling a queue).
         /// </summary>
         /// <value>The skill ID&#39;s to use for routing this call (if calling a queue).</value>
         [DataMember(Name="routingSkillsIds", EmitDefaultValue=false)]
         public List<string> RoutingSkillsIds { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of existing call conversations to merge into a new ad-hoc conference.
         /// </summary>
         /// <value>The list of existing call conversations to merge into a new ad-hoc conference.</value>
         [DataMember(Name="conversationIds", EmitDefaultValue=false)]
         public List<string> ConversationIds { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of participants to call to create a new ad-hoc conference.
         /// </summary>
         /// <value>The list of participants to call to create a new ad-hoc conference.</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<Destination> Participants { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -105,15 +319,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateCallRequest {\n");
+            
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            
             sb.Append("  CallFromQueueId: ").Append(CallFromQueueId).Append("\n");
+            
             sb.Append("  CallQueueId: ").Append(CallQueueId).Append("\n");
+            
             sb.Append("  CallUserId: ").Append(CallUserId).Append("\n");
+            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
+            
             sb.Append("  RoutingSkillsIds: ").Append(RoutingSkillsIds).Append("\n");
+            
             sb.Append("  ConversationIds: ").Append(ConversationIds).Append("\n");
+            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -208,24 +432,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                
                 if (this.CallFromQueueId != null)
                     hash = hash * 59 + this.CallFromQueueId.GetHashCode();
+                
                 if (this.CallQueueId != null)
                     hash = hash * 59 + this.CallQueueId.GetHashCode();
+                
                 if (this.CallUserId != null)
                     hash = hash * 59 + this.CallUserId.GetHashCode();
+                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
+                
                 if (this.RoutingSkillsIds != null)
                     hash = hash * 59 + this.RoutingSkillsIds.GetHashCode();
+                
                 if (this.ConversationIds != null)
                     hash = hash * 59 + this.ConversationIds.GetHashCode();
+                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PredictionResults :  IEquatable<PredictionResults>
     {
+        
+        
         /// <summary>
         /// Indicates the media type scope of this estimated wait time
         /// </summary>
@@ -75,6 +77,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VIDEOCOMM")]
             Videocomm
         }
+        
+        
+        
+        
         /// <summary>
         /// Indicates the estimated wait time Formula
         /// </summary>
@@ -114,31 +120,65 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PATIENCE_ABANDON")]
             PatienceAbandon
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates the media type scope of this estimated wait time
         /// </summary>
         /// <value>Indicates the media type scope of this estimated wait time</value>
         [DataMember(Name="intent", EmitDefaultValue=false)]
         public IntentEnum? Intent { get; set; }
+        
+        
+        
         /// <summary>
         /// Indicates the estimated wait time Formula
         /// </summary>
         /// <value>Indicates the estimated wait time Formula</value>
         [DataMember(Name="formula", EmitDefaultValue=false)]
         public FormulaEnum? Formula { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictionResults" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PredictionResults() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PredictionResults" /> class.
         /// </summary>
+        
+        
         /// <param name="Intent">Indicates the media type scope of this estimated wait time.</param>
+        
+        
+        
         /// <param name="Formula">Indicates the estimated wait time Formula (required).</param>
+        
+        
+        
         /// <param name="EstimatedWaitTimeSeconds">Estimated wait time in seconds (required).</param>
+        
+        
         public PredictionResults(IntentEnum? Intent = null, FormulaEnum? Formula = null, int? EstimatedWaitTimeSeconds = null)
         {
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Formula" is required (not null)
             if (Formula == null)
             {
@@ -148,6 +188,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Formula = Formula;
             }
+            
+            
+            
+            
+            
             // to ensure "EstimatedWaitTimeSeconds" is required (not null)
             if (EstimatedWaitTimeSeconds == null)
             {
@@ -157,8 +202,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.EstimatedWaitTimeSeconds = EstimatedWaitTimeSeconds;
             }
-            this.Intent = Intent;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Intent = Intent;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
+        
+        
+        
+        
         
         /// <summary>
         /// Estimated wait time in seconds
@@ -166,6 +237,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Estimated wait time in seconds</value>
         [DataMember(Name="estimatedWaitTimeSeconds", EmitDefaultValue=false)]
         public int? EstimatedWaitTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -174,9 +247,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PredictionResults {\n");
+            
             sb.Append("  Intent: ").Append(Intent).Append("\n");
+            
             sb.Append("  Formula: ").Append(Formula).Append("\n");
+            
             sb.Append("  EstimatedWaitTimeSeconds: ").Append(EstimatedWaitTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -241,12 +318,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Intent != null)
                     hash = hash * 59 + this.Intent.GetHashCode();
+                
                 if (this.Formula != null)
                     hash = hash * 59 + this.Formula.GetHashCode();
+                
                 if (this.EstimatedWaitTimeSeconds != null)
                     hash = hash * 59 + this.EstimatedWaitTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

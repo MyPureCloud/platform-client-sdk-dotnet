@@ -18,6 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainNetworkRoute :  IEquatable<DomainNetworkRoute>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The address family for this route.
         /// </summary>
@@ -45,28 +59,124 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "23")]
             NUMBER_23 = 23
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The address family for this route.
         /// </summary>
         /// <value>The address family for this route.</value>
         [DataMember(Name="family", EmitDefaultValue=false)]
         public FamilyEnum? Family { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainNetworkRoute" /> class.
         /// </summary>
+        
+        
         /// <param name="Prefix">The IPv4 or IPv6 route prefix in CIDR notation..</param>
+        
+        
+        
         /// <param name="Nexthop">The IPv4 or IPv6 nexthop IP address..</param>
+        
+        
+        
         /// <param name="Persistent">True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false..</param>
+        
+        
+        
         /// <param name="Metric">The metric being used for route. Lower values will have a higher priority..</param>
+        
+        
+        
         /// <param name="Family">The address family for this route..</param>
+        
+        
         public DomainNetworkRoute(string Prefix = null, string Nexthop = null, bool? Persistent = null, int? Metric = null, FamilyEnum? Family = null)
         {
-            this.Prefix = Prefix;
-            this.Nexthop = Nexthop;
-            this.Persistent = Persistent;
-            this.Metric = Metric;
-            this.Family = Family;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Prefix = Prefix;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Nexthop = Nexthop;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Persistent = Persistent;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Metric = Metric;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Family = Family;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The IPv4 or IPv6 route prefix in CIDR notation.
@@ -74,24 +184,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The IPv4 or IPv6 route prefix in CIDR notation.</value>
         [DataMember(Name="prefix", EmitDefaultValue=false)]
         public string Prefix { get; set; }
+        
+        
+        
         /// <summary>
         /// The IPv4 or IPv6 nexthop IP address.
         /// </summary>
         /// <value>The IPv4 or IPv6 nexthop IP address.</value>
         [DataMember(Name="nexthop", EmitDefaultValue=false)]
         public string Nexthop { get; set; }
+        
+        
+        
         /// <summary>
         /// True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false.
         /// </summary>
         /// <value>True if this route will persist on Edge restart.  Routes assigned by DHCP will be returned as false.</value>
         [DataMember(Name="persistent", EmitDefaultValue=false)]
         public bool? Persistent { get; set; }
+        
+        
+        
         /// <summary>
         /// The metric being used for route. Lower values will have a higher priority.
         /// </summary>
         /// <value>The metric being used for route. Lower values will have a higher priority.</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public int? Metric { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,11 +223,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainNetworkRoute {\n");
+            
             sb.Append("  Prefix: ").Append(Prefix).Append("\n");
+            
             sb.Append("  Nexthop: ").Append(Nexthop).Append("\n");
+            
             sb.Append("  Persistent: ").Append(Persistent).Append("\n");
+            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
+            
             sb.Append("  Family: ").Append(Family).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -179,16 +308,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Prefix != null)
                     hash = hash * 59 + this.Prefix.GetHashCode();
+                
                 if (this.Nexthop != null)
                     hash = hash * 59 + this.Nexthop.GetHashCode();
+                
                 if (this.Persistent != null)
                     hash = hash * 59 + this.Persistent.GetHashCode();
+                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
+                
                 if (this.Family != null)
                     hash = hash * 59 + this.Family.GetHashCode();
+                
                 return hash;
             }
         }

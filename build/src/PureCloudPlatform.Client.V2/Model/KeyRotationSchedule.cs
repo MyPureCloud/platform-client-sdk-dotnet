@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class KeyRotationSchedule :  IEquatable<KeyRotationSchedule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Value to set schedule to
         /// </summary>
@@ -63,24 +71,62 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "YEARLY")]
             Yearly
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Value to set schedule to
         /// </summary>
         /// <value>Value to set schedule to</value>
         [DataMember(Name="period", EmitDefaultValue=false)]
         public PeriodEnum? Period { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyRotationSchedule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected KeyRotationSchedule() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="KeyRotationSchedule" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Period">Value to set schedule to (required).</param>
+        
+        
+        
+        
         public KeyRotationSchedule(string Name = null, PeriodEnum? Period = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Period" is required (not null)
             if (Period == null)
             {
@@ -90,8 +136,32 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Period = Period;
             }
-            this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -99,17 +169,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -118,10 +198,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class KeyRotationSchedule {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Period: ").Append(Period).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -191,14 +276,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Period != null)
                     hash = hash * 59 + this.Period.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

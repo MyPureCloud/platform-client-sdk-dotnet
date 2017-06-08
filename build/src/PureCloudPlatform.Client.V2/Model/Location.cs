@@ -18,48 +18,170 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Location :  IEquatable<Location>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Location" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="FloorplanId">FloorplanId.</param>
+        
+        
+        
         /// <param name="Coordinates">Coordinates.</param>
+        
+        
+        
         /// <param name="Notes">Notes.</param>
+        
+        
+        
         /// <param name="LocationDefinition">LocationDefinition.</param>
+        
+        
         public Location(string Id = null, string FloorplanId = null, Dictionary<string, double?> Coordinates = null, string Notes = null, LocationDefinition LocationDefinition = null)
         {
-            this.Id = Id;
-            this.FloorplanId = FloorplanId;
-            this.Coordinates = Coordinates;
-            this.Notes = Notes;
-            this.LocationDefinition = LocationDefinition;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FloorplanId = FloorplanId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Coordinates = Coordinates;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Notes = Notes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LocationDefinition = LocationDefinition;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FloorplanId
         /// </summary>
         [DataMember(Name="floorplanId", EmitDefaultValue=false)]
         public string FloorplanId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Coordinates
         /// </summary>
         [DataMember(Name="coordinates", EmitDefaultValue=false)]
         public Dictionary<string, double?> Coordinates { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Notes
         /// </summary>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets LocationDefinition
         /// </summary>
         [DataMember(Name="locationDefinition", EmitDefaultValue=false)]
         public LocationDefinition LocationDefinition { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +190,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Location {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  FloorplanId: ").Append(FloorplanId).Append("\n");
+            
             sb.Append("  Coordinates: ").Append(Coordinates).Append("\n");
+            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
+            
             sb.Append("  LocationDefinition: ").Append(LocationDefinition).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,16 +275,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.FloorplanId != null)
                     hash = hash * 59 + this.FloorplanId.GetHashCode();
+                
                 if (this.Coordinates != null)
                     hash = hash * 59 + this.Coordinates.GetHashCode();
+                
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
+                
                 if (this.LocationDefinition != null)
                     hash = hash * 59 + this.LocationDefinition.GetHashCode();
+                
                 return hash;
             }
         }

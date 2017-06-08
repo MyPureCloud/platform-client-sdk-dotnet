@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallableTimeSetNotificationCallableTime :  IEquatable<CallableTimeSetNotificationCallableTime>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableTimeSetNotificationCallableTime" /> class.
         /// </summary>
+        
+        
         /// <param name="TimeSlots">TimeSlots.</param>
+        
+        
+        
         /// <param name="TimeZoneId">TimeZoneId.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public CallableTimeSetNotificationCallableTime(List<CallableTimeSetNotificationTimeSlots> TimeSlots = null, string TimeZoneId = null, Object AdditionalProperties = null)
         {
-            this.TimeSlots = TimeSlots;
-            this.TimeZoneId = TimeZoneId;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeSlots = TimeSlots;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeZoneId = TimeZoneId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets TimeSlots
         /// </summary>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<CallableTimeSetNotificationTimeSlots> TimeSlots { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TimeZoneId
         /// </summary>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableTimeSetNotificationCallableTime {\n");
+            
             sb.Append("  TimeSlots: ").Append(TimeSlots).Append("\n");
+            
             sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.TimeSlots != null)
                     hash = hash * 59 + this.TimeSlots.GetHashCode();
+                
                 if (this.TimeZoneId != null)
                     hash = hash * 59 + this.TimeZoneId.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

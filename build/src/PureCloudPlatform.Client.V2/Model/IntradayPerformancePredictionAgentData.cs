@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayPerformancePredictionAgentData :  IEquatable<IntradayPerformancePredictionAgentData>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayPerformancePredictionAgentData" /> class.
         /// </summary>
+        
+        
         /// <param name="InteractingTimeSeconds">The total time spent interacting in seconds for all agents in this group.</param>
+        
+        
         public IntradayPerformancePredictionAgentData(double? InteractingTimeSeconds = null)
         {
-            this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.InteractingTimeSeconds = InteractingTimeSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The total time spent interacting in seconds for all agents in this group
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The total time spent interacting in seconds for all agents in this group</value>
         [DataMember(Name="interactingTimeSeconds", EmitDefaultValue=false)]
         public double? InteractingTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayPerformancePredictionAgentData {\n");
+            
             sb.Append("  InteractingTimeSeconds: ").Append(InteractingTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.InteractingTimeSeconds != null)
                     hash = hash * 59 + this.InteractingTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

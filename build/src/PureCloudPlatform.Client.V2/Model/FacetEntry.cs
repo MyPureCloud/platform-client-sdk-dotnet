@@ -18,6 +18,26 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FacetEntry :  IEquatable<FacetEntry>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets TermType
         /// </summary>
@@ -68,69 +88,241 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "ID")]
             Id
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets TermType
         /// </summary>
         [DataMember(Name="termType", EmitDefaultValue=false)]
         public TermTypeEnum? TermType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FacetEntry" /> class.
         /// </summary>
+        
+        
         /// <param name="Attribute">Attribute.</param>
+        
+        
+        
         /// <param name="Statistics">Statistics.</param>
+        
+        
+        
         /// <param name="Other">Other.</param>
+        
+        
+        
         /// <param name="Total">Total.</param>
+        
+        
+        
         /// <param name="Missing">Missing.</param>
+        
+        
+        
         /// <param name="TermCount">TermCount.</param>
+        
+        
+        
         /// <param name="TermType">TermType.</param>
+        
+        
+        
         /// <param name="Terms">Terms.</param>
+        
+        
         public FacetEntry(TermAttribute Attribute = null, FacetStatistics Statistics = null, long? Other = null, long? Total = null, long? Missing = null, int? TermCount = null, TermTypeEnum? TermType = null, List<FacetTerm> Terms = null)
         {
-            this.Attribute = Attribute;
-            this.Statistics = Statistics;
-            this.Other = Other;
-            this.Total = Total;
-            this.Missing = Missing;
-            this.TermCount = TermCount;
-            this.TermType = TermType;
-            this.Terms = Terms;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Attribute = Attribute;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Statistics = Statistics;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Other = Other;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Total = Total;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Missing = Missing;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TermCount = TermCount;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TermType = TermType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Terms = Terms;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Attribute
         /// </summary>
         [DataMember(Name="attribute", EmitDefaultValue=false)]
         public TermAttribute Attribute { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Statistics
         /// </summary>
         [DataMember(Name="statistics", EmitDefaultValue=false)]
         public FacetStatistics Statistics { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Other
         /// </summary>
         [DataMember(Name="other", EmitDefaultValue=false)]
         public long? Other { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Total
         /// </summary>
         [DataMember(Name="total", EmitDefaultValue=false)]
         public long? Total { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Missing
         /// </summary>
         [DataMember(Name="missing", EmitDefaultValue=false)]
         public long? Missing { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TermCount
         /// </summary>
         [DataMember(Name="termCount", EmitDefaultValue=false)]
         public int? TermCount { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Terms
         /// </summary>
         [DataMember(Name="terms", EmitDefaultValue=false)]
         public List<FacetTerm> Terms { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -139,14 +331,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FacetEntry {\n");
+            
             sb.Append("  Attribute: ").Append(Attribute).Append("\n");
+            
             sb.Append("  Statistics: ").Append(Statistics).Append("\n");
+            
             sb.Append("  Other: ").Append(Other).Append("\n");
+            
             sb.Append("  Total: ").Append(Total).Append("\n");
+            
             sb.Append("  Missing: ").Append(Missing).Append("\n");
+            
             sb.Append("  TermCount: ").Append(TermCount).Append("\n");
+            
             sb.Append("  TermType: ").Append(TermType).Append("\n");
+            
             sb.Append("  Terms: ").Append(Terms).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -236,22 +437,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Attribute != null)
                     hash = hash * 59 + this.Attribute.GetHashCode();
+                
                 if (this.Statistics != null)
                     hash = hash * 59 + this.Statistics.GetHashCode();
+                
                 if (this.Other != null)
                     hash = hash * 59 + this.Other.GetHashCode();
+                
                 if (this.Total != null)
                     hash = hash * 59 + this.Total.GetHashCode();
+                
                 if (this.Missing != null)
                     hash = hash * 59 + this.Missing.GetHashCode();
+                
                 if (this.TermCount != null)
                     hash = hash * 59 + this.TermCount.GetHashCode();
+                
                 if (this.TermType != null)
                     hash = hash * 59 + this.TermType.GetHashCode();
+                
                 if (this.Terms != null)
                     hash = hash * 59 + this.Terms.GetHashCode();
+                
                 return hash;
             }
         }

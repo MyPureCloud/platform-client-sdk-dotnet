@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface IAttributesApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Delete an existing Attribute.
         /// </summary>
@@ -35,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteAttributeWithHttpInfo (string attributeId);
+        
         /// <summary>
         /// Get details about an existing attribute.
         /// </summary>
@@ -56,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Attribute</returns>
         ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute> GetAttributeWithHttpInfo (string attributeId);
+        
         /// <summary>
         /// Gets a list of existing attributes.
         /// </summary>
@@ -79,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of AttributeEntityListing</returns>
         ApiResponse<AttributeEntityListing> GetAttributesWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        
         /// <summary>
         /// Create an attribute.
         /// </summary>
@@ -100,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Attribute</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Attribute</returns>
         ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute> PostAttributesWithHttpInfo (PureCloudPlatform.Client.V2.Model.Attribute body);
+        
         /// <summary>
         /// Query attributes
         /// </summary>
@@ -121,6 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>ApiResponse of AttributeEntityListing</returns>
         ApiResponse<AttributeEntityListing> PostAttributesQueryWithHttpInfo (AttributeQueryRequest body);
+        
         /// <summary>
         /// Update an existing attribute.
         /// </summary>
@@ -144,8 +151,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Attribute</param>
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Attribute</returns>
         ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute> PutAttributeWithHttpInfo (string attributeId, PureCloudPlatform.Client.V2.Model.Attribute body);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Delete an existing Attribute.
         /// </summary>
@@ -167,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeAsyncWithHttpInfo (string attributeId);
+        
         /// <summary>
         /// Get details about an existing attribute.
         /// </summary>
@@ -188,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="attributeId">Attribute ID</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Attribute)</returns>
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute>> GetAttributeAsyncWithHttpInfo (string attributeId);
+        
         /// <summary>
         /// Gets a list of existing attributes.
         /// </summary>
@@ -211,6 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAttributesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+        
         /// <summary>
         /// Create an attribute.
         /// </summary>
@@ -232,6 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Attribute</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Attribute)</returns>
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute>> PostAttributesAsyncWithHttpInfo (PureCloudPlatform.Client.V2.Model.Attribute body);
+        
         /// <summary>
         /// Query attributes
         /// </summary>
@@ -253,6 +267,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">query</param>
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> PostAttributesQueryAsyncWithHttpInfo (AttributeQueryRequest body);
+        
         /// <summary>
         /// Update an existing attribute.
         /// </summary>
@@ -276,7 +291,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Attribute</param>
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Attribute)</returns>
         System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute>> PutAttributeAsyncWithHttpInfo (string attributeId, PureCloudPlatform.Client.V2.Model.Attribute body);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -366,6 +383,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Delete an existing Attribute. This will remove attribute.
         /// </summary>
@@ -385,9 +403,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAttributeWithHttpInfo (string attributeId)
         {
+            
+            
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->DeleteAttribute");
+            
+            
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -399,13 +421,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -414,14 +440,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (attributeId != null) localVarPathParams.Add("attributeId", Configuration.ApiClient.ParameterToString(attributeId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -443,6 +480,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Delete an existing Attribute. This will remove attribute.
         /// </summary>
@@ -463,9 +501,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAttributeAsyncWithHttpInfo (string attributeId)
         {
+            
+            
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->DeleteAttribute");
+            
+            
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -477,13 +519,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -492,14 +538,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (attributeId != null) localVarPathParams.Add("attributeId", Configuration.ApiClient.ParameterToString(attributeId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -521,6 +579,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Get details about an existing attribute. 
         /// </summary>
@@ -541,9 +601,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Attribute</returns>
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Attribute > GetAttributeWithHttpInfo (string attributeId)
         {
+            
+            
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->GetAttribute");
+            
+            
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -555,13 +619,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -570,14 +638,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (attributeId != null) localVarPathParams.Add("attributeId", Configuration.ApiClient.ParameterToString(attributeId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -599,6 +678,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get details about an existing attribute. 
         /// </summary>
@@ -620,9 +700,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Attribute)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute>> GetAttributeAsyncWithHttpInfo (string attributeId)
         {
+            
+            
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->GetAttribute");
+            
+            
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -634,13 +718,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -649,14 +737,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (attributeId != null) localVarPathParams.Add("attributeId", Configuration.ApiClient.ParameterToString(attributeId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -678,6 +778,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Gets a list of existing attributes. 
         /// </summary>
@@ -700,6 +802,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AttributeEntityListing</returns>
         public ApiResponse< AttributeEntityListing > GetAttributesWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/attributes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -711,13 +818,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -726,15 +837,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -756,6 +879,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Gets a list of existing attributes. 
         /// </summary>
@@ -779,6 +903,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> GetAttributesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         {
+            
+            
+            
+            
+            
 
             var localVarPath = "/api/v2/attributes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -790,13 +919,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -805,15 +938,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -835,6 +981,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Create an attribute. 
         /// </summary>
@@ -855,9 +1003,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Attribute</returns>
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Attribute > PostAttributesWithHttpInfo (PureCloudPlatform.Client.V2.Model.Attribute body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PostAttributes");
+            
+            
 
             var localVarPath = "/api/v2/attributes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -869,13 +1021,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -884,6 +1040,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -892,13 +1053,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -920,6 +1087,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Create an attribute. 
         /// </summary>
@@ -941,9 +1109,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Attribute)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute>> PostAttributesAsyncWithHttpInfo (PureCloudPlatform.Client.V2.Model.Attribute body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PostAttributes");
+            
+            
 
             var localVarPath = "/api/v2/attributes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -955,13 +1127,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -970,6 +1146,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -978,13 +1159,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1006,6 +1194,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Query attributes 
         /// </summary>
@@ -1026,9 +1216,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AttributeEntityListing</returns>
         public ApiResponse< AttributeEntityListing > PostAttributesQueryWithHttpInfo (AttributeQueryRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PostAttributesQuery");
+            
+            
 
             var localVarPath = "/api/v2/attributes/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1040,13 +1234,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1055,6 +1253,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1063,13 +1266,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1091,6 +1300,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Query attributes 
         /// </summary>
@@ -1112,9 +1322,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AttributeEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AttributeEntityListing>> PostAttributesQueryAsyncWithHttpInfo (AttributeQueryRequest body)
         {
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PostAttributesQuery");
+            
+            
 
             var localVarPath = "/api/v2/attributes/query";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1126,13 +1340,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1141,6 +1359,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1149,13 +1372,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1177,6 +1407,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update an existing attribute. Fields that can be updated: name, description. The most recent version is required for updates.
         /// </summary>
@@ -1199,12 +1431,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of PureCloudPlatform.Client.V2.Model.Attribute</returns>
         public ApiResponse< PureCloudPlatform.Client.V2.Model.Attribute > PutAttributeWithHttpInfo (string attributeId, PureCloudPlatform.Client.V2.Model.Attribute body)
         {
+            
+            
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->PutAttribute");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PutAttribute");
+            
+            
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1216,13 +1455,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1231,7 +1474,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (attributeId != null) localVarPathParams.Add("attributeId", Configuration.ApiClient.ParameterToString(attributeId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1240,13 +1489,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1268,6 +1523,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update an existing attribute. Fields that can be updated: name, description. The most recent version is required for updates.
         /// </summary>
@@ -1291,12 +1547,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (PureCloudPlatform.Client.V2.Model.Attribute)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.Attribute>> PutAttributeAsyncWithHttpInfo (string attributeId, PureCloudPlatform.Client.V2.Model.Attribute body)
         {
+            
+            
             // verify the required parameter 'attributeId' is set
             if (attributeId == null)
                 throw new ApiException(400, "Missing required parameter 'attributeId' when calling AttributesApi->PutAttribute");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AttributesApi->PutAttribute");
+            
+            
 
             var localVarPath = "/api/v2/attributes/{attributeId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1308,13 +1571,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1323,7 +1590,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (attributeId != null) localVarPathParams.Add("attributeId", Configuration.ApiClient.ParameterToString(attributeId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1332,13 +1605,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1360,5 +1640,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

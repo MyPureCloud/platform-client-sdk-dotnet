@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AvailableTopicEntityListing :  IEquatable<AvailableTopicEntityListing>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AvailableTopicEntityListing" /> class.
         /// </summary>
+        
+        
         /// <param name="Entities">Entities.</param>
+        
+        
         public AvailableTopicEntityListing(List<AvailableTopic> Entities = null)
         {
-            this.Entities = Entities;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Entities = Entities;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
         public List<AvailableTopic> Entities { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AvailableTopicEntityListing {\n");
+            
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+                
                 return hash;
             }
         }

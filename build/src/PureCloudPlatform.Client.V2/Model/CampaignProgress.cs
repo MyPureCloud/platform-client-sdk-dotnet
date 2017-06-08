@@ -18,18 +18,63 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignProgress :  IEquatable<CampaignProgress>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignProgress" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CampaignProgress() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignProgress" /> class.
         /// </summary>
+        
+        
         /// <param name="Campaign">Identifier of the campaign (required).</param>
+        
+        
+        
         /// <param name="ContactList">Identifier of the contact list (required).</param>
+        
+        
+        
+        
+        
+        
+        
+        
         public CampaignProgress(UriReference Campaign = null, UriReference ContactList = null)
         {
+            
+            
+            
             // to ensure "Campaign" is required (not null)
             if (Campaign == null)
             {
@@ -39,6 +84,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Campaign = Campaign;
             }
+            
+            
+            
+            
+            
             // to ensure "ContactList" is required (not null)
             if (ContactList == null)
             {
@@ -48,7 +98,33 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.ContactList = ContactList;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Identifier of the campaign
@@ -56,30 +132,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Identifier of the campaign</value>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public UriReference Campaign { get; set; }
+        
+        
+        
         /// <summary>
         /// Identifier of the contact list
         /// </summary>
         /// <value>Identifier of the contact list</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
+        
+        
+        
         /// <summary>
         /// Number of contacts processed during the campaign
         /// </summary>
         /// <value>Number of contacts processed during the campaign</value>
         [DataMember(Name="numberOfContactsCalled", EmitDefaultValue=false)]
         public long? NumberOfContactsCalled { get; private set; }
+        
+        
+        
         /// <summary>
         /// Total number of contacts in the campaign
         /// </summary>
         /// <value>Total number of contacts in the campaign</value>
         [DataMember(Name="totalNumberOfContacts", EmitDefaultValue=false)]
         public long? TotalNumberOfContacts { get; private set; }
+        
+        
+        
         /// <summary>
         /// Percentage of contacts processed during the campaign
         /// </summary>
         /// <value>Percentage of contacts processed during the campaign</value>
         [DataMember(Name="percentage", EmitDefaultValue=false)]
         public long? Percentage { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -88,11 +178,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignProgress {\n");
+            
             sb.Append("  Campaign: ").Append(Campaign).Append("\n");
+            
             sb.Append("  ContactList: ").Append(ContactList).Append("\n");
+            
             sb.Append("  NumberOfContactsCalled: ").Append(NumberOfContactsCalled).Append("\n");
+            
             sb.Append("  TotalNumberOfContacts: ").Append(TotalNumberOfContacts).Append("\n");
+            
             sb.Append("  Percentage: ").Append(Percentage).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -167,16 +263,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Campaign != null)
                     hash = hash * 59 + this.Campaign.GetHashCode();
+                
                 if (this.ContactList != null)
                     hash = hash * 59 + this.ContactList.GetHashCode();
+                
                 if (this.NumberOfContactsCalled != null)
                     hash = hash * 59 + this.NumberOfContactsCalled.GetHashCode();
+                
                 if (this.TotalNumberOfContacts != null)
                     hash = hash * 59 + this.TotalNumberOfContacts.GetHashCode();
+                
                 if (this.Percentage != null)
                     hash = hash * 59 + this.Percentage.GetHashCode();
+                
                 return hash;
             }
         }

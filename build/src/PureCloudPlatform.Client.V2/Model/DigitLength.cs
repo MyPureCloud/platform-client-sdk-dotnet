@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DigitLength :  IEquatable<DigitLength>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DigitLength" /> class.
         /// </summary>
+        
+        
         /// <param name="Start">Start.</param>
+        
+        
+        
         /// <param name="End">End.</param>
+        
+        
         public DigitLength(string Start = null, string End = null)
         {
-            this.Start = Start;
-            this.End = End;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Start = Start;
+            
+            
+            
+            
+            
+            
+            
+            
+this.End = End;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Start
         /// </summary>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets End
         /// </summary>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DigitLength {\n");
+            
             sb.Append("  Start: ").Append(Start).Append("\n");
+            
             sb.Append("  End: ").Append(End).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Start != null)
                     hash = hash * 59 + this.Start.GetHashCode();
+                
                 if (this.End != null)
                     hash = hash * 59 + this.End.GetHashCode();
+                
                 return hash;
             }
         }

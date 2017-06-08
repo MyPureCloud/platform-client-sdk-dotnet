@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval :  IEquatable<IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval" /> class.
         /// </summary>
+        
+        
         /// <param name="ServiceLevelPercent">ServiceLevelPercent.</param>
+        
+        
+        
         /// <param name="AverageSpeedOfAnswerSeconds">AverageSpeedOfAnswerSeconds.</param>
+        
+        
+        
         /// <param name="NumberOfInteractions">NumberOfInteractions.</param>
+        
+        
         public IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval(double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null, double? NumberOfInteractions = null)
         {
-            this.ServiceLevelPercent = ServiceLevelPercent;
-            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
-            this.NumberOfInteractions = NumberOfInteractions;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ServiceLevelPercent = ServiceLevelPercent;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumberOfInteractions = NumberOfInteractions;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ServiceLevelPercent
         /// </summary>
         [DataMember(Name="serviceLevelPercent", EmitDefaultValue=false)]
         public double? ServiceLevelPercent { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AverageSpeedOfAnswerSeconds
         /// </summary>
         [DataMember(Name="averageSpeedOfAnswerSeconds", EmitDefaultValue=false)]
         public double? AverageSpeedOfAnswerSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumberOfInteractions
         /// </summary>
         [DataMember(Name="numberOfInteractions", EmitDefaultValue=false)]
         public double? NumberOfInteractions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayDataUpdateNotificationPerformancePredictionQueueDataPerInterval {\n");
+            
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
+            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
+            
             sb.Append("  NumberOfInteractions: ").Append(NumberOfInteractions).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ServiceLevelPercent != null)
                     hash = hash * 59 + this.ServiceLevelPercent.GetHashCode();
+                
                 if (this.AverageSpeedOfAnswerSeconds != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswerSeconds.GetHashCode();
+                
                 if (this.NumberOfInteractions != null)
                     hash = hash * 59 + this.NumberOfInteractions.GetHashCode();
+                
                 return hash;
             }
         }

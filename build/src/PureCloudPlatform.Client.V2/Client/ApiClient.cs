@@ -127,7 +127,10 @@ namespace PureCloudPlatform.Client.V2.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
+                
                 request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);
+                
+                
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
@@ -173,9 +176,13 @@ namespace PureCloudPlatform.Client.V2.Client
             // set user agent
             RestClient.UserAgent = Configuration.UserAgent;
 
+            
             var response = RestClient.Execute(request);
+            
+            
             return (Object) response;
         }
+        
         /// <summary>
         /// Makes the asynchronous HTTP request.
         /// </summary>
@@ -468,5 +475,6 @@ namespace PureCloudPlatform.Client.V2.Client
                 return filename;
             }
         }
+        
     }
 }

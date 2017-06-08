@@ -18,19 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkspaceCreate :  IEquatable<WorkspaceCreate>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceCreate" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected WorkspaceCreate() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceCreate" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">The workspace name (required).</param>
+        
+        
+        
         /// <param name="Bucket">Bucket.</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
         public WorkspaceCreate(string Name = null, string Bucket = null, string Description = null)
         {
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -40,9 +72,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
-            this.Bucket = Bucket;
-            this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Bucket = Bucket;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The workspace name
@@ -50,16 +116,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The workspace name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Bucket
         /// </summary>
         [DataMember(Name="bucket", EmitDefaultValue=false)]
         public string Bucket { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,9 +142,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkspaceCreate {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Bucket: ").Append(Bucket).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -135,12 +213,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Bucket != null)
                     hash = hash * 59 + this.Bucket.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 return hash;
             }
         }

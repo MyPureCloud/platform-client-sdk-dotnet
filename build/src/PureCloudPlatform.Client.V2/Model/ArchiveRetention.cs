@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ArchiveRetention :  IEquatable<ArchiveRetention>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StorageMedium
         /// </summary>
@@ -38,27 +43,76 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CLOUDARCHIVE")]
             Cloudarchive
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets StorageMedium
         /// </summary>
         [DataMember(Name="storageMedium", EmitDefaultValue=false)]
         public StorageMediumEnum? StorageMedium { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ArchiveRetention" /> class.
         /// </summary>
+        
+        
         /// <param name="Days">Days.</param>
+        
+        
+        
         /// <param name="StorageMedium">StorageMedium.</param>
+        
+        
         public ArchiveRetention(int? Days = null, StorageMediumEnum? StorageMedium = null)
         {
-            this.Days = Days;
-            this.StorageMedium = StorageMedium;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Days = Days;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StorageMedium = StorageMedium;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Days
         /// </summary>
         [DataMember(Name="days", EmitDefaultValue=false)]
         public int? Days { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,8 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ArchiveRetention {\n");
+            
             sb.Append("  Days: ").Append(Days).Append("\n");
+            
             sb.Append("  StorageMedium: ").Append(StorageMedium).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -128,10 +185,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Days != null)
                     hash = hash * 59 + this.Days.GetHashCode();
+                
                 if (this.StorageMedium != null)
                     hash = hash * 59 + this.StorageMedium.GetHashCode();
+                
                 return hash;
             }
         }

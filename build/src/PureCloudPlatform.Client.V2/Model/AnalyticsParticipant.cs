@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsParticipant :  IEquatable<AnalyticsParticipant>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
@@ -110,62 +121,220 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "external")]
             External
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Purpose
         /// </summary>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public PurposeEnum? Purpose { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsParticipant" /> class.
         /// </summary>
+        
+        
         /// <param name="ParticipantId">ParticipantId.</param>
+        
+        
+        
         /// <param name="ParticipantName">ParticipantName.</param>
+        
+        
+        
         /// <param name="UserId">UserId.</param>
+        
+        
+        
         /// <param name="Purpose">Purpose.</param>
+        
+        
+        
         /// <param name="ExternalContactId">ExternalContactId.</param>
+        
+        
+        
         /// <param name="ExternalOrganizationId">ExternalOrganizationId.</param>
+        
+        
+        
         /// <param name="Sessions">Sessions.</param>
+        
+        
         public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, List<AnalyticsSession> Sessions = null)
         {
-            this.ParticipantId = ParticipantId;
-            this.ParticipantName = ParticipantName;
-            this.UserId = UserId;
-            this.Purpose = Purpose;
-            this.ExternalContactId = ExternalContactId;
-            this.ExternalOrganizationId = ExternalOrganizationId;
-            this.Sessions = Sessions;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ParticipantId = ParticipantId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ParticipantName = ParticipantName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UserId = UserId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Purpose = Purpose;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalContactId = ExternalContactId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExternalOrganizationId = ExternalOrganizationId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Sessions = Sessions;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ParticipantId
         /// </summary>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ParticipantName
         /// </summary>
         [DataMember(Name="participantName", EmitDefaultValue=false)]
         public string ParticipantName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExternalContactId
         /// </summary>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExternalOrganizationId
         /// </summary>
         [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
         public string ExternalOrganizationId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Sessions
         /// </summary>
         [DataMember(Name="sessions", EmitDefaultValue=false)]
         public List<AnalyticsSession> Sessions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -174,13 +343,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsParticipant {\n");
+            
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
+            
             sb.Append("  ParticipantName: ").Append(ParticipantName).Append("\n");
+            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
+            
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
+            
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
+            
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -265,20 +442,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ParticipantId != null)
                     hash = hash * 59 + this.ParticipantId.GetHashCode();
+                
                 if (this.ParticipantName != null)
                     hash = hash * 59 + this.ParticipantName.GetHashCode();
+                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+                
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
+                
                 if (this.ExternalContactId != null)
                     hash = hash * 59 + this.ExternalContactId.GetHashCode();
+                
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
+                
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();
+                
                 return hash;
             }
         }

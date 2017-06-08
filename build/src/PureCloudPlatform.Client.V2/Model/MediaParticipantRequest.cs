@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MediaParticipantRequest :  IEquatable<MediaParticipantRequest>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'.
         /// </summary>
@@ -99,32 +104,177 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "none")]
             None
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'.
         /// </summary>
         /// <value>The state to update to set for this participant's communications.  Possible values are: 'connected' and 'disconnected'.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaParticipantRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="Wrapup">Wrap-up to assign to this participant..</param>
+        
+        
+        
         /// <param name="State">The state to update to set for this participant&#39;s communications.  Possible values are: &#39;connected&#39; and &#39;disconnected&#39;..</param>
+        
+        
+        
         /// <param name="Recording">True to enable recording of this participant, otherwise false to disable recording..</param>
+        
+        
+        
         /// <param name="Muted">True to mute this conversation participant..</param>
+        
+        
+        
         /// <param name="Confined">True to confine this conversation participant.  Should only be used for ad-hoc conferences.</param>
+        
+        
+        
         /// <param name="Held">True to hold this conversation participant..</param>
+        
+        
+        
         /// <param name="WrapupSkipped">True to skip wrap-up for this participant..</param>
+        
+        
         public MediaParticipantRequest(Wrapup Wrapup = null, StateEnum? State = null, bool? Recording = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? WrapupSkipped = null)
         {
-            this.Wrapup = Wrapup;
-            this.State = State;
-            this.Recording = Recording;
-            this.Muted = Muted;
-            this.Confined = Confined;
-            this.Held = Held;
-            this.WrapupSkipped = WrapupSkipped;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Wrapup = Wrapup;
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Recording = Recording;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Muted = Muted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Confined = Confined;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Held = Held;
+            
+            
+            
+            
+            
+            
+            
+            
+this.WrapupSkipped = WrapupSkipped;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Wrap-up to assign to this participant.
@@ -132,36 +282,55 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Wrap-up to assign to this participant.</value>
         [DataMember(Name="wrapup", EmitDefaultValue=false)]
         public Wrapup Wrapup { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// True to enable recording of this participant, otherwise false to disable recording.
         /// </summary>
         /// <value>True to enable recording of this participant, otherwise false to disable recording.</value>
         [DataMember(Name="recording", EmitDefaultValue=false)]
         public bool? Recording { get; set; }
+        
+        
+        
         /// <summary>
         /// True to mute this conversation participant.
         /// </summary>
         /// <value>True to mute this conversation participant.</value>
         [DataMember(Name="muted", EmitDefaultValue=false)]
         public bool? Muted { get; set; }
+        
+        
+        
         /// <summary>
         /// True to confine this conversation participant.  Should only be used for ad-hoc conferences
         /// </summary>
         /// <value>True to confine this conversation participant.  Should only be used for ad-hoc conferences</value>
         [DataMember(Name="confined", EmitDefaultValue=false)]
         public bool? Confined { get; set; }
+        
+        
+        
         /// <summary>
         /// True to hold this conversation participant.
         /// </summary>
         /// <value>True to hold this conversation participant.</value>
         [DataMember(Name="held", EmitDefaultValue=false)]
         public bool? Held { get; set; }
+        
+        
+        
         /// <summary>
         /// True to skip wrap-up for this participant.
         /// </summary>
         /// <value>True to skip wrap-up for this participant.</value>
         [DataMember(Name="wrapupSkipped", EmitDefaultValue=false)]
         public bool? WrapupSkipped { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -170,13 +339,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaParticipantRequest {\n");
+            
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Recording: ").Append(Recording).Append("\n");
+            
             sb.Append("  Muted: ").Append(Muted).Append("\n");
+            
             sb.Append("  Confined: ").Append(Confined).Append("\n");
+            
             sb.Append("  Held: ").Append(Held).Append("\n");
+            
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -261,20 +438,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Wrapup != null)
                     hash = hash * 59 + this.Wrapup.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Recording != null)
                     hash = hash * 59 + this.Recording.GetHashCode();
+                
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();
+                
                 if (this.Confined != null)
                     hash = hash * 59 + this.Confined.GetHashCode();
+                
                 if (this.Held != null)
                     hash = hash * 59 + this.Held.GetHashCode();
+                
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+                
                 return hash;
             }
         }

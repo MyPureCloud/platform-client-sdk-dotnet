@@ -18,28 +18,196 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayHistoricalQueueData :  IEquatable<IntradayHistoricalQueueData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayHistoricalQueueData" /> class.
         /// </summary>
+        
+        
         /// <param name="Offered">The number of interactions routed into the queue for the given media type(s) for an agent to answer.</param>
+        
+        
+        
         /// <param name="Completed">The number of interactions completed.</param>
+        
+        
+        
         /// <param name="Answered">The number of interactions answered by an agent in a given period.</param>
+        
+        
+        
         /// <param name="Abandoned">The number of customers who disconnect before connecting with an agent.</param>
+        
+        
+        
         /// <param name="AverageTalkTimeSeconds">The average time in seconds an agent spends interacting with a customer per talk segment for a defined period of time.</param>
+        
+        
+        
         /// <param name="AverageAfterCallWorkSeconds">The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction.</param>
+        
+        
+        
         /// <param name="ServiceLevelPercent">Percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group.</param>
+        
+        
+        
         /// <param name="AverageSpeedOfAnswerSeconds">The average time in seconds it takes to answer an interaction once the interaction becomes available to be routed.</param>
+        
+        
         public IntradayHistoricalQueueData(int? Offered = null, int? Completed = null, int? Answered = null, int? Abandoned = null, double? AverageTalkTimeSeconds = null, double? AverageAfterCallWorkSeconds = null, double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null)
         {
-            this.Offered = Offered;
-            this.Completed = Completed;
-            this.Answered = Answered;
-            this.Abandoned = Abandoned;
-            this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
-            this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
-            this.ServiceLevelPercent = ServiceLevelPercent;
-            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Offered = Offered;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Completed = Completed;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Answered = Answered;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Abandoned = Abandoned;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageTalkTimeSeconds = AverageTalkTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageAfterCallWorkSeconds = AverageAfterCallWorkSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ServiceLevelPercent = ServiceLevelPercent;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The number of interactions routed into the queue for the given media type(s) for an agent to answer
@@ -47,48 +215,71 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The number of interactions routed into the queue for the given media type(s) for an agent to answer</value>
         [DataMember(Name="offered", EmitDefaultValue=false)]
         public int? Offered { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of interactions completed
         /// </summary>
         /// <value>The number of interactions completed</value>
         [DataMember(Name="completed", EmitDefaultValue=false)]
         public int? Completed { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of interactions answered by an agent in a given period
         /// </summary>
         /// <value>The number of interactions answered by an agent in a given period</value>
         [DataMember(Name="answered", EmitDefaultValue=false)]
         public int? Answered { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of customers who disconnect before connecting with an agent
         /// </summary>
         /// <value>The number of customers who disconnect before connecting with an agent</value>
         [DataMember(Name="abandoned", EmitDefaultValue=false)]
         public int? Abandoned { get; set; }
+        
+        
+        
         /// <summary>
         /// The average time in seconds an agent spends interacting with a customer per talk segment for a defined period of time
         /// </summary>
         /// <value>The average time in seconds an agent spends interacting with a customer per talk segment for a defined period of time</value>
         [DataMember(Name="averageTalkTimeSeconds", EmitDefaultValue=false)]
         public double? AverageTalkTimeSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction
         /// </summary>
         /// <value>The average time in seconds spent in after-call work. After-call work is the work that an agent performs immediately following an interaction</value>
         [DataMember(Name="averageAfterCallWorkSeconds", EmitDefaultValue=false)]
         public double? AverageAfterCallWorkSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group
         /// </summary>
         /// <value>Percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group</value>
         [DataMember(Name="serviceLevelPercent", EmitDefaultValue=false)]
         public double? ServiceLevelPercent { get; set; }
+        
+        
+        
         /// <summary>
         /// The average time in seconds it takes to answer an interaction once the interaction becomes available to be routed
         /// </summary>
         /// <value>The average time in seconds it takes to answer an interaction once the interaction becomes available to be routed</value>
         [DataMember(Name="averageSpeedOfAnswerSeconds", EmitDefaultValue=false)]
         public double? AverageSpeedOfAnswerSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -97,14 +288,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayHistoricalQueueData {\n");
+            
             sb.Append("  Offered: ").Append(Offered).Append("\n");
+            
             sb.Append("  Completed: ").Append(Completed).Append("\n");
+            
             sb.Append("  Answered: ").Append(Answered).Append("\n");
+            
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
+            
             sb.Append("  AverageTalkTimeSeconds: ").Append(AverageTalkTimeSeconds).Append("\n");
+            
             sb.Append("  AverageAfterCallWorkSeconds: ").Append(AverageAfterCallWorkSeconds).Append("\n");
+            
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
+            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -194,22 +394,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Offered != null)
                     hash = hash * 59 + this.Offered.GetHashCode();
+                
                 if (this.Completed != null)
                     hash = hash * 59 + this.Completed.GetHashCode();
+                
                 if (this.Answered != null)
                     hash = hash * 59 + this.Answered.GetHashCode();
+                
                 if (this.Abandoned != null)
                     hash = hash * 59 + this.Abandoned.GetHashCode();
+                
                 if (this.AverageTalkTimeSeconds != null)
                     hash = hash * 59 + this.AverageTalkTimeSeconds.GetHashCode();
+                
                 if (this.AverageAfterCallWorkSeconds != null)
                     hash = hash * 59 + this.AverageAfterCallWorkSeconds.GetHashCode();
+                
                 if (this.ServiceLevelPercent != null)
                     hash = hash * 59 + this.ServiceLevelPercent.GetHashCode();
+                
                 if (this.AverageSpeedOfAnswerSeconds != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswerSeconds.GetHashCode();
+                
                 return hash;
             }
         }

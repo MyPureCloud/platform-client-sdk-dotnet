@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AggregationResult :  IEquatable<AggregationResult>
     {
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -44,27 +46,137 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "numericRange")]
             Numericrange
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationResult" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="Dimension">For termFrequency aggregations.</param>
+        
+        
+        
         /// <param name="Metric">For numericRange aggregations.</param>
+        
+        
+        
         /// <param name="Count">Count.</param>
+        
+        
+        
         /// <param name="Results">Results.</param>
+        
+        
         public AggregationResult(TypeEnum? Type = null, string Dimension = null, string Metric = null, long? Count = null, List<AggregationResultEntry> Results = null)
         {
-            this.Type = Type;
-            this.Dimension = Dimension;
-            this.Metric = Metric;
-            this.Count = Count;
-            this.Results = Results;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Dimension = Dimension;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Metric = Metric;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Count = Count;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Results = Results;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// For termFrequency aggregations
@@ -72,22 +184,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>For termFrequency aggregations</value>
         [DataMember(Name="dimension", EmitDefaultValue=false)]
         public string Dimension { get; set; }
+        
+        
+        
         /// <summary>
         /// For numericRange aggregations
         /// </summary>
         /// <value>For numericRange aggregations</value>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public string Metric { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Count
         /// </summary>
         [DataMember(Name="count", EmitDefaultValue=false)]
         public long? Count { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<AggregationResultEntry> Results { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,11 +219,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AggregationResult {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Dimension: ").Append(Dimension).Append("\n");
+            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
+            
             sb.Append("  Count: ").Append(Count).Append("\n");
+            
             sb.Append("  Results: ").Append(Results).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -175,16 +304,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Dimension != null)
                     hash = hash * 59 + this.Dimension.GetHashCode();
+                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
+                
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
+                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+                
                 return hash;
             }
         }

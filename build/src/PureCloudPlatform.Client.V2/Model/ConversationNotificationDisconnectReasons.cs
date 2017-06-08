@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationDisconnectReasons :  IEquatable<ConversationNotificationDisconnectReasons>
     {
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -44,34 +46,109 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SIP")]
             Sip
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationDisconnectReasons" /> class.
         /// </summary>
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="Code">Code.</param>
+        
+        
+        
         /// <param name="Phrase">Phrase.</param>
+        
+        
         public ConversationNotificationDisconnectReasons(TypeEnum? Type = null, int? Code = null, string Phrase = null)
         {
-            this.Type = Type;
-            this.Code = Code;
-            this.Phrase = Phrase;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Code = Code;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Phrase = Phrase;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Code
         /// </summary>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public int? Code { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Phrase
         /// </summary>
         [DataMember(Name="phrase", EmitDefaultValue=false)]
         public string Phrase { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,9 +157,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationDisconnectReasons {\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Code: ").Append(Code).Append("\n");
+            
             sb.Append("  Phrase: ").Append(Phrase).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,12 +228,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
+                
                 if (this.Phrase != null)
                     hash = hash * 59 + this.Phrase.GetHashCode();
+                
                 return hash;
             }
         }

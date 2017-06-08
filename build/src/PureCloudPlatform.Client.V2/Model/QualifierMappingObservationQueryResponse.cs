@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QualifierMappingObservationQueryResponse :  IEquatable<QualifierMappingObservationQueryResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QualifierMappingObservationQueryResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="SystemToOrganizationMappings">A mapping from system presence to a list of organization presence ids.</param>
+        
+        
+        
         /// <param name="Results">Results.</param>
+        
+        
         public QualifierMappingObservationQueryResponse(Dictionary<string, List<string>> SystemToOrganizationMappings = null, List<ObservationDataContainer> Results = null)
         {
-            this.SystemToOrganizationMappings = SystemToOrganizationMappings;
-            this.Results = Results;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.SystemToOrganizationMappings = SystemToOrganizationMappings;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Results = Results;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A mapping from system presence to a list of organization presence ids
@@ -35,11 +83,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A mapping from system presence to a list of organization presence ids</value>
         [DataMember(Name="systemToOrganizationMappings", EmitDefaultValue=false)]
         public Dictionary<string, List<string>> SystemToOrganizationMappings { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<ObservationDataContainer> Results { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,8 +101,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QualifierMappingObservationQueryResponse {\n");
+            
             sb.Append("  SystemToOrganizationMappings: ").Append(SystemToOrganizationMappings).Append("\n");
+            
             sb.Append("  Results: ").Append(Results).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,10 +165,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.SystemToOrganizationMappings != null)
                     hash = hash * 59 + this.SystemToOrganizationMappings.GetHashCode();
+                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+                
                 return hash;
             }
         }

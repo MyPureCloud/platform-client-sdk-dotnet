@@ -18,28 +18,81 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExportUri :  IEquatable<ExportUri>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ExportUri" /> class.
         /// </summary>
+        
+        
         /// <param name="Uri">Uri.</param>
+        
+        
+        
         /// <param name="ExportTimestamp">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
         public ExportUri(string Uri = null, DateTime? ExportTimestamp = null)
         {
-            this.Uri = Uri;
-            this.ExportTimestamp = ExportTimestamp;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Uri = Uri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExportTimestamp = ExportTimestamp;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Uri
         /// </summary>
         [DataMember(Name="uri", EmitDefaultValue=false)]
         public string Uri { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="exportTimestamp", EmitDefaultValue=false)]
         public DateTime? ExportTimestamp { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,8 +101,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ExportUri {\n");
+            
             sb.Append("  Uri: ").Append(Uri).Append("\n");
+            
             sb.Append("  ExportTimestamp: ").Append(ExportTimestamp).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,10 +165,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Uri != null)
                     hash = hash * 59 + this.Uri.GetHashCode();
+                
                 if (this.ExportTimestamp != null)
                     hash = hash * 59 + this.ExportTimestamp.GetHashCode();
+                
                 return hash;
             }
         }

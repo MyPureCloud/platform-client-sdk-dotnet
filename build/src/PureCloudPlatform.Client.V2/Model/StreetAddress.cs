@@ -18,24 +18,96 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class StreetAddress :  IEquatable<StreetAddress>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected StreetAddress() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="StreetAddress" /> class.
         /// </summary>
+        
+        
         /// <param name="Country">2 Letter Country code, like US or GB (required).</param>
+        
+        
+        
         /// <param name="A1">State or Province (required).</param>
+        
+        
+        
         /// <param name="A3">City or township (required).</param>
+        
+        
+        
         /// <param name="RD">RD.</param>
+        
+        
+        
         /// <param name="HNO">HNO.</param>
+        
+        
+        
         /// <param name="LOC">LOC.</param>
+        
+        
+        
         /// <param name="NAM">NAM.</param>
+        
+        
+        
         /// <param name="PC">PC.</param>
+        
+        
         public StreetAddress(string Country = null, string A1 = null, string A3 = null, string RD = null, string HNO = null, string LOC = null, string NAM = null, string PC = null)
         {
+            
+            
+            
             // to ensure "Country" is required (not null)
             if (Country == null)
             {
@@ -45,6 +117,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Country = Country;
             }
+            
+            
+            
+            
+            
             // to ensure "A1" is required (not null)
             if (A1 == null)
             {
@@ -54,6 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.A1 = A1;
             }
+            
+            
+            
+            
+            
             // to ensure "A3" is required (not null)
             if (A3 == null)
             {
@@ -63,12 +145,90 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.A3 = A3;
             }
-            this.RD = RD;
-            this.HNO = HNO;
-            this.LOC = LOC;
-            this.NAM = NAM;
-            this.PC = PC;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RD = RD;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HNO = HNO;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LOC = LOC;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NAM = NAM;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PC = PC;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// 2 Letter Country code, like US or GB
@@ -76,43 +236,66 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>2 Letter Country code, like US or GB</value>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
+        
+        
+        
         /// <summary>
         /// State or Province
         /// </summary>
         /// <value>State or Province</value>
         [DataMember(Name="A1", EmitDefaultValue=false)]
         public string A1 { get; set; }
+        
+        
+        
         /// <summary>
         /// City or township
         /// </summary>
         /// <value>City or township</value>
         [DataMember(Name="A3", EmitDefaultValue=false)]
         public string A3 { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RD
         /// </summary>
         [DataMember(Name="RD", EmitDefaultValue=false)]
         public string RD { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets HNO
         /// </summary>
         [DataMember(Name="HNO", EmitDefaultValue=false)]
         public string HNO { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets LOC
         /// </summary>
         [DataMember(Name="LOC", EmitDefaultValue=false)]
         public string LOC { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NAM
         /// </summary>
         [DataMember(Name="NAM", EmitDefaultValue=false)]
         public string NAM { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PC
         /// </summary>
         [DataMember(Name="PC", EmitDefaultValue=false)]
         public string PC { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -121,14 +304,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class StreetAddress {\n");
+            
             sb.Append("  Country: ").Append(Country).Append("\n");
+            
             sb.Append("  A1: ").Append(A1).Append("\n");
+            
             sb.Append("  A3: ").Append(A3).Append("\n");
+            
             sb.Append("  RD: ").Append(RD).Append("\n");
+            
             sb.Append("  HNO: ").Append(HNO).Append("\n");
+            
             sb.Append("  LOC: ").Append(LOC).Append("\n");
+            
             sb.Append("  NAM: ").Append(NAM).Append("\n");
+            
             sb.Append("  PC: ").Append(PC).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -218,22 +410,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
+                
                 if (this.A1 != null)
                     hash = hash * 59 + this.A1.GetHashCode();
+                
                 if (this.A3 != null)
                     hash = hash * 59 + this.A3.GetHashCode();
+                
                 if (this.RD != null)
                     hash = hash * 59 + this.RD.GetHashCode();
+                
                 if (this.HNO != null)
                     hash = hash * 59 + this.HNO.GetHashCode();
+                
                 if (this.LOC != null)
                     hash = hash * 59 + this.LOC.GetHashCode();
+                
                 if (this.NAM != null)
                     hash = hash * 59 + this.NAM.GetHashCode();
+                
                 if (this.PC != null)
                     hash = hash * 59 + this.PC.GetHashCode();
+                
                 return hash;
             }
         }

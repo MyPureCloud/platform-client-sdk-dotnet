@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RetentionDuration :  IEquatable<RetentionDuration>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RetentionDuration" /> class.
         /// </summary>
+        
+        
         /// <param name="ArchiveRetention">ArchiveRetention.</param>
+        
+        
+        
         /// <param name="DeleteRetention">DeleteRetention.</param>
+        
+        
         public RetentionDuration(ArchiveRetention ArchiveRetention = null, DeleteRetention DeleteRetention = null)
         {
-            this.ArchiveRetention = ArchiveRetention;
-            this.DeleteRetention = DeleteRetention;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ArchiveRetention = ArchiveRetention;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DeleteRetention = DeleteRetention;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ArchiveRetention
         /// </summary>
         [DataMember(Name="archiveRetention", EmitDefaultValue=false)]
         public ArchiveRetention ArchiveRetention { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DeleteRetention
         /// </summary>
         [DataMember(Name="deleteRetention", EmitDefaultValue=false)]
         public DeleteRetention DeleteRetention { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RetentionDuration {\n");
+            
             sb.Append("  ArchiveRetention: ").Append(ArchiveRetention).Append("\n");
+            
             sb.Append("  DeleteRetention: ").Append(DeleteRetention).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ArchiveRetention != null)
                     hash = hash * 59 + this.ArchiveRetention.GetHashCode();
+                
                 if (this.DeleteRetention != null)
                     hash = hash * 59 + this.DeleteRetention.GetHashCode();
+                
                 return hash;
             }
         }

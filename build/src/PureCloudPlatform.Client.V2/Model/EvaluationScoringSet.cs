@@ -18,55 +18,200 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluationScoringSet :  IEquatable<EvaluationScoringSet>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationScoringSet" /> class.
         /// </summary>
+        
+        
         /// <param name="TotalScore">TotalScore.</param>
+        
+        
+        
         /// <param name="TotalCriticalScore">TotalCriticalScore.</param>
+        
+        
+        
         /// <param name="QuestionGroupScores">QuestionGroupScores.</param>
+        
+        
+        
         /// <param name="AnyFailedKillQuestions">AnyFailedKillQuestions.</param>
+        
+        
+        
         /// <param name="Comments">Comments.</param>
+        
+        
+        
         /// <param name="AgentComments">AgentComments.</param>
+        
+        
         public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, List<QuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string AgentComments = null)
         {
-            this.TotalScore = TotalScore;
-            this.TotalCriticalScore = TotalCriticalScore;
-            this.QuestionGroupScores = QuestionGroupScores;
-            this.AnyFailedKillQuestions = AnyFailedKillQuestions;
-            this.Comments = Comments;
-            this.AgentComments = AgentComments;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalScore = TotalScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalCriticalScore = TotalCriticalScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.QuestionGroupScores = QuestionGroupScores;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AnyFailedKillQuestions = AnyFailedKillQuestions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Comments = Comments;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AgentComments = AgentComments;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets TotalScore
         /// </summary>
         [DataMember(Name="totalScore", EmitDefaultValue=false)]
         public float? TotalScore { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TotalCriticalScore
         /// </summary>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets QuestionGroupScores
         /// </summary>
         [DataMember(Name="questionGroupScores", EmitDefaultValue=false)]
         public List<QuestionGroupScore> QuestionGroupScores { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AnyFailedKillQuestions
         /// </summary>
         [DataMember(Name="anyFailedKillQuestions", EmitDefaultValue=false)]
         public bool? AnyFailedKillQuestions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Comments
         /// </summary>
         [DataMember(Name="comments", EmitDefaultValue=false)]
         public string Comments { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AgentComments
         /// </summary>
         [DataMember(Name="agentComments", EmitDefaultValue=false)]
         public string AgentComments { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +220,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluationScoringSet {\n");
+            
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
+            
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
+            
             sb.Append("  QuestionGroupScores: ").Append(QuestionGroupScores).Append("\n");
+            
             sb.Append("  AnyFailedKillQuestions: ").Append(AnyFailedKillQuestions).Append("\n");
+            
             sb.Append("  Comments: ").Append(Comments).Append("\n");
+            
             sb.Append("  AgentComments: ").Append(AgentComments).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,18 +312,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.TotalScore != null)
                     hash = hash * 59 + this.TotalScore.GetHashCode();
+                
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
+                
                 if (this.QuestionGroupScores != null)
                     hash = hash * 59 + this.QuestionGroupScores.GetHashCode();
+                
                 if (this.AnyFailedKillQuestions != null)
                     hash = hash * 59 + this.AnyFailedKillQuestions.GetHashCode();
+                
                 if (this.Comments != null)
                     hash = hash * 59 + this.Comments.GetHashCode();
+                
                 if (this.AgentComments != null)
                     hash = hash * 59 + this.AgentComments.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,18 +18,86 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayPerformancePredictionQueueData :  IEquatable<IntradayPerformancePredictionQueueData>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayPerformancePredictionQueueData" /> class.
         /// </summary>
+        
+        
         /// <param name="ServiceLevelPercent">Predicted percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group.</param>
+        
+        
+        
         /// <param name="AverageSpeedOfAnswerSeconds">Predicted average time in seconds it takes to answer an interaction once the interaction becomes available to be routed.</param>
+        
+        
+        
         /// <param name="NumberOfInteractions">Predicted number of interactions.</param>
+        
+        
         public IntradayPerformancePredictionQueueData(double? ServiceLevelPercent = null, double? AverageSpeedOfAnswerSeconds = null, double? NumberOfInteractions = null)
         {
-            this.ServiceLevelPercent = ServiceLevelPercent;
-            this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
-            this.NumberOfInteractions = NumberOfInteractions;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ServiceLevelPercent = ServiceLevelPercent;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageSpeedOfAnswerSeconds = AverageSpeedOfAnswerSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumberOfInteractions = NumberOfInteractions;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Predicted percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group
@@ -37,18 +105,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Predicted percent of interactions answered in X seconds, where X is the service level objective configured in the service goal group matching this intraday group</value>
         [DataMember(Name="serviceLevelPercent", EmitDefaultValue=false)]
         public double? ServiceLevelPercent { get; set; }
+        
+        
+        
         /// <summary>
         /// Predicted average time in seconds it takes to answer an interaction once the interaction becomes available to be routed
         /// </summary>
         /// <value>Predicted average time in seconds it takes to answer an interaction once the interaction becomes available to be routed</value>
         [DataMember(Name="averageSpeedOfAnswerSeconds", EmitDefaultValue=false)]
         public double? AverageSpeedOfAnswerSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Predicted number of interactions
         /// </summary>
         /// <value>Predicted number of interactions</value>
         [DataMember(Name="numberOfInteractions", EmitDefaultValue=false)]
         public double? NumberOfInteractions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -57,9 +133,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayPerformancePredictionQueueData {\n");
+            
             sb.Append("  ServiceLevelPercent: ").Append(ServiceLevelPercent).Append("\n");
+            
             sb.Append("  AverageSpeedOfAnswerSeconds: ").Append(AverageSpeedOfAnswerSeconds).Append("\n");
+            
             sb.Append("  NumberOfInteractions: ").Append(NumberOfInteractions).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -124,12 +204,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ServiceLevelPercent != null)
                     hash = hash * 59 + this.ServiceLevelPercent.GetHashCode();
+                
                 if (this.AverageSpeedOfAnswerSeconds != null)
                     hash = hash * 59 + this.AverageSpeedOfAnswerSeconds.GetHashCode();
+                
                 if (this.NumberOfInteractions != null)
                     hash = hash * 59 + this.NumberOfInteractions.GetHashCode();
+                
                 return hash;
             }
         }

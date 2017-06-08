@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkspaceSummary :  IEquatable<WorkspaceSummary>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkspaceSummary" /> class.
         /// </summary>
+        
+        
         /// <param name="TotalDocumentCount">TotalDocumentCount.</param>
+        
+        
+        
         /// <param name="TotalDocumentByteCount">TotalDocumentByteCount.</param>
+        
+        
         public WorkspaceSummary(long? TotalDocumentCount = null, long? TotalDocumentByteCount = null)
         {
-            this.TotalDocumentCount = TotalDocumentCount;
-            this.TotalDocumentByteCount = TotalDocumentByteCount;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalDocumentCount = TotalDocumentCount;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalDocumentByteCount = TotalDocumentByteCount;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets TotalDocumentCount
         /// </summary>
         [DataMember(Name="totalDocumentCount", EmitDefaultValue=false)]
         public long? TotalDocumentCount { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TotalDocumentByteCount
         /// </summary>
         [DataMember(Name="totalDocumentByteCount", EmitDefaultValue=false)]
         public long? TotalDocumentByteCount { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class WorkspaceSummary {\n");
+            
             sb.Append("  TotalDocumentCount: ").Append(TotalDocumentCount).Append("\n");
+            
             sb.Append("  TotalDocumentByteCount: ").Append(TotalDocumentByteCount).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.TotalDocumentCount != null)
                     hash = hash * 59 + this.TotalDocumentCount.GetHashCode();
+                
                 if (this.TotalDocumentByteCount != null)
                     hash = hash * 59 + this.TotalDocumentByteCount.GetHashCode();
+                
                 return hash;
             }
         }

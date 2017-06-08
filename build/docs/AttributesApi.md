@@ -40,13 +40,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AttributesApi();
+            
+            
             var attributeId = attributeId_example;  // string | Attribute ID
+            
+            
+            
 
             try
             {
+                
                 // Delete an existing Attribute.
+                
                 apiInstance.DeleteAttribute(attributeId);
             }
             catch (Exception e)
@@ -95,13 +103,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AttributesApi();
+            
+            
             var attributeId = attributeId_example;  // string | Attribute ID
+            
+            
+            
 
             try
             {
+                
                 // Get details about an existing attribute.
+                
                 PureCloudPlatform.Client.V2.Model.Attribute result = apiInstance.GetAttribute(attributeId);
                 Debug.WriteLine(result);
             }
@@ -151,14 +167,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AttributesApi();
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
 
             try
             {
+                
                 // Gets a list of existing attributes.
+                
                 AttributeEntityListing result = apiInstance.GetAttributes(pageNumber, pageSize);
                 Debug.WriteLine(result);
             }
@@ -209,13 +237,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AttributesApi();
+            
+            
+            
             var body = new PureCloudPlatform.Client.V2.Model.Attribute(); // PureCloudPlatform.Client.V2.Model.Attribute | Attribute
+            
+            
 
             try
             {
+                
                 // Create an attribute.
+                
                 PureCloudPlatform.Client.V2.Model.Attribute result = apiInstance.PostAttributes(body);
                 Debug.WriteLine(result);
             }
@@ -265,13 +301,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AttributesApi();
+            
+            
+            
             var body = new AttributeQueryRequest(); // AttributeQueryRequest | query
+            
+            
 
             try
             {
+                
                 // Query attributes
+                
                 AttributeEntityListing result = apiInstance.PostAttributesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -321,14 +365,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new AttributesApi();
+            
+            
             var attributeId = attributeId_example;  // string | Attribute ID
+            
+            
+            
+            
+            
             var body = new PureCloudPlatform.Client.V2.Model.Attribute(); // PureCloudPlatform.Client.V2.Model.Attribute | Attribute
+            
+            
 
             try
             {
+                
                 // Update an existing attribute.
+                
                 PureCloudPlatform.Client.V2.Model.Attribute result = apiInstance.PutAttribute(attributeId, body);
                 Debug.WriteLine(result);
             }

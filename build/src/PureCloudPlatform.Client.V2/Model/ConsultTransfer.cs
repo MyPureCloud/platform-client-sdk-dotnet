@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConsultTransfer :  IEquatable<ConsultTransfer>
     {
+        
+        
         /// <summary>
         /// Determines to whom the initiating participant is speaking. Defaults to DESTINATION
         /// </summary>
@@ -51,24 +53,52 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "BOTH")]
             Both
         }
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Determines to whom the initiating participant is speaking. Defaults to DESTINATION
         /// </summary>
         /// <value>Determines to whom the initiating participant is speaking. Defaults to DESTINATION</value>
         [DataMember(Name="speakTo", EmitDefaultValue=false)]
         public SpeakToEnum? SpeakTo { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransfer" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected ConsultTransfer() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConsultTransfer" /> class.
         /// </summary>
+        
+        
         /// <param name="SpeakTo">Determines to whom the initiating participant is speaking. Defaults to DESTINATION.</param>
+        
+        
+        
         /// <param name="Destination">Destination phone number and name. (required).</param>
+        
+        
         public ConsultTransfer(SpeakToEnum? SpeakTo = null, Destination Destination = null)
         {
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Destination" is required (not null)
             if (Destination == null)
             {
@@ -78,8 +108,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Destination = Destination;
             }
-            this.SpeakTo = SpeakTo;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SpeakTo = SpeakTo;
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Destination phone number and name.
@@ -87,6 +137,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Destination phone number and name.</value>
         [DataMember(Name="destination", EmitDefaultValue=false)]
         public Destination Destination { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -95,8 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConsultTransfer {\n");
+            
             sb.Append("  SpeakTo: ").Append(SpeakTo).Append("\n");
+            
             sb.Append("  Destination: ").Append(Destination).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -156,10 +211,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.SpeakTo != null)
                     hash = hash * 59 + this.SpeakTo.GetHashCode();
+                
                 if (this.Destination != null)
                     hash = hash * 59 + this.Destination.GetHashCode();
+                
                 return hash;
             }
         }

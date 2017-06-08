@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FaxSummary :  IEquatable<FaxSummary>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="FaxSummary" /> class.
         /// </summary>
+        
+        
         /// <param name="ReadCount">ReadCount.</param>
+        
+        
+        
         /// <param name="UnreadCount">UnreadCount.</param>
+        
+        
+        
         /// <param name="TotalCount">TotalCount.</param>
+        
+        
         public FaxSummary(int? ReadCount = null, int? UnreadCount = null, int? TotalCount = null)
         {
-            this.ReadCount = ReadCount;
-            this.UnreadCount = UnreadCount;
-            this.TotalCount = TotalCount;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ReadCount = ReadCount;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UnreadCount = UnreadCount;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalCount = TotalCount;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ReadCount
         /// </summary>
         [DataMember(Name="readCount", EmitDefaultValue=false)]
         public int? ReadCount { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UnreadCount
         /// </summary>
         [DataMember(Name="unreadCount", EmitDefaultValue=false)]
         public int? UnreadCount { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TotalCount
         /// </summary>
         [DataMember(Name="totalCount", EmitDefaultValue=false)]
         public int? TotalCount { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class FaxSummary {\n");
+            
             sb.Append("  ReadCount: ").Append(ReadCount).Append("\n");
+            
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
+            
             sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ReadCount != null)
                     hash = hash * 59 + this.ReadCount.GetHashCode();
+                
                 if (this.UnreadCount != null)
                     hash = hash * 59 + this.UnreadCount.GetHashCode();
+                
                 if (this.TotalCount != null)
                     hash = hash * 59 + this.TotalCount.GetHashCode();
+                
                 return hash;
             }
         }

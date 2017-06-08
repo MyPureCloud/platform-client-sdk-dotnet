@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsConversationQueryResponse :  IEquatable<AnalyticsConversationQueryResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationQueryResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="Conversations">Conversations.</param>
+        
+        
+        
         /// <param name="Aggregations">Aggregations.</param>
+        
+        
         public AnalyticsConversationQueryResponse(List<AnalyticsConversation> Conversations = null, List<AggregationResult> Aggregations = null)
         {
-            this.Conversations = Conversations;
-            this.Aggregations = Aggregations;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Conversations = Conversations;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Aggregations = Aggregations;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Conversations
         /// </summary>
         [DataMember(Name="conversations", EmitDefaultValue=false)]
         public List<AnalyticsConversation> Conversations { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Aggregations
         /// </summary>
         [DataMember(Name="aggregations", EmitDefaultValue=false)]
         public List<AggregationResult> Aggregations { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationQueryResponse {\n");
+            
             sb.Append("  Conversations: ").Append(Conversations).Append("\n");
+            
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Conversations != null)
                     hash = hash * 59 + this.Conversations.GetHashCode();
+                
                 if (this.Aggregations != null)
                     hash = hash * 59 + this.Aggregations.GetHashCode();
+                
                 return hash;
             }
         }

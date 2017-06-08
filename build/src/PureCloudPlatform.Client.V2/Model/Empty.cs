@@ -18,12 +18,19 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Empty :  IEquatable<Empty>
     {
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Empty" /> class.
         /// </summary>
+        
         public Empty()
         {
+            
+            
         }
+        
         
         /// <summary>
         /// Returns the string presentation of the object
@@ -33,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Empty {\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -82,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 return hash;
             }
         }

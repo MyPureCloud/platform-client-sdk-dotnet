@@ -18,28 +18,218 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EvaluatorActivity :  IEquatable<EvaluatorActivity>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluatorActivity" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Evaluator">Evaluator.</param>
+        
+        
+        
         /// <param name="NumEvaluationsAssigned">NumEvaluationsAssigned.</param>
+        
+        
+        
         /// <param name="NumEvaluationsStarted">NumEvaluationsStarted.</param>
+        
+        
+        
         /// <param name="NumEvaluationsCompleted">NumEvaluationsCompleted.</param>
+        
+        
+        
         /// <param name="NumCalibrationsAssigned">NumCalibrationsAssigned.</param>
+        
+        
+        
         /// <param name="NumCalibrationsStarted">NumCalibrationsStarted.</param>
+        
+        
+        
         /// <param name="NumCalibrationsCompleted">NumCalibrationsCompleted.</param>
+        
+        
+        
+        
         public EvaluatorActivity(string Name = null, User Evaluator = null, int? NumEvaluationsAssigned = null, int? NumEvaluationsStarted = null, int? NumEvaluationsCompleted = null, int? NumCalibrationsAssigned = null, int? NumCalibrationsStarted = null, int? NumCalibrationsCompleted = null)
         {
-            this.Name = Name;
-            this.Evaluator = Evaluator;
-            this.NumEvaluationsAssigned = NumEvaluationsAssigned;
-            this.NumEvaluationsStarted = NumEvaluationsStarted;
-            this.NumEvaluationsCompleted = NumEvaluationsCompleted;
-            this.NumCalibrationsAssigned = NumCalibrationsAssigned;
-            this.NumCalibrationsStarted = NumCalibrationsStarted;
-            this.NumCalibrationsCompleted = NumCalibrationsCompleted;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Evaluator = Evaluator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumEvaluationsAssigned = NumEvaluationsAssigned;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumEvaluationsStarted = NumEvaluationsStarted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumEvaluationsCompleted = NumEvaluationsCompleted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumCalibrationsAssigned = NumCalibrationsAssigned;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumCalibrationsStarted = NumCalibrationsStarted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NumCalibrationsCompleted = NumCalibrationsCompleted;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -47,52 +237,81 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Evaluator
         /// </summary>
         [DataMember(Name="evaluator", EmitDefaultValue=false)]
         public User Evaluator { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumEvaluationsAssigned
         /// </summary>
         [DataMember(Name="numEvaluationsAssigned", EmitDefaultValue=false)]
         public int? NumEvaluationsAssigned { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumEvaluationsStarted
         /// </summary>
         [DataMember(Name="numEvaluationsStarted", EmitDefaultValue=false)]
         public int? NumEvaluationsStarted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumEvaluationsCompleted
         /// </summary>
         [DataMember(Name="numEvaluationsCompleted", EmitDefaultValue=false)]
         public int? NumEvaluationsCompleted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumCalibrationsAssigned
         /// </summary>
         [DataMember(Name="numCalibrationsAssigned", EmitDefaultValue=false)]
         public int? NumCalibrationsAssigned { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumCalibrationsStarted
         /// </summary>
         [DataMember(Name="numCalibrationsStarted", EmitDefaultValue=false)]
         public int? NumCalibrationsStarted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NumCalibrationsCompleted
         /// </summary>
         [DataMember(Name="numCalibrationsCompleted", EmitDefaultValue=false)]
         public int? NumCalibrationsCompleted { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -101,16 +320,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EvaluatorActivity {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
+            
             sb.Append("  NumEvaluationsAssigned: ").Append(NumEvaluationsAssigned).Append("\n");
+            
             sb.Append("  NumEvaluationsStarted: ").Append(NumEvaluationsStarted).Append("\n");
+            
             sb.Append("  NumEvaluationsCompleted: ").Append(NumEvaluationsCompleted).Append("\n");
+            
             sb.Append("  NumCalibrationsAssigned: ").Append(NumCalibrationsAssigned).Append("\n");
+            
             sb.Append("  NumCalibrationsStarted: ").Append(NumCalibrationsStarted).Append("\n");
+            
             sb.Append("  NumCalibrationsCompleted: ").Append(NumCalibrationsCompleted).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -210,26 +440,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Evaluator != null)
                     hash = hash * 59 + this.Evaluator.GetHashCode();
+                
                 if (this.NumEvaluationsAssigned != null)
                     hash = hash * 59 + this.NumEvaluationsAssigned.GetHashCode();
+                
                 if (this.NumEvaluationsStarted != null)
                     hash = hash * 59 + this.NumEvaluationsStarted.GetHashCode();
+                
                 if (this.NumEvaluationsCompleted != null)
                     hash = hash * 59 + this.NumEvaluationsCompleted.GetHashCode();
+                
                 if (this.NumCalibrationsAssigned != null)
                     hash = hash * 59 + this.NumCalibrationsAssigned.GetHashCode();
+                
                 if (this.NumCalibrationsStarted != null)
                     hash = hash * 59 + this.NumCalibrationsStarted.GetHashCode();
+                
                 if (this.NumCalibrationsCompleted != null)
                     hash = hash * 59 + this.NumCalibrationsCompleted.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

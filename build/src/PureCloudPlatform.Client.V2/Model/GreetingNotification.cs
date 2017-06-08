@@ -18,62 +18,230 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GreetingNotification :  IEquatable<GreetingNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="GreetingNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="OwnerType">OwnerType.</param>
+        
+        
+        
         /// <param name="Owner">Owner.</param>
+        
+        
+        
         /// <param name="GreetingAudioFile">GreetingAudioFile.</param>
+        
+        
+        
         /// <param name="AudioTTS">AudioTTS.</param>
+        
+        
         public GreetingNotification(string Id = null, string Name = null, string Type = null, string OwnerType = null, DocumentDataV2NotificationWorkspace Owner = null, GreetingNotificationGreetingAudioFile GreetingAudioFile = null, string AudioTTS = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.Type = Type;
-            this.OwnerType = OwnerType;
-            this.Owner = Owner;
-            this.GreetingAudioFile = GreetingAudioFile;
-            this.AudioTTS = AudioTTS;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OwnerType = OwnerType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Owner = Owner;
+            
+            
+            
+            
+            
+            
+            
+            
+this.GreetingAudioFile = GreetingAudioFile;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AudioTTS = AudioTTS;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets OwnerType
         /// </summary>
         [DataMember(Name="ownerType", EmitDefaultValue=false)]
         public string OwnerType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Owner
         /// </summary>
         [DataMember(Name="owner", EmitDefaultValue=false)]
         public DocumentDataV2NotificationWorkspace Owner { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets GreetingAudioFile
         /// </summary>
         [DataMember(Name="greetingAudioFile", EmitDefaultValue=false)]
         public GreetingNotificationGreetingAudioFile GreetingAudioFile { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AudioTTS
         /// </summary>
         [DataMember(Name="audioTTS", EmitDefaultValue=false)]
         public string AudioTTS { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -82,13 +250,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GreetingNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  OwnerType: ").Append(OwnerType).Append("\n");
+            
             sb.Append("  Owner: ").Append(Owner).Append("\n");
+            
             sb.Append("  GreetingAudioFile: ").Append(GreetingAudioFile).Append("\n");
+            
             sb.Append("  AudioTTS: ").Append(AudioTTS).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,20 +349,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.OwnerType != null)
                     hash = hash * 59 + this.OwnerType.GetHashCode();
+                
                 if (this.Owner != null)
                     hash = hash * 59 + this.Owner.GetHashCode();
+                
                 if (this.GreetingAudioFile != null)
                     hash = hash * 59 + this.GreetingAudioFile.GetHashCode();
+                
                 if (this.AudioTTS != null)
                     hash = hash * 59 + this.AudioTTS.GetHashCode();
+                
                 return hash;
             }
         }

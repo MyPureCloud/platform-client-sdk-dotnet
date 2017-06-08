@@ -41,13 +41,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new NotificationsApi();
+            
+            
             var channelId = channelId_example;  // string | Channel ID
+            
+            
+            
 
             try
             {
+                
                 // Remove all subscriptions
+                
                 apiInstance.DeleteNotificationsChannelSubscriptions(channelId);
             }
             catch (Exception e)
@@ -96,13 +104,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new NotificationsApi();
+            
+            
+            
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
 
             try
             {
+                
                 // Get available notification topics.
+                
                 AvailableTopicEntityListing result = apiInstance.GetNotificationsAvailabletopics(expand);
                 Debug.WriteLine(result);
             }
@@ -120,7 +136,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: description, requiresPermissions, schema |
 {: class="table table-striped"}
 
 ### Return type
@@ -152,13 +168,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new NotificationsApi();
+            
+            
             var channelId = channelId_example;  // string | Channel ID
+            
+            
+            
 
             try
             {
+                
                 // The list of all subscriptions for this channel
+                
                 ChannelTopicEntityListing result = apiInstance.GetNotificationsChannelSubscriptions(channelId);
                 Debug.WriteLine(result);
             }
@@ -208,12 +232,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new NotificationsApi();
+            
 
             try
             {
+                
                 // The list of existing channels
+                
                 ChannelEntityListing result = apiInstance.GetNotificationsChannels();
                 Debug.WriteLine(result);
             }
@@ -259,14 +287,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new NotificationsApi();
+            
+            
             var channelId = channelId_example;  // string | Channel ID
+            
+            
+            
+            
+            
             var body = new List<ChannelTopic>(); // List<ChannelTopic> | Body
+            
+            
 
             try
             {
+                
                 // Add a list of subscriptions to the existing list of subscriptions
+                
                 ChannelTopicEntityListing result = apiInstance.PostNotificationsChannelSubscriptions(channelId, body);
                 Debug.WriteLine(result);
             }
@@ -317,12 +357,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new NotificationsApi();
+            
 
             try
             {
+                
                 // Create a new channel
+                
                 Channel result = apiInstance.PostNotificationsChannels();
                 Debug.WriteLine(result);
             }
@@ -368,14 +412,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new NotificationsApi();
+            
+            
             var channelId = channelId_example;  // string | Channel ID
+            
+            
+            
+            
+            
             var body = new List<ChannelTopic>(); // List<ChannelTopic> | Body
+            
+            
 
             try
             {
+                
                 // Replace the current list of subscriptions with a new list.
+                
                 ChannelTopicEntityListing result = apiInstance.PutNotificationsChannelSubscriptions(channelId, body);
                 Debug.WriteLine(result);
             }

@@ -18,26 +18,174 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Wrapup :  IEquatable<Wrapup>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Wrapup" /> class.
         /// </summary>
+        
+        
         /// <param name="Code">The user configured wrap up code id..</param>
+        
+        
+        
         /// <param name="Name">The user configured wrap up code name..</param>
+        
+        
+        
         /// <param name="Notes">Text entered by the agent to describe the call or disposition..</param>
+        
+        
+        
         /// <param name="Tags">List of tags selected by the agent to describe the call or disposition..</param>
+        
+        
+        
         /// <param name="DurationSeconds">The length of time in seconds that the agent spent doing after call work..</param>
+        
+        
+        
         /// <param name="EndTime">The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="Provisional">Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later..</param>
+        
+        
         public Wrapup(string Code = null, string Name = null, string Notes = null, List<string> Tags = null, int? DurationSeconds = null, DateTime? EndTime = null, bool? Provisional = null)
         {
-            this.Code = Code;
-            this.Name = Name;
-            this.Notes = Notes;
-            this.Tags = Tags;
-            this.DurationSeconds = DurationSeconds;
-            this.EndTime = EndTime;
-            this.Provisional = Provisional;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Code = Code;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Notes = Notes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Tags = Tags;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationSeconds = DurationSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndTime = EndTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provisional = Provisional;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The user configured wrap up code id.
@@ -45,42 +193,62 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The user configured wrap up code id.</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
+        
+        
+        
         /// <summary>
         /// The user configured wrap up code name.
         /// </summary>
         /// <value>The user configured wrap up code name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Text entered by the agent to describe the call or disposition.
         /// </summary>
         /// <value>Text entered by the agent to describe the call or disposition.</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
+        
+        
+        
         /// <summary>
         /// List of tags selected by the agent to describe the call or disposition.
         /// </summary>
         /// <value>List of tags selected by the agent to describe the call or disposition.</value>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public List<string> Tags { get; set; }
+        
+        
+        
         /// <summary>
         /// The length of time in seconds that the agent spent doing after call work.
         /// </summary>
         /// <value>The length of time in seconds that the agent spent doing after call work.</value>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public int? DurationSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The timestamp when the wrapup was finished. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later.
         /// </summary>
         /// <value>Indicates if this is a pending save and should not require a code to be specified.  This allows someone to save some temporary wrapup that will be used later.</value>
         [DataMember(Name="provisional", EmitDefaultValue=false)]
         public bool? Provisional { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -89,13 +257,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Wrapup {\n");
+            
             sb.Append("  Code: ").Append(Code).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Notes: ").Append(Notes).Append("\n");
+            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
+            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
+            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            
             sb.Append("  Provisional: ").Append(Provisional).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -180,20 +356,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
+                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
+                
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
+                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+                
                 if (this.Provisional != null)
                     hash = hash * 59 + this.Provisional.GetHashCode();
+                
                 return hash;
             }
         }

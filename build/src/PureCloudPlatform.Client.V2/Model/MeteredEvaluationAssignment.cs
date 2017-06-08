@@ -18,55 +18,200 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MeteredEvaluationAssignment :  IEquatable<MeteredEvaluationAssignment>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MeteredEvaluationAssignment" /> class.
         /// </summary>
+        
+        
         /// <param name="EvaluationContextId">EvaluationContextId.</param>
+        
+        
+        
         /// <param name="Evaluators">Evaluators.</param>
+        
+        
+        
         /// <param name="MaxNumberEvaluations">MaxNumberEvaluations.</param>
+        
+        
+        
         /// <param name="EvaluationForm">EvaluationForm.</param>
+        
+        
+        
         /// <param name="AssignToActiveUser">AssignToActiveUser.</param>
+        
+        
+        
         /// <param name="TimeInterval">TimeInterval.</param>
+        
+        
         public MeteredEvaluationAssignment(string EvaluationContextId = null, List<User> Evaluators = null, int? MaxNumberEvaluations = null, EvaluationForm EvaluationForm = null, bool? AssignToActiveUser = null, TimeInterval TimeInterval = null)
         {
-            this.EvaluationContextId = EvaluationContextId;
-            this.Evaluators = Evaluators;
-            this.MaxNumberEvaluations = MaxNumberEvaluations;
-            this.EvaluationForm = EvaluationForm;
-            this.AssignToActiveUser = AssignToActiveUser;
-            this.TimeInterval = TimeInterval;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.EvaluationContextId = EvaluationContextId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Evaluators = Evaluators;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MaxNumberEvaluations = MaxNumberEvaluations;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EvaluationForm = EvaluationForm;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AssignToActiveUser = AssignToActiveUser;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeInterval = TimeInterval;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets EvaluationContextId
         /// </summary>
         [DataMember(Name="evaluationContextId", EmitDefaultValue=false)]
         public string EvaluationContextId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Evaluators
         /// </summary>
         [DataMember(Name="evaluators", EmitDefaultValue=false)]
         public List<User> Evaluators { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MaxNumberEvaluations
         /// </summary>
         [DataMember(Name="maxNumberEvaluations", EmitDefaultValue=false)]
         public int? MaxNumberEvaluations { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EvaluationForm
         /// </summary>
         [DataMember(Name="evaluationForm", EmitDefaultValue=false)]
         public EvaluationForm EvaluationForm { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AssignToActiveUser
         /// </summary>
         [DataMember(Name="assignToActiveUser", EmitDefaultValue=false)]
         public bool? AssignToActiveUser { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TimeInterval
         /// </summary>
         [DataMember(Name="timeInterval", EmitDefaultValue=false)]
         public TimeInterval TimeInterval { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,12 +220,19 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MeteredEvaluationAssignment {\n");
+            
             sb.Append("  EvaluationContextId: ").Append(EvaluationContextId).Append("\n");
+            
             sb.Append("  Evaluators: ").Append(Evaluators).Append("\n");
+            
             sb.Append("  MaxNumberEvaluations: ").Append(MaxNumberEvaluations).Append("\n");
+            
             sb.Append("  EvaluationForm: ").Append(EvaluationForm).Append("\n");
+            
             sb.Append("  AssignToActiveUser: ").Append(AssignToActiveUser).Append("\n");
+            
             sb.Append("  TimeInterval: ").Append(TimeInterval).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,18 +312,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.EvaluationContextId != null)
                     hash = hash * 59 + this.EvaluationContextId.GetHashCode();
+                
                 if (this.Evaluators != null)
                     hash = hash * 59 + this.Evaluators.GetHashCode();
+                
                 if (this.MaxNumberEvaluations != null)
                     hash = hash * 59 + this.MaxNumberEvaluations.GetHashCode();
+                
                 if (this.EvaluationForm != null)
                     hash = hash * 59 + this.EvaluationForm.GetHashCode();
+                
                 if (this.AssignToActiveUser != null)
                     hash = hash * 59 + this.AssignToActiveUser.GetHashCode();
+                
                 if (this.TimeInterval != null)
                     hash = hash * 59 + this.TimeInterval.GetHashCode();
+                
                 return hash;
             }
         }

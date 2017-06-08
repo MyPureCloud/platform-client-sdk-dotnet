@@ -18,18 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EdgeServiceStateRequest :  IEquatable<EdgeServiceStateRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeServiceStateRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected EdgeServiceStateRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EdgeServiceStateRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="InService">A boolean that sets the Edge in-service or out-of-service. (required).</param>
+        
+        
+        
         /// <param name="CallDrainingWaitTimeSeconds">The number of seconds to wait for call draining to complete before initiating the reboot. A value of 0 will prevent call draining and all calls will disconnect immediately..</param>
+        
+        
         public EdgeServiceStateRequest(bool? InService = null, int? CallDrainingWaitTimeSeconds = null)
         {
+            
+            
+            
             // to ensure "InService" is required (not null)
             if (InService == null)
             {
@@ -39,8 +63,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.InService = InService;
             }
-            this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallDrainingWaitTimeSeconds = CallDrainingWaitTimeSeconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A boolean that sets the Edge in-service or out-of-service.
@@ -48,12 +94,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A boolean that sets the Edge in-service or out-of-service.</value>
         [DataMember(Name="inService", EmitDefaultValue=false)]
         public bool? InService { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of seconds to wait for call draining to complete before initiating the reboot. A value of 0 will prevent call draining and all calls will disconnect immediately.
         /// </summary>
         /// <value>The number of seconds to wait for call draining to complete before initiating the reboot. A value of 0 will prevent call draining and all calls will disconnect immediately.</value>
         [DataMember(Name="callDrainingWaitTimeSeconds", EmitDefaultValue=false)]
         public int? CallDrainingWaitTimeSeconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -62,8 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EdgeServiceStateRequest {\n");
+            
             sb.Append("  InService: ").Append(InService).Append("\n");
+            
             sb.Append("  CallDrainingWaitTimeSeconds: ").Append(CallDrainingWaitTimeSeconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,10 +177,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.InService != null)
                     hash = hash * 59 + this.InService.GetHashCode();
+                
                 if (this.CallDrainingWaitTimeSeconds != null)
                     hash = hash * 59 + this.CallDrainingWaitTimeSeconds.GetHashCode();
+                
                 return hash;
             }
         }

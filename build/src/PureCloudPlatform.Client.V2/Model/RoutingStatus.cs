@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RoutingStatus :  IEquatable<RoutingStatus>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates the Routing State of the agent.
         /// </summary>
@@ -63,24 +68,89 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates the Routing State of the agent.
         /// </summary>
         /// <value>Indicates the Routing State of the agent.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RoutingStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="UserId">The userId of the agent.</param>
+        
+        
+        
         /// <param name="Status">Indicates the Routing State of the agent..</param>
+        
+        
+        
         /// <param name="StartTime">The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
         public RoutingStatus(string UserId = null, StatusEnum? Status = null, DateTime? StartTime = null)
         {
-            this.UserId = UserId;
-            this.Status = Status;
-            this.StartTime = StartTime;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.UserId = UserId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Status = Status;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartTime = StartTime;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The userId of the agent
@@ -88,12 +158,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The userId of the agent</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The timestamp when the agent went into this state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,9 +179,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RoutingStatus {\n");
+            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            
             sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,12 +250,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+                
                 return hash;
             }
         }

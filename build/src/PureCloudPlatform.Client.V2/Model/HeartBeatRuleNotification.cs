@@ -18,6 +18,31 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class HeartBeatRuleNotification :  IEquatable<HeartBeatRuleNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
@@ -50,6 +75,10 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EMAIL")]
             Email
         }
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RuleType
         /// </summary>
@@ -70,76 +99,265 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "EDGE")]
             Edge
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets RuleType
         /// </summary>
         [DataMember(Name="ruleType", EmitDefaultValue=false)]
         public RuleTypeEnum? RuleType { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="HeartBeatRuleNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="SenderId">SenderId.</param>
+        
+        
+        
         /// <param name="HeartBeatTimeoutInMinutes">HeartBeatTimeoutInMinutes.</param>
+        
+        
+        
         /// <param name="Enabled">Enabled.</param>
+        
+        
+        
         /// <param name="InAlarm">InAlarm.</param>
+        
+        
+        
         /// <param name="NotificationUsers">NotificationUsers.</param>
+        
+        
+        
         /// <param name="AlertTypes">AlertTypes.</param>
+        
+        
+        
         /// <param name="RuleType">RuleType.</param>
+        
+        
         public HeartBeatRuleNotification(string Id = null, string Name = null, string SenderId = null, double? HeartBeatTimeoutInMinutes = null, bool? Enabled = null, bool? InAlarm = null, List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers = null, List<AlertTypesEnum> AlertTypes = null, RuleTypeEnum? RuleType = null)
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.SenderId = SenderId;
-            this.HeartBeatTimeoutInMinutes = HeartBeatTimeoutInMinutes;
-            this.Enabled = Enabled;
-            this.InAlarm = InAlarm;
-            this.NotificationUsers = NotificationUsers;
-            this.AlertTypes = AlertTypes;
-            this.RuleType = RuleType;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SenderId = SenderId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HeartBeatTimeoutInMinutes = HeartBeatTimeoutInMinutes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Enabled = Enabled;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InAlarm = InAlarm;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NotificationUsers = NotificationUsers;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AlertTypes = AlertTypes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RuleType = RuleType;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SenderId
         /// </summary>
         [DataMember(Name="senderId", EmitDefaultValue=false)]
         public string SenderId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets HeartBeatTimeoutInMinutes
         /// </summary>
         [DataMember(Name="heartBeatTimeoutInMinutes", EmitDefaultValue=false)]
         public double? HeartBeatTimeoutInMinutes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets InAlarm
         /// </summary>
         [DataMember(Name="inAlarm", EmitDefaultValue=false)]
         public bool? InAlarm { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets NotificationUsers
         /// </summary>
         [DataMember(Name="notificationUsers", EmitDefaultValue=false)]
         public List<HeartBeatAlertNotificationNotificationUsers> NotificationUsers { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AlertTypes
         /// </summary>
         [DataMember(Name="alertTypes", EmitDefaultValue=false)]
         public List<AlertTypesEnum> AlertTypes { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -148,15 +366,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class HeartBeatRuleNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  SenderId: ").Append(SenderId).Append("\n");
+            
             sb.Append("  HeartBeatTimeoutInMinutes: ").Append(HeartBeatTimeoutInMinutes).Append("\n");
+            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            
             sb.Append("  InAlarm: ").Append(InAlarm).Append("\n");
+            
             sb.Append("  NotificationUsers: ").Append(NotificationUsers).Append("\n");
+            
             sb.Append("  AlertTypes: ").Append(AlertTypes).Append("\n");
+            
             sb.Append("  RuleType: ").Append(RuleType).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -251,24 +479,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.SenderId != null)
                     hash = hash * 59 + this.SenderId.GetHashCode();
+                
                 if (this.HeartBeatTimeoutInMinutes != null)
                     hash = hash * 59 + this.HeartBeatTimeoutInMinutes.GetHashCode();
+                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
                 if (this.InAlarm != null)
                     hash = hash * 59 + this.InAlarm.GetHashCode();
+                
                 if (this.NotificationUsers != null)
                     hash = hash * 59 + this.NotificationUsers.GetHashCode();
+                
                 if (this.AlertTypes != null)
                     hash = hash * 59 + this.AlertTypes.GetHashCode();
+                
                 if (this.RuleType != null)
                     hash = hash * 59 + this.RuleType.GetHashCode();
+                
                 return hash;
             }
         }

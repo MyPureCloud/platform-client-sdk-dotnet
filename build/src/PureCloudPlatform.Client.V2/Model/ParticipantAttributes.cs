@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ParticipantAttributes :  IEquatable<ParticipantAttributes>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ParticipantAttributes" /> class.
         /// </summary>
+        
+        
         /// <param name="Attributes">The map of attribute keys to values..</param>
+        
+        
         public ParticipantAttributes(Dictionary<string, string> Attributes = null)
         {
-            this.Attributes = Attributes;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Attributes = Attributes;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The map of attribute keys to values.
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The map of attribute keys to values.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ParticipantAttributes {\n");
+            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
+                
                 return hash;
             }
         }

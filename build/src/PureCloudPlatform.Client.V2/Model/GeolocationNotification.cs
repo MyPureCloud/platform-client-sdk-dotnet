@@ -18,48 +18,170 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class GeolocationNotification :  IEquatable<GeolocationNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="GeolocationNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="UserId">UserId.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="Country">Country.</param>
+        
+        
+        
         /// <param name="Region">Region.</param>
+        
+        
+        
         /// <param name="City">City.</param>
+        
+        
         public GeolocationNotification(string UserId = null, string Type = null, string Country = null, string Region = null, string City = null)
         {
-            this.UserId = UserId;
-            this.Type = Type;
-            this.Country = Country;
-            this.Region = Region;
-            this.City = City;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.UserId = UserId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Country = Country;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Region = Region;
+            
+            
+            
+            
+            
+            
+            
+            
+this.City = City;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets UserId
         /// </summary>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Country
         /// </summary>
         [DataMember(Name="country", EmitDefaultValue=false)]
         public string Country { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Region
         /// </summary>
         [DataMember(Name="region", EmitDefaultValue=false)]
         public string Region { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets City
         /// </summary>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +190,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class GeolocationNotification {\n");
+            
             sb.Append("  UserId: ").Append(UserId).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Country: ").Append(Country).Append("\n");
+            
             sb.Append("  Region: ").Append(Region).Append("\n");
+            
             sb.Append("  City: ").Append(City).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,16 +275,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.UserId != null)
                     hash = hash * 59 + this.UserId.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Country != null)
                     hash = hash * 59 + this.Country.GetHashCode();
+                
                 if (this.Region != null)
                     hash = hash * 59 + this.Region.GetHashCode();
+                
                 if (this.City != null)
                     hash = hash * 59 + this.City.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsUserPresenceRecord :  IEquatable<AnalyticsUserPresenceRecord>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The user's system presence
         /// </summary>
@@ -93,28 +101,130 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "BREAK")]
             Break
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The user's system presence
         /// </summary>
         /// <value>The user's system presence</value>
         [DataMember(Name="systemPresence", EmitDefaultValue=false)]
         public SystemPresenceEnum? SystemPresence { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsUserPresenceRecord" /> class.
         /// </summary>
+        
+        
         /// <param name="StartTime">The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="EndTime">The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="SystemPresence">The user&#39;s system presence.</param>
+        
+        
+        
         /// <param name="OrganizationPresenceId">The identifier for the user&#39;s organization presence.</param>
+        
+        
+        
         /// <param name="DurationMilliseconds">The duration of the status (in milliseconds).</param>
+        
+        
         public AnalyticsUserPresenceRecord(DateTime? StartTime = null, DateTime? EndTime = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null, long? DurationMilliseconds = null)
         {
-            this.StartTime = StartTime;
-            this.EndTime = EndTime;
-            this.SystemPresence = SystemPresence;
-            this.OrganizationPresenceId = OrganizationPresenceId;
-            this.DurationMilliseconds = DurationMilliseconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartTime = StartTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndTime = EndTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SystemPresence = SystemPresence;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OrganizationPresenceId = OrganizationPresenceId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationMilliseconds = DurationMilliseconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -122,24 +232,37 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
+        
+        
+        
         /// <summary>
         /// The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The identifier for the user&#39;s organization presence
         /// </summary>
         /// <value>The identifier for the user&#39;s organization presence</value>
         [DataMember(Name="organizationPresenceId", EmitDefaultValue=false)]
         public string OrganizationPresenceId { get; set; }
+        
+        
+        
         /// <summary>
         /// The duration of the status (in milliseconds)
         /// </summary>
         /// <value>The duration of the status (in milliseconds)</value>
         [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
         public long? DurationMilliseconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -148,11 +271,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsUserPresenceRecord {\n");
+            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            
             sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
+            
             sb.Append("  OrganizationPresenceId: ").Append(OrganizationPresenceId).Append("\n");
+            
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -227,16 +356,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+                
                 if (this.SystemPresence != null)
                     hash = hash * 59 + this.SystemPresence.GetHashCode();
+                
                 if (this.OrganizationPresenceId != null)
                     hash = hash * 59 + this.OrganizationPresenceId.GetHashCode();
+                
                 if (this.DurationMilliseconds != null)
                     hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
+                
                 return hash;
             }
         }

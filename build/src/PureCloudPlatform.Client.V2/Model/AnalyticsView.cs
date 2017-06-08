@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsView :  IEquatable<AnalyticsView>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Type of view you wish to create
         /// </summary>
@@ -39,26 +47,60 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "rangeBound")]
             Rangebound
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Type of view you wish to create
         /// </summary>
         /// <value>Type of view you wish to create</value>
         [DataMember(Name="function", EmitDefaultValue=false)]
         public FunctionEnum? Function { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsView" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected AnalyticsView() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsView" /> class.
         /// </summary>
+        
+        
         /// <param name="Target">Target metric name (required).</param>
+        
+        
+        
         /// <param name="Name">A unique name for this view. Must be distinct from other views and built-in metric names. (required).</param>
+        
+        
+        
         /// <param name="Function">Type of view you wish to create (required).</param>
+        
+        
+        
         /// <param name="Range">Range of numbers for slicing up data.</param>
+        
+        
         public AnalyticsView(string Target = null, string Name = null, FunctionEnum? Function = null, AggregationRange Range = null)
         {
+            
+            
+            
             // to ensure "Target" is required (not null)
             if (Target == null)
             {
@@ -68,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Target = Target;
             }
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -77,6 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "Function" is required (not null)
             if (Function == null)
             {
@@ -86,8 +138,38 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Function = Function;
             }
-            this.Range = Range;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Range = Range;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Target metric name
@@ -95,18 +177,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Target metric name</value>
         [DataMember(Name="target", EmitDefaultValue=false)]
         public string Target { get; set; }
+        
+        
+        
         /// <summary>
         /// A unique name for this view. Must be distinct from other views and built-in metric names.
         /// </summary>
         /// <value>A unique name for this view. Must be distinct from other views and built-in metric names.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Range of numbers for slicing up data
         /// </summary>
         /// <value>Range of numbers for slicing up data</value>
         [DataMember(Name="range", EmitDefaultValue=false)]
         public AggregationRange Range { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -115,10 +207,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsView {\n");
+            
             sb.Append("  Target: ").Append(Target).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Function: ").Append(Function).Append("\n");
+            
             sb.Append("  Range: ").Append(Range).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -188,14 +285,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Target != null)
                     hash = hash * 59 + this.Target.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Function != null)
                     hash = hash * 59 + this.Function.GetHashCode();
+                
                 if (this.Range != null)
                     hash = hash * 59 + this.Range.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,48 +18,170 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailAttachment :  IEquatable<EmailAttachment>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailAttachment" /> class.
         /// </summary>
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="ContentPath">ContentPath.</param>
+        
+        
+        
         /// <param name="ContentType">ContentType.</param>
+        
+        
+        
         /// <param name="AttachmentId">AttachmentId.</param>
+        
+        
+        
         /// <param name="ContentLength">ContentLength.</param>
+        
+        
         public EmailAttachment(string Name = null, string ContentPath = null, string ContentType = null, string AttachmentId = null, int? ContentLength = null)
         {
-            this.Name = Name;
-            this.ContentPath = ContentPath;
-            this.ContentType = ContentType;
-            this.AttachmentId = AttachmentId;
-            this.ContentLength = ContentLength;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContentPath = ContentPath;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContentType = ContentType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AttachmentId = AttachmentId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContentLength = ContentLength;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContentPath
         /// </summary>
         [DataMember(Name="contentPath", EmitDefaultValue=false)]
         public string ContentPath { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContentType
         /// </summary>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AttachmentId
         /// </summary>
         [DataMember(Name="attachmentId", EmitDefaultValue=false)]
         public string AttachmentId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ContentLength
         /// </summary>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public int? ContentLength { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +190,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class EmailAttachment {\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  ContentPath: ").Append(ContentPath).Append("\n");
+            
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
+            
             sb.Append("  AttachmentId: ").Append(AttachmentId).Append("\n");
+            
             sb.Append("  ContentLength: ").Append(ContentLength).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,16 +275,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.ContentPath != null)
                     hash = hash * 59 + this.ContentPath.GetHashCode();
+                
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
+                
                 if (this.AttachmentId != null)
                     hash = hash * 59 + this.AttachmentId.GetHashCode();
+                
                 if (this.ContentLength != null)
                     hash = hash * 59 + this.ContentLength.GetHashCode();
+                
                 return hash;
             }
         }

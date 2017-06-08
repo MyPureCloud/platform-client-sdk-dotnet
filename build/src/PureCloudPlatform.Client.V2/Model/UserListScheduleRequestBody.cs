@@ -18,19 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserListScheduleRequestBody :  IEquatable<UserListScheduleRequestBody>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserListScheduleRequestBody" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected UserListScheduleRequestBody() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserListScheduleRequestBody" /> class.
         /// </summary>
+        
+        
         /// <param name="UserIds">The user ids for which to fetch schedules (required).</param>
+        
+        
+        
         /// <param name="StartDate">Beginning of the range of schedules to fetch, in ISO-8601 format (required).</param>
+        
+        
+        
         /// <param name="EndDate">End of the range of schedules to fetch, in ISO-8601 format (required).</param>
+        
+        
         public UserListScheduleRequestBody(List<string> UserIds = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
+            
+            
+            
             // to ensure "UserIds" is required (not null)
             if (UserIds == null)
             {
@@ -40,6 +72,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.UserIds = UserIds;
             }
+            
+            
+            
+            
+            
             // to ensure "StartDate" is required (not null)
             if (StartDate == null)
             {
@@ -49,6 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.StartDate = StartDate;
             }
+            
+            
+            
+            
+            
             // to ensure "EndDate" is required (not null)
             if (EndDate == null)
             {
@@ -58,7 +100,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.EndDate = EndDate;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The user ids for which to fetch schedules
@@ -66,18 +126,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The user ids for which to fetch schedules</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
+        
+        
+        
         /// <summary>
         /// Beginning of the range of schedules to fetch, in ISO-8601 format
         /// </summary>
         /// <value>Beginning of the range of schedules to fetch, in ISO-8601 format</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
+        
+        
+        
         /// <summary>
         /// End of the range of schedules to fetch, in ISO-8601 format
         /// </summary>
         /// <value>End of the range of schedules to fetch, in ISO-8601 format</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,9 +154,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserListScheduleRequestBody {\n");
+            
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
+            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,12 +225,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
+                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
+                
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
+                
                 return hash;
             }
         }

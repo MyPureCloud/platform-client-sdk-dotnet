@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainResourceConditionNode :  IEquatable<DomainResourceConditionNode>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
@@ -68,6 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "LT")]
             Lt
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Conjunction
         /// </summary>
@@ -94,48 +106,160 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "OR")]
             Or
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Operator
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Conjunction
         /// </summary>
         [DataMember(Name="conjunction", EmitDefaultValue=false)]
         public ConjunctionEnum? Conjunction { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainResourceConditionNode" /> class.
         /// </summary>
+        
+        
         /// <param name="VariableName">VariableName.</param>
+        
+        
+        
         /// <param name="_Operator">_Operator.</param>
+        
+        
+        
         /// <param name="Operands">Operands.</param>
+        
+        
+        
         /// <param name="Conjunction">Conjunction.</param>
+        
+        
+        
         /// <param name="Terms">Terms.</param>
+        
+        
         public DomainResourceConditionNode(string VariableName = null, OperatorEnum? _Operator = null, List<DomainResourceConditionValue> Operands = null, ConjunctionEnum? Conjunction = null, List<DomainResourceConditionNode> Terms = null)
         {
-            this.VariableName = VariableName;
-            this._Operator = _Operator;
-            this.Operands = Operands;
-            this.Conjunction = Conjunction;
-            this.Terms = Terms;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.VariableName = VariableName;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Operator = _Operator;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Operands = Operands;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Conjunction = Conjunction;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Terms = Terms;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets VariableName
         /// </summary>
         [DataMember(Name="variableName", EmitDefaultValue=false)]
         public string VariableName { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Operands
         /// </summary>
         [DataMember(Name="operands", EmitDefaultValue=false)]
         public List<DomainResourceConditionValue> Operands { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Terms
         /// </summary>
         [DataMember(Name="terms", EmitDefaultValue=false)]
         public List<DomainResourceConditionNode> Terms { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -144,11 +268,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainResourceConditionNode {\n");
+            
             sb.Append("  VariableName: ").Append(VariableName).Append("\n");
+            
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
+            
             sb.Append("  Operands: ").Append(Operands).Append("\n");
+            
             sb.Append("  Conjunction: ").Append(Conjunction).Append("\n");
+            
             sb.Append("  Terms: ").Append(Terms).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -223,16 +353,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.VariableName != null)
                     hash = hash * 59 + this.VariableName.GetHashCode();
+                
                 if (this._Operator != null)
                     hash = hash * 59 + this._Operator.GetHashCode();
+                
                 if (this.Operands != null)
                     hash = hash * 59 + this.Operands.GetHashCode();
+                
                 if (this.Conjunction != null)
                     hash = hash * 59 + this.Conjunction.GetHashCode();
+                
                 if (this.Terms != null)
                     hash = hash * 59 + this.Terms.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InitiateScreenRecording :  IEquatable<InitiateScreenRecording>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="InitiateScreenRecording" /> class.
         /// </summary>
+        
+        
         /// <param name="RecordACW">RecordACW.</param>
+        
+        
+        
         /// <param name="ArchiveRetention">ArchiveRetention.</param>
+        
+        
+        
         /// <param name="DeleteRetention">DeleteRetention.</param>
+        
+        
         public InitiateScreenRecording(bool? RecordACW = null, ArchiveRetention ArchiveRetention = null, DeleteRetention DeleteRetention = null)
         {
-            this.RecordACW = RecordACW;
-            this.ArchiveRetention = ArchiveRetention;
-            this.DeleteRetention = DeleteRetention;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordACW = RecordACW;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ArchiveRetention = ArchiveRetention;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DeleteRetention = DeleteRetention;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets RecordACW
         /// </summary>
         [DataMember(Name="recordACW", EmitDefaultValue=false)]
         public bool? RecordACW { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ArchiveRetention
         /// </summary>
         [DataMember(Name="archiveRetention", EmitDefaultValue=false)]
         public ArchiveRetention ArchiveRetention { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DeleteRetention
         /// </summary>
         [DataMember(Name="deleteRetention", EmitDefaultValue=false)]
         public DeleteRetention DeleteRetention { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class InitiateScreenRecording {\n");
+            
             sb.Append("  RecordACW: ").Append(RecordACW).Append("\n");
+            
             sb.Append("  ArchiveRetention: ").Append(ArchiveRetention).Append("\n");
+            
             sb.Append("  DeleteRetention: ").Append(DeleteRetention).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.RecordACW != null)
                     hash = hash * 59 + this.RecordACW.GetHashCode();
+                
                 if (this.ArchiveRetention != null)
                     hash = hash * 59 + this.ArchiveRetention.GetHashCode();
+                
                 if (this.DeleteRetention != null)
                     hash = hash * 59 + this.DeleteRetention.GetHashCode();
+                
                 return hash;
             }
         }

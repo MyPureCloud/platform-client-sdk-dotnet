@@ -18,48 +18,170 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotification :  IEquatable<ConversationNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="MaxParticipants">MaxParticipants.</param>
+        
+        
+        
         /// <param name="Participants">Participants.</param>
+        
+        
+        
         /// <param name="RecordingState">RecordingState.</param>
+        
+        
+        
         /// <param name="Address">Address.</param>
+        
+        
         public ConversationNotification(string Id = null, int? MaxParticipants = null, List<ConversationNotificationParticipants> Participants = null, string RecordingState = null, string Address = null)
         {
-            this.Id = Id;
-            this.MaxParticipants = MaxParticipants;
-            this.Participants = Participants;
-            this.RecordingState = RecordingState;
-            this.Address = Address;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MaxParticipants = MaxParticipants;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Participants = Participants;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingState = RecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Address = Address;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MaxParticipants
         /// </summary>
         [DataMember(Name="maxParticipants", EmitDefaultValue=false)]
         public int? MaxParticipants { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Participants
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<ConversationNotificationParticipants> Participants { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public string RecordingState { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Address
         /// </summary>
         [DataMember(Name="address", EmitDefaultValue=false)]
         public string Address { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +190,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotification {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  MaxParticipants: ").Append(MaxParticipants).Append("\n");
+            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
+            
             sb.Append("  Address: ").Append(Address).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,16 +275,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.MaxParticipants != null)
                     hash = hash * 59 + this.MaxParticipants.GetHashCode();
+                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+                
                 if (this.RecordingState != null)
                     hash = hash * 59 + this.RecordingState.GetHashCode();
+                
                 if (this.Address != null)
                     hash = hash * 59 + this.Address.GetHashCode();
+                
                 return hash;
             }
         }

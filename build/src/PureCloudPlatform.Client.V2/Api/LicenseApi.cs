@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface ILicenseApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Get PureCloud license definition.
         /// </summary>
@@ -35,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="licenseId">ID</param>
         /// <returns>ApiResponse of LicenseDefinition</returns>
         ApiResponse<LicenseDefinition> GetLicenseDefinitionWithHttpInfo (string licenseId);
+        
         /// <summary>
         /// Get all PureCloud license definitions available for the organization.
         /// </summary>
@@ -54,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of LicenseDefinitionListing</returns>
         ApiResponse<LicenseDefinitionListing> GetLicenseDefinitionsWithHttpInfo ();
+        
         /// <summary>
         /// Get license assignments for the organization.
         /// </summary>
@@ -73,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of LicenseOrganization</returns>
         ApiResponse<LicenseOrganization> GetLicenseOrganizationWithHttpInfo ();
+        
         /// <summary>
         /// Get licenses for specified user.
         /// </summary>
@@ -94,6 +99,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">ID</param>
         /// <returns>ApiResponse of LicenseUser</returns>
         ApiResponse<LicenseUser> GetLicenseUserWithHttpInfo (string userId);
+        
         /// <summary>
         /// Update the organization&#39;s license assignments in a batch.
         /// </summary>
@@ -115,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>ApiResponse of LicenseUpdateResponse</returns>
         ApiResponse<LicenseUpdateResponse> PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null);
+        
         /// <summary>
         /// Fetch user licenses in a batch.
         /// </summary>
@@ -136,8 +143,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         ApiResponse<Dictionary<string, Object>> PostLicenseUsersWithHttpInfo (List<string> body = null);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Get PureCloud license definition.
         /// </summary>
@@ -159,6 +169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="licenseId">ID</param>
         /// <returns>Task of ApiResponse (LicenseDefinition)</returns>
         System.Threading.Tasks.Task<ApiResponse<LicenseDefinition>> GetLicenseDefinitionAsyncWithHttpInfo (string licenseId);
+        
         /// <summary>
         /// Get all PureCloud license definitions available for the organization.
         /// </summary>
@@ -178,6 +189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (LicenseDefinitionListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<LicenseDefinitionListing>> GetLicenseDefinitionsAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Get license assignments for the organization.
         /// </summary>
@@ -197,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (LicenseOrganization)</returns>
         System.Threading.Tasks.Task<ApiResponse<LicenseOrganization>> GetLicenseOrganizationAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Get licenses for specified user.
         /// </summary>
@@ -218,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">ID</param>
         /// <returns>Task of ApiResponse (LicenseUser)</returns>
         System.Threading.Tasks.Task<ApiResponse<LicenseUser>> GetLicenseUserAsyncWithHttpInfo (string userId);
+        
         /// <summary>
         /// Update the organization&#39;s license assignments in a batch.
         /// </summary>
@@ -239,6 +253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>Task of ApiResponse (LicenseUpdateResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LicenseUpdateResponse>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null);
+        
         /// <summary>
         /// Fetch user licenses in a batch.
         /// </summary>
@@ -260,7 +275,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The user IDs to fetch. (optional)</param>
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostLicenseUsersAsyncWithHttpInfo (List<string> body = null);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -350,6 +367,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Get PureCloud license definition. 
         /// </summary>
@@ -370,9 +388,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LicenseDefinition</returns>
         public ApiResponse< LicenseDefinition > GetLicenseDefinitionWithHttpInfo (string licenseId)
         {
+            
+            
             // verify the required parameter 'licenseId' is set
             if (licenseId == null)
                 throw new ApiException(400, "Missing required parameter 'licenseId' when calling LicenseApi->GetLicenseDefinition");
+            
+            
 
             var localVarPath = "/api/v2/license/definitions/{licenseId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -384,13 +406,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -399,14 +425,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (licenseId != null) localVarPathParams.Add("licenseId", Configuration.ApiClient.ParameterToString(licenseId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -428,6 +465,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get PureCloud license definition. 
         /// </summary>
@@ -449,9 +487,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LicenseDefinition)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LicenseDefinition>> GetLicenseDefinitionAsyncWithHttpInfo (string licenseId)
         {
+            
+            
             // verify the required parameter 'licenseId' is set
             if (licenseId == null)
                 throw new ApiException(400, "Missing required parameter 'licenseId' when calling LicenseApi->GetLicenseDefinition");
+            
+            
 
             var localVarPath = "/api/v2/license/definitions/{licenseId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -463,13 +505,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -478,14 +524,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (licenseId != null) localVarPathParams.Add("licenseId", Configuration.ApiClient.ParameterToString(licenseId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -507,6 +565,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get all PureCloud license definitions available for the organization. 
         /// </summary>
@@ -525,6 +585,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LicenseDefinitionListing</returns>
         public ApiResponse< LicenseDefinitionListing > GetLicenseDefinitionsWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/license/definitions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -536,13 +597,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -551,13 +616,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -579,6 +654,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get all PureCloud license definitions available for the organization. 
         /// </summary>
@@ -598,6 +674,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LicenseDefinitionListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LicenseDefinitionListing>> GetLicenseDefinitionsAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/license/definitions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -609,13 +686,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -624,13 +705,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -652,6 +744,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get license assignments for the organization. 
         /// </summary>
@@ -670,6 +764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LicenseOrganization</returns>
         public ApiResponse< LicenseOrganization > GetLicenseOrganizationWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/license/organization";
             var localVarPathParams = new Dictionary<String, String>();
@@ -681,13 +776,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -696,13 +795,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -724,6 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get license assignments for the organization. 
         /// </summary>
@@ -743,6 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LicenseOrganization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LicenseOrganization>> GetLicenseOrganizationAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/license/organization";
             var localVarPathParams = new Dictionary<String, String>();
@@ -754,13 +865,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -769,13 +884,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -797,6 +923,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Get licenses for specified user. 
         /// </summary>
@@ -817,9 +945,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LicenseUser</returns>
         public ApiResponse< LicenseUser > GetLicenseUserWithHttpInfo (string userId)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling LicenseApi->GetLicenseUser");
+            
+            
 
             var localVarPath = "/api/v2/license/users/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -831,13 +963,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -846,14 +982,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -875,6 +1022,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get licenses for specified user. 
         /// </summary>
@@ -896,9 +1044,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LicenseUser)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LicenseUser>> GetLicenseUserAsyncWithHttpInfo (string userId)
         {
+            
+            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling LicenseApi->GetLicenseUser");
+            
+            
 
             var localVarPath = "/api/v2/license/users/{userId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -910,13 +1062,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -925,14 +1081,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -954,6 +1122,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Update the organization&#39;s license assignments in a batch. 
         /// </summary>
@@ -974,6 +1144,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LicenseUpdateResponse</returns>
         public ApiResponse< LicenseUpdateResponse > PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/license/organization";
             var localVarPathParams = new Dictionary<String, String>();
@@ -985,13 +1158,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1000,6 +1177,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1008,13 +1190,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1036,6 +1224,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Update the organization&#39;s license assignments in a batch. 
         /// </summary>
@@ -1057,6 +1246,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LicenseUpdateResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<LicenseUpdateResponse>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/license/organization";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1068,13 +1260,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1083,6 +1279,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1091,13 +1292,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1119,6 +1327,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Fetch user licenses in a batch. 
         /// </summary>
@@ -1139,6 +1349,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
         public ApiResponse< Dictionary<string, Object> > PostLicenseUsersWithHttpInfo (List<string> body = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/license/users";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1150,13 +1363,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1165,6 +1382,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1173,13 +1395,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1201,6 +1429,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Fetch user licenses in a batch. 
         /// </summary>
@@ -1222,6 +1451,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostLicenseUsersAsyncWithHttpInfo (List<string> body = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/license/users";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1233,13 +1465,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1248,6 +1484,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1256,13 +1497,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1284,5 +1532,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

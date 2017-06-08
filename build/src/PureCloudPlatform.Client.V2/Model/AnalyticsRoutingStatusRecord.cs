@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AnalyticsRoutingStatusRecord :  IEquatable<AnalyticsRoutingStatusRecord>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The user's ACD routing status
         /// </summary>
@@ -63,26 +71,108 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "COMMUNICATING")]
             Communicating
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The user's ACD routing status
         /// </summary>
         /// <value>The user's ACD routing status</value>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public RoutingStatusEnum? RoutingStatus { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsRoutingStatusRecord" /> class.
         /// </summary>
+        
+        
         /// <param name="StartTime">The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="EndTime">The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
         /// <param name="RoutingStatus">The user&#39;s ACD routing status.</param>
+        
+        
+        
         /// <param name="DurationMilliseconds">The duration of the status (in milliseconds).</param>
+        
+        
         public AnalyticsRoutingStatusRecord(DateTime? StartTime = null, DateTime? EndTime = null, RoutingStatusEnum? RoutingStatus = null, long? DurationMilliseconds = null)
         {
-            this.StartTime = StartTime;
-            this.EndTime = EndTime;
-            this.RoutingStatus = RoutingStatus;
-            this.DurationMilliseconds = DurationMilliseconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartTime = StartTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndTime = EndTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RoutingStatus = RoutingStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationMilliseconds = DurationMilliseconds;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
@@ -90,18 +180,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The start time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public DateTime? StartTime { get; set; }
+        
+        
+        
         /// <summary>
         /// The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>The end time of the record. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="endTime", EmitDefaultValue=false)]
         public DateTime? EndTime { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The duration of the status (in milliseconds)
         /// </summary>
         /// <value>The duration of the status (in milliseconds)</value>
         [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
         public long? DurationMilliseconds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,10 +210,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AnalyticsRoutingStatusRecord {\n");
+            
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
+            
             sb.Append("  EndTime: ").Append(EndTime).Append("\n");
+            
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            
             sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,14 +288,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.StartTime != null)
                     hash = hash * 59 + this.StartTime.GetHashCode();
+                
                 if (this.EndTime != null)
                     hash = hash * 59 + this.EndTime.GetHashCode();
+                
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
                 if (this.DurationMilliseconds != null)
                     hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
+                
                 return hash;
             }
         }

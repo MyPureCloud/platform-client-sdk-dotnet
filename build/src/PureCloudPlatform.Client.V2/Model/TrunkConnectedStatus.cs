@@ -18,28 +18,81 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkConnectedStatus :  IEquatable<TrunkConnectedStatus>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkConnectedStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="Connected">Connected.</param>
+        
+        
+        
         /// <param name="ConnectedStateTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
         public TrunkConnectedStatus(bool? Connected = null, DateTime? ConnectedStateTime = null)
         {
-            this.Connected = Connected;
-            this.ConnectedStateTime = ConnectedStateTime;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Connected = Connected;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedStateTime = ConnectedStateTime;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Connected
         /// </summary>
         [DataMember(Name="connected", EmitDefaultValue=false)]
         public bool? Connected { get; set; }
+        
+        
+        
         /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="connectedStateTime", EmitDefaultValue=false)]
         public DateTime? ConnectedStateTime { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,8 +101,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkConnectedStatus {\n");
+            
             sb.Append("  Connected: ").Append(Connected).Append("\n");
+            
             sb.Append("  ConnectedStateTime: ").Append(ConnectedStateTime).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,10 +165,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Connected != null)
                     hash = hash * 59 + this.Connected.GetHashCode();
+                
                 if (this.ConnectedStateTime != null)
                     hash = hash * 59 + this.ConnectedStateTime.GetHashCode();
+                
                 return hash;
             }
         }

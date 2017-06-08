@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserConversationSummaryNotificationCall :  IEquatable<UserConversationSummaryNotificationCall>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationSummaryNotificationCall" /> class.
         /// </summary>
+        
+        
         /// <param name="ContactCenter">ContactCenter.</param>
+        
+        
+        
         /// <param name="Enterprise">Enterprise.</param>
+        
+        
         public UserConversationSummaryNotificationCall(UserConversationSummaryNotificationCallContactCenter ContactCenter = null, UserConversationSummaryNotificationMediaSummaryDetail Enterprise = null)
         {
-            this.ContactCenter = ContactCenter;
-            this.Enterprise = Enterprise;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactCenter = ContactCenter;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Enterprise = Enterprise;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ContactCenter
         /// </summary>
         [DataMember(Name="contactCenter", EmitDefaultValue=false)]
         public UserConversationSummaryNotificationCallContactCenter ContactCenter { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Enterprise
         /// </summary>
         [DataMember(Name="enterprise", EmitDefaultValue=false)]
         public UserConversationSummaryNotificationMediaSummaryDetail Enterprise { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserConversationSummaryNotificationCall {\n");
+            
             sb.Append("  ContactCenter: ").Append(ContactCenter).Append("\n");
+            
             sb.Append("  Enterprise: ").Append(Enterprise).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ContactCenter != null)
                     hash = hash * 59 + this.ContactCenter.GetHashCode();
+                
                 if (this.Enterprise != null)
                     hash = hash * 59 + this.Enterprise.GetHashCode();
+                
                 return hash;
             }
         }

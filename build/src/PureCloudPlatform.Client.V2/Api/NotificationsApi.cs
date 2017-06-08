@@ -8,12 +8,14 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
+    
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
     public interface INotificationsApi : IApiAccessor
     {
         #region Synchronous Operations
+        
         /// <summary>
         /// Remove all subscriptions
         /// </summary>
@@ -35,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> DeleteNotificationsChannelSubscriptionsWithHttpInfo (string channelId);
+        
         /// <summary>
         /// Get available notification topics.
         /// </summary>
@@ -56,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
         ApiResponse<AvailableTopicEntityListing> GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null);
+        
         /// <summary>
         /// The list of all subscriptions for this channel
         /// </summary>
@@ -77,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         ApiResponse<ChannelTopicEntityListing> GetNotificationsChannelSubscriptionsWithHttpInfo (string channelId);
+        
         /// <summary>
         /// The list of existing channels
         /// </summary>
@@ -96,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChannelEntityListing</returns>
         ApiResponse<ChannelEntityListing> GetNotificationsChannelsWithHttpInfo ();
+        
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
         /// </summary>
@@ -119,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         ApiResponse<ChannelTopicEntityListing> PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
+        
         /// <summary>
         /// Create a new channel
         /// </summary>
@@ -138,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
         ApiResponse<Channel> PostNotificationsChannelsWithHttpInfo ();
+        
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
         /// </summary>
@@ -161,8 +169,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         ApiResponse<ChannelTopicEntityListing> PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body);
+        
         #endregion Synchronous Operations
+        
         #region Asynchronous Operations
+        
         /// <summary>
         /// Remove all subscriptions
         /// </summary>
@@ -184,6 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId);
+        
         /// <summary>
         /// Get available notification topics.
         /// </summary>
@@ -205,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null);
+        
         /// <summary>
         /// The list of all subscriptions for this channel
         /// </summary>
@@ -226,6 +239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId);
+        
         /// <summary>
         /// The list of existing channels
         /// </summary>
@@ -245,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
         /// </summary>
@@ -268,6 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
+        
         /// <summary>
         /// Create a new channel
         /// </summary>
@@ -287,6 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>
         System.Threading.Tasks.Task<ApiResponse<Channel>> PostNotificationsChannelsAsyncWithHttpInfo ();
+        
         /// <summary>
         /// Replace the current list of subscriptions with a new list.
         /// </summary>
@@ -310,7 +327,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body);
+        
         #endregion Asynchronous Operations
+        
     }
 
     /// <summary>
@@ -400,6 +419,7 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
         /// <summary>
         /// Remove all subscriptions 
         /// </summary>
@@ -419,9 +439,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteNotificationsChannelSubscriptionsWithHttpInfo (string channelId)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -433,13 +457,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -448,14 +476,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -477,6 +516,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
         /// <summary>
         /// Remove all subscriptions 
         /// </summary>
@@ -497,9 +537,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -511,13 +555,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -526,14 +574,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -555,6 +615,8 @@ namespace PureCloudPlatform.Client.V2.Api
                 null);
         }
 
+        
+        
         /// <summary>
         /// Get available notification topics. 
         /// </summary>
@@ -575,6 +637,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
         public ApiResponse< AvailableTopicEntityListing > GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/notifications/availabletopics";
             var localVarPathParams = new Dictionary<String, String>();
@@ -586,13 +651,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -601,14 +670,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -630,6 +710,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Get available notification topics. 
         /// </summary>
@@ -651,6 +732,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null)
         {
+            
+            
+            
 
             var localVarPath = "/api/v2/notifications/availabletopics";
             var localVarPathParams = new Dictionary<String, String>();
@@ -662,13 +746,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -677,14 +765,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -706,6 +806,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// The list of all subscriptions for this channel 
         /// </summary>
@@ -726,9 +828,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         public ApiResponse< ChannelTopicEntityListing > GetNotificationsChannelSubscriptionsWithHttpInfo (string channelId)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -740,13 +846,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -755,14 +865,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -784,6 +905,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// The list of all subscriptions for this channel 
         /// </summary>
@@ -805,9 +927,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -819,13 +945,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -834,14 +964,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -863,6 +1005,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// The list of existing channels 
         /// </summary>
@@ -881,6 +1025,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChannelEntityListing</returns>
         public ApiResponse< ChannelEntityListing > GetNotificationsChannelsWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
@@ -892,13 +1037,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -907,13 +1056,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -935,6 +1094,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// The list of existing channels 
         /// </summary>
@@ -954,6 +1114,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
@@ -965,13 +1126,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -980,13 +1145,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1008,6 +1184,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions 
         /// </summary>
@@ -1030,12 +1208,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         public ApiResponse< ChannelTopicEntityListing > PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1047,13 +1232,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1062,7 +1251,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1071,13 +1266,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1099,6 +1300,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions 
         /// </summary>
@@ -1122,12 +1324,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1139,13 +1348,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1154,7 +1367,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1163,13 +1382,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1191,6 +1417,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Create a new channel There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
         /// </summary>
@@ -1209,6 +1437,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Channel</returns>
         public ApiResponse< Channel > PostNotificationsChannelsWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1220,13 +1449,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1235,13 +1468,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1263,6 +1506,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Create a new channel There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
         /// </summary>
@@ -1282,6 +1526,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Channel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Channel>> PostNotificationsChannelsAsyncWithHttpInfo ()
         {
+            
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1293,13 +1538,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1308,13 +1557,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
+            
+            
+            
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1336,6 +1596,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
         /// <summary>
         /// Replace the current list of subscriptions with a new list. 
         /// </summary>
@@ -1358,12 +1620,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         public ApiResponse< ChannelTopicEntityListing > PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1375,13 +1644,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1390,7 +1663,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1399,13 +1678,19 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1427,6 +1712,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
         /// <summary>
         /// Replace the current list of subscriptions with a new list. 
         /// </summary>
@@ -1450,12 +1736,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
         {
+            
+            
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
+            
+            
+            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
+            
+            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -1467,13 +1760,17 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
+                
                 "application/json"
+                
             };
             String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -1482,7 +1779,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+            
             if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
+            
+            
+            
+            
+            
             if (body != null && body.GetType() != typeof(byte[]))
             {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
@@ -1491,13 +1794,20 @@ namespace PureCloudPlatform.Client.V2.Api
             {
                 localVarPostBody = body; // byte array
             }
+            
 
+            
             // authentication (PureCloud Auth) required
+            
+            
+            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
+            
+            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1519,5 +1829,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
         }
 
+        
+        
     }
+    
 }

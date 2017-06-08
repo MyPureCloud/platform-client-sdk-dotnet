@@ -18,12 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RestErrorDetail :  IEquatable<RestErrorDetail>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RestErrorDetail" /> class.
         /// </summary>
+        
+        
+        
+        
+        
         public RestErrorDetail()
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// name of the error
@@ -31,12 +61,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>name of the error</value>
         [DataMember(Name="error", EmitDefaultValue=false)]
         public string Error { get; private set; }
+        
+        
+        
         /// <summary>
         /// additional information regarding the error
         /// </summary>
         /// <value>additional information regarding the error</value>
         [DataMember(Name="details", EmitDefaultValue=false)]
         public string Details { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -45,8 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RestErrorDetail {\n");
+            
             sb.Append("  Error: ").Append(Error).Append("\n");
+            
             sb.Append("  Details: ").Append(Details).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -106,10 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
+                
                 if (this.Details != null)
                     hash = hash * 59 + this.Details.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,36 +18,112 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserAuthorization :  IEquatable<UserAuthorization>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserAuthorization" /> class.
         /// </summary>
+        
+        
         /// <param name="Roles">Roles.</param>
+        
+        
+        
         /// <param name="Permissions">A collection of the permissions granted by all assigned roles.</param>
+        
+        
+        
         /// <param name="PermissionPolicies">The policies configured for assigned permissions..</param>
+        
+        
         public UserAuthorization(List<DomainRole> Roles = null, List<string> Permissions = null, List<ResourcePermissionPolicy> PermissionPolicies = null)
         {
-            this.Roles = Roles;
-            this.Permissions = Permissions;
-            this.PermissionPolicies = PermissionPolicies;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Roles = Roles;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Permissions = Permissions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PermissionPolicies = PermissionPolicies;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Roles
         /// </summary>
         [DataMember(Name="roles", EmitDefaultValue=false)]
         public List<DomainRole> Roles { get; set; }
+        
+        
+        
         /// <summary>
         /// A collection of the permissions granted by all assigned roles
         /// </summary>
         /// <value>A collection of the permissions granted by all assigned roles</value>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
+        
+        
+        
         /// <summary>
         /// The policies configured for assigned permissions.
         /// </summary>
         /// <value>The policies configured for assigned permissions.</value>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<ResourcePermissionPolicy> PermissionPolicies { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -56,9 +132,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserAuthorization {\n");
+            
             sb.Append("  Roles: ").Append(Roles).Append("\n");
+            
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
+            
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,12 +203,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Roles != null)
                     hash = hash * 59 + this.Roles.GetHashCode();
+                
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
+                
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
+                
                 return hash;
             }
         }

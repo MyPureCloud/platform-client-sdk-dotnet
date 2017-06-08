@@ -18,6 +18,23 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Group :  IEquatable<Group>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Active, inactive, or deleted state.
         /// </summary>
@@ -51,6 +68,13 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "deleted")]
             Deleted
         }
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Type of group.
         /// </summary>
@@ -78,6 +102,19 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "social")]
             Social
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Who can view this group
         /// </summary>
@@ -111,41 +148,118 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "members")]
             Members
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Active, inactive, or deleted state.
         /// </summary>
         /// <value>Active, inactive, or deleted state.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Type of group.
         /// </summary>
         /// <value>Type of group.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Who can view this group
         /// </summary>
         /// <value>Who can view this group</value>
         [DataMember(Name="visibility", EmitDefaultValue=false)]
         public VisibilityEnum? Visibility { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Group" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Group() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Group" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The group name. (required).</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <param name="Type">Type of group. (required).</param>
+        
+        
+        
         /// <param name="Images">Images.</param>
+        
+        
+        
         /// <param name="Addresses">Addresses.</param>
+        
+        
+        
         /// <param name="RulesVisible">Are membership rules visible to the person requesting to view the group (required).</param>
+        
+        
+        
         /// <param name="Visibility">Who can view this group (required).</param>
+        
+        
+        
+        
         public Group(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -155,6 +269,23 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Type" is required (not null)
             if (Type == null)
             {
@@ -164,6 +295,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Type = Type;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "RulesVisible" is required (not null)
             if (RulesVisible == null)
             {
@@ -173,6 +317,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.RulesVisible = RulesVisible;
             }
+            
+            
+            
+            
+            
             // to ensure "Visibility" is required (not null)
             if (Visibility == null)
             {
@@ -182,10 +331,70 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Visibility = Visibility;
             }
-            this.Description = Description;
-            this.Images = Images;
-            this.Addresses = Addresses;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Images = Images;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Addresses = Addresses;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -193,57 +402,92 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The group name.
         /// </summary>
         /// <value>The group name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Last modified date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+        
+        
+        
         /// <summary>
         /// Number of members.
         /// </summary>
         /// <value>Number of members.</value>
         [DataMember(Name="memberCount", EmitDefaultValue=false)]
         public long? MemberCount { get; private set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Current version for this resource.
         /// </summary>
         /// <value>Current version for this resource.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; private set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Images
         /// </summary>
         [DataMember(Name="images", EmitDefaultValue=false)]
         public List<UserImage> Images { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Addresses
         /// </summary>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<GroupContact> Addresses { get; set; }
+        
+        
+        
         /// <summary>
         /// Are membership rules visible to the person requesting to view the group
         /// </summary>
         /// <value>Are membership rules visible to the person requesting to view the group</value>
         [DataMember(Name="rulesVisible", EmitDefaultValue=false)]
         public bool? RulesVisible { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -252,19 +496,33 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Group {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  MemberCount: ").Append(MemberCount).Append("\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Images: ").Append(Images).Append("\n");
+            
             sb.Append("  Addresses: ").Append(Addresses).Append("\n");
+            
             sb.Append("  RulesVisible: ").Append(RulesVisible).Append("\n");
+            
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -379,32 +637,46 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.MemberCount != null)
                     hash = hash * 59 + this.MemberCount.GetHashCode();
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Images != null)
                     hash = hash * 59 + this.Images.GetHashCode();
+                
                 if (this.Addresses != null)
                     hash = hash * 59 + this.Addresses.GetHashCode();
+                
                 if (this.RulesVisible != null)
                     hash = hash * 59 + this.RulesVisible.GetHashCode();
+                
                 if (this.Visibility != null)
                     hash = hash * 59 + this.Visibility.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,18 +18,97 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignDiagnostics :  IEquatable<CampaignDiagnostics>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
         /// </summary>
+        
+        
         /// <param name="CallableContacts">Campaign properties that can impact which contacts are callable.</param>
+        
+        
+        
         /// <param name="QueueUtilizationDiagnostic">Information regarding the campaign&#39;s queue.</param>
+        
+        
+        
         /// <param name="RuleSetDiagnostics">Information regarding the campaign&#39;s rule sets.</param>
+        
+        
+        
+        
         public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, List<RuleSetDiagnostic> RuleSetDiagnostics = null)
         {
-            this.CallableContacts = CallableContacts;
-            this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
-            this.RuleSetDiagnostics = RuleSetDiagnostics;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallableContacts = CallableContacts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.QueueUtilizationDiagnostic = QueueUtilizationDiagnostic;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RuleSetDiagnostics = RuleSetDiagnostics;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Campaign properties that can impact which contacts are callable
@@ -37,24 +116,35 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Campaign properties that can impact which contacts are callable</value>
         [DataMember(Name="callableContacts", EmitDefaultValue=false)]
         public CallableContactsDiagnostic CallableContacts { get; set; }
+        
+        
+        
         /// <summary>
         /// Information regarding the campaign&#39;s queue
         /// </summary>
         /// <value>Information regarding the campaign&#39;s queue</value>
         [DataMember(Name="queueUtilizationDiagnostic", EmitDefaultValue=false)]
         public QueueUtilizationDiagnostic QueueUtilizationDiagnostic { get; set; }
+        
+        
+        
         /// <summary>
         /// Information regarding the campaign&#39;s rule sets
         /// </summary>
         /// <value>Information regarding the campaign&#39;s rule sets</value>
         [DataMember(Name="ruleSetDiagnostics", EmitDefaultValue=false)]
         public List<RuleSetDiagnostic> RuleSetDiagnostics { get; set; }
+        
+        
+        
         /// <summary>
         /// Current number of outstanding interactions on the campaign
         /// </summary>
         /// <value>Current number of outstanding interactions on the campaign</value>
         [DataMember(Name="outstandingInteractionsCount", EmitDefaultValue=false)]
         public int? OutstandingInteractionsCount { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -63,10 +153,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignDiagnostics {\n");
+            
             sb.Append("  CallableContacts: ").Append(CallableContacts).Append("\n");
+            
             sb.Append("  QueueUtilizationDiagnostic: ").Append(QueueUtilizationDiagnostic).Append("\n");
+            
             sb.Append("  RuleSetDiagnostics: ").Append(RuleSetDiagnostics).Append("\n");
+            
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -136,14 +231,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.CallableContacts != null)
                     hash = hash * 59 + this.CallableContacts.GetHashCode();
+                
                 if (this.QueueUtilizationDiagnostic != null)
                     hash = hash * 59 + this.QueueUtilizationDiagnostic.GetHashCode();
+                
                 if (this.RuleSetDiagnostics != null)
                     hash = hash * 59 + this.RuleSetDiagnostics.GetHashCode();
+                
                 if (this.OutstandingInteractionsCount != null)
                     hash = hash * 59 + this.OutstandingInteractionsCount.GetHashCode();
+                
                 return hash;
             }
         }

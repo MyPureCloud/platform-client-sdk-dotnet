@@ -18,6 +18,13 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class RuleSetDiagnostic :  IEquatable<RuleSetDiagnostic>
     {
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Warnings
         /// </summary>
@@ -56,16 +63,60 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "PHONE_CONDITIONS_WITH_MULTICOLUMN_PREVIEW")]
             PhoneConditionsWithMulticolumnPreview
         }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="RuleSetDiagnostic" /> class.
         /// </summary>
+        
+        
         /// <param name="RuleSet">A campaign rule set.</param>
+        
+        
+        
         /// <param name="Warnings">Diagnostic warnings for the rule set.</param>
+        
+        
         public RuleSetDiagnostic(UriReference RuleSet = null, List<WarningsEnum> Warnings = null)
         {
-            this.RuleSet = RuleSet;
-            this.Warnings = Warnings;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.RuleSet = RuleSet;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Warnings = Warnings;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// A campaign rule set
@@ -73,12 +124,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A campaign rule set</value>
         [DataMember(Name="ruleSet", EmitDefaultValue=false)]
         public UriReference RuleSet { get; set; }
+        
+        
+        
         /// <summary>
         /// Diagnostic warnings for the rule set
         /// </summary>
         /// <value>Diagnostic warnings for the rule set</value>
         [DataMember(Name="warnings", EmitDefaultValue=false)]
         public List<WarningsEnum> Warnings { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -87,8 +143,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class RuleSetDiagnostic {\n");
+            
             sb.Append("  RuleSet: ").Append(RuleSet).Append("\n");
+            
             sb.Append("  Warnings: ").Append(Warnings).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -148,10 +207,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.RuleSet != null)
                     hash = hash * 59 + this.RuleSet.GetHashCode();
+                
                 if (this.Warnings != null)
                     hash = hash * 59 + this.Warnings.GetHashCode();
+                
                 return hash;
             }
         }

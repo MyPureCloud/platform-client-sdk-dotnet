@@ -18,62 +18,230 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class JsonSchemaDocument :  IEquatable<JsonSchemaDocument>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonSchemaDocument" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Schema">Schema.</param>
+        
+        
+        
         /// <param name="Title">Title.</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="Required">Required.</param>
+        
+        
+        
         /// <param name="Properties">Properties.</param>
+        
+        
         public JsonSchemaDocument(string Id = null, string Schema = null, string Title = null, string Description = null, string Type = null, List<string> Required = null, Dictionary<string, Object> Properties = null)
         {
-            this.Id = Id;
-            this.Schema = Schema;
-            this.Title = Title;
-            this.Description = Description;
-            this.Type = Type;
-            this.Required = Required;
-            this.Properties = Properties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Schema = Schema;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Title = Title;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Required = Required;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Properties = Properties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Schema
         /// </summary>
         [DataMember(Name="$schema", EmitDefaultValue=false)]
         public string Schema { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Title
         /// </summary>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Required
         /// </summary>
         [DataMember(Name="required", EmitDefaultValue=false)]
         public List<string> Required { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Properties
         /// </summary>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, Object> Properties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -82,13 +250,21 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class JsonSchemaDocument {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Schema: ").Append(Schema).Append("\n");
+            
             sb.Append("  Title: ").Append(Title).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Required: ").Append(Required).Append("\n");
+            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -173,20 +349,28 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Schema != null)
                     hash = hash * 59 + this.Schema.GetHashCode();
+                
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Required != null)
                     hash = hash * 59 + this.Required.GetHashCode();
+                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,52 +18,174 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DialerPreview :  IEquatable<DialerPreview>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerPreview" /> class.
         /// </summary>
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="ContactId">The contact associated with this preview data pop.</param>
+        
+        
+        
         /// <param name="ContactListId">The contactList associated with this preview data pop..</param>
+        
+        
+        
         /// <param name="CampaignId">The campaignId associated with this preview data pop..</param>
+        
+        
+        
         /// <param name="PhoneNumberColumns">The phone number columns associated with this campaign.</param>
+        
+        
         public DialerPreview(string Id = null, string ContactId = null, string ContactListId = null, string CampaignId = null, List<PhoneNumberColumn> PhoneNumberColumns = null)
         {
-            this.Id = Id;
-            this.ContactId = ContactId;
-            this.ContactListId = ContactListId;
-            this.CampaignId = CampaignId;
-            this.PhoneNumberColumns = PhoneNumberColumns;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactId = ContactId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactListId = ContactListId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CampaignId = CampaignId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PhoneNumberColumns = PhoneNumberColumns;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// The contact associated with this preview data pop
         /// </summary>
         /// <value>The contact associated with this preview data pop</value>
         [DataMember(Name="contactId", EmitDefaultValue=false)]
         public string ContactId { get; set; }
+        
+        
+        
         /// <summary>
         /// The contactList associated with this preview data pop.
         /// </summary>
         /// <value>The contactList associated with this preview data pop.</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
+        
+        
+        
         /// <summary>
         /// The campaignId associated with this preview data pop.
         /// </summary>
         /// <value>The campaignId associated with this preview data pop.</value>
         [DataMember(Name="campaignId", EmitDefaultValue=false)]
         public string CampaignId { get; set; }
+        
+        
+        
         /// <summary>
         /// The phone number columns associated with this campaign
         /// </summary>
         /// <value>The phone number columns associated with this campaign</value>
         [DataMember(Name="phoneNumberColumns", EmitDefaultValue=false)]
         public List<PhoneNumberColumn> PhoneNumberColumns { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,11 +194,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DialerPreview {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  ContactId: ").Append(ContactId).Append("\n");
+            
             sb.Append("  ContactListId: ").Append(ContactListId).Append("\n");
+            
             sb.Append("  CampaignId: ").Append(CampaignId).Append("\n");
+            
             sb.Append("  PhoneNumberColumns: ").Append(PhoneNumberColumns).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -151,16 +279,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.ContactId != null)
                     hash = hash * 59 + this.ContactId.GetHashCode();
+                
                 if (this.ContactListId != null)
                     hash = hash * 59 + this.ContactListId.GetHashCode();
+                
                 if (this.CampaignId != null)
                     hash = hash * 59 + this.CampaignId.GetHashCode();
+                
                 if (this.PhoneNumberColumns != null)
                     hash = hash * 59 + this.PhoneNumberColumns.GetHashCode();
+                
                 return hash;
             }
         }

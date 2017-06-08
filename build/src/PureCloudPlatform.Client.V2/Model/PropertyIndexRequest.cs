@@ -18,19 +18,51 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PropertyIndexRequest :  IEquatable<PropertyIndexRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyIndexRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected PropertyIndexRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PropertyIndexRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="SessionId">Attach properties to a segment in the indicated session (required).</param>
+        
+        
+        
         /// <param name="TargetDate">Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
+        
+        
+        
         /// <param name="Properties">The list of properties to index (required).</param>
+        
+        
         public PropertyIndexRequest(string SessionId = null, DateTime? TargetDate = null, List<AnalyticsProperty> Properties = null)
         {
+            
+            
+            
             // to ensure "SessionId" is required (not null)
             if (SessionId == null)
             {
@@ -40,6 +72,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.SessionId = SessionId;
             }
+            
+            
+            
+            
+            
             // to ensure "TargetDate" is required (not null)
             if (TargetDate == null)
             {
@@ -49,6 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.TargetDate = TargetDate;
             }
+            
+            
+            
+            
+            
             // to ensure "Properties" is required (not null)
             if (Properties == null)
             {
@@ -58,7 +100,25 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Properties = Properties;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Attach properties to a segment in the indicated session
@@ -66,18 +126,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Attach properties to a segment in the indicated session</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
+        
+        
+        
         /// <summary>
         /// Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Attach properties to a segment covering a specific point in time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="targetDate", EmitDefaultValue=false)]
         public DateTime? TargetDate { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of properties to index
         /// </summary>
         /// <value>The list of properties to index</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public List<AnalyticsProperty> Properties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -86,9 +154,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PropertyIndexRequest {\n");
+            
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            
             sb.Append("  TargetDate: ").Append(TargetDate).Append("\n");
+            
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,12 +225,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
+                
                 if (this.TargetDate != null)
                     hash = hash * 59 + this.TargetDate.GetHashCode();
+                
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+                
                 return hash;
             }
         }

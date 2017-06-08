@@ -47,13 +47,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
+            
             var userId = new List<string>(); // List<string> | User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request
+            
+            
 
             try
             {
+                
                 // Get a list of UserScheduleAdherence records for the requested users
+                
                 List&lt;UserScheduleAdherence&gt; result = apiInstance.GetWorkforcemanagementAdherence(userId);
                 Debug.WriteLine(result);
             }
@@ -103,13 +111,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
 
             try
             {
+                
                 // Get activity codes corresponding to a management unit
+                
                 ActivityCodeContainer result = apiInstance.GetWorkforcemanagementManagementunitActivitycodes(muId);
                 Debug.WriteLine(result);
             }
@@ -159,14 +175,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
+            
             var date = date_example;  // string | ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23
+            
+            
+            
 
             try
             {
+                
                 // Get intraday queues for the given date
+                
                 WfmIntradayQueueListing result = apiInstance.GetWorkforcemanagementManagementunitIntradayQueues(muId, date);
                 Debug.WriteLine(result);
             }
@@ -217,15 +245,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
+            
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
+            
+            
+            
+            
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
+            
+            
+            
 
             try
             {
+                
                 // Get a time off request by id
+                
                 TimeOffRequest result = apiInstance.GetWorkforcemanagementManagementunitUserTimeoffrequest(muId, userId, timeOffRequestId);
                 Debug.WriteLine(result);
             }
@@ -277,15 +321,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
+            
             var userId = userId_example;  // string | The userId to whom the Time Off Request applies.
+            
+            
+            
+            
             var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get a list of time off requests for any user
+                
                 TimeOffRequestList result = apiInstance.GetWorkforcemanagementManagementunitUserTimeoffrequests(muId, userId, recentlyReviewed);
                 Debug.WriteLine(result);
             }
@@ -337,13 +397,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
 
             try
             {
+                
                 // Get agents in the management unit
+                
                 WfmUserEntityListing result = apiInstance.GetWorkforcemanagementManagementunitUsers(muId);
                 Debug.WriteLine(result);
             }
@@ -393,15 +461,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var selector = selector_example;  // string | Selector (optional) 
+            
+            
+            
+            
             var pageSize = 56;  // int? |  (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            
+            
+            
 
             try
             {
+                
                 // Get management units
+                
                 List&lt;ManagementUnit&gt; result = apiInstance.GetWorkforcemanagementManagementunits(selector, pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
@@ -453,13 +537,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
+            
+            
+            
 
             try
             {
+                
                 // Get a time off request for the current user by id
+                
                 TimeOffRequest result = apiInstance.GetWorkforcemanagementTimeoffrequest(timeOffRequestId);
                 Debug.WriteLine(result);
             }
@@ -509,13 +601,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var recentlyReviewed = true;  // bool? | Limit results to requests that have been reviewed within the preceding 30 days (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get a list of time off requests for the current user
+                
                 TimeOffRequestList result = apiInstance.GetWorkforcemanagementTimeoffrequests(recentlyReviewed);
                 Debug.WriteLine(result);
             }
@@ -565,14 +665,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var timeOffRequestId = timeOffRequestId_example;  // string | Time Off Request Id
+            
+            
+            
+            
+            
             var body = new TimeOffRequestPatch(); // TimeOffRequestPatch |  (optional) 
+            
+            
 
             try
             {
+                
                 // Mark a time off request for the current user as read or unread
+                
                 apiInstance.PatchWorkforcemanagementTimeoffrequest(timeOffRequestId, body);
             }
             catch (Exception e)
@@ -622,14 +734,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
+            
+            
             var body = new IntradayQueryDataCommand(); // IntradayQueryDataCommand | body (optional) 
+            
+            
 
             try
             {
+                
                 // Get intraday data for the given date for the requested queueIds
+                
                 IntradayResponse result = apiInstance.PostWorkforcemanagementManagementunitIntraday(muId, body);
                 Debug.WriteLine(result);
             }
@@ -680,14 +804,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
             var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
+            
+            
             var body = new UserListScheduleRequestBody(); // UserListScheduleRequestBody | body (optional) 
+            
+            
 
             try
             {
+                
                 // Get user schedules within the given time range
+                
                 UserScheduleContainer result = apiInstance.PostWorkforcemanagementManagementunitSchedulesSearch(muId, body);
                 Debug.WriteLine(result);
             }
@@ -738,13 +874,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new WorkforceManagementApi();
+            
+            
+            
             var body = new CurrentUserScheduleRequestBody(); // CurrentUserScheduleRequestBody | body (optional) 
+            
+            
 
             try
             {
+                
                 // Get a schedule for the current user
+                
                 UserScheduleContainer result = apiInstance.PostWorkforcemanagementSchedules(body);
                 Debug.WriteLine(result);
             }

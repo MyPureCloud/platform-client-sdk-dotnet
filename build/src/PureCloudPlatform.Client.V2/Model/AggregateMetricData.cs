@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AggregateMetricData :  IEquatable<AggregateMetricData>
     {
+        
+        
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
@@ -284,34 +286,109 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "oUserRoutingStatuses")]
             Ouserroutingstatuses
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Metric
         /// </summary>
         [DataMember(Name="metric", EmitDefaultValue=false)]
         public MetricEnum? Metric { get; set; }
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregateMetricData" /> class.
         /// </summary>
+        
+        
         /// <param name="Metric">Metric.</param>
+        
+        
+        
         /// <param name="Qualifier">Qualifier.</param>
+        
+        
+        
         /// <param name="Stats">Stats.</param>
+        
+        
         public AggregateMetricData(MetricEnum? Metric = null, string Qualifier = null, StatisticalSummary Stats = null)
         {
-            this.Metric = Metric;
-            this.Qualifier = Qualifier;
-            this.Stats = Stats;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Metric = Metric;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Qualifier = Qualifier;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Stats = Stats;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Qualifier
         /// </summary>
         [DataMember(Name="qualifier", EmitDefaultValue=false)]
         public string Qualifier { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Stats
         /// </summary>
         [DataMember(Name="stats", EmitDefaultValue=false)]
         public StatisticalSummary Stats { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -320,9 +397,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AggregateMetricData {\n");
+            
             sb.Append("  Metric: ").Append(Metric).Append("\n");
+            
             sb.Append("  Qualifier: ").Append(Qualifier).Append("\n");
+            
             sb.Append("  Stats: ").Append(Stats).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -387,12 +468,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Metric != null)
                     hash = hash * 59 + this.Metric.GetHashCode();
+                
                 if (this.Qualifier != null)
                     hash = hash * 59 + this.Qualifier.GetHashCode();
+                
                 if (this.Stats != null)
                     hash = hash * 59 + this.Stats.GetHashCode();
+                
                 return hash;
             }
         }

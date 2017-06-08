@@ -18,41 +18,140 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class VideoConversationNotificationDetail :  IEquatable<VideoConversationNotificationDetail>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="VideoConversationNotificationDetail" /> class.
         /// </summary>
+        
+        
         /// <param name="ErrorCode">ErrorCode.</param>
+        
+        
+        
         /// <param name="FieldName">FieldName.</param>
+        
+        
+        
         /// <param name="EntityId">EntityId.</param>
+        
+        
+        
         /// <param name="EntityName">EntityName.</param>
+        
+        
         public VideoConversationNotificationDetail(string ErrorCode = null, string FieldName = null, string EntityId = null, string EntityName = null)
         {
-            this.ErrorCode = ErrorCode;
-            this.FieldName = FieldName;
-            this.EntityId = EntityId;
-            this.EntityName = EntityName;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ErrorCode = ErrorCode;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FieldName = FieldName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EntityId = EntityId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EntityName = EntityName;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ErrorCode
         /// </summary>
         [DataMember(Name="errorCode", EmitDefaultValue=false)]
         public string ErrorCode { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets FieldName
         /// </summary>
         [DataMember(Name="fieldName", EmitDefaultValue=false)]
         public string FieldName { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EntityId
         /// </summary>
         [DataMember(Name="entityId", EmitDefaultValue=false)]
         public string EntityId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EntityName
         /// </summary>
         [DataMember(Name="entityName", EmitDefaultValue=false)]
         public string EntityName { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,10 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class VideoConversationNotificationDetail {\n");
+            
             sb.Append("  ErrorCode: ").Append(ErrorCode).Append("\n");
+            
             sb.Append("  FieldName: ").Append(FieldName).Append("\n");
+            
             sb.Append("  EntityId: ").Append(EntityId).Append("\n");
+            
             sb.Append("  EntityName: ").Append(EntityName).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,14 +238,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ErrorCode != null)
                     hash = hash * 59 + this.ErrorCode.GetHashCode();
+                
                 if (this.FieldName != null)
                     hash = hash * 59 + this.FieldName.GetHashCode();
+                
                 if (this.EntityId != null)
                     hash = hash * 59 + this.EntityId.GetHashCode();
+                
                 if (this.EntityName != null)
                     hash = hash * 59 + this.EntityName.GetHashCode();
+                
                 return hash;
             }
         }

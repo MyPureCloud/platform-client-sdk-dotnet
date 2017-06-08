@@ -18,18 +18,46 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SubscriberResponse :  IEquatable<SubscriberResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriberResponse" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SubscriberResponse() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SubscriberResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="MessageReturned">Suggested valid addresses.</param>
+        
+        
+        
         /// <param name="Status">http status (required).</param>
+        
+        
         public SubscriberResponse(List<string> MessageReturned = null, string Status = null)
         {
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Status" is required (not null)
             if (Status == null)
             {
@@ -39,8 +67,26 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Status = Status;
             }
-            this.MessageReturned = MessageReturned;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MessageReturned = MessageReturned;
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Suggested valid addresses
@@ -48,12 +94,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Suggested valid addresses</value>
         [DataMember(Name="messageReturned", EmitDefaultValue=false)]
         public List<string> MessageReturned { get; set; }
+        
+        
+        
         /// <summary>
         /// http status
         /// </summary>
         /// <value>http status</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -62,8 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SubscriberResponse {\n");
+            
             sb.Append("  MessageReturned: ").Append(MessageReturned).Append("\n");
+            
             sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,10 +177,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.MessageReturned != null)
                     hash = hash * 59 + this.MessageReturned.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 return hash;
             }
         }

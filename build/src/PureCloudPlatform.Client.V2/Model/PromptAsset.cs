@@ -18,32 +18,262 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PromptAsset :  IEquatable<PromptAsset>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PromptAsset" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="PromptId">PromptId.</param>
+        
+        
+        
         /// <param name="Language">Language.</param>
+        
+        
+        
         /// <param name="MediaUri">MediaUri.</param>
+        
+        
+        
         /// <param name="TtsString">TtsString.</param>
+        
+        
+        
         /// <param name="UploadStatus">UploadStatus.</param>
+        
+        
+        
         /// <param name="UploadUri">UploadUri.</param>
+        
+        
+        
         /// <param name="LanguageDefault">LanguageDefault.</param>
+        
+        
+        
         /// <param name="Tags">Tags.</param>
+        
+        
+        
         /// <param name="DurationSeconds">DurationSeconds.</param>
+        
+        
+        
+        
         public PromptAsset(string Name = null, string PromptId = null, string Language = null, string MediaUri = null, string TtsString = null, string UploadStatus = null, string UploadUri = null, bool? LanguageDefault = null, Dictionary<string, List<string>> Tags = null, double? DurationSeconds = null)
         {
-            this.Name = Name;
-            this.PromptId = PromptId;
-            this.Language = Language;
-            this.MediaUri = MediaUri;
-            this.TtsString = TtsString;
-            this.UploadStatus = UploadStatus;
-            this.UploadUri = UploadUri;
-            this.LanguageDefault = LanguageDefault;
-            this.Tags = Tags;
-            this.DurationSeconds = DurationSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PromptId = PromptId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Language = Language;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MediaUri = MediaUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TtsString = TtsString;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UploadStatus = UploadStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UploadUri = UploadUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LanguageDefault = LanguageDefault;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Tags = Tags;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationSeconds = DurationSeconds;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -51,62 +281,97 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PromptId
         /// </summary>
         [DataMember(Name="promptId", EmitDefaultValue=false)]
         public string PromptId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Language
         /// </summary>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MediaUri
         /// </summary>
         [DataMember(Name="mediaUri", EmitDefaultValue=false)]
         public string MediaUri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets TtsString
         /// </summary>
         [DataMember(Name="ttsString", EmitDefaultValue=false)]
         public string TtsString { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UploadStatus
         /// </summary>
         [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
         public string UploadStatus { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UploadUri
         /// </summary>
         [DataMember(Name="uploadUri", EmitDefaultValue=false)]
         public string UploadUri { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets LanguageDefault
         /// </summary>
         [DataMember(Name="languageDefault", EmitDefaultValue=false)]
         public bool? LanguageDefault { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Tags
         /// </summary>
         [DataMember(Name="tags", EmitDefaultValue=false)]
         public Dictionary<string, List<string>> Tags { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DurationSeconds
         /// </summary>
         [DataMember(Name="durationSeconds", EmitDefaultValue=false)]
         public double? DurationSeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -115,18 +380,31 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PromptAsset {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  PromptId: ").Append(PromptId).Append("\n");
+            
             sb.Append("  Language: ").Append(Language).Append("\n");
+            
             sb.Append("  MediaUri: ").Append(MediaUri).Append("\n");
+            
             sb.Append("  TtsString: ").Append(TtsString).Append("\n");
+            
             sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
+            
             sb.Append("  UploadUri: ").Append(UploadUri).Append("\n");
+            
             sb.Append("  LanguageDefault: ").Append(LanguageDefault).Append("\n");
+            
             sb.Append("  Tags: ").Append(Tags).Append("\n");
+            
             sb.Append("  DurationSeconds: ").Append(DurationSeconds).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -236,30 +514,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.PromptId != null)
                     hash = hash * 59 + this.PromptId.GetHashCode();
+                
                 if (this.Language != null)
                     hash = hash * 59 + this.Language.GetHashCode();
+                
                 if (this.MediaUri != null)
                     hash = hash * 59 + this.MediaUri.GetHashCode();
+                
                 if (this.TtsString != null)
                     hash = hash * 59 + this.TtsString.GetHashCode();
+                
                 if (this.UploadStatus != null)
                     hash = hash * 59 + this.UploadStatus.GetHashCode();
+                
                 if (this.UploadUri != null)
                     hash = hash * 59 + this.UploadUri.GetHashCode();
+                
                 if (this.LanguageDefault != null)
                     hash = hash * 59 + this.LanguageDefault.GetHashCode();
+                
                 if (this.Tags != null)
                     hash = hash * 59 + this.Tags.GetHashCode();
+                
                 if (this.DurationSeconds != null)
                     hash = hash * 59 + this.DurationSeconds.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

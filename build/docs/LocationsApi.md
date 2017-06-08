@@ -38,13 +38,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new LocationsApi();
+            
+            
             var locationId = locationId_example;  // string | Location ID
+            
+            
+            
 
             try
             {
+                
                 // Get Location by ID.
+                
                 LocationDefinition result = apiInstance.GetLocation(locationId);
                 Debug.WriteLine(result);
             }
@@ -94,15 +102,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new LocationsApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get a list of all locations.
+                
                 LocationEntityListing result = apiInstance.GetLocations(pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -122,7 +146,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
-| **sortOrder** | **string**| Sort order | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] <br />**Values**: asc, desc |
 {: class="table table-striped"}
 
 ### Return type
@@ -154,14 +178,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new LocationsApi();
+            
+            
             var q64 = q64_example;  // string | q64
+            
+            
+            
+            
+            
             var expand = new List<string>(); // List<string> | expand (optional) 
+            
+            
 
             try
             {
+                
                 // Search locations using the q64 value returned from a previous search
+                
                 LocationsSearchResponse result = apiInstance.GetLocationsSearch(q64, expand);
                 Debug.WriteLine(result);
             }
@@ -212,13 +248,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new LocationsApi();
+            
+            
+            
             var body = new LocationSearchRequest(); // LocationSearchRequest | Search request options
+            
+            
 
             try
             {
+                
                 // Search locations
+                
                 LocationsSearchResponse result = apiInstance.PostLocationsSearch(body);
                 Debug.WriteLine(result);
             }

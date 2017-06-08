@@ -18,6 +18,41 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CreateEmailRequest :  IEquatable<CreateEmailRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
         /// </summary>
@@ -45,34 +80,105 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "INBOUND")]
             Inbound
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
         /// </summary>
         /// <value>Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEmailRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CreateEmailRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateEmailRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="QueueId">The ID of the queue to use for routing the chat conversation. (required).</param>
+        
+        
+        
         /// <param name="Provider">The name of the provider that is sourcing the web chat. (required).</param>
+        
+        
+        
         /// <param name="SkillIds">The list of skill ID&#39;s to use for routing..</param>
+        
+        
+        
         /// <param name="LanguageId">The ID of the language to use for routing..</param>
+        
+        
+        
         /// <param name="Priority">The priority to assign to the conversation for routing..</param>
+        
+        
+        
         /// <param name="Attributes">The list of attributes to associate with the customer participant..</param>
+        
+        
+        
         /// <param name="ToAddress">The email address of the recipient of the email..</param>
+        
+        
+        
         /// <param name="ToName">The name of the recipient of the email..</param>
+        
+        
+        
         /// <param name="FromAddress">The email address of the sender of the email..</param>
+        
+        
+        
         /// <param name="FromName">The name of the sender of the email..</param>
+        
+        
+        
         /// <param name="Subject">The subject of the email.</param>
+        
+        
+        
         /// <param name="Direction">Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue..</param>
+        
+        
         public CreateEmailRequest(string QueueId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null)
         {
+            
+            
+            
             // to ensure "QueueId" is required (not null)
             if (QueueId == null)
             {
@@ -82,6 +188,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.QueueId = QueueId;
             }
+            
+            
+            
+            
+            
             // to ensure "Provider" is required (not null)
             if (Provider == null)
             {
@@ -91,17 +202,151 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Provider = Provider;
             }
-            this.SkillIds = SkillIds;
-            this.LanguageId = LanguageId;
-            this.Priority = Priority;
-            this.Attributes = Attributes;
-            this.ToAddress = ToAddress;
-            this.ToName = ToName;
-            this.FromAddress = FromAddress;
-            this.FromName = FromName;
-            this.Subject = Subject;
-            this.Direction = Direction;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.SkillIds = SkillIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LanguageId = LanguageId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Priority = Priority;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Attributes = Attributes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ToAddress = ToAddress;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ToName = ToName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FromAddress = FromAddress;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FromName = FromName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Subject = Subject;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Direction = Direction;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The ID of the queue to use for routing the chat conversation.
@@ -109,66 +354,100 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The ID of the queue to use for routing the chat conversation.</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
+        
+        
+        
         /// <summary>
         /// The name of the provider that is sourcing the web chat.
         /// </summary>
         /// <value>The name of the provider that is sourcing the web chat.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of skill ID&#39;s to use for routing.
         /// </summary>
         /// <value>The list of skill ID&#39;s to use for routing.</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
         public List<string> SkillIds { get; set; }
+        
+        
+        
         /// <summary>
         /// The ID of the language to use for routing.
         /// </summary>
         /// <value>The ID of the language to use for routing.</value>
         [DataMember(Name="languageId", EmitDefaultValue=false)]
         public string LanguageId { get; set; }
+        
+        
+        
         /// <summary>
         /// The priority to assign to the conversation for routing.
         /// </summary>
         /// <value>The priority to assign to the conversation for routing.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public long? Priority { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of attributes to associate with the customer participant.
         /// </summary>
         /// <value>The list of attributes to associate with the customer participant.</value>
         [DataMember(Name="attributes", EmitDefaultValue=false)]
         public Dictionary<string, string> Attributes { get; set; }
+        
+        
+        
         /// <summary>
         /// The email address of the recipient of the email.
         /// </summary>
         /// <value>The email address of the recipient of the email.</value>
         [DataMember(Name="toAddress", EmitDefaultValue=false)]
         public string ToAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// The name of the recipient of the email.
         /// </summary>
         /// <value>The name of the recipient of the email.</value>
         [DataMember(Name="toName", EmitDefaultValue=false)]
         public string ToName { get; set; }
+        
+        
+        
         /// <summary>
         /// The email address of the sender of the email.
         /// </summary>
         /// <value>The email address of the sender of the email.</value>
         [DataMember(Name="fromAddress", EmitDefaultValue=false)]
         public string FromAddress { get; set; }
+        
+        
+        
         /// <summary>
         /// The name of the sender of the email.
         /// </summary>
         /// <value>The name of the sender of the email.</value>
         [DataMember(Name="fromName", EmitDefaultValue=false)]
         public string FromName { get; set; }
+        
+        
+        
         /// <summary>
         /// The subject of the email
         /// </summary>
         /// <value>The subject of the email</value>
         [DataMember(Name="subject", EmitDefaultValue=false)]
         public string Subject { get; set; }
+        
+        
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -177,18 +456,31 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CreateEmailRequest {\n");
+            
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
+            
             sb.Append("  LanguageId: ").Append(LanguageId).Append("\n");
+            
             sb.Append("  Priority: ").Append(Priority).Append("\n");
+            
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
+            
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
+            
             sb.Append("  ToName: ").Append(ToName).Append("\n");
+            
             sb.Append("  FromAddress: ").Append(FromAddress).Append("\n");
+            
             sb.Append("  FromName: ").Append(FromName).Append("\n");
+            
             sb.Append("  Subject: ").Append(Subject).Append("\n");
+            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -298,30 +590,43 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
+                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
+                
                 if (this.LanguageId != null)
                     hash = hash * 59 + this.LanguageId.GetHashCode();
+                
                 if (this.Priority != null)
                     hash = hash * 59 + this.Priority.GetHashCode();
+                
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();
+                
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();
+                
                 if (this.ToName != null)
                     hash = hash * 59 + this.ToName.GetHashCode();
+                
                 if (this.FromAddress != null)
                     hash = hash * 59 + this.FromAddress.GetHashCode();
+                
                 if (this.FromName != null)
                     hash = hash * 59 + this.FromName.GetHashCode();
+                
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
                 return hash;
             }
         }

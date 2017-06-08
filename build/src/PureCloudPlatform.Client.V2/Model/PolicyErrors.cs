@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class PolicyErrors :  IEquatable<PolicyErrors>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyErrors" /> class.
         /// </summary>
+        
+        
         /// <param name="PolicyErrorMessages">PolicyErrorMessages.</param>
+        
+        
         public PolicyErrors(List<PolicyErrorMessage> PolicyErrorMessages = null)
         {
-            this.PolicyErrorMessages = PolicyErrorMessages;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.PolicyErrorMessages = PolicyErrorMessages;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets PolicyErrorMessages
         /// </summary>
         [DataMember(Name="policyErrorMessages", EmitDefaultValue=false)]
         public List<PolicyErrorMessage> PolicyErrorMessages { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class PolicyErrors {\n");
+            
             sb.Append("  PolicyErrorMessages: ").Append(PolicyErrorMessages).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.PolicyErrorMessages != null)
                     hash = hash * 59 + this.PolicyErrorMessages.GetHashCode();
+                
                 return hash;
             }
         }

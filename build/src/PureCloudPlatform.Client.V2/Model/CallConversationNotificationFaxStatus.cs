@@ -18,69 +18,260 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallConversationNotificationFaxStatus :  IEquatable<CallConversationNotificationFaxStatus>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallConversationNotificationFaxStatus" /> class.
         /// </summary>
+        
+        
         /// <param name="Direction">Direction.</param>
+        
+        
+        
         /// <param name="ExpectedPages">ExpectedPages.</param>
+        
+        
+        
         /// <param name="ActivePage">ActivePage.</param>
+        
+        
+        
         /// <param name="LinesTransmitted">LinesTransmitted.</param>
+        
+        
+        
         /// <param name="BytesTransmitted">BytesTransmitted.</param>
+        
+        
+        
         /// <param name="DataRate">DataRate.</param>
+        
+        
+        
         /// <param name="PageErrors">PageErrors.</param>
+        
+        
+        
         /// <param name="LineErrors">LineErrors.</param>
+        
+        
         public CallConversationNotificationFaxStatus(string Direction = null, int? ExpectedPages = null, int? ActivePage = null, int? LinesTransmitted = null, int? BytesTransmitted = null, int? DataRate = null, int? PageErrors = null, int? LineErrors = null)
         {
-            this.Direction = Direction;
-            this.ExpectedPages = ExpectedPages;
-            this.ActivePage = ActivePage;
-            this.LinesTransmitted = LinesTransmitted;
-            this.BytesTransmitted = BytesTransmitted;
-            this.DataRate = DataRate;
-            this.PageErrors = PageErrors;
-            this.LineErrors = LineErrors;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Direction = Direction;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExpectedPages = ExpectedPages;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActivePage = ActivePage;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LinesTransmitted = LinesTransmitted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.BytesTransmitted = BytesTransmitted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DataRate = DataRate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PageErrors = PageErrors;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LineErrors = LineErrors;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Direction
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public string Direction { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ExpectedPages
         /// </summary>
         [DataMember(Name="expectedPages", EmitDefaultValue=false)]
         public int? ExpectedPages { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ActivePage
         /// </summary>
         [DataMember(Name="activePage", EmitDefaultValue=false)]
         public int? ActivePage { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets LinesTransmitted
         /// </summary>
         [DataMember(Name="linesTransmitted", EmitDefaultValue=false)]
         public int? LinesTransmitted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets BytesTransmitted
         /// </summary>
         [DataMember(Name="bytesTransmitted", EmitDefaultValue=false)]
         public int? BytesTransmitted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DataRate
         /// </summary>
         [DataMember(Name="dataRate", EmitDefaultValue=false)]
         public int? DataRate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PageErrors
         /// </summary>
         [DataMember(Name="pageErrors", EmitDefaultValue=false)]
         public int? PageErrors { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets LineErrors
         /// </summary>
         [DataMember(Name="lineErrors", EmitDefaultValue=false)]
         public int? LineErrors { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -89,14 +280,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallConversationNotificationFaxStatus {\n");
+            
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            
             sb.Append("  ExpectedPages: ").Append(ExpectedPages).Append("\n");
+            
             sb.Append("  ActivePage: ").Append(ActivePage).Append("\n");
+            
             sb.Append("  LinesTransmitted: ").Append(LinesTransmitted).Append("\n");
+            
             sb.Append("  BytesTransmitted: ").Append(BytesTransmitted).Append("\n");
+            
             sb.Append("  DataRate: ").Append(DataRate).Append("\n");
+            
             sb.Append("  PageErrors: ").Append(PageErrors).Append("\n");
+            
             sb.Append("  LineErrors: ").Append(LineErrors).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -186,22 +386,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
                 if (this.ExpectedPages != null)
                     hash = hash * 59 + this.ExpectedPages.GetHashCode();
+                
                 if (this.ActivePage != null)
                     hash = hash * 59 + this.ActivePage.GetHashCode();
+                
                 if (this.LinesTransmitted != null)
                     hash = hash * 59 + this.LinesTransmitted.GetHashCode();
+                
                 if (this.BytesTransmitted != null)
                     hash = hash * 59 + this.BytesTransmitted.GetHashCode();
+                
                 if (this.DataRate != null)
                     hash = hash * 59 + this.DataRate.GetHashCode();
+                
                 if (this.PageErrors != null)
                     hash = hash * 59 + this.PageErrors.GetHashCode();
+                
                 if (this.LineErrors != null)
                     hash = hash * 59 + this.LineErrors.GetHashCode();
+                
                 return hash;
             }
         }

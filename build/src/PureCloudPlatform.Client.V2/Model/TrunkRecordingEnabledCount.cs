@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class TrunkRecordingEnabledCount :  IEquatable<TrunkRecordingEnabledCount>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="TrunkRecordingEnabledCount" /> class.
         /// </summary>
+        
+        
         /// <param name="EnabledCount">The amount of trunks that have recording enabled.</param>
+        
+        
+        
         /// <param name="DisabledCount">The amount of trunks that do not have recording enabled.</param>
+        
+        
         public TrunkRecordingEnabledCount(int? EnabledCount = null, int? DisabledCount = null)
         {
-            this.EnabledCount = EnabledCount;
-            this.DisabledCount = DisabledCount;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.EnabledCount = EnabledCount;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisabledCount = DisabledCount;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The amount of trunks that have recording enabled
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The amount of trunks that have recording enabled</value>
         [DataMember(Name="enabledCount", EmitDefaultValue=false)]
         public int? EnabledCount { get; set; }
+        
+        
+        
         /// <summary>
         /// The amount of trunks that do not have recording enabled
         /// </summary>
         /// <value>The amount of trunks that do not have recording enabled</value>
         [DataMember(Name="disabledCount", EmitDefaultValue=false)]
         public int? DisabledCount { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class TrunkRecordingEnabledCount {\n");
+            
             sb.Append("  EnabledCount: ").Append(EnabledCount).Append("\n");
+            
             sb.Append("  DisabledCount: ").Append(DisabledCount).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.EnabledCount != null)
                     hash = hash * 59 + this.EnabledCount.GetHashCode();
+                
                 if (this.DisabledCount != null)
                     hash = hash * 59 + this.DisabledCount.GetHashCode();
+                
                 return hash;
             }
         }

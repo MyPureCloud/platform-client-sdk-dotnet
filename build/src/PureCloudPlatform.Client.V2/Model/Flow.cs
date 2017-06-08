@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Flow :  IEquatable<Flow>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -74,35 +85,162 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WORKFLOW")]
             Workflow
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected Flow() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Flow" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The flow name (required).</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="LockedUser">LockedUser.</param>
+        
+        
+        
         /// <param name="Active">Active.</param>
+        
+        
+        
         /// <param name="System">System.</param>
+        
+        
+        
         /// <param name="Deleted">Deleted.</param>
+        
+        
+        
         /// <param name="PublishedVersion">PublishedVersion.</param>
+        
+        
+        
         /// <param name="SavedVersion">SavedVersion.</param>
+        
+        
+        
         /// <param name="InputSchema">json schema describing the inputs for the flow.</param>
+        
+        
+        
         /// <param name="OutputSchema">json schema describing the outputs for the flow.</param>
+        
+        
+        
         /// <param name="CheckedInVersion">CheckedInVersion.</param>
+        
+        
+        
         /// <param name="PublishedBy">PublishedBy.</param>
+        
+        
+        
         /// <param name="CurrentOperation">CurrentOperation.</param>
+        
+        
+        
+        
         public Flow(string Name = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -112,20 +250,192 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
-            this.Description = Description;
-            this.Type = Type;
-            this.LockedUser = LockedUser;
-            this.Active = Active;
-            this.System = System;
-            this.Deleted = Deleted;
-            this.PublishedVersion = PublishedVersion;
-            this.SavedVersion = SavedVersion;
-            this.InputSchema = InputSchema;
-            this.OutputSchema = OutputSchema;
-            this.CheckedInVersion = CheckedInVersion;
-            this.PublishedBy = PublishedBy;
-            this.CurrentOperation = CurrentOperation;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LockedUser = LockedUser;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Active = Active;
+            
+            
+            
+            
+            
+            
+            
+            
+this.System = System;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Deleted = Deleted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PublishedVersion = PublishedVersion;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SavedVersion = SavedVersion;
+            
+            
+            
+            
+            
+            
+            
+            
+this.InputSchema = InputSchema;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OutputSchema = OutputSchema;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CheckedInVersion = CheckedInVersion;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PublishedBy = PublishedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CurrentOperation = CurrentOperation;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -133,80 +443,126 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The flow name
         /// </summary>
         /// <value>The flow name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets LockedUser
         /// </summary>
         [DataMember(Name="lockedUser", EmitDefaultValue=false)]
         public User LockedUser { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets System
         /// </summary>
         [DataMember(Name="system", EmitDefaultValue=false)]
         public bool? System { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PublishedVersion
         /// </summary>
         [DataMember(Name="publishedVersion", EmitDefaultValue=false)]
         public FlowVersion PublishedVersion { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SavedVersion
         /// </summary>
         [DataMember(Name="savedVersion", EmitDefaultValue=false)]
         public FlowVersion SavedVersion { get; set; }
+        
+        
+        
         /// <summary>
         /// json schema describing the inputs for the flow
         /// </summary>
         /// <value>json schema describing the inputs for the flow</value>
         [DataMember(Name="inputSchema", EmitDefaultValue=false)]
         public Object InputSchema { get; set; }
+        
+        
+        
         /// <summary>
         /// json schema describing the outputs for the flow
         /// </summary>
         /// <value>json schema describing the outputs for the flow</value>
         [DataMember(Name="outputSchema", EmitDefaultValue=false)]
         public Object OutputSchema { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CheckedInVersion
         /// </summary>
         [DataMember(Name="checkedInVersion", EmitDefaultValue=false)]
         public FlowVersion CheckedInVersion { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PublishedBy
         /// </summary>
         [DataMember(Name="publishedBy", EmitDefaultValue=false)]
         public User PublishedBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets CurrentOperation
         /// </summary>
         [DataMember(Name="currentOperation", EmitDefaultValue=false)]
         public Operation CurrentOperation { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -215,22 +571,39 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Flow {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  LockedUser: ").Append(LockedUser).Append("\n");
+            
             sb.Append("  Active: ").Append(Active).Append("\n");
+            
             sb.Append("  System: ").Append(System).Append("\n");
+            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
+            
             sb.Append("  PublishedVersion: ").Append(PublishedVersion).Append("\n");
+            
             sb.Append("  SavedVersion: ").Append(SavedVersion).Append("\n");
+            
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
+            
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
+            
             sb.Append("  CheckedInVersion: ").Append(CheckedInVersion).Append("\n");
+            
             sb.Append("  PublishedBy: ").Append(PublishedBy).Append("\n");
+            
             sb.Append("  CurrentOperation: ").Append(CurrentOperation).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -360,38 +733,55 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.LockedUser != null)
                     hash = hash * 59 + this.LockedUser.GetHashCode();
+                
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+                
                 if (this.System != null)
                     hash = hash * 59 + this.System.GetHashCode();
+                
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
+                
                 if (this.PublishedVersion != null)
                     hash = hash * 59 + this.PublishedVersion.GetHashCode();
+                
                 if (this.SavedVersion != null)
                     hash = hash * 59 + this.SavedVersion.GetHashCode();
+                
                 if (this.InputSchema != null)
                     hash = hash * 59 + this.InputSchema.GetHashCode();
+                
                 if (this.OutputSchema != null)
                     hash = hash * 59 + this.OutputSchema.GetHashCode();
+                
                 if (this.CheckedInVersion != null)
                     hash = hash * 59 + this.CheckedInVersion.GetHashCode();
+                
                 if (this.PublishedBy != null)
                     hash = hash * 59 + this.PublishedBy.GetHashCode();
+                
                 if (this.CurrentOperation != null)
                     hash = hash * 59 + this.CurrentOperation.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

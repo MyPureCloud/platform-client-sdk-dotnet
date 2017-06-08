@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActivityCodeContainer :  IEquatable<ActivityCodeContainer>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCodeContainer" /> class.
         /// </summary>
+        
+        
         /// <param name="ActivityCodes">Map of activity code id to activity code.</param>
+        
+        
         public ActivityCodeContainer(Dictionary<string, ActivityCode> ActivityCodes = null)
         {
-            this.ActivityCodes = ActivityCodes;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ActivityCodes = ActivityCodes;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Map of activity code id to activity code
@@ -33,6 +61,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Map of activity code id to activity code</value>
         [DataMember(Name="activityCodes", EmitDefaultValue=false)]
         public Dictionary<string, ActivityCode> ActivityCodes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -41,7 +71,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ActivityCodeContainer {\n");
+            
             sb.Append("  ActivityCodes: ").Append(ActivityCodes).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -96,8 +128,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ActivityCodes != null)
                     hash = hash * 59 + this.ActivityCodes.GetHashCode();
+                
                 return hash;
             }
         }

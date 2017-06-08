@@ -43,13 +43,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
 
             try
             {
+                
                 // Get a script
+                
                 Script result = apiInstance.GetScript(scriptId);
                 Debug.WriteLine(result);
             }
@@ -99,14 +107,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
+            
             var pageId = pageId_example;  // string | Page ID
+            
+            
+            
 
             try
             {
+                
                 // Get a page
+                
                 Page result = apiInstance.GetScriptPage(scriptId, pageId);
                 Debug.WriteLine(result);
             }
@@ -157,13 +177,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
 
             try
             {
+                
                 // Get the list of pages
+                
                 List&lt;Page&gt; result = apiInstance.GetScriptPages(scriptId);
                 Debug.WriteLine(result);
             }
@@ -213,20 +241,56 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var expand = expand_example;  // string | Expand (optional) 
+            
+            
+            
+            
             var name = name_example;  // string | Name filter (optional) 
+            
+            
+            
+            
             var feature = feature_example;  // string | Feature filter (optional) 
+            
+            
+            
+            
             var flowId = flowId_example;  // string | Secure flow id filter (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | SortBy (optional) 
+            
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | SortOrder (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the list of scripts
+                
                 ScriptEntityListing result = apiInstance.GetScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
@@ -250,8 +314,8 @@ namespace Example
 | **name** | **string**| Name filter | [optional]  |
 | **feature** | **string**| Feature filter | [optional]  |
 | **flowId** | **string**| Secure flow id filter | [optional]  |
-| **sortBy** | **string**| SortBy | [optional]  |
-| **sortOrder** | **string**| SortOrder | [optional]  |
+| **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
+| **sortOrder** | **string**| SortOrder | [optional] <br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 ### Return type
@@ -283,18 +347,46 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var expand = expand_example;  // string | Expand (optional) 
+            
+            
+            
+            
             var name = name_example;  // string | Name filter (optional) 
+            
+            
+            
+            
             var feature = feature_example;  // string | Feature filter (optional) 
+            
+            
+            
+            
             var flowId = flowId_example;  // string | Secure flow id filter (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the published scripts.
+                
                 ScriptEntityListing result = apiInstance.GetScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId);
                 Debug.WriteLine(result);
             }
@@ -349,13 +441,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
 
             try
             {
+                
                 // Get the published script.
+                
                 Script result = apiInstance.GetScriptsPublishedScriptId(scriptId);
                 Debug.WriteLine(result);
             }
@@ -405,14 +505,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
+            
             var pageId = pageId_example;  // string | Page ID
+            
+            
+            
 
             try
             {
+                
                 // Get the published page.
+                
                 Page result = apiInstance.GetScriptsPublishedScriptIdPage(scriptId, pageId);
                 Debug.WriteLine(result);
             }
@@ -463,13 +575,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
 
             try
             {
+                
                 // Get the list of published pages
+                
                 List&lt;Page&gt; result = apiInstance.GetScriptsPublishedScriptIdPages(scriptId);
                 Debug.WriteLine(result);
             }
@@ -519,16 +639,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ScriptsApi();
+            
+            
             var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
+            
             var input = input_example;  // string | input (optional) 
+            
+            
+            
+            
             var output = output_example;  // string | output (optional) 
+            
+            
+            
+            
             var type = type_example;  // string | type (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get the published variables
+                
                 Object result = apiInstance.GetScriptsPublishedScriptIdVariables(scriptId, input, output, type);
                 Debug.WriteLine(result);
             }

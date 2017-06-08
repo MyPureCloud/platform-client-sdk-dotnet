@@ -18,20 +18,108 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallableContactsDiagnostic :  IEquatable<CallableContactsDiagnostic>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallableContactsDiagnostic" /> class.
         /// </summary>
+        
+        
         /// <param name="AttemptLimits">Attempt limits for the campaign&#39;s contact list.</param>
+        
+        
+        
         /// <param name="DncLists">Do not call lists for the campaign.</param>
+        
+        
+        
         /// <param name="CallableTimeSet">Callable time sets for the campaign.</param>
+        
+        
+        
         /// <param name="RuleSets">Rule sets for the campaign.</param>
+        
+        
         public CallableContactsDiagnostic(UriReference AttemptLimits = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, List<UriReference> RuleSets = null)
         {
-            this.AttemptLimits = AttemptLimits;
-            this.DncLists = DncLists;
-            this.CallableTimeSet = CallableTimeSet;
-            this.RuleSets = RuleSets;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.AttemptLimits = AttemptLimits;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DncLists = DncLists;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallableTimeSet = CallableTimeSet;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RuleSets = RuleSets;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Attempt limits for the campaign&#39;s contact list
@@ -39,24 +127,35 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Attempt limits for the campaign&#39;s contact list</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
         public UriReference AttemptLimits { get; set; }
+        
+        
+        
         /// <summary>
         /// Do not call lists for the campaign
         /// </summary>
         /// <value>Do not call lists for the campaign</value>
         [DataMember(Name="dncLists", EmitDefaultValue=false)]
         public List<UriReference> DncLists { get; set; }
+        
+        
+        
         /// <summary>
         /// Callable time sets for the campaign
         /// </summary>
         /// <value>Callable time sets for the campaign</value>
         [DataMember(Name="callableTimeSet", EmitDefaultValue=false)]
         public UriReference CallableTimeSet { get; set; }
+        
+        
+        
         /// <summary>
         /// Rule sets for the campaign
         /// </summary>
         /// <value>Rule sets for the campaign</value>
         [DataMember(Name="ruleSets", EmitDefaultValue=false)]
         public List<UriReference> RuleSets { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -65,10 +164,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallableContactsDiagnostic {\n");
+            
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
+            
             sb.Append("  DncLists: ").Append(DncLists).Append("\n");
+            
             sb.Append("  CallableTimeSet: ").Append(CallableTimeSet).Append("\n");
+            
             sb.Append("  RuleSets: ").Append(RuleSets).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,14 +242,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.AttemptLimits != null)
                     hash = hash * 59 + this.AttemptLimits.GetHashCode();
+                
                 if (this.DncLists != null)
                     hash = hash * 59 + this.DncLists.GetHashCode();
+                
                 if (this.CallableTimeSet != null)
                     hash = hash * 59 + this.CallableTimeSet.GetHashCode();
+                
                 if (this.RuleSets != null)
                     hash = hash * 59 + this.RuleSets.GetHashCode();
+                
                 return hash;
             }
         }

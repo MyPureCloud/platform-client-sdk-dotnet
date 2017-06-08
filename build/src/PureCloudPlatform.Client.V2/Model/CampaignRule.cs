@@ -18,23 +18,129 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRule :  IEquatable<CampaignRule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRule" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected CampaignRule() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRule" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
+        
+        
+        
+        
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
+        
+        
+        
         /// <param name="CampaignRuleEntities">the list of entities the rule monitors (required).</param>
+        
+        
+        
         /// <param name="CampaignRuleConditions">the list of conditions the are evaluated (required).</param>
+        
+        
+        
         /// <param name="CampaignRuleActions">the list of actions that are executed if the conditions are satisfied (required).</param>
+        
+        
+        
         /// <param name="MatchAnyConditions">MatchAnyConditions.</param>
+        
+        
+        
         /// <param name="Enabled">Enabled.</param>
+        
+        
+        
+        
         public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "CampaignRuleEntities" is required (not null)
             if (CampaignRuleEntities == null)
             {
@@ -44,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.CampaignRuleEntities = CampaignRuleEntities;
             }
+            
+            
+            
+            
+            
             // to ensure "CampaignRuleConditions" is required (not null)
             if (CampaignRuleConditions == null)
             {
@@ -53,6 +164,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.CampaignRuleConditions = CampaignRuleConditions;
             }
+            
+            
+            
+            
+            
             // to ensure "CampaignRuleActions" is required (not null)
             if (CampaignRuleActions == null)
             {
@@ -62,11 +178,79 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.CampaignRuleActions = CampaignRuleActions;
             }
-            this.Name = Name;
-            this.Version = Version;
-            this.MatchAnyConditions = MatchAnyConditions;
-            this.Enabled = Enabled;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.MatchAnyConditions = MatchAnyConditions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Enabled = Enabled;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -74,63 +258,95 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; private set; }
+        
+        
+        
         /// <summary>
         /// Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; private set; }
+        
+        
+        
         /// <summary>
         /// Required for updates, must match the version number of the most recent update
         /// </summary>
         /// <value>Required for updates, must match the version number of the most recent update</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
+        
+        
+        
         /// <summary>
         /// the list of entities the rule monitors
         /// </summary>
         /// <value>the list of entities the rule monitors</value>
         [DataMember(Name="campaignRuleEntities", EmitDefaultValue=false)]
         public CampaignRuleEntities CampaignRuleEntities { get; set; }
+        
+        
+        
         /// <summary>
         /// the list of conditions the are evaluated
         /// </summary>
         /// <value>the list of conditions the are evaluated</value>
         [DataMember(Name="campaignRuleConditions", EmitDefaultValue=false)]
         public List<CampaignRuleCondition> CampaignRuleConditions { get; set; }
+        
+        
+        
         /// <summary>
         /// the list of actions that are executed if the conditions are satisfied
         /// </summary>
         /// <value>the list of actions that are executed if the conditions are satisfied</value>
         [DataMember(Name="campaignRuleActions", EmitDefaultValue=false)]
         public List<CampaignRuleAction> CampaignRuleActions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MatchAnyConditions
         /// </summary>
         [DataMember(Name="matchAnyConditions", EmitDefaultValue=false)]
         public bool? MatchAnyConditions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Enabled
         /// </summary>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -139,17 +355,29 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CampaignRule {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  CampaignRuleEntities: ").Append(CampaignRuleEntities).Append("\n");
+            
             sb.Append("  CampaignRuleConditions: ").Append(CampaignRuleConditions).Append("\n");
+            
             sb.Append("  CampaignRuleActions: ").Append(CampaignRuleActions).Append("\n");
+            
             sb.Append("  MatchAnyConditions: ").Append(MatchAnyConditions).Append("\n");
+            
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -254,28 +482,40 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
+                
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.CampaignRuleEntities != null)
                     hash = hash * 59 + this.CampaignRuleEntities.GetHashCode();
+                
                 if (this.CampaignRuleConditions != null)
                     hash = hash * 59 + this.CampaignRuleConditions.GetHashCode();
+                
                 if (this.CampaignRuleActions != null)
                     hash = hash * 59 + this.CampaignRuleActions.GetHashCode();
+                
                 if (this.MatchAnyConditions != null)
                     hash = hash * 59 + this.MatchAnyConditions.GetHashCode();
+                
                 if (this.Enabled != null)
                     hash = hash * 59 + this.Enabled.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

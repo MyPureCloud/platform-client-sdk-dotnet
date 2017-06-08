@@ -18,21 +18,69 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class IntradayQueryDataCommand :  IEquatable<IntradayQueryDataCommand>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayQueryDataCommand" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected IntradayQueryDataCommand() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="IntradayQueryDataCommand" /> class.
         /// </summary>
+        
+        
         /// <param name="StartDate">Start date of the requested date range in ISO-8601 format (required).</param>
+        
+        
+        
         /// <param name="EndDate">End date of the requested date range in ISO-8601 format.  Must be within the same 7 day schedule week as defined by the management unit&#39;s start day of week (required).</param>
+        
+        
+        
         /// <param name="Metrics">The metrics to validate (required).</param>
+        
+        
+        
         /// <param name="QueueIds">The queue IDs for which to fetch data.  Omitting or passing an empty list will return all available queues.</param>
+        
+        
+        
         /// <param name="IntervalLengthMinutes">The period/interval for which to aggregate the data.  Optional, defaults to 15.</param>
+        
+        
         public IntradayQueryDataCommand(DateTime? StartDate = null, DateTime? EndDate = null, List<IntradayMetric> Metrics = null, List<string> QueueIds = null, int? IntervalLengthMinutes = null)
         {
+            
+            
+            
             // to ensure "StartDate" is required (not null)
             if (StartDate == null)
             {
@@ -42,6 +90,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.StartDate = StartDate;
             }
+            
+            
+            
+            
+            
             // to ensure "EndDate" is required (not null)
             if (EndDate == null)
             {
@@ -51,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.EndDate = EndDate;
             }
+            
+            
+            
+            
+            
             // to ensure "Metrics" is required (not null)
             if (Metrics == null)
             {
@@ -60,9 +118,51 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Metrics = Metrics;
             }
-            this.QueueIds = QueueIds;
-            this.IntervalLengthMinutes = IntervalLengthMinutes;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.QueueIds = QueueIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IntervalLengthMinutes = IntervalLengthMinutes;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Start date of the requested date range in ISO-8601 format
@@ -70,30 +170,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Start date of the requested date range in ISO-8601 format</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
+        
+        
+        
         /// <summary>
         /// End date of the requested date range in ISO-8601 format.  Must be within the same 7 day schedule week as defined by the management unit&#39;s start day of week
         /// </summary>
         /// <value>End date of the requested date range in ISO-8601 format.  Must be within the same 7 day schedule week as defined by the management unit&#39;s start day of week</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
+        
+        
+        
         /// <summary>
         /// The metrics to validate
         /// </summary>
         /// <value>The metrics to validate</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<IntradayMetric> Metrics { get; set; }
+        
+        
+        
         /// <summary>
         /// The queue IDs for which to fetch data.  Omitting or passing an empty list will return all available queues
         /// </summary>
         /// <value>The queue IDs for which to fetch data.  Omitting or passing an empty list will return all available queues</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
         public List<string> QueueIds { get; set; }
+        
+        
+        
         /// <summary>
         /// The period/interval for which to aggregate the data.  Optional, defaults to 15
         /// </summary>
         /// <value>The period/interval for which to aggregate the data.  Optional, defaults to 15</value>
         [DataMember(Name="intervalLengthMinutes", EmitDefaultValue=false)]
         public int? IntervalLengthMinutes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,11 +216,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class IntradayQueryDataCommand {\n");
+            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
+            
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
+            
             sb.Append("  IntervalLengthMinutes: ").Append(IntervalLengthMinutes).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -181,16 +301,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
+                
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
+                
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
+                
                 if (this.QueueIds != null)
                     hash = hash * 59 + this.QueueIds.GetHashCode();
+                
                 if (this.IntervalLengthMinutes != null)
                     hash = hash * 59 + this.IntervalLengthMinutes.GetHashCode();
+                
                 return hash;
             }
         }

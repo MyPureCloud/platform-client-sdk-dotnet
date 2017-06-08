@@ -18,6 +18,14 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OrgOAuthClient :  IEquatable<OrgOAuthClient>
     {
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
@@ -63,25 +71,60 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CLIENT_CREDENTIALS")]
             ClientCredentials
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
         /// <value>The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. </value>
         [DataMember(Name="authorizedGrantType", EmitDefaultValue=false)]
         public AuthorizedGrantTypeEnum? AuthorizedGrantType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgOAuthClient" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OrgOAuthClient() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OrgOAuthClient" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The name of the OAuth client. (required).</param>
+        
+        
+        
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
+        
+        
+        
         /// <param name="Organization">The  oauth client&#39;s organization..</param>
+        
+        
         public OrgOAuthClient(string Name = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, Entity Organization = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -91,6 +134,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
             // to ensure "AuthorizedGrantType" is required (not null)
             if (AuthorizedGrantType == null)
             {
@@ -100,8 +148,36 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.AuthorizedGrantType = AuthorizedGrantType;
             }
-            this.Organization = Organization;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Organization = Organization;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -109,18 +185,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The name of the OAuth client.
         /// </summary>
         /// <value>The name of the OAuth client.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The  oauth client&#39;s organization.
         /// </summary>
         /// <value>The  oauth client&#39;s organization.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
         public Entity Organization { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -129,10 +215,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OrgOAuthClient {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
+            
             sb.Append("  Organization: ").Append(Organization).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -202,14 +293,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.AuthorizedGrantType != null)
                     hash = hash * 59 + this.AuthorizedGrantType.GetHashCode();
+                
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
+                
                 return hash;
             }
         }

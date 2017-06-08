@@ -111,15 +111,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
             var addCommunicationCode = addCommunicationCode_example;  // string | addCommunicationCode
+            
+            
+            
 
             try
             {
+                
                 // Delete a code used to add a communication to this participant
+                
                 apiInstance.DeleteConversationParticipantCode(conversationId, participantId, addCommunicationCode);
             }
             catch (Exception e)
@@ -170,14 +186,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
 
             try
             {
+                
                 // Cancel the transfer
+                
                 apiInstance.DeleteConversationsCallParticipantConsult(conversationId, participantId);
             }
             catch (Exception e)
@@ -227,14 +255,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var attachmentId = attachmentId_example;  // string | attachmentId
+            
+            
+            
 
             try
             {
+                
                 // Delete attachment from draft
+                
                 apiInstance.DeleteConversationsEmailMessagesDraftAttachment(conversationId, attachmentId);
             }
             catch (Exception e)
@@ -284,13 +324,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get a conversation by id
+                
                 AnalyticsConversation result = apiInstance.GetAnalyticsConversationDetails(conversationId);
                 Debug.WriteLine(result);
             }
@@ -340,13 +388,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
 
             try
             {
+                
                 // Get conversation
+                
                 Conversation result = apiInstance.GetConversation(conversationId);
                 Debug.WriteLine(result);
             }
@@ -396,15 +452,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get the wrap-up for this conversation participant. 
+                
                 WrapupCode result = apiInstance.GetConversationParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
@@ -456,14 +528,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participant ID
+            
+            
+            
 
             try
             {
+                
                 // Get list of wrapup codes for this conversation participant
+                
                 List&lt;WrapupCode&gt; result = apiInstance.GetConversationParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
@@ -514,13 +598,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var communicationType = communicationType_example;  // string | Call or Chat communication filtering (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get conversations
+                
                 ConversationEntityListing result = apiInstance.GetConversations(communicationType);
                 Debug.WriteLine(result);
             }
@@ -570,13 +662,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get call conversation
+                
                 CallConversation result = apiInstance.GetConversationsCall(conversationId);
                 Debug.WriteLine(result);
             }
@@ -626,15 +726,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get the wrap-up for this conversation participant. 
+                
                 Wrapup result = apiInstance.GetConversationsCallParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
@@ -686,14 +802,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
 
             try
             {
+                
                 // Get list of wrapup codes for this conversation participant
+                
                 List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
@@ -744,13 +872,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get callback conversation
+                
                 CallbackConversation result = apiInstance.GetConversationsCallback(conversationId);
                 Debug.WriteLine(result);
             }
@@ -800,15 +936,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get the wrap-up for this conversation participant. 
+                
                 Wrapup result = apiInstance.GetConversationsCallbackParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
@@ -860,14 +1012,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
 
             try
             {
+                
                 // Get list of wrapup codes for this conversation participant
+                
                 List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCallbackParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
@@ -918,12 +1082,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
 
             try
             {
+                
                 // Get callback conversations
+                
                 CallbackConversationEntityListing result = apiInstance.GetConversationsCallbacks();
                 Debug.WriteLine(result);
             }
@@ -969,12 +1137,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
 
             try
             {
+                
                 // Get recent conversations
+                
                 CallConversationEntityListing result = apiInstance.GetConversationsCalls();
                 Debug.WriteLine(result);
             }
@@ -1020,15 +1192,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var interval = interval_example;  // string | Interval string; format is ISO-8601. Separate start and end times with forward slash '/' (optional) 
+            
+            
+            
 
             try
             {
+                
                 // Get call history
+                
                 CallConversationEntityListing result = apiInstance.GetConversationsCallsHistory(pageSize, pageNumber, interval);
                 Debug.WriteLine(result);
             }
@@ -1080,12 +1268,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
 
             try
             {
+                
                 // Get the maximum number of participants that this user can have on a conference
+                
                 MaxParticipants result = apiInstance.GetConversationsCallsMaximumconferenceparties();
                 Debug.WriteLine(result);
             }
@@ -1131,13 +1323,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get chat conversation
+                
                 ChatConversation result = apiInstance.GetConversationsChat(conversationId);
                 Debug.WriteLine(result);
             }
@@ -1187,15 +1387,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get the wrap-up for this conversation participant. 
+                
                 Wrapup result = apiInstance.GetConversationsChatParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
@@ -1247,14 +1463,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
 
             try
             {
+                
                 // Get list of wrapup codes for this conversation participant
+                
                 List&lt;WrapupCode&gt; result = apiInstance.GetConversationsChatParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
@@ -1305,12 +1533,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
 
             try
             {
+                
                 // Get recent chat conversations
+                
                 ChatConversationEntityListing result = apiInstance.GetConversationsChats();
                 Debug.WriteLine(result);
             }
@@ -1356,13 +1588,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get cobrowse conversation
+                
                 CobrowseConversation result = apiInstance.GetConversationsCobrowsesession(conversationId);
                 Debug.WriteLine(result);
             }
@@ -1412,15 +1652,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get the wrap-up for this conversation participant. 
+                
                 Wrapup result = apiInstance.GetConversationsCobrowsesessionParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
@@ -1472,14 +1728,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
 
             try
             {
+                
                 // Get list of wrapup codes for this conversation participant
+                
                 List&lt;WrapupCode&gt; result = apiInstance.GetConversationsCobrowsesessionParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
@@ -1530,12 +1798,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
 
             try
             {
+                
                 // Get recent cobrowse conversations
+                
                 CobrowseConversationEntityListing result = apiInstance.GetConversationsCobrowsesessions();
                 Debug.WriteLine(result);
             }
@@ -1581,13 +1853,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get email conversation
+                
                 EmailConversation result = apiInstance.GetConversationsEmail(conversationId);
                 Debug.WriteLine(result);
             }
@@ -1637,14 +1917,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var messageId = messageId_example;  // string | messageId
+            
+            
+            
 
             try
             {
+                
                 // Get conversation message
+                
                 EmailMessage result = apiInstance.GetConversationsEmailMessage(conversationId, messageId);
                 Debug.WriteLine(result);
             }
@@ -1695,13 +1987,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get conversation messages
+                
                 EmailMessageListing result = apiInstance.GetConversationsEmailMessages(conversationId);
                 Debug.WriteLine(result);
             }
@@ -1751,13 +2051,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
 
             try
             {
+                
                 // Get conversation draft reply
+                
                 EmailMessage result = apiInstance.GetConversationsEmailMessagesDraft(conversationId);
                 Debug.WriteLine(result);
             }
@@ -1807,15 +2115,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+            
+            
+            
 
             try
             {
+                
                 // Get the wrap-up for this conversation participant. 
+                
                 Wrapup result = apiInstance.GetConversationsEmailParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
@@ -1867,14 +2191,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
 
             try
             {
+                
                 // Get list of wrapup codes for this conversation participant
+                
                 List&lt;WrapupCode&gt; result = apiInstance.GetConversationsEmailParticipantWrapupcodes(conversationId, participantId);
                 Debug.WriteLine(result);
             }
@@ -1925,12 +2261,16 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
 
             try
             {
+                
                 // Get recent email conversations
+                
                 EmailConversationEntityListing result = apiInstance.GetConversationsEmails();
                 Debug.WriteLine(result);
             }
@@ -1976,15 +2316,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
+            
+            
 
             try
             {
+                
                 // Update a participant.
+                
                 apiInstance.PatchConversationParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2035,15 +2391,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
+            
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
+            
+            
 
             try
             {
+                
                 // Update the attributes on a conversation participant.
+                
                 apiInstance.PatchConversationParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2094,14 +2466,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new Conversation(); // Conversation | Conversation
+            
+            
 
             try
             {
+                
                 // Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
+                
                 Conversation result = apiInstance.PatchConversationsCall(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -2152,15 +2536,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant request
+            
+            
 
             try
             {
+                
                 // Update conversation participant
+                
                 apiInstance.PatchConversationsCallParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2211,15 +2611,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
+            
+            
 
             try
             {
+                
                 // Update the attributes on a conversation participant.
+                
                 apiInstance.PatchConversationsCallParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2270,16 +2686,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+            
+            
 
             try
             {
+                
                 // Update conversation participant's communication by disconnecting it.
+                
                 Empty result = apiInstance.PatchConversationsCallParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
@@ -2332,15 +2768,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new ConsultTransferUpdate(); // ConsultTransferUpdate | new speak to
+            
+            
 
             try
             {
+                
                 // Change who can speak
+                
                 ConsultTransferResponse result = apiInstance.PatchConversationsCallParticipantConsult(conversationId, participantId, body);
                 Debug.WriteLine(result);
             }
@@ -2392,14 +2844,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new Conversation(); // Conversation | Conversation
+            
+            
 
             try
             {
+                
                 // Update a conversation by disconnecting all of the participants
+                
                 Conversation result = apiInstance.PatchConversationsCallback(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -2450,15 +2914,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+            
+            
 
             try
             {
+                
                 // Update conversation participant
+                
                 apiInstance.PatchConversationsCallbackParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2509,15 +2989,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new ParticipantAttributes(); // ParticipantAttributes | Attributes
+            
+            
 
             try
             {
+                
                 // Update the attributes on a conversation participant.
+                
                 apiInstance.PatchConversationsCallbackParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2568,16 +3064,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+            
+            
 
             try
             {
+                
                 // Update conversation participant's communication by disconnecting it.
+                
                 Empty result = apiInstance.PatchConversationsCallbackParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
@@ -2630,14 +3146,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new Conversation(); // Conversation | Conversation
+            
+            
 
             try
             {
+                
                 // Update a conversation by disconnecting all of the participants
+                
                 Conversation result = apiInstance.PatchConversationsChat(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -2688,15 +3216,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
+            
+            
 
             try
             {
+                
                 // Update conversation participant
+                
                 apiInstance.PatchConversationsChatParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2747,15 +3291,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
+            
+            
 
             try
             {
+                
                 // Update the attributes on a conversation participant.
+                
                 apiInstance.PatchConversationsChatParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2806,16 +3366,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+            
+            
 
             try
             {
+                
                 // Update conversation participant's communication by disconnecting it.
+                
                 Empty result = apiInstance.PatchConversationsChatParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
@@ -2868,14 +3448,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new Conversation(); // Conversation | Conversation
+            
+            
 
             try
             {
+                
                 // Update a conversation by disconnecting all of the participants
+                
                 Conversation result = apiInstance.PatchConversationsCobrowsesession(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -2926,15 +3518,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+            
+            
 
             try
             {
+                
                 // Update conversation participant
+                
                 apiInstance.PatchConversationsCobrowsesessionParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -2985,15 +3593,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+            
+            
 
             try
             {
+                
                 // Update the attributes on a conversation participant.
+                
                 apiInstance.PatchConversationsCobrowsesessionParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -3044,16 +3668,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+            
+            
 
             try
             {
+                
                 // Update conversation participant's communication by disconnecting it.
+                
                 Empty result = apiInstance.PatchConversationsCobrowsesessionParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
@@ -3106,14 +3750,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new Conversation(); // Conversation | Conversation
+            
+            
 
             try
             {
+                
                 // Update a conversation by disconnecting all of the participants
+                
                 Conversation result = apiInstance.PatchConversationsEmail(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -3164,15 +3820,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Update request
+            
+            
 
             try
             {
+                
                 // Update conversation participant
+                
                 apiInstance.PatchConversationsEmailParticipant(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -3223,15 +3895,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new ParticipantAttributes(); // ParticipantAttributes | Participant attributes
+            
+            
 
             try
             {
+                
                 // Update the attributes on a conversation participant.
+                
                 apiInstance.PatchConversationsEmailParticipantAttributes(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -3282,16 +3970,36 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
             var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
             var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+            
+            
 
             try
             {
+                
                 // Update conversation participant's communication by disconnecting it.
+                
                 Empty result = apiInstance.PatchConversationsEmailParticipantCommunication(conversationId, participantId, communicationId, body);
                 Debug.WriteLine(result);
             }
@@ -3344,14 +4052,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new PropertyIndexRequest(); // PropertyIndexRequest | request
+            
+            
 
             try
             {
+                
                 // Index conversation properties
+                
                 PropertyIndexRequest result = apiInstance.PostAnalyticsConversationDetailsProperties(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -3402,13 +4122,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
+            
             var body = new AggregationQuery(); // AggregationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for conversation aggregates
+                
                 AggregateQueryResponse result = apiInstance.PostAnalyticsConversationsAggregatesQuery(body);
                 Debug.WriteLine(result);
             }
@@ -3458,13 +4186,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
+            
             var body = new ConversationQuery(); // ConversationQuery | query
+            
+            
 
             try
             {
+                
                 // Query for conversation details
+                
                 AnalyticsConversationQueryResponse result = apiInstance.PostAnalyticsConversationsDetailsQuery(body);
                 Debug.WriteLine(result);
             }
@@ -3514,15 +4250,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
+            
             var body = new CreateCallbackCommand(); // CreateCallbackCommand |  (optional) 
+            
+            
 
             try
             {
+                
                 // Create a new callback for the specified participant on the conversation.
+                
                 apiInstance.PostConversationParticipantCallbacks(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -3573,15 +4325,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
+            
             var body = new TransferRequest(); // TransferRequest | Transfer request
+            
+            
 
             try
             {
+                
                 // Replace this participant with the specified user and/or address
+                
                 apiInstance.PostConversationParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -3632,14 +4400,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new CallCommand(); // CallCommand | Conversation
+            
+            
 
             try
             {
+                
                 // Add a new call to a conversation
+                
                 Conversation result = apiInstance.PostConversationsCall(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -3690,15 +4470,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new ConsultTransfer(); // ConsultTransfer | Destination address & initial speak to
+            
+            
 
             try
             {
+                
                 // Initiate and update consult transfer
+                
                 ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsult(conversationId, participantId, body);
                 Debug.WriteLine(result);
             }
@@ -3750,14 +4546,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
 
             try
             {
+                
                 // Listen in on the conversation from the point of view of a given participant.
+                
                 apiInstance.PostConversationsCallParticipantMonitor(conversationId, participantId);
             }
             catch (Exception e)
@@ -3807,15 +4615,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new TransferRequest(); // TransferRequest | Transfer request
+            
+            
 
             try
             {
+                
                 // Replace this participant with the specified user and/or address
+                
                 apiInstance.PostConversationsCallParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -3866,14 +4690,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new Conversation(); // Conversation | Conversation
+            
+            
 
             try
             {
+                
                 // Add participants to a conversation
+                
                 Conversation result = apiInstance.PostConversationsCallParticipants(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -3924,15 +4760,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new TransferRequest(); // TransferRequest | Transfer request
+            
+            
 
             try
             {
+                
                 // Replace this participant with the specified user and/or address
+                
                 apiInstance.PostConversationsCallbackParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -3983,13 +4835,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
+            
             var body = new CreateCallbackCommand(); // CreateCallbackCommand | Callback
+            
+            
 
             try
             {
+                
                 // Create a Callback
+                
                 CreateCallbackResponse result = apiInstance.PostConversationsCallbacks(body);
                 Debug.WriteLine(result);
             }
@@ -4039,13 +4899,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
+            
             var body = new CreateCallRequest(); // CreateCallRequest | Call request
+            
+            
 
             try
             {
+                
                 // Create a call conversation
+                
                 CreateCallResponse result = apiInstance.PostConversationsCalls(body);
                 Debug.WriteLine(result);
             }
@@ -4095,15 +4963,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new TransferRequest(); // TransferRequest | Transfer request
+            
+            
 
             try
             {
+                
                 // Replace this participant with the specified user and/or address
+                
                 apiInstance.PostConversationsChatParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -4154,13 +5038,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
+            
             var body = new CreateWebChatRequest(); // CreateWebChatRequest | Create web chat request
+            
+            
 
             try
             {
+                
                 // Create a web chat conversation
+                
                 ChatConversation result = apiInstance.PostConversationsChats(body);
                 Debug.WriteLine(result);
             }
@@ -4210,15 +5102,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new TransferRequest(); // TransferRequest |  (optional) 
+            
+            
 
             try
             {
+                
                 // Replace this participant with the specified user and/or address
+                
                 apiInstance.PostConversationsCobrowsesessionParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -4269,14 +5177,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new EmailMessage(); // EmailMessage | Reply
+            
+            
 
             try
             {
+                
                 // Send an email reply
+                
                 EmailMessage result = apiInstance.PostConversationsEmailMessages(conversationId, body);
                 Debug.WriteLine(result);
             }
@@ -4327,15 +5247,31 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
             var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
             var body = new TransferRequest(); // TransferRequest | Transfer request
+            
+            
 
             try
             {
+                
                 // Replace this participant with the specified user and/or address
+                
                 apiInstance.PostConversationsEmailParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -4386,13 +5322,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
+            
             var body = new CreateEmailRequest(); // CreateEmailRequest | Create email request
+            
+            
 
             try
             {
+                
                 // Create an email conversation
+                
                 EmailConversation result = apiInstance.PostConversationsEmails(body);
                 Debug.WriteLine(result);
             }
@@ -4442,13 +5386,21 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
+            
             var body = new FaxSendRequest(); // FaxSendRequest | Fax
+            
+            
 
             try
             {
+                
                 // Create Fax Conversation
+                
                 FaxSendResponse result = apiInstance.PostConversationsFaxes(body);
                 Debug.WriteLine(result);
             }
@@ -4498,14 +5450,26 @@ namespace Example
             
             // Configure OAuth2 access token for authorization: PureCloud Auth
             Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
 
             var apiInstance = new ConversationsApi();
+            
+            
             var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
             var body = new EmailMessage(); // EmailMessage | Draft
+            
+            
 
             try
             {
+                
                 // Update conversation draft reply
+                
                 EmailMessage result = apiInstance.PutConversationsEmailMessagesDraft(conversationId, body);
                 Debug.WriteLine(result);
             }

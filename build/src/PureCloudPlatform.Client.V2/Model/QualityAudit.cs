@@ -18,30 +18,240 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class QualityAudit :  IEquatable<QualityAudit>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="QualityAudit" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="Timestamp">Timestamp.</param>
+        
+        
+        
         /// <param name="Level">Level.</param>
+        
+        
+        
         /// <param name="Entity">Entity.</param>
+        
+        
+        
         /// <param name="Action">Action.</param>
+        
+        
+        
         /// <param name="Status">Status.</param>
+        
+        
+        
         /// <param name="Changes">Changes.</param>
+        
+        
+        
         /// <param name="EntityType">EntityType.</param>
+        
+        
+        
+        
         public QualityAudit(string Name = null, User User = null, string Timestamp = null, string Level = null, AuditEntity Entity = null, string Action = null, string Status = null, List<Change> Changes = null, string EntityType = null)
         {
-            this.Name = Name;
-            this.User = User;
-            this.Timestamp = Timestamp;
-            this.Level = Level;
-            this.Entity = Entity;
-            this.Action = Action;
-            this.Status = Status;
-            this.Changes = Changes;
-            this.EntityType = EntityType;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Timestamp = Timestamp;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Level = Level;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Entity = Entity;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Action = Action;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Status = Status;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Changes = Changes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EntityType = EntityType;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -49,57 +259,89 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Timestamp
         /// </summary>
         [DataMember(Name="timestamp", EmitDefaultValue=false)]
         public string Timestamp { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Level
         /// </summary>
         [DataMember(Name="level", EmitDefaultValue=false)]
         public string Level { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Entity
         /// </summary>
         [DataMember(Name="entity", EmitDefaultValue=false)]
         public AuditEntity Entity { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Action
         /// </summary>
         [DataMember(Name="action", EmitDefaultValue=false)]
         public string Action { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Status
         /// </summary>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public string Status { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Changes
         /// </summary>
         [DataMember(Name="changes", EmitDefaultValue=false)]
         public List<Change> Changes { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EntityType
         /// </summary>
         [DataMember(Name="entityType", EmitDefaultValue=false)]
         public string EntityType { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,17 +350,29 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class QualityAudit {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
+            
             sb.Append("  Level: ").Append(Level).Append("\n");
+            
             sb.Append("  Entity: ").Append(Entity).Append("\n");
+            
             sb.Append("  Action: ").Append(Action).Append("\n");
+            
             sb.Append("  Status: ").Append(Status).Append("\n");
+            
             sb.Append("  Changes: ").Append(Changes).Append("\n");
+            
             sb.Append("  EntityType: ").Append(EntityType).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -223,28 +477,40 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
+                
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();
+                
                 if (this.Entity != null)
                     hash = hash * 59 + this.Entity.GetHashCode();
+                
                 if (this.Action != null)
                     hash = hash * 59 + this.Action.GetHashCode();
+                
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+                
                 if (this.Changes != null)
                     hash = hash * 59 + this.Changes.GetHashCode();
+                
                 if (this.EntityType != null)
                     hash = hash * 59 + this.EntityType.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,6 +18,19 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AggregationQuery :  IEquatable<AggregationQuery>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets GroupBy
         /// </summary>
@@ -356,6 +369,15 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "routingStatus")]
             Routingstatus
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Metrics
         /// </summary>
@@ -622,28 +644,180 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "oUserRoutingStatuses")]
             Ouserroutingstatuses
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AggregationQuery" /> class.
         /// </summary>
+        
+        
         /// <param name="Interval">Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
+        
+        
+        
         /// <param name="Granularity">Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
+        
+        
+        
         /// <param name="TimeZone">Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
+        
+        
+        
         /// <param name="GroupBy">Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group..</param>
+        
+        
+        
         /// <param name="Filter">Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters.</param>
+        
+        
+        
         /// <param name="Metrics">Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *)..</param>
+        
+        
+        
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;).</param>
+        
+        
+        
         /// <param name="Views">Custom derived metric views.</param>
+        
+        
         public AggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, AnalyticsQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<AnalyticsView> Views = null)
         {
-            this.Interval = Interval;
-            this.Granularity = Granularity;
-            this.TimeZone = TimeZone;
-            this.GroupBy = GroupBy;
-            this.Filter = Filter;
-            this.Metrics = Metrics;
-            this.FlattenMultivaluedDimensions = FlattenMultivaluedDimensions;
-            this.Views = Views;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Interval = Interval;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Granularity = Granularity;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TimeZone = TimeZone;
+            
+            
+            
+            
+            
+            
+            
+            
+this.GroupBy = GroupBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Filter = Filter;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Metrics = Metrics;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FlattenMultivaluedDimensions = FlattenMultivaluedDimensions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Views = Views;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss
@@ -651,48 +825,71 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss</value>
         [DataMember(Name="interval", EmitDefaultValue=false)]
         public string Interval { get; set; }
+        
+        
+        
         /// <summary>
         /// Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
         /// <value>Granularity aggregates metrics into subpartitions within the time interval specified. The default granularity is the same duration as the interval. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public string Granularity { get; set; }
+        
+        
+        
         /// <summary>
         /// Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London
         /// </summary>
         /// <value>Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
+        
+        
+        
         /// <summary>
         /// Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.
         /// </summary>
         /// <value>Behaves like a SQL GROUPBY. Allows for multiple levels of grouping as a list of dimensions. Partitions resulting aggregate computations into distinct named subgroups rather than across the entire result set as if it were one group.</value>
         [DataMember(Name="groupBy", EmitDefaultValue=false)]
         public List<GroupByEnum> GroupBy { get; set; }
+        
+        
+        
         /// <summary>
         /// Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters
         /// </summary>
         /// <value>Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters</value>
         [DataMember(Name="filter", EmitDefaultValue=false)]
         public AnalyticsQueryFilter Filter { get; set; }
+        
+        
+        
         /// <summary>
         /// Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).
         /// </summary>
         /// <value>Behaves like a SQL SELECT clause. Enables retrieving only named metrics. If omitted, all metrics that are available will be returned (like SELECT *).</value>
         [DataMember(Name="metrics", EmitDefaultValue=false)]
         public List<MetricsEnum> Metrics { get; set; }
+        
+        
+        
         /// <summary>
         /// Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;)
         /// </summary>
         /// <value>Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;)</value>
         [DataMember(Name="flattenMultivaluedDimensions", EmitDefaultValue=false)]
         public bool? FlattenMultivaluedDimensions { get; set; }
+        
+        
+        
         /// <summary>
         /// Custom derived metric views
         /// </summary>
         /// <value>Custom derived metric views</value>
         [DataMember(Name="views", EmitDefaultValue=false)]
         public List<AnalyticsView> Views { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -701,14 +898,23 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AggregationQuery {\n");
+            
             sb.Append("  Interval: ").Append(Interval).Append("\n");
+            
             sb.Append("  Granularity: ").Append(Granularity).Append("\n");
+            
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
+            
             sb.Append("  GroupBy: ").Append(GroupBy).Append("\n");
+            
             sb.Append("  Filter: ").Append(Filter).Append("\n");
+            
             sb.Append("  Metrics: ").Append(Metrics).Append("\n");
+            
             sb.Append("  FlattenMultivaluedDimensions: ").Append(FlattenMultivaluedDimensions).Append("\n");
+            
             sb.Append("  Views: ").Append(Views).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -798,22 +1004,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
+                
                 if (this.Granularity != null)
                     hash = hash * 59 + this.Granularity.GetHashCode();
+                
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
+                
                 if (this.GroupBy != null)
                     hash = hash * 59 + this.GroupBy.GetHashCode();
+                
                 if (this.Filter != null)
                     hash = hash * 59 + this.Filter.GetHashCode();
+                
                 if (this.Metrics != null)
                     hash = hash * 59 + this.Metrics.GetHashCode();
+                
                 if (this.FlattenMultivaluedDimensions != null)
                     hash = hash * 59 + this.FlattenMultivaluedDimensions.GetHashCode();
+                
                 if (this.Views != null)
                     hash = hash * 59 + this.Views.GetHashCode();
+                
                 return hash;
             }
         }

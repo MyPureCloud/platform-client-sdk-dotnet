@@ -18,6 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DependencyObject :  IEquatable<DependencyObject>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -182,33 +193,214 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "WORKFLOW")]
             Workflow
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DependencyObject" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Version">Version.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
+        
+        
+        
         /// <param name="Deleted">Deleted.</param>
+        
+        
+        
         /// <param name="Updated">Updated.</param>
+        
+        
+        
         /// <param name="StateUnknown">StateUnknown.</param>
+        
+        
+        
         /// <param name="ConsumedResources">ConsumedResources.</param>
+        
+        
+        
         /// <param name="ConsumingResources">ConsumingResources.</param>
+        
+        
+        
+        
         public DependencyObject(string Name = null, string Version = null, TypeEnum? Type = null, bool? Deleted = null, bool? Updated = null, bool? StateUnknown = null, List<Dependency> ConsumedResources = null, List<Dependency> ConsumingResources = null)
         {
-            this.Name = Name;
-            this.Version = Version;
-            this.Type = Type;
-            this.Deleted = Deleted;
-            this.Updated = Updated;
-            this.StateUnknown = StateUnknown;
-            this.ConsumedResources = ConsumedResources;
-            this.ConsumingResources = ConsumingResources;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Deleted = Deleted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Updated = Updated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StateUnknown = StateUnknown;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConsumedResources = ConsumedResources;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConsumingResources = ConsumingResources;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -216,47 +408,75 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Version
         /// </summary>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public string Version { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Deleted
         /// </summary>
         [DataMember(Name="deleted", EmitDefaultValue=false)]
         public bool? Deleted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Updated
         /// </summary>
         [DataMember(Name="updated", EmitDefaultValue=false)]
         public bool? Updated { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets StateUnknown
         /// </summary>
         [DataMember(Name="stateUnknown", EmitDefaultValue=false)]
         public bool? StateUnknown { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConsumedResources
         /// </summary>
         [DataMember(Name="consumedResources", EmitDefaultValue=false)]
         public List<Dependency> ConsumedResources { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConsumingResources
         /// </summary>
         [DataMember(Name="consumingResources", EmitDefaultValue=false)]
         public List<Dependency> ConsumingResources { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -265,16 +485,27 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DependencyObject {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
+            
             sb.Append("  Deleted: ").Append(Deleted).Append("\n");
+            
             sb.Append("  Updated: ").Append(Updated).Append("\n");
+            
             sb.Append("  StateUnknown: ").Append(StateUnknown).Append("\n");
+            
             sb.Append("  ConsumedResources: ").Append(ConsumedResources).Append("\n");
+            
             sb.Append("  ConsumingResources: ").Append(ConsumingResources).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -374,26 +605,37 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+                
                 if (this.Deleted != null)
                     hash = hash * 59 + this.Deleted.GetHashCode();
+                
                 if (this.Updated != null)
                     hash = hash * 59 + this.Updated.GetHashCode();
+                
                 if (this.StateUnknown != null)
                     hash = hash * 59 + this.StateUnknown.GetHashCode();
+                
                 if (this.ConsumedResources != null)
                     hash = hash * 59 + this.ConsumedResources.GetHashCode();
+                
                 if (this.ConsumingResources != null)
                     hash = hash * 59 + this.ConsumingResources.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

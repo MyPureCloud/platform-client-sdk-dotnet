@@ -18,19 +18,55 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SuggestSearchRequest :  IEquatable<SuggestSearchRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestSearchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SuggestSearchRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SuggestSearchRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="Expand">Provides more details about a specified resource.</param>
+        
+        
+        
         /// <param name="Types">Resource domain type to search (required).</param>
+        
+        
+        
         /// <param name="Query">Suggest query (required).</param>
+        
+        
         public SuggestSearchRequest(List<string> Expand = null, List<string> Types = null, List<SuggestSearchCriteria> Query = null)
         {
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Types" is required (not null)
             if (Types == null)
             {
@@ -40,6 +76,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Types = Types;
             }
+            
+            
+            
+            
+            
             // to ensure "Query" is required (not null)
             if (Query == null)
             {
@@ -49,8 +90,30 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Query = Query;
             }
-            this.Expand = Expand;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Expand = Expand;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Provides more details about a specified resource
@@ -58,18 +121,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Provides more details about a specified resource</value>
         [DataMember(Name="expand", EmitDefaultValue=false)]
         public List<string> Expand { get; set; }
+        
+        
+        
         /// <summary>
         /// Resource domain type to search
         /// </summary>
         /// <value>Resource domain type to search</value>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<string> Types { get; set; }
+        
+        
+        
         /// <summary>
         /// Suggest query
         /// </summary>
         /// <value>Suggest query</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<SuggestSearchCriteria> Query { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,9 +149,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SuggestSearchRequest {\n");
+            
             sb.Append("  Expand: ").Append(Expand).Append("\n");
+            
             sb.Append("  Types: ").Append(Types).Append("\n");
+            
             sb.Append("  Query: ").Append(Query).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -145,12 +220,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();
+                
                 if (this.Types != null)
                     hash = hash * 59 + this.Types.GetHashCode();
+                
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
+                
                 return hash;
             }
         }

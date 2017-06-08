@@ -18,18 +18,108 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CallbackConversation :  IEquatable<CallbackConversation>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="CallbackConversation" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Participants">The list of participants involved in the conversation..</param>
+        
+        
+        
         /// <param name="OtherMediaUris">The list of other media channels involved in the conversation..</param>
+        
+        
+        
+        
         public CallbackConversation(string Name = null, List<CallbackMediaParticipant> Participants = null, List<string> OtherMediaUris = null)
         {
-            this.Name = Name;
-            this.Participants = Participants;
-            this.OtherMediaUris = OtherMediaUris;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Participants = Participants;
+            
+            
+            
+            
+            
+            
+            
+            
+this.OtherMediaUris = OtherMediaUris;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -37,29 +127,43 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of participants involved in the conversation.
         /// </summary>
         /// <value>The list of participants involved in the conversation.</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<CallbackMediaParticipant> Participants { get; set; }
+        
+        
+        
         /// <summary>
         /// The list of other media channels involved in the conversation.
         /// </summary>
         /// <value>The list of other media channels involved in the conversation.</value>
         [DataMember(Name="otherMediaUris", EmitDefaultValue=false)]
         public List<string> OtherMediaUris { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -68,11 +172,17 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class CallbackConversation {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Participants: ").Append(Participants).Append("\n");
+            
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -147,16 +257,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
+                
                 if (this.OtherMediaUris != null)
                     hash = hash * 59 + this.OtherMediaUris.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

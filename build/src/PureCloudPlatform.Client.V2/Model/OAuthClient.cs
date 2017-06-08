@@ -18,6 +18,29 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OAuthClient :  IEquatable<OAuthClient>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
@@ -63,29 +86,88 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CLIENT_CREDENTIALS")]
             ClientCredentials
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
         /// <value>The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. </value>
         [DataMember(Name="authorizedGrantType", EmitDefaultValue=false)]
         public AuthorizedGrantTypeEnum? AuthorizedGrantType { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected OAuthClient() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OAuthClient" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">The name of the OAuth client. (required).</param>
+        
+        
+        
         /// <param name="AccessTokenValiditySeconds">The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied..</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="RegisteredRedirectUri">List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback.</param>
+        
+        
+        
         /// <param name="Secret">System created secret assigned to this client. Secrets are required for code authorization and client credential grants..</param>
+        
+        
+        
         /// <param name="RoleIds">Roles assigned to this client. Roles only apply to clients using the client_credential grant.</param>
+        
+        
+        
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
+        
+        
+        
+        
         public OAuthClient(string Name = null, long? AccessTokenValiditySeconds = null, string Description = null, List<string> RegisteredRedirectUri = null, string Secret = null, List<string> RoleIds = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null)
         {
+            
+            
+            
+            
+            
             // to ensure "Name" is required (not null)
             if (Name == null)
             {
@@ -95,6 +177,31 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "AuthorizedGrantType" is required (not null)
             if (AuthorizedGrantType == null)
             {
@@ -104,12 +211,72 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.AuthorizedGrantType = AuthorizedGrantType;
             }
-            this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
-            this.Description = Description;
-            this.RegisteredRedirectUri = RegisteredRedirectUri;
-            this.Secret = Secret;
-            this.RoleIds = RoleIds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.AccessTokenValiditySeconds = AccessTokenValiditySeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RegisteredRedirectUri = RegisteredRedirectUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Secret = Secret;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RoleIds = RoleIds;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -117,47 +284,72 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// The name of the OAuth client.
         /// </summary>
         /// <value>The name of the OAuth client.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied.
         /// </summary>
         /// <value>The number of seconds, between 5mins and 48hrs, until tokens created with this client expire. If this field is omitted, a default of 24 hours will be applied.</value>
         [DataMember(Name="accessTokenValiditySeconds", EmitDefaultValue=false)]
         public long? AccessTokenValiditySeconds { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback
         /// </summary>
         /// <value>List of allowed callbacks for this client. For example: https://myap.example.com/auth/callback</value>
         [DataMember(Name="registeredRedirectUri", EmitDefaultValue=false)]
         public List<string> RegisteredRedirectUri { get; set; }
+        
+        
+        
         /// <summary>
         /// System created secret assigned to this client. Secrets are required for code authorization and client credential grants.
         /// </summary>
         /// <value>System created secret assigned to this client. Secrets are required for code authorization and client credential grants.</value>
         [DataMember(Name="secret", EmitDefaultValue=false)]
         public string Secret { get; set; }
+        
+        
+        
         /// <summary>
         /// Roles assigned to this client. Roles only apply to clients using the client_credential grant
         /// </summary>
         /// <value>Roles assigned to this client. Roles only apply to clients using the client_credential grant</value>
         [DataMember(Name="roleIds", EmitDefaultValue=false)]
         public List<string> RoleIds { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,15 +358,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OAuthClient {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  AccessTokenValiditySeconds: ").Append(AccessTokenValiditySeconds).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  RegisteredRedirectUri: ").Append(RegisteredRedirectUri).Append("\n");
+            
             sb.Append("  Secret: ").Append(Secret).Append("\n");
+            
             sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
+            
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -269,24 +471,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.AccessTokenValiditySeconds != null)
                     hash = hash * 59 + this.AccessTokenValiditySeconds.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.RegisteredRedirectUri != null)
                     hash = hash * 59 + this.RegisteredRedirectUri.GetHashCode();
+                
                 if (this.Secret != null)
                     hash = hash * 59 + this.Secret.GetHashCode();
+                
                 if (this.RoleIds != null)
                     hash = hash * 59 + this.RoleIds.GetHashCode();
+                
                 if (this.AuthorizedGrantType != null)
                     hash = hash * 59 + this.AuthorizedGrantType.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

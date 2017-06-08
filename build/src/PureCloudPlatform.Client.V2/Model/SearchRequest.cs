@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SearchRequest :  IEquatable<SearchRequest>
     {
+        
+        
         /// <summary>
         /// The sort order for results
         /// </summary>
@@ -51,31 +53,135 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "SCORE")]
             Score
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The sort order for results
         /// </summary>
         /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected SearchRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="SearchRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="SortOrder">The sort order for results.</param>
+        
+        
+        
         /// <param name="SortBy">The field in the resource that you want to sort the results by.</param>
+        
+        
+        
         /// <param name="PageSize">The number of results per page.</param>
+        
+        
+        
         /// <param name="PageNumber">The page of resources you want to retrieve.</param>
+        
+        
+        
         /// <param name="ReturnFields">A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results..</param>
+        
+        
+        
         /// <param name="Expand">Provides more details about a specified resource.</param>
+        
+        
+        
         /// <param name="Types">Resource domain type to search (required).</param>
+        
+        
+        
         /// <param name="Query">The search criteria.</param>
+        
+        
+        
         /// <param name="Aggregations">Aggregation criteria.</param>
+        
+        
         public SearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<string> ReturnFields = null, List<string> Expand = null, List<string> Types = null, List<SearchCriteria> Query = null, List<SearchAggregation> Aggregations = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             // to ensure "Types" is required (not null)
             if (Types == null)
             {
@@ -85,15 +191,99 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Types = Types;
             }
-            this.SortOrder = SortOrder;
-            this.SortBy = SortBy;
-            this.PageSize = PageSize;
-            this.PageNumber = PageNumber;
-            this.ReturnFields = ReturnFields;
-            this.Expand = Expand;
-            this.Query = Query;
-            this.Aggregations = Aggregations;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.SortOrder = SortOrder;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SortBy = SortBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PageSize = PageSize;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PageNumber = PageNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ReturnFields = ReturnFields;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Expand = Expand;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Query = Query;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Aggregations = Aggregations;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// The field in the resource that you want to sort the results by
@@ -101,48 +291,71 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The field in the resource that you want to sort the results by</value>
         [DataMember(Name="sortBy", EmitDefaultValue=false)]
         public string SortBy { get; set; }
+        
+        
+        
         /// <summary>
         /// The number of results per page
         /// </summary>
         /// <value>The number of results per page</value>
         [DataMember(Name="pageSize", EmitDefaultValue=false)]
         public int? PageSize { get; set; }
+        
+        
+        
         /// <summary>
         /// The page of resources you want to retrieve
         /// </summary>
         /// <value>The page of resources you want to retrieve</value>
         [DataMember(Name="pageNumber", EmitDefaultValue=false)]
         public int? PageNumber { get; set; }
+        
+        
+        
         /// <summary>
         /// A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results.
         /// </summary>
         /// <value>A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results.</value>
         [DataMember(Name="returnFields", EmitDefaultValue=false)]
         public List<string> ReturnFields { get; set; }
+        
+        
+        
         /// <summary>
         /// Provides more details about a specified resource
         /// </summary>
         /// <value>Provides more details about a specified resource</value>
         [DataMember(Name="expand", EmitDefaultValue=false)]
         public List<string> Expand { get; set; }
+        
+        
+        
         /// <summary>
         /// Resource domain type to search
         /// </summary>
         /// <value>Resource domain type to search</value>
         [DataMember(Name="types", EmitDefaultValue=false)]
         public List<string> Types { get; set; }
+        
+        
+        
         /// <summary>
         /// The search criteria
         /// </summary>
         /// <value>The search criteria</value>
         [DataMember(Name="query", EmitDefaultValue=false)]
         public List<SearchCriteria> Query { get; set; }
+        
+        
+        
         /// <summary>
         /// Aggregation criteria
         /// </summary>
         /// <value>Aggregation criteria</value>
         [DataMember(Name="aggregations", EmitDefaultValue=false)]
         public List<SearchAggregation> Aggregations { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -151,15 +364,25 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class SearchRequest {\n");
+            
             sb.Append("  SortOrder: ").Append(SortOrder).Append("\n");
+            
             sb.Append("  SortBy: ").Append(SortBy).Append("\n");
+            
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
+            
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            
             sb.Append("  ReturnFields: ").Append(ReturnFields).Append("\n");
+            
             sb.Append("  Expand: ").Append(Expand).Append("\n");
+            
             sb.Append("  Types: ").Append(Types).Append("\n");
+            
             sb.Append("  Query: ").Append(Query).Append("\n");
+            
             sb.Append("  Aggregations: ").Append(Aggregations).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -254,24 +477,34 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.SortOrder != null)
                     hash = hash * 59 + this.SortOrder.GetHashCode();
+                
                 if (this.SortBy != null)
                     hash = hash * 59 + this.SortBy.GetHashCode();
+                
                 if (this.PageSize != null)
                     hash = hash * 59 + this.PageSize.GetHashCode();
+                
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
+                
                 if (this.ReturnFields != null)
                     hash = hash * 59 + this.ReturnFields.GetHashCode();
+                
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();
+                
                 if (this.Types != null)
                     hash = hash * 59 + this.Types.GetHashCode();
+                
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();
+                
                 if (this.Aggregations != null)
                     hash = hash * 59 + this.Aggregations.GetHashCode();
+                
                 return hash;
             }
         }

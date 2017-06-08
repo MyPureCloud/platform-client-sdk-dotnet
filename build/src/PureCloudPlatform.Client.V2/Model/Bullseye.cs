@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Bullseye :  IEquatable<Bullseye>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Bullseye" /> class.
         /// </summary>
+        
+        
         /// <param name="Rings">Rings.</param>
+        
+        
         public Bullseye(List<Ring> Rings = null)
         {
-            this.Rings = Rings;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Rings = Rings;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Rings
         /// </summary>
         [DataMember(Name="rings", EmitDefaultValue=false)]
         public List<Ring> Rings { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Bullseye {\n");
+            
             sb.Append("  Rings: ").Append(Rings).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Rings != null)
                     hash = hash * 59 + this.Rings.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,20 +18,50 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ObservationQueryResponse :  IEquatable<ObservationQueryResponse>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ObservationQueryResponse" /> class.
         /// </summary>
+        
+        
         /// <param name="Results">Results.</param>
+        
+        
         public ObservationQueryResponse(List<ObservationDataContainer> Results = null)
         {
-            this.Results = Results;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Results = Results;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets Results
         /// </summary>
         [DataMember(Name="results", EmitDefaultValue=false)]
         public List<ObservationDataContainer> Results { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -40,7 +70,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ObservationQueryResponse {\n");
+            
             sb.Append("  Results: ").Append(Results).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -95,8 +127,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Results != null)
                     hash = hash * 59 + this.Results.GetHashCode();
+                
                 return hash;
             }
         }

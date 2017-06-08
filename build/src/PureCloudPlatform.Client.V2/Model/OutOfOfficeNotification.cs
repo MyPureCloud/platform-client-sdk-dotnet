@@ -18,41 +18,140 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class OutOfOfficeNotification :  IEquatable<OutOfOfficeNotification>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="OutOfOfficeNotification" /> class.
         /// </summary>
+        
+        
         /// <param name="User">User.</param>
+        
+        
+        
         /// <param name="Active">Active.</param>
+        
+        
+        
         /// <param name="StartDate">StartDate.</param>
+        
+        
+        
         /// <param name="EndDate">EndDate.</param>
+        
+        
         public OutOfOfficeNotification(DocumentDataV2NotificationWorkspace User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
-            this.User = User;
-            this.Active = Active;
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.User = User;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Active = Active;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StartDate = StartDate;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndDate = EndDate;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public DocumentDataV2NotificationWorkspace User { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Active
         /// </summary>
         [DataMember(Name="active", EmitDefaultValue=false)]
         public bool? Active { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -61,10 +160,15 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class OutOfOfficeNotification {\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
+            
             sb.Append("  Active: ").Append(Active).Append("\n");
+            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -134,14 +238,19 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+                
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
+                
                 if (this.EndDate != null)
                     hash = hash * 59 + this.EndDate.GetHashCode();
+                
                 return hash;
             }
         }

@@ -18,34 +18,110 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class AttemptLimitsNotificationRecallEntry :  IEquatable<AttemptLimitsNotificationRecallEntry>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="AttemptLimitsNotificationRecallEntry" /> class.
         /// </summary>
+        
+        
         /// <param name="NbrAttempts">NbrAttempts.</param>
+        
+        
+        
         /// <param name="MinutesBetweenAttempts">MinutesBetweenAttempts.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public AttemptLimitsNotificationRecallEntry(int? NbrAttempts = null, int? MinutesBetweenAttempts = null, Object AdditionalProperties = null)
         {
-            this.NbrAttempts = NbrAttempts;
-            this.MinutesBetweenAttempts = MinutesBetweenAttempts;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.NbrAttempts = NbrAttempts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MinutesBetweenAttempts = MinutesBetweenAttempts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets NbrAttempts
         /// </summary>
         [DataMember(Name="nbrAttempts", EmitDefaultValue=false)]
         public int? NbrAttempts { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets MinutesBetweenAttempts
         /// </summary>
         [DataMember(Name="minutesBetweenAttempts", EmitDefaultValue=false)]
         public int? MinutesBetweenAttempts { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,9 +130,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class AttemptLimitsNotificationRecallEntry {\n");
+            
             sb.Append("  NbrAttempts: ").Append(NbrAttempts).Append("\n");
+            
             sb.Append("  MinutesBetweenAttempts: ").Append(MinutesBetweenAttempts).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -121,12 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.NbrAttempts != null)
                     hash = hash * 59 + this.NbrAttempts.GetHashCode();
+                
                 if (this.MinutesBetweenAttempts != null)
                     hash = hash * 59 + this.MinutesBetweenAttempts.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

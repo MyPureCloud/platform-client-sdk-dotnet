@@ -18,6 +18,11 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class MediaTranscription :  IEquatable<MediaTranscription>
     {
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets TranscriptionProvider
         /// </summary>
@@ -38,34 +43,106 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "VOCI")]
             Voci
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets TranscriptionProvider
         /// </summary>
         [DataMember(Name="transcriptionProvider", EmitDefaultValue=false)]
         public TranscriptionProviderEnum? TranscriptionProvider { get; set; }
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaTranscription" /> class.
         /// </summary>
+        
+        
         /// <param name="DisplayName">DisplayName.</param>
+        
+        
+        
         /// <param name="TranscriptionProvider">TranscriptionProvider.</param>
+        
+        
+        
         /// <param name="IntegrationId">IntegrationId.</param>
+        
+        
         public MediaTranscription(string DisplayName = null, TranscriptionProviderEnum? TranscriptionProvider = null, string IntegrationId = null)
         {
-            this.DisplayName = DisplayName;
-            this.TranscriptionProvider = TranscriptionProvider;
-            this.IntegrationId = IntegrationId;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisplayName = DisplayName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TranscriptionProvider = TranscriptionProvider;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IntegrationId = IntegrationId;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets DisplayName
         /// </summary>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets IntegrationId
         /// </summary>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -74,9 +151,13 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class MediaTranscription {\n");
+            
             sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            
             sb.Append("  TranscriptionProvider: ").Append(TranscriptionProvider).Append("\n");
+            
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,12 +222,16 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.DisplayName != null)
                     hash = hash * 59 + this.DisplayName.GetHashCode();
+                
                 if (this.TranscriptionProvider != null)
                     hash = hash * 59 + this.TranscriptionProvider.GetHashCode();
+                
                 if (this.IntegrationId != null)
                     hash = hash * 59 + this.IntegrationId.GetHashCode();
+                
                 return hash;
             }
         }

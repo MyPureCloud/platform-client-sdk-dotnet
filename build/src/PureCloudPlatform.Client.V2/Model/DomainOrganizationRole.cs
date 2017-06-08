@@ -18,30 +18,240 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DomainOrganizationRole :  IEquatable<DomainOrganizationRole>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainOrganizationRole" /> class.
         /// </summary>
+        
+        
+        
+        
         /// <param name="Name">Name.</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
+        
+        
+        
         /// <param name="DefaultRoleId">DefaultRoleId.</param>
+        
+        
+        
         /// <param name="Permissions">Permissions.</param>
+        
+        
+        
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
+        
+        
+        
         /// <param name="UserCount">UserCount.</param>
+        
+        
+        
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
+        
+        
+        
         /// <param name="_Base">_Base.</param>
+        
+        
+        
         /// <param name="_Default">_Default.</param>
+        
+        
+        
+        
         public DomainOrganizationRole(string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, bool? _Base = null, bool? _Default = null)
         {
-            this.Name = Name;
-            this.Description = Description;
-            this.DefaultRoleId = DefaultRoleId;
-            this.Permissions = Permissions;
-            this.PermissionPolicies = PermissionPolicies;
-            this.UserCount = UserCount;
-            this.RoleNeedsUpdate = RoleNeedsUpdate;
-            this._Base = _Base;
-            this._Default = _Default;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DefaultRoleId = DefaultRoleId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Permissions = Permissions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PermissionPolicies = PermissionPolicies;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UserCount = UserCount;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RoleNeedsUpdate = RoleNeedsUpdate;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Base = _Base;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Default = _Default;
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The globally unique identifier for the object.
@@ -49,58 +259,90 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Description
         /// </summary>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DefaultRoleId
         /// </summary>
         [DataMember(Name="defaultRoleId", EmitDefaultValue=false)]
         public string DefaultRoleId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Permissions
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
         public List<string> Permissions { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PermissionPolicies
         /// </summary>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> PermissionPolicies { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets UserCount
         /// </summary>
         [DataMember(Name="userCount", EmitDefaultValue=false)]
         public int? UserCount { get; set; }
+        
+        
+        
         /// <summary>
         /// Optional unless patch operation.
         /// </summary>
         /// <value>Optional unless patch operation.</value>
         [DataMember(Name="roleNeedsUpdate", EmitDefaultValue=false)]
         public bool? RoleNeedsUpdate { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Base
         /// </summary>
         [DataMember(Name="base", EmitDefaultValue=false)]
         public bool? _Base { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets _Default
         /// </summary>
         [DataMember(Name="default", EmitDefaultValue=false)]
         public bool? _Default { get; set; }
+        
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -109,17 +351,29 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class DomainOrganizationRole {\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
             sb.Append("  DefaultRoleId: ").Append(DefaultRoleId).Append("\n");
+            
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
+            
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
+            
             sb.Append("  UserCount: ").Append(UserCount).Append("\n");
+            
             sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
+            
             sb.Append("  _Base: ").Append(_Base).Append("\n");
+            
             sb.Append("  _Default: ").Append(_Default).Append("\n");
+            
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -224,28 +478,40 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
                 if (this.DefaultRoleId != null)
                     hash = hash * 59 + this.DefaultRoleId.GetHashCode();
+                
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
+                
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
+                
                 if (this.UserCount != null)
                     hash = hash * 59 + this.UserCount.GetHashCode();
+                
                 if (this.RoleNeedsUpdate != null)
                     hash = hash * 59 + this.RoleNeedsUpdate.GetHashCode();
+                
                 if (this._Base != null)
                     hash = hash * 59 + this._Base.GetHashCode();
+                
                 if (this._Default != null)
                     hash = hash * 59 + this._Default.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+                
                 return hash;
             }
         }

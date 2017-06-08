@@ -18,27 +18,80 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Ring :  IEquatable<Ring>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="Ring" /> class.
         /// </summary>
+        
+        
         /// <param name="ExpansionCriteria">ExpansionCriteria.</param>
+        
+        
+        
         /// <param name="Actions">Actions.</param>
+        
+        
         public Ring(List<ExpansionCriterium> ExpansionCriteria = null, Actions Actions = null)
         {
-            this.ExpansionCriteria = ExpansionCriteria;
-            this.Actions = Actions;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExpansionCriteria = ExpansionCriteria;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Actions = Actions;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// Gets or Sets ExpansionCriteria
         /// </summary>
         [DataMember(Name="expansionCriteria", EmitDefaultValue=false)]
         public List<ExpansionCriterium> ExpansionCriteria { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Actions
         /// </summary>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public Actions Actions { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,8 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class Ring {\n");
+            
             sb.Append("  ExpansionCriteria: ").Append(ExpansionCriteria).Append("\n");
+            
             sb.Append("  Actions: ").Append(Actions).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,10 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.ExpansionCriteria != null)
                     hash = hash * 59 + this.ExpansionCriteria.GetHashCode();
+                
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
+                
                 return hash;
             }
         }

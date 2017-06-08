@@ -18,16 +18,64 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UserSchedule :  IEquatable<UserSchedule>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSchedule" /> class.
         /// </summary>
+        
+        
         /// <param name="Shifts">The shifts that belong to this schedule.</param>
+        
+        
+        
         /// <param name="FullDayTimeOffMarkers">Markers to indicate a full day time off request, relative to the management unit time zone.</param>
+        
+        
         public UserSchedule(List<UserScheduleShift> Shifts = null, List<UserScheduleFullDayTimeOffMarker> FullDayTimeOffMarkers = null)
         {
-            this.Shifts = Shifts;
-            this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Shifts = Shifts;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The shifts that belong to this schedule
@@ -35,12 +83,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The shifts that belong to this schedule</value>
         [DataMember(Name="shifts", EmitDefaultValue=false)]
         public List<UserScheduleShift> Shifts { get; set; }
+        
+        
+        
         /// <summary>
         /// Markers to indicate a full day time off request, relative to the management unit time zone
         /// </summary>
         /// <value>Markers to indicate a full day time off request, relative to the management unit time zone</value>
         [DataMember(Name="fullDayTimeOffMarkers", EmitDefaultValue=false)]
         public List<UserScheduleFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -49,8 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class UserSchedule {\n");
+            
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
+            
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -110,10 +166,13 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Shifts != null)
                     hash = hash * 59 + this.Shifts.GetHashCode();
+                
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
+                
                 return hash;
             }
         }

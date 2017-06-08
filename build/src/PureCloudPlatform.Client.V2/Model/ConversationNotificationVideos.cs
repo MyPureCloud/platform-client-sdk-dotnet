@@ -18,6 +18,8 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ConversationNotificationVideos :  IEquatable<ConversationNotificationVideos>
     {
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -80,6 +82,37 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "NONE")]
             None
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
@@ -190,111 +223,409 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "UNCALLABLE")]
             Uncallable
         }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectType
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationNotificationVideos" /> class.
         /// </summary>
+        
+        
         /// <param name="State">State.</param>
+        
+        
+        
         /// <param name="Self">Self.</param>
+        
+        
+        
         /// <param name="Id">Id.</param>
+        
+        
+        
         /// <param name="Context">Context.</param>
+        
+        
+        
         /// <param name="AudioMuted">AudioMuted.</param>
+        
+        
+        
         /// <param name="VideoMuted">VideoMuted.</param>
+        
+        
+        
         /// <param name="SharingScreen">SharingScreen.</param>
+        
+        
+        
         /// <param name="Provider">Provider.</param>
+        
+        
+        
         /// <param name="ScriptId">ScriptId.</param>
+        
+        
+        
         /// <param name="PeerId">PeerId.</param>
+        
+        
+        
         /// <param name="DisconnectType">DisconnectType.</param>
+        
+        
+        
         /// <param name="ConnectedTime">ConnectedTime.</param>
+        
+        
+        
         /// <param name="DisconnectedTime">DisconnectedTime.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
         public ConversationNotificationVideos(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
         {
-            this.State = State;
-            this.Self = Self;
-            this.Id = Id;
-            this.Context = Context;
-            this.AudioMuted = AudioMuted;
-            this.VideoMuted = VideoMuted;
-            this.SharingScreen = SharingScreen;
-            this.Provider = Provider;
-            this.ScriptId = ScriptId;
-            this.PeerId = PeerId;
-            this.DisconnectType = DisconnectType;
-            this.ConnectedTime = ConnectedTime;
-            this.DisconnectedTime = DisconnectedTime;
-            this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.State = State;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Self = Self;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Context = Context;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AudioMuted = AudioMuted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.VideoMuted = VideoMuted;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SharingScreen = SharingScreen;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Provider = Provider;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ScriptId = ScriptId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.PeerId = PeerId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectType = DisconnectType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ConnectedTime = ConnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisconnectedTime = DisconnectedTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
+        
+        
+        
+        
         
         /// <summary>
         /// Gets or Sets Self
         /// </summary>
         [DataMember(Name="self", EmitDefaultValue=false)]
         public ConversationNotificationAddress Self { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public string Context { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AudioMuted
         /// </summary>
         [DataMember(Name="audioMuted", EmitDefaultValue=false)]
         public bool? AudioMuted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets VideoMuted
         /// </summary>
         [DataMember(Name="videoMuted", EmitDefaultValue=false)]
         public bool? VideoMuted { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets SharingScreen
         /// </summary>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets Provider
         /// </summary>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScriptId
         /// </summary>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets PeerId
         /// </summary>
         [DataMember(Name="peerId", EmitDefaultValue=false)]
         public string PeerId { get; set; }
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets ConnectedTime
         /// </summary>
         [DataMember(Name="connectedTime", EmitDefaultValue=false)]
         public DateTime? ConnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets DisconnectedTime
         /// </summary>
         [DataMember(Name="disconnectedTime", EmitDefaultValue=false)]
         public DateTime? DisconnectedTime { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
         public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -303,20 +634,35 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class ConversationNotificationVideos {\n");
+            
             sb.Append("  State: ").Append(State).Append("\n");
+            
             sb.Append("  Self: ").Append(Self).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  Context: ").Append(Context).Append("\n");
+            
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
+            
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
+            
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            
             sb.Append("  DisconnectType: ").Append(DisconnectType).Append("\n");
+            
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
+            
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -436,34 +782,49 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
                 if (this.Self != null)
                     hash = hash * 59 + this.Self.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
+                
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
+                
                 if (this.VideoMuted != null)
                     hash = hash * 59 + this.VideoMuted.GetHashCode();
+                
                 if (this.SharingScreen != null)
                     hash = hash * 59 + this.SharingScreen.GetHashCode();
+                
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
                 if (this.DisconnectType != null)
                     hash = hash * 59 + this.DisconnectType.GetHashCode();
+                
                 if (this.ConnectedTime != null)
                     hash = hash * 59 + this.ConnectedTime.GetHashCode();
+                
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+                
                 return hash;
             }
         }

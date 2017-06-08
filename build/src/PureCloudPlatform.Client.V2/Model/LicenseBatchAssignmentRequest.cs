@@ -18,17 +18,33 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LicenseBatchAssignmentRequest :  IEquatable<LicenseBatchAssignmentRequest>
     {
+        
+        
+        
+        
+        
+        
+        
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseBatchAssignmentRequest" /> class.
         /// </summary>
         [JsonConstructorAttribute]
         protected LicenseBatchAssignmentRequest() { }
+    
         /// <summary>
         /// Initializes a new instance of the <see cref="LicenseBatchAssignmentRequest" /> class.
         /// </summary>
+        
+        
         /// <param name="Assignments">The list of license assignment updates to make. (required).</param>
+        
+        
         public LicenseBatchAssignmentRequest(List<LicenseAssignmentRequest> Assignments = null)
         {
+            
+            
+            
             // to ensure "Assignments" is required (not null)
             if (Assignments == null)
             {
@@ -38,7 +54,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Assignments = Assignments;
             }
+            
+            
+            
+            
+            
+            
+            
+            
         }
+        
+        
         
         /// <summary>
         /// The list of license assignment updates to make.
@@ -46,6 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The list of license assignment updates to make.</value>
         [DataMember(Name="assignments", EmitDefaultValue=false)]
         public List<LicenseAssignmentRequest> Assignments { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,7 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         {
             var sb = new StringBuilder();
             sb.Append("class LicenseBatchAssignmentRequest {\n");
+            
             sb.Append("  Assignments: ").Append(Assignments).Append("\n");
+            
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,8 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
                 if (this.Assignments != null)
                     hash = hash * 59 + this.Assignments.GetHashCode();
+                
                 return hash;
             }
         }
