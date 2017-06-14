@@ -109,6 +109,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId);
         
         /// <summary>
+        /// Unlink the Trustor for this External Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns></returns>
+        void DeleteExternalcontactsOrganizationTrustor (string externalOrganizationId);
+
+        /// <summary>
+        /// Unlink the Trustor for this External Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteExternalcontactsOrganizationTrustorWithHttpInfo (string externalOrganizationId);
+        
+        /// <summary>
         /// Delete a relationship
         /// </summary>
         /// <remarks>
@@ -249,8 +271,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
-        ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null);
+        ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Fetch an external organization
@@ -261,8 +284,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        ApiResponse<ExternalOrganization> GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, List<string> expand = null);
+        ApiResponse<ExternalOrganization> GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
         
         /// <summary>
         /// Search for external contacts in an external organization
@@ -394,8 +418,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
-        ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null);
+        ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Search for external organizations
@@ -409,8 +434,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
-        ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null);
+        ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
         
         /// <summary>
         /// Fetch a relationship
@@ -699,6 +725,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Note> PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
         
         /// <summary>
+        /// Links a Trustor with an Extenral Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>ExternalOrganization</returns>
+        ExternalOrganization PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId);
+
+        /// <summary>
+        /// Links a Trustor with an Extenral Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>ApiResponse of ExternalOrganization</returns>
+        ApiResponse<ExternalOrganization> PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId);
+        
+        /// <summary>
         /// Update a relationship
         /// </summary>
         /// <remarks>
@@ -817,6 +867,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="noteId">Note Id</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId);
+        
+        /// <summary>
+        /// Unlink the Trustor for this External Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteExternalcontactsOrganizationTrustorAsync (string externalOrganizationId);
+
+        /// <summary>
+        /// Unlink the Trustor for this External Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationTrustorAsyncWithHttpInfo (string externalOrganizationId);
         
         /// <summary>
         /// Delete a relationship
@@ -959,8 +1031,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
-        System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, List<string> expand = null);
+        System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Fetch an external organization
@@ -971,8 +1044,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null);
         
         /// <summary>
         /// Search for external contacts in an external organization
@@ -1104,8 +1178,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
-        System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
 
         /// <summary>
         /// Search for external organizations
@@ -1119,8 +1194,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null);
         
         /// <summary>
         /// Fetch a relationship
@@ -1407,6 +1483,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Note (optional)</param>
         /// <returns>Task of ApiResponse (Note)</returns>
         System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
+        
+        /// <summary>
+        /// Links a Trustor with an Extenral Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>Task of ExternalOrganization</returns>
+        System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId);
+
+        /// <summary>
+        /// Links a Trustor with an Extenral Organization
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId);
         
         /// <summary>
         /// Update a relationship
@@ -2343,6 +2443,203 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationNote: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        
+        /// <summary>
+        /// Unlink the Trustor for this External Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns></returns>
+        public void DeleteExternalcontactsOrganizationTrustor (string externalOrganizationId)
+        {
+             DeleteExternalcontactsOrganizationTrustorWithHttpInfo(externalOrganizationId);
+        }
+
+        /// <summary>
+        /// Unlink the Trustor for this External Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteExternalcontactsOrganizationTrustorWithHttpInfo (string externalOrganizationId)
+        {
+            
+            
+            // verify the required parameter 'externalOrganizationId' is set
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationTrustor");
+            
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationTrustor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationTrustor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        /// <summary>
+        /// Unlink the Trustor for this External Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteExternalcontactsOrganizationTrustorAsync (string externalOrganizationId)
+        {
+             await DeleteExternalcontactsOrganizationTrustorAsyncWithHttpInfo(externalOrganizationId);
+
+        }
+
+        /// <summary>
+        /// Unlink the Trustor for this External Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteExternalcontactsOrganizationTrustorAsyncWithHttpInfo (string externalOrganizationId)
+        {
+            
+            
+            // verify the required parameter 'externalOrganizationId' is set
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationTrustor");
+            
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationTrustor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteExternalcontactsOrganizationTrustor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -3483,10 +3780,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganization</returns>
-        public ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null)
+        public ExternalOrganization GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         {
-             ApiResponse<ExternalOrganization> localVarResponse = GetExternalcontactsOrganizationWithHttpInfo(externalOrganizationId, expand);
+             ApiResponse<ExternalOrganization> localVarResponse = GetExternalcontactsOrganizationWithHttpInfo(externalOrganizationId, expand, includeTrustors);
              return localVarResponse.Data;
         }
 
@@ -3496,14 +3794,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        public ApiResponse< ExternalOrganization > GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, List<string> expand = null)
+        public ApiResponse< ExternalOrganization > GetExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         {
             
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganization");
+            
+            
             
             
             
@@ -3543,6 +3844,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
             
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            if (includeTrustors != null) localVarQueryParams.Add("includeTrustors", Configuration.ApiClient.ParameterToString(includeTrustors)); // query parameter
             
             
             
@@ -3587,10 +3890,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganization</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ExternalOrganization> GetExternalcontactsOrganizationAsync (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         {
-             ApiResponse<ExternalOrganization> localVarResponse = await GetExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId, expand);
+             ApiResponse<ExternalOrganization> localVarResponse = await GetExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId, expand, includeTrustors);
              return localVarResponse.Data;
 
         }
@@ -3601,14 +3905,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
         /// <param name="expand">which fields, if any, to expand (externalDataSources) (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> GetExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
         {
             
             
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganization");
+            
+            
             
             
             
@@ -3648,6 +3955,8 @@ namespace PureCloudPlatform.Client.V2.Api
             
             
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            if (includeTrustors != null) localVarQueryParams.Add("includeTrustors", Configuration.ApiClient.ParameterToString(includeTrustors)); // query parameter
             
             
             
@@ -4681,10 +4990,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ExternalOrganizationListing</returns>
-        public ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null)
+        public ExternalOrganizationListing GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         {
-             ApiResponse<ExternalOrganizationListing> localVarResponse = GetExternalcontactsOrganizationsWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
+             ApiResponse<ExternalOrganizationListing> localVarResponse = GetExternalcontactsOrganizationsWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand, includeTrustors);
              return localVarResponse.Data;
         }
 
@@ -4697,9 +5007,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>ApiResponse of ExternalOrganizationListing</returns>
-        public ApiResponse< ExternalOrganizationListing > GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null)
+        public ApiResponse< ExternalOrganizationListing > GetExternalcontactsOrganizationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         {
+            
+            
             
             
             
@@ -4752,6 +5065,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            if (includeTrustors != null) localVarQueryParams.Add("includeTrustors", Configuration.ApiClient.ParameterToString(includeTrustors)); // query parameter
             
             
             
@@ -4799,10 +5114,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ExternalOrganizationListing</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<ExternalOrganizationListing> GetExternalcontactsOrganizationsAsync (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         {
-             ApiResponse<ExternalOrganizationListing> localVarResponse = await GetExternalcontactsOrganizationsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand);
+             ApiResponse<ExternalOrganizationListing> localVarResponse = await GetExternalcontactsOrganizationsAsyncWithHttpInfo(pageSize, pageNumber, q, sortOrder, expand, includeTrustors);
              return localVarResponse.Data;
 
         }
@@ -4816,9 +5132,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="q">Search query (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="includeTrustors">(true or false) whether or not to include trustor information embedded in the externalOrganization (optional)</param>
         /// <returns>Task of ApiResponse (ExternalOrganizationListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
         {
+            
+            
             
             
             
@@ -4871,6 +5190,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
             
             if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
+            
+            if (includeTrustors != null) localVarQueryParams.Add("includeTrustors", Configuration.ApiClient.ParameterToString(includeTrustors)); // query parameter
             
             
             
@@ -7556,6 +7877,225 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Note>(localVarStatusCode,
                 localVarHeaders,
                 (Note) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Note)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Links a Trustor with an Extenral Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>ExternalOrganization</returns>
+        public ExternalOrganization PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
+        {
+             ApiResponse<ExternalOrganization> localVarResponse = PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo(externalOrganizationId, trustorId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Links a Trustor with an Extenral Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>ApiResponse of ExternalOrganization</returns>
+        public ApiResponse< ExternalOrganization > PutExternalcontactsOrganizationTrustorTrustorIdWithHttpInfo (string externalOrganizationId, string trustorId)
+        {
+            
+            
+            // verify the required parameter 'externalOrganizationId' is set
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutExternalcontactsOrganizationTrustorTrustorId");
+            
+            
+            
+            // verify the required parameter 'trustorId' is set
+            if (trustorId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorId' when calling ExternalContactsApi->PutExternalcontactsOrganizationTrustorTrustorId");
+            
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
+            
+            if (trustorId != null) localVarPathParams.Add("trustorId", Configuration.ApiClient.ParameterToString(trustorId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalOrganization>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
+            
+        }
+
+        
+        /// <summary>
+        /// Links a Trustor with an Extenral Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>Task of ExternalOrganization</returns>
+        public async System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId)
+        {
+             ApiResponse<ExternalOrganization> localVarResponse = await PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo(externalOrganizationId, trustorId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Links a Trustor with an Extenral Organization 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="externalOrganizationId">External Organization ID</param>
+        /// <param name="trustorId">Trustor ID</param>
+        /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationTrustorTrustorIdAsyncWithHttpInfo (string externalOrganizationId, string trustorId)
+        {
+            
+            
+            // verify the required parameter 'externalOrganizationId' is set
+            if (externalOrganizationId == null)
+                throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutExternalcontactsOrganizationTrustorTrustorId");
+            
+            
+            
+            // verify the required parameter 'trustorId' is set
+            if (trustorId == null)
+                throw new ApiException(400, "Missing required parameter 'trustorId' when calling ExternalContactsApi->PutExternalcontactsOrganizationTrustorTrustorId");
+            
+            
+
+            var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (externalOrganizationId != null) localVarPathParams.Add("externalOrganizationId", Configuration.ApiClient.ParameterToString(externalOrganizationId)); // path parameter
+            
+            if (trustorId != null) localVarPathParams.Add("trustorId", Configuration.ApiClient.ParameterToString(trustorId)); // path parameter
+            
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutExternalcontactsOrganizationTrustorTrustorId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalOrganization>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalOrganization) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalOrganization)));
             
         }
 

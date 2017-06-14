@@ -81,7 +81,7 @@ namespace Example
 
 <a name="getlicensedefinitions"></a>
 
-## [**LicenseDefinitionListing**](LicenseDefinitionListing.html) GetLicenseDefinitions ()
+## [**List&lt;LicenseDefinition&gt;**](LicenseDefinition.html) GetLicenseDefinitions ()
 
 Get all PureCloud license definitions available for the organization.
 
@@ -114,7 +114,7 @@ namespace Example
                 
                 // Get all PureCloud license definitions available for the organization.
                 
-                LicenseDefinitionListing result = apiInstance.GetLicenseDefinitions();
+                List&lt;LicenseDefinition&gt; result = apiInstance.GetLicenseDefinitions();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -132,7 +132,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**LicenseDefinitionListing**](LicenseDefinitionListing.html)
+[**List<LicenseDefinition>**](LicenseDefinition.html)
 
 <a name="getlicenseorganization"></a>
 
@@ -255,7 +255,7 @@ namespace Example
 
 <a name="postlicenseorganization"></a>
 
-## [**LicenseUpdateResponse**](LicenseUpdateResponse.html) PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
+## [**List&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html) PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
 
 Update the organization's license assignments in a batch.
 
@@ -293,7 +293,7 @@ namespace Example
                 
                 // Update the organization's license assignments in a batch.
                 
-                LicenseUpdateResponse result = apiInstance.PostLicenseOrganization(body);
+                List&lt;LicenseUpdateStatus&gt; result = apiInstance.PostLicenseOrganization(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -315,7 +315,7 @@ namespace Example
 
 ### Return type
 
-[**LicenseUpdateResponse**](LicenseUpdateResponse.html)
+[**List<LicenseUpdateStatus>**](LicenseUpdateStatus.html)
 
 <a name="postlicenseusers"></a>
 

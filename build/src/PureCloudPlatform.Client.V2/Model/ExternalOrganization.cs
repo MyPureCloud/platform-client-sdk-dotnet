@@ -110,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
@@ -186,12 +191,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Trustor">Trustor.</param>
+        
+        
+        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
         
         
         
         
-        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             
             
@@ -209,6 +218,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
             
             
             
@@ -418,6 +431,15 @@ this.CreateDate = CreateDate;
             
             
             
+this.Trustor = Trustor;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ExternalDataSources = ExternalDataSources;
             
             
@@ -562,6 +584,14 @@ this.ExternalDataSources = ExternalDataSources;
         
         
         /// <summary>
+        /// Gets or Sets Trustor
+        /// </summary>
+        [DataMember(Name="trustor", EmitDefaultValue=false)]
+        public Trustor Trustor { get; set; }
+        
+        
+        
+        /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
@@ -618,6 +648,8 @@ this.ExternalDataSources = ExternalDataSources;
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             
             sb.Append("  CreateDate: ").Append(CreateDate).Append("\n");
+            
+            sb.Append("  Trustor: ").Append(Trustor).Append("\n");
             
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
             
@@ -740,6 +772,11 @@ this.ExternalDataSources = ExternalDataSources;
                     this.CreateDate.Equals(other.CreateDate)
                 ) &&
                 (
+                    this.Trustor == other.Trustor ||
+                    this.Trustor != null &&
+                    this.Trustor.Equals(other.Trustor)
+                ) &&
+                (
                     this.ExternalDataSources == other.ExternalDataSources ||
                     this.ExternalDataSources != null &&
                     this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
@@ -810,6 +847,9 @@ this.ExternalDataSources = ExternalDataSources;
                 
                 if (this.CreateDate != null)
                     hash = hash * 59 + this.CreateDate.GetHashCode();
+                
+                if (this.Trustor != null)
+                    hash = hash * 59 + this.Trustor.GetHashCode();
                 
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();

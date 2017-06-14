@@ -45,8 +45,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>LicenseDefinitionListing</returns>
-        LicenseDefinitionListing GetLicenseDefinitions ();
+        /// <returns>List&lt;LicenseDefinition&gt;</returns>
+        List<LicenseDefinition> GetLicenseDefinitions ();
 
         /// <summary>
         /// Get all PureCloud license definitions available for the organization.
@@ -55,8 +55,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of LicenseDefinitionListing</returns>
-        ApiResponse<LicenseDefinitionListing> GetLicenseDefinitionsWithHttpInfo ();
+        /// <returns>ApiResponse of List&lt;LicenseDefinition&gt;</returns>
+        ApiResponse<List<LicenseDefinition>> GetLicenseDefinitionsWithHttpInfo ();
         
         /// <summary>
         /// Get license assignments for the organization.
@@ -108,8 +108,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>LicenseUpdateResponse</returns>
-        LicenseUpdateResponse PostLicenseOrganization (LicenseBatchAssignmentRequest body = null);
+        /// <returns>List&lt;LicenseUpdateStatus&gt;</returns>
+        List<LicenseUpdateStatus> PostLicenseOrganization (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
         /// Update the organization&#39;s license assignments in a batch.
@@ -119,8 +119,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>ApiResponse of LicenseUpdateResponse</returns>
-        ApiResponse<LicenseUpdateResponse> PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null);
+        /// <returns>ApiResponse of List&lt;LicenseUpdateStatus&gt;</returns>
+        ApiResponse<List<LicenseUpdateStatus>> PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null);
         
         /// <summary>
         /// Fetch user licenses in a batch.
@@ -177,8 +177,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of LicenseDefinitionListing</returns>
-        System.Threading.Tasks.Task<LicenseDefinitionListing> GetLicenseDefinitionsAsync ();
+        /// <returns>Task of List&lt;LicenseDefinition&gt;</returns>
+        System.Threading.Tasks.Task<List<LicenseDefinition>> GetLicenseDefinitionsAsync ();
 
         /// <summary>
         /// Get all PureCloud license definitions available for the organization.
@@ -187,8 +187,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (LicenseDefinitionListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LicenseDefinitionListing>> GetLicenseDefinitionsAsyncWithHttpInfo ();
+        /// <returns>Task of ApiResponse (List&lt;LicenseDefinition&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<LicenseDefinition>>> GetLicenseDefinitionsAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get license assignments for the organization.
@@ -240,8 +240,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>Task of LicenseUpdateResponse</returns>
-        System.Threading.Tasks.Task<LicenseUpdateResponse> PostLicenseOrganizationAsync (LicenseBatchAssignmentRequest body = null);
+        /// <returns>Task of List&lt;LicenseUpdateStatus&gt;</returns>
+        System.Threading.Tasks.Task<List<LicenseUpdateStatus>> PostLicenseOrganizationAsync (LicenseBatchAssignmentRequest body = null);
 
         /// <summary>
         /// Update the organization&#39;s license assignments in a batch.
@@ -251,8 +251,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>Task of ApiResponse (LicenseUpdateResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LicenseUpdateResponse>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null);
+        /// <returns>Task of ApiResponse (List&lt;LicenseUpdateStatus&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<LicenseUpdateStatus>>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null);
         
         /// <summary>
         /// Fetch user licenses in a batch.
@@ -571,10 +571,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all PureCloud license definitions available for the organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>LicenseDefinitionListing</returns>
-        public LicenseDefinitionListing GetLicenseDefinitions ()
+        /// <returns>List&lt;LicenseDefinition&gt;</returns>
+        public List<LicenseDefinition> GetLicenseDefinitions ()
         {
-             ApiResponse<LicenseDefinitionListing> localVarResponse = GetLicenseDefinitionsWithHttpInfo();
+             ApiResponse<List<LicenseDefinition>> localVarResponse = GetLicenseDefinitionsWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -582,8 +582,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all PureCloud license definitions available for the organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of LicenseDefinitionListing</returns>
-        public ApiResponse< LicenseDefinitionListing > GetLicenseDefinitionsWithHttpInfo ()
+        /// <returns>ApiResponse of List&lt;LicenseDefinition&gt;</returns>
+        public ApiResponse< List<LicenseDefinition> > GetLicenseDefinitionsWithHttpInfo ()
         {
             
 
@@ -648,9 +648,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLicenseDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LicenseDefinitionListing>(localVarStatusCode,
+            return new ApiResponse<List<LicenseDefinition>>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseDefinitionListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseDefinitionListing)));
+                (List<LicenseDefinition>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseDefinition>)));
             
         }
 
@@ -659,10 +659,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all PureCloud license definitions available for the organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of LicenseDefinitionListing</returns>
-        public async System.Threading.Tasks.Task<LicenseDefinitionListing> GetLicenseDefinitionsAsync ()
+        /// <returns>Task of List&lt;LicenseDefinition&gt;</returns>
+        public async System.Threading.Tasks.Task<List<LicenseDefinition>> GetLicenseDefinitionsAsync ()
         {
-             ApiResponse<LicenseDefinitionListing> localVarResponse = await GetLicenseDefinitionsAsyncWithHttpInfo();
+             ApiResponse<List<LicenseDefinition>> localVarResponse = await GetLicenseDefinitionsAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -671,8 +671,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all PureCloud license definitions available for the organization. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (LicenseDefinitionListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LicenseDefinitionListing>> GetLicenseDefinitionsAsyncWithHttpInfo ()
+        /// <returns>Task of ApiResponse (List&lt;LicenseDefinition&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<LicenseDefinition>>> GetLicenseDefinitionsAsyncWithHttpInfo ()
         {
             
 
@@ -738,9 +738,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetLicenseDefinitions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LicenseDefinitionListing>(localVarStatusCode,
+            return new ApiResponse<List<LicenseDefinition>>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseDefinitionListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseDefinitionListing)));
+                (List<LicenseDefinition>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseDefinition>)));
             
         }
 
@@ -1129,10 +1129,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>LicenseUpdateResponse</returns>
-        public LicenseUpdateResponse PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
+        /// <returns>List&lt;LicenseUpdateStatus&gt;</returns>
+        public List<LicenseUpdateStatus> PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
         {
-             ApiResponse<LicenseUpdateResponse> localVarResponse = PostLicenseOrganizationWithHttpInfo(body);
+             ApiResponse<List<LicenseUpdateStatus>> localVarResponse = PostLicenseOrganizationWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -1141,8 +1141,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>ApiResponse of LicenseUpdateResponse</returns>
-        public ApiResponse< LicenseUpdateResponse > PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null)
+        /// <returns>ApiResponse of List&lt;LicenseUpdateStatus&gt;</returns>
+        public ApiResponse< List<LicenseUpdateStatus> > PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null)
         {
             
             
@@ -1218,9 +1218,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLicenseOrganization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LicenseUpdateResponse>(localVarStatusCode,
+            return new ApiResponse<List<LicenseUpdateStatus>>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseUpdateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseUpdateResponse)));
+                (List<LicenseUpdateStatus>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseUpdateStatus>)));
             
         }
 
@@ -1230,10 +1230,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>Task of LicenseUpdateResponse</returns>
-        public async System.Threading.Tasks.Task<LicenseUpdateResponse> PostLicenseOrganizationAsync (LicenseBatchAssignmentRequest body = null)
+        /// <returns>Task of List&lt;LicenseUpdateStatus&gt;</returns>
+        public async System.Threading.Tasks.Task<List<LicenseUpdateStatus>> PostLicenseOrganizationAsync (LicenseBatchAssignmentRequest body = null)
         {
-             ApiResponse<LicenseUpdateResponse> localVarResponse = await PostLicenseOrganizationAsyncWithHttpInfo(body);
+             ApiResponse<List<LicenseUpdateStatus>> localVarResponse = await PostLicenseOrganizationAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -1243,8 +1243,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The license assignments to update. (optional)</param>
-        /// <returns>Task of ApiResponse (LicenseUpdateResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LicenseUpdateResponse>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null)
+        /// <returns>Task of ApiResponse (List&lt;LicenseUpdateStatus&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<LicenseUpdateStatus>>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null)
         {
             
             
@@ -1321,9 +1321,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLicenseOrganization: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<LicenseUpdateResponse>(localVarStatusCode,
+            return new ApiResponse<List<LicenseUpdateStatus>>(localVarStatusCode,
                 localVarHeaders,
-                (LicenseUpdateResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseUpdateResponse)));
+                (List<LicenseUpdateStatus>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseUpdateStatus>)));
             
         }
 

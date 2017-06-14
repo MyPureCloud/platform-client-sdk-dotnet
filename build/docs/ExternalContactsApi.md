@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteExternalcontactsContactNote**](ExternalContactsApi.html#deleteexternalcontactscontactnote) | **DELETE** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Delete a note for an external contact |
 | [**DeleteExternalcontactsOrganization**](ExternalContactsApi.html#deleteexternalcontactsorganization) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Delete an external organization |
 | [**DeleteExternalcontactsOrganizationNote**](ExternalContactsApi.html#deleteexternalcontactsorganizationnote) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Delete a note for an external organization |
+| [**DeleteExternalcontactsOrganizationTrustor**](ExternalContactsApi.html#deleteexternalcontactsorganizationtrustor) | **DELETE** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor | Unlink the Trustor for this External Organization |
 | [**DeleteExternalcontactsRelationship**](ExternalContactsApi.html#deleteexternalcontactsrelationship) | **DELETE** /api/v2/externalcontacts/relationships/{relationshipId} | Delete a relationship |
 | [**GetExternalcontactsContact**](ExternalContactsApi.html#getexternalcontactscontact) | **GET** /api/v2/externalcontacts/contacts/{contactId} | Fetch an external contact |
 | [**GetExternalcontactsContactNote**](ExternalContactsApi.html#getexternalcontactscontactnote) | **GET** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Fetch a note for an external contact |
@@ -34,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutExternalcontactsConversation**](ExternalContactsApi.html#putexternalcontactsconversation) | **PUT** /api/v2/externalcontacts/conversations/{conversationId} | Associate an external contact with a conversation |
 | [**PutExternalcontactsOrganization**](ExternalContactsApi.html#putexternalcontactsorganization) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an external organization |
 | [**PutExternalcontactsOrganizationNote**](ExternalContactsApi.html#putexternalcontactsorganizationnote) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note for an external organization |
+| [**PutExternalcontactsOrganizationTrustorTrustorId**](ExternalContactsApi.html#putexternalcontactsorganizationtrustortrustorid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} | Links a Trustor with an Extenral Organization |
 | [**PutExternalcontactsRelationship**](ExternalContactsApi.html#putexternalcontactsrelationship) | **PUT** /api/v2/externalcontacts/relationships/{relationshipId} | Update a relationship |
 {: class="table table-striped"}
 
@@ -295,6 +297,69 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **noteId** | **string**| Note Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteexternalcontactsorganizationtrustor"></a>
+
+## void DeleteExternalcontactsOrganizationTrustor (string externalOrganizationId)
+
+Unlink the Trustor for this External Organization
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteExternalcontactsOrganizationTrustorExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ExternalContactsApi();
+            
+            
+            var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
+            
+            
+            
+
+            try
+            {
+                
+                // Unlink the Trustor for this External Organization
+                
+                apiInstance.DeleteExternalcontactsOrganizationTrustor(externalOrganizationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.DeleteExternalcontactsOrganizationTrustor: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalOrganizationId** | **string**| External Organization ID |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -688,7 +753,7 @@ namespace Example
 
 <a name="getexternalcontactsorganization"></a>
 
-## [**ExternalOrganization**](ExternalOrganization.html) GetExternalcontactsOrganization (string externalOrganizationId, List<string> expand = null)
+## [**ExternalOrganization**](ExternalOrganization.html) GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
 
 Fetch an external organization
 
@@ -721,8 +786,13 @@ namespace Example
             
             
             
+            var expand = expand_example;  // string | which fields, if any, to expand (externalDataSources) (optional) 
             
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalDataSources) (optional) 
+            
+            
+            
+            var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
+            
             
             
 
@@ -731,7 +801,7 @@ namespace Example
                 
                 // Fetch an external organization
                 
-                ExternalOrganization result = apiInstance.GetExternalcontactsOrganization(externalOrganizationId, expand);
+                ExternalOrganization result = apiInstance.GetExternalcontactsOrganization(externalOrganizationId, expand, includeTrustors);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -749,7 +819,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
+| **expand** | **string**| which fields, if any, to expand (externalDataSources) | [optional] <br />**Values**: externalDataSources |
+| **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1104,7 +1175,7 @@ namespace Example
 
 <a name="getexternalcontactsorganizations"></a>
 
-## [**ExternalOrganizationListing**](ExternalOrganizationListing.html) GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, string expand = null)
+## [**ExternalOrganizationListing**](ExternalOrganizationListing.html) GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
 
 Search for external organizations
 
@@ -1152,7 +1223,12 @@ namespace Example
             
             
             
-            var expand = expand_example;  // string | which fields, if any, to expand (optional) 
+            
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
+            
+            
+            
+            var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
             
             
             
@@ -1162,7 +1238,7 @@ namespace Example
                 
                 // Search for external organizations
                 
-                ExternalOrganizationListing result = apiInstance.GetExternalcontactsOrganizations(pageSize, pageNumber, q, sortOrder, expand);
+                ExternalOrganizationListing result = apiInstance.GetExternalcontactsOrganizations(pageSize, pageNumber, q, sortOrder, expand, includeTrustors);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1183,7 +1259,8 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **q** | **string**| Search query | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
-| **expand** | **string**| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
+| **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2022,6 +2099,76 @@ namespace Example
 ### Return type
 
 [**Note**](Note.html)
+
+<a name="putexternalcontactsorganizationtrustortrustorid"></a>
+
+## [**ExternalOrganization**](ExternalOrganization.html) PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
+
+Links a Trustor with an Extenral Organization
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutExternalcontactsOrganizationTrustorTrustorIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ExternalContactsApi();
+            
+            
+            var externalOrganizationId = externalOrganizationId_example;  // string | External Organization ID
+            
+            
+            
+            
+            var trustorId = trustorId_example;  // string | Trustor ID
+            
+            
+            
+
+            try
+            {
+                
+                // Links a Trustor with an Extenral Organization
+                
+                ExternalOrganization result = apiInstance.PutExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId, trustorId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PutExternalcontactsOrganizationTrustorTrustorId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **externalOrganizationId** | **string**| External Organization ID |  |
+| **trustorId** | **string**| Trustor ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExternalOrganization**](ExternalOrganization.html)
 
 <a name="putexternalcontactsrelationship"></a>
 
