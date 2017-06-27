@@ -215,7 +215,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **greetingId** | **string**| Greeting ID |  |
-| **formatId** | **string**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, NONE |
+| **formatId** | **string**| The desired media format. | [optional] [default to WAV]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 {: class="table table-striped"}
 
 ### Return type
@@ -629,7 +629,7 @@ namespace Example
 
 <a name="postgreetings"></a>
 
-## [**DefaultGreetingList**](DefaultGreetingList.html) PostGreetings (Greeting body)
+## [**Greeting**](Greeting.html) PostGreetings (Greeting body)
 
 Create a Greeting for an Organization
 
@@ -667,7 +667,7 @@ namespace Example
                 
                 // Create a Greeting for an Organization
                 
-                DefaultGreetingList result = apiInstance.PostGreetings(body);
+                Greeting result = apiInstance.PostGreetings(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -689,7 +689,7 @@ namespace Example
 
 ### Return type
 
-[**DefaultGreetingList**](DefaultGreetingList.html)
+[**Greeting**](Greeting.html)
 
 <a name="postgroupgreetings"></a>
 

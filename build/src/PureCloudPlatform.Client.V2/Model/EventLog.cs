@@ -86,6 +86,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Campaign for "CAMPAIGN"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN")]
+            Campaign,
+            
+            /// <summary>
             /// Enum CampaignRule for "CAMPAIGN_RULE"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_RULE")]

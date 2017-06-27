@@ -1796,7 +1796,7 @@ namespace Example
 
 <a name="getroutingwrapupcodes"></a>
 
-## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
 
 Get list of wrapup codes.
 
@@ -1834,6 +1834,11 @@ namespace Example
             
             
             
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
             var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
             
             
@@ -1844,7 +1849,7 @@ namespace Example
                 
                 // Get list of wrapup codes.
                 
-                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, sortBy);
+                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodes(pageSize, pageNumber, name, sortBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1863,6 +1868,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Name | [optional]  |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 {: class="table table-striped"}
 

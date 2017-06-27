@@ -232,8 +232,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>DefaultGreetingList</returns>
-        DefaultGreetingList PostGreetings (Greeting body);
+        /// <returns>Greeting</returns>
+        Greeting PostGreetings (Greeting body);
 
         /// <summary>
         /// Create a Greeting for an Organization
@@ -243,8 +243,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>ApiResponse of DefaultGreetingList</returns>
-        ApiResponse<DefaultGreetingList> PostGreetingsWithHttpInfo (Greeting body);
+        /// <returns>ApiResponse of Greeting</returns>
+        ApiResponse<Greeting> PostGreetingsWithHttpInfo (Greeting body);
         
         /// <summary>
         /// Creates a Greeting for a Group
@@ -608,8 +608,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>Task of DefaultGreetingList</returns>
-        System.Threading.Tasks.Task<DefaultGreetingList> PostGreetingsAsync (Greeting body);
+        /// <returns>Task of Greeting</returns>
+        System.Threading.Tasks.Task<Greeting> PostGreetingsAsync (Greeting body);
 
         /// <summary>
         /// Create a Greeting for an Organization
@@ -619,8 +619,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body);
+        /// <returns>Task of ApiResponse (Greeting)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGreetingsAsyncWithHttpInfo (Greeting body);
         
         /// <summary>
         /// Creates a Greeting for a Group
@@ -2694,10 +2694,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>DefaultGreetingList</returns>
-        public DefaultGreetingList PostGreetings (Greeting body)
+        /// <returns>Greeting</returns>
+        public Greeting PostGreetings (Greeting body)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = PostGreetingsWithHttpInfo(body);
+             ApiResponse<Greeting> localVarResponse = PostGreetingsWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -2706,8 +2706,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>ApiResponse of DefaultGreetingList</returns>
-        public ApiResponse< DefaultGreetingList > PostGreetingsWithHttpInfo (Greeting body)
+        /// <returns>ApiResponse of Greeting</returns>
+        public ApiResponse< Greeting > PostGreetingsWithHttpInfo (Greeting body)
         {
             
             
@@ -2787,9 +2787,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
+            return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarHeaders,
-                (DefaultGreetingList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DefaultGreetingList)));
+                (Greeting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Greeting)));
             
         }
 
@@ -2799,10 +2799,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>Task of DefaultGreetingList</returns>
-        public async System.Threading.Tasks.Task<DefaultGreetingList> PostGreetingsAsync (Greeting body)
+        /// <returns>Task of Greeting</returns>
+        public async System.Threading.Tasks.Task<Greeting> PostGreetingsAsync (Greeting body)
         {
-             ApiResponse<DefaultGreetingList> localVarResponse = await PostGreetingsAsyncWithHttpInfo(body);
+             ApiResponse<Greeting> localVarResponse = await PostGreetingsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -2812,8 +2812,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">The Greeting to create</param>
-        /// <returns>Task of ApiResponse (DefaultGreetingList)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> PostGreetingsAsyncWithHttpInfo (Greeting body)
+        /// <returns>Task of ApiResponse (Greeting)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Greeting>> PostGreetingsAsyncWithHttpInfo (Greeting body)
         {
             
             
@@ -2894,9 +2894,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostGreetings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DefaultGreetingList>(localVarStatusCode,
+            return new ApiResponse<Greeting>(localVarStatusCode,
                 localVarHeaders,
-                (DefaultGreetingList) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DefaultGreetingList)));
+                (Greeting) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Greeting)));
             
         }
 

@@ -629,9 +629,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>WrapupCodeEntityListing</returns>
-        WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -642,9 +643,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        ApiResponse<WrapupCodeEntityListing> GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
         
         /// <summary>
         /// List routing skills for user
@@ -1693,9 +1695,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
 
         /// <summary>
         /// Get list of wrapup codes.
@@ -1706,9 +1709,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null);
         
         /// <summary>
         /// List routing skills for user
@@ -7511,11 +7515,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>WrapupCodeEntityListing</returns>
-        public WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public WrapupCodeEntityListing GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesWithHttpInfo(pageSize, pageNumber, sortBy);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingWrapupcodesWithHttpInfo(pageSize, pageNumber, name, sortBy);
              return localVarResponse.Data;
         }
 
@@ -7525,10 +7530,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
-        public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public ApiResponse< WrapupCodeEntityListing > GetRoutingWrapupcodesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
+            
+            
             
             
             
@@ -7571,6 +7579,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             
@@ -7617,11 +7627,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
-        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingWrapupcodesAsync (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, sortBy);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingWrapupcodesAsyncWithHttpInfo(pageSize, pageNumber, name, sortBy);
              return localVarResponse.Data;
 
         }
@@ -7632,10 +7643,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Name (optional)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingWrapupcodesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
         {
+            
+            
             
             
             
@@ -7678,6 +7692,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
             
             if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
             
             if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
             

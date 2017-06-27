@@ -53,6 +53,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignSetDialingModeError,
             
             /// <summary>
+            /// Enum CampaignThrottled for "CAMPAIGN_THROTTLED"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_THROTTLED")]
+            CampaignThrottled,
+            
+            /// <summary>
             /// Enum InvalidCallableTimeZone for "INVALID_CALLABLE_TIME_ZONE"
             /// </summary>
             [EnumMember(Value = "INVALID_CALLABLE_TIME_ZONE")]
@@ -99,6 +105,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "CONTACT_LIST_FILTER_EVALUATION_FAILED")]
             ContactListFilterEvaluationFailed,
+            
+            /// <summary>
+            /// Enum InactiveEdgesFailedPlaceCalls for "INACTIVE_EDGES_FAILED_PLACE_CALLS"
+            /// </summary>
+            [EnumMember(Value = "INACTIVE_EDGES_FAILED_PLACE_CALLS")]
+            InactiveEdgesFailedPlaceCalls,
+            
+            /// <summary>
+            /// Enum InactiveEdgesTurnedCampaignOff for "INACTIVE_EDGES_TURNED_CAMPAIGN_OFF"
+            /// </summary>
+            [EnumMember(Value = "INACTIVE_EDGES_TURNED_CAMPAIGN_OFF")]
+            InactiveEdgesTurnedCampaignOff,
             
             /// <summary>
             /// Enum InvalidPhoneNumber for "INVALID_PHONE_NUMBER"

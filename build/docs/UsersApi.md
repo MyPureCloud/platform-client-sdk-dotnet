@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
 | [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
+| [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
 | [**PostUserRoutingskills**](UsersApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
 | [**PostUsersSearch**](UsersApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
@@ -2210,6 +2211,75 @@ namespace Example
 ### Return type
 
 [**ObservationQueryResponse**](ObservationQueryResponse.html)
+
+<a name="postuserinvite"></a>
+
+## void PostUserInvite (string userId, bool? force = null)
+
+Send an activation email to the user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUserInviteExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            var force = true;  // bool? | Resend the invitation even if one is already outstanding (optional)  (default to false)
+            
+            
+            
+
+            try
+            {
+                
+                // Send an activation email to the user
+                
+                apiInstance.PostUserInvite(userId, force);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUserInvite: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **force** | **bool?**| Resend the invitation even if one is already outstanding | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postuserroutingskills"></a>
 
