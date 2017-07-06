@@ -225,16 +225,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum ByColumn for "LAST_ATTEMPT_BY_COLUMN"
+            /// Enum LastAttemptByColumn for "LAST_ATTEMPT_BY_COLUMN"
             /// </summary>
             [EnumMember(Value = "LAST_ATTEMPT_BY_COLUMN")]
-            ByColumn,
+            LastAttemptByColumn,
             
             /// <summary>
-            /// Enum Overall for "LAST_ATTEMPT_OVERALL"
+            /// Enum LastAttemptOverall for "LAST_ATTEMPT_OVERALL"
             /// </summary>
             [EnumMember(Value = "LAST_ATTEMPT_OVERALL")]
-            Overall
+            LastAttemptOverall
         }
         
         

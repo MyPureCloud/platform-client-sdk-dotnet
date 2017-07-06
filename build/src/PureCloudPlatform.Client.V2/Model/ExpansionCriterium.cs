@@ -35,10 +35,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Seconds for "TIMEOUT_SECONDS"
+            /// Enum TimeoutSeconds for "TIMEOUT_SECONDS"
             /// </summary>
             [EnumMember(Value = "TIMEOUT_SECONDS")]
-            Seconds
+            TimeoutSeconds
         }
         
         

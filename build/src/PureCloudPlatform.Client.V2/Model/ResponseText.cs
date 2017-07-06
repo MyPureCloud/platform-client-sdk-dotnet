@@ -39,16 +39,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Plain for "text/plain"
+            /// Enum Textplain for "text/plain"
             /// </summary>
             [EnumMember(Value = "text/plain")]
-            Plain,
+            Textplain,
             
             /// <summary>
-            /// Enum Html for "text/html"
+            /// Enum Texthtml for "text/html"
             /// </summary>
             [EnumMember(Value = "text/html")]
-            Html
+            Texthtml
         }
         
         

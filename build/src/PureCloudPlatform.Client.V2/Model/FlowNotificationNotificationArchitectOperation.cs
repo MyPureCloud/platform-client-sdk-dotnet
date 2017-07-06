@@ -62,6 +62,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Delete,
             
             /// <summary>
+            /// Enum History for "HISTORY"
+            /// </summary>
+            [EnumMember(Value = "HISTORY")]
+            History,
+            
+            /// <summary>
             /// Enum Publish for "PUBLISH"
             /// </summary>
             [EnumMember(Value = "PUBLISH")]

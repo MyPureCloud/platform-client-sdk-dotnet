@@ -83,6 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Scheduled,
             
             /// <summary>
+            /// Enum Uploading for "UPLOADING"
+            /// </summary>
+            [EnumMember(Value = "UPLOADING")]
+            Uploading,
+            
+            /// <summary>
             /// Enum None for "NONE"
             /// </summary>
             [EnumMember(Value = "NONE")]
@@ -430,7 +436,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public ConversationNotificationCallbacks(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, DocumentDataV2NotificationWorkspace Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, Object AdditionalProperties = null)
+        public ConversationNotificationCallbacks(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Held = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, ConversationNotificationDialerPreview DialerPreview = null, ConversationNotificationVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, string Provider = null, int? TimeoutSeconds = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null, Object AdditionalProperties = null)
         {
             
             
@@ -740,7 +746,7 @@ this.AdditionalProperties = AdditionalProperties;
         /// Gets or Sets Voicemail
         /// </summary>
         [DataMember(Name="voicemail", EmitDefaultValue=false)]
-        public DocumentDataV2NotificationWorkspace Voicemail { get; set; }
+        public ConversationNotificationVoicemail Voicemail { get; set; }
         
         
         

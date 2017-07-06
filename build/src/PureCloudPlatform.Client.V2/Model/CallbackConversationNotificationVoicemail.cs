@@ -23,6 +23,56 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets UploadStatus
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum UploadStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Pending for "PENDING"
+            /// </summary>
+            [EnumMember(Value = "PENDING")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Complete for "COMPLETE"
+            /// </summary>
+            [EnumMember(Value = "COMPLETE")]
+            Complete,
+            
+            /// <summary>
+            /// Enum Failed for "FAILED"
+            /// </summary>
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Timeout for "TIMEOUT"
+            /// </summary>
+            [EnumMember(Value = "TIMEOUT")]
+            Timeout
+        }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets UploadStatus
+        /// </summary>
+        [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
+        public UploadStatusEnum? UploadStatus { get; set; }
         
         
     
@@ -34,8 +84,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         
         
-        public CallbackConversationNotificationVoicemail(string Id = null)
+        
+        /// <param name="UploadStatus">UploadStatus.</param>
+        
+        
+        public CallbackConversationNotificationVoicemail(string Id = null, UploadStatusEnum? UploadStatus = null)
         {
+            
+            
+            
+            
             
             
             
@@ -51,6 +109,15 @@ this.Id = Id;
             
             
             
+            
+            
+            
+            
+this.UploadStatus = UploadStatus;
+            
+            
+            
+            
         }
         
         
@@ -60,6 +127,8 @@ this.Id = Id;
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+        
+        
         
         
         /// <summary>
@@ -72,6 +141,8 @@ this.Id = Id;
             sb.Append("class CallbackConversationNotificationVoicemail {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
+            sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -113,6 +184,11 @@ this.Id = Id;
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.UploadStatus == other.UploadStatus ||
+                    this.UploadStatus != null &&
+                    this.UploadStatus.Equals(other.UploadStatus)
                 );
         }
 
@@ -130,6 +206,9 @@ this.Id = Id;
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.UploadStatus != null)
+                    hash = hash * 59 + this.UploadStatus.GetHashCode();
                 
                 return hash;
             }

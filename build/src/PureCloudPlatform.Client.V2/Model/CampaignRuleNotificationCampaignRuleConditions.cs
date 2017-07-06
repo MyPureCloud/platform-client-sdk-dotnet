@@ -41,16 +41,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Progress for "CAMPAIGN_PROGRESS"
+            /// Enum CampaignProgress for "CAMPAIGN_PROGRESS"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_PROGRESS")]
-            Progress,
+            CampaignProgress,
             
             /// <summary>
-            /// Enum Agents for "CAMPAIGN_AGENTS"
+            /// Enum CampaignAgents for "CAMPAIGN_AGENTS"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_AGENTS")]
-            Agents
+            CampaignAgents
         }
         
         

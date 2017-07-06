@@ -111,16 +111,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Cloud for "PURE_CLOUD"
+            /// Enum PureCloud for "PURE_CLOUD"
             /// </summary>
             [EnumMember(Value = "PURE_CLOUD")]
-            Cloud,
+            PureCloud,
             
             /// <summary>
-            /// Enum CloudVoice for "PURE_CLOUD_VOICE"
+            /// Enum PureCloudVoice for "PURE_CLOUD_VOICE"
             /// </summary>
             [EnumMember(Value = "PURE_CLOUD_VOICE")]
-            CloudVoice
+            PureCloudVoice
         }
         
         

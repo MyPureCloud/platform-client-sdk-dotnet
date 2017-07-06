@@ -45,16 +45,16 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Precall for "DIALER_PRECALL"
+            /// Enum DialerPrecall for "DIALER_PRECALL"
             /// </summary>
             [EnumMember(Value = "DIALER_PRECALL")]
-            Precall,
+            DialerPrecall,
             
             /// <summary>
-            /// Enum Wrapup for "DIALER_WRAPUP"
+            /// Enum DialerWrapup for "DIALER_WRAPUP"
             /// </summary>
             [EnumMember(Value = "DIALER_WRAPUP")]
-            Wrapup
+            DialerWrapup
         }
         
         

@@ -155,6 +155,51 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets PropertyType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum PropertyTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum LastAttemptByColumn for "LAST_ATTEMPT_BY_COLUMN"
+            /// </summary>
+            [EnumMember(Value = "LAST_ATTEMPT_BY_COLUMN")]
+            LastAttemptByColumn,
+            
+            /// <summary>
+            /// Enum LastAttemptOverall for "LAST_ATTEMPT_OVERALL"
+            /// </summary>
+            [EnumMember(Value = "LAST_ATTEMPT_OVERALL")]
+            LastAttemptOverall,
+            
+            /// <summary>
+            /// Enum LastResultByColumn for "LAST_RESULT_BY_COLUMN"
+            /// </summary>
+            [EnumMember(Value = "LAST_RESULT_BY_COLUMN")]
+            LastResultByColumn,
+            
+            /// <summary>
+            /// Enum LastResultOverall for "LAST_RESULT_OVERALL"
+            /// </summary>
+            [EnumMember(Value = "LAST_RESULT_OVERALL")]
+            LastResultOverall
+        }
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -180,6 +225,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets PropertyType
+        /// </summary>
+        [DataMember(Name="propertyType", EmitDefaultValue=false)]
+        public PropertyTypeEnum? PropertyType { get; set; }
         
         
         
@@ -220,11 +275,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="PropertyType">PropertyType.</param>
+        
+        
+        
+        /// <param name="Property">Property.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public RuleSetNotificationCondition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, Object AdditionalProperties = null)
+        public RuleSetNotificationCondition(string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? _Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -326,6 +397,24 @@ this.Codes = Codes;
             
             
             
+this.PropertyType = PropertyType;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Property = Property;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AdditionalProperties = AdditionalProperties;
             
             
@@ -379,6 +468,16 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         
+        
+        
+        /// <summary>
+        /// Gets or Sets Property
+        /// </summary>
+        [DataMember(Name="property", EmitDefaultValue=false)]
+        public string Property { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
@@ -408,6 +507,10 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  _Operator: ").Append(_Operator).Append("\n");
             
             sb.Append("  Codes: ").Append(Codes).Append("\n");
+            
+            sb.Append("  PropertyType: ").Append(PropertyType).Append("\n");
+            
+            sb.Append("  Property: ").Append(Property).Append("\n");
             
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             
@@ -483,6 +586,16 @@ this.AdditionalProperties = AdditionalProperties;
                     this.Codes.SequenceEqual(other.Codes)
                 ) &&
                 (
+                    this.PropertyType == other.PropertyType ||
+                    this.PropertyType != null &&
+                    this.PropertyType.Equals(other.PropertyType)
+                ) &&
+                (
+                    this.Property == other.Property ||
+                    this.Property != null &&
+                    this.Property.Equals(other.Property)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -521,6 +634,12 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.Codes != null)
                     hash = hash * 59 + this.Codes.GetHashCode();
+                
+                if (this.PropertyType != null)
+                    hash = hash * 59 + this.PropertyType.GetHashCode();
+                
+                if (this.Property != null)
+                    hash = hash * 59 + this.Property.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
