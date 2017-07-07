@@ -438,18 +438,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteNotificationsChannelSubscriptionsWithHttpInfo (string channelId)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteNotificationsChannelSubscriptions");
-            
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -476,25 +472,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -536,18 +532,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteNotificationsChannelSubscriptions");
             
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -574,26 +567,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -636,14 +628,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of AvailableTopicEntityListing</returns>
         public ApiResponse< AvailableTopicEntityListing > GetNotificationsAvailabletopicsWithHttpInfo (List<string> expand = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/notifications/availabletopics";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -670,25 +659,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -731,14 +720,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (AvailableTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo (List<string> expand = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/notifications/availabletopics";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -765,26 +751,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -827,18 +812,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         public ApiResponse< ChannelTopicEntityListing > GetNotificationsChannelSubscriptionsWithHttpInfo (string channelId)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetNotificationsChannelSubscriptions");
-            
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -865,25 +846,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -926,18 +907,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="channelId">Channel ID</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> GetNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetNotificationsChannelSubscriptions");
             
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -964,26 +942,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1024,12 +1001,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of ChannelEntityListing</returns>
         public ApiResponse< ChannelEntityListing > GetNotificationsChannelsWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1056,23 +1032,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1113,12 +1090,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1145,24 +1121,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1207,24 +1183,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         public ApiResponse< ChannelTopicEntityListing > PostNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
-            
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1251,34 +1220,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1323,24 +1288,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PostNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
             
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1367,35 +1327,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1436,12 +1391,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
         public ApiResponse< Channel > PostNotificationsChannelsWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1468,23 +1422,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1525,12 +1480,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Channel>> PostNotificationsChannelsAsyncWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/notifications/channels";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1557,24 +1511,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1619,24 +1573,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>ApiResponse of ChannelTopicEntityListing</returns>
         public ApiResponse< ChannelTopicEntityListing > PutNotificationsChannelSubscriptionsWithHttpInfo (string channelId, List<ChannelTopic> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
-            
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1663,34 +1610,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1735,24 +1678,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Body</param>
         /// <returns>Task of ApiResponse (ChannelTopicEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ChannelTopicEntityListing>> PutNotificationsChannelSubscriptionsAsyncWithHttpInfo (string channelId, List<ChannelTopic> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'channelId' is set
             if (channelId == null)
                 throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
             
-            
 
             var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1779,35 +1717,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (channelId != null) localVarPathParams.Add("channelId", Configuration.ApiClient.ParameterToString(channelId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

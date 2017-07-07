@@ -942,18 +942,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteAuthorizationRoleWithHttpInfo (string roleId)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationRole");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -980,25 +976,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1040,18 +1036,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAuthorizationRoleAsyncWithHttpInfo (string roleId)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationRole");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1078,26 +1071,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1139,18 +1131,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteUserRolesWithHttpInfo (string userId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->DeleteUserRoles");
-            
-            
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1177,25 +1165,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1237,18 +1225,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRolesAsyncWithHttpInfo (string userId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->DeleteUserRoles");
             
-            
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1275,26 +1260,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1339,16 +1323,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
         public ApiResponse< PermissionCollectionEntityListing > GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        {
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/permissions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1375,27 +1354,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1440,16 +1418,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
-        {
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/permissions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1476,28 +1449,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1538,12 +1509,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OrganizationProductEntityListing</returns>
         public ApiResponse< OrganizationProductEntityListing > GetAuthorizationProductsWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/products";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1570,23 +1540,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1627,12 +1598,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OrganizationProductEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> GetAuthorizationProductsAsyncWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/products";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1659,24 +1629,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1719,18 +1689,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         public ApiResponse< DomainOrganizationRole > GetAuthorizationRoleWithHttpInfo (string roleId)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRole");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1757,25 +1723,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1818,18 +1784,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="roleId">Role ID</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> GetAuthorizationRoleAsyncWithHttpInfo (string roleId)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRole");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1856,26 +1819,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1920,24 +1882,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
         public ApiResponse< DomainOrgRoleDifference > GetAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId)
-        {
-            
-            
+        { 
             // verify the required parameter 'leftRoleId' is set
             if (leftRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationApi->GetAuthorizationRoleComparedefaultRightRoleId");
-            
-            
-            
             // verify the required parameter 'rightRoleId' is set
             if (rightRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->GetAuthorizationRoleComparedefaultRightRoleId");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1964,27 +1919,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId));
+            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId)); // path parameter
-            
-            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2029,24 +1983,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="rightRoleId">Right Role id</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> GetAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId)
-        {
-            
-            
+        { 
             // verify the required parameter 'leftRoleId' is set
             if (leftRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationApi->GetAuthorizationRoleComparedefaultRightRoleId");
-            
-            
             
             // verify the required parameter 'rightRoleId' is set
             if (rightRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->GetAuthorizationRoleComparedefaultRightRoleId");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2073,28 +2022,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId));
+            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId)); // path parameter
-            
-            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2153,30 +2100,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
         public ApiResponse< OrganizationRoleEntityListing > GetAuthorizationRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2203,41 +2131,33 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", Configuration.ApiClient.ParameterToString(previousPage)));
+            if (permission != null) permission.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("permission", Configuration.ApiClient.ParameterToString(obj))); });
+            if (defaultRoleId != null) defaultRoleId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("defaultRoleId", Configuration.ApiClient.ParameterToString(obj))); });
+            if (userCount != null) localVarQueryParams.Add(new Tuple<string, string>("userCount", Configuration.ApiClient.ParameterToString(userCount)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
-            
-            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
-            
-            if (permission != null) localVarQueryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
-            
-            if (defaultRoleId != null) localVarQueryParams.Add("defaultRoleId", Configuration.ApiClient.ParameterToString(defaultRoleId)); // query parameter
-            
-            if (userCount != null) localVarQueryParams.Add("userCount", Configuration.ApiClient.ParameterToString(userCount)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2296,30 +2216,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2346,42 +2247,33 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+            if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", Configuration.ApiClient.ParameterToString(nextPage)));
+            if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", Configuration.ApiClient.ParameterToString(previousPage)));
+            if (permission != null) permission.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("permission", Configuration.ApiClient.ParameterToString(obj))); });
+            if (defaultRoleId != null) defaultRoleId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("defaultRoleId", Configuration.ApiClient.ParameterToString(obj))); });
+            if (userCount != null) localVarQueryParams.Add(new Tuple<string, string>("userCount", Configuration.ApiClient.ParameterToString(userCount)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            if (nextPage != null) localVarQueryParams.Add("nextPage", Configuration.ApiClient.ParameterToString(nextPage)); // query parameter
-            
-            if (previousPage != null) localVarQueryParams.Add("previousPage", Configuration.ApiClient.ParameterToString(previousPage)); // query parameter
-            
-            if (permission != null) localVarQueryParams.Add("permission", Configuration.ApiClient.ParameterToString(permission)); // query parameter
-            
-            if (defaultRoleId != null) localVarQueryParams.Add("defaultRoleId", Configuration.ApiClient.ParameterToString(defaultRoleId)); // query parameter
-            
-            if (userCount != null) localVarQueryParams.Add("userCount", Configuration.ApiClient.ParameterToString(userCount)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2424,18 +2316,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
         public ApiResponse< UserAuthorization > GetUserRolesWithHttpInfo (string userId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->GetUserRoles");
-            
-            
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2462,25 +2350,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2523,18 +2411,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string userId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->GetUserRoles");
             
-            
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2561,26 +2446,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2625,24 +2509,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         public ApiResponse< DomainOrganizationRole > PatchAuthorizationRoleWithHttpInfo (string roleId, DomainOrganizationRole body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PatchAuthorizationRole");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchAuthorizationRole");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2669,34 +2546,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2741,24 +2614,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PatchAuthorizationRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRole body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PatchAuthorizationRole");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchAuthorizationRole");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2785,35 +2653,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2860,30 +2723,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrgRoleDifference</returns>
         public ApiResponse< DomainOrgRoleDifference > PostAuthorizationRoleComparedefaultRightRoleIdWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
-        {
-            
-            
+        { 
             // verify the required parameter 'leftRoleId' is set
             if (leftRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
-            
-            
-            
             // verify the required parameter 'rightRoleId' is set
             if (rightRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2910,36 +2763,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId));
+            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId)); // path parameter
-            
-            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2986,30 +2834,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrgRoleDifference)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrgRoleDifference>> PostAuthorizationRoleComparedefaultRightRoleIdAsyncWithHttpInfo (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
-        {
-            
-            
+        { 
             // verify the required parameter 'leftRoleId' is set
             if (leftRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'leftRoleId' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
-            
-            
             
             // verify the required parameter 'rightRoleId' is set
             if (rightRoleId == null)
                 throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
             
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3036,37 +2877,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId));
+            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (leftRoleId != null) localVarPathParams.Add("leftRoleId", Configuration.ApiClient.ParameterToString(leftRoleId)); // path parameter
-            
-            if (rightRoleId != null) localVarPathParams.Add("rightRoleId", Configuration.ApiClient.ParameterToString(rightRoleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3109,18 +2944,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         public ApiResponse< DomainOrganizationRole > PostAuthorizationRolesWithHttpInfo (DomainOrganizationRoleCreate body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoles");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3147,32 +2978,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3215,18 +3043,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PostAuthorizationRolesAsyncWithHttpInfo (DomainOrganizationRoleCreate body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoles");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3253,33 +3078,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3322,14 +3143,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
         public ApiResponse< OrganizationRoleEntityListing > PostAuthorizationRolesDefaultWithHttpInfo (bool? force = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/roles/default";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3356,25 +3174,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (force != null) localVarQueryParams.Add(new Tuple<string, string>("force", Configuration.ApiClient.ParameterToString(force)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (force != null) localVarQueryParams.Add("force", Configuration.ApiClient.ParameterToString(force)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3417,14 +3235,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="force">Restore default roles (optional, default to false)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostAuthorizationRolesDefaultAsyncWithHttpInfo (bool? force = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/authorization/roles/default";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3451,26 +3266,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (force != null) localVarQueryParams.Add(new Tuple<string, string>("force", Configuration.ApiClient.ParameterToString(force)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (force != null) localVarQueryParams.Add("force", Configuration.ApiClient.ParameterToString(force)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3515,24 +3329,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>ApiResponse of DomainOrganizationRole</returns>
         public ApiResponse< DomainOrganizationRole > PutAuthorizationRoleWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutAuthorizationRole");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRole");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3559,34 +3366,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3631,24 +3434,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization role</param>
         /// <returns>Task of ApiResponse (DomainOrganizationRole)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DomainOrganizationRole>> PutAuthorizationRoleAsyncWithHttpInfo (string roleId, DomainOrganizationRoleUpdate body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutAuthorizationRole");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRole");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3675,35 +3473,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3748,24 +3541,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         public ApiResponse< List<string> > PutAuthorizationRoleUsersAddWithHttpInfo (string roleId, List<string> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutAuthorizationRoleUsersAdd");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersAdd");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3792,34 +3578,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3864,24 +3646,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutAuthorizationRoleUsersAddAsyncWithHttpInfo (string roleId, List<string> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutAuthorizationRoleUsersAdd");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersAdd");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3908,35 +3685,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3981,24 +3753,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>ApiResponse of List&lt;string&gt;</returns>
         public ApiResponse< List<string> > PutAuthorizationRoleUsersRemoveWithHttpInfo (string roleId, List<string> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutAuthorizationRoleUsersRemove");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersRemove");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4025,34 +3790,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4097,24 +3858,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of user IDs</param>
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PutAuthorizationRoleUsersRemoveAsyncWithHttpInfo (string roleId, List<string> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'roleId' is set
             if (roleId == null)
                 throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PutAuthorizationRoleUsersRemove");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersRemove");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4141,35 +3897,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (roleId != null) localVarPathParams.Add("roleId", Configuration.ApiClient.ParameterToString(roleId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4212,18 +3963,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization roles list</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
         public ApiResponse< OrganizationRoleEntityListing > PutAuthorizationRolesDefaultWithHttpInfo (List<DomainOrganizationRole> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRolesDefault");
-            
-            
 
             var localVarPath = "/api/v2/authorization/roles/default";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4250,32 +3997,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4318,18 +4062,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Organization roles list</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PutAuthorizationRolesDefaultAsyncWithHttpInfo (List<DomainOrganizationRole> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRolesDefault");
             
-            
 
             var localVarPath = "/api/v2/authorization/roles/default";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4356,33 +4097,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4427,24 +4164,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>ApiResponse of UserAuthorization</returns>
         public ApiResponse< UserAuthorization > PutUserRolesWithHttpInfo (string userId, List<string> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserRoles");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserRoles");
-            
-            
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4471,34 +4201,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4543,24 +4269,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">List of roles</param>
         /// <returns>Task of ApiResponse (UserAuthorization)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> PutUserRolesAsyncWithHttpInfo (string userId, List<string> body)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling AuthorizationApi->PutUserRoles");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserRoles");
             
-            
 
             var localVarPath = "/api/v2/users/{userId}/roles";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4587,35 +4308,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

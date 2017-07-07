@@ -510,18 +510,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeletePresencedefinitionWithHttpInfo (string presenceId)
-        {
-            
-            
+        { 
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
                 throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresencedefinition");
-            
-            
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -548,25 +544,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -608,18 +604,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="presenceId">Organization Presence ID</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresencedefinitionAsyncWithHttpInfo (string presenceId)
-        {
-            
-            
+        { 
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
                 throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresencedefinition");
             
-            
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -646,26 +639,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -710,20 +702,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
         public ApiResponse< OrganizationPresence > GetPresencedefinitionWithHttpInfo (string presenceId, string localeCode = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
                 throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresencedefinition");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -750,27 +736,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId));
+
+            // Query params
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", Configuration.ApiClient.ParameterToString(localeCode)));
+
+            // Header params
+
+            // Form params
             
-            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            
-            
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -815,20 +800,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for the presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo (string presenceId, string localeCode = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
                 throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresencedefinition");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -855,28 +835,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId));
+
+            // Query params
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", Configuration.ApiClient.ParameterToString(localeCode)));
+
+            // Header params
+
+            // Form params
             
-            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            
-            
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -925,20 +903,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>ApiResponse of OrganizationPresenceEntityListing</returns>
         public ApiResponse< OrganizationPresenceEntityListing > GetPresencedefinitionsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/presencedefinitions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -965,31 +934,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", Configuration.ApiClient.ParameterToString(localeCode)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1038,20 +1004,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="localeCode">The locale code to fetch for each presence definition. Use ALL to fetch everything. (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationPresenceEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/presencedefinitions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1078,32 +1035,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (localeCode != null) localVarQueryParams.Add(new Tuple<string, string>("localeCode", Configuration.ApiClient.ParameterToString(localeCode)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            if (localeCode != null) localVarQueryParams.Add("localeCode", Configuration.ApiClient.ParameterToString(localeCode)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1144,12 +1097,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List&lt;SystemPresence&gt;</returns>
         public ApiResponse< List<SystemPresence> > GetSystempresencesWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/systempresences";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1176,23 +1128,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1233,12 +1186,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (List&lt;SystemPresence&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<SystemPresence>>> GetSystempresencesAsyncWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/systempresences";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1265,24 +1217,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1327,24 +1279,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Source</param>
         /// <returns>ApiResponse of UserPresence</returns>
         public ApiResponse< UserPresence > GetUserPresenceWithHttpInfo (string userId, string sourceId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresence");
-            
-            
-            
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
                 throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserPresence");
-            
-            
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1371,27 +1316,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1436,24 +1380,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sourceId">Source</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> GetUserPresenceAsyncWithHttpInfo (string userId, string sourceId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresence");
-            
-            
             
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
                 throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserPresence");
             
-            
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1480,28 +1419,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1548,30 +1485,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User presence</param>
         /// <returns>ApiResponse of UserPresence</returns>
         public ApiResponse< UserPresence > PatchUserPresenceWithHttpInfo (string userId, string sourceId, UserPresence body)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserPresence");
-            
-            
-            
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
                 throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserPresence");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresence");
-            
-            
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1598,36 +1525,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1674,30 +1596,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">User presence</param>
         /// <returns>Task of ApiResponse (UserPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserPresence>> PatchUserPresenceAsyncWithHttpInfo (string userId, string sourceId, UserPresence body)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->PatchUserPresence");
-            
-            
             
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
                 throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->PatchUserPresence");
             
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresence");
             
-            
 
             var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1724,37 +1639,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (sourceId != null) localVarPathParams.Add("sourceId", Configuration.ApiClient.ParameterToString(sourceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1797,18 +1706,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
         public ApiResponse< OrganizationPresence > PostPresencedefinitionsWithHttpInfo (OrganizationPresence body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresencedefinitions");
-            
-            
 
             var localVarPath = "/api/v2/presencedefinitions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1835,32 +1740,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1903,18 +1805,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The Presence Definition to create</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PostPresencedefinitionsAsyncWithHttpInfo (OrganizationPresence body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresencedefinitions");
             
-            
 
             var localVarPath = "/api/v2/presencedefinitions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1941,33 +1840,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2012,24 +1907,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>ApiResponse of OrganizationPresence</returns>
         public ApiResponse< OrganizationPresence > PutPresencedefinitionWithHttpInfo (string presenceId, OrganizationPresence body)
-        {
-            
-            
+        { 
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
                 throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->PutPresencedefinition");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresencedefinition");
-            
-            
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2056,34 +1944,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2128,24 +2012,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The OrganizationPresence to update</param>
         /// <returns>Task of ApiResponse (OrganizationPresence)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> PutPresencedefinitionAsyncWithHttpInfo (string presenceId, OrganizationPresence body)
-        {
-            
-            
+        { 
             // verify the required parameter 'presenceId' is set
             if (presenceId == null)
                 throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->PutPresencedefinition");
-            
-            
             
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresencedefinition");
             
-            
 
             var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2172,35 +2051,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (presenceId != null) localVarPathParams.Add("presenceId", Configuration.ApiClient.ParameterToString(presenceId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

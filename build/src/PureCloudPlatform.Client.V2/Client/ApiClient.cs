@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Client
 
         // Creates and sets up a RestRequest prior to a call.
         private RestRequest PrepareRequest(
-            String path, RestSharp.Method method, Dictionary<String, String> queryParams, Object postBody,
+            String path, RestSharp.Method method, List<Tuple<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
@@ -118,7 +118,7 @@ namespace PureCloudPlatform.Client.V2.Client
 
             // add query parameter, if any
             foreach(var param in queryParams)
-                request.AddQueryParameter(param.Key, param.Value);
+                request.AddQueryParameter(param.Item1, param.Item2);
 
             // add form parameter, if any
             foreach(var param in formParams)
@@ -162,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="contentType">Content Type of the request</param>
         /// <returns>Object</returns>
         public Object CallApi(
-            String path, RestSharp.Method method, Dictionary<String, String> queryParams, Object postBody,
+            String path, RestSharp.Method method, List<Tuple<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)
@@ -197,7 +197,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <param name="contentType">Content type.</param>
         /// <returns>The Task instance.</returns>
         public async System.Threading.Tasks.Task<Object> CallApiAsync(
-            String path, RestSharp.Method method, Dictionary<String, String> queryParams, Object postBody,
+            String path, RestSharp.Method method, List<Tuple<String, String>> queryParams, Object postBody,
             Dictionary<String, String> headerParams, Dictionary<String, String> formParams,
             Dictionary<String, FileParameter> fileParams, Dictionary<String, String> pathParams,
             String contentType)

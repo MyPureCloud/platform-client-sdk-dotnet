@@ -313,12 +313,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of GeolocationSettings</returns>
         public ApiResponse< GeolocationSettings > GetGeolocationsSettingsWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/geolocations/settings";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -345,23 +344,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -402,12 +402,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/geolocations/settings";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -434,24 +433,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -496,24 +495,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>ApiResponse of Geolocation</returns>
         public ApiResponse< Geolocation > GetUserGeolocationWithHttpInfo (string userId, string clientId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->GetUserGeolocation");
-            
-            
-            
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetUserGeolocation");
-            
-            
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -540,27 +532,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -605,24 +596,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="clientId">client Id</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> GetUserGeolocationAsyncWithHttpInfo (string userId, string clientId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->GetUserGeolocation");
-            
-            
             
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetUserGeolocation");
             
-            
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -649,28 +635,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -713,18 +697,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation settings</param>
         /// <returns>ApiResponse of GeolocationSettings</returns>
         public ApiResponse< GeolocationSettings > PatchGeolocationsSettingsWithHttpInfo (GeolocationSettings body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchGeolocationsSettings");
-            
-            
 
             var localVarPath = "/api/v2/geolocations/settings";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -751,32 +731,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -819,18 +796,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation settings</param>
         /// <returns>Task of ApiResponse (GeolocationSettings)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> PatchGeolocationsSettingsAsyncWithHttpInfo (GeolocationSettings body)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchGeolocationsSettings");
             
-            
 
             var localVarPath = "/api/v2/geolocations/settings";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -857,33 +831,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -930,30 +900,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>ApiResponse of Geolocation</returns>
         public ApiResponse< Geolocation > PatchUserGeolocationWithHttpInfo (string userId, string clientId, Geolocation body)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->PatchUserGeolocation");
-            
-            
-            
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchUserGeolocation");
-            
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchUserGeolocation");
-            
-            
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -980,36 +940,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1056,30 +1011,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Geolocation</param>
         /// <returns>Task of ApiResponse (Geolocation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Geolocation>> PatchUserGeolocationAsyncWithHttpInfo (string userId, string clientId, Geolocation body)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling GeolocationApi->PatchUserGeolocation");
-            
-            
             
             // verify the required parameter 'clientId' is set
             if (clientId == null)
                 throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->PatchUserGeolocation");
             
-            
-            
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchUserGeolocation");
             
-            
 
             var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1106,37 +1054,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (clientId != null) localVarPathParams.Add("clientId", Configuration.ApiClient.ParameterToString(clientId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

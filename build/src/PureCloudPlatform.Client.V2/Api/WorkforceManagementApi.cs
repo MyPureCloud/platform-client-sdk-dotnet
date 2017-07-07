@@ -743,18 +743,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>ApiResponse of List&lt;UserScheduleAdherence&gt;</returns>
         public ApiResponse< List<UserScheduleAdherence> > GetWorkforcemanagementAdherenceWithHttpInfo (List<string> userId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherence");
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/adherence";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -781,25 +777,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (userId != null) userId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userId", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -842,18 +838,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User Id(s) for which to fetch current schedule adherence information.  Min 1, Max of 100 userIds per request</param>
         /// <returns>Task of ApiResponse (List&lt;UserScheduleAdherence&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<UserScheduleAdherence>>> GetWorkforcemanagementAdherenceAsyncWithHttpInfo (List<string> userId)
-        {
-            
-            
+        { 
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherence");
             
-            
 
             var localVarPath = "/api/v2/workforcemanagement/adherence";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -880,26 +873,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (userId != null) userId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userId", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (userId != null) localVarQueryParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -942,18 +934,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of ActivityCodeContainer</returns>
         public ApiResponse< ActivityCodeContainer > GetWorkforcemanagementManagementunitActivitycodesWithHttpInfo (string muId)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -980,25 +968,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1041,18 +1029,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (ActivityCodeContainer)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ActivityCodeContainer>> GetWorkforcemanagementManagementunitActivitycodesAsyncWithHttpInfo (string muId)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
             
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/activitycodes";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1079,26 +1064,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1143,24 +1127,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>ApiResponse of WfmIntradayQueueListing</returns>
         public ApiResponse< WfmIntradayQueueListing > GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
-            
-            
-            
             // verify the required parameter 'date' is set
             if (date == null)
                 throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1187,27 +1164,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+            if (date != null) localVarQueryParams.Add(new Tuple<string, string>("date", Configuration.ApiClient.ParameterToString(date)));
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1252,24 +1228,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>Task of ApiResponse (WfmIntradayQueueListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
-            
-            
             
             // verify the required parameter 'date' is set
             if (date == null)
                 throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitIntradayQueues");
             
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday/queues";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1296,28 +1267,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+            if (date != null) localVarQueryParams.Add(new Tuple<string, string>("date", Configuration.ApiClient.ParameterToString(date)));
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            if (date != null) localVarQueryParams.Add("date", Configuration.ApiClient.ParameterToString(date)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1364,30 +1333,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequest</returns>
         public ApiResponse< TimeOffRequest > GetWorkforcemanagementManagementunitUserTimeoffrequestWithHttpInfo (string muId, string userId, string timeOffRequestId)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
-            
-            
-            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
-            
-            
-            
             // verify the required parameter 'timeOffRequestId' is set
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1414,29 +1373,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1483,30 +1440,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequest)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequest>> GetWorkforcemanagementManagementunitUserTimeoffrequestAsyncWithHttpInfo (string muId, string userId, string timeOffRequestId)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
-            
-            
             
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
             
-            
-            
             // verify the required parameter 'timeOffRequestId' is set
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
             
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1533,30 +1483,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1603,26 +1550,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         public ApiResponse< TimeOffRequestList > GetWorkforcemanagementManagementunitUserTimeoffrequestsWithHttpInfo (string muId, string userId, bool? recentlyReviewed = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
-            
-            
-            
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1649,29 +1587,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)));
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            if (recentlyReviewed != null) localVarQueryParams.Add("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1718,26 +1654,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementManagementunitUserTimeoffrequestsAsyncWithHttpInfo (string muId, string userId, bool? recentlyReviewed = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
-            
-            
             
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1764,30 +1693,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)));
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            if (userId != null) localVarPathParams.Add("userId", Configuration.ApiClient.ParameterToString(userId)); // path parameter
-            
-            
-            if (recentlyReviewed != null) localVarQueryParams.Add("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1830,18 +1756,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitUsersWithHttpInfo (string muId)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1868,25 +1790,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1929,18 +1851,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string muId)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
             
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/users";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1967,26 +1886,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2033,18 +1951,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>ApiResponse of List&lt;ManagementUnit&gt;</returns>
         public ApiResponse< List<ManagementUnit> > GetWorkforcemanagementManagementunitsWithHttpInfo (string selector = null, int? pageSize = null, int? pageNumber = null)
-        {
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2071,29 +1982,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (selector != null) localVarQueryParams.Add(new Tuple<string, string>("selector", Configuration.ApiClient.ParameterToString(selector)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (selector != null) localVarQueryParams.Add("selector", Configuration.ApiClient.ParameterToString(selector)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2140,18 +2049,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber"> (optional, default to 1)</param>
         /// <returns>Task of ApiResponse (List&lt;ManagementUnit&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<ManagementUnit>>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (string selector = null, int? pageSize = null, int? pageNumber = null)
-        {
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2178,30 +2080,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (selector != null) localVarQueryParams.Add(new Tuple<string, string>("selector", Configuration.ApiClient.ParameterToString(selector)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (selector != null) localVarQueryParams.Add("selector", Configuration.ApiClient.ParameterToString(selector)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2244,18 +2143,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequest</returns>
         public ApiResponse< TimeOffRequest > GetWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId)
-        {
-            
-            
+        { 
             // verify the required parameter 'timeOffRequestId' is set
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequest");
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2282,25 +2177,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2343,18 +2238,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequest)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequest>> GetWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId)
-        {
-            
-            
+        { 
             // verify the required parameter 'timeOffRequestId' is set
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequest");
             
-            
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2381,26 +2273,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2443,14 +2334,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
         public ApiResponse< TimeOffRequestList > GetWorkforcemanagementTimeoffrequestsWithHttpInfo (bool? recentlyReviewed = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2477,25 +2365,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (recentlyReviewed != null) localVarQueryParams.Add("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2538,14 +2426,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo (bool? recentlyReviewed = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2572,26 +2457,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (recentlyReviewed != null) localVarQueryParams.Add(new Tuple<string, string>("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (recentlyReviewed != null) localVarQueryParams.Add("recentlyReviewed", Configuration.ApiClient.ParameterToString(recentlyReviewed)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2635,20 +2519,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PatchWorkforcemanagementTimeoffrequestWithHttpInfo (string timeOffRequestId, TimeOffRequestPatch body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'timeOffRequestId' is set
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->PatchWorkforcemanagementTimeoffrequest");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2675,34 +2553,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2746,20 +2620,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchWorkforcemanagementTimeoffrequestAsyncWithHttpInfo (string timeOffRequestId, TimeOffRequestPatch body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'timeOffRequestId' is set
             if (timeOffRequestId == null)
                 throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->PatchWorkforcemanagementTimeoffrequest");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2786,35 +2655,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (timeOffRequestId != null) localVarPathParams.Add("timeOffRequestId", Configuration.ApiClient.ParameterToString(timeOffRequestId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2859,20 +2723,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of IntradayResponse</returns>
         public ApiResponse< IntradayResponse > PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitIntraday");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2899,34 +2757,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2971,20 +2825,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (IntradayResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<IntradayResponse>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitIntraday");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/intraday";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3011,35 +2860,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3084,20 +2928,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/schedules/search";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3124,34 +2962,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3196,20 +3030,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'muId' is set
             if (muId == null)
                 throw new ApiException(400, "Missing required parameter 'muId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits/{muId}/schedules/search";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3236,35 +3065,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (muId != null) localVarPathParams.Add("muId", Configuration.ApiClient.ParameterToString(muId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3307,14 +3131,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         public ApiResponse< UserScheduleContainer > PostWorkforcemanagementSchedulesWithHttpInfo (CurrentUserScheduleRequestBody body = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/workforcemanagement/schedules";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3341,32 +3162,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3409,14 +3227,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementSchedulesAsyncWithHttpInfo (CurrentUserScheduleRequestBody body = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/workforcemanagement/schedules";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3443,33 +3258,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

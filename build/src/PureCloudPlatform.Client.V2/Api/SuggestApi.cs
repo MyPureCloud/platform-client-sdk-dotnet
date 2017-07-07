@@ -335,22 +335,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > GetSearchWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearch");
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -377,29 +369,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", Configuration.ApiClient.ParameterToString(q64)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -446,22 +436,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearch");
             
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -488,30 +471,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", Configuration.ApiClient.ParameterToString(q64)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -558,22 +538,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > GetSearchSuggestWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearchSuggest");
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -600,29 +572,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", Configuration.ApiClient.ParameterToString(q64)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -669,22 +639,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> GetSearchSuggestAsyncWithHttpInfo (string q64, List<string> expand = null, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'q64' is set
             if (q64 == null)
                 throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearchSuggest");
             
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -711,30 +674,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (q64 != null) localVarQueryParams.Add(new Tuple<string, string>("q64", Configuration.ApiClient.ParameterToString(q64)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (q64 != null) localVarQueryParams.Add("q64", Configuration.ApiClient.ParameterToString(q64)); // query parameter
-            
-            if (expand != null) localVarQueryParams.Add("expand", Configuration.ApiClient.ParameterToString(expand)); // query parameter
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -779,20 +739,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > PostSearchWithHttpInfo (SearchRequest body, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearch");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -819,34 +773,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -891,20 +841,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchAsyncWithHttpInfo (SearchRequest body, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearch");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/search";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -931,35 +876,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -1004,20 +944,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>ApiResponse of JsonNodeSearchResponse</returns>
         public ApiResponse< JsonNodeSearchResponse > PostSearchSuggestWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearchSuggest");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1044,34 +978,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -1116,20 +1046,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="profile">profile (optional, default to true)</param>
         /// <returns>Task of ApiResponse (JsonNodeSearchResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<JsonNodeSearchResponse>> PostSearchSuggestAsyncWithHttpInfo (SuggestSearchRequest body, bool? profile = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'body' is set
             if (body == null)
                 throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearchSuggest");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/search/suggest";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -1156,35 +1081,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (profile != null) localVarQueryParams.Add(new Tuple<string, string>("profile", Configuration.ApiClient.ParameterToString(profile)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (profile != null) localVarQueryParams.Add("profile", Configuration.ApiClient.ParameterToString(profile)); // query parameter
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,

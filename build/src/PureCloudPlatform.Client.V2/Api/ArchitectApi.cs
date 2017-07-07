@@ -2508,20 +2508,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteArchitectPromptWithHttpInfo (string promptId, bool? allResources = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPrompt");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2548,27 +2542,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+            if (allResources != null) localVarQueryParams.Add(new Tuple<string, string>("allResources", Configuration.ApiClient.ParameterToString(allResources)));
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            if (allResources != null) localVarQueryParams.Add("allResources", Configuration.ApiClient.ParameterToString(allResources)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2612,20 +2605,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="allResources">Whether or not to delete all the prompt resources (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptAsyncWithHttpInfo (string promptId, bool? allResources = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPrompt");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2652,28 +2640,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+            if (allResources != null) localVarQueryParams.Add(new Tuple<string, string>("allResources", Configuration.ApiClient.ParameterToString(allResources)));
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            if (allResources != null) localVarQueryParams.Add("allResources", Configuration.ApiClient.ParameterToString(allResources)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2717,24 +2703,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteArchitectPromptResourceWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPromptResource");
-            
-            
-            
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResource");
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2761,27 +2740,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -2825,24 +2803,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPromptResource");
-            
-            
             
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResource");
             
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2869,28 +2842,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -2933,18 +2904,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>ApiResponse of Operation</returns>
         public ApiResponse< Operation > DeleteArchitectPromptsWithHttpInfo (List<string> id)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteArchitectPrompts");
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -2971,25 +2938,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3032,18 +2999,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Prompt IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteArchitectPromptsAsyncWithHttpInfo (List<string> id)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteArchitectPrompts");
             
-            
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3070,26 +3034,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3133,24 +3096,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectSystempromptResource");
-            
-            
-            
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectSystempromptResource");
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3177,27 +3133,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3241,24 +3196,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectSystempromptResource");
-            
-            
             
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectSystempromptResource");
             
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3285,28 +3235,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3348,18 +3296,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> DeleteFlowWithHttpInfo (string flowId)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlow");
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3386,25 +3330,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3446,18 +3390,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flowId">Flow ID</param>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowAsyncWithHttpInfo (string flowId)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlow");
             
-            
 
             var localVarPath = "/api/v2/flows/{flowId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3484,26 +3425,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3546,18 +3486,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Flow IDs</param>
         /// <returns>ApiResponse of Operation</returns>
         public ApiResponse< Operation > DeleteFlowsWithHttpInfo (List<string> id)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteFlows");
-            
-            
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3584,25 +3520,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3645,18 +3581,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteFlowsAsyncWithHttpInfo (List<string> id)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteFlows");
             
-            
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3683,26 +3616,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -3759,32 +3691,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
         public ApiResponse< DependencyObjectEntityListing > GetArchitectDependencytrackingWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ArchitectApi->GetArchitectDependencytracking");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3811,39 +3725,32 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumingResources != null) localVarQueryParams.Add("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (consumingResourceType != null) localVarQueryParams.Add("consumingResourceType", Configuration.ApiClient.ParameterToString(consumingResourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -3900,32 +3807,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingAsyncWithHttpInfo (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'name' is set
             if (name == null)
                 throw new ApiException(400, "Missing required parameter 'name' when calling ArchitectApi->GetArchitectDependencytracking");
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -3952,40 +3842,32 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumingResources != null) localVarQueryParams.Add("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (consumingResourceType != null) localVarQueryParams.Add("consumingResourceType", Configuration.ApiClient.ParameterToString(consumingResourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4026,12 +3908,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DependencyStatus</returns>
         public ApiResponse< DependencyStatus > GetArchitectDependencytrackingBuildWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/build";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4058,23 +3939,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4115,12 +3997,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DependencyStatus)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DependencyStatus>> GetArchitectDependencytrackingBuildAsyncWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/build";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4147,24 +4028,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4213,32 +4094,20 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
         public ApiResponse< ConsumedResourcesEntityListing > GetArchitectDependencytrackingConsumedresourcesWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
-            
-            
-            
             // verify the required parameter 'version' is set
             if (version == null)
                 throw new ApiException(400, "Missing required parameter 'version' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
-            
-            
-            
             // verify the required parameter 'objectType' is set
             if (objectType == null)
                 throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/consumedresources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4265,31 +4134,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (version != null) localVarQueryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (resourceType != null) localVarQueryParams.Add("resourceType", Configuration.ApiClient.ParameterToString(resourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4338,32 +4204,23 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConsumedResourcesEntityListing>> GetArchitectDependencytrackingConsumedresourcesAsyncWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
-            
-            
             
             // verify the required parameter 'version' is set
             if (version == null)
                 throw new ApiException(400, "Missing required parameter 'version' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
             
-            
-            
             // verify the required parameter 'objectType' is set
             if (objectType == null)
                 throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/consumedresources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4390,32 +4247,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (version != null) localVarQueryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (resourceType != null) localVarQueryParams.Add("resourceType", Configuration.ApiClient.ParameterToString(resourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4462,26 +4315,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
         public ApiResponse< ConsumingResourcesEntityListing > GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingConsumingresources");
-            
-            
-            
             // verify the required parameter 'objectType' is set
             if (objectType == null)
                 throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumingresources");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/consumingresources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4508,29 +4352,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (resourceType != null) localVarQueryParams.Add("resourceType", Configuration.ApiClient.ParameterToString(resourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4577,26 +4419,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="resourceType">Types of consuming resources to show (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingConsumingresources");
-            
-            
             
             // verify the required parameter 'objectType' is set
             if (objectType == null)
                 throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumingresources");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/consumingresources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4623,30 +4458,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (resourceType != null) localVarQueryParams.Add("resourceType", Configuration.ApiClient.ParameterToString(resourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4701,26 +4533,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
         public ApiResponse< DependencyObjectEntityListing > GetArchitectDependencytrackingDeletedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/deletedresourceconsumers";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4747,37 +4564,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", Configuration.ApiClient.ParameterToString(flowFilter)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (flowFilter != null) localVarQueryParams.Add("flowFilter", Configuration.ApiClient.ParameterToString(flowFilter)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -4832,26 +4643,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingDeletedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/deletedresourceconsumers";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -4878,38 +4674,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", Configuration.ApiClient.ParameterToString(flowFilter)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (flowFilter != null) localVarQueryParams.Add("flowFilter", Configuration.ApiClient.ParameterToString(flowFilter)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -4964,30 +4753,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>ApiResponse of DependencyObject</returns>
         public ApiResponse< DependencyObject > GetArchitectDependencytrackingObjectWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingObject");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/object";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5014,37 +4787,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (version != null) localVarQueryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumingResources != null) localVarQueryParams.Add("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (consumingResourceType != null) localVarQueryParams.Add("consumingResourceType", Configuration.ApiClient.ParameterToString(consumingResourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5099,30 +4866,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="consumingResourceType">Types of consuming resources to return, if consuming resources are requested (optional)</param>
         /// <returns>Task of ApiResponse (DependencyObject)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObject>> GetArchitectDependencytrackingObjectAsyncWithHttpInfo (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'id' is set
             if (id == null)
                 throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingObject");
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/object";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5149,38 +4901,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (version != null) localVarQueryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumingResources != null) localVarQueryParams.Add("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (consumingResourceType != null) localVarQueryParams.Add("consumingResourceType", Configuration.ApiClient.ParameterToString(consumingResourceType)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5223,18 +4968,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Type ID</param>
         /// <returns>ApiResponse of DependencyType</returns>
         public ApiResponse< DependencyType > GetArchitectDependencytrackingTypeWithHttpInfo (string typeId)
-        {
-            
-            
+        { 
             // verify the required parameter 'typeId' is set
             if (typeId == null)
                 throw new ApiException(400, "Missing required parameter 'typeId' when calling ArchitectApi->GetArchitectDependencytrackingType");
-            
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/types/{typeId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5261,25 +5002,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (typeId != null) localVarPathParams.Add("typeId", Configuration.ApiClient.ParameterToString(typeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (typeId != null) localVarPathParams.Add("typeId", Configuration.ApiClient.ParameterToString(typeId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5322,18 +5063,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="typeId">Type ID</param>
         /// <returns>Task of ApiResponse (DependencyType)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DependencyType>> GetArchitectDependencytrackingTypeAsyncWithHttpInfo (string typeId)
-        {
-            
-            
+        { 
             // verify the required parameter 'typeId' is set
             if (typeId == null)
                 throw new ApiException(400, "Missing required parameter 'typeId' when calling ArchitectApi->GetArchitectDependencytrackingType");
             
-            
 
             var localVarPath = "/api/v2/architect/dependencytracking/types/{typeId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5360,26 +5098,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (typeId != null) localVarPathParams.Add("typeId", Configuration.ApiClient.ParameterToString(typeId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (typeId != null) localVarPathParams.Add("typeId", Configuration.ApiClient.ParameterToString(typeId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5424,16 +5161,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyTypeEntityListing</returns>
         public ApiResponse< DependencyTypeEntityListing > GetArchitectDependencytrackingTypesWithHttpInfo (int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/types";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5460,27 +5192,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5525,16 +5256,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyTypeEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DependencyTypeEntityListing>> GetArchitectDependencytrackingTypesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/types";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5561,28 +5287,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5635,24 +5359,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
         public ApiResponse< DependencyObjectEntityListing > GetArchitectDependencytrackingUpdatedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/updatedresourceconsumers";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5679,35 +5390,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5760,24 +5466,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingUpdatedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/updatedresourceconsumers";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5804,36 +5497,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (objectType != null) localVarQueryParams.Add("objectType", Configuration.ApiClient.ParameterToString(objectType)); // query parameter
-            
-            if (consumedResources != null) localVarQueryParams.Add("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)); // query parameter
-            
-            if (consumedResourceType != null) localVarQueryParams.Add("consumedResourceType", Configuration.ApiClient.ParameterToString(consumedResourceType)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -5876,18 +5563,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <returns>ApiResponse of Prompt</returns>
         public ApiResponse< Prompt > GetArchitectPromptWithHttpInfo (string promptId)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPrompt");
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -5914,25 +5597,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -5975,18 +5658,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">Prompt ID</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPrompt");
             
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6013,26 +5693,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6077,24 +5756,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of PromptAsset</returns>
         public ApiResponse< PromptAsset > GetArchitectPromptResourceWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptResource");
-            
-            
-            
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectPromptResource");
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6121,27 +5793,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6186,24 +5857,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> GetArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptResource");
-            
-            
             
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectPromptResource");
             
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6230,28 +5896,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6298,22 +5962,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of PromptAssetEntityListing</returns>
         public ApiResponse< PromptAssetEntityListing > GetArchitectPromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptResources");
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6340,29 +5996,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6409,22 +6063,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (PromptAssetEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PromptAssetEntityListing>> GetArchitectPromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptResources");
             
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6451,30 +6098,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6525,22 +6169,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
         public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6567,33 +6200,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6644,22 +6273,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6686,34 +6304,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6756,18 +6369,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">promptId</param>
         /// <returns>ApiResponse of SystemPrompt</returns>
         public ApiResponse< SystemPrompt > GetArchitectSystempromptWithHttpInfo (string promptId)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystemprompt");
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6794,25 +6403,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -6855,18 +6464,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="promptId">promptId</param>
         /// <returns>Task of ApiResponse (SystemPrompt)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystemprompt");
             
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -6893,26 +6499,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -6957,24 +6562,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
         public ApiResponse< SystemPromptAsset > GetArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptResource");
-            
-            
-            
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectSystempromptResource");
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7001,27 +6599,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -7066,24 +6663,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="languageCode">Language</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> GetArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptResource");
-            
-            
             
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectSystempromptResource");
             
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7110,28 +6702,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -7182,26 +6772,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of SystemPromptAssetEntityListing</returns>
         public ApiResponse< SystemPromptAssetEntityListing > GetArchitectSystempromptResourcesWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptResources");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7228,33 +6806,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -7305,26 +6879,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (SystemPromptAssetEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAssetEntityListing>> GetArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptResources");
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7351,34 +6914,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -7433,26 +6991,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>ApiResponse of SystemPromptEntityListing</returns>
         public ApiResponse< SystemPromptEntityListing > GetArchitectSystempromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/systemprompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7479,37 +7022,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -7564,26 +7101,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nameOrDescription">Name or description (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
-        {
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/systemprompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7610,38 +7132,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -7686,20 +7201,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > GetFlowWithHttpInfo (string flowId, bool? deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlow");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7726,27 +7235,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -7791,20 +7299,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowAsyncWithHttpInfo (string flowId, bool? deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlow");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7831,28 +7334,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -7907,34 +7408,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="action">Flow actions (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
         public ApiResponse< HistoryListing > GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowHistoryHistoryId");
-            
-            
-            
             // verify the required parameter 'historyId' is set
             if (historyId == null)
                 throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetFlowHistoryHistoryId");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/history/{historyId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -7961,37 +7445,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            if (action != null) localVarQueryParams.Add("action", Configuration.ApiClient.ParameterToString(action)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -8046,34 +7524,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="action">Flow actions (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowHistoryHistoryId");
-            
-            
             
             // verify the required parameter 'historyId' is set
             if (historyId == null)
                 throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetFlowHistoryHistoryId");
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/history/{historyId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8100,38 +7563,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            if (action != null) localVarQueryParams.Add("action", Configuration.ApiClient.ParameterToString(action)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -8176,20 +7632,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional, default to false)</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > GetFlowLatestconfigurationWithHttpInfo (string flowId, bool? deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowLatestconfiguration");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/latestconfiguration";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8216,27 +7666,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -8281,20 +7730,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowLatestconfigurationAsyncWithHttpInfo (string flowId, bool? deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowLatestconfiguration");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/latestconfiguration";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8321,28 +7765,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -8389,26 +7831,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersion</returns>
         public ApiResponse< FlowVersion > GetFlowVersionWithHttpInfo (string flowId, string versionId, string deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersion");
-            
-            
-            
             // verify the required parameter 'versionId' is set
             if (versionId == null)
                 throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersion");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8435,29 +7868,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -8504,26 +7935,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> GetFlowVersionAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersion");
-            
-            
             
             // verify the required parameter 'versionId' is set
             if (versionId == null)
                 throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersion");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8550,30 +7974,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -8620,26 +8041,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional)</param>
         /// <returns>ApiResponse of Object</returns>
         public ApiResponse< Object > GetFlowVersionConfigurationWithHttpInfo (string flowId, string versionId, string deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionConfiguration");
-            
-            
-            
             // verify the required parameter 'versionId' is set
             if (versionId == null)
                 throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionConfiguration");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/configuration";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8666,29 +8078,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -8735,26 +8145,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> GetFlowVersionConfigurationAsyncWithHttpInfo (string flowId, string versionId, string deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersionConfiguration");
-            
-            
             
             // verify the required parameter 'versionId' is set
             if (versionId == null)
                 throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionConfiguration");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/configuration";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8781,30 +8184,27 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId)); // path parameter
-            
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -8853,24 +8253,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional)</param>
         /// <returns>ApiResponse of FlowVersionEntityListing</returns>
         public ApiResponse< FlowVersionEntityListing > GetFlowVersionsWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersions");
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -8897,31 +8287,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -8970,24 +8357,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersionEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FlowVersionEntityListing>> GetFlowVersionsAsyncWithHttpInfo (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersions");
             
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9014,32 +8392,28 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -9110,46 +8484,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
         public ApiResponse< FlowEntityListing > GetFlowsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ArchitectApi->GetFlows");
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9176,53 +8518,39 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", Configuration.ApiClient.ParameterToString(type)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)));
+            if (editableBy != null) localVarQueryParams.Add(new Tuple<string, string>("editableBy", Configuration.ApiClient.ParameterToString(editableBy)));
+            if (lockedBy != null) localVarQueryParams.Add(new Tuple<string, string>("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", Configuration.ApiClient.ParameterToString(secure)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            
-            if (publishVersionId != null) localVarQueryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
-            
-            if (editableBy != null) localVarQueryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
-            
-            if (lockedBy != null) localVarQueryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
-            
-            if (secure != null) localVarQueryParams.Add("secure", Configuration.ApiClient.ParameterToString(secure)); // query parameter
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            if (includeSchemas != null) localVarQueryParams.Add("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -9293,46 +8621,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'type' is set
             if (type == null)
                 throw new ApiException(400, "Missing required parameter 'type' when calling ArchitectApi->GetFlows");
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9359,54 +8656,39 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", Configuration.ApiClient.ParameterToString(type)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)));
+            if (editableBy != null) localVarQueryParams.Add(new Tuple<string, string>("editableBy", Configuration.ApiClient.ParameterToString(editableBy)));
+            if (lockedBy != null) localVarQueryParams.Add(new Tuple<string, string>("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", Configuration.ApiClient.ParameterToString(secure)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (type != null) localVarQueryParams.Add("type", Configuration.ApiClient.ParameterToString(type)); // query parameter
-            
-            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
-            
-            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
-            
-            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
-            
-            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
-            
-            if (id != null) localVarQueryParams.Add("id", Configuration.ApiClient.ParameterToString(id)); // query parameter
-            
-            if (name != null) localVarQueryParams.Add("name", Configuration.ApiClient.ParameterToString(name)); // query parameter
-            
-            if (description != null) localVarQueryParams.Add("description", Configuration.ApiClient.ParameterToString(description)); // query parameter
-            
-            if (nameOrDescription != null) localVarQueryParams.Add("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)); // query parameter
-            
-            if (publishVersionId != null) localVarQueryParams.Add("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)); // query parameter
-            
-            if (editableBy != null) localVarQueryParams.Add("editableBy", Configuration.ApiClient.ParameterToString(editableBy)); // query parameter
-            
-            if (lockedBy != null) localVarQueryParams.Add("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)); // query parameter
-            
-            if (secure != null) localVarQueryParams.Add("secure", Configuration.ApiClient.ParameterToString(secure)); // query parameter
-            
-            if (deleted != null) localVarQueryParams.Add("deleted", Configuration.ApiClient.ParameterToString(deleted)); // query parameter
-            
-            if (includeSchemas != null) localVarQueryParams.Add("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -9446,12 +8728,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
         public ApiResponse<Object> PostArchitectDependencytrackingBuildWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/build";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9478,23 +8759,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -9534,12 +8816,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Object>> PostArchitectDependencytrackingBuildAsyncWithHttpInfo ()
-        {
-            
+        { 
 
             var localVarPath = "/api/v2/architect/dependencytracking/build";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9566,24 +8847,24 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -9628,20 +8909,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of PromptAsset</returns>
         public ApiResponse< PromptAsset > PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptResources");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9668,34 +8943,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -9740,20 +9011,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptResources");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9780,35 +9046,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -9851,14 +9112,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Prompt</returns>
         public ApiResponse< Prompt > PostArchitectPromptsWithHttpInfo (Prompt body = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9885,32 +9143,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -9953,14 +9208,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -9987,33 +9239,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -10058,20 +9306,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
         public ApiResponse< SystemPromptAsset > PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptResources");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10098,34 +9340,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -10170,20 +9408,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptResources");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10210,35 +9443,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -10283,20 +9511,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of FlowVersion</returns>
         public ApiResponse< FlowVersion > PostFlowVersionsWithHttpInfo (string flowId, Object body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowVersions");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10323,34 +9545,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -10395,20 +9613,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowVersions");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}/versions";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10435,35 +9648,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -10506,14 +9714,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10540,32 +9745,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -10608,14 +9810,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body = null)
-        {
-            
-            
-            
+        { 
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10642,33 +9841,29 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -10711,18 +9906,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > PostFlowsActionsCheckinWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckin");
-            
-            
 
             var localVarPath = "/api/v2/flows/actions/checkin";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10749,25 +9940,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -10810,18 +10001,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckinAsyncWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckin");
             
-            
 
             var localVarPath = "/api/v2/flows/actions/checkin";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10848,26 +10036,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -10910,18 +10097,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > PostFlowsActionsCheckoutWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckout");
-            
-            
 
             var localVarPath = "/api/v2/flows/actions/checkout";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -10948,25 +10131,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -11009,18 +10192,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsCheckoutAsyncWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckout");
             
-            
 
             var localVarPath = "/api/v2/flows/actions/checkout";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11047,26 +10227,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -11109,18 +10288,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > PostFlowsActionsDeactivateWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsDeactivate");
-            
-            
 
             var localVarPath = "/api/v2/flows/actions/deactivate";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11147,25 +10322,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -11208,18 +10383,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsDeactivateAsyncWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsDeactivate");
             
-            
 
             var localVarPath = "/api/v2/flows/actions/deactivate";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11246,26 +10418,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -11310,20 +10481,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="version">version (optional)</param>
         /// <returns>ApiResponse of Operation</returns>
         public ApiResponse< Operation > PostFlowsActionsPublishWithHttpInfo (string flow, string version = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsPublish");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/actions/publish";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11350,27 +10515,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            if (version != null) localVarQueryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -11415,20 +10579,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="version">version (optional)</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostFlowsActionsPublishAsyncWithHttpInfo (string flow, string version = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsPublish");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/actions/publish";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11455,28 +10614,26 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            if (version != null) localVarQueryParams.Add("version", Configuration.ApiClient.ParameterToString(version)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -11519,18 +10676,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > PostFlowsActionsRevertWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsRevert");
-            
-            
 
             var localVarPath = "/api/v2/flows/actions/revert";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11557,25 +10710,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -11618,18 +10771,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsRevertAsyncWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsRevert");
             
-            
 
             var localVarPath = "/api/v2/flows/actions/revert";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11656,26 +10806,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -11718,18 +10867,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > PostFlowsActionsUnlockWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsUnlock");
-            
-            
 
             var localVarPath = "/api/v2/flows/actions/unlock";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11756,25 +10901,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -11817,18 +10962,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="flow">Flow ID</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsUnlockAsyncWithHttpInfo (string flow)
-        {
-            
-            
+        { 
             // verify the required parameter 'flow' is set
             if (flow == null)
                 throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsUnlock");
             
-            
 
             var localVarPath = "/api/v2/flows/actions/unlock";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11855,26 +10997,25 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+
+            // Header params
+
+            // Form params
             
-            
-            if (flow != null) localVarQueryParams.Add("flow", Configuration.ApiClient.ParameterToString(flow)); // query parameter
-            
-            
-            
-            
+            // Body param
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -11919,20 +11060,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Prompt</returns>
         public ApiResponse< Prompt > PutArchitectPromptWithHttpInfo (string promptId, Prompt body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectPrompt");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -11959,34 +11094,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -12031,20 +11162,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectPrompt");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -12071,35 +11197,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -12146,26 +11267,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of PromptAsset</returns>
         public ApiResponse< PromptAsset > PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectPromptResource");
-            
-            
-            
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectPromptResource");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -12192,36 +11304,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -12268,26 +11375,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectPromptResource");
-            
-            
             
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectPromptResource");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -12314,37 +11414,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -12391,26 +11485,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
         public ApiResponse< SystemPromptAsset > PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectSystempromptResource");
-            
-            
-            
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectSystempromptResource");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -12437,36 +11522,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -12513,26 +11593,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectSystempromptResource");
-            
-            
             
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectSystempromptResource");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -12559,37 +11632,31 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId)); // path parameter
-            
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
@@ -12634,20 +11701,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
         public ApiResponse< Flow > PutFlowWithHttpInfo (string flowId, Flow body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlow");
-            
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -12674,34 +11735,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
@@ -12746,20 +11803,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body = null)
-        {
-            
-            
+        { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlow");
             
-            
-            
-            
 
             var localVarPath = "/api/v2/flows/{flowId}";
             var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
@@ -12786,35 +11838,30 @@ namespace PureCloudPlatform.Client.V2.Api
             // set "format" to json by default
             // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
             localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
             
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
-            
-            
-            
-            
-            
+            // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-            {
                 localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            }
             else
-            {
                 localVarPostBody = body; // byte array
-            }
             
 
             
             // authentication (PureCloud Auth) required
-            
-            
-            
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
                 localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
             }
-            
-            
 
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
