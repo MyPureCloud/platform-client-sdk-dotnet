@@ -136,7 +136,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueryString for "QUERY_STRING"
             /// </summary>
             [EnumMember(Value = "QUERY_STRING")]
-            QueryString
+            QueryString,
+            
+            /// <summary>
+            /// Enum MultiMatch for "MULTI_MATCH"
+            /// </summary>
+            [EnumMember(Value = "MULTI_MATCH")]
+            MultiMatch
         }
         
         

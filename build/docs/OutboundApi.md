@@ -4355,7 +4355,7 @@ namespace Example
             
             
             
-            var priority = true;  // bool? | Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. (optional) 
+            var priority = true;  // bool? | Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional) 
             
             
             
@@ -4389,7 +4389,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**List<DialerContact>**](DialerContact.html)| Contact |  |
-| **priority** | **bool?**| Contact priority.  True means the contact(s) will go to the beginning of the list, false means at the end. | [optional]  |
+| **priority** | **bool?**| Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. | [optional]  |
 | **clearSystemData** | **bool?**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
 {: class="table table-striped"}
 

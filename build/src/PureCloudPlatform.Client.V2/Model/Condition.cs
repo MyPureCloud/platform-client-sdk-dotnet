@@ -234,7 +234,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum LastAttemptOverall for "LAST_ATTEMPT_OVERALL"
             /// </summary>
             [EnumMember(Value = "LAST_ATTEMPT_OVERALL")]
-            LastAttemptOverall
+            LastAttemptOverall,
+            
+            /// <summary>
+            /// Enum LastResultByColumn for "LAST_RESULT_BY_COLUMN"
+            /// </summary>
+            [EnumMember(Value = "LAST_RESULT_BY_COLUMN")]
+            LastResultByColumn,
+            
+            /// <summary>
+            /// Enum LastResultOverall for "LAST_RESULT_OVERALL"
+            /// </summary>
+            [EnumMember(Value = "LAST_RESULT_OVERALL")]
+            LastResultOverall
         }
         
         

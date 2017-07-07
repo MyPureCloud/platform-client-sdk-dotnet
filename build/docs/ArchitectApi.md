@@ -31,6 +31,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectSystempromptResources**](ArchitectApi.html#getarchitectsystempromptresources) | **GET** /api/v2/architect/systemprompts/{promptId}/resources | Get system prompt resources. |
 | [**GetArchitectSystemprompts**](ArchitectApi.html#getarchitectsystemprompts) | **GET** /api/v2/architect/systemprompts | Get System Prompts |
 | [**GetFlow**](ArchitectApi.html#getflow) | **GET** /api/v2/flows/{flowId} | Get flow |
+| [**GetFlowHistoryHistoryId**](ArchitectApi.html#getflowhistoryhistoryid) | **GET** /api/v2/flows/{flowId}/history/{historyId} | Get generated flow history |
 | [**GetFlowLatestconfiguration**](ArchitectApi.html#getflowlatestconfiguration) | **GET** /api/v2/flows/{flowId}/latestconfiguration | Get the latest configuration for flow |
 | [**GetFlowVersion**](ArchitectApi.html#getflowversion) | **GET** /api/v2/flows/{flowId}/versions/{versionId} | Get flow version |
 | [**GetFlowVersionConfiguration**](ArchitectApi.html#getflowversionconfiguration) | **GET** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
@@ -1888,6 +1889,106 @@ namespace Example
 ### Return type
 
 [**Flow**](Flow.html)
+
+<a name="getflowhistoryhistoryid"></a>
+
+## [**HistoryListing**](HistoryListing.html) GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+
+Get generated flow history
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowHistoryHistoryIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var flowId = flowId_example;  // string | Flow ID
+            
+            
+            
+            
+            var historyId = historyId_example;  // string | History ID (generated history)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
+            
+            
+            
+            
+            
+            var action = new List<string>(); // List<string> | Flow actions (optional) 
+            
+            
+
+            try
+            {
+                
+                // Get generated flow history
+                
+                HistoryListing result = apiInstance.GetFlowHistoryHistoryId(flowId, historyId, pageNumber, pageSize, sortBy, sortOrder, action);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowHistoryHistoryId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **flowId** | **string**| Flow ID |  |
+| **historyId** | **string**| History ID (generated history) |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
+| **sortOrder** | **string**| Sort order | [optional] [default to desc] |
+| **action** | [**List<string>**](string.html)| Flow actions | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
+{: class="table table-striped"}
+
+### Return type
+
+[**HistoryListing**](HistoryListing.html)
 
 <a name="getflowlatestconfiguration"></a>
 

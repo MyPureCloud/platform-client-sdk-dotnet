@@ -647,6 +647,40 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Flow> GetFlowWithHttpInfo (string flowId, bool? deleted = null);
         
         /// <summary>
+        /// Get generated flow history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>HistoryListing</returns>
+        HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
+
+        /// <summary>
+        /// Get generated flow history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>ApiResponse of HistoryListing</returns>
+        ApiResponse<HistoryListing> GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
+        
+        /// <summary>
         /// Get the latest configuration for flow
         /// </summary>
         /// <remarks>
@@ -1803,6 +1837,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="deleted">Include deleted flows (optional, default to false)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> GetFlowAsyncWithHttpInfo (string flowId, bool? deleted = null);
+        
+        /// <summary>
+        /// Get generated flow history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>Task of HistoryListing</returns>
+        System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
+
+        /// <summary>
+        /// Get generated flow history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
         
         /// <summary>
         /// Get the latest configuration for flow
@@ -7803,6 +7871,285 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
                 (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Get generated flow history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>HistoryListing</returns>
+        public HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        {
+             ApiResponse<HistoryListing> localVarResponse = GetFlowHistoryHistoryIdWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortBy, sortOrder, action);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get generated flow history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>ApiResponse of HistoryListing</returns>
+        public ApiResponse< HistoryListing > GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        {
+            
+            
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowHistoryHistoryId");
+            
+            
+            
+            // verify the required parameter 'historyId' is set
+            if (historyId == null)
+                throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetFlowHistoryHistoryId");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/history/{historyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
+            
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId)); // path parameter
+            
+            
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            if (action != null) localVarQueryParams.Add("action", Configuration.ApiClient.ParameterToString(action)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowHistoryHistoryId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowHistoryHistoryId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HistoryListing>(localVarStatusCode,
+                localVarHeaders,
+                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get generated flow history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>Task of HistoryListing</returns>
+        public async System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        {
+             ApiResponse<HistoryListing> localVarResponse = await GetFlowHistoryHistoryIdAsyncWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortBy, sortOrder, action);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get generated flow history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="flowId">Flow ID</param>
+        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="action">Flow actions (optional)</param>
+        /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        {
+            
+            
+            // verify the required parameter 'flowId' is set
+            if (flowId == null)
+                throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowHistoryHistoryId");
+            
+            
+            
+            // verify the required parameter 'historyId' is set
+            if (historyId == null)
+                throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetFlowHistoryHistoryId");
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+
+            var localVarPath = "/api/v2/flows/{flowId}/history/{historyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new Dictionary<String, String>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+            
+            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId)); // path parameter
+            
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId)); // path parameter
+            
+            
+            if (pageNumber != null) localVarQueryParams.Add("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)); // query parameter
+            
+            if (pageSize != null) localVarQueryParams.Add("pageSize", Configuration.ApiClient.ParameterToString(pageSize)); // query parameter
+            
+            if (sortBy != null) localVarQueryParams.Add("sortBy", Configuration.ApiClient.ParameterToString(sortBy)); // query parameter
+            
+            if (sortOrder != null) localVarQueryParams.Add("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)); // query parameter
+            
+            if (action != null) localVarQueryParams.Add("action", Configuration.ApiClient.ParameterToString(action)); // query parameter
+            
+            
+            
+            
+
+            
+            // authentication (PureCloud Auth) required
+            
+            
+            
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+            
+            
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowHistoryHistoryId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowHistoryHistoryId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HistoryListing>(localVarStatusCode,
+                localVarHeaders,
+                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
             
         }
 

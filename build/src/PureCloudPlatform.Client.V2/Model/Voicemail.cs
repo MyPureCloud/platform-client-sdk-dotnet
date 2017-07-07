@@ -23,6 +23,58 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// current state of the voicemail upload
+        /// </summary>
+        /// <value>current state of the voicemail upload</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum UploadStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Pending for "pending"
+            /// </summary>
+            [EnumMember(Value = "pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Complete for "complete"
+            /// </summary>
+            [EnumMember(Value = "complete")]
+            Complete,
+            
+            /// <summary>
+            /// Enum Failed for "failed"
+            /// </summary>
+            [EnumMember(Value = "failed")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Timeout for "timeout"
+            /// </summary>
+            [EnumMember(Value = "timeout")]
+            Timeout
+        }
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// current state of the voicemail upload
+        /// </summary>
+        /// <value>current state of the voicemail upload</value>
+        [DataMember(Name="uploadStatus", EmitDefaultValue=false)]
+        public UploadStatusEnum? UploadStatus { get; set; }
         
         
     
@@ -34,7 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The voicemail id.</param>
         
         
-        public Voicemail(string Id = null)
+        
+        /// <param name="UploadStatus">current state of the voicemail upload.</param>
+        
+        
+        public Voicemail(string Id = null, UploadStatusEnum? UploadStatus = null)
         {
             
             
@@ -46,7 +102,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
 this.Id = Id;
+            
+            
+            
+            
+            
+            
+            
+            
+this.UploadStatus = UploadStatus;
             
             
             
@@ -63,6 +132,8 @@ this.Id = Id;
         public string Id { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,6 +144,8 @@ this.Id = Id;
             sb.Append("class Voicemail {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
+            sb.Append("  UploadStatus: ").Append(UploadStatus).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -114,6 +187,11 @@ this.Id = Id;
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.UploadStatus == other.UploadStatus ||
+                    this.UploadStatus != null &&
+                    this.UploadStatus.Equals(other.UploadStatus)
                 );
         }
 
@@ -131,6 +209,9 @@ this.Id = Id;
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.UploadStatus != null)
+                    hash = hash * 59 + this.UploadStatus.GetHashCode();
                 
                 return hash;
             }

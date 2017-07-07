@@ -98,6 +98,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
+        /// <param name="Id">Unique Id of the domain such as: example.com.</param>
+        
         
         
         /// <param name="Name">Name.</param>
@@ -113,8 +115,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public InboundDomain(string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
+        public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null)
         {
+            
+            
             
             
             
@@ -141,6 +145,13 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+this.Id = Id;
             
             
             
@@ -174,11 +185,11 @@ this.SubDomain = SubDomain;
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Unique Id of the domain such as: example.com
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>Unique Id of the domain such as: example.com</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

@@ -1175,7 +1175,7 @@ namespace Example
 
 <a name="getexternalcontactsorganizations"></a>
 
-## [**ExternalOrganizationListing**](ExternalOrganizationListing.html) GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
+## [**ExternalOrganizationListing**](ExternalOrganizationListing.html) GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
 
 Search for external organizations
 
@@ -1218,6 +1218,11 @@ namespace Example
             
             
             
+            
+            var trustorId = new List<string>(); // List<string> | Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested (optional) 
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Sort order (optional) 
             
             
@@ -1238,7 +1243,7 @@ namespace Example
                 
                 // Search for external organizations
                 
-                ExternalOrganizationListing result = apiInstance.GetExternalcontactsOrganizations(pageSize, pageNumber, q, sortOrder, expand, includeTrustors);
+                ExternalOrganizationListing result = apiInstance.GetExternalcontactsOrganizations(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1258,6 +1263,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 20] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **q** | **string**| Search query | [optional]  |
+| **trustorId** | [**List<string>**](string.html)| Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
 | **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalDataSources |
 | **includeTrustors** | **bool?**| (true or false) whether or not to include trustor information embedded in the externalOrganization | [optional]  |
