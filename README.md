@@ -213,7 +213,7 @@ Console.ReadKey(true);
 
 ### Notification Topics and Classes for Deserialization
 
-The SDK contains a static class, [NotificationTopics](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/src/ININ.PureCloudApi/Extensions/Client/NotificationTopics.cs), that contains a dictionary of all of the known topics and the types that should be used for deserialization. This class exists to allow an application to dynamically see the defined topics and programatically specify the defined type for a known topic. This class also serves as a reference to the developer to know which classes go with which topics.
+The SDK contains a static class, [NotificationTopics](https://github.com/MyPureCloud/platform-client-sdk-dotnet/tree/master/build/src/PureCloudPlatform.Client.V2/Client/NotificationTopics.cs), that contains a dictionary of all of the known topics and the types that should be used for deserialization. This class exists to allow an application to dynamically see the defined topics and programatically specify the defined type for a known topic. This class also serves as a reference to the developer to know which classes go with which topics.
 
 _Note that the deserializer does not use this mapping; it uses the type provided to it when adding a topic subscription._
 
@@ -221,25 +221,18 @@ _Note that the deserializer does not use this mapping; it uses the type provided
 
 ### REST Requests
 
-The SDK library uses [RestSharp](http://restsharp.org/) to make the REST reqests. The majority of this work is done in [ApiClient.cs](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/src/main/csharp/ININ/PureCloudApi/Client/ApiClient.cs)
+The SDK library uses [RestSharp](http://restsharp.org/) to make the REST reqests. The majority of this work is done in [ApiClient.cs](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/build/src/PureCloudPlatform.Client.V2/Client/ApiClient.cs)
 
 ### Building from Source
-
-#### The Quick Way
-
-The quick way is great for compiling using a script or if you just prefer working from the command line.
-
-1. Clone the repo
-2. Run [compile.bat](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/compile.bat)
-
-#### The Other Way
 
 If you're working inside Visual Studio, adding the files to your project allows you to edit and build inside an IDE.
 
 1. Clone the repo
-2. Open the solution file: [ININ.PureCloudApi.sln](https://github.com/MyPureCloud/purecloud_api_sdk_csharp/blob/master/build/ININ.PureCloudApi.sln)
-3. Resolve/restore dependencies
+2. Open the solution file: [PureCloudPlatform.Client.V2.sln](https://github.com/MyPureCloud/platform-client-sdk-dotnet/blob/master/build/PureCloudPlatform.Client.V2.sln)
+3. Resolve/restore dependencies (`Update-Package –reinstall` in the _Package Manager Console_)
 4. Build the project in Visual Studio
+
+Alternatively, the code can be compiled via the command line. The official builds do this using cross-platform tools: [compile.sh](https://github.com/MyPureCloud/platform-client-sdk-common/blob/master/resources/sdk/pureclouddotnet/scripts/compile.sh)
 
 ## SDK Source Code Generation
 

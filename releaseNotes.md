@@ -3,7 +3,7 @@ Platform API version: 1355
 
 # SDK Changes
 
-* API-2652 repeat query param name for query param lists; formatting cleanup
+* API-2572 include NotificationTopics.cs
 
 # Major Changes (0 changes)
 
