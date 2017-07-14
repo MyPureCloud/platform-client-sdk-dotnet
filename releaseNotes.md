@@ -1,9 +1,9 @@
 Platform API version: 1355
 
 
-# SDK Changes
+#SDK Changes
 
-* API-2572 include NotificationTopics.cs
+* API-2444 send purecloud-sdk header with sdk version
 
 # Major Changes (0 changes)
 

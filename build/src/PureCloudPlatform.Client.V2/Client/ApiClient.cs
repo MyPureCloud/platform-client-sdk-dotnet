@@ -173,8 +173,12 @@ namespace PureCloudPlatform.Client.V2.Client
 
             // set timeout
             RestClient.Timeout = Configuration.Timeout;
+
             // set user agent
             RestClient.UserAgent = Configuration.UserAgent;
+
+            // Set SDK version
+            request.AddHeader("purecloud-sdk", "14.2.0");
 
             
             var response = RestClient.Execute(request);
