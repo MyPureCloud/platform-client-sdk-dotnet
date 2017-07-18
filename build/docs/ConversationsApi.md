@@ -83,6 +83,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **POST** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **POST** /api/v2/conversations/emails | Create an email conversation |
 | [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
+| [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
 {: class="table table-striped"}
 
@@ -4227,7 +4228,7 @@ namespace Example
 
 <a name="postconversationparticipantcallbacks"></a>
 
-## void PostConversationParticipantCallbacks (string conversationId, string participantId, CreateCallbackCommand body = null)
+## void PostConversationParticipantCallbacks (string conversationId, string participantId, CreateCallbackOnConversationCommand body = null)
 
 Create a new callback for the specified participant on the conversation.
 
@@ -4266,7 +4267,7 @@ namespace Example
             
             
             
-            var body = new CreateCallbackCommand(); // CreateCallbackCommand |  (optional) 
+            var body = new CreateCallbackOnConversationCommand(); // CreateCallbackOnConversationCommand |  (optional) 
             
             
 
@@ -4293,7 +4294,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
-| **body** | [**CreateCallbackCommand**](CreateCallbackCommand.html)|  | [optional]  |
+| **body** | [**CreateCallbackOnConversationCommand**](CreateCallbackOnConversationCommand.html)|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5424,6 +5425,88 @@ namespace Example
 ### Return type
 
 [**FaxSendResponse**](FaxSendResponse.html)
+
+<a name="putconversationscallparticipantcommunicationuuidata"></a>
+
+## [**Empty**](Empty.html) PutConversationsCallParticipantCommunicationUuidata (string conversationId, string participantId, string communicationId, SetUuiDataRequest body)
+
+Set uuiData to be sent on future commands.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsCallParticipantCommunicationUuidataExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
+            var body = new SetUuiDataRequest(); // SetUuiDataRequest | UUIData Request
+            
+            
+
+            try
+            {
+                
+                // Set uuiData to be sent on future commands.
+                
+                Empty result = apiInstance.PutConversationsCallParticipantCommunicationUuidata(conversationId, participantId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PutConversationsCallParticipantCommunicationUuidata: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**SetUuiDataRequest**](SetUuiDataRequest.html)| UUIData Request |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Empty**](Empty.html)
 
 <a name="putconversationsemailmessagesdraft"></a>
 

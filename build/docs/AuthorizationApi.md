@@ -413,7 +413,7 @@ namespace Example
 
 <a name="getauthorizationroles"></a>
 
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null)
 
 Retrieve a list of all roles defined for the organization
 
@@ -471,6 +471,11 @@ namespace Example
             
             
             
+            var name = name_example;  // string |  (optional) 
+            
+            
+            
+            
             
             var permission = new List<Object>(); // List<Object> |  (optional) 
             
@@ -491,7 +496,7 @@ namespace Example
                 
                 // Retrieve a list of all roles defined for the organization
                 
-                OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, permission, defaultRoleId, userCount);
+                OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -514,6 +519,7 @@ namespace Example
 | **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
+| **name** | **string**|  | [optional]  |
 | **permission** | [**List<Object>**](Object.html)|  | [optional]  |
 | **defaultRoleId** | [**List<Object>**](Object.html)|  | [optional]  |
 | **userCount** | **bool?**|  | [optional] [default to true] |

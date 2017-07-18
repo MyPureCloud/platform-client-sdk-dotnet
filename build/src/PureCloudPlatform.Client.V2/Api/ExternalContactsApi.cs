@@ -300,7 +300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         ContactListing GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
@@ -316,7 +316,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         ApiResponse<ContactListing> GetExternalcontactsOrganizationContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
@@ -1062,7 +1062,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         System.Threading.Tasks.Task<ContactListing> GetExternalcontactsOrganizationContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
 
@@ -1078,7 +1078,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsOrganizationContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null);
         
@@ -3830,7 +3830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ContactListing</returns>
         public ContactListing GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
@@ -3847,7 +3847,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of ContactListing</returns>
         public ApiResponse< ContactListing > GetExternalcontactsOrganizationContactsWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         { 
@@ -3939,7 +3939,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ContactListing</returns>
         public async System.Threading.Tasks.Task<ContactListing> GetExternalcontactsOrganizationContactsAsync (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         {
@@ -3957,7 +3957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (externalOrganization) (optional)</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (ContactListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsOrganizationContactsAsyncWithHttpInfo (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
         { 

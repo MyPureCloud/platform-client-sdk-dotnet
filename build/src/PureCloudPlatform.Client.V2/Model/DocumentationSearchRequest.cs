@@ -70,12 +70,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The sort order for results
         /// </summary>
         /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
+        
+        
         
         
         
@@ -108,11 +113,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
+        
+        
+        
         /// <param name="Query">Query.</param>
         
         
-        public DocumentationSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<DocumentationSearchCriteria> Query = null)
+        public DocumentationSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<DocumentationSearchCriteria> Query = null)
         {
+            
+            
+            
+            
             
             
             
@@ -175,6 +188,15 @@ this.PageNumber = PageNumber;
             
             
             
+this.Sort = Sort;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Query = Query;
             
             
@@ -214,6 +236,15 @@ this.Query = Query;
         
         
         /// <summary>
+        /// Multi-value sort order, list of multiple sort values
+        /// </summary>
+        /// <value>Multi-value sort order, list of multiple sort values</value>
+        [DataMember(Name="sort", EmitDefaultValue=false)]
+        public List<SearchSort> Sort { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Query
         /// </summary>
         [DataMember(Name="query", EmitDefaultValue=false)]
@@ -236,6 +267,8 @@ this.Query = Query;
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            
+            sb.Append("  Sort: ").Append(Sort).Append("\n");
             
             sb.Append("  Query: ").Append(Query).Append("\n");
             
@@ -296,6 +329,11 @@ this.Query = Query;
                     this.PageNumber.Equals(other.PageNumber)
                 ) &&
                 (
+                    this.Sort == other.Sort ||
+                    this.Sort != null &&
+                    this.Sort.SequenceEqual(other.Sort)
+                ) &&
+                (
                     this.Query == other.Query ||
                     this.Query != null &&
                     this.Query.SequenceEqual(other.Query)
@@ -325,6 +363,9 @@ this.Query = Query;
                 
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
+                
+                if (this.Sort != null)
+                    hash = hash * 59 + this.Sort.GetHashCode();
                 
                 if (this.Query != null)
                     hash = hash * 59 + this.Query.GetHashCode();

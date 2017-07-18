@@ -7,9 +7,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteArchitectIvr**](ArchitectApi.html#deletearchitectivr) | **DELETE** /api/v2/architect/ivrs/{ivrId} | Delete an IVR Config. |
 | [**DeleteArchitectPrompt**](ArchitectApi.html#deletearchitectprompt) | **DELETE** /api/v2/architect/prompts/{promptId} | Delete specified user prompt |
 | [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
 | [**DeleteArchitectPrompts**](ArchitectApi.html#deletearchitectprompts) | **DELETE** /api/v2/architect/prompts | Batch-delete a list of prompts |
+| [**DeleteArchitectSchedule**](ArchitectApi.html#deletearchitectschedule) | **DELETE** /api/v2/architect/schedules/{scheduleId} | Delete a schedule by id |
+| [**DeleteArchitectSchedulegroup**](ArchitectApi.html#deletearchitectschedulegroup) | **DELETE** /api/v2/architect/schedulegroups/{scheduleGroupId} | Deletes a schedule group by ID |
 | [**DeleteArchitectSystempromptResource**](ArchitectApi.html#deletearchitectsystempromptresource) | **DELETE** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Delete a system prompt resource override. |
 | [**DeleteFlow**](ArchitectApi.html#deleteflow) | **DELETE** /api/v2/flows/{flowId} | Delete flow |
 | [**DeleteFlows**](ArchitectApi.html#deleteflows) | **DELETE** /api/v2/flows | Batch-delete a list of flows |
@@ -22,10 +25,16 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectDependencytrackingType**](ArchitectApi.html#getarchitectdependencytrackingtype) | **GET** /api/v2/architect/dependencytracking/types/{typeId} | Get a Dependency Tracking type. |
 | [**GetArchitectDependencytrackingTypes**](ArchitectApi.html#getarchitectdependencytrackingtypes) | **GET** /api/v2/architect/dependencytracking/types | Get Dependency Tracking types. |
 | [**GetArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingupdatedresourceconsumers) | **GET** /api/v2/architect/dependencytracking/updatedresourceconsumers | Get Dependency Tracking objects that depend on updated resources |
+| [**GetArchitectIvr**](ArchitectApi.html#getarchitectivr) | **GET** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
+| [**GetArchitectIvrs**](ArchitectApi.html#getarchitectivrs) | **GET** /api/v2/architect/ivrs | Get IVR configs. |
 | [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **GET** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
 | [**GetArchitectPromptResource**](ArchitectApi.html#getarchitectpromptresource) | **GET** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Get specified user prompt resource |
 | [**GetArchitectPromptResources**](ArchitectApi.html#getarchitectpromptresources) | **GET** /api/v2/architect/prompts/{promptId}/resources | Get a pageable list of user prompt resources |
 | [**GetArchitectPrompts**](ArchitectApi.html#getarchitectprompts) | **GET** /api/v2/architect/prompts | Get a pageable list of user prompts |
+| [**GetArchitectSchedule**](ArchitectApi.html#getarchitectschedule) | **GET** /api/v2/architect/schedules/{scheduleId} | Get a schedule by ID |
+| [**GetArchitectSchedulegroup**](ArchitectApi.html#getarchitectschedulegroup) | **GET** /api/v2/architect/schedulegroups/{scheduleGroupId} | Gets a schedule group by ID |
+| [**GetArchitectSchedulegroups**](ArchitectApi.html#getarchitectschedulegroups) | **GET** /api/v2/architect/schedulegroups | Get a list of schedule groups. |
+| [**GetArchitectSchedules**](ArchitectApi.html#getarchitectschedules) | **GET** /api/v2/architect/schedules | Get a list of schedules. |
 | [**GetArchitectSystemprompt**](ArchitectApi.html#getarchitectsystemprompt) | **GET** /api/v2/architect/systemprompts/{promptId} | Get a system prompt |
 | [**GetArchitectSystempromptResource**](ArchitectApi.html#getarchitectsystempromptresource) | **GET** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Get a system prompt resource. |
 | [**GetArchitectSystempromptResources**](ArchitectApi.html#getarchitectsystempromptresources) | **GET** /api/v2/architect/systemprompts/{promptId}/resources | Get system prompt resources. |
@@ -38,8 +47,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **GET** /api/v2/flows/{flowId}/versions | Get flow version list |
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
+| [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **POST** /api/v2/architect/ivrs | Create IVR config. |
 | [**PostArchitectPromptResources**](ArchitectApi.html#postarchitectpromptresources) | **POST** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
 | [**PostArchitectPrompts**](ArchitectApi.html#postarchitectprompts) | **POST** /api/v2/architect/prompts | Create a new user prompt |
+| [**PostArchitectSchedulegroups**](ArchitectApi.html#postarchitectschedulegroups) | **POST** /api/v2/architect/schedulegroups | Creates a new schedule group |
+| [**PostArchitectSchedules**](ArchitectApi.html#postarchitectschedules) | **POST** /api/v2/architect/schedules | Create a new schedule. |
 | [**PostArchitectSystempromptResources**](ArchitectApi.html#postarchitectsystempromptresources) | **POST** /api/v2/architect/systemprompts/{promptId}/resources | Create system prompt resource override. |
 | [**PostFlowVersions**](ArchitectApi.html#postflowversions) | **POST** /api/v2/flows/{flowId}/versions | Create flow version |
 | [**PostFlows**](ArchitectApi.html#postflows) | **POST** /api/v2/flows | Create flow |
@@ -49,11 +61,77 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsActionsPublish**](ArchitectApi.html#postflowsactionspublish) | **POST** /api/v2/flows/actions/publish | Publish flow |
 | [**PostFlowsActionsRevert**](ArchitectApi.html#postflowsactionsrevert) | **POST** /api/v2/flows/actions/revert | Revert flow |
 | [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **POST** /api/v2/flows/actions/unlock | Unlock flow |
+| [**PutArchitectIvr**](ArchitectApi.html#putarchitectivr) | **PUT** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
 | [**PutArchitectPrompt**](ArchitectApi.html#putarchitectprompt) | **PUT** /api/v2/architect/prompts/{promptId} | Update specified user prompt |
 | [**PutArchitectPromptResource**](ArchitectApi.html#putarchitectpromptresource) | **PUT** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Update specified user prompt resource |
+| [**PutArchitectSchedule**](ArchitectApi.html#putarchitectschedule) | **PUT** /api/v2/architect/schedules/{scheduleId} | Update schedule by ID |
+| [**PutArchitectSchedulegroup**](ArchitectApi.html#putarchitectschedulegroup) | **PUT** /api/v2/architect/schedulegroups/{scheduleGroupId} | Updates a schedule group by ID |
 | [**PutArchitectSystempromptResource**](ArchitectApi.html#putarchitectsystempromptresource) | **PUT** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Updates a system prompt resource override. |
 | [**PutFlow**](ArchitectApi.html#putflow) | **PUT** /api/v2/flows/{flowId} | Update flow |
 {: class="table table-striped"}
+
+<a name="deletearchitectivr"></a>
+
+## void DeleteArchitectIvr (string ivrId)
+
+Delete an IVR Config.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectIvrExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var ivrId = ivrId_example;  // string | IVR id
+            
+            
+            
+
+            try
+            {
+                
+                // Delete an IVR Config.
+                
+                apiInstance.DeleteArchitectIvr(ivrId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectIvr: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ivrId** | **string**| IVR id |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletearchitectprompt"></a>
 
@@ -256,6 +334,132 @@ namespace Example
 ### Return type
 
 [**Operation**](Operation.html)
+
+<a name="deletearchitectschedule"></a>
+
+## void DeleteArchitectSchedule (string scheduleId)
+
+Delete a schedule by id
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectScheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a schedule by id
+                
+                apiInstance.DeleteArchitectSchedule(scheduleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectSchedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleId** | **string**| Schedule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletearchitectschedulegroup"></a>
+
+## void DeleteArchitectSchedulegroup (string scheduleGroupId)
+
+Deletes a schedule group by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectSchedulegroupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
+            
+            
+            
+
+            try
+            {
+                
+                // Deletes a schedule group by ID
+                
+                apiInstance.DeleteArchitectSchedulegroup(scheduleGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectSchedulegroup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleGroupId** | **string**| Schedule group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletearchitectsystempromptresource"></a>
 
@@ -1200,6 +1404,152 @@ namespace Example
 
 [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
 
+<a name="getarchitectivr"></a>
+
+## [**IVR**](IVR.html) GetArchitectIvr (string ivrId)
+
+Get an IVR config.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectIvrExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var ivrId = ivrId_example;  // string | IVR id
+            
+            
+            
+
+            try
+            {
+                
+                // Get an IVR config.
+                
+                IVR result = apiInstance.GetArchitectIvr(ivrId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectIvr: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ivrId** | **string**| IVR id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IVR**](IVR.html)
+
+<a name="getarchitectivrs"></a>
+
+## [**IVREntityListing**](IVREntityListing.html) GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+
+Get IVR configs.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectIvrsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+
+            try
+            {
+                
+                // Get IVR configs.
+                
+                IVREntityListing result = apiInstance.GetArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectIvrs: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+{: class="table table-striped"}
+
+### Return type
+
+[**IVREntityListing**](IVREntityListing.html)
+
 <a name="getarchitectprompt"></a>
 
 ## [**Prompt**](Prompt.html) GetArchitectPrompt (string promptId)
@@ -1497,6 +1847,298 @@ namespace Example
 ### Return type
 
 [**PromptEntityListing**](PromptEntityListing.html)
+
+<a name="getarchitectschedule"></a>
+
+## [**Schedule**](Schedule.html) GetArchitectSchedule (string scheduleId)
+
+Get a schedule by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectScheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get a schedule by ID
+                
+                Schedule result = apiInstance.GetArchitectSchedule(scheduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectSchedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleId** | **string**| Schedule ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Schedule**](Schedule.html)
+
+<a name="getarchitectschedulegroup"></a>
+
+## [**ScheduleGroup**](ScheduleGroup.html) GetArchitectSchedulegroup (string scheduleGroupId)
+
+Gets a schedule group by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectSchedulegroupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
+            
+            
+            
+
+            try
+            {
+                
+                // Gets a schedule group by ID
+                
+                ScheduleGroup result = apiInstance.GetArchitectSchedulegroup(scheduleGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectSchedulegroup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleGroupId** | **string**| Schedule group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScheduleGroup**](ScheduleGroup.html)
+
+<a name="getarchitectschedulegroups"></a>
+
+## [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+
+Get a list of schedule groups.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectSchedulegroupsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a list of schedule groups.
+                
+                ScheduleGroupEntityListing result = apiInstance.GetArchitectSchedulegroups(pageNumber, pageSize, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectSchedulegroups: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html)
+
+<a name="getarchitectschedules"></a>
+
+## [**ScheduleEntityListing**](ScheduleEntityListing.html) GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+
+Get a list of schedules.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectSchedulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a list of schedules.
+                
+                ScheduleEntityListing result = apiInstance.GetArchitectSchedules(pageNumber, pageSize, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectSchedules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScheduleEntityListing**](ScheduleEntityListing.html)
 
 <a name="getarchitectsystemprompt"></a>
 
@@ -2496,6 +3138,70 @@ This endpoint does require any parameters.
 
 void (empty response body)
 
+<a name="postarchitectivrs"></a>
+
+## [**IVR**](IVR.html) PostArchitectIvrs (IVR body = null)
+
+Create IVR config.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectIvrsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            
+            var body = new IVR(); // IVR |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Create IVR config.
+                
+                IVR result = apiInstance.PostArchitectIvrs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectIvrs: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**IVR**](IVR.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IVR**](IVR.html)
+
 <a name="postarchitectpromptresources"></a>
 
 ## [**PromptAsset**](PromptAsset.html) PostArchitectPromptResources (string promptId, PromptAssetCreate body = null)
@@ -2629,6 +3335,134 @@ namespace Example
 ### Return type
 
 [**Prompt**](Prompt.html)
+
+<a name="postarchitectschedulegroups"></a>
+
+## [**ScheduleGroup**](ScheduleGroup.html) PostArchitectSchedulegroups (ScheduleGroup body = null)
+
+Creates a new schedule group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectSchedulegroupsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            
+            var body = new ScheduleGroup(); // ScheduleGroup |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Creates a new schedule group
+                
+                ScheduleGroup result = apiInstance.PostArchitectSchedulegroups(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectSchedulegroups: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScheduleGroup**](ScheduleGroup.html)
+
+<a name="postarchitectschedules"></a>
+
+## [**Schedule**](Schedule.html) PostArchitectSchedules (Schedule body = null)
+
+Create a new schedule.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectSchedulesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            
+            var body = new Schedule(); // Schedule |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Create a new schedule.
+                
+                Schedule result = apiInstance.PostArchitectSchedules(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectSchedules: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Schedule**](Schedule.html)
 
 <a name="postarchitectsystempromptresources"></a>
 
@@ -3224,6 +4058,76 @@ namespace Example
 
 [**Flow**](Flow.html)
 
+<a name="putarchitectivr"></a>
+
+## [**IVR**](IVR.html) PutArchitectIvr (string ivrId, IVR body = null)
+
+Update an IVR Config.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutArchitectIvrExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var ivrId = ivrId_example;  // string | IVR id
+            
+            
+            
+            
+            
+            var body = new IVR(); // IVR |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Update an IVR Config.
+                
+                IVR result = apiInstance.PutArchitectIvr(ivrId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutArchitectIvr: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **ivrId** | **string**| IVR id |  |
+| **body** | [**IVR**](IVR.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IVR**](IVR.html)
+
 <a name="putarchitectprompt"></a>
 
 ## [**Prompt**](Prompt.html) PutArchitectPrompt (string promptId, Prompt body = null)
@@ -3369,6 +4273,146 @@ namespace Example
 ### Return type
 
 [**PromptAsset**](PromptAsset.html)
+
+<a name="putarchitectschedule"></a>
+
+## [**Schedule**](Schedule.html) PutArchitectSchedule (string scheduleId, Schedule body = null)
+
+Update schedule by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutArchitectScheduleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var scheduleId = scheduleId_example;  // string | Schedule ID
+            
+            
+            
+            
+            
+            var body = new Schedule(); // Schedule |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Update schedule by ID
+                
+                Schedule result = apiInstance.PutArchitectSchedule(scheduleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutArchitectSchedule: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleId** | **string**| Schedule ID |  |
+| **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Schedule**](Schedule.html)
+
+<a name="putarchitectschedulegroup"></a>
+
+## [**ScheduleGroup**](ScheduleGroup.html) PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body = null)
+
+Updates a schedule group by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutArchitectSchedulegroupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var scheduleGroupId = scheduleGroupId_example;  // string | Schedule group ID
+            
+            
+            
+            
+            
+            var body = new ScheduleGroup(); // ScheduleGroup |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Updates a schedule group by ID
+                
+                ScheduleGroup result = apiInstance.PutArchitectSchedulegroup(scheduleGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutArchitectSchedulegroup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduleGroupId** | **string**| Schedule group ID |  |
+| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ScheduleGroup**](ScheduleGroup.html)
 
 <a name="putarchitectsystempromptresource"></a>
 

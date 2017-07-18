@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ParticipantId">The id of the participant whose screen is being recorded on the conversation.</param>
+        /// <param name="CommunicationId">The id of the communication that is being recorded on the conversation.</param>
         
         
         
@@ -84,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public ScreenRecordingSession(string Name = null, User User = null, string ParticipantId = null, Conversation Conversation = null, DateTime? StartTime = null)
+        public ScreenRecordingSession(string Name = null, User User = null, string CommunicationId = null, Conversation Conversation = null, DateTime? StartTime = null)
         {
             
             
@@ -136,7 +136,7 @@ this.User = User;
             
             
             
-this.ParticipantId = ParticipantId;
+this.CommunicationId = CommunicationId;
             
             
             
@@ -191,11 +191,11 @@ this.StartTime = StartTime;
         
         
         /// <summary>
-        /// The id of the participant whose screen is being recorded on the conversation
+        /// The id of the communication that is being recorded on the conversation
         /// </summary>
-        /// <value>The id of the participant whose screen is being recorded on the conversation</value>
-        [DataMember(Name="participantId", EmitDefaultValue=false)]
-        public string ParticipantId { get; set; }
+        /// <value>The id of the communication that is being recorded on the conversation</value>
+        [DataMember(Name="communicationId", EmitDefaultValue=false)]
+        public string CommunicationId { get; set; }
         
         
         
@@ -239,7 +239,7 @@ this.StartTime = StartTime;
             
             sb.Append("  User: ").Append(User).Append("\n");
             
-            sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
+            sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
             
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             
@@ -299,9 +299,9 @@ this.StartTime = StartTime;
                     this.User.Equals(other.User)
                 ) &&
                 (
-                    this.ParticipantId == other.ParticipantId ||
-                    this.ParticipantId != null &&
-                    this.ParticipantId.Equals(other.ParticipantId)
+                    this.CommunicationId == other.CommunicationId ||
+                    this.CommunicationId != null &&
+                    this.CommunicationId.Equals(other.CommunicationId)
                 ) &&
                 (
                     this.Conversation == other.Conversation ||
@@ -341,8 +341,8 @@ this.StartTime = StartTime;
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
                 
-                if (this.ParticipantId != null)
-                    hash = hash * 59 + this.ParticipantId.GetHashCode();
+                if (this.CommunicationId != null)
+                    hash = hash * 59 + this.CommunicationId.GetHashCode();
                 
                 if (this.Conversation != null)
                     hash = hash * 59 + this.Conversation.GetHashCode();

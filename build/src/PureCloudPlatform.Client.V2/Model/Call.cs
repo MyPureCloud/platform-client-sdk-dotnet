@@ -340,6 +340,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -389,6 +392,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -498,8 +503,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         
         
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null)
+        
+        /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
+        
+        
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null)
         {
+            
+            
+            
+            
             
             
             
@@ -775,6 +788,15 @@ this.PeerId = PeerId;
             
             
             
+            
+            
+            
+            
+this.UuiData = UuiData;
+            
+            
+            
+            
         }
         
         
@@ -938,6 +960,15 @@ this.PeerId = PeerId;
         public string PeerId { get; set; }
         
         
+        
+        /// <summary>
+        /// User to User Information (UUI) data managed by SIP session application.
+        /// </summary>
+        /// <value>User to User Information (UUI) data managed by SIP session application.</value>
+        [DataMember(Name="uuiData", EmitDefaultValue=false)]
+        public string UuiData { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -988,6 +1019,8 @@ this.PeerId = PeerId;
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            
+            sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1129,6 +1162,11 @@ this.PeerId = PeerId;
                     this.PeerId == other.PeerId ||
                     this.PeerId != null &&
                     this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
+                    this.UuiData == other.UuiData ||
+                    this.UuiData != null &&
+                    this.UuiData.Equals(other.UuiData)
                 );
         }
 
@@ -1206,6 +1244,9 @@ this.PeerId = PeerId;
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
+                if (this.UuiData != null)
+                    hash = hash * 59 + this.UuiData.GetHashCode();
                 
                 return hash;
             }

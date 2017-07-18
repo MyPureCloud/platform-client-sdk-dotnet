@@ -234,6 +234,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -268,6 +271,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -334,11 +339,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ScriptId">The UUID of the script to use..</param>
+        
+        
+        
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         
         
-        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null)
+        public ConversationChat(StateEnum? State = null, string Id = null, string RoomId = null, string RecordingId = null, List<Segment> Segments = null, bool? Held = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null)
         {
+            
+            
+            
+            
             
             
             
@@ -505,6 +518,15 @@ this.Provider = Provider;
             
             
             
+this.ScriptId = ScriptId;
+            
+            
+            
+            
+            
+            
+            
+            
 this.PeerId = PeerId;
             
             
@@ -602,6 +624,15 @@ this.PeerId = PeerId;
         
         
         /// <summary>
+        /// The UUID of the script to use.
+        /// </summary>
+        /// <value>The UUID of the script to use.</value>
+        [DataMember(Name="scriptId", EmitDefaultValue=false)]
+        public string ScriptId { get; set; }
+        
+        
+        
+        /// <summary>
         /// The id of the peer communication corresponding to a matching leg for this communication.
         /// </summary>
         /// <value>The id of the peer communication corresponding to a matching leg for this communication.</value>
@@ -641,6 +672,8 @@ this.PeerId = PeerId;
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
+            sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             
@@ -741,6 +774,11 @@ this.PeerId = PeerId;
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.ScriptId == other.ScriptId ||
+                    this.ScriptId != null &&
+                    this.ScriptId.Equals(other.ScriptId)
+                ) &&
+                (
                     this.PeerId == other.PeerId ||
                     this.PeerId != null &&
                     this.PeerId.Equals(other.PeerId)
@@ -794,6 +832,9 @@ this.PeerId = PeerId;
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
+                if (this.ScriptId != null)
+                    hash = hash * 59 + this.ScriptId.GetHashCode();
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();

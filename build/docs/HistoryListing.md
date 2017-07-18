@@ -7,15 +7,20 @@ title: HistoryListing
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;HistoryEntry&gt;**](HistoryEntry.html) |  | [optional] |
-| **PageSize** | **int?** |  | [optional] |
-| **PageNumber** | **int?** |  | [optional] |
-| **Total** | **long?** |  | [optional] |
 | **Id** | **string** |  | [optional] |
+| **Complete** | **bool?** |  | [optional] |
+| **User** | [**User**](User.html) |  | [optional] |
+| **ErrorMessage** | **string** |  | [optional] |
+| **ErrorCode** | **string** |  | [optional] |
+| **ErrorDetails** | [**List&lt;Detail&gt;**](Detail.html) |  | [optional] |
+| **ErrorMessageParams** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **ActionName** | **string** | Action name | [optional] |
+| **ActionStatus** | **string** | Action status | [optional] |
 | **Name** | **string** |  | [optional] |
 | **Description** | **string** |  | [optional] |
 | **System** | **bool?** |  | [optional] |
-| **PageCount** | **int?** |  | [optional] |
+| **Started** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **Completed** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 {: class="table table-striped"}
 
 

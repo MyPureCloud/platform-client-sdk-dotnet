@@ -82,12 +82,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The sort order for results
         /// </summary>
         /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
+        
+        
         
         
         
@@ -134,6 +139,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
+        
+        
+        
         /// <param name="ReturnFields">A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results..</param>
         
         
@@ -153,8 +162,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Aggregations">Aggregation criteria.</param>
         
         
-        public SearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<string> ReturnFields = null, List<string> Expand = null, List<string> Types = null, List<SearchCriteria> Query = null, List<SearchAggregation> Aggregations = null)
+        public SearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> ReturnFields = null, List<string> Expand = null, List<string> Types = null, List<SearchCriteria> Query = null, List<SearchAggregation> Aggregations = null)
         {
+            
+            
+            
+            
             
             
             
@@ -243,6 +256,15 @@ this.PageNumber = PageNumber;
             
             
             
+this.Sort = Sort;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ReturnFields = ReturnFields;
             
             
@@ -313,6 +335,15 @@ this.Aggregations = Aggregations;
         
         
         /// <summary>
+        /// Multi-value sort order, list of multiple sort values
+        /// </summary>
+        /// <value>Multi-value sort order, list of multiple sort values</value>
+        [DataMember(Name="sort", EmitDefaultValue=false)]
+        public List<SearchSort> Sort { get; set; }
+        
+        
+        
+        /// <summary>
         /// A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results.
         /// </summary>
         /// <value>A List of strings.  Possible values are any field in the resource you are searching on.  The other option is to use ALL_FIELDS, when this is provided all fields in the resource will be returned in the search results.</value>
@@ -372,6 +403,8 @@ this.Aggregations = Aggregations;
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            
+            sb.Append("  Sort: ").Append(Sort).Append("\n");
             
             sb.Append("  ReturnFields: ").Append(ReturnFields).Append("\n");
             
@@ -440,6 +473,11 @@ this.Aggregations = Aggregations;
                     this.PageNumber.Equals(other.PageNumber)
                 ) &&
                 (
+                    this.Sort == other.Sort ||
+                    this.Sort != null &&
+                    this.Sort.SequenceEqual(other.Sort)
+                ) &&
+                (
                     this.ReturnFields == other.ReturnFields ||
                     this.ReturnFields != null &&
                     this.ReturnFields.SequenceEqual(other.ReturnFields)
@@ -489,6 +527,9 @@ this.Aggregations = Aggregations;
                 
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
+                
+                if (this.Sort != null)
+                    hash = hash * 59 + this.Sort.GetHashCode();
                 
                 if (this.ReturnFields != null)
                     hash = hash * 59 + this.ReturnFields.GetHashCode();

@@ -73,12 +73,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The sort order for results
         /// </summary>
         /// <value>The sort order for results</value>
         [DataMember(Name="sortOrder", EmitDefaultValue=false)]
         public SortOrderEnum? SortOrder { get; set; }
+        
+        
         
         
         
@@ -113,6 +118,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Sort">Multi-value sort order, list of multiple sort values.</param>
+        
+        
+        
         /// <param name="Expand">Provides more details about a specified resource.</param>
         
         
@@ -120,8 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Query">Query.</param>
         
         
-        public VoicemailSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<string> Expand = null, List<VoicemailSearchCriteria> Query = null)
+        public VoicemailSearchRequest(SortOrderEnum? SortOrder = null, string SortBy = null, int? PageSize = null, int? PageNumber = null, List<SearchSort> Sort = null, List<string> Expand = null, List<VoicemailSearchCriteria> Query = null)
         {
+            
+            
+            
+            
             
             
             
@@ -188,6 +201,15 @@ this.PageNumber = PageNumber;
             
             
             
+this.Sort = Sort;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Expand = Expand;
             
             
@@ -236,6 +258,15 @@ this.Query = Query;
         
         
         /// <summary>
+        /// Multi-value sort order, list of multiple sort values
+        /// </summary>
+        /// <value>Multi-value sort order, list of multiple sort values</value>
+        [DataMember(Name="sort", EmitDefaultValue=false)]
+        public List<SearchSort> Sort { get; set; }
+        
+        
+        
+        /// <summary>
         /// Provides more details about a specified resource
         /// </summary>
         /// <value>Provides more details about a specified resource</value>
@@ -267,6 +298,8 @@ this.Query = Query;
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
             
             sb.Append("  PageNumber: ").Append(PageNumber).Append("\n");
+            
+            sb.Append("  Sort: ").Append(Sort).Append("\n");
             
             sb.Append("  Expand: ").Append(Expand).Append("\n");
             
@@ -329,6 +362,11 @@ this.Query = Query;
                     this.PageNumber.Equals(other.PageNumber)
                 ) &&
                 (
+                    this.Sort == other.Sort ||
+                    this.Sort != null &&
+                    this.Sort.SequenceEqual(other.Sort)
+                ) &&
+                (
                     this.Expand == other.Expand ||
                     this.Expand != null &&
                     this.Expand.SequenceEqual(other.Expand)
@@ -363,6 +401,9 @@ this.Query = Query;
                 
                 if (this.PageNumber != null)
                     hash = hash * 59 + this.PageNumber.GetHashCode();
+                
+                if (this.Sort != null)
+                    hash = hash * 59 + this.Sort.GetHashCode();
                 
                 if (this.Expand != null)
                     hash = hash * 59 + this.Expand.GetHashCode();

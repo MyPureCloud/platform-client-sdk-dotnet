@@ -96,6 +96,52 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// status of the campaign; can be set to 'on' or 'off'
+        /// </summary>
+        /// <value>status of the campaign; can be set to 'on' or 'off'</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CampaignStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum On for "on"
+            /// </summary>
+            [EnumMember(Value = "on")]
+            On,
+            
+            /// <summary>
+            /// Enum Stopping for "stopping"
+            /// </summary>
+            [EnumMember(Value = "stopping")]
+            Stopping,
+            
+            /// <summary>
+            /// Enum Off for "off"
+            /// </summary>
+            [EnumMember(Value = "off")]
+            Off,
+            
+            /// <summary>
+            /// Enum Complete for "complete"
+            /// </summary>
+            [EnumMember(Value = "complete")]
+            Complete,
+            
+            /// <summary>
+            /// Enum Invalid for "invalid"
+            /// </summary>
+            [EnumMember(Value = "invalid")]
+            Invalid
+        }
+        
         
         
         
@@ -183,6 +229,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// status of the campaign; can be set to 'on' or 'off'
+        /// </summary>
+        /// <value>status of the campaign; can be set to 'on' or 'off'</value>
+        [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
+        public CampaignStatusEnum? CampaignStatus { get; set; }
         
         
         
@@ -346,7 +399,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, string CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
         {
             
             
@@ -829,13 +882,6 @@ this.ContactListFilters = ContactListFilters;
         public UriReference EdgeGroup { get; set; }
         
         
-        
-        /// <summary>
-        /// status of the campaign; can be set to &#39;on&#39; or &#39;off&#39;
-        /// </summary>
-        /// <value>status of the campaign; can be set to &#39;on&#39; or &#39;off&#39;</value>
-        [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
-        public string CampaignStatus { get; set; }
         
         
         

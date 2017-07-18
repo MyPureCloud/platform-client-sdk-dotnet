@@ -883,7 +883,7 @@ namespace Example
             
             
             
-            var expand = new List<string>(); // List<string> | which fields, if any, to expand (externalOrganization) (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
             
             
 
@@ -914,7 +914,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **q** | **string**| User supplied search keywords (no special syntax is currently supported) | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional]  |
-| **expand** | [**List<string>**](string.html)| which fields, if any, to expand (externalOrganization) | [optional] <br />**Values**: externalOrganization |
+| **expand** | [**List<string>**](string.html)| which fields, if any, to expand | [optional] <br />**Values**: externalOrganization, externalDataSources |
 {: class="table table-striped"}
 
 ### Return type

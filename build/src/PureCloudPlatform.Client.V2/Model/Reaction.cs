@@ -41,27 +41,27 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Hangup for "HANGUP"
+            /// Enum Hangup for "hangup"
             /// </summary>
-            [EnumMember(Value = "HANGUP")]
+            [EnumMember(Value = "hangup")]
             Hangup,
             
             /// <summary>
-            /// Enum Transfer for "TRANSFER"
+            /// Enum Transfer for "transfer"
             /// </summary>
-            [EnumMember(Value = "TRANSFER")]
+            [EnumMember(Value = "transfer")]
             Transfer,
             
             /// <summary>
-            /// Enum TransferFlow for "TRANSFER_FLOW"
+            /// Enum TransferFlow for "transfer_flow"
             /// </summary>
-            [EnumMember(Value = "TRANSFER_FLOW")]
+            [EnumMember(Value = "transfer_flow")]
             TransferFlow,
             
             /// <summary>
-            /// Enum PlayFile for "PLAY_FILE"
+            /// Enum PlayFile for "play_file"
             /// </summary>
-            [EnumMember(Value = "PLAY_FILE")]
+            [EnumMember(Value = "play_file")]
             PlayFile
         }
         

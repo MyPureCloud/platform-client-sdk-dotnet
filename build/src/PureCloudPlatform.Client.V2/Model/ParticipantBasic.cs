@@ -168,6 +168,55 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The current screen recording state for this participant.
+        /// </summary>
+        /// <value>The current screen recording state for this participant.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ScreenRecordingStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Requested for "requested"
+            /// </summary>
+            [EnumMember(Value = "requested")]
+            Requested,
+            
+            /// <summary>
+            /// Enum Active for "active"
+            /// </summary>
+            [EnumMember(Value = "active")]
+            Active,
+            
+            /// <summary>
+            /// Enum Paused for "paused"
+            /// </summary>
+            [EnumMember(Value = "paused")]
+            Paused,
+            
+            /// <summary>
+            /// Enum Stopped for "stopped"
+            /// </summary>
+            [EnumMember(Value = "stopped")]
+            Stopped,
+            
+            /// <summary>
+            /// Enum Error for "error"
+            /// </summary>
+            [EnumMember(Value = "error")]
+            Error
+        }
+        
+        
+        
+        
         
         
         
@@ -245,6 +294,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// The current screen recording state for this participant.
+        /// </summary>
+        /// <value>The current screen recording state for this participant.</value>
+        [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
+        public ScreenRecordingStateEnum? ScreenRecordingState { get; set; }
         
         
     
@@ -396,8 +454,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Evaluations">Evaluations.</param>
         
         
-        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null)
+        
+        /// <param name="ScreenRecordingState">The current screen recording state for this participant..</param>
+        
+        
+        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null)
         {
+            
+            
+            
+            
             
             
             
@@ -868,6 +934,15 @@ this.Evaluations = Evaluations;
             
             
             
+            
+            
+            
+            
+this.ScreenRecordingState = ScreenRecordingState;
+            
+            
+            
+            
         }
         
         
@@ -1179,6 +1254,8 @@ this.Evaluations = Evaluations;
         public List<Evaluation> Evaluations { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1259,6 +1336,8 @@ this.Evaluations = Evaluations;
             sb.Append("  Videos: ").Append(Videos).Append("\n");
             
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
+            
+            sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1475,6 +1554,11 @@ this.Evaluations = Evaluations;
                     this.Evaluations == other.Evaluations ||
                     this.Evaluations != null &&
                     this.Evaluations.SequenceEqual(other.Evaluations)
+                ) &&
+                (
+                    this.ScreenRecordingState == other.ScreenRecordingState ||
+                    this.ScreenRecordingState != null &&
+                    this.ScreenRecordingState.Equals(other.ScreenRecordingState)
                 );
         }
 
@@ -1597,6 +1681,9 @@ this.Evaluations = Evaluations;
                 
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
+                
+                if (this.ScreenRecordingState != null)
+                    hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
                 return hash;
             }

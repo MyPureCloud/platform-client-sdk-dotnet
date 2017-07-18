@@ -180,12 +180,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -398,8 +403,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Trustors">Organizations having this user as a trustee.</param>
         
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null)
+        
+        
+        
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null)
         {
             
             
@@ -457,6 +466,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
             
             
             
@@ -862,6 +875,15 @@ this.Token = Token;
             
             
             
+            
+            
+this.Trustors = Trustors;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -1176,6 +1198,15 @@ this.Token = Token;
         
         
         /// <summary>
+        /// Organizations having this user as a trustee
+        /// </summary>
+        /// <value>Organizations having this user as a trustee</value>
+        [DataMember(Name="trustors", EmitDefaultValue=false)]
+        public List<Trustor> Trustors { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -1263,6 +1294,8 @@ this.Token = Token;
             sb.Append("  FieldConfigs: ").Append(FieldConfigs).Append("\n");
             
             sb.Append("  Token: ").Append(Token).Append("\n");
+            
+            sb.Append("  Trustors: ").Append(Trustors).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -1483,6 +1516,11 @@ this.Token = Token;
                     this.Token.Equals(other.Token)
                 ) &&
                 (
+                    this.Trustors == other.Trustors ||
+                    this.Trustors != null &&
+                    this.Trustors.SequenceEqual(other.Trustors)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1608,6 +1646,9 @@ this.Token = Token;
                 
                 if (this.Token != null)
                     hash = hash * 59 + this.Token.GetHashCode();
+                
+                if (this.Trustors != null)
+                    hash = hash * 59 + this.Trustors.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

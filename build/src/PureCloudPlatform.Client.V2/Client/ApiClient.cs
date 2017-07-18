@@ -178,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "14.2.0");
+            request.AddHeader("purecloud-sdk", "15.0.0");
 
             
             var response = RestClient.Execute(request);
