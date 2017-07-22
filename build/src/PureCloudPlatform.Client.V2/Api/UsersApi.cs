@@ -882,7 +882,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>OutOfOffice</returns>
         OutOfOffice PutUserOutofoffice (string userId, OutOfOffice body);
 
@@ -894,7 +894,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>ApiResponse of OutOfOffice</returns>
         ApiResponse<OutOfOffice> PutUserOutofofficeWithHttpInfo (string userId, OutOfOffice body);
         
@@ -1914,7 +1914,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of OutOfOffice</returns>
         System.Threading.Tasks.Task<OutOfOffice> PutUserOutofofficeAsync (string userId, OutOfOffice body);
 
@@ -1926,7 +1926,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of ApiResponse (OutOfOffice)</returns>
         System.Threading.Tasks.Task<ApiResponse<OutOfOffice>> PutUserOutofofficeAsyncWithHttpInfo (string userId, OutOfOffice body);
         
@@ -9396,7 +9396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>OutOfOffice</returns>
         public OutOfOffice PutUserOutofoffice (string userId, OutOfOffice body)
         {
@@ -9409,7 +9409,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>ApiResponse of OutOfOffice</returns>
         public ApiResponse< OutOfOffice > PutUserOutofofficeWithHttpInfo (string userId, OutOfOffice body)
         { 
@@ -9500,7 +9500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of OutOfOffice</returns>
         public async System.Threading.Tasks.Task<OutOfOffice> PutUserOutofofficeAsync (string userId, OutOfOffice body)
         {
@@ -9514,7 +9514,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
-        /// <param name="body">The updated UserPresence</param>
+        /// <param name="body">The updated OutOffOffice</param>
         /// <returns>Task of ApiResponse (OutOfOffice)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<OutOfOffice>> PutUserOutofofficeAsyncWithHttpInfo (string userId, OutOfOffice body)
         { 

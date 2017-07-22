@@ -10,8 +10,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLicenseDefinition**](LicenseApi.html#getlicensedefinition) | **GET** /api/v2/license/definitions/{licenseId} | Get PureCloud license definition. |
 | [**GetLicenseDefinitions**](LicenseApi.html#getlicensedefinitions) | **GET** /api/v2/license/definitions | Get all PureCloud license definitions available for the organization. |
 | [**GetLicenseOrganization**](LicenseApi.html#getlicenseorganization) | **GET** /api/v2/license/organization | Get license assignments for the organization. |
+| [**GetLicenseToggle**](LicenseApi.html#getlicensetoggle) | **GET** /api/v2/license/toggles/{featureName} | Get PureCloud license feature toggle value. |
 | [**GetLicenseUser**](LicenseApi.html#getlicenseuser) | **GET** /api/v2/license/users/{userId} | Get licenses for specified user. |
 | [**PostLicenseOrganization**](LicenseApi.html#postlicenseorganization) | **POST** /api/v2/license/organization | Update the organization&#39;s license assignments in a batch. |
+| [**PostLicenseToggle**](LicenseApi.html#postlicensetoggle) | **POST** /api/v2/license/toggles/{featureName} | Switch PureCloud license feature toggle value. |
 | [**PostLicenseUsers**](LicenseApi.html#postlicenseusers) | **POST** /api/v2/license/users | Fetch user licenses in a batch. |
 {: class="table table-striped"}
 
@@ -189,6 +191,70 @@ This endpoint does require any parameters.
 
 [**LicenseOrganization**](LicenseOrganization.html)
 
+<a name="getlicensetoggle"></a>
+
+## [**LicenseOrgToggle**](LicenseOrgToggle.html) GetLicenseToggle (string featureName)
+
+Get PureCloud license feature toggle value.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLicenseToggleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new LicenseApi();
+            
+            
+            var featureName = featureName_example;  // string | featureName
+            
+            
+            
+
+            try
+            {
+                
+                // Get PureCloud license feature toggle value.
+                
+                LicenseOrgToggle result = apiInstance.GetLicenseToggle(featureName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LicenseApi.GetLicenseToggle: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **featureName** | **string**| featureName |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LicenseOrgToggle**](LicenseOrgToggle.html)
+
 <a name="getlicenseuser"></a>
 
 ## [**LicenseUser**](LicenseUser.html) GetLicenseUser (string userId)
@@ -316,6 +382,70 @@ namespace Example
 ### Return type
 
 [**List<LicenseUpdateStatus>**](LicenseUpdateStatus.html)
+
+<a name="postlicensetoggle"></a>
+
+## [**LicenseOrgToggle**](LicenseOrgToggle.html) PostLicenseToggle (string featureName)
+
+Switch PureCloud license feature toggle value.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLicenseToggleExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new LicenseApi();
+            
+            
+            var featureName = featureName_example;  // string | featureName
+            
+            
+            
+
+            try
+            {
+                
+                // Switch PureCloud license feature toggle value.
+                
+                LicenseOrgToggle result = apiInstance.PostLicenseToggle(featureName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LicenseApi.PostLicenseToggle: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **featureName** | **string**| featureName |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**LicenseOrgToggle**](LicenseOrgToggle.html)
 
 <a name="postlicenseusers"></a>
 

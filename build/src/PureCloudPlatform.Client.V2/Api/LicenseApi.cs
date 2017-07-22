@@ -79,6 +79,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LicenseOrganization> GetLicenseOrganizationWithHttpInfo ();
         
         /// <summary>
+        /// Get PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>LicenseOrgToggle</returns>
+        LicenseOrgToggle GetLicenseToggle (string featureName);
+
+        /// <summary>
+        /// Get PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        ApiResponse<LicenseOrgToggle> GetLicenseToggleWithHttpInfo (string featureName);
+        
+        /// <summary>
         /// Get licenses for specified user.
         /// </summary>
         /// <remarks>
@@ -121,6 +143,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>ApiResponse of List&lt;LicenseUpdateStatus&gt;</returns>
         ApiResponse<List<LicenseUpdateStatus>> PostLicenseOrganizationWithHttpInfo (LicenseBatchAssignmentRequest body = null);
+        
+        /// <summary>
+        /// Switch PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>LicenseOrgToggle</returns>
+        LicenseOrgToggle PostLicenseToggle (string featureName);
+
+        /// <summary>
+        /// Switch PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        ApiResponse<LicenseOrgToggle> PostLicenseToggleWithHttpInfo (string featureName);
         
         /// <summary>
         /// Fetch user licenses in a batch.
@@ -211,6 +255,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LicenseOrganization>> GetLicenseOrganizationAsyncWithHttpInfo ();
         
         /// <summary>
+        /// Get PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of LicenseOrgToggle</returns>
+        System.Threading.Tasks.Task<LicenseOrgToggle> GetLicenseToggleAsync (string featureName);
+
+        /// <summary>
+        /// Get PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> GetLicenseToggleAsyncWithHttpInfo (string featureName);
+        
+        /// <summary>
         /// Get licenses for specified user.
         /// </summary>
         /// <remarks>
@@ -253,6 +319,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">The license assignments to update. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;LicenseUpdateStatus&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<LicenseUpdateStatus>>> PostLicenseOrganizationAsyncWithHttpInfo (LicenseBatchAssignmentRequest body = null);
+        
+        /// <summary>
+        /// Switch PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of LicenseOrgToggle</returns>
+        System.Threading.Tasks.Task<LicenseOrgToggle> PostLicenseToggleAsync (string featureName);
+
+        /// <summary>
+        /// Switch PureCloud license feature toggle value.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> PostLicenseToggleAsyncWithHttpInfo (string featureName);
         
         /// <summary>
         /// Fetch user licenses in a batch.
@@ -916,6 +1004,197 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>LicenseOrgToggle</returns>
+        public LicenseOrgToggle GetLicenseToggle (string featureName)
+        {
+             ApiResponse<LicenseOrgToggle> localVarResponse = GetLicenseToggleWithHttpInfo(featureName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        public ApiResponse< LicenseOrgToggle > GetLicenseToggleWithHttpInfo (string featureName)
+        { 
+            // verify the required parameter 'featureName' is set
+            if (featureName == null)
+                throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->GetLicenseToggle");
+
+            var localVarPath = "/api/v2/license/toggles/{featureName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (featureName != null) localVarPathParams.Add("featureName", Configuration.ApiClient.ParameterToString(featureName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLicenseToggle: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLicenseToggle: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
+                localVarHeaders,
+                (LicenseOrgToggle) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of LicenseOrgToggle</returns>
+        public async System.Threading.Tasks.Task<LicenseOrgToggle> GetLicenseToggleAsync (string featureName)
+        {
+             ApiResponse<LicenseOrgToggle> localVarResponse = await GetLicenseToggleAsyncWithHttpInfo(featureName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> GetLicenseToggleAsyncWithHttpInfo (string featureName)
+        { 
+            // verify the required parameter 'featureName' is set
+            if (featureName == null)
+                throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->GetLicenseToggle");
+            
+
+            var localVarPath = "/api/v2/license/toggles/{featureName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (featureName != null) localVarPathParams.Add("featureName", Configuration.ApiClient.ParameterToString(featureName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLicenseToggle: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLicenseToggle: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
+                localVarHeaders,
+                (LicenseOrgToggle) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Get licenses for specified user. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1293,6 +1572,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<LicenseUpdateStatus>>(localVarStatusCode,
                 localVarHeaders,
                 (List<LicenseUpdateStatus>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<LicenseUpdateStatus>)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Switch PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>LicenseOrgToggle</returns>
+        public LicenseOrgToggle PostLicenseToggle (string featureName)
+        {
+             ApiResponse<LicenseOrgToggle> localVarResponse = PostLicenseToggleWithHttpInfo(featureName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Switch PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>ApiResponse of LicenseOrgToggle</returns>
+        public ApiResponse< LicenseOrgToggle > PostLicenseToggleWithHttpInfo (string featureName)
+        { 
+            // verify the required parameter 'featureName' is set
+            if (featureName == null)
+                throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->PostLicenseToggle");
+
+            var localVarPath = "/api/v2/license/toggles/{featureName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (featureName != null) localVarPathParams.Add("featureName", Configuration.ApiClient.ParameterToString(featureName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseToggle: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseToggle: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
+                localVarHeaders,
+                (LicenseOrgToggle) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
+            
+        }
+
+        
+        /// <summary>
+        /// Switch PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of LicenseOrgToggle</returns>
+        public async System.Threading.Tasks.Task<LicenseOrgToggle> PostLicenseToggleAsync (string featureName)
+        {
+             ApiResponse<LicenseOrgToggle> localVarResponse = await PostLicenseToggleAsyncWithHttpInfo(featureName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Switch PureCloud license feature toggle value. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="featureName">featureName</param>
+        /// <returns>Task of ApiResponse (LicenseOrgToggle)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LicenseOrgToggle>> PostLicenseToggleAsyncWithHttpInfo (string featureName)
+        { 
+            // verify the required parameter 'featureName' is set
+            if (featureName == null)
+                throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->PostLicenseToggle");
+            
+
+            var localVarPath = "/api/v2/license/toggles/{featureName}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (featureName != null) localVarPathParams.Add("featureName", Configuration.ApiClient.ParameterToString(featureName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseToggle: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseToggle: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LicenseOrgToggle>(localVarStatusCode,
+                localVarHeaders,
+                (LicenseOrgToggle) Configuration.ApiClient.Deserialize(localVarResponse, typeof(LicenseOrgToggle)));
             
         }
 

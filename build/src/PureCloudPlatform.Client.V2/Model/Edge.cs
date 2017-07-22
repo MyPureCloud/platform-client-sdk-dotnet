@@ -382,6 +382,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -465,6 +468,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="callDrainingState", EmitDefaultValue=false)]
         public CallDrainingStateEnum? CallDrainingState { get; set; }
+        
+        
         
         
         
@@ -640,6 +645,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null, string Proxy = null)
         {
             
@@ -656,6 +663,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
             
             
             
@@ -1142,6 +1151,8 @@ this.Proxy = Proxy;
             
             
             
+            
+            
         }
         
         
@@ -1429,6 +1440,15 @@ this.Proxy = Proxy;
         
         
         /// <summary>
+        /// True if the offline edge configuration endpoint has been called for this edge.
+        /// </summary>
+        /// <value>True if the offline edge configuration endpoint has been called for this edge.</value>
+        [DataMember(Name="offlineConfigCalled", EmitDefaultValue=false)]
+        public bool? OfflineConfigCalled { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The name provided by the operating system of the Edge.
         /// </summary>
         /// <value>The name provided by the operating system of the Edge.</value>
@@ -1529,6 +1549,8 @@ this.Proxy = Proxy;
             sb.Append("  ConversationCount: ").Append(ConversationCount).Append("\n");
             
             sb.Append("  Proxy: ").Append(Proxy).Append("\n");
+            
+            sb.Append("  OfflineConfigCalled: ").Append(OfflineConfigCalled).Append("\n");
             
             sb.Append("  OsName: ").Append(OsName).Append("\n");
             
@@ -1761,6 +1783,11 @@ this.Proxy = Proxy;
                     this.Proxy.Equals(other.Proxy)
                 ) &&
                 (
+                    this.OfflineConfigCalled == other.OfflineConfigCalled ||
+                    this.OfflineConfigCalled != null &&
+                    this.OfflineConfigCalled.Equals(other.OfflineConfigCalled)
+                ) &&
+                (
                     this.OsName == other.OsName ||
                     this.OsName != null &&
                     this.OsName.Equals(other.OsName)
@@ -1897,6 +1924,9 @@ this.Proxy = Proxy;
                 
                 if (this.Proxy != null)
                     hash = hash * 59 + this.Proxy.GetHashCode();
+                
+                if (this.OfflineConfigCalled != null)
+                    hash = hash * 59 + this.OfflineConfigCalled.GetHashCode();
                 
                 if (this.OsName != null)
                     hash = hash * 59 + this.OsName.GetHashCode();

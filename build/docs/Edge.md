@@ -45,6 +45,7 @@ title: Edge
 | **CallDrainingState** | **string** |  | [optional] |
 | **ConversationCount** | **int?** |  | [optional] |
 | **Proxy** | **string** | Edge HTTP proxy configuration for the WAN port. The field can be a hostname, FQDN, IPv4 or IPv6 address. If port is not included, port 80 is assumed. | [optional] |
+| **OfflineConfigCalled** | **bool?** | True if the offline edge configuration endpoint has been called for this edge. | [optional] |
 | **OsName** | **string** | The name provided by the operating system of the Edge. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

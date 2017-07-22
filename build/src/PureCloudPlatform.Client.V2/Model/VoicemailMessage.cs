@@ -110,6 +110,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
@@ -170,9 +175,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="RetentionPolicy">The retention policy for this voicemail.</param>
         
-        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null, Queue Queue = null, VoicemailCopyRecord CopiedFrom = null, List<VoicemailCopyRecord> CopiedTo = null)
+        
+        
+        
+        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null, Queue Queue = null, VoicemailCopyRecord CopiedFrom = null, List<VoicemailCopyRecord> CopiedTo = null, VoicemailRetentionPolicy RetentionPolicy = null)
         {
+            
+            
+            
+            
             
             
             
@@ -337,6 +350,15 @@ this.CopiedTo = CopiedTo;
             
             
             
+            
+            
+this.RetentionPolicy = RetentionPolicy;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -495,6 +517,15 @@ this.CopiedTo = CopiedTo;
         
         
         /// <summary>
+        /// The retention policy for this voicemail
+        /// </summary>
+        /// <value>The retention policy for this voicemail</value>
+        [DataMember(Name="retentionPolicy", EmitDefaultValue=false)]
+        public VoicemailRetentionPolicy RetentionPolicy { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -544,6 +575,8 @@ this.CopiedTo = CopiedTo;
             sb.Append("  CopiedFrom: ").Append(CopiedFrom).Append("\n");
             
             sb.Append("  CopiedTo: ").Append(CopiedTo).Append("\n");
+            
+            sb.Append("  RetentionPolicy: ").Append(RetentionPolicy).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -669,6 +702,11 @@ this.CopiedTo = CopiedTo;
                     this.CopiedTo.SequenceEqual(other.CopiedTo)
                 ) &&
                 (
+                    this.RetentionPolicy == other.RetentionPolicy ||
+                    this.RetentionPolicy != null &&
+                    this.RetentionPolicy.Equals(other.RetentionPolicy)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -737,6 +775,9 @@ this.CopiedTo = CopiedTo;
                 
                 if (this.CopiedTo != null)
                     hash = hash * 59 + this.CopiedTo.GetHashCode();
+                
+                if (this.RetentionPolicy != null)
+                    hash = hash * 59 + this.RetentionPolicy.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

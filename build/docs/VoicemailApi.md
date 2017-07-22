@@ -7,7 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**DeleteVoicemailMessage**](VoicemailApi.html#deletevoicemailmessage) | **DELETE** /api/v2/voicemail/messages/{messageId} | Delete a message. |
+| [**DeleteVoicemailMessage**](VoicemailApi.html#deletevoicemailmessage) | **DELETE** /api/v2/voicemail/messages/{messageId} | Delete a voicemail message. |
 | [**DeleteVoicemailMessages**](VoicemailApi.html#deletevoicemailmessages) | **DELETE** /api/v2/voicemail/messages | Delete all voicemail messages |
 | [**GetVoicemailGroupMailbox**](VoicemailApi.html#getvoicemailgroupmailbox) | **GET** /api/v2/voicemail/groups/{groupId}/mailbox | Get the group&#39;s mailbox information |
 | [**GetVoicemailGroupMessages**](VoicemailApi.html#getvoicemailgroupmessages) | **GET** /api/v2/voicemail/groups/{groupId}/messages | List voicemail messages |
@@ -16,18 +16,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetVoicemailMeMailbox**](VoicemailApi.html#getvoicemailmemailbox) | **GET** /api/v2/voicemail/me/mailbox | Get the current user&#39;s mailbox information |
 | [**GetVoicemailMeMessages**](VoicemailApi.html#getvoicemailmemessages) | **GET** /api/v2/voicemail/me/messages | List voicemail messages |
 | [**GetVoicemailMePolicy**](VoicemailApi.html#getvoicemailmepolicy) | **GET** /api/v2/voicemail/me/policy | Get the current user&#39;s voicemail policy |
-| [**GetVoicemailMessage**](VoicemailApi.html#getvoicemailmessage) | **GET** /api/v2/voicemail/messages/{messageId} | Get message. |
-| [**GetVoicemailMessageMedia**](VoicemailApi.html#getvoicemailmessagemedia) | **GET** /api/v2/voicemail/messages/{messageId}/media | Get media playback URI for this message |
+| [**GetVoicemailMessage**](VoicemailApi.html#getvoicemailmessage) | **GET** /api/v2/voicemail/messages/{messageId} | Get a voicemail message |
+| [**GetVoicemailMessageMedia**](VoicemailApi.html#getvoicemailmessagemedia) | **GET** /api/v2/voicemail/messages/{messageId}/media | Get media playback URI for this voicemail message |
 | [**GetVoicemailMessages**](VoicemailApi.html#getvoicemailmessages) | **GET** /api/v2/voicemail/messages | List voicemail messages |
 | [**GetVoicemailPolicy**](VoicemailApi.html#getvoicemailpolicy) | **GET** /api/v2/voicemail/policy | Get a policy |
 | [**GetVoicemailSearch**](VoicemailApi.html#getvoicemailsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
 | [**GetVoicemailUserpolicy**](VoicemailApi.html#getvoicemailuserpolicy) | **GET** /api/v2/voicemail/userpolicies/{userId} | Get a user&#39;s voicemail policy |
 | [**PatchVoicemailGroupPolicy**](VoicemailApi.html#patchvoicemailgrouppolicy) | **PATCH** /api/v2/voicemail/groups/{groupId}/policy | Update a group&#39;s voicemail policy |
 | [**PatchVoicemailMePolicy**](VoicemailApi.html#patchvoicemailmepolicy) | **PATCH** /api/v2/voicemail/me/policy | Update the current user&#39;s voicemail policy |
+| [**PatchVoicemailMessage**](VoicemailApi.html#patchvoicemailmessage) | **PATCH** /api/v2/voicemail/messages/{messageId} | Update a voicemail message |
 | [**PatchVoicemailUserpolicy**](VoicemailApi.html#patchvoicemailuserpolicy) | **PATCH** /api/v2/voicemail/userpolicies/{userId} | Update a user&#39;s voicemail policy |
 | [**PostVoicemailMessages**](VoicemailApi.html#postvoicemailmessages) | **POST** /api/v2/voicemail/messages | Copy a voicemail message to a user or group |
 | [**PostVoicemailSearch**](VoicemailApi.html#postvoicemailsearch) | **POST** /api/v2/voicemail/search | Search voicemails |
-| [**PutVoicemailMessage**](VoicemailApi.html#putvoicemailmessage) | **PUT** /api/v2/voicemail/messages/{messageId} | Update a message. |
+| [**PutVoicemailMessage**](VoicemailApi.html#putvoicemailmessage) | **PUT** /api/v2/voicemail/messages/{messageId} | Update a voicemail message |
 | [**PutVoicemailPolicy**](VoicemailApi.html#putvoicemailpolicy) | **PUT** /api/v2/voicemail/policy | Update a policy |
 {: class="table table-striped"}
 
@@ -35,9 +36,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteVoicemailMessage (string messageId)
 
-Delete a message.
+Delete a voicemail message.
 
-
+A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
 
 ### Example
 ~~~csharp
@@ -69,7 +70,7 @@ namespace Example
             try
             {
                 
-                // Delete a message.
+                // Delete a voicemail message.
                 
                 apiInstance.DeleteVoicemailMessage(messageId);
             }
@@ -591,7 +592,7 @@ This endpoint does require any parameters.
 
 ## [**VoicemailMessage**](VoicemailMessage.html) GetVoicemailMessage (string messageId, List<string> expand = null)
 
-Get message.
+Get a voicemail message
 
 
 
@@ -630,7 +631,7 @@ namespace Example
             try
             {
                 
-                // Get message.
+                // Get a voicemail message
                 
                 VoicemailMessage result = apiInstance.GetVoicemailMessage(messageId, expand);
                 Debug.WriteLine(result);
@@ -661,7 +662,7 @@ namespace Example
 
 ## [**VoicemailMediaInfo**](VoicemailMediaInfo.html) GetVoicemailMessageMedia (string messageId, string formatId = null)
 
-Get media playback URI for this message
+Get media playback URI for this voicemail message
 
 
 
@@ -700,7 +701,7 @@ namespace Example
             try
             {
                 
-                // Get media playback URI for this message
+                // Get media playback URI for this voicemail message
                 
                 VoicemailMediaInfo result = apiInstance.GetVoicemailMessageMedia(messageId, formatId);
                 Debug.WriteLine(result);
@@ -1120,6 +1121,76 @@ namespace Example
 
 [**VoicemailUserPolicy**](VoicemailUserPolicy.html)
 
+<a name="patchvoicemailmessage"></a>
+
+## [**VoicemailMessage**](VoicemailMessage.html) PatchVoicemailMessage (string messageId, VoicemailMessage body)
+
+Update a voicemail message
+
+A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchVoicemailMessageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new VoicemailApi();
+            
+            
+            var messageId = messageId_example;  // string | Message ID
+            
+            
+            
+            
+            
+            var body = new VoicemailMessage(); // VoicemailMessage | VoicemailMessage
+            
+            
+
+            try
+            {
+                
+                // Update a voicemail message
+                
+                VoicemailMessage result = apiInstance.PatchVoicemailMessage(messageId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.PatchVoicemailMessage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **messageId** | **string**| Message ID |  |
+| **body** | [**VoicemailMessage**](VoicemailMessage.html)| VoicemailMessage |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailMessage**](VoicemailMessage.html)
+
 <a name="patchvoicemailuserpolicy"></a>
 
 ## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) PatchVoicemailUserpolicy (string userId, VoicemailUserPolicy body)
@@ -1322,9 +1393,9 @@ namespace Example
 
 ## [**VoicemailMessage**](VoicemailMessage.html) PutVoicemailMessage (string messageId, VoicemailMessage body)
 
-Update a message.
+Update a voicemail message
 
-
+A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
 
 ### Example
 ~~~csharp
@@ -1361,7 +1432,7 @@ namespace Example
             try
             {
                 
-                // Update a message.
+                // Update a voicemail message
                 
                 VoicemailMessage result = apiInstance.PutVoicemailMessage(messageId, body);
                 Debug.WriteLine(result);

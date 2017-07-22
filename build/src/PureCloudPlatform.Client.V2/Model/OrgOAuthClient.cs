@@ -26,6 +26,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
@@ -83,6 +95,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client. 
         /// </summary>
@@ -111,6 +131,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="DateCreated">Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
+        /// <param name="DateModified">Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
+        /// <param name="CreatedBy">User that created this client.</param>
+        
+        
+        
+        /// <param name="ModifiedBy">User that last modified this client.</param>
+        
+        
+        
         /// <param name="AuthorizedGrantType">The OAuth Grant/Client type supported by this client. Code Authorization Grant/Client type - Preferred client type where the Client ID and Secret are required to create tokens. Used where the secret can be secured. Implicit grant type - Client ID only is required to create tokens. Used in browser and mobile apps where the secret can not be secured. SAML2-Bearer extension grant type - SAML2 assertion provider for user authentication at the token endpoint. Client Credential grant type - Used to created access tokens that are tied only to the client.  (required).</param>
         
         
@@ -118,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Organization">The  oauth client&#39;s organization..</param>
         
         
-        public OrgOAuthClient(string Name = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, Entity Organization = null)
+        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, Entity Organization = null)
         {
             
             
@@ -134,6 +170,22 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -158,6 +210,42 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateCreated = DateCreated;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CreatedBy = CreatedBy;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
             
             
             
@@ -197,6 +285,42 @@ this.Organization = Organization;
         
         
         
+        /// <summary>
+        /// Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date this client was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date this client was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="dateModified", EmitDefaultValue=false)]
+        public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// User that created this client
+        /// </summary>
+        /// <value>User that created this client</value>
+        [DataMember(Name="createdBy", EmitDefaultValue=false)]
+        public UriReference CreatedBy { get; set; }
+        
+        
+        
+        /// <summary>
+        /// User that last modified this client
+        /// </summary>
+        /// <value>User that last modified this client</value>
+        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
+        public UriReference ModifiedBy { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -219,6 +343,14 @@ this.Organization = Organization;
             sb.Append("  Id: ").Append(Id).Append("\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            
+            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
+            sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
+            
+            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             
             sb.Append("  AuthorizedGrantType: ").Append(AuthorizedGrantType).Append("\n");
             
@@ -271,6 +403,26 @@ this.Organization = Organization;
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateModified == other.DateModified ||
+                    this.DateModified != null &&
+                    this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.CreatedBy == other.CreatedBy ||
+                    this.CreatedBy != null &&
+                    this.CreatedBy.Equals(other.CreatedBy)
+                ) &&
+                (
+                    this.ModifiedBy == other.ModifiedBy ||
+                    this.ModifiedBy != null &&
+                    this.ModifiedBy.Equals(other.ModifiedBy)
+                ) &&
+                (
                     this.AuthorizedGrantType == other.AuthorizedGrantType ||
                     this.AuthorizedGrantType != null &&
                     this.AuthorizedGrantType.Equals(other.AuthorizedGrantType)
@@ -299,6 +451,18 @@ this.Organization = Organization;
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                
+                if (this.DateModified != null)
+                    hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.CreatedBy != null)
+                    hash = hash * 59 + this.CreatedBy.GetHashCode();
+                
+                if (this.ModifiedBy != null)
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.AuthorizedGrantType != null)
                     hash = hash * 59 + this.AuthorizedGrantType.GetHashCode();

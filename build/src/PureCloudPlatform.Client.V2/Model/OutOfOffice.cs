@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OutOfOffice" /> class.
@@ -83,9 +88,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Indefinite">Indefinite.</param>
         
-        public OutOfOffice(string Name = null, User User = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? Active = null)
+        
+        
+        
+        public OutOfOffice(string Name = null, User User = null, DateTime? StartDate = null, DateTime? EndDate = null, bool? Active = null, bool? Indefinite = null)
         {
+            
+            
+            
+            
             
             
             
@@ -161,6 +174,15 @@ this.Active = Active;
             
             
             
+            
+            
+this.Indefinite = Indefinite;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -217,6 +239,14 @@ this.Active = Active;
         
         
         /// <summary>
+        /// Gets or Sets Indefinite
+        /// </summary>
+        [DataMember(Name="indefinite", EmitDefaultValue=false)]
+        public bool? Indefinite { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -244,6 +274,8 @@ this.Active = Active;
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             
             sb.Append("  Active: ").Append(Active).Append("\n");
+            
+            sb.Append("  Indefinite: ").Append(Indefinite).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -314,6 +346,11 @@ this.Active = Active;
                     this.Active.Equals(other.Active)
                 ) &&
                 (
+                    this.Indefinite == other.Indefinite ||
+                    this.Indefinite != null &&
+                    this.Indefinite.Equals(other.Indefinite)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -349,6 +386,9 @@ this.Active = Active;
                 
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+                
+                if (this.Indefinite != null)
+                    hash = hash * 59 + this.Indefinite.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

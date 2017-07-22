@@ -17,10 +17,10 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
-        /// Delete a message.
+        /// Delete a voicemail message.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -28,10 +28,10 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteVoicemailMessage (string messageId);
 
         /// <summary>
-        /// Delete a message.
+        /// Delete a voicemail message.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -213,7 +213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<VoicemailUserPolicy> GetVoicemailMePolicyWithHttpInfo ();
         
         /// <summary>
-        /// Get message.
+        /// Get a voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -225,7 +225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         VoicemailMessage GetVoicemailMessage (string messageId, List<string> expand = null);
 
         /// <summary>
-        /// Get message.
+        /// Get a voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -237,7 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<VoicemailMessage> GetVoicemailMessageWithHttpInfo (string messageId, List<string> expand = null);
         
         /// <summary>
-        /// Get media playback URI for this message
+        /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -249,7 +249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         VoicemailMediaInfo GetVoicemailMessageMedia (string messageId, string formatId = null);
 
         /// <summary>
-        /// Get media playback URI for this message
+        /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -397,6 +397,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<VoicemailUserPolicy> PatchVoicemailMePolicyWithHttpInfo (VoicemailUserPolicy body);
         
         /// <summary>
+        /// Update a voicemail message
+        /// </summary>
+        /// <remarks>
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>VoicemailMessage</returns>
+        VoicemailMessage PatchVoicemailMessage (string messageId, VoicemailMessage body);
+
+        /// <summary>
+        /// Update a voicemail message
+        /// </summary>
+        /// <remarks>
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>ApiResponse of VoicemailMessage</returns>
+        ApiResponse<VoicemailMessage> PatchVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body);
+        
+        /// <summary>
         /// Update a user&#39;s voicemail policy
         /// </summary>
         /// <remarks>
@@ -465,10 +489,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<VoicemailsSearchResponse> PostVoicemailSearchWithHttpInfo (VoicemailSearchRequest body);
         
         /// <summary>
-        /// Update a message.
+        /// Update a voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -477,10 +501,10 @@ namespace PureCloudPlatform.Client.V2.Api
         VoicemailMessage PutVoicemailMessage (string messageId, VoicemailMessage body);
 
         /// <summary>
-        /// Update a message.
+        /// Update a voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -515,10 +539,10 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
-        /// Delete a message.
+        /// Delete a voicemail message.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -526,10 +550,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteVoicemailMessageAsync (string messageId);
 
         /// <summary>
-        /// Delete a message.
+        /// Delete a voicemail message.
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -711,7 +735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailMePolicyAsyncWithHttpInfo ();
         
         /// <summary>
-        /// Get message.
+        /// Get a voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -723,7 +747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<VoicemailMessage> GetVoicemailMessageAsync (string messageId, List<string> expand = null);
 
         /// <summary>
-        /// Get message.
+        /// Get a voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -735,7 +759,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> GetVoicemailMessageAsyncWithHttpInfo (string messageId, List<string> expand = null);
         
         /// <summary>
-        /// Get media playback URI for this message
+        /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -747,7 +771,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<VoicemailMediaInfo> GetVoicemailMessageMediaAsync (string messageId, string formatId = null);
 
         /// <summary>
-        /// Get media playback URI for this message
+        /// Get media playback URI for this voicemail message
         /// </summary>
         /// <remarks>
         /// 
@@ -895,6 +919,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> PatchVoicemailMePolicyAsyncWithHttpInfo (VoicemailUserPolicy body);
         
         /// <summary>
+        /// Update a voicemail message
+        /// </summary>
+        /// <remarks>
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>Task of VoicemailMessage</returns>
+        System.Threading.Tasks.Task<VoicemailMessage> PatchVoicemailMessageAsync (string messageId, VoicemailMessage body);
+
+        /// <summary>
+        /// Update a voicemail message
+        /// </summary>
+        /// <remarks>
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PatchVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body);
+        
+        /// <summary>
         /// Update a user&#39;s voicemail policy
         /// </summary>
         /// <remarks>
@@ -963,10 +1011,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<VoicemailsSearchResponse>> PostVoicemailSearchAsyncWithHttpInfo (VoicemailSearchRequest body);
         
         /// <summary>
-        /// Update a message.
+        /// Update a voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -975,10 +1023,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<VoicemailMessage> PutVoicemailMessageAsync (string messageId, VoicemailMessage body);
 
         /// <summary>
-        /// Update a message.
+        /// Update a voicemail message
         /// </summary>
         /// <remarks>
-        /// 
+        /// A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -1101,7 +1149,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a message. 
+        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -1112,7 +1160,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a message. 
+        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -1194,7 +1242,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Delete a message. 
+        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -1206,7 +1254,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete a message. 
+        /// Delete a voicemail message. A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -2775,7 +2823,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get message. 
+        /// Get a voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -2788,7 +2836,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get message. 
+        /// Get a voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -2872,7 +2920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get message. 
+        /// Get a voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -2886,7 +2934,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get message. 
+        /// Get a voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -2972,7 +3020,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get media playback URI for this message 
+        /// Get media playback URI for this voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -2985,7 +3033,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get media playback URI for this message 
+        /// Get media playback URI for this voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -3069,7 +3117,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get media playback URI for this message 
+        /// Get media playback URI for this voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -3083,7 +3131,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get media playback URI for this message 
+        /// Get media playback URI for this voicemail message 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -4336,6 +4384,218 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>VoicemailMessage</returns>
+        public VoicemailMessage PatchVoicemailMessage (string messageId, VoicemailMessage body)
+        {
+             ApiResponse<VoicemailMessage> localVarResponse = PatchVoicemailMessageWithHttpInfo(messageId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>ApiResponse of VoicemailMessage</returns>
+        public ApiResponse< VoicemailMessage > PatchVoicemailMessageWithHttpInfo (string messageId, VoicemailMessage body)
+        { 
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PatchVoicemailMessage");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMessage");
+
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchVoicemailMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchVoicemailMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessage>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
+            
+        }
+
+        
+        /// <summary>
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>Task of VoicemailMessage</returns>
+        public async System.Threading.Tasks.Task<VoicemailMessage> PatchVoicemailMessageAsync (string messageId, VoicemailMessage body)
+        {
+             ApiResponse<VoicemailMessage> localVarResponse = await PatchVoicemailMessageAsyncWithHttpInfo(messageId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="messageId">Message ID</param>
+        /// <param name="body">VoicemailMessage</param>
+        /// <returns>Task of ApiResponse (VoicemailMessage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PatchVoicemailMessageAsyncWithHttpInfo (string messageId, VoicemailMessage body)
+        { 
+            // verify the required parameter 'messageId' is set
+            if (messageId == null)
+                throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->PatchVoicemailMessage");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMessage");
+            
+
+            var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (messageId != null) localVarPathParams.Add("messageId", Configuration.ApiClient.ParameterToString(messageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchVoicemailMessage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchVoicemailMessage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VoicemailMessage>(localVarStatusCode,
+                localVarHeaders,
+                (VoicemailMessage) Configuration.ApiClient.Deserialize(localVarResponse, typeof(VoicemailMessage)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Update a user&#39;s voicemail policy 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4939,7 +5199,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Update a message. 
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -4952,7 +5212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a message. 
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -5043,7 +5303,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Update a message. 
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>
@@ -5057,7 +5317,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update a message. 
+        /// Update a voicemail message A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="messageId">Message ID</param>

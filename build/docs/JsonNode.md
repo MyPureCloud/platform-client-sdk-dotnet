@@ -7,6 +7,8 @@ title: JsonNode
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Array** | **bool?** |  | [optional] |
+| **_Null** | **bool?** |  | [optional] |
 | **NodeType** | **string** |  | [optional] |
 | **_Float** | **bool?** |  | [optional] |
 | **_Object** | **bool?** |  | [optional] |
@@ -26,8 +28,6 @@ title: JsonNode
 | **BigInteger** | **bool?** |  | [optional] |
 | **Textual** | **bool?** |  | [optional] |
 | **Binary** | **bool?** |  | [optional] |
-| **Array** | **bool?** |  | [optional] |
-| **_Null** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

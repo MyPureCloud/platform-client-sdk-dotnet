@@ -2585,7 +2585,7 @@ namespace Example
             
             
             
-            var body = new OutOfOffice(); // OutOfOffice | The updated UserPresence
+            var body = new OutOfOffice(); // OutOfOffice | The updated OutOffOffice
             
             
 
@@ -2612,7 +2612,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
-| **body** | [**OutOfOffice**](OutOfOffice.html)| The updated UserPresence |  |
+| **body** | [**OutOfOffice**](OutOfOffice.html)| The updated OutOffOffice |  |
 {: class="table table-striped"}
 
 ### Return type
