@@ -80,6 +80,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Speech,
             
             /// <summary>
+            /// Enum Surveyinvite for "SURVEYINVITE"
+            /// </summary>
+            [EnumMember(Value = "SURVEYINVITE")]
+            Surveyinvite,
+            
+            /// <summary>
             /// Enum Workflow for "WORKFLOW"
             /// </summary>
             [EnumMember(Value = "WORKFLOW")]

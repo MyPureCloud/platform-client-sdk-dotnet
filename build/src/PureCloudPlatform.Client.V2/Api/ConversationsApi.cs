@@ -1767,6 +1767,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostConversationsCobrowsesessionParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body = null);
         
         /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>EmailConversation</returns>
+        EmailConversation PostConversationsEmailInboundmessages (string conversationId, InboundMessageRequest body);
+
+        /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>ApiResponse of EmailConversation</returns>
+        ApiResponse<EmailConversation> PostConversationsEmailInboundmessagesWithHttpInfo (string conversationId, InboundMessageRequest body);
+        
+        /// <summary>
         /// Send an email reply
         /// </summary>
         /// <remarks>
@@ -3665,6 +3689,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsCobrowsesessionParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body = null);
+        
+        /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>Task of EmailConversation</returns>
+        System.Threading.Tasks.Task<EmailConversation> PostConversationsEmailInboundmessagesAsync (string conversationId, InboundMessageRequest body);
+
+        /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>Task of ApiResponse (EmailConversation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmailConversation>> PostConversationsEmailInboundmessagesAsyncWithHttpInfo (string conversationId, InboundMessageRequest body);
         
         /// <summary>
         /// Send an email reply
@@ -18893,6 +18941,218 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null);
+        }
+
+        
+        
+        /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>EmailConversation</returns>
+        public EmailConversation PostConversationsEmailInboundmessages (string conversationId, InboundMessageRequest body)
+        {
+             ApiResponse<EmailConversation> localVarResponse = PostConversationsEmailInboundmessagesWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>ApiResponse of EmailConversation</returns>
+        public ApiResponse< EmailConversation > PostConversationsEmailInboundmessagesWithHttpInfo (string conversationId, InboundMessageRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailInboundmessages");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailInboundmessages");
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/inboundmessages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailInboundmessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailInboundmessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversation>(localVarStatusCode,
+                localVarHeaders,
+                (EmailConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversation)));
+            
+        }
+
+        
+        /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>Task of EmailConversation</returns>
+        public async System.Threading.Tasks.Task<EmailConversation> PostConversationsEmailInboundmessagesAsync (string conversationId, InboundMessageRequest body)
+        {
+             ApiResponse<EmailConversation> localVarResponse = await PostConversationsEmailInboundmessagesAsyncWithHttpInfo(conversationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="body">Send external email reply</param>
+        /// <returns>Task of ApiResponse (EmailConversation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmailConversation>> PostConversationsEmailInboundmessagesAsyncWithHttpInfo (string conversationId, InboundMessageRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailInboundmessages");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailInboundmessages");
+            
+
+            var localVarPath = "/api/v2/conversations/emails/{conversationId}/inboundmessages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailInboundmessages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsEmailInboundmessages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmailConversation>(localVarStatusCode,
+                localVarHeaders,
+                (EmailConversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailConversation)));
+            
         }
 
         

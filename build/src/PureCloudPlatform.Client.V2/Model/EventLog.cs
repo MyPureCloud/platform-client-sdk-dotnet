@@ -86,40 +86,10 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Campaign for "CAMPAIGN"
-            /// </summary>
-            [EnumMember(Value = "CAMPAIGN")]
-            Campaign,
-            
-            /// <summary>
-            /// Enum CampaignRule for "CAMPAIGN_RULE"
-            /// </summary>
-            [EnumMember(Value = "CAMPAIGN_RULE")]
-            CampaignRule,
-            
-            /// <summary>
-            /// Enum ImportError for "IMPORT_ERROR"
-            /// </summary>
-            [EnumMember(Value = "IMPORT_ERROR")]
-            ImportError,
-            
-            /// <summary>
             /// Enum Callback for "CALLBACK"
             /// </summary>
             [EnumMember(Value = "CALLBACK")]
             Callback,
-            
-            /// <summary>
-            /// Enum ContactListFilter for "CONTACT_LIST_FILTER"
-            /// </summary>
-            [EnumMember(Value = "CONTACT_LIST_FILTER")]
-            ContactListFilter,
-            
-            /// <summary>
-            /// Enum Schedule for "SCHEDULE"
-            /// </summary>
-            [EnumMember(Value = "SCHEDULE")]
-            Schedule,
             
             /// <summary>
             /// Enum CallRestriction for "CALL_RESTRICTION"
@@ -134,10 +104,46 @@ namespace PureCloudPlatform.Client.V2.Model
             CallRule,
             
             /// <summary>
+            /// Enum Campaign for "CAMPAIGN"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN")]
+            Campaign,
+            
+            /// <summary>
+            /// Enum CampaignRule for "CAMPAIGN_RULE"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_RULE")]
+            CampaignRule,
+            
+            /// <summary>
+            /// Enum ContactListFilter for "CONTACT_LIST_FILTER"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_LIST_FILTER")]
+            ContactListFilter,
+            
+            /// <summary>
+            /// Enum EntityLimit for "ENTITY_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "ENTITY_LIMIT")]
+            EntityLimit,
+            
+            /// <summary>
+            /// Enum ImportError for "IMPORT_ERROR"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_ERROR")]
+            ImportError,
+            
+            /// <summary>
             /// Enum OrganizationConfiguration for "ORGANIZATION_CONFIGURATION"
             /// </summary>
             [EnumMember(Value = "ORGANIZATION_CONFIGURATION")]
-            OrganizationConfiguration
+            OrganizationConfiguration,
+            
+            /// <summary>
+            /// Enum Schedule for "SCHEDULE"
+            /// </summary>
+            [EnumMember(Value = "SCHEDULE")]
+            Schedule
         }
         
         

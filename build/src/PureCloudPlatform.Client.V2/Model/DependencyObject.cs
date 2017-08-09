@@ -86,6 +86,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dataaction,
             
             /// <summary>
+            /// Enum Emailroute for "EMAILROUTE"
+            /// </summary>
+            [EnumMember(Value = "EMAILROUTE")]
+            Emailroute,
+            
+            /// <summary>
             /// Enum Group for "GROUP"
             /// </summary>
             [EnumMember(Value = "GROUP")]
@@ -162,6 +168,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SECURECALLFLOW")]
             Securecallflow,
+            
+            /// <summary>
+            /// Enum Surveyinviteflow for "SURVEYINVITEFLOW"
+            /// </summary>
+            [EnumMember(Value = "SURVEYINVITEFLOW")]
+            Surveyinviteflow,
             
             /// <summary>
             /// Enum Systemprompt for "SYSTEMPROMPT"

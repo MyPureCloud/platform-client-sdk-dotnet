@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Governs how the voicemail is retained when the deleted property is set to true
+    /// Governs how the voicemail is retained
     /// </summary>
     [DataContract]
     public partial class VoicemailRetentionPolicy :  IEquatable<VoicemailRetentionPolicy>

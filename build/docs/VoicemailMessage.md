@@ -14,6 +14,7 @@ title: VoicemailMessage
 | **AudioRecordingSizeBytes** | **long?** | The voicemail message&#39;s audio recording size in bytes | [optional] |
 | **CreatedDate** | **DateTime?** | The date the voicemail message was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **ModifiedDate** | **DateTime?** | The date the voicemail message was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **DeletedDate** | **DateTime?** | The date the voicemail message deleted property was set to true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CallerAddress** | **string** | The caller address | [optional] |
 | **CallerName** | **string** | Optionally the name of the caller that left the voicemail message if the caller was a known user | [optional] |
 | **CallerUser** | [**User**](User.html) | Optionally the user that left the voicemail message if the caller was a known user | [optional] |
@@ -24,7 +25,7 @@ title: VoicemailMessage
 | **Queue** | [**Queue**](Queue.html) | The queue that the voicemail message belongs to or null which means the voicemail message belongs to a user or group | [optional] |
 | **CopiedFrom** | [**VoicemailCopyRecord**](VoicemailCopyRecord.html) | Represents where this voicemail message was copied from | [optional] |
 | **CopiedTo** | [**List&lt;VoicemailCopyRecord&gt;**](VoicemailCopyRecord.html) | Represents where this voicemail has been copied to | [optional] |
-| **RetentionPolicy** | [**VoicemailRetentionPolicy**](VoicemailRetentionPolicy.html) | The retention policy for this voicemail | [optional] |
+| **DeleteRetentionPolicy** | [**VoicemailRetentionPolicy**](VoicemailRetentionPolicy.html) | The retention policy for this voicemail when deleted is set to true | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

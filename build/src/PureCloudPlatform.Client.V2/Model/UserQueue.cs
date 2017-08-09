@@ -269,7 +269,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="MediaSettings">The media settings for the queue. (required).</param>
+        /// <param name="MediaSettings">The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION (required).</param>
         
         
         
@@ -704,9 +704,9 @@ this.MemberCount = MemberCount;
         
         
         /// <summary>
-        /// The media settings for the queue.
+        /// The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION
         /// </summary>
-        /// <value>The media settings for the queue.</value>
+        /// <value>The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION</value>
         [DataMember(Name="mediaSettings", EmitDefaultValue=false)]
         public Dictionary<string, MediaSetting> MediaSettings { get; set; }
         

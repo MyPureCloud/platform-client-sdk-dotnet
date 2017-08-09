@@ -115,6 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMessage" /> class.
@@ -128,6 +133,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="Read">Whether the voicemail message is marked as read.</param>
+        
+        
         
         
         
@@ -175,13 +182,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="RetentionPolicy">The retention policy for this voicemail.</param>
+        /// <param name="DeleteRetentionPolicy">The retention policy for this voicemail when deleted is set to true.</param>
         
         
         
         
-        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null, Queue Queue = null, VoicemailCopyRecord CopiedFrom = null, List<VoicemailCopyRecord> CopiedTo = null, VoicemailRetentionPolicy RetentionPolicy = null)
+        public VoicemailMessage(Conversation Conversation = null, bool? Read = null, User CallerUser = null, bool? Deleted = null, string Note = null, User User = null, Group Group = null, Queue Queue = null, VoicemailCopyRecord CopiedFrom = null, List<VoicemailCopyRecord> CopiedTo = null, VoicemailRetentionPolicy DeleteRetentionPolicy = null)
         {
+            
+            
             
             
             
@@ -280,6 +289,8 @@ this.Read = Read;
             
             
             
+            
+            
 this.CallerUser = CallerUser;
             
             
@@ -352,7 +363,7 @@ this.CopiedTo = CopiedTo;
             
             
             
-this.RetentionPolicy = RetentionPolicy;
+this.DeleteRetentionPolicy = DeleteRetentionPolicy;
             
             
             
@@ -423,6 +434,15 @@ this.RetentionPolicy = RetentionPolicy;
         /// <value>The date the voicemail message was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
         public DateTime? ModifiedDate { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The date the voicemail message deleted property was set to true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The date the voicemail message deleted property was set to true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="deletedDate", EmitDefaultValue=false)]
+        public DateTime? DeletedDate { get; private set; }
         
         
         
@@ -517,11 +537,11 @@ this.RetentionPolicy = RetentionPolicy;
         
         
         /// <summary>
-        /// The retention policy for this voicemail
+        /// The retention policy for this voicemail when deleted is set to true
         /// </summary>
-        /// <value>The retention policy for this voicemail</value>
-        [DataMember(Name="retentionPolicy", EmitDefaultValue=false)]
-        public VoicemailRetentionPolicy RetentionPolicy { get; set; }
+        /// <value>The retention policy for this voicemail when deleted is set to true</value>
+        [DataMember(Name="deleteRetentionPolicy", EmitDefaultValue=false)]
+        public VoicemailRetentionPolicy DeleteRetentionPolicy { get; set; }
         
         
         
@@ -556,6 +576,8 @@ this.RetentionPolicy = RetentionPolicy;
             
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             
+            sb.Append("  DeletedDate: ").Append(DeletedDate).Append("\n");
+            
             sb.Append("  CallerAddress: ").Append(CallerAddress).Append("\n");
             
             sb.Append("  CallerName: ").Append(CallerName).Append("\n");
@@ -576,7 +598,7 @@ this.RetentionPolicy = RetentionPolicy;
             
             sb.Append("  CopiedTo: ").Append(CopiedTo).Append("\n");
             
-            sb.Append("  RetentionPolicy: ").Append(RetentionPolicy).Append("\n");
+            sb.Append("  DeleteRetentionPolicy: ").Append(DeleteRetentionPolicy).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -652,6 +674,11 @@ this.RetentionPolicy = RetentionPolicy;
                     this.ModifiedDate.Equals(other.ModifiedDate)
                 ) &&
                 (
+                    this.DeletedDate == other.DeletedDate ||
+                    this.DeletedDate != null &&
+                    this.DeletedDate.Equals(other.DeletedDate)
+                ) &&
+                (
                     this.CallerAddress == other.CallerAddress ||
                     this.CallerAddress != null &&
                     this.CallerAddress.Equals(other.CallerAddress)
@@ -702,9 +729,9 @@ this.RetentionPolicy = RetentionPolicy;
                     this.CopiedTo.SequenceEqual(other.CopiedTo)
                 ) &&
                 (
-                    this.RetentionPolicy == other.RetentionPolicy ||
-                    this.RetentionPolicy != null &&
-                    this.RetentionPolicy.Equals(other.RetentionPolicy)
+                    this.DeleteRetentionPolicy == other.DeleteRetentionPolicy ||
+                    this.DeleteRetentionPolicy != null &&
+                    this.DeleteRetentionPolicy.Equals(other.DeleteRetentionPolicy)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -746,6 +773,9 @@ this.RetentionPolicy = RetentionPolicy;
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
+                if (this.DeletedDate != null)
+                    hash = hash * 59 + this.DeletedDate.GetHashCode();
+                
                 if (this.CallerAddress != null)
                     hash = hash * 59 + this.CallerAddress.GetHashCode();
                 
@@ -776,8 +806,8 @@ this.RetentionPolicy = RetentionPolicy;
                 if (this.CopiedTo != null)
                     hash = hash * 59 + this.CopiedTo.GetHashCode();
                 
-                if (this.RetentionPolicy != null)
-                    hash = hash * 59 + this.RetentionPolicy.GetHashCode();
+                if (this.DeleteRetentionPolicy != null)
+                    hash = hash * 59 + this.DeleteRetentionPolicy.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

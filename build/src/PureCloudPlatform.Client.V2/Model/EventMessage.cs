@@ -35,6 +35,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum ApproachingEntityLimit for "APPROACHING_ENTITY_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "APPROACHING_ENTITY_LIMIT")]
+            ApproachingEntityLimit,
+            
+            /// <summary>
             /// Enum CampaignStartError for "CAMPAIGN_START_ERROR"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_START_ERROR")]

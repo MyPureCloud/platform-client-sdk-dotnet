@@ -79,6 +79,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsChatParticipantReplace**](ConversationsApi.html#postconversationschatparticipantreplace) | **POST** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsChats**](ConversationsApi.html#postconversationschats) | **POST** /api/v2/conversations/chats | Create a web chat conversation |
 | [**PostConversationsCobrowsesessionParticipantReplace**](ConversationsApi.html#postconversationscobrowsesessionparticipantreplace) | **POST** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsEmailInboundmessages**](ConversationsApi.html#postconversationsemailinboundmessages) | **POST** /api/v2/conversations/emails/{conversationId}/inboundmessages | Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it. |
 | [**PostConversationsEmailMessages**](ConversationsApi.html#postconversationsemailmessages) | **POST** /api/v2/conversations/emails/{conversationId}/messages | Send an email reply |
 | [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **POST** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **POST** /api/v2/conversations/emails | Create an email conversation |
@@ -5152,6 +5153,76 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postconversationsemailinboundmessages"></a>
+
+## [**EmailConversation**](EmailConversation.html) PostConversationsEmailInboundmessages (string conversationId, InboundMessageRequest body)
+
+Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsEmailInboundmessagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
+            var body = new InboundMessageRequest(); // InboundMessageRequest | Send external email reply
+            
+            
+
+            try
+            {
+                
+                // Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based.This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+                
+                EmailConversation result = apiInstance.PostConversationsEmailInboundmessages(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsEmailInboundmessages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**InboundMessageRequest**](InboundMessageRequest.html)| Send external email reply |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmailConversation**](EmailConversation.html)
 
 <a name="postconversationsemailmessages"></a>
 

@@ -53,6 +53,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
         /// </summary>
@@ -107,6 +110,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
         /// </summary>
@@ -127,7 +132,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="QueueId">The ID of the queue to use for routing the chat conversation. (required).</param>
+        /// <param name="QueueId">The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId.</param>
+        
+        
+        
+        /// <param name="FlowId">The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId.</param>
         
         
         
@@ -174,20 +183,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue..</param>
         
         
-        public CreateEmailRequest(string QueueId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null)
+        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null)
         {
             
             
             
-            // to ensure "QueueId" is required (not null)
-            if (QueueId == null)
-            {
-                throw new InvalidDataException("QueueId is a required property for CreateEmailRequest and cannot be null");
-            }
-            else
-            {
-                this.QueueId = QueueId;
-            }
+            
+            
+            
             
             
             
@@ -246,6 +249,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+this.QueueId = QueueId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FlowId = FlowId;
             
             
             
@@ -349,11 +366,20 @@ this.Direction = Direction;
         
         
         /// <summary>
-        /// The ID of the queue to use for routing the chat conversation.
+        /// The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId
         /// </summary>
-        /// <value>The ID of the queue to use for routing the chat conversation.</value>
+        /// <value>The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId
+        /// </summary>
+        /// <value>The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId</value>
+        [DataMember(Name="flowId", EmitDefaultValue=false)]
+        public string FlowId { get; set; }
         
         
         
@@ -459,6 +485,8 @@ this.Direction = Direction;
             
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             
+            sb.Append("  FlowId: ").Append(FlowId).Append("\n");
+            
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
@@ -521,6 +549,11 @@ this.Direction = Direction;
                     this.QueueId == other.QueueId ||
                     this.QueueId != null &&
                     this.QueueId.Equals(other.QueueId)
+                ) &&
+                (
+                    this.FlowId == other.FlowId ||
+                    this.FlowId != null &&
+                    this.FlowId.Equals(other.FlowId)
                 ) &&
                 (
                     this.Provider == other.Provider ||
@@ -593,6 +626,9 @@ this.Direction = Direction;
                 
                 if (this.QueueId != null)
                     hash = hash * 59 + this.QueueId.GetHashCode();
+                
+                if (this.FlowId != null)
+                    hash = hash * 59 + this.FlowId.GetHashCode();
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();

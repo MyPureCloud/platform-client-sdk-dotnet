@@ -181,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
@@ -206,6 +209,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of archive medium used. Example: CloudArchive</value>
         [DataMember(Name="archiveMedium", EmitDefaultValue=false)]
         public ArchiveMediumEnum? ArchiveMedium { get; set; }
+        
+        
         
         
         
@@ -306,9 +311,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Users">The users participating in the conversation.</param>
         
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null)
+        
+        
+        
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null)
         {
+            
+            
+            
+            
             
             
             
@@ -579,6 +592,15 @@ this.SessionId = SessionId;
             
             
             
+            
+            
+this.Users = Users;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -752,6 +774,15 @@ this.SessionId = SessionId;
         
         
         /// <summary>
+        /// The users participating in the conversation
+        /// </summary>
+        /// <value>The users participating in the conversation</value>
+        [DataMember(Name="users", EmitDefaultValue=false)]
+        public List<User> Users { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -809,6 +840,8 @@ this.SessionId = SessionId;
             sb.Append("  RemainingRestorationsAllowedForOrg: ").Append(RemainingRestorationsAllowedForOrg).Append("\n");
             
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            
+            sb.Append("  Users: ").Append(Users).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -954,6 +987,11 @@ this.SessionId = SessionId;
                     this.SessionId.Equals(other.SessionId)
                 ) &&
                 (
+                    this.Users == other.Users ||
+                    this.Users != null &&
+                    this.Users.SequenceEqual(other.Users)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -1034,6 +1072,9 @@ this.SessionId = SessionId;
                 
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
+                
+                if (this.Users != null)
+                    hash = hash * 59 + this.Users.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

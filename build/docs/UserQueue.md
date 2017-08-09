@@ -18,7 +18,7 @@ title: UserQueue
 | **State** | **string** |  | [optional] |
 | **ModifiedByApp** | **string** |  | [optional] |
 | **CreatedByApp** | **string** |  | [optional] |
-| **MediaSettings** | [**Dictionary&lt;string, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. | |
+| **MediaSettings** | [**Dictionary&lt;string, MediaSetting&gt;**](MediaSetting.html) | The media settings for the queue. Valid Key Values: CALL, CALLBACK, CHAT, EMAIL, SOCIAL_EXPRESSION | |
 | **Bullseye** | [**Bullseye**](Bullseye.html) | The bulls-eye settings for the queue. | [optional] |
 | **AcwSettings** | [**AcwSettings**](AcwSettings.html) | The ACW settings for the queue. | |
 | **SkillEvaluationMethod** | **string** | The skill evaluation method to use when routing conversations. | |

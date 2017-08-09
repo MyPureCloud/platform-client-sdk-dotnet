@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetVoicemailMessageMedia**](VoicemailApi.html#getvoicemailmessagemedia) | **GET** /api/v2/voicemail/messages/{messageId}/media | Get media playback URI for this voicemail message |
 | [**GetVoicemailMessages**](VoicemailApi.html#getvoicemailmessages) | **GET** /api/v2/voicemail/messages | List voicemail messages |
 | [**GetVoicemailPolicy**](VoicemailApi.html#getvoicemailpolicy) | **GET** /api/v2/voicemail/policy | Get a policy |
+| [**GetVoicemailQueueMessages**](VoicemailApi.html#getvoicemailqueuemessages) | **GET** /api/v2/voicemail/queues/{queueId}/messages | List voicemail messages |
 | [**GetVoicemailSearch**](VoicemailApi.html#getvoicemailsearch) | **GET** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
 | [**GetVoicemailUserpolicy**](VoicemailApi.html#getvoicemailuserpolicy) | **GET** /api/v2/voicemail/userpolicies/{userId} | Get a user&#39;s voicemail policy |
 | [**PatchVoicemailGroupPolicy**](VoicemailApi.html#patchvoicemailgrouppolicy) | **PATCH** /api/v2/voicemail/groups/{groupId}/policy | Update a group&#39;s voicemail policy |
@@ -852,6 +853,82 @@ This endpoint does require any parameters.
 ### Return type
 
 [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html)
+
+<a name="getvoicemailqueuemessages"></a>
+
+## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetVoicemailQueueMessages (string queueId, int? pageSize = null, int? pageNumber = null)
+
+List voicemail messages
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetVoicemailQueueMessagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new VoicemailApi();
+            
+            
+            var queueId = queueId_example;  // string | Queue ID
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+
+            try
+            {
+                
+                // List voicemail messages
+                
+                VoicemailMessageEntityListing result = apiInstance.GetVoicemailQueueMessages(queueId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling VoicemailApi.GetVoicemailQueueMessages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **queueId** | **string**| Queue ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html)
 
 <a name="getvoicemailsearch"></a>
 

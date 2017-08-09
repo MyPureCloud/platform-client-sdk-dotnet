@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicates the Routing State of the agent.
+        /// Indicates the Routing State of the agent.  A value of OFF_QUEUE will be returned if the specified user does not exist.
         /// </summary>
-        /// <value>Indicates the Routing State of the agent.</value>
+        /// <value>Indicates the Routing State of the agent.  A value of OFF_QUEUE will be returned if the specified user does not exist.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -79,9 +79,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicates the Routing State of the agent.
+        /// Indicates the Routing State of the agent.  A value of OFF_QUEUE will be returned if the specified user does not exist.
         /// </summary>
-        /// <value>Indicates the Routing State of the agent.</value>
+        /// <value>Indicates the Routing State of the agent.  A value of OFF_QUEUE will be returned if the specified user does not exist.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         
@@ -98,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Status">Indicates the Routing State of the agent..</param>
+        /// <param name="Status">Indicates the Routing State of the agent.  A value of OFF_QUEUE will be returned if the specified user does not exist..</param>
         
         
         

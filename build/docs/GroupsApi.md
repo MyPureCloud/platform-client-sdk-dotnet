@@ -371,7 +371,7 @@ namespace Example
 
 <a name="getgroups"></a>
 
-## [**GroupEntityListing**](GroupEntityListing.html) GetGroups (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+## [**GroupEntityListing**](GroupEntityListing.html) GetGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
 
 Get a group list
 
@@ -409,6 +409,11 @@ namespace Example
             
             
             
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
+            
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             
             
@@ -419,7 +424,7 @@ namespace Example
                 
                 // Get a group list
                 
-                GroupEntityListing result = apiInstance.GetGroups(pageSize, pageNumber, sortOrder);
+                GroupEntityListing result = apiInstance.GetGroups(pageSize, pageNumber, id, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -438,6 +443,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
