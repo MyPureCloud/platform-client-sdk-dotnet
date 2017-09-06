@@ -341,6 +341,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -382,6 +385,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
         
         
         
@@ -496,11 +501,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="UuiData">UuiData.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, Object AdditionalProperties = null)
+        public ConversationNotificationCall(string Id = null, StateEnum? State = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, ConversationNotificationErrorInfo ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, ConversationNotificationSelf Self = null, ConversationNotificationAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<ConversationNotificationDisconnectReasons> DisconnectReasons = null, ConversationNotificationFaxStatus FaxStatus = null, string UuiData = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
             
             
             
@@ -784,6 +797,15 @@ this.FaxStatus = FaxStatus;
             
             
             
+this.UuiData = UuiData;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AdditionalProperties = AdditionalProperties;
             
             
@@ -938,6 +960,14 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         /// <summary>
+        /// Gets or Sets UuiData
+        /// </summary>
+        [DataMember(Name="uuiData", EmitDefaultValue=false)]
+        public string UuiData { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -994,6 +1024,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  DisconnectReasons: ").Append(DisconnectReasons).Append("\n");
             
             sb.Append("  FaxStatus: ").Append(FaxStatus).Append("\n");
+            
+            sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             
@@ -1139,6 +1171,11 @@ this.AdditionalProperties = AdditionalProperties;
                     this.FaxStatus.Equals(other.FaxStatus)
                 ) &&
                 (
+                    this.UuiData == other.UuiData ||
+                    this.UuiData != null &&
+                    this.UuiData.Equals(other.UuiData)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -1219,6 +1256,9 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.FaxStatus != null)
                     hash = hash * 59 + this.FaxStatus.GetHashCode();
+                
+                if (this.UuiData != null)
+                    hash = hash * 59 + this.UuiData.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

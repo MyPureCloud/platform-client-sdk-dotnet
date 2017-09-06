@@ -352,6 +352,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -373,6 +376,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -523,6 +528,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
+        
+        
+        
         /// <param name="SocialMediaId">SocialMediaId.</param>
         
         
@@ -538,8 +547,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PreviewText">PreviewText.</param>
         
         
-        public SocialConversationNotificationSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, SocialConversationNotificationUriReference ExternalContact = null, SocialConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
+        public SocialConversationNotificationSocialMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, SocialConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, SocialConversationNotificationErrorInfo ErrorInfo = null, SocialConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, SocialConversationNotificationUriReference ExternalContact = null, SocialConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, string SocialMediaId = null, string SocialMediaHub = null, string SocialUserName = null, string PreviewText = null)
         {
+            
+            
+            
+            
             
             
             
@@ -900,6 +913,15 @@ this.Peer = Peer;
             
             
             
+this.ScreenRecordingState = ScreenRecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
 this.SocialMediaId = SocialMediaId;
             
             
@@ -1127,6 +1149,14 @@ this.PreviewText = PreviewText;
         
         
         /// <summary>
+        /// Gets or Sets ScreenRecordingState
+        /// </summary>
+        [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
+        public string ScreenRecordingState { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets SocialMediaId
         /// </summary>
         [DataMember(Name="socialMediaId", EmitDefaultValue=false)]
@@ -1217,6 +1247,8 @@ this.PreviewText = PreviewText;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("  SocialMediaId: ").Append(SocialMediaId).Append("\n");
             
@@ -1393,6 +1425,11 @@ this.PreviewText = PreviewText;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.ScreenRecordingState == other.ScreenRecordingState ||
+                    this.ScreenRecordingState != null &&
+                    this.ScreenRecordingState.Equals(other.ScreenRecordingState)
+                ) &&
+                (
                     this.SocialMediaId == other.SocialMediaId ||
                     this.SocialMediaId != null &&
                     this.SocialMediaId.Equals(other.SocialMediaId)
@@ -1503,6 +1540,9 @@ this.PreviewText = PreviewText;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.ScreenRecordingState != null)
+                    hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
                 if (this.SocialMediaId != null)
                     hash = hash * 59 + this.SocialMediaId.GetHashCode();

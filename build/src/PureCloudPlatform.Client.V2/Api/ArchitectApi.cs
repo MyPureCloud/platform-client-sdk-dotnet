@@ -285,7 +285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>ConsumedResourcesEntityListing</returns>
         ConsumedResourcesEntityListing GetArchitectDependencytrackingConsumedresources (string id, string version, string objectType, List<string> resourceType = null);
@@ -299,7 +299,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
         ApiResponse<ConsumedResourcesEntityListing> GetArchitectDependencytrackingConsumedresourcesWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null);
@@ -312,8 +312,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>ConsumingResourcesEntityListing</returns>
         ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null);
 
@@ -325,8 +325,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
         ApiResponse<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null);
         
@@ -509,8 +509,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
-        IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get IVR configs.
@@ -523,8 +524,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
-        ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get specified user prompt
@@ -683,8 +685,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
-        ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get a list of schedule groups.
@@ -697,8 +700,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
-        ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get a list of schedules.
@@ -711,8 +715,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
-        ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get a list of schedules.
@@ -725,8 +730,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
-        ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get a system prompt
@@ -873,11 +879,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
-        HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
+        HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
         /// Get generated flow history
@@ -890,11 +896,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
-        ApiResponse<HistoryListing> GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
+        ApiResponse<HistoryListing> GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
         
         /// <summary>
         /// Get the latest configuration for flow
@@ -1831,7 +1837,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>Task of ConsumedResourcesEntityListing</returns>
         System.Threading.Tasks.Task<ConsumedResourcesEntityListing> GetArchitectDependencytrackingConsumedresourcesAsync (string id, string version, string objectType, List<string> resourceType = null);
@@ -1845,7 +1851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConsumedResourcesEntityListing>> GetArchitectDependencytrackingConsumedresourcesAsyncWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null);
@@ -1858,8 +1864,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>Task of ConsumingResourcesEntityListing</returns>
         System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null);
 
@@ -1871,8 +1877,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null);
         
@@ -2055,8 +2061,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
-        System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get IVR configs.
@@ -2069,8 +2076,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get specified user prompt
@@ -2229,8 +2237,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
-        System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get a list of schedule groups.
@@ -2243,8 +2252,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get a list of schedules.
@@ -2257,8 +2267,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
-        System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get a list of schedules.
@@ -2271,8 +2282,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get a system prompt
@@ -2419,11 +2431,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
-        System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
+        System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
 
         /// <summary>
         /// Get generated flow history
@@ -2436,11 +2448,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null);
+        System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
         
         /// <summary>
         /// Get the latest configuration for flow
@@ -5350,7 +5362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>ConsumedResourcesEntityListing</returns>
         public ConsumedResourcesEntityListing GetArchitectDependencytrackingConsumedresources (string id, string version, string objectType, List<string> resourceType = null)
@@ -5365,7 +5377,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
         public ApiResponse< ConsumedResourcesEntityListing > GetArchitectDependencytrackingConsumedresourcesWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null)
@@ -5459,7 +5471,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>Task of ConsumedResourcesEntityListing</returns>
         public async System.Threading.Tasks.Task<ConsumedResourcesEntityListing> GetArchitectDependencytrackingConsumedresourcesAsync (string id, string version, string objectType, List<string> resourceType = null)
@@ -5475,7 +5487,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
-        /// <param name="objectType">Consuming object type</param>
+        /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
         /// <param name="resourceType">Types of consumed resources to show (optional)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConsumedResourcesEntityListing>> GetArchitectDependencytrackingConsumedresourcesAsyncWithHttpInfo (string id, string version, string objectType, List<string> resourceType = null)
@@ -5572,8 +5584,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>ConsumingResourcesEntityListing</returns>
         public ConsumingResourcesEntityListing GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null)
         {
@@ -5586,8 +5598,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>ApiResponse of ConsumingResourcesEntityListing</returns>
         public ApiResponse< ConsumingResourcesEntityListing > GetArchitectDependencytrackingConsumingresourcesWithHttpInfo (string id, string objectType, List<string> resourceType = null)
         { 
@@ -5675,8 +5687,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>Task of ConsumingResourcesEntityListing</returns>
         public async System.Threading.Tasks.Task<ConsumingResourcesEntityListing> GetArchitectDependencytrackingConsumingresourcesAsync (string id, string objectType, List<string> resourceType = null)
         {
@@ -5690,8 +5702,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="id">Consumed object ID</param>
-        /// <param name="objectType">Consumed object type (only versioned object types are valid)</param>
-        /// <param name="resourceType">Types of consuming resources to show (optional)</param>
+        /// <param name="objectType">Consumed object type</param>
+        /// <param name="resourceType">Types of consuming resources to show.  Only versioned types are allowed here. (optional)</param>
         /// <returns>Task of ApiResponse (ConsumingResourcesEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ConsumingResourcesEntityListing>> GetArchitectDependencytrackingConsumingresourcesAsyncWithHttpInfo (string id, string objectType, List<string> resourceType = null)
         { 
@@ -7018,10 +7030,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>IVREntityListing</returns>
-        public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public IVREntityListing GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<IVREntityListing> localVarResponse = GetArchitectIvrsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<IVREntityListing> localVarResponse = GetArchitectIvrsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
              return localVarResponse.Data;
         }
 
@@ -7033,8 +7046,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>ApiResponse of IVREntityListing</returns>
-        public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< IVREntityListing > GetArchitectIvrsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/architect/ivrs";
@@ -7074,6 +7088,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -7118,10 +7133,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of IVREntityListing</returns>
-        public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<IVREntityListing> GetArchitectIvrsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<IVREntityListing> localVarResponse = await GetArchitectIvrsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<IVREntityListing> localVarResponse = await GetArchitectIvrsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
              return localVarResponse.Data;
 
         }
@@ -7134,8 +7150,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the IVR to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (IVREntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/architect/ivrs";
@@ -7175,6 +7192,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -8408,10 +8426,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>ScheduleGroupEntityListing</returns>
-        public ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ScheduleGroupEntityListing GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<ScheduleGroupEntityListing> localVarResponse = GetArchitectSchedulegroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<ScheduleGroupEntityListing> localVarResponse = GetArchitectSchedulegroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
              return localVarResponse.Data;
         }
 
@@ -8423,8 +8442,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>ApiResponse of ScheduleGroupEntityListing</returns>
-        public ApiResponse< ScheduleGroupEntityListing > GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< ScheduleGroupEntityListing > GetArchitectSchedulegroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedulegroups";
@@ -8464,6 +8484,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -8508,10 +8529,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>Task of ScheduleGroupEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ScheduleGroupEntityListing> GetArchitectSchedulegroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<ScheduleGroupEntityListing> localVarResponse = await GetArchitectSchedulegroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<ScheduleGroupEntityListing> localVarResponse = await GetArchitectSchedulegroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
              return localVarResponse.Data;
 
         }
@@ -8524,8 +8546,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule Group to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleGroupEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedulegroups";
@@ -8565,6 +8588,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -8610,10 +8634,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>ScheduleEntityListing</returns>
-        public ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ScheduleEntityListing GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<ScheduleEntityListing> localVarResponse = GetArchitectSchedulesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<ScheduleEntityListing> localVarResponse = GetArchitectSchedulesWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
              return localVarResponse.Data;
         }
 
@@ -8625,8 +8650,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>ApiResponse of ScheduleEntityListing</returns>
-        public ApiResponse< ScheduleEntityListing > GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< ScheduleEntityListing > GetArchitectSchedulesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedules";
@@ -8666,6 +8692,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -8710,10 +8737,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>Task of ScheduleEntityListing</returns>
-        public async System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ScheduleEntityListing> GetArchitectSchedulesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         {
-             ApiResponse<ScheduleEntityListing> localVarResponse = await GetArchitectSchedulesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder);
+             ApiResponse<ScheduleEntityListing> localVarResponse = await GetArchitectSchedulesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
              return localVarResponse.Data;
 
         }
@@ -8726,8 +8754,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortBy">Sort by (optional, default to name)</param>
         /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Schedule to filter by. (optional)</param>
         /// <returns>Task of ApiResponse (ScheduleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/architect/schedules";
@@ -8767,6 +8796,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -9839,13 +9869,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>HistoryListing</returns>
-        public HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        public HistoryListing GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
-             ApiResponse<HistoryListing> localVarResponse = GetFlowHistoryHistoryIdWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortBy, sortOrder, action);
+             ApiResponse<HistoryListing> localVarResponse = GetFlowHistoryHistoryIdWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
              return localVarResponse.Data;
         }
 
@@ -9857,11 +9887,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>ApiResponse of HistoryListing</returns>
-        public ApiResponse< HistoryListing > GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        public ApiResponse< HistoryListing > GetFlowHistoryHistoryIdWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
@@ -9907,8 +9937,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -9954,13 +9984,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of HistoryListing</returns>
-        public async System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        public async System.Threading.Tasks.Task<HistoryListing> GetFlowHistoryHistoryIdAsync (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         {
-             ApiResponse<HistoryListing> localVarResponse = await GetFlowHistoryHistoryIdAsyncWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortBy, sortOrder, action);
+             ApiResponse<HistoryListing> localVarResponse = await GetFlowHistoryHistoryIdAsyncWithHttpInfo(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
              return localVarResponse.Data;
 
         }
@@ -9973,11 +10003,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="historyId">History ID (generated history)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
-        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
-        /// <param name="action">Flow actions (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
         /// <returns>Task of ApiResponse (HistoryListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+        public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetFlowHistoryHistoryIdAsyncWithHttpInfo (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
         { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
@@ -10025,8 +10055,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
             if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params

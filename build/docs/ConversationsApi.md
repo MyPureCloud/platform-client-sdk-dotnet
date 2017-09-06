@@ -68,7 +68,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationParticipantReplace**](ConversationsApi.html#postconversationparticipantreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
-| [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **POST** /api/v2/conversations/calls/{conversationId} | Add a new call to a conversation |
+| [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **POST** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
 | [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
 | [**PostConversationsCallParticipantMonitor**](ConversationsApi.html#postconversationscallparticipantmonitor) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsCallParticipantReplace**](ConversationsApi.html#postconversationscallparticipantreplace) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
@@ -4381,7 +4381,7 @@ void (empty response body)
 
 ## [**Conversation**](Conversation.html) PostConversationsCall (string conversationId, CallCommand body)
 
-Add a new call to a conversation
+Place a new call as part of a callback conversation.
 
 
 
@@ -4420,7 +4420,7 @@ namespace Example
             try
             {
                 
-                // Add a new call to a conversation
+                // Place a new call as part of a callback conversation.
                 
                 Conversation result = apiInstance.PostConversationsCall(conversationId, body);
                 Debug.WriteLine(result);

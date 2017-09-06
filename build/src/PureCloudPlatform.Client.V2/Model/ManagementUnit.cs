@@ -142,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Timezone">The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database).</param>
+        /// <param name="TimeZone">The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database).</param>
         
         
         
@@ -155,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public ManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string Timezone = null, int? Version = null, DateTime? DateModified = null)
+        public ManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, int? Version = null, DateTime? DateModified = null)
         {
             
             
@@ -217,7 +217,7 @@ this.StartDayOfWeek = StartDayOfWeek;
             
             
             
-this.Timezone = Timezone;
+this.TimeZone = TimeZone;
             
             
             
@@ -264,8 +264,8 @@ this.DateModified = DateModified;
         /// The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database)
         /// </summary>
         /// <value>The time zone for the management unit in standard Olson Format (See https://en.wikipedia.org/wiki/Tz_database)</value>
-        [DataMember(Name="timezone", EmitDefaultValue=false)]
-        public string Timezone { get; set; }
+        [DataMember(Name="timeZone", EmitDefaultValue=false)]
+        public string TimeZone { get; set; }
         
         
         
@@ -310,7 +310,7 @@ this.DateModified = DateModified;
             
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             
-            sb.Append("  Timezone: ").Append(Timezone).Append("\n");
+            sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             
             sb.Append("  Version: ").Append(Version).Append("\n");
             
@@ -370,9 +370,9 @@ this.DateModified = DateModified;
                     this.StartDayOfWeek.Equals(other.StartDayOfWeek)
                 ) &&
                 (
-                    this.Timezone == other.Timezone ||
-                    this.Timezone != null &&
-                    this.Timezone.Equals(other.Timezone)
+                    this.TimeZone == other.TimeZone ||
+                    this.TimeZone != null &&
+                    this.TimeZone.Equals(other.TimeZone)
                 ) &&
                 (
                     this.Version == other.Version ||
@@ -412,8 +412,8 @@ this.DateModified = DateModified;
                 if (this.StartDayOfWeek != null)
                     hash = hash * 59 + this.StartDayOfWeek.GetHashCode();
                 
-                if (this.Timezone != null)
-                    hash = hash * 59 + this.Timezone.GetHashCode();
+                if (this.TimeZone != null)
+                    hash = hash * 59 + this.TimeZone.GetHashCode();
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();

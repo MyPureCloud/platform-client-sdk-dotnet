@@ -33,6 +33,7 @@ title: SocialConversationNotificationParticipants
 | **ExternalOrganization** | [**SocialConversationNotificationUriReference**](SocialConversationNotificationUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
+| **ScreenRecordingState** | **string** |  | [optional] |
 | **SocialMediaId** | **string** |  | [optional] |
 | **SocialMediaHub** | **string** |  | [optional] |
 | **SocialUserName** | **string** |  | [optional] |

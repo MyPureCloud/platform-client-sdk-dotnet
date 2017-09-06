@@ -332,6 +332,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets RecordingState
         /// </summary>
@@ -427,6 +430,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -597,6 +602,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
+        
+        
+        
         /// <param name="Muted">Muted.</param>
         
         
@@ -640,8 +649,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FaxStatus">FaxStatus.</param>
         
         
-        public CallConversationNotificationCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
+        public CallConversationNotificationCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
         {
+            
+            
+            
+            
             
             
             
@@ -1030,6 +1043,15 @@ this.Peer = Peer;
             
             
             
+this.ScreenRecordingState = ScreenRecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Muted = Muted;
             
             
@@ -1320,6 +1342,14 @@ this.FaxStatus = FaxStatus;
         
         
         /// <summary>
+        /// Gets or Sets ScreenRecordingState
+        /// </summary>
+        [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
+        public string ScreenRecordingState { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Muted
         /// </summary>
         [DataMember(Name="muted", EmitDefaultValue=false)]
@@ -1460,6 +1490,8 @@ this.FaxStatus = FaxStatus;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             
@@ -1650,6 +1682,11 @@ this.FaxStatus = FaxStatus;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.ScreenRecordingState == other.ScreenRecordingState ||
+                    this.ScreenRecordingState != null &&
+                    this.ScreenRecordingState.Equals(other.ScreenRecordingState)
+                ) &&
+                (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
@@ -1795,6 +1832,9 @@ this.FaxStatus = FaxStatus;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.ScreenRecordingState != null)
+                    hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();

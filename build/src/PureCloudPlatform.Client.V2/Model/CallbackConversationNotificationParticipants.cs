@@ -364,6 +364,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -385,6 +388,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -543,6 +548,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
+        
+        
+        
         /// <param name="OutboundPreview">OutboundPreview.</param>
         
         
@@ -574,8 +583,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutomatedCallbackConfigId">AutomatedCallbackConfigId.</param>
         
         
-        public CallbackConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, ConversationNotificationDialerPreview OutboundPreview = null, ConversationNotificationVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
+        public CallbackConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallbackConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallbackConversationNotificationErrorInfo ErrorInfo = null, CallbackConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallbackConversationNotificationUriReference ExternalContact = null, CallbackConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, ConversationNotificationDialerPreview OutboundPreview = null, ConversationNotificationVoicemail Voicemail = null, List<string> CallbackNumbers = null, string CallbackUserName = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, DateTime? CallbackScheduledTime = null, string AutomatedCallbackConfigId = null)
         {
+            
+            
+            
+            
             
             
             
@@ -952,6 +965,15 @@ this.Peer = Peer;
             
             
             
+this.ScreenRecordingState = ScreenRecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
 this.OutboundPreview = OutboundPreview;
             
             
@@ -1215,6 +1237,14 @@ this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
         
         
         /// <summary>
+        /// Gets or Sets ScreenRecordingState
+        /// </summary>
+        [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
+        public string ScreenRecordingState { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets OutboundPreview
         /// </summary>
         [DataMember(Name="outboundPreview", EmitDefaultValue=false)]
@@ -1337,6 +1367,8 @@ this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("  OutboundPreview: ").Append(OutboundPreview).Append("\n");
             
@@ -1521,6 +1553,11 @@ this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.ScreenRecordingState == other.ScreenRecordingState ||
+                    this.ScreenRecordingState != null &&
+                    this.ScreenRecordingState.Equals(other.ScreenRecordingState)
+                ) &&
+                (
                     this.OutboundPreview == other.OutboundPreview ||
                     this.OutboundPreview != null &&
                     this.OutboundPreview.Equals(other.OutboundPreview)
@@ -1651,6 +1688,9 @@ this.AutomatedCallbackConfigId = AutomatedCallbackConfigId;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.ScreenRecordingState != null)
+                    hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
                 if (this.OutboundPreview != null)
                     hash = hash * 59 + this.OutboundPreview.GetHashCode();

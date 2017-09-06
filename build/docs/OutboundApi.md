@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundContactlistContact**](OutboundApi.html#deleteoutboundcontactlistcontact) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
 | [**DeleteOutboundContactlistContacts**](OutboundApi.html#deleteoutboundcontactlistcontacts) | **DELETE** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. |
 | [**DeleteOutboundContactlistfilter**](OutboundApi.html#deleteoutboundcontactlistfilter) | **DELETE** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
+| [**DeleteOutboundContactlists**](OutboundApi.html#deleteoutboundcontactlists) | **DELETE** /api/v2/outbound/contactlists | Delete multiple contact lists. |
 | [**DeleteOutboundDnclist**](OutboundApi.html#deleteoutbounddnclist) | **DELETE** /api/v2/outbound/dnclists/{dncListId} | Delete dialer DNC list |
 | [**DeleteOutboundRuleset**](OutboundApi.html#deleteoutboundruleset) | **DELETE** /api/v2/outbound/rulesets/{ruleSetId} | Delete a Rule set. |
 | [**DeleteOutboundSchedulesCampaign**](OutboundApi.html#deleteoutboundschedulescampaign) | **DELETE** /api/v2/outbound/schedules/campaigns/{campaignId} | Delete a dialer campaign schedule. |
@@ -731,6 +732,69 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactListFilterId** | **string**| Contact List Filter ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteoutboundcontactlists"></a>
+
+## void DeleteOutboundContactlists (List<string> id)
+
+Delete multiple contact lists.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundContactlistsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            
+            var id = new List<string>(); // List<string> | contact list id(s) to delete
+            
+            
+
+            try
+            {
+                
+                // Delete multiple contact lists.
+                
+                apiInstance.DeleteOutboundContactlists(id);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundContactlists: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string.html)| contact list id(s) to delete |  |
 {: class="table table-striped"}
 
 ### Return type

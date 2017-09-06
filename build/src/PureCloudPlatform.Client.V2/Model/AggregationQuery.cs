@@ -684,7 +684,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="TimeZone">Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London.</param>
+        /// <param name="TimeZone">Sets the time zone for the query interval, defaults to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
         
         
         
@@ -838,9 +838,9 @@ this.Views = Views;
         
         
         /// <summary>
-        /// Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London
+        /// Sets the time zone for the query interval, defaults to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London
         /// </summary>
-        /// <value>Sets the time zone for the query interval, defaults to UTC. Time zones are represented as an ISO-8601 string. For example: UTC, UTC+01:00, or Europe/London</value>
+        /// <value>Sets the time zone for the query interval, defaults to UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         

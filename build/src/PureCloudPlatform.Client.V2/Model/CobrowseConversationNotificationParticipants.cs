@@ -355,6 +355,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -376,6 +379,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -528,6 +533,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
+        
+        
+        
         /// <param name="CobrowseSessionId">CobrowseSessionId.</param>
         
         
@@ -547,8 +556,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Controlling">Controlling.</param>
         
         
-        public CobrowseConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CobrowseConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CobrowseConversationNotificationErrorInfo ErrorInfo = null, CobrowseConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CobrowseConversationNotificationUriReference ExternalContact = null, CobrowseConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
+        public CobrowseConversationNotificationParticipants(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CobrowseConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CobrowseConversationNotificationErrorInfo ErrorInfo = null, CobrowseConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CobrowseConversationNotificationUriReference ExternalContact = null, CobrowseConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
         {
+            
+            
+            
+            
             
             
             
@@ -913,6 +926,15 @@ this.Peer = Peer;
             
             
             
+this.ScreenRecordingState = ScreenRecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
 this.CobrowseSessionId = CobrowseSessionId;
             
             
@@ -1149,6 +1171,14 @@ this.Controlling = Controlling;
         
         
         /// <summary>
+        /// Gets or Sets ScreenRecordingState
+        /// </summary>
+        [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
+        public string ScreenRecordingState { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets CobrowseSessionId
         /// </summary>
         [DataMember(Name="cobrowseSessionId", EmitDefaultValue=false)]
@@ -1247,6 +1277,8 @@ this.Controlling = Controlling;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
             
@@ -1425,6 +1457,11 @@ this.Controlling = Controlling;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.ScreenRecordingState == other.ScreenRecordingState ||
+                    this.ScreenRecordingState != null &&
+                    this.ScreenRecordingState.Equals(other.ScreenRecordingState)
+                ) &&
+                (
                     this.CobrowseSessionId == other.CobrowseSessionId ||
                     this.CobrowseSessionId != null &&
                     this.CobrowseSessionId.Equals(other.CobrowseSessionId)
@@ -1540,6 +1577,9 @@ this.Controlling = Controlling;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.ScreenRecordingState != null)
+                    hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
                 if (this.CobrowseSessionId != null)
                     hash = hash * 59 + this.CobrowseSessionId.GetHashCode();

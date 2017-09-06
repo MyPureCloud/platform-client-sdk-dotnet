@@ -61,6 +61,26 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAlertingInteractionstatsRuleWithHttpInfo (string ruleId);
         
         /// <summary>
+        /// Gets active alert count for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ActiveAlertCount</returns>
+        ActiveAlertCount GetAlertingAlertsActive ();
+
+        /// <summary>
+        /// Gets active alert count for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ActiveAlertCount</returns>
+        ApiResponse<ActiveAlertCount> GetAlertingAlertsActiveWithHttpInfo ();
+        
+        /// <summary>
         /// Get an interaction stats alert
         /// </summary>
         /// <remarks>
@@ -295,6 +315,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="ruleId">Rule ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingInteractionstatsRuleAsyncWithHttpInfo (string ruleId);
+        
+        /// <summary>
+        /// Gets active alert count for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ActiveAlertCount</returns>
+        System.Threading.Tasks.Task<ActiveAlertCount> GetAlertingAlertsActiveAsync ();
+
+        /// <summary>
+        /// Gets active alert count for a user.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ActiveAlertCount)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ActiveAlertCount>> GetAlertingAlertsActiveAsyncWithHttpInfo ();
         
         /// <summary>
         /// Get an interaction stats alert
@@ -950,6 +990,184 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null);
+        }
+
+        
+        
+        /// <summary>
+        /// Gets active alert count for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ActiveAlertCount</returns>
+        public ActiveAlertCount GetAlertingAlertsActive ()
+        {
+             ApiResponse<ActiveAlertCount> localVarResponse = GetAlertingAlertsActiveWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets active alert count for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of ActiveAlertCount</returns>
+        public ApiResponse< ActiveAlertCount > GetAlertingAlertsActiveWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/alerting/alerts/active";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAlertingAlertsActive: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAlertingAlertsActive: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActiveAlertCount>(localVarStatusCode,
+                localVarHeaders,
+                (ActiveAlertCount) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActiveAlertCount)));
+            
+        }
+
+        
+        /// <summary>
+        /// Gets active alert count for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ActiveAlertCount</returns>
+        public async System.Threading.Tasks.Task<ActiveAlertCount> GetAlertingAlertsActiveAsync ()
+        {
+             ApiResponse<ActiveAlertCount> localVarResponse = await GetAlertingAlertsActiveAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets active alert count for a user. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (ActiveAlertCount)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ActiveAlertCount>> GetAlertingAlertsActiveAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/alerting/alerts/active";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAlertingAlertsActive: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAlertingAlertsActive: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ActiveAlertCount>(localVarStatusCode,
+                localVarHeaders,
+                (ActiveAlertCount) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ActiveAlertCount)));
+            
         }
 
         

@@ -1499,7 +1499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostConversationParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body);
         
         /// <summary>
-        /// Add a new call to a conversation
+        /// Place a new call as part of a callback conversation.
         /// </summary>
         /// <remarks>
         /// 
@@ -1511,7 +1511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Conversation PostConversationsCall (string conversationId, CallCommand body);
 
         /// <summary>
-        /// Add a new call to a conversation
+        /// Place a new call as part of a callback conversation.
         /// </summary>
         /// <remarks>
         /// 
@@ -3423,7 +3423,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body);
         
         /// <summary>
-        /// Add a new call to a conversation
+        /// Place a new call as part of a callback conversation.
         /// </summary>
         /// <remarks>
         /// 
@@ -3435,7 +3435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Conversation> PostConversationsCallAsync (string conversationId, CallCommand body);
 
         /// <summary>
-        /// Add a new call to a conversation
+        /// Place a new call as part of a callback conversation.
         /// </summary>
         /// <remarks>
         /// 
@@ -16613,7 +16613,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Add a new call to a conversation 
+        /// Place a new call as part of a callback conversation. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -16626,7 +16626,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add a new call to a conversation 
+        /// Place a new call as part of a callback conversation. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -16717,7 +16717,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Add a new call to a conversation 
+        /// Place a new call as part of a callback conversation. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
@@ -16731,7 +16731,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add a new call to a conversation 
+        /// Place a new call as part of a callback conversation. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>

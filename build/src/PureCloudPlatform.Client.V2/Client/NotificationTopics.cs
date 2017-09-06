@@ -13,7 +13,6 @@ namespace PureCloudPlatform.Client.V2.Client
             Topics = new Dictionary<string, Type>
             { 
               {"v2.architect.dependencytracking.build", typeof(DependencyTrackingBuildNotificationNotification)},
-              {"v2.architect.flows.{id}.generation.{id}", typeof(PublishFlowNotificationNotification)},
               {"v2.architect.prompts.{id}", typeof(PromptNotificationNotification)},
               {"v2.architect.prompts.{id}.resources.{id}", typeof(PromptResourceNotificationNotification)},
               {"v2.architect.systemprompts.{id}.resources.{id}", typeof(SystemPromptResourceNotificationNotification)},

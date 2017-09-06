@@ -349,6 +349,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -370,6 +373,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -518,6 +523,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
+        
+        
+        
         /// <param name="Context">Context.</param>
         
         
@@ -529,8 +538,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Sharing">Sharing.</param>
         
         
-        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
+        public ScreenShareConversationNotificationScreenShareMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, ScreenShareConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, ScreenShareConversationNotificationErrorInfo ErrorInfo = null, ScreenShareConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, ScreenShareConversationNotificationUriReference ExternalContact = null, ScreenShareConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, string Context = null, int? PeerCount = null, bool? Sharing = null)
         {
+            
+            
+            
+            
             
             
             
@@ -887,6 +900,15 @@ this.Peer = Peer;
             
             
             
+this.ScreenRecordingState = ScreenRecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Context = Context;
             
             
@@ -1105,6 +1127,14 @@ this.Sharing = Sharing;
         
         
         /// <summary>
+        /// Gets or Sets ScreenRecordingState
+        /// </summary>
+        [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
+        public string ScreenRecordingState { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Context
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
@@ -1187,6 +1217,8 @@ this.Sharing = Sharing;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("  Context: ").Append(Context).Append("\n");
             
@@ -1361,6 +1393,11 @@ this.Sharing = Sharing;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.ScreenRecordingState == other.ScreenRecordingState ||
+                    this.ScreenRecordingState != null &&
+                    this.ScreenRecordingState.Equals(other.ScreenRecordingState)
+                ) &&
+                (
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
@@ -1466,6 +1503,9 @@ this.Sharing = Sharing;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.ScreenRecordingState != null)
+                    hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();

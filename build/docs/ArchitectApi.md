@@ -752,11 +752,11 @@ namespace Example
 | **name** | **string**| Object name to search for |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **consumedResources** | **bool?**| Include resources each result item consumes | [optional]  |
 | **consumingResources** | **bool?**| Include resources that consume each result item | [optional]  |
-| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
-| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -858,7 +858,7 @@ namespace Example
             
             
             
-            var objectType = objectType_example;  // string | Consuming object type
+            var objectType = objectType_example;  // string | Consuming object type.  Only versioned types are allowed here.
             
             
             
@@ -892,8 +892,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **id** | **string**| Consuming object ID |  |
 | **version** | **string**| Consuming object version |  |
-| **objectType** | **string**| Consuming object type | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
-| **resourceType** | [**List<string>**](string.html)| Types of consumed resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **objectType** | **string**| Consuming object type.  Only versioned types are allowed here. | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **resourceType** | [**List<string>**](string.html)| Types of consumed resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -935,13 +935,13 @@ namespace Example
             
             
             
-            var objectType = objectType_example;  // string | Consumed object type (only versioned object types are valid)
+            var objectType = objectType_example;  // string | Consumed object type
             
             
             
             
             
-            var resourceType = new List<string>(); // List<string> | Types of consuming resources to show (optional) 
+            var resourceType = new List<string>(); // List<string> | Types of consuming resources to show.  Only versioned types are allowed here. (optional) 
             
             
 
@@ -968,8 +968,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **id** | **string**| Consumed object ID |  |
-| **objectType** | **string**| Consumed object type (only versioned object types are valid) | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
-| **resourceType** | [**List<string>**](string.html)| Types of consuming resources to show | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **objectType** | **string**| Consumed object type | <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **resourceType** | [**List<string>**](string.html)| Types of consuming resources to show.  Only versioned types are allowed here. | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -1064,10 +1064,10 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **name** | **string**| Name to search for | [optional]  |
-| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **flowFilter** | **string**| Show only checkedIn or published flows | [optional] <br />**Values**: checkedIn, published |
 | **consumedResources** | **bool?**| Return consumed resources? | [optional] [default to false] |
-| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
@@ -1165,11 +1165,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **id** | **string**| Object ID |  |
 | **version** | **string**| Object version | [optional]  |
-| **objectType** | **string**| Object type | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **objectType** | **string**| Object type | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **consumedResources** | **bool?**| Include resources this item consumes | [optional]  |
 | **consumingResources** | **bool?**| Include resources that consume this item | [optional]  |
-| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
-| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumedResourceType** | [**List<string>**](string.html)| Types of consumed resources to return, if consumed resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumingResourceType** | [**List<string>**](string.html)| Types of consuming resources to return, if consuming resources are requested | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 {: class="table table-striped"}
 
 ### Return type
@@ -1393,9 +1393,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **name** | **string**| Name to search for | [optional]  |
-| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **objectType** | [**List<string>**](string.html)| Object type(s) to search for | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **consumedResources** | **bool?**| Return consumed resources? | [optional] [default to false] |
-| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
+| **consumedResourceType** | [**List<string>**](string.html)| Resource type(s) to return | [optional] <br />**Values**: ACDLANGUAGE, ACDSKILL, ACDWRAPUPCODE, BRIDGEACTION, COMPOSERSCRIPT, CONTACTLIST, DATAACTION, EMAILROUTE, GROUP, INBOUNDCALLFLOW, INBOUNDEMAILFLOW, INBOUNDSHORTMESSAGE, INQUEUECALLFLOW, IVRCONFIGURATION, LANGUAGE, OUTBOUNDCALLFLOW, QUEUE, RESPONSE, SCHEDULE, SCHEDULEGROUP, SECUREACTION, SECURECALLFLOW, SURVEYINVITEFLOW, SYSTEMPROMPT, USER, USERPROMPT, VOICEXML, WORKFLOW |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 {: class="table table-striped"}
@@ -1470,7 +1470,7 @@ namespace Example
 
 <a name="getarchitectivrs"></a>
 
-## [**IVREntityListing**](IVREntityListing.html) GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+## [**IVREntityListing**](IVREntityListing.html) GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
 Get IVR configs.
 
@@ -1517,13 +1517,18 @@ namespace Example
             
             
             
+            
+            var name = name_example;  // string | Name of the IVR to filter by. (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get IVR configs.
                 
-                IVREntityListing result = apiInstance.GetArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder);
+                IVREntityListing result = apiInstance.GetArchitectIvrs(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1544,6 +1549,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **name** | **string**| Name of the IVR to filter by. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1978,7 +1984,7 @@ namespace Example
 
 <a name="getarchitectschedulegroups"></a>
 
-## [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+## [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
 Get a list of schedule groups.
 
@@ -2025,13 +2031,18 @@ namespace Example
             
             
             
+            
+            var name = name_example;  // string | Name of the Schedule Group to filter by. (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get a list of schedule groups.
                 
-                ScheduleGroupEntityListing result = apiInstance.GetArchitectSchedulegroups(pageNumber, pageSize, sortBy, sortOrder);
+                ScheduleGroupEntityListing result = apiInstance.GetArchitectSchedulegroups(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2052,6 +2063,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **name** | **string**| Name of the Schedule Group to filter by. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2060,7 +2072,7 @@ namespace Example
 
 <a name="getarchitectschedules"></a>
 
-## [**ScheduleEntityListing**](ScheduleEntityListing.html) GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
+## [**ScheduleEntityListing**](ScheduleEntityListing.html) GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
 Get a list of schedules.
 
@@ -2107,13 +2119,18 @@ namespace Example
             
             
             
+            
+            var name = name_example;  // string | Name of the Schedule to filter by. (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get a list of schedules.
                 
-                ScheduleEntityListing result = apiInstance.GetArchitectSchedules(pageNumber, pageSize, sortBy, sortOrder);
+                ScheduleEntityListing result = apiInstance.GetArchitectSchedules(pageNumber, pageSize, sortBy, sortOrder, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2134,6 +2151,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **name** | **string**| Name of the Schedule to filter by. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2534,7 +2552,7 @@ namespace Example
 
 <a name="getflowhistoryhistoryid"></a>
 
-## [**HistoryListing**](HistoryListing.html) GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> action = null)
+## [**HistoryListing**](HistoryListing.html) GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
 
 Get generated flow history
 
@@ -2582,18 +2600,18 @@ namespace Example
             
             
             
-            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
-            
-            
-            
-            
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
             
             
             
             
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
             
-            var action = new List<string>(); // List<string> | Flow actions (optional) 
+            
+            
+            
+            
+            var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
             
             
 
@@ -2602,7 +2620,7 @@ namespace Example
                 
                 // Get generated flow history
                 
-                HistoryListing result = apiInstance.GetFlowHistoryHistoryId(flowId, historyId, pageNumber, pageSize, sortBy, sortOrder, action);
+                HistoryListing result = apiInstance.GetFlowHistoryHistoryId(flowId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2623,9 +2641,9 @@ namespace Example
 | **historyId** | **string**| History ID (generated history) |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
-| **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
 | **sortOrder** | **string**| Sort order | [optional] [default to desc] |
-| **action** | [**List<string>**](string.html)| Flow actions | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
+| **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
+| **action** | [**List<string>**](string.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
 {: class="table table-striped"}
 
 ### Return type
@@ -3063,7 +3081,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **type** | **string**| Type |  |
+| **type** | **string**| Type | <br />**Values**: inboundcall, inboundemail, inboundshortmessage, outboundcall, inqueuecall, speech, securecall, surveyinvite, workflow |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to id] |

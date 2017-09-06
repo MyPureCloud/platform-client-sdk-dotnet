@@ -200,7 +200,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum After for "AFTER"
             /// </summary>
             [EnumMember(Value = "AFTER")]
-            After
+            After,
+            
+            /// <summary>
+            /// Enum In for "IN"
+            /// </summary>
+            [EnumMember(Value = "IN")]
+            In
         }
         
         

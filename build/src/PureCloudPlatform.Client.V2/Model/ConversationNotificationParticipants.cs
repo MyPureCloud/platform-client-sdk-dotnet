@@ -74,6 +74,50 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets ScreenRecordingState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ScreenRecordingStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Requested for "REQUESTED"
+            /// </summary>
+            [EnumMember(Value = "REQUESTED")]
+            Requested,
+            
+            /// <summary>
+            /// Enum Active for "ACTIVE"
+            /// </summary>
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            /// <summary>
+            /// Enum Paused for "PAUSED"
+            /// </summary>
+            [EnumMember(Value = "PAUSED")]
+            Paused,
+            
+            /// <summary>
+            /// Enum Stopped for "STOPPED"
+            /// </summary>
+            [EnumMember(Value = "STOPPED")]
+            Stopped,
+            
+            /// <summary>
+            /// Enum Error for "ERROR"
+            /// </summary>
+            [EnumMember(Value = "ERROR")]
+            Error
+        }
         
         
         
@@ -138,6 +182,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ScreenRecordingState
+        /// </summary>
+        [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
+        public ScreenRecordingStateEnum? ScreenRecordingState { get; set; }
         
         
         
@@ -238,6 +294,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ScreenRecordingState">ScreenRecordingState.</param>
+        
+        
+        
         /// <param name="Attributes">Attributes.</param>
         
         
@@ -277,8 +337,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public ConversationNotificationParticipants(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
+        public ConversationNotificationParticipants(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
             
             
             
@@ -559,6 +623,15 @@ this.MonitoredParticipantId = MonitoredParticipantId;
             
             
             
+this.ScreenRecordingState = ScreenRecordingState;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Attributes = Attributes;
             
             
@@ -793,6 +866,8 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Attributes
         /// </summary>
@@ -916,6 +991,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
+            
+            sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             
@@ -1064,6 +1141,11 @@ this.AdditionalProperties = AdditionalProperties;
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
                 ) &&
                 (
+                    this.ScreenRecordingState == other.ScreenRecordingState ||
+                    this.ScreenRecordingState != null &&
+                    this.ScreenRecordingState.Equals(other.ScreenRecordingState)
+                ) &&
+                (
                     this.Attributes == other.Attributes ||
                     this.Attributes != null &&
                     this.Attributes.SequenceEqual(other.Attributes)
@@ -1180,6 +1262,9 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();
+                
+                if (this.ScreenRecordingState != null)
+                    hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
                 if (this.Attributes != null)
                     hash = hash * 59 + this.Attributes.GetHashCode();

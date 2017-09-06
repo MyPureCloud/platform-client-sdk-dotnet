@@ -56,6 +56,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Inboundemail,
             
             /// <summary>
+            /// Enum Inboundshortmessage for "INBOUNDSHORTMESSAGE"
+            /// </summary>
+            [EnumMember(Value = "INBOUNDSHORTMESSAGE")]
+            Inboundshortmessage,
+            
+            /// <summary>
             /// Enum Inqueuecall for "INQUEUECALL"
             /// </summary>
             [EnumMember(Value = "INQUEUECALL")]

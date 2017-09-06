@@ -33,6 +33,7 @@ title: VideoConversationNotificationParticipants
 | **ExternalOrganization** | [**VideoConversationNotificationUriReference**](VideoConversationNotificationUriReference.html) |  | [optional] |
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
+| **ScreenRecordingState** | **string** |  | [optional] |
 | **AudioMuted** | **bool?** |  | [optional] |
 | **VideoMuted** | **bool?** |  | [optional] |
 | **SharingScreen** | **bool?** |  | [optional] |

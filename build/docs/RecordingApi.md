@@ -14,6 +14,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationRecording**](RecordingApi.html#getconversationrecording) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId} | Gets a specific recording. |
 | [**GetConversationRecordingAnnotation**](RecordingApi.html#getconversationrecordingannotation) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations/{annotationId} | Get annotation |
 | [**GetConversationRecordingAnnotations**](RecordingApi.html#getconversationrecordingannotations) | **GET** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Get annotations for recording |
+| [**GetConversationRecordingmetadata**](RecordingApi.html#getconversationrecordingmetadata) | **GET** /api/v2/conversations/{conversationId}/recordingmetadata | Get recording metadata for a conversation. Does not return playable media. |
+| [**GetConversationRecordingmetadataRecordingId**](RecordingApi.html#getconversationrecordingmetadatarecordingid) | **GET** /api/v2/conversations/{conversationId}/recordingmetadata/{recordingId} | Get metadata for a specific recording. Does not return playable media. |
 | [**GetConversationRecordings**](RecordingApi.html#getconversationrecordings) | **GET** /api/v2/conversations/{conversationId}/recordings | Get all of a Conversation&#39;s Recordings. |
 | [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
 | [**GetOrphanrecordingMedia**](RecordingApi.html#getorphanrecordingmedia) | **GET** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
@@ -540,6 +542,140 @@ namespace Example
 ### Return type
 
 [**List<Annotation>**](Annotation.html)
+
+<a name="getconversationrecordingmetadata"></a>
+
+## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordingmetadata (string conversationId)
+
+Get recording metadata for a conversation. Does not return playable media.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationRecordingmetadataExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RecordingApi();
+            
+            
+            var conversationId = conversationId_example;  // string | Conversation ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get recording metadata for a conversation. Does not return playable media.
+                
+                List&lt;Recording&gt; result = apiInstance.GetConversationRecordingmetadata(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetConversationRecordingmetadata: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<Recording>**](Recording.html)
+
+<a name="getconversationrecordingmetadatarecordingid"></a>
+
+## [**Recording**](Recording.html) GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
+
+Get metadata for a specific recording. Does not return playable media.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationRecordingmetadataRecordingIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RecordingApi();
+            
+            
+            var conversationId = conversationId_example;  // string | Conversation ID
+            
+            
+            
+            
+            var recordingId = recordingId_example;  // string | Recording ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get metadata for a specific recording. Does not return playable media.
+                
+                Recording result = apiInstance.GetConversationRecordingmetadataRecordingId(conversationId, recordingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetConversationRecordingmetadataRecordingId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **recordingId** | **string**| Recording ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Recording**](Recording.html)
 
 <a name="getconversationrecordings"></a>
 

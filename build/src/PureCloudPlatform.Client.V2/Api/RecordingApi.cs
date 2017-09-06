@@ -189,6 +189,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<Annotation>> GetConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>List&lt;Recording&gt;</returns>
+        List<Recording> GetConversationRecordingmetadata (string conversationId);
+
+        /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
+        ApiResponse<List<Recording>> GetConversationRecordingmetadataWithHttpInfo (string conversationId);
+        
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Recording</returns>
+        Recording GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId);
+
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>ApiResponse of Recording</returns>
+        ApiResponse<Recording> GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId);
+        
+        /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
@@ -999,6 +1045,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">Recording ID</param>
         /// <returns>Task of ApiResponse (List&lt;Annotation&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Annotation>>> GetConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId);
+        
+        /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of List&lt;Recording&gt;</returns>
+        System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingmetadataAsync (string conversationId);
+
+        /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingmetadataAsyncWithHttpInfo (string conversationId);
+        
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of Recording</returns>
+        System.Threading.Tasks.Task<Recording> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId);
+
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of ApiResponse (Recording)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId);
         
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings.
@@ -3150,6 +3242,401 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<Annotation>>(localVarStatusCode,
                 localVarHeaders,
                 (List<Annotation>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Annotation>)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>List&lt;Recording&gt;</returns>
+        public List<Recording> GetConversationRecordingmetadata (string conversationId)
+        {
+             ApiResponse<List<Recording>> localVarResponse = GetConversationRecordingmetadataWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
+        public ApiResponse< List<Recording> > GetConversationRecordingmetadataWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingmetadata");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordingmetadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Recording>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Recording>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Recording>)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of List&lt;Recording&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingmetadataAsync (string conversationId)
+        {
+             ApiResponse<List<Recording>> localVarResponse = await GetConversationRecordingmetadataAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get recording metadata for a conversation. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingmetadataAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingmetadata");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordingmetadata";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadata: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadata: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Recording>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Recording>) Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Recording>)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Recording</returns>
+        public Recording GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
+        {
+             ApiResponse<Recording> localVarResponse = GetConversationRecordingmetadataRecordingIdWithHttpInfo(conversationId, recordingId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>ApiResponse of Recording</returns>
+        public ApiResponse< Recording > GetConversationRecordingmetadataRecordingIdWithHttpInfo (string conversationId, string recordingId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingmetadataRecordingId");
+            // verify the required parameter 'recordingId' is set
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingmetadataRecordingId");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordingmetadata/{recordingId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadataRecordingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadataRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Recording>(localVarStatusCode,
+                localVarHeaders,
+                (Recording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of Recording</returns>
+        public async System.Threading.Tasks.Task<Recording> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId)
+        {
+             ApiResponse<Recording> localVarResponse = await GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo(conversationId, recordingId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get metadata for a specific recording. Does not return playable media. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">Conversation ID</param>
+        /// <param name="recordingId">Recording ID</param>
+        /// <returns>Task of ApiResponse (Recording)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Recording>> GetConversationRecordingmetadataRecordingIdAsyncWithHttpInfo (string conversationId, string recordingId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling RecordingApi->GetConversationRecordingmetadataRecordingId");
+            
+            // verify the required parameter 'recordingId' is set
+            if (recordingId == null)
+                throw new ApiException(400, "Missing required parameter 'recordingId' when calling RecordingApi->GetConversationRecordingmetadataRecordingId");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/recordingmetadata/{recordingId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (recordingId != null) localVarPathParams.Add("recordingId", Configuration.ApiClient.ParameterToString(recordingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadataRecordingId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationRecordingmetadataRecordingId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Recording>(localVarStatusCode,
+                localVarHeaders,
+                (Recording) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Recording)));
             
         }
 

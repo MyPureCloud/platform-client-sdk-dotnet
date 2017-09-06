@@ -13,16 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// PublishFlowNotificationNotification
+    /// Defines response components of the Action Request.
     /// </summary>
     [DataContract]
-    public partial class PublishFlowNotificationNotification :  IEquatable<PublishFlowNotificationNotification>
+    public partial class ResponseConfig :  IEquatable<ResponseConfig>
     {
-        
-        
-        
-        
-        
         
         
         
@@ -42,26 +37,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="PublishFlowNotificationNotification" /> class.
+        /// Initializes a new instance of the <see cref="ResponseConfig" /> class.
         /// </summary>
         
         
-        /// <param name="Id">Id.</param>
+        /// <param name="TranslationMap">Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response..</param>
         
         
         
-        /// <param name="Type">Type.</param>
+        /// <param name="SuccessTemplate">Velocity template to build response to return from Action..</param>
         
         
         
-        /// <param name="Message">Message.</param>
+        /// <param name="SuccessTemplateUri">URI to retrieve success template..</param>
         
         
-        
-        /// <param name="DateCreated">DateCreated.</param>
-        
-        
-        public PublishFlowNotificationNotification(string Id = null, string Type = null, string Message = null, DateTime? DateCreated = null)
+        public ResponseConfig(Dictionary<string, string> TranslationMap = null, string SuccessTemplate = null, string SuccessTemplateUri = null)
         {
             
             
@@ -81,20 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Type = Type;
+this.TranslationMap = TranslationMap;
             
             
             
@@ -103,7 +81,7 @@ this.Type = Type;
             
             
             
-this.Message = Message;
+this.SuccessTemplate = SuccessTemplate;
             
             
             
@@ -112,7 +90,7 @@ this.Message = Message;
             
             
             
-this.DateCreated = DateCreated;
+this.SuccessTemplateUri = SuccessTemplateUri;
             
             
             
@@ -122,34 +100,29 @@ this.DateCreated = DateCreated;
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response.
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        /// <value>Map &#39;attribute name&#39; and &#39;JSON path&#39; pairs used to extract data from REST response.</value>
+        [DataMember(Name="translationMap", EmitDefaultValue=false)]
+        public Dictionary<string, string> TranslationMap { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Type
+        /// Velocity template to build response to return from Action.
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
+        /// <value>Velocity template to build response to return from Action.</value>
+        [DataMember(Name="successTemplate", EmitDefaultValue=false)]
+        public string SuccessTemplate { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Message
+        /// URI to retrieve success template.
         /// </summary>
-        [DataMember(Name="message", EmitDefaultValue=false)]
-        public string Message { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DateCreated
-        /// </summary>
-        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
-        public DateTime? DateCreated { get; set; }
+        /// <value>URI to retrieve success template.</value>
+        [DataMember(Name="successTemplateUri", EmitDefaultValue=false)]
+        public string SuccessTemplateUri { get; set; }
         
         
         /// <summary>
@@ -159,15 +132,13 @@ this.DateCreated = DateCreated;
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class PublishFlowNotificationNotification {\n");
+            sb.Append("class ResponseConfig {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  TranslationMap: ").Append(TranslationMap).Append("\n");
             
-            sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  SuccessTemplate: ").Append(SuccessTemplate).Append("\n");
             
-            sb.Append("  Message: ").Append(Message).Append("\n");
-            
-            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  SuccessTemplateUri: ").Append(SuccessTemplateUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -190,15 +161,15 @@ this.DateCreated = DateCreated;
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as PublishFlowNotificationNotification);
+            return this.Equals(obj as ResponseConfig);
         }
 
         /// <summary>
-        /// Returns true if PublishFlowNotificationNotification instances are equal
+        /// Returns true if ResponseConfig instances are equal
         /// </summary>
-        /// <param name="other">Instance of PublishFlowNotificationNotification to be compared</param>
+        /// <param name="other">Instance of ResponseConfig to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(PublishFlowNotificationNotification other)
+        public bool Equals(ResponseConfig other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -206,24 +177,19 @@ this.DateCreated = DateCreated;
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.TranslationMap == other.TranslationMap ||
+                    this.TranslationMap != null &&
+                    this.TranslationMap.SequenceEqual(other.TranslationMap)
                 ) &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.SuccessTemplate == other.SuccessTemplate ||
+                    this.SuccessTemplate != null &&
+                    this.SuccessTemplate.Equals(other.SuccessTemplate)
                 ) &&
                 (
-                    this.Message == other.Message ||
-                    this.Message != null &&
-                    this.Message.Equals(other.Message)
-                ) &&
-                (
-                    this.DateCreated == other.DateCreated ||
-                    this.DateCreated != null &&
-                    this.DateCreated.Equals(other.DateCreated)
+                    this.SuccessTemplateUri == other.SuccessTemplateUri ||
+                    this.SuccessTemplateUri != null &&
+                    this.SuccessTemplateUri.Equals(other.SuccessTemplateUri)
                 );
         }
 
@@ -239,17 +205,14 @@ this.DateCreated = DateCreated;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.TranslationMap != null)
+                    hash = hash * 59 + this.TranslationMap.GetHashCode();
                 
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.SuccessTemplate != null)
+                    hash = hash * 59 + this.SuccessTemplate.GetHashCode();
                 
-                if (this.Message != null)
-                    hash = hash * 59 + this.Message.GetHashCode();
-                
-                if (this.DateCreated != null)
-                    hash = hash * 59 + this.DateCreated.GetHashCode();
+                if (this.SuccessTemplateUri != null)
+                    hash = hash * 59 + this.SuccessTemplateUri.GetHashCode();
                 
                 return hash;
             }

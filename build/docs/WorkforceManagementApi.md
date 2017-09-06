@@ -439,7 +439,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunits"></a>
 
-## [**List&lt;ManagementUnit&gt;**](ManagementUnit.html) GetWorkforcemanagementManagementunits (string selector = null, int? pageSize = null, int? pageNumber = null)
+## [**ManagementUnitListing**](ManagementUnitListing.html) GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null)
 
 Get management units
 
@@ -467,11 +467,6 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var selector = selector_example;  // string | Selector (optional) 
-            
-            
-            
-            
             var pageSize = 56;  // int? |  (optional)  (default to 25)
             
             
@@ -487,7 +482,7 @@ namespace Example
                 
                 // Get management units
                 
-                List&lt;ManagementUnit&gt; result = apiInstance.GetWorkforcemanagementManagementunits(selector, pageSize, pageNumber);
+                ManagementUnitListing result = apiInstance.GetWorkforcemanagementManagementunits(pageSize, pageNumber);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -504,14 +499,13 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **selector** | **string**| Selector | [optional]  |
 | **pageSize** | **int?**|  | [optional] [default to 25] |
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 {: class="table table-striped"}
 
 ### Return type
 
-[**List<ManagementUnit>**](ManagementUnit.html)
+[**ManagementUnitListing**](ManagementUnitListing.html)
 
 <a name="getworkforcemanagementtimeoffrequest"></a>
 

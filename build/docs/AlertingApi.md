@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteAlertingInteractionstatsAlert**](AlertingApi.html#deletealertinginteractionstatsalert) | **DELETE** /api/v2/alerting/interactionstats/alerts/{alertId} | Delete an interaction stats alert |
 | [**DeleteAlertingInteractionstatsRule**](AlertingApi.html#deletealertinginteractionstatsrule) | **DELETE** /api/v2/alerting/interactionstats/rules/{ruleId} | Delete an interaction stats rule. |
+| [**GetAlertingAlertsActive**](AlertingApi.html#getalertingalertsactive) | **GET** /api/v2/alerting/alerts/active | Gets active alert count for a user. |
 | [**GetAlertingInteractionstatsAlert**](AlertingApi.html#getalertinginteractionstatsalert) | **GET** /api/v2/alerting/interactionstats/alerts/{alertId} | Get an interaction stats alert |
 | [**GetAlertingInteractionstatsAlerts**](AlertingApi.html#getalertinginteractionstatsalerts) | **GET** /api/v2/alerting/interactionstats/alerts | Get interaction stats alert list. |
 | [**GetAlertingInteractionstatsAlertsUnread**](AlertingApi.html#getalertinginteractionstatsalertsunread) | **GET** /api/v2/alerting/interactionstats/alerts/unread | Gets user unread count of interaction stats alerts. |
@@ -144,6 +145,61 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getalertingalertsactive"></a>
+
+## [**ActiveAlertCount**](ActiveAlertCount.html) GetAlertingAlertsActive ()
+
+Gets active alert count for a user.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAlertingAlertsActiveExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AlertingApi();
+            
+
+            try
+            {
+                
+                // Gets active alert count for a user.
+                
+                ActiveAlertCount result = apiInstance.GetAlertingAlertsActive();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AlertingApi.GetAlertingAlertsActive: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**ActiveAlertCount**](ActiveAlertCount.html)
 
 <a name="getalertinginteractionstatsalert"></a>
 
