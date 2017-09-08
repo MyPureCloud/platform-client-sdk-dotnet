@@ -1171,7 +1171,7 @@ This endpoint does require any parameters.
 
 <a name="getconversationscallshistory"></a>
 
-## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null)
+## [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null)
 
 Get call history
 
@@ -1219,7 +1219,7 @@ namespace Example
                 
                 // Get call history
                 
-                CallConversationEntityListing result = apiInstance.GetConversationsCallsHistory(pageSize, pageNumber, interval);
+                CallHistoryConversationEntityListing result = apiInstance.GetConversationsCallsHistory(pageSize, pageNumber, interval);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1243,7 +1243,7 @@ namespace Example
 
 ### Return type
 
-[**CallConversationEntityListing**](CallConversationEntityListing.html)
+[**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html)
 
 <a name="getconversationscallsmaximumconferenceparties"></a>
 

@@ -20,6 +20,12 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets NodeType
         /// </summary>
@@ -151,17 +157,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// Gets or Sets NodeType
         /// </summary>
         [DataMember(Name="nodeType", EmitDefaultValue=false)]
         public NodeTypeEnum? NodeType { get; set; }
-        
-        
-        
-        
         
         
         
@@ -206,6 +206,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
+        /// <param name="Array">Array.</param>
+        
+        
+        
+        /// <param name="_Null">_Null.</param>
+        
+        
+        
         /// <param name="NodeType">NodeType.</param>
         
         
@@ -226,11 +234,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="MissingNode">MissingNode.</param>
+        /// <param name="ValueNode">ValueNode.</param>
         
         
         
         /// <param name="ContainerNode">ContainerNode.</param>
+        
+        
+        
+        /// <param name="MissingNode">MissingNode.</param>
         
         
         
@@ -277,19 +289,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Binary">Binary.</param>
         
         
-        
-        /// <param name="ValueNode">ValueNode.</param>
-        
-        
-        
-        /// <param name="Array">Array.</param>
-        
-        
-        
-        /// <param name="_Null">_Null.</param>
-        
-        
-        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Float = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? MissingNode = null, bool? ContainerNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? ValueNode = null, bool? Array = null, bool? _Null = null)
+        public JsonNode(bool? Array = null, bool? _Null = null, NodeTypeEnum? NodeType = null, bool? _Float = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? ValueNode = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null)
         {
             
             
@@ -381,6 +381,24 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+this.Array = Array;
+            
+            
+            
+            
+            
+            
+            
+            
+this._Null = _Null;
+            
+            
+            
+            
+            
+            
+            
+            
 this.NodeType = NodeType;
             
             
@@ -426,7 +444,7 @@ this.Number = Number;
             
             
             
-this.MissingNode = MissingNode;
+this.ValueNode = ValueNode;
             
             
             
@@ -436,6 +454,15 @@ this.MissingNode = MissingNode;
             
             
 this.ContainerNode = ContainerNode;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MissingNode = MissingNode;
             
             
             
@@ -539,34 +566,23 @@ this.Binary = Binary;
             
             
             
-            
-            
-            
-            
-this.ValueNode = ValueNode;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Array = Array;
-            
-            
-            
-            
-            
-            
-            
-            
-this._Null = _Null;
-            
-            
-            
-            
         }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Array
+        /// </summary>
+        [DataMember(Name="array", EmitDefaultValue=false)]
+        public bool? Array { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets _Null
+        /// </summary>
+        [DataMember(Name="null", EmitDefaultValue=false)]
+        public bool? _Null { get; set; }
         
         
         
@@ -605,10 +621,10 @@ this._Null = _Null;
         
         
         /// <summary>
-        /// Gets or Sets MissingNode
+        /// Gets or Sets ValueNode
         /// </summary>
-        [DataMember(Name="missingNode", EmitDefaultValue=false)]
-        public bool? MissingNode { get; set; }
+        [DataMember(Name="valueNode", EmitDefaultValue=false)]
+        public bool? ValueNode { get; set; }
         
         
         
@@ -617,6 +633,14 @@ this._Null = _Null;
         /// </summary>
         [DataMember(Name="containerNode", EmitDefaultValue=false)]
         public bool? ContainerNode { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MissingNode
+        /// </summary>
+        [DataMember(Name="missingNode", EmitDefaultValue=false)]
+        public bool? MissingNode { get; set; }
         
         
         
@@ -707,30 +731,6 @@ this._Null = _Null;
         public bool? Binary { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets ValueNode
-        /// </summary>
-        [DataMember(Name="valueNode", EmitDefaultValue=false)]
-        public bool? ValueNode { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Array
-        /// </summary>
-        [DataMember(Name="array", EmitDefaultValue=false)]
-        public bool? Array { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets _Null
-        /// </summary>
-        [DataMember(Name="null", EmitDefaultValue=false)]
-        public bool? _Null { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -739,6 +739,10 @@ this._Null = _Null;
         {
             var sb = new StringBuilder();
             sb.Append("class JsonNode {\n");
+            
+            sb.Append("  Array: ").Append(Array).Append("\n");
+            
+            sb.Append("  _Null: ").Append(_Null).Append("\n");
             
             sb.Append("  NodeType: ").Append(NodeType).Append("\n");
             
@@ -750,9 +754,11 @@ this._Null = _Null;
             
             sb.Append("  Number: ").Append(Number).Append("\n");
             
-            sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
+            sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
             
             sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
+            
+            sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
             
             sb.Append("  Pojo: ").Append(Pojo).Append("\n");
             
@@ -775,12 +781,6 @@ this._Null = _Null;
             sb.Append("  Textual: ").Append(Textual).Append("\n");
             
             sb.Append("  Binary: ").Append(Binary).Append("\n");
-            
-            sb.Append("  ValueNode: ").Append(ValueNode).Append("\n");
-            
-            sb.Append("  Array: ").Append(Array).Append("\n");
-            
-            sb.Append("  _Null: ").Append(_Null).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -819,6 +819,16 @@ this._Null = _Null;
 
             return true &&
                 (
+                    this.Array == other.Array ||
+                    this.Array != null &&
+                    this.Array.Equals(other.Array)
+                ) &&
+                (
+                    this._Null == other._Null ||
+                    this._Null != null &&
+                    this._Null.Equals(other._Null)
+                ) &&
+                (
                     this.NodeType == other.NodeType ||
                     this.NodeType != null &&
                     this.NodeType.Equals(other.NodeType)
@@ -844,14 +854,19 @@ this._Null = _Null;
                     this.Number.Equals(other.Number)
                 ) &&
                 (
-                    this.MissingNode == other.MissingNode ||
-                    this.MissingNode != null &&
-                    this.MissingNode.Equals(other.MissingNode)
+                    this.ValueNode == other.ValueNode ||
+                    this.ValueNode != null &&
+                    this.ValueNode.Equals(other.ValueNode)
                 ) &&
                 (
                     this.ContainerNode == other.ContainerNode ||
                     this.ContainerNode != null &&
                     this.ContainerNode.Equals(other.ContainerNode)
+                ) &&
+                (
+                    this.MissingNode == other.MissingNode ||
+                    this.MissingNode != null &&
+                    this.MissingNode.Equals(other.MissingNode)
                 ) &&
                 (
                     this.Pojo == other.Pojo ||
@@ -907,21 +922,6 @@ this._Null = _Null;
                     this.Binary == other.Binary ||
                     this.Binary != null &&
                     this.Binary.Equals(other.Binary)
-                ) &&
-                (
-                    this.ValueNode == other.ValueNode ||
-                    this.ValueNode != null &&
-                    this.ValueNode.Equals(other.ValueNode)
-                ) &&
-                (
-                    this.Array == other.Array ||
-                    this.Array != null &&
-                    this.Array.Equals(other.Array)
-                ) &&
-                (
-                    this._Null == other._Null ||
-                    this._Null != null &&
-                    this._Null.Equals(other._Null)
                 );
         }
 
@@ -936,6 +936,12 @@ this._Null = _Null;
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Array != null)
+                    hash = hash * 59 + this.Array.GetHashCode();
+                
+                if (this._Null != null)
+                    hash = hash * 59 + this._Null.GetHashCode();
                 
                 if (this.NodeType != null)
                     hash = hash * 59 + this.NodeType.GetHashCode();
@@ -952,11 +958,14 @@ this._Null = _Null;
                 if (this.Number != null)
                     hash = hash * 59 + this.Number.GetHashCode();
                 
-                if (this.MissingNode != null)
-                    hash = hash * 59 + this.MissingNode.GetHashCode();
+                if (this.ValueNode != null)
+                    hash = hash * 59 + this.ValueNode.GetHashCode();
                 
                 if (this.ContainerNode != null)
                     hash = hash * 59 + this.ContainerNode.GetHashCode();
+                
+                if (this.MissingNode != null)
+                    hash = hash * 59 + this.MissingNode.GetHashCode();
                 
                 if (this.Pojo != null)
                     hash = hash * 59 + this.Pojo.GetHashCode();
@@ -990,15 +999,6 @@ this._Null = _Null;
                 
                 if (this.Binary != null)
                     hash = hash * 59 + this.Binary.GetHashCode();
-                
-                if (this.ValueNode != null)
-                    hash = hash * 59 + this.ValueNode.GetHashCode();
-                
-                if (this.Array != null)
-                    hash = hash * 59 + this.Array.GetHashCode();
-                
-                if (this._Null != null)
-                    hash = hash * 59 + this._Null.GetHashCode();
                 
                 return hash;
             }

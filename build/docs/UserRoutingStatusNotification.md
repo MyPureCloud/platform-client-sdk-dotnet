@@ -8,6 +8,7 @@ title: UserRoutingStatusNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **RoutingStatus** | [**UserRoutingStatusNotificationRoutingStatus**](UserRoutingStatusNotificationRoutingStatus.html) |  | [optional] |
+| **ErrorInfo** | [**UserRoutingStatusNotificationErrorInfo**](UserRoutingStatusNotificationErrorInfo.html) |  | [optional] |
 {: class="table table-striped"}
 
 

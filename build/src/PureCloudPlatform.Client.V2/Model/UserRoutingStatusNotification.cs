@@ -25,6 +25,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserRoutingStatusNotification" /> class.
@@ -34,8 +39,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingStatus">RoutingStatus.</param>
         
         
-        public UserRoutingStatusNotification(UserRoutingStatusNotificationRoutingStatus RoutingStatus = null)
+        
+        /// <param name="ErrorInfo">ErrorInfo.</param>
+        
+        
+        public UserRoutingStatusNotification(UserRoutingStatusNotificationRoutingStatus RoutingStatus = null, UserRoutingStatusNotificationErrorInfo ErrorInfo = null)
         {
+            
+            
+            
+            
             
             
             
@@ -51,6 +64,15 @@ this.RoutingStatus = RoutingStatus;
             
             
             
+            
+            
+            
+            
+this.ErrorInfo = ErrorInfo;
+            
+            
+            
+            
         }
         
         
@@ -60,6 +82,14 @@ this.RoutingStatus = RoutingStatus;
         /// </summary>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
         public UserRoutingStatusNotificationRoutingStatus RoutingStatus { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ErrorInfo
+        /// </summary>
+        [DataMember(Name="errorInfo", EmitDefaultValue=false)]
+        public UserRoutingStatusNotificationErrorInfo ErrorInfo { get; set; }
         
         
         /// <summary>
@@ -72,6 +102,8 @@ this.RoutingStatus = RoutingStatus;
             sb.Append("class UserRoutingStatusNotification {\n");
             
             sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            
+            sb.Append("  ErrorInfo: ").Append(ErrorInfo).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -113,6 +145,11 @@ this.RoutingStatus = RoutingStatus;
                     this.RoutingStatus == other.RoutingStatus ||
                     this.RoutingStatus != null &&
                     this.RoutingStatus.Equals(other.RoutingStatus)
+                ) &&
+                (
+                    this.ErrorInfo == other.ErrorInfo ||
+                    this.ErrorInfo != null &&
+                    this.ErrorInfo.Equals(other.ErrorInfo)
                 );
         }
 
@@ -130,6 +167,9 @@ this.RoutingStatus = RoutingStatus;
                 
                 if (this.RoutingStatus != null)
                     hash = hash * 59 + this.RoutingStatus.GetHashCode();
+                
+                if (this.ErrorInfo != null)
+                    hash = hash * 59 + this.ErrorInfo.GetHashCode();
                 
                 return hash;
             }

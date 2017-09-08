@@ -400,8 +400,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        CallConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null);
+        /// <returns>CallHistoryConversationEntityListing</returns>
+        CallHistoryConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null);
 
         /// <summary>
         /// Get call history
@@ -413,8 +413,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        ApiResponse<CallConversationEntityListing> GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null);
+        /// <returns>ApiResponse of CallHistoryConversationEntityListing</returns>
+        ApiResponse<CallHistoryConversationEntityListing> GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null);
         
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -2324,8 +2324,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        System.Threading.Tasks.Task<CallConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null);
+        /// <returns>Task of CallHistoryConversationEntityListing</returns>
+        System.Threading.Tasks.Task<CallHistoryConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null);
 
         /// <summary>
         /// Get call history
@@ -2337,8 +2337,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null);
+        /// <returns>Task of ApiResponse (CallHistoryConversationEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CallHistoryConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null);
         
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -7124,10 +7124,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>CallConversationEntityListing</returns>
-        public CallConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null)
+        /// <returns>CallHistoryConversationEntityListing</returns>
+        public CallHistoryConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null)
         {
-             ApiResponse<CallConversationEntityListing> localVarResponse = GetConversationsCallsHistoryWithHttpInfo(pageSize, pageNumber, interval);
+             ApiResponse<CallHistoryConversationEntityListing> localVarResponse = GetConversationsCallsHistoryWithHttpInfo(pageSize, pageNumber, interval);
              return localVarResponse.Data;
         }
 
@@ -7138,8 +7138,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>ApiResponse of CallConversationEntityListing</returns>
-        public ApiResponse< CallConversationEntityListing > GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null)
+        /// <returns>ApiResponse of CallHistoryConversationEntityListing</returns>
+        public ApiResponse< CallHistoryConversationEntityListing > GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null)
         { 
 
             var localVarPath = "/api/v2/conversations/calls/history";
@@ -7207,9 +7207,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallsHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+            return new ApiResponse<CallHistoryConversationEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+                (CallHistoryConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallHistoryConversationEntityListing)));
             
         }
 
@@ -7221,10 +7221,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>Task of CallConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CallConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null)
+        /// <returns>Task of CallHistoryConversationEntityListing</returns>
+        public async System.Threading.Tasks.Task<CallHistoryConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null)
         {
-             ApiResponse<CallConversationEntityListing> localVarResponse = await GetConversationsCallsHistoryAsyncWithHttpInfo(pageSize, pageNumber, interval);
+             ApiResponse<CallHistoryConversationEntityListing> localVarResponse = await GetConversationsCallsHistoryAsyncWithHttpInfo(pageSize, pageNumber, interval);
              return localVarResponse.Data;
 
         }
@@ -7236,8 +7236,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
-        /// <returns>Task of ApiResponse (CallConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null)
+        /// <returns>Task of ApiResponse (CallHistoryConversationEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CallHistoryConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null)
         { 
 
             var localVarPath = "/api/v2/conversations/calls/history";
@@ -7305,9 +7305,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallsHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CallConversationEntityListing>(localVarStatusCode,
+            return new ApiResponse<CallHistoryConversationEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (CallConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallConversationEntityListing)));
+                (CallHistoryConversationEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallHistoryConversationEntityListing)));
             
         }
 
