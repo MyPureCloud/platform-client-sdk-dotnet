@@ -69,6 +69,16 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         }
 
         /// <summary>
+        /// Adds a list of subsciptions to the specified topic. Events received on this topic will be cast to the given type.
+        /// </summary>
+        /// <param name="subscriptions">A List of Tuples where the first value is the notification topic to add and the second is the Type that should be used when deserializing the notification</param>
+        public void AddSubscriptions(List<Tuple<string, Type>> subscriptions) {
+            var topicList = subscriptions.Select(s => new ChannelTopic(s.Item1)).ToList();
+            _notificationsApi.PostNotificationsChannelSubscriptions(Channel.Id, topicList);
+            subscriptions.ForEach(s => _typeMap.Add(s.Item1.ToLowerInvariant(), s.Item2));
+        }
+
+        /// <summary>
         /// Removes the subscribed topic
         /// </summary>
         /// <param name="topic">The notification topic to remove</param>
