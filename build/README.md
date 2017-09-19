@@ -159,7 +159,7 @@ Add a subscription:
 handler.AddSubscription($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification));
 
 // Multiple
-var List<Tuple<string, Type>> subscriptions = new List<Tuple<string, Type>>();
+var subscriptions = new List<Tuple<string, Type>>();
 subscriptions.Add(new Tuple($"v2.users.{_me.Id}.presence", typeof(UserPresenceNotification)));
 subscriptions.Add(new Tuple($"v2.users.{_me.Id}.routingStatus", typeof(UserRoutingStatusNotification)));
 handler.AddSubscriptions(subscriptions);
