@@ -82,9 +82,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The conversation's state.  Values can be: 'disconnected'
+        /// The conversation's state
         /// </summary>
-        /// <value>The conversation's state.  Values can be: 'disconnected'</value>
+        /// <value>The conversation's state</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -196,9 +196,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The conversation's state.  Values can be: 'disconnected'
+        /// The conversation's state
         /// </summary>
-        /// <value>The conversation's state.  Values can be: 'disconnected'</value>
+        /// <value>The conversation's state</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="State">The conversation&#39;s state.  Values can be: &#39;disconnected&#39;.</param>
+        /// <param name="State">The conversation&#39;s state.</param>
         
         
         

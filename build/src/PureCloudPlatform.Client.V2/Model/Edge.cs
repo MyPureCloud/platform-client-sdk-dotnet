@@ -45,8 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
+        /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -132,8 +133,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StatusCode
+        /// The current status of the Edge.
         /// </summary>
+        /// <value>The current status of the Edge.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusCodeEnum
         {
@@ -386,8 +388,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
+        /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -428,8 +431,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets StatusCode
+        /// The current status of the Edge.
         /// </summary>
+        /// <value>The current status of the Edge.</value>
         [DataMember(Name="statusCode", EmitDefaultValue=false)]
         public StatusCodeEnum? StatusCode { get; set; }
         
@@ -498,39 +502,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Description">Description.</param>
+        /// <param name="Description">The resource&#39;s description..</param>
         
         
         
-        /// <param name="Version">Version.</param>
+        /// <param name="Version">The current version of the resource..</param>
         
         
         
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
         
         
         
-        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="CreatedBy">The ID of the user that created the resource..</param>
         
         
         
-        /// <param name="State">State.</param>
+        
+        
+        /// <param name="ModifiedByApp">The application that last modified the resource..</param>
         
         
         
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        
-        
-        
-        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="CreatedByApp">The application that created the resource..</param>
         
         
         
@@ -594,7 +596,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="StatusCode">StatusCode.</param>
+        /// <param name="StatusCode">The current status of the Edge..</param>
         
         
         
@@ -647,7 +649,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null, string Proxy = null)
+        public Edge(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<EdgeInterface> Interfaces = null, string Make = null, string Model = null, string ApiVersion = null, string SoftwareVersion = null, string SoftwareVersionTimestamp = null, string SoftwareVersionPlatform = null, string SoftwareVersionConfiguration = null, string FullSoftwareVersion = null, string PairingId = null, string Fingerprint = null, string FingerprintHint = null, string CurrentVersion = null, string StagedVersion = null, string Patch = null, StatusCodeEnum? StatusCode = null, EdgeGroup EdgeGroup = null, Site Site = null, DomainEdgeSoftwareUpdateDto SoftwareStatus = null, OnlineStatusEnum? OnlineStatus = null, string SerialNumber = null, bool? PhysicalEdge = null, bool? Managed = null, EdgeDeploymentTypeEnum? EdgeDeploymentType = null, CallDrainingStateEnum? CallDrainingState = null, int? ConversationCount = null, string Proxy = null)
         {
             
             
@@ -663,8 +665,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
-            
-            
             
             
             
@@ -875,13 +875,6 @@ this.ModifiedBy = ModifiedBy;
 this.CreatedBy = CreatedBy;
             
             
-            
-            
-            
-            
-            
-            
-this.State = State;
             
             
             
@@ -1176,50 +1169,54 @@ this.Proxy = Proxy;
         
         
         /// <summary>
-        /// Gets or Sets Description
+        /// The resource&#39;s description.
         /// </summary>
+        /// <value>The resource&#39;s description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Version
+        /// The current version of the resource.
         /// </summary>
+        /// <value>The current version of the resource.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ModifiedBy
+        /// The ID of the user that last modified the resource.
         /// </summary>
+        /// <value>The ID of the user that last modified the resource.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CreatedBy
+        /// The ID of the user that created the resource.
         /// </summary>
+        /// <value>The ID of the user that created the resource.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
         
@@ -1228,16 +1225,18 @@ this.Proxy = Proxy;
         
         
         /// <summary>
-        /// Gets or Sets ModifiedByApp
+        /// The application that last modified the resource.
         /// </summary>
+        /// <value>The application that last modified the resource.</value>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CreatedByApp
+        /// The application that created the resource.
         /// </summary>
+        /// <value>The application that created the resource.</value>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         

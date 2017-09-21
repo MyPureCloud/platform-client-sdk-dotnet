@@ -21,8 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MediaType
+        /// The session media type
         /// </summary>
+        /// <value>The session media type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum MediaTypeEnum
         {
@@ -93,8 +94,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Direction
+        /// Direction
         /// </summary>
+        /// <value>Direction</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
@@ -117,6 +119,82 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "outbound")]
             Outbound
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// (Dialer) Result of the analysis (for example disposition.classification.callable.machine) 
+        /// </summary>
+        /// <value>(Dialer) Result of the analysis (for example disposition.classification.callable.machine) </value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DispositionNameEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Disconnect for "disconnect"
+            /// </summary>
+            [EnumMember(Value = "disconnect")]
+            Disconnect,
+            
+            /// <summary>
+            /// Enum Person for "person"
+            /// </summary>
+            [EnumMember(Value = "person")]
+            Person,
+            
+            /// <summary>
+            /// Enum Busy for "busy"
+            /// </summary>
+            [EnumMember(Value = "busy")]
+            Busy,
+            
+            /// <summary>
+            /// Enum Machine for "machine"
+            /// </summary>
+            [EnumMember(Value = "machine")]
+            Machine,
+            
+            /// <summary>
+            /// Enum Noanswer for "noanswer"
+            /// </summary>
+            [EnumMember(Value = "noanswer")]
+            Noanswer,
+            
+            /// <summary>
+            /// Enum Fax for "fax"
+            /// </summary>
+            [EnumMember(Value = "fax")]
+            Fax,
+            
+            /// <summary>
+            /// Enum Sit for "sit"
+            /// </summary>
+            [EnumMember(Value = "sit")]
+            Sit
         }
         
         
@@ -183,27 +261,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         /// <summary>
-        /// Gets or Sets MediaType
+        /// The session media type
         /// </summary>
+        /// <value>The session media type</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
         
@@ -218,8 +279,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Direction
+        /// Direction
         /// </summary>
+        /// <value>Direction</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         
@@ -234,6 +296,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        /// <summary>
+        /// (Dialer) Result of the analysis (for example disposition.classification.callable.machine) 
+        /// </summary>
+        /// <value>(Dialer) Result of the analysis (for example disposition.classification.callable.machine) </value>
+        [DataMember(Name="dispositionName", EmitDefaultValue=false)]
+        public DispositionNameEnum? DispositionName { get; set; }
         
         
         
@@ -282,11 +351,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="MediaType">MediaType.</param>
+        /// <param name="MediaType">The session media type.</param>
         
         
         
-        /// <param name="SessionId">SessionId.</param>
+        /// <param name="SessionId">The unique identifier of this session.</param>
         
         
         
@@ -298,7 +367,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Ani">Ani.</param>
+        /// <param name="Ani">Automatic Number Identification (caller&#39;s number).</param>
         
         
         
@@ -306,31 +375,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Dnis">Dnis.</param>
+        /// <param name="Dnis">Automatic Number Identification (caller&#39;s number).</param>
         
         
         
-        /// <param name="OutboundCampaignId">OutboundCampaignId.</param>
+        /// <param name="OutboundCampaignId">(Dialer) Unique identifier of the outbound campaign.</param>
         
         
         
-        /// <param name="OutboundContactId">OutboundContactId.</param>
+        /// <param name="OutboundContactId">(Dialer) Unique identifier of the contact.</param>
         
         
         
-        /// <param name="OutboundContactListId">OutboundContactListId.</param>
+        /// <param name="OutboundContactListId">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
         
         
         
-        /// <param name="DispositionAnalyzer">DispositionAnalyzer.</param>
+        /// <param name="DispositionAnalyzer">(Dialer) Unique identifier of the contact list that this contact belongs to.</param>
         
         
         
-        /// <param name="DispositionName">DispositionName.</param>
+        /// <param name="DispositionName">(Dialer) Result of the analysis (for example disposition.classification.callable.machine) .</param>
         
         
         
-        /// <param name="EdgeId">EdgeId.</param>
+        /// <param name="EdgeId">Unique identifier of the edge device.</param>
         
         
         
@@ -338,11 +407,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="RoomId">RoomId.</param>
+        /// <param name="RoomId">Unique identifier for the room.</param>
         
         
         
-        /// <param name="MonitoredSessionId">MonitoredSessionId.</param>
+        /// <param name="MonitoredSessionId">The sessionID being monitored.</param>
         
         
         
@@ -350,35 +419,35 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="CallbackUserName">CallbackUserName.</param>
+        /// <param name="CallbackUserName">The name of the user requesting a call back.</param>
         
         
         
-        /// <param name="CallbackNumbers">CallbackNumbers.</param>
+        /// <param name="CallbackNumbers">List of numbers to callback.</param>
         
         
         
-        /// <param name="CallbackScheduledTime">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="CallbackScheduledTime">Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="ScriptId">ScriptId.</param>
+        /// <param name="ScriptId">Scheduled callback date/time, Date time is represented as an ISO-8601 string. .</param>
         
         
         
-        /// <param name="SkipEnabled">SkipEnabled.</param>
+        /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
         
         
         
-        /// <param name="TimeoutSeconds">TimeoutSeconds.</param>
+        /// <param name="TimeoutSeconds">The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling.</param>
         
         
         
-        /// <param name="CobrowseRole">CobrowseRole.</param>
+        /// <param name="CobrowseRole">Describe side of the cobrowse (sharer or viewer).</param>
         
         
         
-        /// <param name="CobrowseRoomId">CobrowseRoomId.</param>
+        /// <param name="CobrowseRoomId">A unique identifier for a PureCloud Cobrowse room..</param>
         
         
         
@@ -386,30 +455,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ScreenShareAddressSelf">ScreenShareAddressSelf.</param>
+        /// <param name="ScreenShareAddressSelf">Direct ScreenShare address.</param>
         
         
         
-        /// <param name="SharingScreen">SharingScreen.</param>
+        /// <param name="SharingScreen">Flag determining if screenShare is started or not (true/false).</param>
         
         
         
-        /// <param name="ScreenShareRoomId">ScreenShareRoomId.</param>
+        /// <param name="ScreenShareRoomId">A unique identifier for a PureCloud ScreenShare room..</param>
         
         
         
-        /// <param name="VideoRoomId">VideoRoomId.</param>
+        /// <param name="VideoRoomId">A unique identifier for a PureCloud video room..</param>
         
         
         
-        /// <param name="VideoAddressSelf">VideoAddressSelf.</param>
+        /// <param name="VideoAddressSelf">Direct Video address.</param>
         
         
         
-        /// <param name="Segments">Segments.</param>
+        /// <param name="Segments">List of segments for this session.</param>
         
         
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
         {
             
             
@@ -836,8 +905,9 @@ this.Segments = Segments;
         
         
         /// <summary>
-        /// Gets or Sets SessionId
+        /// The unique identifier of this session
         /// </summary>
+        /// <value>The unique identifier of this session</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
         
@@ -860,8 +930,9 @@ this.Segments = Segments;
         
         
         /// <summary>
-        /// Gets or Sets Ani
+        /// Automatic Number Identification (caller&#39;s number)
         /// </summary>
+        /// <value>Automatic Number Identification (caller&#39;s number)</value>
         [DataMember(Name="ani", EmitDefaultValue=false)]
         public string Ani { get; set; }
         
@@ -870,56 +941,56 @@ this.Segments = Segments;
         
         
         /// <summary>
-        /// Gets or Sets Dnis
+        /// Automatic Number Identification (caller&#39;s number)
         /// </summary>
+        /// <value>Automatic Number Identification (caller&#39;s number)</value>
         [DataMember(Name="dnis", EmitDefaultValue=false)]
         public string Dnis { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets OutboundCampaignId
+        /// (Dialer) Unique identifier of the outbound campaign
         /// </summary>
+        /// <value>(Dialer) Unique identifier of the outbound campaign</value>
         [DataMember(Name="outboundCampaignId", EmitDefaultValue=false)]
         public string OutboundCampaignId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets OutboundContactId
+        /// (Dialer) Unique identifier of the contact
         /// </summary>
+        /// <value>(Dialer) Unique identifier of the contact</value>
         [DataMember(Name="outboundContactId", EmitDefaultValue=false)]
         public string OutboundContactId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets OutboundContactListId
+        /// (Dialer) Unique identifier of the contact list that this contact belongs to
         /// </summary>
+        /// <value>(Dialer) Unique identifier of the contact list that this contact belongs to</value>
         [DataMember(Name="outboundContactListId", EmitDefaultValue=false)]
         public string OutboundContactListId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets DispositionAnalyzer
+        /// (Dialer) Unique identifier of the contact list that this contact belongs to
         /// </summary>
+        /// <value>(Dialer) Unique identifier of the contact list that this contact belongs to</value>
         [DataMember(Name="dispositionAnalyzer", EmitDefaultValue=false)]
         public string DispositionAnalyzer { get; set; }
         
         
         
-        /// <summary>
-        /// Gets or Sets DispositionName
-        /// </summary>
-        [DataMember(Name="dispositionName", EmitDefaultValue=false)]
-        public string DispositionName { get; set; }
-        
         
         
         /// <summary>
-        /// Gets or Sets EdgeId
+        /// Unique identifier of the edge device
         /// </summary>
+        /// <value>Unique identifier of the edge device</value>
         [DataMember(Name="edgeId", EmitDefaultValue=false)]
         public string EdgeId { get; set; }
         
@@ -934,16 +1005,18 @@ this.Segments = Segments;
         
         
         /// <summary>
-        /// Gets or Sets RoomId
+        /// Unique identifier for the room
         /// </summary>
+        /// <value>Unique identifier for the room</value>
         [DataMember(Name="roomId", EmitDefaultValue=false)]
         public string RoomId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MonitoredSessionId
+        /// The sessionID being monitored
         /// </summary>
+        /// <value>The sessionID being monitored</value>
         [DataMember(Name="monitoredSessionId", EmitDefaultValue=false)]
         public string MonitoredSessionId { get; set; }
         
@@ -958,65 +1031,72 @@ this.Segments = Segments;
         
         
         /// <summary>
-        /// Gets or Sets CallbackUserName
+        /// The name of the user requesting a call back
         /// </summary>
+        /// <value>The name of the user requesting a call back</value>
         [DataMember(Name="callbackUserName", EmitDefaultValue=false)]
         public string CallbackUserName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CallbackNumbers
+        /// List of numbers to callback
         /// </summary>
+        /// <value>List of numbers to callback</value>
         [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
         public List<string> CallbackNumbers { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="callbackScheduledTime", EmitDefaultValue=false)]
         public DateTime? CallbackScheduledTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ScriptId
+        /// Scheduled callback date/time, Date time is represented as an ISO-8601 string. 
         /// </summary>
+        /// <value>Scheduled callback date/time, Date time is represented as an ISO-8601 string. </value>
         [DataMember(Name="scriptId", EmitDefaultValue=false)]
         public string ScriptId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets SkipEnabled
+        /// (Dialer) Whether the agent can skip the dialer contact
         /// </summary>
+        /// <value>(Dialer) Whether the agent can skip the dialer contact</value>
         [DataMember(Name="skipEnabled", EmitDefaultValue=false)]
         public bool? SkipEnabled { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets TimeoutSeconds
+        /// The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling
         /// </summary>
+        /// <value>The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling</value>
         [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
         public int? TimeoutSeconds { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CobrowseRole
+        /// Describe side of the cobrowse (sharer or viewer)
         /// </summary>
+        /// <value>Describe side of the cobrowse (sharer or viewer)</value>
         [DataMember(Name="cobrowseRole", EmitDefaultValue=false)]
         public string CobrowseRole { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CobrowseRoomId
+        /// A unique identifier for a PureCloud Cobrowse room.
         /// </summary>
+        /// <value>A unique identifier for a PureCloud Cobrowse room.</value>
         [DataMember(Name="cobrowseRoomId", EmitDefaultValue=false)]
         public string CobrowseRoomId { get; set; }
         
@@ -1031,48 +1111,54 @@ this.Segments = Segments;
         
         
         /// <summary>
-        /// Gets or Sets ScreenShareAddressSelf
+        /// Direct ScreenShare address
         /// </summary>
+        /// <value>Direct ScreenShare address</value>
         [DataMember(Name="screenShareAddressSelf", EmitDefaultValue=false)]
         public string ScreenShareAddressSelf { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets SharingScreen
+        /// Flag determining if screenShare is started or not (true/false)
         /// </summary>
+        /// <value>Flag determining if screenShare is started or not (true/false)</value>
         [DataMember(Name="sharingScreen", EmitDefaultValue=false)]
         public bool? SharingScreen { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ScreenShareRoomId
+        /// A unique identifier for a PureCloud ScreenShare room.
         /// </summary>
+        /// <value>A unique identifier for a PureCloud ScreenShare room.</value>
         [DataMember(Name="screenShareRoomId", EmitDefaultValue=false)]
         public string ScreenShareRoomId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets VideoRoomId
+        /// A unique identifier for a PureCloud video room.
         /// </summary>
+        /// <value>A unique identifier for a PureCloud video room.</value>
         [DataMember(Name="videoRoomId", EmitDefaultValue=false)]
         public string VideoRoomId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets VideoAddressSelf
+        /// Direct Video address
         /// </summary>
+        /// <value>Direct Video address</value>
         [DataMember(Name="videoAddressSelf", EmitDefaultValue=false)]
         public string VideoAddressSelf { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Segments
+        /// List of segments for this session
         /// </summary>
+        /// <value>List of segments for this session</value>
         [DataMember(Name="segments", EmitDefaultValue=false)]
         public List<AnalyticsConversationSegment> Segments { get; set; }
         

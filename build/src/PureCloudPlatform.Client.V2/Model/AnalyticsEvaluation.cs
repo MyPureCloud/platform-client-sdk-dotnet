@@ -76,43 +76,43 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="EvaluationId">EvaluationId.</param>
+        /// <param name="EvaluationId">Unique identifier for the evaluation.</param>
         
         
         
-        /// <param name="EvaluatorId">EvaluatorId.</param>
+        /// <param name="EvaluatorId">A unique identifier of the PureCloud user who evaluated the interaction.</param>
         
         
         
-        /// <param name="UserId">UserId.</param>
+        /// <param name="UserId">Unique identifier for the user being evaluated.</param>
         
         
         
-        /// <param name="EventTime">EventTime.</param>
+        /// <param name="EventTime">Specifies when an evaluation occurred.</param>
         
         
         
-        /// <param name="QueueId">QueueId.</param>
+        /// <param name="QueueId">Unique identifier for the queue the conversation was on.</param>
         
         
         
-        /// <param name="FormId">FormId.</param>
+        /// <param name="FormId">Unique identifier for the form used to evaluate the conversation/agent.</param>
         
         
         
-        /// <param name="ContextId">ContextId.</param>
+        /// <param name="ContextId">A unique identifier for an evaluation form, regardless of version.</param>
         
         
         
-        /// <param name="FormName">FormName.</param>
+        /// <param name="FormName">Name of the evaluation form.</param>
         
         
         
-        /// <param name="GetoTotalScore">GetoTotalScore.</param>
+        /// <param name="GetoTotalScore">The total evaluation for interactions.</param>
         
         
         
-        /// <param name="GetoTotalCriticalScore">GetoTotalCriticalScore.</param>
+        /// <param name="GetoTotalCriticalScore">The score for critical evaluation questions.</param>
         
         
         public AnalyticsEvaluation(string EvaluationId = null, string EvaluatorId = null, string UserId = null, string EventTime = null, string QueueId = null, string FormId = null, string ContextId = null, string FormName = null, long? GetoTotalScore = null, long? GetoTotalCriticalScore = null)
@@ -254,80 +254,90 @@ this.GetoTotalCriticalScore = GetoTotalCriticalScore;
         
         
         /// <summary>
-        /// Gets or Sets EvaluationId
+        /// Unique identifier for the evaluation
         /// </summary>
+        /// <value>Unique identifier for the evaluation</value>
         [DataMember(Name="evaluationId", EmitDefaultValue=false)]
         public string EvaluationId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EvaluatorId
+        /// A unique identifier of the PureCloud user who evaluated the interaction
         /// </summary>
+        /// <value>A unique identifier of the PureCloud user who evaluated the interaction</value>
         [DataMember(Name="evaluatorId", EmitDefaultValue=false)]
         public string EvaluatorId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets UserId
+        /// Unique identifier for the user being evaluated
         /// </summary>
+        /// <value>Unique identifier for the user being evaluated</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets EventTime
+        /// Specifies when an evaluation occurred
         /// </summary>
+        /// <value>Specifies when an evaluation occurred</value>
         [DataMember(Name="eventTime", EmitDefaultValue=false)]
         public string EventTime { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets QueueId
+        /// Unique identifier for the queue the conversation was on
         /// </summary>
+        /// <value>Unique identifier for the queue the conversation was on</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FormId
+        /// Unique identifier for the form used to evaluate the conversation/agent
         /// </summary>
+        /// <value>Unique identifier for the form used to evaluate the conversation/agent</value>
         [DataMember(Name="formId", EmitDefaultValue=false)]
         public string FormId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContextId
+        /// A unique identifier for an evaluation form, regardless of version
         /// </summary>
+        /// <value>A unique identifier for an evaluation form, regardless of version</value>
         [DataMember(Name="contextId", EmitDefaultValue=false)]
         public string ContextId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets FormName
+        /// Name of the evaluation form
         /// </summary>
+        /// <value>Name of the evaluation form</value>
         [DataMember(Name="formName", EmitDefaultValue=false)]
         public string FormName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets GetoTotalScore
+        /// The total evaluation for interactions
         /// </summary>
+        /// <value>The total evaluation for interactions</value>
         [DataMember(Name="getoTotalScore", EmitDefaultValue=false)]
         public long? GetoTotalScore { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets GetoTotalCriticalScore
+        /// The score for critical evaluation questions
         /// </summary>
+        /// <value>The score for critical evaluation questions</value>
         [DataMember(Name="getoTotalCriticalScore", EmitDefaultValue=false)]
         public long? GetoTotalCriticalScore { get; set; }
         

@@ -51,23 +51,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="ConversationId">Unique identifier for the conversation.</param>
         
         
         
-        /// <param name="ConversationStart">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConversationStart">Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="ConversationEnd">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="ConversationEnd">Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="Participants">Participants.</param>
+        /// <param name="Participants">Participants in the conversation.</param>
         
         
         
-        /// <param name="Evaluations">Evaluations.</param>
+        /// <param name="Evaluations">Evaluations tied to this conersation.</param>
         
         
         public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null)
@@ -144,42 +144,45 @@ this.Evaluations = Evaluations;
         
         
         /// <summary>
-        /// Gets or Sets ConversationId
+        /// Unique identifier for the conversation
         /// </summary>
+        /// <value>Unique identifier for the conversation</value>
         [DataMember(Name="conversationId", EmitDefaultValue=false)]
         public string ConversationId { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date/time the conversation started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="conversationStart", EmitDefaultValue=false)]
         public DateTime? ConversationStart { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>Date/time the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="conversationEnd", EmitDefaultValue=false)]
         public DateTime? ConversationEnd { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Participants
+        /// Participants in the conversation
         /// </summary>
+        /// <value>Participants in the conversation</value>
         [DataMember(Name="participants", EmitDefaultValue=false)]
         public List<AnalyticsParticipant> Participants { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Evaluations
+        /// Evaluations tied to this conersation
         /// </summary>
+        /// <value>Evaluations tied to this conersation</value>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
         public List<AnalyticsEvaluation> Evaluations { get; set; }
         

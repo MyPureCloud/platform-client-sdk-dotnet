@@ -30,8 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Purpose
+        /// The participant's purpose
         /// </summary>
+        /// <value>The participant's purpose</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PurposeEnum
         {
@@ -142,8 +143,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Purpose
+        /// The participant's purpose
         /// </summary>
+        /// <value>The participant's purpose</value>
         [DataMember(Name="purpose", EmitDefaultValue=false)]
         public PurposeEnum? Purpose { get; set; }
         
@@ -160,31 +162,31 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="ParticipantId">ParticipantId.</param>
+        /// <param name="ParticipantId">Unique identifier for the participant.</param>
         
         
         
-        /// <param name="ParticipantName">ParticipantName.</param>
+        /// <param name="ParticipantName">A human readable name identifying the participant.</param>
         
         
         
-        /// <param name="UserId">UserId.</param>
+        /// <param name="UserId">If a user, then this will be the unique identifier for the user.</param>
         
         
         
-        /// <param name="Purpose">Purpose.</param>
+        /// <param name="Purpose">The participant&#39;s purpose.</param>
         
         
         
-        /// <param name="ExternalContactId">ExternalContactId.</param>
+        /// <param name="ExternalContactId">External Contact Identifier.</param>
         
         
         
-        /// <param name="ExternalOrganizationId">ExternalOrganizationId.</param>
+        /// <param name="ExternalOrganizationId">External Organization Identifier.</param>
         
         
         
-        /// <param name="Sessions">Sessions.</param>
+        /// <param name="Sessions">List of sessions associated to this participant.</param>
         
         
         public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, List<AnalyticsSession> Sessions = null)
@@ -287,24 +289,27 @@ this.Sessions = Sessions;
         
         
         /// <summary>
-        /// Gets or Sets ParticipantId
+        /// Unique identifier for the participant
         /// </summary>
+        /// <value>Unique identifier for the participant</value>
         [DataMember(Name="participantId", EmitDefaultValue=false)]
         public string ParticipantId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ParticipantName
+        /// A human readable name identifying the participant
         /// </summary>
+        /// <value>A human readable name identifying the participant</value>
         [DataMember(Name="participantName", EmitDefaultValue=false)]
         public string ParticipantName { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets UserId
+        /// If a user, then this will be the unique identifier for the user
         /// </summary>
+        /// <value>If a user, then this will be the unique identifier for the user</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
         
@@ -313,24 +318,27 @@ this.Sessions = Sessions;
         
         
         /// <summary>
-        /// Gets or Sets ExternalContactId
+        /// External Contact Identifier
         /// </summary>
+        /// <value>External Contact Identifier</value>
         [DataMember(Name="externalContactId", EmitDefaultValue=false)]
         public string ExternalContactId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ExternalOrganizationId
+        /// External Organization Identifier
         /// </summary>
+        /// <value>External Organization Identifier</value>
         [DataMember(Name="externalOrganizationId", EmitDefaultValue=false)]
         public string ExternalOrganizationId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Sessions
+        /// List of sessions associated to this participant
         /// </summary>
+        /// <value>List of sessions associated to this participant</value>
         [DataMember(Name="sessions", EmitDefaultValue=false)]
         public List<AnalyticsSession> Sessions { get; set; }
         

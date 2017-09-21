@@ -7,38 +7,38 @@ title: AnalyticsSession
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **MediaType** | **string** |  | [optional] |
-| **SessionId** | **string** |  | [optional] |
+| **MediaType** | **string** | The session media type | [optional] |
+| **SessionId** | **string** | The unique identifier of this session | [optional] |
 | **AddressOther** | **string** |  | [optional] |
 | **AddressSelf** | **string** |  | [optional] |
-| **Ani** | **string** |  | [optional] |
-| **Direction** | **string** |  | [optional] |
-| **Dnis** | **string** |  | [optional] |
-| **OutboundCampaignId** | **string** |  | [optional] |
-| **OutboundContactId** | **string** |  | [optional] |
-| **OutboundContactListId** | **string** |  | [optional] |
-| **DispositionAnalyzer** | **string** |  | [optional] |
-| **DispositionName** | **string** |  | [optional] |
-| **EdgeId** | **string** |  | [optional] |
+| **Ani** | **string** | Automatic Number Identification (caller&#39;s number) | [optional] |
+| **Direction** | **string** | Direction | [optional] |
+| **Dnis** | **string** | Automatic Number Identification (caller&#39;s number) | [optional] |
+| **OutboundCampaignId** | **string** | (Dialer) Unique identifier of the outbound campaign | [optional] |
+| **OutboundContactId** | **string** | (Dialer) Unique identifier of the contact | [optional] |
+| **OutboundContactListId** | **string** | (Dialer) Unique identifier of the contact list that this contact belongs to | [optional] |
+| **DispositionAnalyzer** | **string** | (Dialer) Unique identifier of the contact list that this contact belongs to | [optional] |
+| **DispositionName** | **string** | (Dialer) Result of the analysis (for example disposition.classification.callable.machine)  | [optional] |
+| **EdgeId** | **string** | Unique identifier of the edge device | [optional] |
 | **RemoteNameDisplayable** | **string** |  | [optional] |
-| **RoomId** | **string** |  | [optional] |
-| **MonitoredSessionId** | **string** |  | [optional] |
+| **RoomId** | **string** | Unique identifier for the room | [optional] |
+| **MonitoredSessionId** | **string** | The sessionID being monitored | [optional] |
 | **MonitoredParticipantId** | **string** |  | [optional] |
-| **CallbackUserName** | **string** |  | [optional] |
-| **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |
-| **CallbackScheduledTime** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
-| **ScriptId** | **string** |  | [optional] |
-| **SkipEnabled** | **bool?** |  | [optional] |
-| **TimeoutSeconds** | **int?** |  | [optional] |
-| **CobrowseRole** | **string** |  | [optional] |
-| **CobrowseRoomId** | **string** |  | [optional] |
+| **CallbackUserName** | **string** | The name of the user requesting a call back | [optional] |
+| **CallbackNumbers** | **List&lt;string&gt;** | List of numbers to callback | [optional] |
+| **CallbackScheduledTime** | **DateTime?** | Scheduled callback date/time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
+| **ScriptId** | **string** | Scheduled callback date/time, Date time is represented as an ISO-8601 string.  | [optional] |
+| **SkipEnabled** | **bool?** | (Dialer) Whether the agent can skip the dialer contact | [optional] |
+| **TimeoutSeconds** | **int?** | The number of seconds before PureCloud begins the call for a call back. 0 disables automatic calling | [optional] |
+| **CobrowseRole** | **string** | Describe side of the cobrowse (sharer or viewer) | [optional] |
+| **CobrowseRoomId** | **string** | A unique identifier for a PureCloud Cobrowse room. | [optional] |
 | **MediaBridgeId** | **string** |  | [optional] |
-| **ScreenShareAddressSelf** | **string** |  | [optional] |
-| **SharingScreen** | **bool?** |  | [optional] |
-| **ScreenShareRoomId** | **string** |  | [optional] |
-| **VideoRoomId** | **string** |  | [optional] |
-| **VideoAddressSelf** | **string** |  | [optional] |
-| **Segments** | [**List&lt;AnalyticsConversationSegment&gt;**](AnalyticsConversationSegment.html) |  | [optional] |
+| **ScreenShareAddressSelf** | **string** | Direct ScreenShare address | [optional] |
+| **SharingScreen** | **bool?** | Flag determining if screenShare is started or not (true/false) | [optional] |
+| **ScreenShareRoomId** | **string** | A unique identifier for a PureCloud ScreenShare room. | [optional] |
+| **VideoRoomId** | **string** | A unique identifier for a PureCloud video room. | [optional] |
+| **VideoAddressSelf** | **string** | Direct Video address | [optional] |
+| **Segments** | [**List&lt;AnalyticsConversationSegment&gt;**](AnalyticsConversationSegment.html) | List of segments for this session | [optional] |
 {: class="table table-striped"}
 
 

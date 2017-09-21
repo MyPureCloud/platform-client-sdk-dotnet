@@ -45,8 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
+        /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -152,8 +153,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets State
+        /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
+        /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -200,39 +202,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Description">Description.</param>
+        /// <param name="Description">The resource&#39;s description..</param>
         
         
         
-        /// <param name="Version">Version.</param>
+        /// <param name="Version">The current version of the resource..</param>
         
         
         
-        /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="ModifiedBy">ModifiedBy.</param>
+        /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
         
         
         
-        /// <param name="CreatedBy">CreatedBy.</param>
+        /// <param name="CreatedBy">The ID of the user that created the resource..</param>
         
         
         
-        /// <param name="State">State.</param>
+        
+        
+        /// <param name="ModifiedByApp">The application that last modified the resource..</param>
         
         
         
-        /// <param name="ModifiedByApp">ModifiedByApp.</param>
-        
-        
-        
-        /// <param name="CreatedByApp">CreatedByApp.</param>
+        /// <param name="CreatedByApp">The application that created the resource..</param>
         
         
         
@@ -259,7 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<UriReference> ExternalTrunkBases = null, Site Site = null)
+        public OutboundRoute(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> ClassificationTypes = null, bool? Enabled = null, DistributionEnum? Distribution = null, List<UriReference> ExternalTrunkBases = null, Site Site = null)
         {
             
             
@@ -275,8 +275,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
-            
-            
             
             
             
@@ -413,13 +411,6 @@ this.CreatedBy = CreatedBy;
             
             
             
-this.State = State;
-            
-            
-            
-            
-            
-            
             
             
 this.ModifiedByApp = ModifiedByApp;
@@ -503,50 +494,54 @@ this.Site = Site;
         
         
         /// <summary>
-        /// Gets or Sets Description
+        /// The resource&#39;s description.
         /// </summary>
+        /// <value>The resource&#39;s description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Version
+        /// The current version of the resource.
         /// </summary>
+        /// <value>The current version of the resource.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ModifiedBy
+        /// The ID of the user that last modified the resource.
         /// </summary>
+        /// <value>The ID of the user that last modified the resource.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CreatedBy
+        /// The ID of the user that created the resource.
         /// </summary>
+        /// <value>The ID of the user that created the resource.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
         
@@ -555,16 +550,18 @@ this.Site = Site;
         
         
         /// <summary>
-        /// Gets or Sets ModifiedByApp
+        /// The application that last modified the resource.
         /// </summary>
+        /// <value>The application that last modified the resource.</value>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets CreatedByApp
+        /// The application that created the resource.
         /// </summary>
+        /// <value>The application that created the resource.</value>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         

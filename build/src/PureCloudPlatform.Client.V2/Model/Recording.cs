@@ -99,7 +99,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Uploading for "UPLOADING"
             /// </summary>
             [EnumMember(Value = "UPLOADING")]
-            Uploading
+            Uploading,
+            
+            /// <summary>
+            /// Enum Error for "ERROR"
+            /// </summary>
+            [EnumMember(Value = "ERROR")]
+            Error
         }
         
         

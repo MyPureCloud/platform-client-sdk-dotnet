@@ -1517,7 +1517,7 @@ namespace Example
 | **id** | [**List<string>**](string.html)| id | [optional]  |
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
-| **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, deleted |
+| **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted |
 {: class="table table-striped"}
 
 ### Return type

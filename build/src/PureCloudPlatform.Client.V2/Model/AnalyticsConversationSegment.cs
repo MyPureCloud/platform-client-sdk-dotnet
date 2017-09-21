@@ -42,8 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// A description of the event that disconnected the segment
         /// </summary>
+        /// <value>A description of the event that disconnected the segment</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DisconnectTypeEnum
         {
@@ -150,8 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets SegmentType
+        /// The activity taking place for the participant in the segment
         /// </summary>
+        /// <value>The activity taking place for the participant in the segment</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SegmentTypeEnum
         {
@@ -294,16 +296,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets DisconnectType
+        /// A description of the event that disconnected the segment
         /// </summary>
+        /// <value>A description of the event that disconnected the segment</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets SegmentType
+        /// The activity taking place for the participant in the segment
         /// </summary>
+        /// <value>The activity taking place for the participant in the segment</value>
         [DataMember(Name="segmentType", EmitDefaultValue=false)]
         public SegmentTypeEnum? SegmentType { get; set; }
         
@@ -344,23 +348,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="SegmentStart">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SegmentStart">The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="SegmentEnd">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="SegmentEnd">The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="QueueId">QueueId.</param>
+        /// <param name="QueueId">Queue identifier.</param>
         
         
         
-        /// <param name="WrapUpCode">WrapUpCode.</param>
+        /// <param name="WrapUpCode">Wrapup Code id.</param>
         
         
         
-        /// <param name="WrapUpNote">WrapUpNote.</param>
+        /// <param name="WrapUpNote">Note entered by an agent during after-call work.</param>
         
         
         
@@ -372,11 +376,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DisconnectType">DisconnectType.</param>
+        /// <param name="DisconnectType">A description of the event that disconnected the segment.</param>
         
         
         
-        /// <param name="SegmentType">SegmentType.</param>
+        /// <param name="SegmentType">The activity taking place for the participant in the segment.</param>
         
         
         
@@ -388,7 +392,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="RequestedLanguageId">RequestedLanguageId.</param>
+        /// <param name="RequestedLanguageId">A unique identifier for the language requested for an interaction..</param>
         
         
         
@@ -420,7 +424,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Conference">Conference.</param>
+        /// <param name="Conference">Indicates whether the segment was a conference.</param>
         
         
         
@@ -760,42 +764,45 @@ this.VideoMuted = VideoMuted;
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this segment began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="segmentStart", EmitDefaultValue=false)]
         public DateTime? SegmentStart { get; set; }
         
         
         
         /// <summary>
-        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The timestamp when this segment ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="segmentEnd", EmitDefaultValue=false)]
         public DateTime? SegmentEnd { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets QueueId
+        /// Queue identifier
         /// </summary>
+        /// <value>Queue identifier</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets WrapUpCode
+        /// Wrapup Code id
         /// </summary>
+        /// <value>Wrapup Code id</value>
         [DataMember(Name="wrapUpCode", EmitDefaultValue=false)]
         public string WrapUpCode { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets WrapUpNote
+        /// Note entered by an agent during after-call work
         /// </summary>
+        /// <value>Note entered by an agent during after-call work</value>
         [DataMember(Name="wrapUpNote", EmitDefaultValue=false)]
         public string WrapUpNote { get; set; }
         
@@ -838,8 +845,9 @@ this.VideoMuted = VideoMuted;
         
         
         /// <summary>
-        /// Gets or Sets RequestedLanguageId
+        /// A unique identifier for the language requested for an interaction.
         /// </summary>
+        /// <value>A unique identifier for the language requested for an interaction.</value>
         [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
         public string RequestedLanguageId { get; set; }
         
@@ -902,8 +910,9 @@ this.VideoMuted = VideoMuted;
         
         
         /// <summary>
-        /// Gets or Sets Conference
+        /// Indicates whether the segment was a conference
         /// </summary>
+        /// <value>Indicates whether the segment was a conference</value>
         [DataMember(Name="conference", EmitDefaultValue=false)]
         public bool? Conference { get; set; }
         

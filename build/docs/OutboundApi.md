@@ -58,7 +58,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundSchedulesSequences**](OutboundApi.html#getoutboundschedulessequences) | **GET** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
 | [**GetOutboundSequence**](OutboundApi.html#getoutboundsequence) | **GET** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
 | [**GetOutboundSequences**](OutboundApi.html#getoutboundsequences) | **GET** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
+| [**GetOutboundSettings**](OutboundApi.html#getoutboundsettings) | **GET** /api/v2/outbound/settings | Get the outbound settings for this organization |
 | [**GetOutboundWrapupcodemappings**](OutboundApi.html#getoutboundwrapupcodemappings) | **GET** /api/v2/outbound/wrapupcodemappings | Get the Dialer wrap up code mapping. |
+| [**PatchOutboundSettings**](OutboundApi.html#patchoutboundsettings) | **PATCH** /api/v2/outbound/settings | Update the outbound settings for this organization |
 | [**PostOutboundAttemptlimits**](OutboundApi.html#postoutboundattemptlimits) | **POST** /api/v2/outbound/attemptlimits | Create attempt limits |
 | [**PostOutboundAudits**](OutboundApi.html#postoutboundaudits) | **POST** /api/v2/outbound/audits | Retrieves audits for dialer. |
 | [**PostOutboundCallabletimesets**](OutboundApi.html#postoutboundcallabletimesets) | **POST** /api/v2/outbound/callabletimesets | Create callable time set |
@@ -3776,6 +3778,61 @@ namespace Example
 
 [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html)
 
+<a name="getoutboundsettings"></a>
+
+## [**OutboundSettings**](OutboundSettings.html) GetOutboundSettings ()
+
+Get the outbound settings for this organization
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundSettingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+
+            try
+            {
+                
+                // Get the outbound settings for this organization
+                
+                OutboundSettings result = apiInstance.GetOutboundSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundSettings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**OutboundSettings**](OutboundSettings.html)
+
 <a name="getoutboundwrapupcodemappings"></a>
 
 ## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) GetOutboundWrapupcodemappings ()
@@ -3830,6 +3887,69 @@ This endpoint does require any parameters.
 ### Return type
 
 [**WrapUpCodeMapping**](WrapUpCodeMapping.html)
+
+<a name="patchoutboundsettings"></a>
+
+## void PatchOutboundSettings (OutboundSettings body)
+
+Update the outbound settings for this organization
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchOutboundSettingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            
+            var body = new OutboundSettings(); // OutboundSettings | outboundSettings
+            
+            
+
+            try
+            {
+                
+                // Update the outbound settings for this organization
+                
+                apiInstance.PatchOutboundSettings(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PatchOutboundSettings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**OutboundSettings**](OutboundSettings.html)| outboundSettings |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postoutboundattemptlimits"></a>
 

@@ -25,6 +25,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallCommand" /> class.
@@ -40,7 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallNumber">The phone number to dial for this call. (required).</param>
         
         
-        public CallCommand(string CallNumber = null)
+        
+        /// <param name="PhoneColumn">For a dialer preview or scheduled callback, the phone column associated with the phone number.</param>
+        
+        
+        public CallCommand(string CallNumber = null, string PhoneColumn = null)
         {
             
             
@@ -62,6 +71,19 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+this.PhoneColumn = PhoneColumn;
+            
+            
+            
+            
         }
         
         
@@ -74,6 +96,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string CallNumber { get; set; }
         
         
+        
+        /// <summary>
+        /// For a dialer preview or scheduled callback, the phone column associated with the phone number
+        /// </summary>
+        /// <value>For a dialer preview or scheduled callback, the phone column associated with the phone number</value>
+        [DataMember(Name="phoneColumn", EmitDefaultValue=false)]
+        public string PhoneColumn { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +115,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CallCommand {\n");
             
             sb.Append("  CallNumber: ").Append(CallNumber).Append("\n");
+            
+            sb.Append("  PhoneColumn: ").Append(PhoneColumn).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -125,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallNumber == other.CallNumber ||
                     this.CallNumber != null &&
                     this.CallNumber.Equals(other.CallNumber)
+                ) &&
+                (
+                    this.PhoneColumn == other.PhoneColumn ||
+                    this.PhoneColumn != null &&
+                    this.PhoneColumn.Equals(other.PhoneColumn)
                 );
         }
 
@@ -142,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.CallNumber != null)
                     hash = hash * 59 + this.CallNumber.GetHashCode();
+                
+                if (this.PhoneColumn != null)
+                    hash = hash * 59 + this.PhoneColumn.GetHashCode();
                 
                 return hash;
             }
