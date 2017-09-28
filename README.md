@@ -61,9 +61,9 @@ In addition to the process in the tutorial above, swap out the POST to "https://
 Use the following namespaces:
 
 ~~~ csharp
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Extensions;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Extensions;
 ~~~
 
 Then call the _PostToken_ extension method of _ApiClient_, including the redirect URI and auth code:
@@ -87,9 +87,9 @@ For headless and non-user applications, the [Client Credentials Grant](http://de
 First, use the following namespaces:
 
 ~~~ csharp
-using ININ.PureCloudApi.Api;
-using ININ.PureCloudApi.Client;
-using ININ.PureCloudApi.Extensions;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Extensions;
 ~~~
 
 Then call the _PostToken_ extension method of _ApiClient_, leaving the redirect URI and auth code blank:
@@ -115,14 +115,14 @@ Configuration.Default.ApiClient.RestClient.BaseUrl = new Uri("https://api.mypure
 Once an access token has been obtained from one of the OAuth methods, it must be set in the SDK's configuration.
 
 ~~~ csharp
-ININ.PureCloudApi.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zk3333QImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
+PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken = "BL4Cb3EQIQFlqIItaj-zf5eIhAiP96zk3333QImd24P99ojbFHtpgUTJdRIkuUYfXMy0afEnZcWnEQ";
 ~~~
 
 #### Invoking the API
 
 There are two steps to making requests:
 
-1. Instantiate one of the API classes in the ININ.PureCloudApi.Api namespace
+1. Instantiate one of the API classes in the PureCloudPlatform.Client.V2.Api namespace
 2. Call the methods on the API object
 
 Example of getting the authenticated user's information:
