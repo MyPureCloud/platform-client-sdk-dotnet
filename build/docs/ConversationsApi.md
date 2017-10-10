@@ -67,6 +67,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
+| [**PostConversationParticipantDigits**](ConversationsApi.html#postconversationparticipantdigits) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
 | [**PostConversationParticipantReplace**](ConversationsApi.html#postconversationparticipantreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **POST** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
 | [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
@@ -1171,7 +1172,7 @@ This endpoint does require any parameters.
 
 <a name="getconversationscallshistory"></a>
 
-## [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null)
+## [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
 
 Get call history
 
@@ -1199,7 +1200,7 @@ namespace Example
             var apiInstance = new ConversationsApi();
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageSize = 56;  // int? | Page size, maximum 50 (optional)  (default to 25)
             
             
             
@@ -1213,13 +1214,18 @@ namespace Example
             
             
             
+            
+            
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            
+            
 
             try
             {
                 
                 // Get call history
                 
-                CallHistoryConversationEntityListing result = apiInstance.GetConversationsCallsHistory(pageSize, pageNumber, interval);
+                CallHistoryConversationEntityListing result = apiInstance.GetConversationsCallsHistory(pageSize, pageNumber, interval, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1236,9 +1242,10 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageSize** | **int?**| Page size, maximum 50 | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **interval** | **string**| Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; | [optional]  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand. | [optional] <br />**Values**: externalorganization, externalcontact, user, queue, group |
 {: class="table table-striped"}
 
 ### Return type
@@ -4296,6 +4303,81 @@ namespace Example
 | **conversationId** | **string**| conversation ID |  |
 | **participantId** | **string**| participant ID |  |
 | **body** | [**CreateCallbackOnConversationCommand**](CreateCallbackOnConversationCommand.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="postconversationparticipantdigits"></a>
+
+## void PostConversationParticipantDigits (string conversationId, string participantId, Digits body = null)
+
+Sends DTMF to the participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationParticipantDigitsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
+            
+            var body = new Digits(); // Digits | Digits (optional) 
+            
+            
+
+            try
+            {
+                
+                // Sends DTMF to the participant
+                
+                apiInstance.PostConversationParticipantDigits(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantDigits: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **body** | [**Digits**](Digits.html)| Digits | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of the action
+        /// The type of this DialerAction.
         /// </summary>
-        /// <value>Type of the action</value>
+        /// <value>The type of this DialerAction.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Identifier of the action
+        /// Additional type specification for this DialerAction.
         /// </summary>
-        /// <value>Identifier of the action</value>
+        /// <value>Additional type specification for this DialerAction.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ActionTypeNameEnum
         {
@@ -125,9 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Indicator of the type of update action (applicable only to certain types of actions)
+        /// Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE.
         /// </summary>
-        /// <value>Indicator of the type of update action (applicable only to certain types of actions)</value>
+        /// <value>Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum UpdateOptionEnum
         {
@@ -172,27 +172,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Type of the action
+        /// The type of this DialerAction.
         /// </summary>
-        /// <value>Type of the action</value>
+        /// <value>The type of this DialerAction.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         
         
         
         /// <summary>
-        /// Identifier of the action
+        /// Additional type specification for this DialerAction.
         /// </summary>
-        /// <value>Identifier of the action</value>
+        /// <value>Additional type specification for this DialerAction.</value>
         [DataMember(Name="actionTypeName", EmitDefaultValue=false)]
         public ActionTypeNameEnum? ActionTypeName { get; set; }
         
         
         
         /// <summary>
-        /// Indicator of the type of update action (applicable only to certain types of actions)
+        /// Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE.
         /// </summary>
-        /// <value>Indicator of the type of update action (applicable only to certain types of actions)</value>
+        /// <value>Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE.</value>
         [DataMember(Name="updateOption", EmitDefaultValue=false)]
         public UpdateOptionEnum? UpdateOption { get; set; }
         
@@ -211,19 +211,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Type">Type of the action (required).</param>
+        /// <param name="Type">The type of this DialerAction. (required).</param>
         
         
         
-        /// <param name="ActionTypeName">Identifier of the action (required).</param>
+        /// <param name="ActionTypeName">Additional type specification for this DialerAction. (required).</param>
         
         
         
-        /// <param name="UpdateOption">Indicator of the type of update action (applicable only to certain types of actions).</param>
+        /// <param name="UpdateOption">Specifies how a contact attribute should be updated. Required for MODIFY_CONTACT_ATTRIBUTE..</param>
         
         
         
-        /// <param name="Properties">Map of key-value pairs pertinent to the action (different actions require different properties).</param>
+        /// <param name="Properties">A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key &#39;callbackOffset&#39; that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: &#39;callerAddress&#39;, which should be the caller id phone number, and &#39;callerName&#39;. For either key, you can also specify a column on the contact to get the value from. To do this, specify &#39;contact.Column&#39;, where &#39;Column&#39; is the name of the contact column from which to get the value. SET_SKILLS takes a key &#39;skills&#39; with an array of skill ids..</param>
         
         
         public DialerAction(TypeEnum? Type = null, ActionTypeNameEnum? ActionTypeName = null, UpdateOptionEnum? UpdateOption = null, Dictionary<string, string> Properties = null)
@@ -303,9 +303,9 @@ this.Properties = Properties;
         
         
         /// <summary>
-        /// Map of key-value pairs pertinent to the action (different actions require different properties)
+        /// A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key &#39;callbackOffset&#39; that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: &#39;callerAddress&#39;, which should be the caller id phone number, and &#39;callerName&#39;. For either key, you can also specify a column on the contact to get the value from. To do this, specify &#39;contact.Column&#39;, where &#39;Column&#39; is the name of the contact column from which to get the value. SET_SKILLS takes a key &#39;skills&#39; with an array of skill ids.
         /// </summary>
-        /// <value>Map of key-value pairs pertinent to the action (different actions require different properties)</value>
+        /// <value>A map of key-value pairs pertinent to the DialerAction. Different types of DialerActions require different properties. MODIFY_CONTACT_ATTRIBUTE with an updateOption of SET takes a contact column as the key and accepts any value. SCHEDULE_CALLBACK takes a key &#39;callbackOffset&#39; that specifies how far in the future the callback should be scheduled, in minutes. SET_CALLER_ID takes two keys: &#39;callerAddress&#39;, which should be the caller id phone number, and &#39;callerName&#39;. For either key, you can also specify a column on the contact to get the value from. To do this, specify &#39;contact.Column&#39;, where &#39;Column&#39; is the name of the contact column from which to get the value. SET_SKILLS takes a key &#39;skills&#39; with an array of skill ids.</value>
         [DataMember(Name="properties", EmitDefaultValue=false)]
         public Dictionary<string, string> Properties { get; set; }
         

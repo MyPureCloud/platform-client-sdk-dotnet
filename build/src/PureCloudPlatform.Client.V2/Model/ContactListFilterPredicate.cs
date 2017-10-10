@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether the contact column contains numeric or alphabetic data
+        /// The type of data in the contact column.
         /// </summary>
-        /// <value>Whether the contact column contains numeric or alphabetic data</value>
+        /// <value>The type of data in the contact column.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ColumnTypeEnum
         {
@@ -55,8 +55,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// The operator for this ContactListFilterPredicate.
         /// </summary>
+        /// <value>The operator for this ContactListFilterPredicate.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -157,17 +158,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Whether the contact column contains numeric or alphabetic data
+        /// The type of data in the contact column.
         /// </summary>
-        /// <value>Whether the contact column contains numeric or alphabetic data</value>
+        /// <value>The type of data in the contact column.</value>
         [DataMember(Name="columnType", EmitDefaultValue=false)]
         public ColumnTypeEnum? ColumnType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets _Operator
+        /// The operator for this ContactListFilterPredicate.
         /// </summary>
+        /// <value>The operator for this ContactListFilterPredicate.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
         
@@ -184,23 +186,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Column">Contact List column that must match a contact list column in the ContactListFilter&#39;s contactList object.</param>
+        /// <param name="Column">Contact list column from the ContactListFilter&#39;s contactList..</param>
         
         
         
-        /// <param name="ColumnType">Whether the contact column contains numeric or alphabetic data.</param>
+        /// <param name="ColumnType">The type of data in the contact column..</param>
         
         
         
-        /// <param name="_Operator">_Operator.</param>
+        /// <param name="_Operator">The operator for this ContactListFilterPredicate..</param>
         
         
         
-        /// <param name="Value">Contact List value to operate on. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes)..</param>
+        /// <param name="Value">Value with which to compare the contact&#39;s data. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes)..</param>
         
         
         
-        /// <param name="Range">Range is only required for ContactListFilterComparisonOperator&#39;s BETWEEN and IN.</param>
+        /// <param name="Range">A range of values. Required for operators BETWEEN and IN..</param>
         
         
         
@@ -294,9 +296,9 @@ this.Inverted = Inverted;
         
         
         /// <summary>
-        /// Contact List column that must match a contact list column in the ContactListFilter&#39;s contactList object
+        /// Contact list column from the ContactListFilter&#39;s contactList.
         /// </summary>
-        /// <value>Contact List column that must match a contact list column in the ContactListFilter&#39;s contactList object</value>
+        /// <value>Contact list column from the ContactListFilter&#39;s contactList.</value>
         [DataMember(Name="column", EmitDefaultValue=false)]
         public string Column { get; set; }
         
@@ -307,18 +309,18 @@ this.Inverted = Inverted;
         
         
         /// <summary>
-        /// Contact List value to operate on. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).
+        /// Value with which to compare the contact&#39;s data. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).
         /// </summary>
-        /// <value>Contact List value to operate on. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).</value>
+        /// <value>Value with which to compare the contact&#39;s data. This could be text, a number, or a relative time. A value for relative time should follow the format PxxDTyyHzzM, where xx, yy, and zz specify the days, hours and minutes. For example, a value of P01DT08H30M corresponds to 1 day, 8 hours, and 30 minutes from now. To specify a time in the past, include a negative sign before each numeric value. For example, a value of P-01DT-08H-30M corresponds to 1 day, 8 hours, and 30 minutes in the past. You can also do things like P01DT00H-30M, which would correspond to 23 hours and 30 minutes from now (1 day - 30 minutes).</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         
         
         
         /// <summary>
-        /// Range is only required for ContactListFilterComparisonOperator&#39;s BETWEEN and IN
+        /// A range of values. Required for operators BETWEEN and IN.
         /// </summary>
-        /// <value>Range is only required for ContactListFilterComparisonOperator&#39;s BETWEEN and IN</value>
+        /// <value>A range of values. Required for operators BETWEEN and IN.</value>
         [DataMember(Name="range", EmitDefaultValue=false)]
         public ContactListFilterRange Range { get; set; }
         

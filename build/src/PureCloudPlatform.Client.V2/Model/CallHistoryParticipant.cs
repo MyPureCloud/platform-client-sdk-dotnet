@@ -302,7 +302,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalOrganization">The PureCloud external organization.</param>
         
         
-        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, UriReference User = null, UriReference Queue = null, UriReference Group = null, DisconnectTypeEnum? DisconnectType = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null)
+        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null)
         {
             
             
@@ -584,7 +584,7 @@ this.ExternalOrganization = ExternalOrganization;
         /// </summary>
         /// <value>The PureCloud user for this participant.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public UriReference User { get; set; }
+        public User User { get; set; }
         
         
         
@@ -593,7 +593,7 @@ this.ExternalOrganization = ExternalOrganization;
         /// </summary>
         /// <value>The PureCloud queue for this participant.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
-        public UriReference Queue { get; set; }
+        public Queue Queue { get; set; }
         
         
         
@@ -602,7 +602,7 @@ this.ExternalOrganization = ExternalOrganization;
         /// </summary>
         /// <value>The group involved in the group ring call.</value>
         [DataMember(Name="group", EmitDefaultValue=false)]
-        public UriReference Group { get; set; }
+        public Group Group { get; set; }
         
         
         
@@ -613,7 +613,7 @@ this.ExternalOrganization = ExternalOrganization;
         /// </summary>
         /// <value>The PureCloud external contact</value>
         [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public UriReference ExternalContact { get; set; }
+        public ExternalContact ExternalContact { get; set; }
         
         
         
@@ -622,7 +622,7 @@ this.ExternalOrganization = ExternalOrganization;
         /// </summary>
         /// <value>The PureCloud external organization</value>
         [DataMember(Name="externalOrganization", EmitDefaultValue=false)]
-        public UriReference ExternalOrganization { get; set; }
+        public ExternalOrganization ExternalOrganization { get; set; }
         
         
         /// <summary>

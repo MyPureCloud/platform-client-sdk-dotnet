@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// status of the sequence
+        /// The current status of the CampaignSequence. A CampaignSequence can be turned 'on' or 'off'.
         /// </summary>
-        /// <value>status of the sequence</value>
+        /// <value>The current status of the CampaignSequence. A CampaignSequence can be turned 'on' or 'off'.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -103,9 +103,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// status of the sequence
+        /// The current status of the CampaignSequence. A CampaignSequence can be turned 'on' or 'off'.
         /// </summary>
-        /// <value>status of the sequence</value>
+        /// <value>The current status of the CampaignSequence. A CampaignSequence can be turned 'on' or 'off'.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         
@@ -142,19 +142,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Campaigns">the ordered list of campaign identifiers (required).</param>
+        /// <param name="Campaigns">The ordered list of Campaigns that this CampaignSequence will run. (required).</param>
         
         
         
         
         
-        /// <param name="Status">status of the sequence (required).</param>
+        /// <param name="Status">The current status of the CampaignSequence. A CampaignSequence can be turned &#39;on&#39; or &#39;off&#39;. (required).</param>
         
         
         
         
         
-        /// <param name="Repeat">indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false.</param>
+        /// <param name="Repeat">Indicates if a sequence should repeat from the beginning after the last campaign completes. Default is false..</param>
         
         
         
@@ -311,18 +311,18 @@ this.Repeat = Repeat;
         
         
         /// <summary>
-        /// the ordered list of campaign identifiers
+        /// The ordered list of Campaigns that this CampaignSequence will run.
         /// </summary>
-        /// <value>the ordered list of campaign identifiers</value>
+        /// <value>The ordered list of Campaigns that this CampaignSequence will run.</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<UriReference> Campaigns { get; set; }
         
         
         
         /// <summary>
-        /// the zero-based index of the current campaign in the campaigns list
+        /// A zero-based index indicating which Campaign this CampaignSequence is currently on.
         /// </summary>
-        /// <value>the zero-based index of the current campaign in the campaigns list</value>
+        /// <value>A zero-based index indicating which Campaign this CampaignSequence is currently on.</value>
         [DataMember(Name="currentCampaign", EmitDefaultValue=false)]
         public int? CurrentCampaign { get; private set; }
         
@@ -331,18 +331,18 @@ this.Repeat = Repeat;
         
         
         /// <summary>
-        /// if a sequence has unexpectedly stopped, this message provides the reason
+        /// A message indicating if and why a CampaignSequence has stopped unexpectedly.
         /// </summary>
-        /// <value>if a sequence has unexpectedly stopped, this message provides the reason</value>
+        /// <value>A message indicating if and why a CampaignSequence has stopped unexpectedly.</value>
         [DataMember(Name="stopMessage", EmitDefaultValue=false)]
         public string StopMessage { get; private set; }
         
         
         
         /// <summary>
-        /// indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false
+        /// Indicates if a sequence should repeat from the beginning after the last campaign completes. Default is false.
         /// </summary>
-        /// <value>indicates if a sequence is to repeat from the beginning after the last campaign completes; default is false</value>
+        /// <value>Indicates if a sequence should repeat from the beginning after the last campaign completes. Default is false.</value>
         [DataMember(Name="repeat", EmitDefaultValue=false)]
         public bool? Repeat { get; set; }
         

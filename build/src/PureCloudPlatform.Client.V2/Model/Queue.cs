@@ -254,6 +254,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="State">Indicates if the resource is active, inactive, or deleted..</param>
+        
         
         
         /// <param name="ModifiedByApp">The application that last modified the resource..</param>
@@ -305,8 +307,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
+        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
         {
+            
+            
             
             
             
@@ -484,6 +488,13 @@ this.ModifiedBy = ModifiedBy;
 this.CreatedBy = CreatedBy;
             
             
+            
+            
+            
+            
+            
+            
+this.State = State;
             
             
             

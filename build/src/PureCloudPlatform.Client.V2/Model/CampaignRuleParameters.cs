@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The operator for comparison. Required for all campaign rule conditions
+        /// The operator for comparison. Required for a CampaignRuleCondition.
         /// </summary>
-        /// <value>The operator for comparison. Required for all campaign rule conditions</value>
+        /// <value>The operator for comparison. Required for a CampaignRuleCondition.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -73,9 +73,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The priority to set the campaign to. Required for 'set campaign priority' actions
+        /// The priority to set a campaign to. Required for the 'setCampaignPriority' action.
         /// </summary>
-        /// <value>The priority to set the campaign to. Required for 'set campaign priority' actions</value>
+        /// <value>The priority to set a campaign to. Required for the 'setCampaignPriority' action.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum PriorityEnum
         {
@@ -122,9 +122,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions
+        /// The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action.
         /// </summary>
-        /// <value>The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions</value>
+        /// <value>The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DialingModeEnum
         {
@@ -172,9 +172,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The operator for comparison. Required for all campaign rule conditions
+        /// The operator for comparison. Required for a CampaignRuleCondition.
         /// </summary>
-        /// <value>The operator for comparison. Required for all campaign rule conditions</value>
+        /// <value>The operator for comparison. Required for a CampaignRuleCondition.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? _Operator { get; set; }
         
@@ -183,18 +183,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The priority to set the campaign to. Required for 'set campaign priority' actions
+        /// The priority to set a campaign to. Required for the 'setCampaignPriority' action.
         /// </summary>
-        /// <value>The priority to set the campaign to. Required for 'set campaign priority' actions</value>
+        /// <value>The priority to set a campaign to. Required for the 'setCampaignPriority' action.</value>
         [DataMember(Name="priority", EmitDefaultValue=false)]
         public PriorityEnum? Priority { get; set; }
         
         
         
         /// <summary>
-        /// The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions
+        /// The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action.
         /// </summary>
-        /// <value>The dialing mode to set the campaign to. Reqired for 'set campaign dialing mode' actions</value>
+        /// <value>The dialing mode to set a campaign to. Required for the 'setCampaignDialingMode' action.</value>
         [DataMember(Name="dialingMode", EmitDefaultValue=false)]
         public DialingModeEnum? DialingMode { get; set; }
         
@@ -205,19 +205,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="_Operator">The operator for comparison. Required for all campaign rule conditions.</param>
+        /// <param name="_Operator">The operator for comparison. Required for a CampaignRuleCondition..</param>
         
         
         
-        /// <param name="Value">The value for comparison. Required for all campaign rule conditions.</param>
+        /// <param name="Value">The value for comparison. Required for a CampaignRuleCondition..</param>
         
         
         
-        /// <param name="Priority">The priority to set the campaign to. Required for &#39;set campaign priority&#39; actions.</param>
+        /// <param name="Priority">The priority to set a campaign to. Required for the &#39;setCampaignPriority&#39; action..</param>
         
         
         
-        /// <param name="DialingMode">The dialing mode to set the campaign to. Reqired for &#39;set campaign dialing mode&#39; actions.</param>
+        /// <param name="DialingMode">The dialing mode to set a campaign to. Required for the &#39;setCampaignDialingMode&#39; action..</param>
         
         
         public CampaignRuleParameters(OperatorEnum? _Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null)
@@ -283,9 +283,9 @@ this.DialingMode = DialingMode;
         
         
         /// <summary>
-        /// The value for comparison. Required for all campaign rule conditions
+        /// The value for comparison. Required for a CampaignRuleCondition.
         /// </summary>
-        /// <value>The value for comparison. Required for all campaign rule conditions</value>
+        /// <value>The value for comparison. Required for a CampaignRuleCondition.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
         

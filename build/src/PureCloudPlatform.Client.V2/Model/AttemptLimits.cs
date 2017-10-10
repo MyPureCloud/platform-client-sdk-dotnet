@@ -45,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// After how long the number of attempts will be set back to 0
+        /// After how long the number of attempts will be set back to 0. Defaults to NEVER.
         /// </summary>
-        /// <value>After how long the number of attempts will be set back to 0</value>
+        /// <value>After how long the number of attempts will be set back to 0. Defaults to NEVER.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ResetPeriodEnum
         {
@@ -99,9 +99,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// After how long the number of attempts will be set back to 0
+        /// After how long the number of attempts will be set back to 0. Defaults to NEVER.
         /// </summary>
-        /// <value>After how long the number of attempts will be set back to 0</value>
+        /// <value>After how long the number of attempts will be set back to 0. Defaults to NEVER.</value>
         [DataMember(Name="resetPeriod", EmitDefaultValue=false)]
         public ResetPeriodEnum? ResetPeriod { get; set; }
         
@@ -130,23 +130,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="MaxAttemptsPerContact">MaxAttemptsPerContact.</param>
+        /// <param name="MaxAttemptsPerContact">The maximum number of times a contact can be called within the resetPeriod. Required if maxAttemptsPerNumber is not defined..</param>
         
         
         
-        /// <param name="MaxAttemptsPerNumber">MaxAttemptsPerNumber.</param>
+        /// <param name="MaxAttemptsPerNumber">The maximum number of times a phone number can be called within the resetPeriod. Required if maxAttemptsPerContact is not defined..</param>
         
         
         
-        /// <param name="TimeZoneId">The timezone is necessary to define when \&quot;today\&quot; starts and ends.</param>
+        /// <param name="TimeZoneId">If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY..</param>
         
         
         
-        /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0.</param>
+        /// <param name="ResetPeriod">After how long the number of attempts will be set back to 0. Defaults to NEVER..</param>
         
         
         
-        /// <param name="RecallEntries">Configuration for recall attempts.</param>
+        /// <param name="RecallEntries">Configuration for recall attempts..</param>
         
         
         
@@ -311,25 +311,27 @@ this.RecallEntries = RecallEntries;
         
         
         /// <summary>
-        /// Gets or Sets MaxAttemptsPerContact
+        /// The maximum number of times a contact can be called within the resetPeriod. Required if maxAttemptsPerNumber is not defined.
         /// </summary>
+        /// <value>The maximum number of times a contact can be called within the resetPeriod. Required if maxAttemptsPerNumber is not defined.</value>
         [DataMember(Name="maxAttemptsPerContact", EmitDefaultValue=false)]
         public int? MaxAttemptsPerContact { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxAttemptsPerNumber
+        /// The maximum number of times a phone number can be called within the resetPeriod. Required if maxAttemptsPerContact is not defined.
         /// </summary>
+        /// <value>The maximum number of times a phone number can be called within the resetPeriod. Required if maxAttemptsPerContact is not defined.</value>
         [DataMember(Name="maxAttemptsPerNumber", EmitDefaultValue=false)]
         public int? MaxAttemptsPerNumber { get; set; }
         
         
         
         /// <summary>
-        /// The timezone is necessary to define when \&quot;today\&quot; starts and ends
+        /// If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY.
         /// </summary>
-        /// <value>The timezone is necessary to define when \&quot;today\&quot; starts and ends</value>
+        /// <value>If the resetPeriod is TODAY, this specifies the timezone in which TODAY occurs. Required if the resetPeriod is TODAY.</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
         
@@ -338,9 +340,9 @@ this.RecallEntries = RecallEntries;
         
         
         /// <summary>
-        /// Configuration for recall attempts
+        /// Configuration for recall attempts.
         /// </summary>
-        /// <value>Configuration for recall attempts</value>
+        /// <value>Configuration for recall attempts.</value>
         [DataMember(Name="recallEntries", EmitDefaultValue=false)]
         public Dictionary<string, RecallEntry> RecallEntries { get; set; }
         

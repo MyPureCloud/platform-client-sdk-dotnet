@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
+        /// The type of the DncList.
         /// </summary>
-        /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
+        /// <value>The type of the DncList.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DncSourceTypeEnum
         {
@@ -106,9 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// the type of dnc list being created, rds (csv file), gryphon, or dnc.com
+        /// The type of the DncList.
         /// </summary>
-        /// <value>the type of dnc list being created, rds (csv file), gryphon, or dnc.com</value>
+        /// <value>The type of the DncList.</value>
         [DataMember(Name="dncSourceType", EmitDefaultValue=false)]
         public DncSourceTypeEnum? DncSourceType { get; set; }
         
@@ -135,7 +135,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Name">The name of the list. (required).</param>
+        /// <param name="Name">The name of the DncList. (required).</param>
         
         
         
@@ -147,28 +147,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ImportStatus">the status of the import process.</param>
+        /// <param name="ImportStatus">The status of the import process.</param>
         
         
         
         
         
-        
-        
-        /// <param name="LoginId">the loginId if the dncSourceType is dnc.com.</param>
-        
-        
-        
-        /// <param name="DncCodes">the list of dnc.com codes to be treated as DNC.</param>
+        /// <param name="DncSourceType">The type of the DncList. (required).</param>
         
         
         
-        /// <param name="LicenseId">the license number if the dncSourceType is gryphon.</param>
+        /// <param name="LoginId">A dnc.com loginId. Required if the dncSourceType is dnc.com..</param>
+        
+        
+        
+        /// <param name="DncCodes">The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com..</param>
+        
+        
+        
+        /// <param name="LicenseId">A gryphon license number. Required if the dncSourceType is gryphon..</param>
         
         
         
         
-        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
+        public DncList(string Name = null, int? Version = null, ImportStatus ImportStatus = null, DncSourceTypeEnum? DncSourceType = null, string LoginId = null, List<string> DncCodes = null, string LicenseId = null)
         {
             
             
@@ -200,6 +202,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            // to ensure "DncSourceType" is required (not null)
+            if (DncSourceType == null)
+            {
+                throw new InvalidDataException("DncSourceType is a required property for DncList and cannot be null");
+            }
+            else
+            {
+                this.DncSourceType = DncSourceType;
+            }
             
             
             
@@ -254,6 +268,8 @@ this.ImportStatus = ImportStatus;
             
             
             
+            
+            
 this.LoginId = LoginId;
             
             
@@ -293,9 +309,9 @@ this.LicenseId = LicenseId;
         
         
         /// <summary>
-        /// The name of the list.
+        /// The name of the DncList.
         /// </summary>
-        /// <value>The name of the list.</value>
+        /// <value>The name of the DncList.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
@@ -329,18 +345,18 @@ this.LicenseId = LicenseId;
         
         
         /// <summary>
-        /// the status of the import process
+        /// The status of the import process
         /// </summary>
-        /// <value>the status of the import process</value>
+        /// <value>The status of the import process</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; set; }
         
         
         
         /// <summary>
-        /// the number of phone numbers in the do not call list
+        /// The total number of phone numbers in the DncList.
         /// </summary>
-        /// <value>the number of phone numbers in the do not call list</value>
+        /// <value>The total number of phone numbers in the DncList.</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
         
@@ -349,27 +365,27 @@ this.LicenseId = LicenseId;
         
         
         /// <summary>
-        /// the loginId if the dncSourceType is dnc.com
+        /// A dnc.com loginId. Required if the dncSourceType is dnc.com.
         /// </summary>
-        /// <value>the loginId if the dncSourceType is dnc.com</value>
+        /// <value>A dnc.com loginId. Required if the dncSourceType is dnc.com.</value>
         [DataMember(Name="loginId", EmitDefaultValue=false)]
         public string LoginId { get; set; }
         
         
         
         /// <summary>
-        /// the list of dnc.com codes to be treated as DNC
+        /// The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com.
         /// </summary>
-        /// <value>the list of dnc.com codes to be treated as DNC</value>
+        /// <value>The list of dnc.com codes to be treated as DNC. Required if the dncSourceType is dnc.com.</value>
         [DataMember(Name="dncCodes", EmitDefaultValue=false)]
         public List<string> DncCodes { get; set; }
         
         
         
         /// <summary>
-        /// the license number if the dncSourceType is gryphon
+        /// A gryphon license number. Required if the dncSourceType is gryphon.
         /// </summary>
-        /// <value>the license number if the dncSourceType is gryphon</value>
+        /// <value>A gryphon license number. Required if the dncSourceType is gryphon.</value>
         [DataMember(Name="licenseId", EmitDefaultValue=false)]
         public string LicenseId { get; set; }
         

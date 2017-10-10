@@ -13,11 +13,16 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// UserPresenceNotificationPresenceDefinition
+    /// EdgeMetricsMemory
     /// </summary>
     [DataContract]
-    public partial class UserPresenceNotificationPresenceDefinition :  IEquatable<UserPresenceNotificationPresenceDefinition>
+    public partial class EdgeMetricsMemory :  IEquatable<EdgeMetricsMemory>
     {
+        
+        
+        
+        
+        
         
         
         
@@ -32,18 +37,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="UserPresenceNotificationPresenceDefinition" /> class.
+        /// Initializes a new instance of the <see cref="EdgeMetricsMemory" /> class.
         /// </summary>
         
         
-        /// <param name="Id">Id.</param>
+        /// <param name="AvailableBytes">Available memory in bytes..</param>
         
         
         
-        /// <param name="SystemPresence">SystemPresence.</param>
+        /// <param name="Type">Type of memory. Virtual or physical..</param>
         
         
-        public UserPresenceNotificationPresenceDefinition(string Id = null, string SystemPresence = null)
+        
+        /// <param name="TotalBytes">Total memory in bytes..</param>
+        
+        
+        public EdgeMetricsMemory(double? AvailableBytes = null, string Type = null, double? TotalBytes = null)
         {
             
             
@@ -59,7 +68,11 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Id = Id;
+            
+            
+            
+            
+this.AvailableBytes = AvailableBytes;
             
             
             
@@ -68,7 +81,16 @@ this.Id = Id;
             
             
             
-this.SystemPresence = SystemPresence;
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TotalBytes = TotalBytes;
             
             
             
@@ -78,18 +100,29 @@ this.SystemPresence = SystemPresence;
         
         
         /// <summary>
-        /// Gets or Sets Id
+        /// Available memory in bytes.
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        /// <value>Available memory in bytes.</value>
+        [DataMember(Name="availableBytes", EmitDefaultValue=false)]
+        public double? AvailableBytes { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets SystemPresence
+        /// Type of memory. Virtual or physical.
         /// </summary>
-        [DataMember(Name="systemPresence", EmitDefaultValue=false)]
-        public string SystemPresence { get; set; }
+        /// <value>Type of memory. Virtual or physical.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public string Type { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Total memory in bytes.
+        /// </summary>
+        /// <value>Total memory in bytes.</value>
+        [DataMember(Name="totalBytes", EmitDefaultValue=false)]
+        public double? TotalBytes { get; set; }
         
         
         /// <summary>
@@ -99,11 +132,13 @@ this.SystemPresence = SystemPresence;
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class UserPresenceNotificationPresenceDefinition {\n");
+            sb.Append("class EdgeMetricsMemory {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  AvailableBytes: ").Append(AvailableBytes).Append("\n");
             
-            sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            
+            sb.Append("  TotalBytes: ").Append(TotalBytes).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -126,15 +161,15 @@ this.SystemPresence = SystemPresence;
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UserPresenceNotificationPresenceDefinition);
+            return this.Equals(obj as EdgeMetricsMemory);
         }
 
         /// <summary>
-        /// Returns true if UserPresenceNotificationPresenceDefinition instances are equal
+        /// Returns true if EdgeMetricsMemory instances are equal
         /// </summary>
-        /// <param name="other">Instance of UserPresenceNotificationPresenceDefinition to be compared</param>
+        /// <param name="other">Instance of EdgeMetricsMemory to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(UserPresenceNotificationPresenceDefinition other)
+        public bool Equals(EdgeMetricsMemory other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -142,14 +177,19 @@ this.SystemPresence = SystemPresence;
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.AvailableBytes == other.AvailableBytes ||
+                    this.AvailableBytes != null &&
+                    this.AvailableBytes.Equals(other.AvailableBytes)
                 ) &&
                 (
-                    this.SystemPresence == other.SystemPresence ||
-                    this.SystemPresence != null &&
-                    this.SystemPresence.Equals(other.SystemPresence)
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.TotalBytes == other.TotalBytes ||
+                    this.TotalBytes != null &&
+                    this.TotalBytes.Equals(other.TotalBytes)
                 );
         }
 
@@ -165,11 +205,14 @@ this.SystemPresence = SystemPresence;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.AvailableBytes != null)
+                    hash = hash * 59 + this.AvailableBytes.GetHashCode();
                 
-                if (this.SystemPresence != null)
-                    hash = hash * 59 + this.SystemPresence.GetHashCode();
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.TotalBytes != null)
+                    hash = hash * 59 + this.TotalBytes.GetHashCode();
                 
                 return hash;
             }

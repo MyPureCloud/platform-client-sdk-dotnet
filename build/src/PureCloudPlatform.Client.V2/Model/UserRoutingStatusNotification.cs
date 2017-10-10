@@ -43,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ErrorInfo">ErrorInfo.</param>
         
         
-        public UserRoutingStatusNotification(UserRoutingStatusNotificationRoutingStatus RoutingStatus = null, UserRoutingStatusNotificationErrorInfo ErrorInfo = null)
+        public UserRoutingStatusNotification(AgentActivityNotificationRoutingStatus RoutingStatus = null, UserRoutingStatusNotificationErrorInfo ErrorInfo = null)
         {
             
             
@@ -81,7 +81,7 @@ this.ErrorInfo = ErrorInfo;
         /// Gets or Sets RoutingStatus
         /// </summary>
         [DataMember(Name="routingStatus", EmitDefaultValue=false)]
-        public UserRoutingStatusNotificationRoutingStatus RoutingStatus { get; set; }
+        public AgentActivityNotificationRoutingStatus RoutingStatus { get; set; }
         
         
         

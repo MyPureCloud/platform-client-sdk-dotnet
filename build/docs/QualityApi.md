@@ -13,7 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteQualityKeywordset**](QualityApi.html#deletequalitykeywordset) | **DELETE** /api/v2/quality/keywordsets/{keywordSetId} | Delete a keywordSet by id. |
 | [**DeleteQualityKeywordsets**](QualityApi.html#deletequalitykeywordsets) | **DELETE** /api/v2/quality/keywordsets | Delete keyword sets |
 | [**GetQualityAgentsActivity**](QualityApi.html#getqualityagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
-| [**GetQualityCalibration**](QualityApi.html#getqualitycalibration) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id. |
+| [**GetQualityCalibration**](QualityApi.html#getqualitycalibration) | **GET** /api/v2/quality/calibrations/{calibrationId} | Get a calibration by id.  Requires either calibrator id or conversation id |
 | [**GetQualityCalibrations**](QualityApi.html#getqualitycalibrations) | **GET** /api/v2/quality/calibrations | Get the list of calibrations |
 | [**GetQualityConversationAudits**](QualityApi.html#getqualityconversationaudits) | **GET** /api/v2/quality/conversations/{conversationId}/audits | Get audits for conversation or recording |
 | [**GetQualityConversationEvaluation**](QualityApi.html#getqualityconversationevaluation) | **GET** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Get an evaluation |
@@ -507,9 +507,9 @@ namespace Example
 
 <a name="getqualitycalibration"></a>
 
-## [**Calibration**](Calibration.html) GetQualityCalibration (string calibrationId, string calibratorId)
+## [**Calibration**](Calibration.html) GetQualityCalibration (string calibrationId, string calibratorId = null, string conversationId = null)
 
-Get a calibration by id.
+Get a calibration by id.  Requires either calibrator id or conversation id
 
 
 
@@ -540,7 +540,12 @@ namespace Example
             
             
             
-            var calibratorId = calibratorId_example;  // string | calibratorId
+            var calibratorId = calibratorId_example;  // string | calibratorId (optional) 
+            
+            
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId (optional) 
             
             
             
@@ -548,9 +553,9 @@ namespace Example
             try
             {
                 
-                // Get a calibration by id.
+                // Get a calibration by id.  Requires either calibrator id or conversation id
                 
-                Calibration result = apiInstance.GetQualityCalibration(calibrationId, calibratorId);
+                Calibration result = apiInstance.GetQualityCalibration(calibrationId, calibratorId, conversationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -568,7 +573,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **calibrationId** | **string**| Calibration ID |  |
-| **calibratorId** | **string**| calibratorId |  |
+| **calibratorId** | **string**| calibratorId | [optional]  |
+| **conversationId** | **string**| conversationId | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

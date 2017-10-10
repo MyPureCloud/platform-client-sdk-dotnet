@@ -24,9 +24,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The sort direction
+        /// The direction in which to sort contacts.
         /// </summary>
-        /// <value>The sort direction</value>
+        /// <value>The direction in which to sort contacts.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
@@ -61,9 +61,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The sort direction
+        /// The direction in which to sort contacts.
         /// </summary>
-        /// <value>The sort direction</value>
+        /// <value>The direction in which to sort contacts.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         
@@ -80,11 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Direction">The sort direction.</param>
+        /// <param name="Direction">The direction in which to sort contacts..</param>
         
         
         
-        /// <param name="Numeric">Whether that column contains numeric data.</param>
+        /// <param name="Numeric">Whether or not the column contains numeric data..</param>
         
         
         public ContactSort(string FieldName = null, DirectionEnum? Direction = null, bool? Numeric = null)
@@ -145,9 +145,9 @@ this.Numeric = Numeric;
         
         
         /// <summary>
-        /// Whether that column contains numeric data
+        /// Whether or not the column contains numeric data.
         /// </summary>
-        /// <value>Whether that column contains numeric data</value>
+        /// <value>Whether or not the column contains numeric data.</value>
         [DataMember(Name="numeric", EmitDefaultValue=false)]
         public bool? Numeric { get; set; }
         

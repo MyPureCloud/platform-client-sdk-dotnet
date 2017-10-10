@@ -95,6 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets CampaignStatus
         /// </summary>
@@ -230,6 +233,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets CampaignStatus
         /// </summary>
@@ -323,6 +328,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Site">Site.</param>
+        
+        
+        
         /// <param name="CampaignStatus">CampaignStatus.</param>
         
         
@@ -406,8 +415,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, List<CampaignNotificationContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<CampaignNotificationUriReference> ContactListFilters = null, Object AdditionalProperties = null)
+        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignNotificationUriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, List<CampaignNotificationContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<CampaignNotificationUriReference> ContactListFilters = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
             
             
             
@@ -620,6 +633,15 @@ this.Script = Script;
             
             
 this.EdgeGroup = EdgeGroup;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Site = Site;
             
             
             
@@ -891,6 +913,14 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         
+        /// <summary>
+        /// Gets or Sets Site
+        /// </summary>
+        [DataMember(Name="site", EmitDefaultValue=false)]
+        public CampaignNotificationUriReference Site { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -1081,6 +1111,8 @@ this.AdditionalProperties = AdditionalProperties;
             
             sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
             
+            sb.Append("  Site: ").Append(Site).Append("\n");
+            
             sb.Append("  CampaignStatus: ").Append(CampaignStatus).Append("\n");
             
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
@@ -1208,6 +1240,11 @@ this.AdditionalProperties = AdditionalProperties;
                     this.EdgeGroup == other.EdgeGroup ||
                     this.EdgeGroup != null &&
                     this.EdgeGroup.Equals(other.EdgeGroup)
+                ) &&
+                (
+                    this.Site == other.Site ||
+                    this.Site != null &&
+                    this.Site.Equals(other.Site)
                 ) &&
                 (
                     this.CampaignStatus == other.CampaignStatus ||
@@ -1357,6 +1394,9 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
+                
+                if (this.Site != null)
+                    hash = hash * 59 + this.Site.GetHashCode();
                 
                 if (this.CampaignStatus != null)
                     hash = hash * 59 + this.CampaignStatus.GetHashCode();

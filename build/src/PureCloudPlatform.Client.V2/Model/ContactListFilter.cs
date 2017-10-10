@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The filter type tells the api how to compare between clauses
+        /// How to join clauses together.
         /// </summary>
-        /// <value>The filter type tells the api how to compare between clauses</value>
+        /// <value>How to join clauses together.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FilterTypeEnum
         {
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The filter type tells the api how to compare between clauses
+        /// How to join clauses together.
         /// </summary>
-        /// <value>The filter type tells the api how to compare between clauses</value>
+        /// <value>How to join clauses together.</value>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
         
@@ -114,7 +114,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the list. (required).</param>
         
         
         
@@ -126,15 +126,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ContactList">The contact list the filter is based on (required).</param>
+        /// <param name="ContactList">The contact list the filter is based on. (required).</param>
         
         
         
-        /// <param name="Clauses">Clauses.</param>
+        /// <param name="Clauses">Groups of conditions to filter the contacts by..</param>
         
         
         
-        /// <param name="FilterType">The filter type tells the api how to compare between clauses.</param>
+        /// <param name="FilterType">How to join clauses together..</param>
         
         
         
@@ -145,6 +145,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for ContactListFilter and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             
             
             
@@ -183,11 +193,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
-this.Name = Name;
             
             
             
@@ -243,8 +248,9 @@ this.FilterType = FilterType;
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the list.
         /// </summary>
+        /// <value>The name of the list.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
@@ -278,17 +284,18 @@ this.FilterType = FilterType;
         
         
         /// <summary>
-        /// The contact list the filter is based on
+        /// The contact list the filter is based on.
         /// </summary>
-        /// <value>The contact list the filter is based on</value>
+        /// <value>The contact list the filter is based on.</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Clauses
+        /// Groups of conditions to filter the contacts by.
         /// </summary>
+        /// <value>Groups of conditions to filter the contacts by.</value>
         [DataMember(Name="clauses", EmitDefaultValue=false)]
         public List<ContactListFilterClause> Clauses { get; set; }
         

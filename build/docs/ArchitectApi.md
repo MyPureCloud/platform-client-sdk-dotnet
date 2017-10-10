@@ -2956,7 +2956,7 @@ namespace Example
 
 <a name="getflows"></a>
 
-## [**FlowEntityListing**](FlowEntityListing.html) GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
+## [**FlowEntityListing**](FlowEntityListing.html) GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null)
 
 Get a pageable list of flows, filtered by query parameters
 
@@ -3058,13 +3058,23 @@ namespace Example
             
             
             
+            
+            var publishedAfter = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published after (optional) 
+            
+            
+            
+            
+            var publishedBefore = 2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01;  // string | Published before (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get a pageable list of flows, filtered by query parameters
                 
-                FlowEntityListing result = apiInstance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas);
+                FlowEntityListing result = apiInstance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas, publishedAfter, publishedBefore);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3096,6 +3106,8 @@ namespace Example
 | **secure** | **string**| Secure | [optional] <br />**Values**: any, checkedin, published |
 | **deleted** | **bool?**| Include deleted | [optional] [default to false] |
 | **includeSchemas** | **bool?**| Include variable schemas | [optional] [default to false] |
+| **publishedAfter** | **string**| Published after | [optional]  |
+| **publishedBefore** | **string**| Published before | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

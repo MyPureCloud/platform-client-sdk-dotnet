@@ -115,11 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DefaultSet">The default set of wrapup values.</param>
+        /// <param name="DefaultSet">The default set of wrap-up flags. These will be used if there is no entry for a given wrap-up code in the mapping..</param>
         
         
         
-        /// <param name="Mapping">A map from wrapup code identifiers to a set of wrapup values.</param>
+        /// <param name="Mapping">A map from wrap-up code identifiers to a set of wrap-up flags..</param>
         
         
         
@@ -245,18 +245,18 @@ this.Mapping = Mapping;
         
         
         /// <summary>
-        /// The default set of wrapup values
+        /// The default set of wrap-up flags. These will be used if there is no entry for a given wrap-up code in the mapping.
         /// </summary>
-        /// <value>The default set of wrapup values</value>
+        /// <value>The default set of wrap-up flags. These will be used if there is no entry for a given wrap-up code in the mapping.</value>
         [DataMember(Name="defaultSet", EmitDefaultValue=false)]
         public List<DefaultSetEnum> DefaultSet { get; set; }
         
         
         
         /// <summary>
-        /// A map from wrapup code identifiers to a set of wrapup values
+        /// A map from wrap-up code identifiers to a set of wrap-up flags.
         /// </summary>
-        /// <value>A map from wrapup code identifiers to a set of wrapup values</value>
+        /// <value>A map from wrap-up code identifiers to a set of wrap-up flags.</value>
         [DataMember(Name="mapping", EmitDefaultValue=false)]
         public Dictionary<string, List<string>> Mapping { get; set; }
         

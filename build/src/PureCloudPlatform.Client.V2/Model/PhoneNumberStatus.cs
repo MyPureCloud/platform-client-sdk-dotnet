@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Callable">false if the phone number is not callable.</param>
+        /// <param name="Callable">Indicates whether or not a phone number is callable..</param>
         
         
         public PhoneNumberStatus(bool? Callable = null)
@@ -56,9 +56,9 @@ this.Callable = Callable;
         
         
         /// <summary>
-        /// false if the phone number is not callable
+        /// Indicates whether or not a phone number is callable.
         /// </summary>
-        /// <value>false if the phone number is not callable</value>
+        /// <value>Indicates whether or not a phone number is callable.</value>
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
         

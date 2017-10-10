@@ -78,23 +78,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ContactListId">Identifier of the contact list containing this contact (required).</param>
+        /// <param name="ContactListId">The identifier of the contact list containing this contact. (required).</param>
         
         
         
-        /// <param name="Data">An ordered map of the contact&#39;s data attributes and values.</param>
+        /// <param name="Data">An ordered map of the contact&#39;s columns and corresponding values. (required).</param>
         
         
         
-        /// <param name="CallRecords">A map of call records for the contact phone columns.</param>
+        /// <param name="CallRecords">A map of call records for the contact phone columns..</param>
         
         
         
-        /// <param name="Callable">false if the contact is not to be called.</param>
+        /// <param name="Callable">Indicates whether or not the contact can be called..</param>
         
         
         
-        /// <param name="PhoneNumberStatus">A map of statuses for the contact phone columns.</param>
+        /// <param name="PhoneNumberStatus">A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not..</param>
         
         
         
@@ -123,6 +123,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            // to ensure "Data" is required (not null)
+            if (Data == null)
+            {
+                throw new InvalidDataException("Data is a required property for DialerContact and cannot be null");
+            }
+            else
+            {
+                this.Data = Data;
+            }
             
             
             
@@ -156,11 +166,6 @@ this.Name = Name;
             
             
             
-            
-            
-            
-            
-this.Data = Data;
             
             
             
@@ -216,45 +221,45 @@ this.PhoneNumberStatus = PhoneNumberStatus;
         
         
         /// <summary>
-        /// Identifier of the contact list containing this contact
+        /// The identifier of the contact list containing this contact.
         /// </summary>
-        /// <value>Identifier of the contact list containing this contact</value>
+        /// <value>The identifier of the contact list containing this contact.</value>
         [DataMember(Name="contactListId", EmitDefaultValue=false)]
         public string ContactListId { get; set; }
         
         
         
         /// <summary>
-        /// An ordered map of the contact&#39;s data attributes and values
+        /// An ordered map of the contact&#39;s columns and corresponding values.
         /// </summary>
-        /// <value>An ordered map of the contact&#39;s data attributes and values</value>
+        /// <value>An ordered map of the contact&#39;s columns and corresponding values.</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public Dictionary<string, Object> Data { get; set; }
         
         
         
         /// <summary>
-        /// A map of call records for the contact phone columns
+        /// A map of call records for the contact phone columns.
         /// </summary>
-        /// <value>A map of call records for the contact phone columns</value>
+        /// <value>A map of call records for the contact phone columns.</value>
         [DataMember(Name="callRecords", EmitDefaultValue=false)]
         public Dictionary<string, CallRecord> CallRecords { get; set; }
         
         
         
         /// <summary>
-        /// false if the contact is not to be called
+        /// Indicates whether or not the contact can be called.
         /// </summary>
-        /// <value>false if the contact is not to be called</value>
+        /// <value>Indicates whether or not the contact can be called.</value>
         [DataMember(Name="callable", EmitDefaultValue=false)]
         public bool? Callable { get; set; }
         
         
         
         /// <summary>
-        /// A map of statuses for the contact phone columns
+        /// A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not.
         /// </summary>
-        /// <value>A map of statuses for the contact phone columns</value>
+        /// <value>A map of phone number columns to PhoneNumberStatuses, which indicate if the phone number is callable or not.</value>
         [DataMember(Name="phoneNumberStatus", EmitDefaultValue=false)]
         public Dictionary<string, PhoneNumberStatus> PhoneNumberStatus { get; set; }
         

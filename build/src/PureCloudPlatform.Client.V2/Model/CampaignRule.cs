@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the CampaignRule. (required).</param>
         
         
         
@@ -101,15 +101,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="CampaignRuleEntities">the list of entities the rule monitors (required).</param>
+        /// <param name="CampaignRuleEntities">The list of entities that this CampaignRule monitors. (required).</param>
         
         
         
-        /// <param name="CampaignRuleConditions">the list of conditions the are evaluated (required).</param>
+        /// <param name="CampaignRuleConditions">The list of conditions that are evaluated on the entities. (required).</param>
         
         
         
-        /// <param name="CampaignRuleActions">the list of actions that are executed if the conditions are satisfied (required).</param>
+        /// <param name="CampaignRuleActions">The list of actions that are executed if the conditions are satisfied. (required).</param>
         
         
         
@@ -117,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Enabled">Enabled.</param>
+        /// <param name="Enabled">Whether or not this CampaignRule is currently enabled. Required on updates..</param>
         
         
         
@@ -128,6 +128,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for CampaignRule and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             
             
             
@@ -198,11 +208,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Name = Name;
-            
-            
-            
-            
             
             
             
@@ -262,8 +267,9 @@ this.Enabled = Enabled;
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the CampaignRule.
         /// </summary>
+        /// <value>The name of the CampaignRule.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
@@ -297,27 +303,27 @@ this.Enabled = Enabled;
         
         
         /// <summary>
-        /// the list of entities the rule monitors
+        /// The list of entities that this CampaignRule monitors.
         /// </summary>
-        /// <value>the list of entities the rule monitors</value>
+        /// <value>The list of entities that this CampaignRule monitors.</value>
         [DataMember(Name="campaignRuleEntities", EmitDefaultValue=false)]
         public CampaignRuleEntities CampaignRuleEntities { get; set; }
         
         
         
         /// <summary>
-        /// the list of conditions the are evaluated
+        /// The list of conditions that are evaluated on the entities.
         /// </summary>
-        /// <value>the list of conditions the are evaluated</value>
+        /// <value>The list of conditions that are evaluated on the entities.</value>
         [DataMember(Name="campaignRuleConditions", EmitDefaultValue=false)]
         public List<CampaignRuleCondition> CampaignRuleConditions { get; set; }
         
         
         
         /// <summary>
-        /// the list of actions that are executed if the conditions are satisfied
+        /// The list of actions that are executed if the conditions are satisfied.
         /// </summary>
-        /// <value>the list of actions that are executed if the conditions are satisfied</value>
+        /// <value>The list of actions that are executed if the conditions are satisfied.</value>
         [DataMember(Name="campaignRuleActions", EmitDefaultValue=false)]
         public List<CampaignRuleAction> CampaignRuleActions { get; set; }
         
@@ -332,8 +338,9 @@ this.Enabled = Enabled;
         
         
         /// <summary>
-        /// Gets or Sets Enabled
+        /// Whether or not this CampaignRule is currently enabled. Required on updates.
         /// </summary>
+        /// <value>Whether or not this CampaignRule is currently enabled. Required on updates.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
         

@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the ResponseSet. (required).</param>
         
         
         
@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}} (required).</param>
+        /// <param name="Responses">Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}. (required).</param>
         
         
         
@@ -92,6 +92,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for ResponseSet and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             
             
             
@@ -122,11 +132,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
-this.Name = Name;
             
             
             
@@ -164,8 +169,9 @@ this.Version = Version;
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the ResponseSet.
         /// </summary>
+        /// <value>The name of the ResponseSet.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
@@ -199,9 +205,9 @@ this.Version = Version;
         
         
         /// <summary>
-        /// Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}
+        /// Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}.
         /// </summary>
-        /// <value>Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}</value>
+        /// <value>Map of disposition identifiers to reactions. For example: {\&quot;disposition.classification.callable.person\&quot;: {\&quot;reactionType\&quot;: \&quot;transfer\&quot;}}.</value>
         [DataMember(Name="responses", EmitDefaultValue=false)]
         public Dictionary<string, Reaction> Responses { get; set; }
         

@@ -397,11 +397,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>CallHistoryConversationEntityListing</returns>
-        CallHistoryConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null);
+        CallHistoryConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null);
 
         /// <summary>
         /// Get call history
@@ -410,11 +411,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of CallHistoryConversationEntityListing</returns>
-        ApiResponse<CallHistoryConversationEntityListing> GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null);
+        ApiResponse<CallHistoryConversationEntityListing> GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null);
         
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -1473,6 +1475,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostConversationParticipantCallbacksWithHttpInfo (string conversationId, string participantId, CreateCallbackOnConversationCommand body = null);
         
         /// <summary>
+        /// Sends DTMF to the participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns></returns>
+        void PostConversationParticipantDigits (string conversationId, string participantId, Digits body = null);
+
+        /// <summary>
+        /// Sends DTMF to the participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> PostConversationParticipantDigitsWithHttpInfo (string conversationId, string participantId, Digits body = null);
+        
+        /// <summary>
         /// Replace this participant with the specified user and/or address
         /// </summary>
         /// <remarks>
@@ -2321,11 +2349,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of CallHistoryConversationEntityListing</returns>
-        System.Threading.Tasks.Task<CallHistoryConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null);
+        System.Threading.Tasks.Task<CallHistoryConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null);
 
         /// <summary>
         /// Get call history
@@ -2334,11 +2363,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (CallHistoryConversationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CallHistoryConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null);
+        System.Threading.Tasks.Task<ApiResponse<CallHistoryConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null);
         
         /// <summary>
         /// Get the maximum number of participants that this user can have on a conference
@@ -3395,6 +3425,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationParticipantCallbacksAsyncWithHttpInfo (string conversationId, string participantId, CreateCallbackOnConversationCommand body = null);
+        
+        /// <summary>
+        /// Sends DTMF to the participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task PostConversationParticipantDigitsAsync (string conversationId, string participantId, Digits body = null);
+
+        /// <summary>
+        /// Sends DTMF to the participant
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationParticipantDigitsAsyncWithHttpInfo (string conversationId, string participantId, Digits body = null);
         
         /// <summary>
         /// Replace this participant with the specified user and/or address
@@ -7121,13 +7177,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get call history 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>CallHistoryConversationEntityListing</returns>
-        public CallHistoryConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null)
+        public CallHistoryConversationEntityListing GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
         {
-             ApiResponse<CallHistoryConversationEntityListing> localVarResponse = GetConversationsCallsHistoryWithHttpInfo(pageSize, pageNumber, interval);
+             ApiResponse<CallHistoryConversationEntityListing> localVarResponse = GetConversationsCallsHistoryWithHttpInfo(pageSize, pageNumber, interval, expand);
              return localVarResponse.Data;
         }
 
@@ -7135,11 +7192,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get call history 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of CallHistoryConversationEntityListing</returns>
-        public ApiResponse< CallHistoryConversationEntityListing > GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null)
+        public ApiResponse< CallHistoryConversationEntityListing > GetConversationsCallsHistoryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/conversations/calls/history";
@@ -7178,6 +7236,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", Configuration.ApiClient.ParameterToString(interval)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7218,13 +7277,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get call history 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of CallHistoryConversationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CallHistoryConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null)
+        public async System.Threading.Tasks.Task<CallHistoryConversationEntityListing> GetConversationsCallsHistoryAsync (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
         {
-             ApiResponse<CallHistoryConversationEntityListing> localVarResponse = await GetConversationsCallsHistoryAsyncWithHttpInfo(pageSize, pageNumber, interval);
+             ApiResponse<CallHistoryConversationEntityListing> localVarResponse = await GetConversationsCallsHistoryAsyncWithHttpInfo(pageSize, pageNumber, interval, expand);
              return localVarResponse.Data;
 
         }
@@ -7233,11 +7293,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get call history 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageSize">Page size, maximum 50 (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="interval">Interval string; format is ISO-8601. Separate start and end times with forward slash &#39;/&#39; (optional)</param>
+        /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (CallHistoryConversationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CallHistoryConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CallHistoryConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/conversations/calls/history";
@@ -7276,6 +7337,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
             if (interval != null) localVarQueryParams.Add(new Tuple<string, string>("interval", Configuration.ApiClient.ParameterToString(interval)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -16380,6 +16442,222 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantCallbacks: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantCallbacks: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        
+        /// <summary>
+        /// Sends DTMF to the participant 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns></returns>
+        public void PostConversationParticipantDigits (string conversationId, string participantId, Digits body = null)
+        {
+             PostConversationParticipantDigitsWithHttpInfo(conversationId, participantId, body);
+        }
+
+        /// <summary>
+        /// Sends DTMF to the participant 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> PostConversationParticipantDigitsWithHttpInfo (string conversationId, string participantId, Digits body = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationParticipantDigits");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantDigits");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/digits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantDigits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantDigits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        /// <summary>
+        /// Sends DTMF to the participant 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task PostConversationParticipantDigitsAsync (string conversationId, string participantId, Digits body = null)
+        {
+             await PostConversationParticipantDigitsAsyncWithHttpInfo(conversationId, participantId, body);
+
+        }
+
+        /// <summary>
+        /// Sends DTMF to the participant 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body">Digits (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationParticipantDigitsAsyncWithHttpInfo (string conversationId, string participantId, Digits body = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationParticipantDigits");
+            
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantDigits");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/digits";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantDigits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantDigits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,

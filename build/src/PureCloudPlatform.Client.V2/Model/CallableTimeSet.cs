@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the CallableTimeSet. (required).</param>
         
         
         
@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="CallableTimes">list of time/timezone groupings for which it is acceptable to place outbound calls (required).</param>
+        /// <param name="CallableTimes">The list of CallableTimes for which it is acceptable to place outbound calls. (required).</param>
         
         
         
@@ -92,6 +92,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for CallableTimeSet and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             
             
             
@@ -122,11 +132,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
-this.Name = Name;
             
             
             
@@ -164,8 +169,9 @@ this.Version = Version;
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the CallableTimeSet.
         /// </summary>
+        /// <value>The name of the CallableTimeSet.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
@@ -199,9 +205,9 @@ this.Version = Version;
         
         
         /// <summary>
-        /// list of time/timezone groupings for which it is acceptable to place outbound calls
+        /// The list of CallableTimes for which it is acceptable to place outbound calls.
         /// </summary>
-        /// <value>list of time/timezone groupings for which it is acceptable to place outbound calls</value>
+        /// <value>The list of CallableTimes for which it is acceptable to place outbound calls.</value>
         [DataMember(Name="callableTimes", EmitDefaultValue=false)]
         public List<CallableTime> CallableTimes { get; set; }
         

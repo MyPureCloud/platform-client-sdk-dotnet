@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The filter type tells the api how to compare between predicates
+        /// How to join predicates together.
         /// </summary>
-        /// <value>The filter type tells the api how to compare between predicates</value>
+        /// <value>How to join predicates together.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum FilterTypeEnum
         {
@@ -56,9 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The filter type tells the api how to compare between predicates
+        /// How to join predicates together.
         /// </summary>
-        /// <value>The filter type tells the api how to compare between predicates</value>
+        /// <value>How to join predicates together.</value>
         [DataMember(Name="filterType", EmitDefaultValue=false)]
         public FilterTypeEnum? FilterType { get; set; }
         
@@ -71,11 +71,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="FilterType">The filter type tells the api how to compare between predicates.</param>
+        /// <param name="FilterType">How to join predicates together..</param>
         
         
         
-        /// <param name="Predicates">Predicates.</param>
+        /// <param name="Predicates">Conditions to filter the contacts by..</param>
         
         
         public ContactListFilterClause(FilterTypeEnum? FilterType = null, List<ContactListFilterPredicate> Predicates = null)
@@ -115,8 +115,9 @@ this.Predicates = Predicates;
         
         
         /// <summary>
-        /// Gets or Sets Predicates
+        /// Conditions to filter the contacts by.
         /// </summary>
+        /// <value>Conditions to filter the contacts by.</value>
         [DataMember(Name="predicates", EmitDefaultValue=false)]
         public List<ContactListFilterPredicate> Predicates { get; set; }
         

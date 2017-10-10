@@ -12,6 +12,8 @@ namespace PureCloudPlatform.Client.V2.Client
         {
             Topics = new Dictionary<string, Type>
             { 
+              {"v2.analytics.queues.{id}.observations", typeof(StatsNotificationNotification)},
+              {"v2.analytics.users.{id}.aggregates", typeof(StatsNotificationNotification)},
               {"v2.architect.dependencytracking.build", typeof(DependencyTrackingBuildNotificationNotification)},
               {"v2.architect.prompts.{id}", typeof(PromptNotificationNotification)},
               {"v2.architect.prompts.{id}.resources.{id}", typeof(PromptResourceNotificationNotification)},
@@ -37,6 +39,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.outbound.schedules.campaigns.{id}", typeof(CampaignScheduleNotification)},
               {"v2.outbound.schedules.sequences.{id}", typeof(SequenceScheduleNotification)},
               {"v2.outbound.sequences.{id}", typeof(CampaignSequenceNotification)},
+              {"v2.outbound.settings", typeof(OutboundSettingsNotification)},
               {"v2.outbound.wrapupcodemappings.{id}", typeof(WrapUpCodeMappingNotification)},
               {"v2.routing.queues.{id}.conversations", typeof(ConversationNotification)},
               {"v2.routing.queues.{id}.conversations.callbacks", typeof(CallbackConversationNotification)},
@@ -48,6 +51,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.routing.queues.{id}.conversations.socialexpressions", typeof(ConversationNotification)},
               {"v2.routing.queues.{id}.conversations.videos", typeof(ConversationNotification)},
               {"v2.routing.queues.{id}.users", typeof(QueueMemberNotification)},
+              {"v2.users.{id}.activity", typeof(AgentActivityNotification)},
               {"v2.users.{id}.alerting.heartbeat.alerts", typeof(HeartBeatAlertNotification)},
               {"v2.users.{id}.alerting.heartbeat.rules", typeof(HeartBeatRuleNotification)},
               {"v2.users.{id}.alerting.interactionstats.alerts", typeof(InteractionStatAlertNotification)},

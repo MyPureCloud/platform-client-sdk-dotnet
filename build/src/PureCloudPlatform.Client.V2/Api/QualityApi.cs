@@ -177,28 +177,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         
         /// <summary>
-        /// Get a calibration by id.
+        /// Get a calibration by id.  Requires either calibrator id or conversation id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Calibration</returns>
-        Calibration GetQualityCalibration (string calibrationId, string calibratorId);
+        Calibration GetQualityCalibration (string calibrationId, string calibratorId = null, string conversationId = null);
 
         /// <summary>
-        /// Get a calibration by id.
+        /// Get a calibration by id.  Requires either calibrator id or conversation id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        ApiResponse<Calibration> GetQualityCalibrationWithHttpInfo (string calibrationId, string calibratorId);
+        ApiResponse<Calibration> GetQualityCalibrationWithHttpInfo (string calibrationId, string calibratorId = null, string conversationId = null);
         
         /// <summary>
         /// Get the list of calibrations
@@ -1041,28 +1043,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         
         /// <summary>
-        /// Get a calibration by id.
+        /// Get a calibration by id.  Requires either calibrator id or conversation id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        System.Threading.Tasks.Task<Calibration> GetQualityCalibrationAsync (string calibrationId, string calibratorId);
+        System.Threading.Tasks.Task<Calibration> GetQualityCalibrationAsync (string calibrationId, string calibratorId = null, string conversationId = null);
 
         /// <summary>
-        /// Get a calibration by id.
+        /// Get a calibration by id.  Requires either calibrator id or conversation id
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Calibration>> GetQualityCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId);
+        System.Threading.Tasks.Task<ApiResponse<Calibration>> GetQualityCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId = null, string conversationId = null);
         
         /// <summary>
         /// Get the list of calibrations
@@ -3064,33 +3068,32 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Get a calibration by id. 
+        /// Get a calibration by id.  Requires either calibrator id or conversation id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Calibration</returns>
-        public Calibration GetQualityCalibration (string calibrationId, string calibratorId)
+        public Calibration GetQualityCalibration (string calibrationId, string calibratorId = null, string conversationId = null)
         {
-             ApiResponse<Calibration> localVarResponse = GetQualityCalibrationWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> localVarResponse = GetQualityCalibrationWithHttpInfo(calibrationId, calibratorId, conversationId);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Get a calibration by id. 
+        /// Get a calibration by id.  Requires either calibrator id or conversation id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>ApiResponse of Calibration</returns>
-        public ApiResponse< Calibration > GetQualityCalibrationWithHttpInfo (string calibrationId, string calibratorId)
+        public ApiResponse< Calibration > GetQualityCalibrationWithHttpInfo (string calibrationId, string calibratorId = null, string conversationId = null)
         { 
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
                 throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetQualityCalibration");
-            // verify the required parameter 'calibratorId' is set
-            if (calibratorId == null)
-                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetQualityCalibration");
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -3127,6 +3130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (calibratorId != null) localVarQueryParams.Add(new Tuple<string, string>("calibratorId", Configuration.ApiClient.ParameterToString(calibratorId)));
+            if (conversationId != null) localVarQueryParams.Add(new Tuple<string, string>("conversationId", Configuration.ApiClient.ParameterToString(conversationId)));
 
             // Header params
 
@@ -3164,35 +3168,33 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Get a calibration by id. 
+        /// Get a calibration by id.  Requires either calibrator id or conversation id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of Calibration</returns>
-        public async System.Threading.Tasks.Task<Calibration> GetQualityCalibrationAsync (string calibrationId, string calibratorId)
+        public async System.Threading.Tasks.Task<Calibration> GetQualityCalibrationAsync (string calibrationId, string calibratorId = null, string conversationId = null)
         {
-             ApiResponse<Calibration> localVarResponse = await GetQualityCalibrationAsyncWithHttpInfo(calibrationId, calibratorId);
+             ApiResponse<Calibration> localVarResponse = await GetQualityCalibrationAsyncWithHttpInfo(calibrationId, calibratorId, conversationId);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Get a calibration by id. 
+        /// Get a calibration by id.  Requires either calibrator id or conversation id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="calibrationId">Calibration ID</param>
-        /// <param name="calibratorId">calibratorId</param>
+        /// <param name="calibratorId">calibratorId (optional)</param>
+        /// <param name="conversationId">conversationId (optional)</param>
         /// <returns>Task of ApiResponse (Calibration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> GetQualityCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId)
+        public async System.Threading.Tasks.Task<ApiResponse<Calibration>> GetQualityCalibrationAsyncWithHttpInfo (string calibrationId, string calibratorId = null, string conversationId = null)
         { 
             // verify the required parameter 'calibrationId' is set
             if (calibrationId == null)
                 throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetQualityCalibration");
-            
-            // verify the required parameter 'calibratorId' is set
-            if (calibratorId == null)
-                throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetQualityCalibration");
             
 
             var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
@@ -3230,6 +3232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (calibratorId != null) localVarQueryParams.Add(new Tuple<string, string>("calibratorId", Configuration.ApiClient.ParameterToString(calibratorId)));
+            if (conversationId != null) localVarQueryParams.Add(new Tuple<string, string>("conversationId", Configuration.ApiClient.ParameterToString(conversationId)));
 
             // Header params
 

@@ -51,23 +51,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Min">Min.</param>
+        /// <param name="Min">The minimum value of the range. Required for the operator BETWEEN..</param>
         
         
         
-        /// <param name="Max">Max.</param>
+        /// <param name="Max">The maximum value of the range. Required for the operator BETWEEN..</param>
         
         
         
-        /// <param name="MinInclusive">MinInclusive.</param>
+        /// <param name="MinInclusive">Whether or not to include the minimum in the range..</param>
         
         
         
-        /// <param name="MaxInclusive">MaxInclusive.</param>
+        /// <param name="MaxInclusive">Whether or not to include the maximum in the range..</param>
         
         
         
-        /// <param name="InSet">InSet.</param>
+        /// <param name="InSet">A set of values that the contact data should be in. Required for the IN operator..</param>
         
         
         public ContactListFilterRange(string Min = null, string Max = null, bool? MinInclusive = null, bool? MaxInclusive = null, List<string> InSet = null)
@@ -144,40 +144,45 @@ this.InSet = InSet;
         
         
         /// <summary>
-        /// Gets or Sets Min
+        /// The minimum value of the range. Required for the operator BETWEEN.
         /// </summary>
+        /// <value>The minimum value of the range. Required for the operator BETWEEN.</value>
         [DataMember(Name="min", EmitDefaultValue=false)]
         public string Min { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Max
+        /// The maximum value of the range. Required for the operator BETWEEN.
         /// </summary>
+        /// <value>The maximum value of the range. Required for the operator BETWEEN.</value>
         [DataMember(Name="max", EmitDefaultValue=false)]
         public string Max { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MinInclusive
+        /// Whether or not to include the minimum in the range.
         /// </summary>
+        /// <value>Whether or not to include the minimum in the range.</value>
         [DataMember(Name="minInclusive", EmitDefaultValue=false)]
         public bool? MinInclusive { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets MaxInclusive
+        /// Whether or not to include the maximum in the range.
         /// </summary>
+        /// <value>Whether or not to include the maximum in the range.</value>
         [DataMember(Name="maxInclusive", EmitDefaultValue=false)]
         public bool? MaxInclusive { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets InSet
+        /// A set of values that the contact data should be in. Required for the IN operator.
         /// </summary>
+        /// <value>A set of values that the contact data should be in. Required for the IN operator.</value>
         [DataMember(Name="inSet", EmitDefaultValue=false)]
         public List<string> InSet { get; set; }
         

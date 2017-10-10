@@ -8,7 +8,7 @@ title: UserPresenceNotification
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Source** | **string** |  | [optional] |
-| **PresenceDefinition** | [**UserPresenceNotificationPresenceDefinition**](UserPresenceNotificationPresenceDefinition.html) |  | [optional] |
+| **PresenceDefinition** | [**AgentActivityNotificationPresencePresenceDefinition**](AgentActivityNotificationPresencePresenceDefinition.html) |  | [optional] |
 | **Primary** | **bool?** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **ModifiedDate** | **DateTime?** |  | [optional] |

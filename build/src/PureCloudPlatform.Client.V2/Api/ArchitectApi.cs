@@ -1028,8 +1028,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>FlowEntityListing</returns>
-        FlowEntityListing GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null);
+        FlowEntityListing GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
 
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -1053,8 +1055,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
-        ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null);
+        ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
         
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -2580,8 +2584,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>Task of FlowEntityListing</returns>
-        System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null);
+        System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
 
         /// <summary>
         /// Get a pageable list of flows, filtered by query parameters
@@ -2605,8 +2611,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
         
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -10940,10 +10948,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>FlowEntityListing</returns>
-        public FlowEntityListing GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
+        public FlowEntityListing GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null)
         {
-             ApiResponse<FlowEntityListing> localVarResponse = GetFlowsWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas);
+             ApiResponse<FlowEntityListing> localVarResponse = GetFlowsWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas, publishedAfter, publishedBefore);
              return localVarResponse.Data;
         }
 
@@ -10966,8 +10976,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>ApiResponse of FlowEntityListing</returns>
-        public ApiResponse< FlowEntityListing > GetFlowsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
+        public ApiResponse< FlowEntityListing > GetFlowsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null)
         { 
             // verify the required parameter 'type' is set
             if (type == null)
@@ -11021,6 +11033,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", Configuration.ApiClient.ParameterToString(secure)));
             if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
             if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)));
+            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", Configuration.ApiClient.ParameterToString(publishedAfter)));
+            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", Configuration.ApiClient.ParameterToString(publishedBefore)));
 
             // Header params
 
@@ -11076,10 +11090,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>Task of FlowEntityListing</returns>
-        public async System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
+        public async System.Threading.Tasks.Task<FlowEntityListing> GetFlowsAsync (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null)
         {
-             ApiResponse<FlowEntityListing> localVarResponse = await GetFlowsAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas);
+             ApiResponse<FlowEntityListing> localVarResponse = await GetFlowsAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas, publishedAfter, publishedBefore);
              return localVarResponse.Data;
 
         }
@@ -11103,8 +11119,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="secure">Secure (optional)</param>
         /// <param name="deleted">Include deleted (optional, default to false)</param>
         /// <param name="includeSchemas">Include variable schemas (optional, default to false)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
         /// <returns>Task of ApiResponse (FlowEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null)
         { 
             // verify the required parameter 'type' is set
             if (type == null)
@@ -11159,6 +11177,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", Configuration.ApiClient.ParameterToString(secure)));
             if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
             if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)));
+            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", Configuration.ApiClient.ParameterToString(publishedAfter)));
+            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", Configuration.ApiClient.ParameterToString(publishedBefore)));
 
             // Header params
 

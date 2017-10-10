@@ -42,17 +42,27 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="TimeSlots">intervals for which it is acceptable to place outbound calls.</param>
+        /// <param name="TimeSlots">The time intervals for which it is acceptable to place outbound calls. (required).</param>
         
         
         
-        /// <param name="TimeZoneId">time zone identifier to be applied to the time slots; for example Africa/Abidjan (required).</param>
+        /// <param name="TimeZoneId">The time zone for the time slots; for example, Africa/Abidjan (required).</param>
         
         
         public CallableTime(List<CampaignTimeSlot> TimeSlots = null, string TimeZoneId = null)
         {
             
             
+            
+            // to ensure "TimeSlots" is required (not null)
+            if (TimeSlots == null)
+            {
+                throw new InvalidDataException("TimeSlots is a required property for CallableTime and cannot be null");
+            }
+            else
+            {
+                this.TimeSlots = TimeSlots;
+            }
             
             
             
@@ -75,11 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.TimeSlots = TimeSlots;
-            
-            
-            
-            
             
             
             
@@ -89,18 +94,18 @@ this.TimeSlots = TimeSlots;
         
         
         /// <summary>
-        /// intervals for which it is acceptable to place outbound calls
+        /// The time intervals for which it is acceptable to place outbound calls.
         /// </summary>
-        /// <value>intervals for which it is acceptable to place outbound calls</value>
+        /// <value>The time intervals for which it is acceptable to place outbound calls.</value>
         [DataMember(Name="timeSlots", EmitDefaultValue=false)]
         public List<CampaignTimeSlot> TimeSlots { get; set; }
         
         
         
         /// <summary>
-        /// time zone identifier to be applied to the time slots; for example Africa/Abidjan
+        /// The time zone for the time slots; for example, Africa/Abidjan
         /// </summary>
-        /// <value>time zone identifier to be applied to the time slots; for example Africa/Abidjan</value>
+        /// <value>The time zone for the time slots; for example, Africa/Abidjan</value>
         [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
         public string TimeZoneId { get; set; }
         

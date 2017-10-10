@@ -7,10 +7,10 @@ title: CampaignRuleParameters
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_Operator** | **string** | The operator for comparison. Required for all campaign rule conditions | [optional] |
-| **Value** | **string** | The value for comparison. Required for all campaign rule conditions | [optional] |
-| **Priority** | **string** | The priority to set the campaign to. Required for &#39;set campaign priority&#39; actions | [optional] |
-| **DialingMode** | **string** | The dialing mode to set the campaign to. Reqired for &#39;set campaign dialing mode&#39; actions | [optional] |
+| **_Operator** | **string** | The operator for comparison. Required for a CampaignRuleCondition. | [optional] |
+| **Value** | **string** | The value for comparison. Required for a CampaignRuleCondition. | [optional] |
+| **Priority** | **string** | The priority to set a campaign to. Required for the &#39;setCampaignPriority&#39; action. | [optional] |
+| **DialingMode** | **string** | The dialing mode to set a campaign to. Required for the &#39;setCampaignDialingMode&#39; action. | [optional] |
 {: class="table table-striped"}
 
 

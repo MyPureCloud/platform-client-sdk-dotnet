@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The category of the rule
+        /// The category of the rule.
         /// </summary>
-        /// <value>The category of the rule</value>
+        /// <value>The category of the rule.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CategoryEnum
         {
@@ -74,9 +74,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The category of the rule
+        /// The category of the rule.
         /// </summary>
-        /// <value>The category of the rule</value>
+        /// <value>The category of the rule.</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
         
@@ -99,23 +99,23 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Name">The name of the rule (required).</param>
+        /// <param name="Name">The name of the rule. (required).</param>
         
         
         
-        /// <param name="Order">The ranked order of the rule; rules are processed from lowest number to highest.</param>
+        /// <param name="Order">The ranked order of the rule. Rules are processed from lowest number to highest..</param>
         
         
         
-        /// <param name="Category">The category of the rule (required).</param>
+        /// <param name="Category">The category of the rule. (required).</param>
         
         
         
-        /// <param name="Conditions">The list of rule conditions; all must evaluate to true to trigger the rule actions (required).</param>
+        /// <param name="Conditions">A list of Conditions. All of the Conditions must evaluate to true to trigger the actions. (required).</param>
         
         
         
-        /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
+        /// <param name="Actions">The list of actions to be taken if the conditions are true..</param>
         
         
         public DialerRule(string Name = null, int? Order = null, CategoryEnum? Category = null, List<Condition> Conditions = null, List<DialerAction> Actions = null)
@@ -211,27 +211,27 @@ this.Actions = Actions;
         
         
         /// <summary>
-        /// The identifier of the rule
+        /// The identifier of the rule.
         /// </summary>
-        /// <value>The identifier of the rule</value>
+        /// <value>The identifier of the rule.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
         
         
         
         /// <summary>
-        /// The name of the rule
+        /// The name of the rule.
         /// </summary>
-        /// <value>The name of the rule</value>
+        /// <value>The name of the rule.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// The ranked order of the rule; rules are processed from lowest number to highest
+        /// The ranked order of the rule. Rules are processed from lowest number to highest.
         /// </summary>
-        /// <value>The ranked order of the rule; rules are processed from lowest number to highest</value>
+        /// <value>The ranked order of the rule. Rules are processed from lowest number to highest.</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public int? Order { get; set; }
         
@@ -240,18 +240,18 @@ this.Actions = Actions;
         
         
         /// <summary>
-        /// The list of rule conditions; all must evaluate to true to trigger the rule actions
+        /// A list of Conditions. All of the Conditions must evaluate to true to trigger the actions.
         /// </summary>
-        /// <value>The list of rule conditions; all must evaluate to true to trigger the rule actions</value>
+        /// <value>A list of Conditions. All of the Conditions must evaluate to true to trigger the actions.</value>
         [DataMember(Name="conditions", EmitDefaultValue=false)]
         public List<Condition> Conditions { get; set; }
         
         
         
         /// <summary>
-        /// The list of rule actions to be taken if the conditions are true
+        /// The list of actions to be taken if the conditions are true.
         /// </summary>
-        /// <value>The list of rule actions to be taken if the conditions are true</value>
+        /// <value>The list of actions to be taken if the conditions are true.</value>
         [DataMember(Name="actions", EmitDefaultValue=false)]
         public List<DialerAction> Actions { get; set; }
         

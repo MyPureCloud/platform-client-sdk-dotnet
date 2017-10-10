@@ -34,13 +34,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleInterval" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected ScheduleInterval() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ScheduleInterval" /> class.
+        /// </summary>
         
         
-        /// <param name="Start">scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Start">The scheduled start time as an ISO-8601 string, i.e yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         
         
         
-        /// <param name="End">scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="End">The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ (required).</param>
         
         
         public ScheduleInterval(string Start = null, string End = null)
@@ -48,6 +54,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            // to ensure "Start" is required (not null)
+            if (Start == null)
+            {
+                throw new InvalidDataException("Start is a required property for ScheduleInterval and cannot be null");
+            }
+            else
+            {
+                this.Start = Start;
+            }
+            
+            
+            
+            
+            
+            // to ensure "End" is required (not null)
+            if (End == null)
+            {
+                throw new InvalidDataException("End is a required property for ScheduleInterval and cannot be null");
+            }
+            else
+            {
+                this.End = End;
+            }
             
             
             
@@ -56,19 +85,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-this.Start = Start;
-            
-            
-            
-            
-            
-            
-            
-            
-this.End = End;
             
             
             
@@ -78,18 +94,18 @@ this.End = End;
         
         
         /// <summary>
-        /// scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The scheduled start time as an ISO-8601 string, i.e yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>scheduled start time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The scheduled start time as an ISO-8601 string, i.e yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="start", EmitDefaultValue=false)]
         public string Start { get; set; }
         
         
         
         /// <summary>
-        /// scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>scheduled end time represented as an ISO-8601 string; for example, yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The scheduled end time as an ISO-8601 string, i.e. yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="end", EmitDefaultValue=false)]
         public string End { get; set; }
         

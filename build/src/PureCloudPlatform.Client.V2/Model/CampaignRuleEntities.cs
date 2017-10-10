@@ -36,11 +36,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Campaigns">Campaigns.</param>
+        /// <param name="Campaigns">The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign..</param>
         
         
         
-        /// <param name="Sequences">Sequences.</param>
+        /// <param name="Sequences">The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence..</param>
         
         
         public CampaignRuleEntities(List<UriReference> Campaigns = null, List<UriReference> Sequences = null)
@@ -78,16 +78,18 @@ this.Sequences = Sequences;
         
         
         /// <summary>
-        /// Gets or Sets Campaigns
+        /// The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign.
         /// </summary>
+        /// <value>The list of campaigns for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a campaign.</value>
         [DataMember(Name="campaigns", EmitDefaultValue=false)]
         public List<UriReference> Campaigns { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Sequences
+        /// The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence.
         /// </summary>
+        /// <value>The list of sequences for a CampaignRule to monitor. Required if the CampaignRule has any conditions that run on a sequence.</value>
         [DataMember(Name="sequences", EmitDefaultValue=false)]
         public List<UriReference> Sequences { get; set; }
         

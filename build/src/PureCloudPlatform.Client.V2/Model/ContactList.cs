@@ -111,29 +111,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ColumnNames">the contact column names (required).</param>
+        /// <param name="ColumnNames">The names of the contact data columns. (required).</param>
         
         
         
-        /// <param name="PhoneColumns">the columns containing phone numbers (required).</param>
+        /// <param name="PhoneColumns">Indicates which columns are phone numbers. (required).</param>
         
         
         
-        /// <param name="ImportStatus">the status of the import process.</param>
+        /// <param name="ImportStatus">The status of the import process..</param>
         
         
         
-        /// <param name="PreviewModeColumnName">the name of the column that holds the indicators for contacts that are to be dialed in preview mode only.</param>
+        /// <param name="PreviewModeColumnName">A column to check if a contact should always be dialed in preview mode..</param>
         
         
         
-        /// <param name="PreviewModeAcceptedValues">list of user-defined values indicating the contact is to be dialed in preview mode only.</param>
+        /// <param name="PreviewModeAcceptedValues">The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode..</param>
         
         
         
         
         
-        /// <param name="AttemptLimits">the associated AttemptLimits.</param>
+        /// <param name="AttemptLimits">AttemptLimits for this ContactList.</param>
         
         
         
@@ -325,63 +325,63 @@ this.AttemptLimits = AttemptLimits;
         
         
         /// <summary>
-        /// the contact column names
+        /// The names of the contact data columns.
         /// </summary>
-        /// <value>the contact column names</value>
+        /// <value>The names of the contact data columns.</value>
         [DataMember(Name="columnNames", EmitDefaultValue=false)]
         public List<string> ColumnNames { get; set; }
         
         
         
         /// <summary>
-        /// the columns containing phone numbers
+        /// Indicates which columns are phone numbers.
         /// </summary>
-        /// <value>the columns containing phone numbers</value>
+        /// <value>Indicates which columns are phone numbers.</value>
         [DataMember(Name="phoneColumns", EmitDefaultValue=false)]
         public List<ContactPhoneNumberColumn> PhoneColumns { get; set; }
         
         
         
         /// <summary>
-        /// the status of the import process
+        /// The status of the import process.
         /// </summary>
-        /// <value>the status of the import process</value>
+        /// <value>The status of the import process.</value>
         [DataMember(Name="importStatus", EmitDefaultValue=false)]
         public ImportStatus ImportStatus { get; set; }
         
         
         
         /// <summary>
-        /// the name of the column that holds the indicators for contacts that are to be dialed in preview mode only
+        /// A column to check if a contact should always be dialed in preview mode.
         /// </summary>
-        /// <value>the name of the column that holds the indicators for contacts that are to be dialed in preview mode only</value>
+        /// <value>A column to check if a contact should always be dialed in preview mode.</value>
         [DataMember(Name="previewModeColumnName", EmitDefaultValue=false)]
         public string PreviewModeColumnName { get; set; }
         
         
         
         /// <summary>
-        /// list of user-defined values indicating the contact is to be dialed in preview mode only
+        /// The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode.
         /// </summary>
-        /// <value>list of user-defined values indicating the contact is to be dialed in preview mode only</value>
+        /// <value>The values in the previewModeColumnName column that indicate a contact should always be dialed in preview mode.</value>
         [DataMember(Name="previewModeAcceptedValues", EmitDefaultValue=false)]
         public List<string> PreviewModeAcceptedValues { get; set; }
         
         
         
         /// <summary>
-        /// the number of contacts in the contact list
+        /// The number of contacts in the ContactList.
         /// </summary>
-        /// <value>the number of contacts in the contact list</value>
+        /// <value>The number of contacts in the ContactList.</value>
         [DataMember(Name="size", EmitDefaultValue=false)]
         public long? Size { get; private set; }
         
         
         
         /// <summary>
-        /// the associated AttemptLimits
+        /// AttemptLimits for this ContactList
         /// </summary>
-        /// <value>the associated AttemptLimits</value>
+        /// <value>AttemptLimits for this ContactList</value>
         [DataMember(Name="attemptLimits", EmitDefaultValue=false)]
         public UriReference AttemptLimits { get; set; }
         

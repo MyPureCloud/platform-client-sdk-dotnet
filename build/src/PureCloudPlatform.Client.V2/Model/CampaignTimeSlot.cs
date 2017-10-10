@@ -47,15 +47,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="StartTime">interval start time as an ISO-8601 string. For example: HH:mm:ss.</param>
+        /// <param name="StartTime">The start time of the interval as an ISO-8601 string, i.e. HH:mm:ss (required).</param>
         
         
         
-        /// <param name="StopTime">interval stop time as an ISO-8601 string. For example: HH:mm:ss.</param>
+        /// <param name="StopTime">The end time of the interval as an ISO-8601 string, i.e. HH:mm:ss (required).</param>
         
         
         
-        /// <param name="Day">must be within [1-7], representing Monday through Sunday (required).</param>
+        /// <param name="Day">The day of the interval. Valid values: [1-7], representing Monday through Sunday (required).</param>
         
         
         public CampaignTimeSlot(string StartTime = null, string StopTime = null, int? Day = null)
@@ -63,9 +63,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            // to ensure "StartTime" is required (not null)
+            if (StartTime == null)
+            {
+                throw new InvalidDataException("StartTime is a required property for CampaignTimeSlot and cannot be null");
+            }
+            else
+            {
+                this.StartTime = StartTime;
+            }
             
             
             
+            
+            
+            // to ensure "StopTime" is required (not null)
+            if (StopTime == null)
+            {
+                throw new InvalidDataException("StopTime is a required property for CampaignTimeSlot and cannot be null");
+            }
+            else
+            {
+                this.StopTime = StopTime;
+            }
             
             
             
@@ -88,16 +108,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.StartTime = StartTime;
-            
-            
-            
-            
-            
-            
-            
-            
-this.StopTime = StopTime;
             
             
             
@@ -111,27 +121,27 @@ this.StopTime = StopTime;
         
         
         /// <summary>
-        /// interval start time as an ISO-8601 string. For example: HH:mm:ss
+        /// The start time of the interval as an ISO-8601 string, i.e. HH:mm:ss
         /// </summary>
-        /// <value>interval start time as an ISO-8601 string. For example: HH:mm:ss</value>
+        /// <value>The start time of the interval as an ISO-8601 string, i.e. HH:mm:ss</value>
         [DataMember(Name="startTime", EmitDefaultValue=false)]
         public string StartTime { get; set; }
         
         
         
         /// <summary>
-        /// interval stop time as an ISO-8601 string. For example: HH:mm:ss
+        /// The end time of the interval as an ISO-8601 string, i.e. HH:mm:ss
         /// </summary>
-        /// <value>interval stop time as an ISO-8601 string. For example: HH:mm:ss</value>
+        /// <value>The end time of the interval as an ISO-8601 string, i.e. HH:mm:ss</value>
         [DataMember(Name="stopTime", EmitDefaultValue=false)]
         public string StopTime { get; set; }
         
         
         
         /// <summary>
-        /// must be within [1-7], representing Monday through Sunday
+        /// The day of the interval. Valid values: [1-7], representing Monday through Sunday
         /// </summary>
-        /// <value>must be within [1-7], representing Monday through Sunday</value>
+        /// <value>The day of the interval. Valid values: [1-7], representing Monday through Sunday</value>
         [DataMember(Name="day", EmitDefaultValue=false)]
         public int? Day { get; set; }
         

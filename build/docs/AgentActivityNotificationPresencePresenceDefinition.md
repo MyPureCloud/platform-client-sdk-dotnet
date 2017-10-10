@@ -1,7 +1,7 @@
 ---
-title: UserPresenceNotificationPresenceDefinition
+title: AgentActivityNotificationPresencePresenceDefinition
 ---
-## ININ.PureCloudApi.Model.UserPresenceNotificationPresenceDefinition
+## ININ.PureCloudApi.Model.AgentActivityNotificationPresencePresenceDefinition
 
 ## Properties
 

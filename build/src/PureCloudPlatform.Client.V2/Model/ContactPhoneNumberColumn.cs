@@ -47,15 +47,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="ColumnName">name of the phone column (required).</param>
+        /// <param name="ColumnName">The name of the phone column. (required).</param>
         
         
         
-        /// <param name="Type">type of the phone column, for example, &#39;cell&#39; or &#39;home&#39; (required).</param>
+        /// <param name="Type">Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;. (required).</param>
         
         
         
-        /// <param name="CallableTimeColumn">name of the column indicating the timezone to be considered for determining callable times.</param>
+        /// <param name="CallableTimeColumn">A column that indicates the timezone to use for a given contact when checking callable times..</param>
         
         
         public ContactPhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumn = null)
@@ -116,27 +116,27 @@ this.CallableTimeColumn = CallableTimeColumn;
         
         
         /// <summary>
-        /// name of the phone column
+        /// The name of the phone column.
         /// </summary>
-        /// <value>name of the phone column</value>
+        /// <value>The name of the phone column.</value>
         [DataMember(Name="columnName", EmitDefaultValue=false)]
         public string ColumnName { get; set; }
         
         
         
         /// <summary>
-        /// type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;
+        /// Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;.
         /// </summary>
-        /// <value>type of the phone column, for example, &#39;cell&#39; or &#39;home&#39;</value>
+        /// <value>Indicates the type of the phone column. For example, &#39;cell&#39; or &#39;home&#39;.</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public string Type { get; set; }
         
         
         
         /// <summary>
-        /// name of the column indicating the timezone to be considered for determining callable times
+        /// A column that indicates the timezone to use for a given contact when checking callable times.
         /// </summary>
-        /// <value>name of the column indicating the timezone to be considered for determining callable times</value>
+        /// <value>A column that indicates the timezone to use for a given contact when checking callable times.</value>
         [DataMember(Name="callableTimeColumn", EmitDefaultValue=false)]
         public string CallableTimeColumn { get; set; }
         

@@ -91,15 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Intervals">a list of start and end times (required).</param>
+        /// <param name="Intervals">A list of intervals during which to run the associated CampaignSequence. (required).</param>
         
         
         
-        /// <param name="TimeZone">time zone identifier to be applied to the intervals; for example Africa/Abidjan (required).</param>
+        /// <param name="TimeZone">The time zone for this SequenceSchedule. For example, Africa/Abidjan. (required).</param>
         
         
         
-        /// <param name="Sequence">identifier of the sequence to be scheduled (required).</param>
+        /// <param name="Sequence">The CampaignSequence that this SequenceSchedule is for. (required).</param>
         
         
         
@@ -253,27 +253,27 @@ this.Version = Version;
         
         
         /// <summary>
-        /// a list of start and end times
+        /// A list of intervals during which to run the associated CampaignSequence.
         /// </summary>
-        /// <value>a list of start and end times</value>
+        /// <value>A list of intervals during which to run the associated CampaignSequence.</value>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
         public List<ScheduleInterval> Intervals { get; set; }
         
         
         
         /// <summary>
-        /// time zone identifier to be applied to the intervals; for example Africa/Abidjan
+        /// The time zone for this SequenceSchedule. For example, Africa/Abidjan.
         /// </summary>
-        /// <value>time zone identifier to be applied to the intervals; for example Africa/Abidjan</value>
+        /// <value>The time zone for this SequenceSchedule. For example, Africa/Abidjan.</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         
         
         
         /// <summary>
-        /// identifier of the sequence to be scheduled
+        /// The CampaignSequence that this SequenceSchedule is for.
         /// </summary>
-        /// <value>identifier of the sequence to be scheduled</value>
+        /// <value>The CampaignSequence that this SequenceSchedule is for.</value>
         [DataMember(Name="sequence", EmitDefaultValue=false)]
         public UriReference Sequence { get; set; }
         

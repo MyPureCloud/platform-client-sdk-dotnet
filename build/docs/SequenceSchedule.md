@@ -12,9 +12,9 @@ title: SequenceSchedule
 | **DateCreated** | **DateTime?** | Creation time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DateModified** | **DateTime?** | Last modified time of the entity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Version** | **int?** | Required for updates, must match the version number of the most recent update | [optional] |
-| **Intervals** | [**List&lt;ScheduleInterval&gt;**](ScheduleInterval.html) | a list of start and end times | |
-| **TimeZone** | **string** | time zone identifier to be applied to the intervals; for example Africa/Abidjan | |
-| **Sequence** | [**UriReference**](UriReference.html) | identifier of the sequence to be scheduled | |
+| **Intervals** | [**List&lt;ScheduleInterval&gt;**](ScheduleInterval.html) | A list of intervals during which to run the associated CampaignSequence. | |
+| **TimeZone** | **string** | The time zone for this SequenceSchedule. For example, Africa/Abidjan. | |
+| **Sequence** | [**UriReference**](UriReference.html) | The CampaignSequence that this SequenceSchedule is for. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

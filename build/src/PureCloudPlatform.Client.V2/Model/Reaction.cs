@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ReactionType
+        /// The reaction to take for a given call analysis result.
         /// </summary>
+        /// <value>The reaction to take for a given call analysis result.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ReactionTypeEnum
         {
@@ -74,8 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ReactionType
+        /// The reaction to take for a given call analysis result.
         /// </summary>
+        /// <value>The reaction to take for a given call analysis result.</value>
         [DataMember(Name="reactionType", EmitDefaultValue=false)]
         public ReactionTypeEnum? ReactionType { get; set; }
         
@@ -84,17 +86,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Reaction" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected Reaction() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Reaction" /> class.
+        /// </summary>
         
         
-        /// <param name="Data">Data.</param>
+        /// <param name="Data">Parameter for this reaction. For transfer_flow, this would be the outbound flow id..</param>
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name..</param>
         
         
         
-        /// <param name="ReactionType">ReactionType.</param>
+        /// <param name="ReactionType">The reaction to take for a given call analysis result. (required).</param>
         
         
         public Reaction(string Data = null, string Name = null, ReactionTypeEnum? ReactionType = null)
@@ -109,6 +117,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            // to ensure "ReactionType" is required (not null)
+            if (ReactionType == null)
+            {
+                throw new InvalidDataException("ReactionType is a required property for Reaction and cannot be null");
+            }
+            else
+            {
+                this.ReactionType = ReactionType;
+            }
             
             
             
@@ -135,26 +153,23 @@ this.Name = Name;
             
             
             
-this.ReactionType = ReactionType;
-            
-            
-            
-            
         }
         
         
         
         /// <summary>
-        /// Gets or Sets Data
+        /// Parameter for this reaction. For transfer_flow, this would be the outbound flow id.
         /// </summary>
+        /// <value>Parameter for this reaction. For transfer_flow, this would be the outbound flow id.</value>
         [DataMember(Name="data", EmitDefaultValue=false)]
         public string Data { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name.
         /// </summary>
+        /// <value>Name of the parameter for this reaction. For transfer_flow, this would be the outbound flow name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         

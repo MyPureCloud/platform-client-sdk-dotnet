@@ -7,7 +7,7 @@ title: PhoneNumberStatus
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Callable** | **bool?** | false if the phone number is not callable | [optional] |
+| **Callable** | **bool?** | Indicates whether or not a phone number is callable. | [optional] |
 {: class="table table-striped"}
 
 

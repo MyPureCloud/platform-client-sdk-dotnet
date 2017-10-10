@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedDate">ModifiedDate.</param>
         
         
-        public UserPresenceNotification(string Source = null, UserPresenceNotificationPresenceDefinition PresenceDefinition = null, bool? Primary = null, string Message = null, DateTime? ModifiedDate = null)
+        public UserPresenceNotification(string Source = null, AgentActivityNotificationPresencePresenceDefinition PresenceDefinition = null, bool? Primary = null, string Message = null, DateTime? ModifiedDate = null)
         {
             
             
@@ -155,7 +155,7 @@ this.ModifiedDate = ModifiedDate;
         /// Gets or Sets PresenceDefinition
         /// </summary>
         [DataMember(Name="presenceDefinition", EmitDefaultValue=false)]
-        public UserPresenceNotificationPresenceDefinition PresenceDefinition { get; set; }
+        public AgentActivityNotificationPresencePresenceDefinition PresenceDefinition { get; set; }
         
         
         

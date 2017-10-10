@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the RuleSet. (required).</param>
         
         
         
@@ -91,15 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ContactList">The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions.</param>
+        /// <param name="ContactList">A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions..</param>
         
         
         
-        /// <param name="Queue">The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions.</param>
+        /// <param name="Queue">A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions..</param>
         
         
         
-        /// <param name="Rules">The list of rules (required).</param>
+        /// <param name="Rules">The list of rules. (required).</param>
         
         
         
@@ -110,6 +110,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            // to ensure "Name" is required (not null)
+            if (Name == null)
+            {
+                throw new InvalidDataException("Name is a required property for RuleSet and cannot be null");
+            }
+            else
+            {
+                this.Name = Name;
+            }
             
             
             
@@ -148,11 +158,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
-this.Name = Name;
             
             
             
@@ -208,8 +213,9 @@ this.Queue = Queue;
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the RuleSet.
         /// </summary>
+        /// <value>The name of the RuleSet.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
@@ -243,27 +249,27 @@ this.Queue = Queue;
         
         
         /// <summary>
-        /// The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions
+        /// A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions.
         /// </summary>
-        /// <value>The identifier of an example contact list that provides user-interface suggestions for contact-based conditions and actions</value>
+        /// <value>A ContactList to provide user-interface suggestions for contact columns on relevant conditions and actions.</value>
         [DataMember(Name="contactList", EmitDefaultValue=false)]
         public UriReference ContactList { get; set; }
         
         
         
         /// <summary>
-        /// The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions
+        /// A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions.
         /// </summary>
-        /// <value>The identifier of an example queue that provides user-interface suggestions for wrap-up associated conditions</value>
+        /// <value>A Queue to provide user-interface suggestions for wrap-up codes on relevant conditions and actions.</value>
         [DataMember(Name="queue", EmitDefaultValue=false)]
         public UriReference Queue { get; set; }
         
         
         
         /// <summary>
-        /// The list of rules
+        /// The list of rules.
         /// </summary>
-        /// <value>The list of rules</value>
+        /// <value>The list of rules.</value>
         [DataMember(Name="rules", EmitDefaultValue=false)]
         public List<DialerRule> Rules { get; set; }
         

@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ConditionType
+        /// The type of condition to evaluate.
         /// </summary>
+        /// <value>The type of condition to evaluate.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum ConditionTypeEnum
         {
@@ -62,12 +63,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets ConditionType
+        /// The type of condition to evaluate.
         /// </summary>
+        /// <value>The type of condition to evaluate.</value>
         [DataMember(Name="conditionType", EmitDefaultValue=false)]
         public ConditionTypeEnum? ConditionType { get; set; }
         
         
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaignRuleCondition" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected CampaignRuleCondition() { }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleCondition" /> class.
@@ -78,11 +86,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Parameters">Parameters.</param>
+        /// <param name="Parameters">The parameters for the CampaignRuleCondition. (required).</param>
         
         
         
-        /// <param name="ConditionType">ConditionType.</param>
+        /// <param name="ConditionType">The type of condition to evaluate. (required).</param>
         
         
         public CampaignRuleCondition(string Id = null, CampaignRuleParameters Parameters = null, ConditionTypeEnum? ConditionType = null)
@@ -94,9 +102,29 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            // to ensure "Parameters" is required (not null)
+            if (Parameters == null)
+            {
+                throw new InvalidDataException("Parameters is a required property for CampaignRuleCondition and cannot be null");
+            }
+            else
+            {
+                this.Parameters = Parameters;
+            }
             
             
             
+            
+            
+            // to ensure "ConditionType" is required (not null)
+            if (ConditionType == null)
+            {
+                throw new InvalidDataException("ConditionType is a required property for CampaignRuleCondition and cannot be null");
+            }
+            else
+            {
+                this.ConditionType = ConditionType;
+            }
             
             
             
@@ -114,16 +142,6 @@ this.Id = Id;
             
             
             
-this.Parameters = Parameters;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ConditionType = ConditionType;
             
             
             
@@ -141,8 +159,9 @@ this.ConditionType = ConditionType;
         
         
         /// <summary>
-        /// Gets or Sets Parameters
+        /// The parameters for the CampaignRuleCondition.
         /// </summary>
+        /// <value>The parameters for the CampaignRuleCondition.</value>
         [DataMember(Name="parameters", EmitDefaultValue=false)]
         public CampaignRuleParameters Parameters { get; set; }
         

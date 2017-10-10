@@ -110,6 +110,26 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Annotation" /> class.
@@ -137,6 +157,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="DurationMs">Duration of annotation in milliseconds..</param>
+        
+        
+        
+        /// <param name="AbsoluteLocation">Offset of annotation (milliseconds) from start of recording..</param>
+        
+        
+        
+        /// <param name="AbsoluteDurationMs">Duration of annotation (milliseconds)..</param>
+        
+        
+        
+        /// <param name="RecordingLocation">Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts.</param>
+        
+        
+        
+        /// <param name="RecordingDurationMs">Duration of annotation (milliseconds), adjusted for any recording cuts..</param>
         
         
         
@@ -189,8 +225,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, User User = null, string Description = null, string KeywordName = null, float? Confidence = null, string KeywordSetId = null, string KeywordSetName = null, string Utterance = null, string TimeBegin = null, string TimeEnd = null, string KeywordConfidenceThreshold = null, string AgentScoreModifier = null, string CustomerScoreModifier = null)
+        public Annotation(string Name = null, string Type = null, long? Location = null, long? DurationMs = null, long? AbsoluteLocation = null, long? AbsoluteDurationMs = null, long? RecordingLocation = null, long? RecordingDurationMs = null, User User = null, string Description = null, string KeywordName = null, float? Confidence = null, string KeywordSetId = null, string KeywordSetName = null, string Utterance = null, string TimeBegin = null, string TimeEnd = null, string KeywordConfidenceThreshold = null, string AgentScoreModifier = null, string CustomerScoreModifier = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -315,6 +367,42 @@ this.Location = Location;
             
             
 this.DurationMs = DurationMs;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AbsoluteLocation = AbsoluteLocation;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AbsoluteDurationMs = AbsoluteDurationMs;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingLocation = RecordingLocation;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingDurationMs = RecordingDurationMs;
             
             
             
@@ -467,6 +555,42 @@ this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
         
         
         /// <summary>
+        /// Offset of annotation (milliseconds) from start of recording.
+        /// </summary>
+        /// <value>Offset of annotation (milliseconds) from start of recording.</value>
+        [DataMember(Name="absoluteLocation", EmitDefaultValue=false)]
+        public long? AbsoluteLocation { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Duration of annotation (milliseconds).
+        /// </summary>
+        /// <value>Duration of annotation (milliseconds).</value>
+        [DataMember(Name="absoluteDurationMs", EmitDefaultValue=false)]
+        public long? AbsoluteDurationMs { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts
+        /// </summary>
+        /// <value>Offset of annotation (milliseconds) from start of recording, adjusted for any recording cuts</value>
+        [DataMember(Name="recordingLocation", EmitDefaultValue=false)]
+        public long? RecordingLocation { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Duration of annotation (milliseconds), adjusted for any recording cuts.
+        /// </summary>
+        /// <value>Duration of annotation (milliseconds), adjusted for any recording cuts.</value>
+        [DataMember(Name="recordingDurationMs", EmitDefaultValue=false)]
+        public long? RecordingDurationMs { get; set; }
+        
+        
+        
+        /// <summary>
         /// User that created this annotation (if any).
         /// </summary>
         /// <value>User that created this annotation (if any).</value>
@@ -601,6 +725,14 @@ this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
             
             sb.Append("  DurationMs: ").Append(DurationMs).Append("\n");
             
+            sb.Append("  AbsoluteLocation: ").Append(AbsoluteLocation).Append("\n");
+            
+            sb.Append("  AbsoluteDurationMs: ").Append(AbsoluteDurationMs).Append("\n");
+            
+            sb.Append("  RecordingLocation: ").Append(RecordingLocation).Append("\n");
+            
+            sb.Append("  RecordingDurationMs: ").Append(RecordingDurationMs).Append("\n");
+            
             sb.Append("  User: ").Append(User).Append("\n");
             
             sb.Append("  Description: ").Append(Description).Append("\n");
@@ -687,6 +819,26 @@ this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
                     this.DurationMs == other.DurationMs ||
                     this.DurationMs != null &&
                     this.DurationMs.Equals(other.DurationMs)
+                ) &&
+                (
+                    this.AbsoluteLocation == other.AbsoluteLocation ||
+                    this.AbsoluteLocation != null &&
+                    this.AbsoluteLocation.Equals(other.AbsoluteLocation)
+                ) &&
+                (
+                    this.AbsoluteDurationMs == other.AbsoluteDurationMs ||
+                    this.AbsoluteDurationMs != null &&
+                    this.AbsoluteDurationMs.Equals(other.AbsoluteDurationMs)
+                ) &&
+                (
+                    this.RecordingLocation == other.RecordingLocation ||
+                    this.RecordingLocation != null &&
+                    this.RecordingLocation.Equals(other.RecordingLocation)
+                ) &&
+                (
+                    this.RecordingDurationMs == other.RecordingDurationMs ||
+                    this.RecordingDurationMs != null &&
+                    this.RecordingDurationMs.Equals(other.RecordingDurationMs)
                 ) &&
                 (
                     this.User == other.User ||
@@ -781,6 +933,18 @@ this.KeywordConfidenceThreshold = KeywordConfidenceThreshold;
                 
                 if (this.DurationMs != null)
                     hash = hash * 59 + this.DurationMs.GetHashCode();
+                
+                if (this.AbsoluteLocation != null)
+                    hash = hash * 59 + this.AbsoluteLocation.GetHashCode();
+                
+                if (this.AbsoluteDurationMs != null)
+                    hash = hash * 59 + this.AbsoluteDurationMs.GetHashCode();
+                
+                if (this.RecordingLocation != null)
+                    hash = hash * 59 + this.RecordingLocation.GetHashCode();
+                
+                if (this.RecordingDurationMs != null)
+                    hash = hash * 59 + this.RecordingDurationMs.GetHashCode();
                 
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();

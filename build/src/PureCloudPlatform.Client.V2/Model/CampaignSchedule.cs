@@ -91,15 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Intervals">a list of start and end times (required).</param>
+        /// <param name="Intervals">A list of intervals during which to run the associated Campaign. (required).</param>
         
         
         
-        /// <param name="TimeZone">time zone identifier to be applied to the intervals; for example Africa/Abidjan (required).</param>
+        /// <param name="TimeZone">The time zone for this CampaignSchedule. For example, Africa/Abidjan. (required).</param>
         
         
         
-        /// <param name="Campaign">identifier of the campaign to be scheduled (required).</param>
+        /// <param name="Campaign">The Campaign that this CampaignSchedule is for. (required).</param>
         
         
         
@@ -253,27 +253,27 @@ this.Version = Version;
         
         
         /// <summary>
-        /// a list of start and end times
+        /// A list of intervals during which to run the associated Campaign.
         /// </summary>
-        /// <value>a list of start and end times</value>
+        /// <value>A list of intervals during which to run the associated Campaign.</value>
         [DataMember(Name="intervals", EmitDefaultValue=false)]
         public List<ScheduleInterval> Intervals { get; set; }
         
         
         
         /// <summary>
-        /// time zone identifier to be applied to the intervals; for example Africa/Abidjan
+        /// The time zone for this CampaignSchedule. For example, Africa/Abidjan.
         /// </summary>
-        /// <value>time zone identifier to be applied to the intervals; for example Africa/Abidjan</value>
+        /// <value>The time zone for this CampaignSchedule. For example, Africa/Abidjan.</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         
         
         
         /// <summary>
-        /// identifier of the campaign to be scheduled
+        /// The Campaign that this CampaignSchedule is for.
         /// </summary>
-        /// <value>identifier of the campaign to be scheduled</value>
+        /// <value>The Campaign that this CampaignSchedule is for.</value>
         [DataMember(Name="campaign", EmitDefaultValue=false)]
         public UriReference Campaign { get; set; }
         

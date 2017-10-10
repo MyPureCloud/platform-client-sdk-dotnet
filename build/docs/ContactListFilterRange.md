@@ -7,11 +7,11 @@ title: ContactListFilterRange
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Min** | **string** |  | [optional] |
-| **Max** | **string** |  | [optional] |
-| **MinInclusive** | **bool?** |  | [optional] |
-| **MaxInclusive** | **bool?** |  | [optional] |
-| **InSet** | **List&lt;string&gt;** |  | [optional] |
+| **Min** | **string** | The minimum value of the range. Required for the operator BETWEEN. | [optional] |
+| **Max** | **string** | The maximum value of the range. Required for the operator BETWEEN. | [optional] |
+| **MinInclusive** | **bool?** | Whether or not to include the minimum in the range. | [optional] |
+| **MaxInclusive** | **bool?** | Whether or not to include the maximum in the range. | [optional] |
+| **InSet** | **List&lt;string&gt;** | A set of values that the contact data should be in. Required for the IN operator. | [optional] |
 {: class="table table-striped"}
 
 
