@@ -22,6 +22,7 @@ title: ConversationNotificationEmail
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **MessageId** | **string** |  | [optional] |
+| **Direction** | **string** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

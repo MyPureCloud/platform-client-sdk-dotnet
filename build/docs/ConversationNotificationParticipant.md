@@ -32,6 +32,7 @@ title: ConversationNotificationParticipant
 | **Chats** | [**List&lt;ConversationNotificationChats&gt;**](ConversationNotificationChats.html) |  | [optional] |
 | **Cobrowsesessions** | [**List&lt;ConversationNotificationCobrowsesessions&gt;**](ConversationNotificationCobrowsesessions.html) |  | [optional] |
 | **Emails** | [**List&lt;ConversationNotificationEmails&gt;**](ConversationNotificationEmails.html) |  | [optional] |
+| **Messages** | [**List&lt;ConversationNotificationMessages1&gt;**](ConversationNotificationMessages1.html) |  | [optional] |
 | **Screenshares** | [**List&lt;ConversationNotificationScreenshares&gt;**](ConversationNotificationScreenshares.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;ConversationNotificationSocialExpressions&gt;**](ConversationNotificationSocialExpressions.html) |  | [optional] |
 | **Videos** | [**List&lt;ConversationNotificationVideos&gt;**](ConversationNotificationVideos.html) |  | [optional] |

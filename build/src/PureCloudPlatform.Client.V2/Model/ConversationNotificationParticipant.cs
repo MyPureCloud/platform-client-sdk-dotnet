@@ -189,11 +189,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets ScreenRecordingState
         /// </summary>
         [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
         public ScreenRecordingStateEnum? ScreenRecordingState { get; set; }
+        
+        
         
         
         
@@ -322,6 +327,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Messages">Messages.</param>
+        
+        
+        
         /// <param name="Screenshares">Screenshares.</param>
         
         
@@ -337,8 +346,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public ConversationNotificationParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
+        public ConversationNotificationParticipant(string Id = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string Name = null, string QueueId = null, string GroupId = null, string Purpose = null, string ConsultParticipantId = null, string Address = null, bool? WrapupRequired = null, bool? WrapupExpected = null, string WrapupPrompt = null, int? WrapupTimeoutMs = null, ConversationNotificationWrapup Wrapup = null, string MonitoredParticipantId = null, ScreenRecordingStateEnum? ScreenRecordingState = null, Dictionary<string, string> Attributes = null, List<ConversationNotificationCalls> Calls = null, List<ConversationNotificationCallbacks> Callbacks = null, List<ConversationNotificationChats> Chats = null, List<ConversationNotificationCobrowsesessions> Cobrowsesessions = null, List<ConversationNotificationEmails> Emails = null, List<ConversationNotificationMessages1> Messages = null, List<ConversationNotificationScreenshares> Screenshares = null, List<ConversationNotificationSocialExpressions> SocialExpressions = null, List<ConversationNotificationVideos> Videos = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
             
             
             
@@ -686,6 +699,15 @@ this.Emails = Emails;
             
             
             
+this.Messages = Messages;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Screenshares = Screenshares;
             
             
@@ -917,6 +939,14 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         /// <summary>
+        /// Gets or Sets Messages
+        /// </summary>
+        [DataMember(Name="messages", EmitDefaultValue=false)]
+        public List<ConversationNotificationMessages1> Messages { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Screenshares
         /// </summary>
         [DataMember(Name="screenshares", EmitDefaultValue=false)]
@@ -1005,6 +1035,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
             
             sb.Append("  Emails: ").Append(Emails).Append("\n");
+            
+            sb.Append("  Messages: ").Append(Messages).Append("\n");
             
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
             
@@ -1176,6 +1208,11 @@ this.AdditionalProperties = AdditionalProperties;
                     this.Emails.SequenceEqual(other.Emails)
                 ) &&
                 (
+                    this.Messages == other.Messages ||
+                    this.Messages != null &&
+                    this.Messages.SequenceEqual(other.Messages)
+                ) &&
+                (
                     this.Screenshares == other.Screenshares ||
                     this.Screenshares != null &&
                     this.Screenshares.SequenceEqual(other.Screenshares)
@@ -1283,6 +1320,9 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
+                
+                if (this.Messages != null)
+                    hash = hash * 59 + this.Messages.GetHashCode();
                 
                 if (this.Screenshares != null)
                     hash = hash * 59 + this.Screenshares.GetHashCode();
