@@ -144,7 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Notavailabletransfer for "notAvailableTransfer"
             /// </summary>
             [EnumMember(Value = "notAvailableTransfer")]
-            Notavailabletransfer
+            Notavailabletransfer,
+            
+            /// <summary>
+            /// Enum Uncallable for "uncallable"
+            /// </summary>
+            [EnumMember(Value = "uncallable")]
+            Uncallable
         }
         
         

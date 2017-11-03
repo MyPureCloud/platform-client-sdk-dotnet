@@ -168,6 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current screen recording state for this participant.
         /// </summary>
@@ -266,6 +269,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>This field controls how the UI prompts the agent for a wrapup.</value>
         [DataMember(Name="wrapupPrompt", EmitDefaultValue=false)]
         public WrapupPromptEnum? WrapupPrompt { get; set; }
+        
+        
         
         
         
@@ -439,6 +444,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Messages">Messages.</param>
+        
+        
+        
         /// <param name="Screenshares">Screenshares.</param>
         
         
@@ -458,8 +467,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScreenRecordingState">The current screen recording state for this participant..</param>
         
         
-        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null)
+        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null)
         {
+            
+            
+            
+            
             
             
             
@@ -902,6 +915,15 @@ this.Emails = Emails;
             
             
             
+this.Messages = Messages;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Screenshares = Screenshares;
             
             
@@ -1224,6 +1246,14 @@ this.ScreenRecordingState = ScreenRecordingState;
         
         
         /// <summary>
+        /// Gets or Sets Messages
+        /// </summary>
+        [DataMember(Name="messages", EmitDefaultValue=false)]
+        public List<Message> Messages { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Screenshares
         /// </summary>
         [DataMember(Name="screenshares", EmitDefaultValue=false)]
@@ -1328,6 +1358,8 @@ this.ScreenRecordingState = ScreenRecordingState;
             sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
             
             sb.Append("  Emails: ").Append(Emails).Append("\n");
+            
+            sb.Append("  Messages: ").Append(Messages).Append("\n");
             
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
             
@@ -1536,6 +1568,11 @@ this.ScreenRecordingState = ScreenRecordingState;
                     this.Emails.SequenceEqual(other.Emails)
                 ) &&
                 (
+                    this.Messages == other.Messages ||
+                    this.Messages != null &&
+                    this.Messages.SequenceEqual(other.Messages)
+                ) &&
+                (
                     this.Screenshares == other.Screenshares ||
                     this.Screenshares != null &&
                     this.Screenshares.SequenceEqual(other.Screenshares)
@@ -1669,6 +1706,9 @@ this.ScreenRecordingState = ScreenRecordingState;
                 
                 if (this.Emails != null)
                     hash = hash * 59 + this.Emails.GetHashCode();
+                
+                if (this.Messages != null)
+                    hash = hash * 59 + this.Messages.GetHashCode();
                 
                 if (this.Screenshares != null)
                     hash = hash * 59 + this.Screenshares.GetHashCode();

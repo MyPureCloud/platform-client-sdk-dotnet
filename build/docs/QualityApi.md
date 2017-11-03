@@ -978,7 +978,7 @@ namespace Example
             
             
             
-            var evaluationState = new List<Object>(); // List<Object> | evaluation state options: Pending, InProgress, Finished (optional) 
+            var evaluationState = new List<Object>(); // List<Object> |  (optional) 
             
             
             
@@ -1036,7 +1036,7 @@ namespace Example
 | **queueId** | **string**| queue id | [optional]  |
 | **startTime** | **string**| start time of the evaluation query | [optional]  |
 | **endTime** | **string**| end time of the evaluation query | [optional]  |
-| **evaluationState** | [**List<Object>**](Object.html)| evaluation state options: Pending, InProgress, Finished | [optional]  |
+| **evaluationState** | [**List<Object>**](Object.html)|  | [optional]  |
 | **isReleased** | **bool?**| the evaluation has been released | [optional]  |
 | **agentHasRead** | **bool?**| agent has the evaluation | [optional]  |
 | **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations | [optional]  |

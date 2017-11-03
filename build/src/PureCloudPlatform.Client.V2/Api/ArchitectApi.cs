@@ -551,6 +551,40 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Prompt> GetArchitectPromptWithHttpInfo (string promptId);
         
         /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>HistoryListing</returns>
+        HistoryListing GetArchitectPromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+
+        /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>ApiResponse of HistoryListing</returns>
+        ApiResponse<HistoryListing> GetArchitectPromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+        
+        /// <summary>
         /// Get specified user prompt resource
         /// </summary>
         /// <remarks>
@@ -757,6 +791,40 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SystemPrompt> GetArchitectSystempromptWithHttpInfo (string promptId);
         
         /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>HistoryListing</returns>
+        HistoryListing GetArchitectSystempromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+
+        /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>ApiResponse of HistoryListing</returns>
+        ApiResponse<HistoryListing> GetArchitectSystempromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+        
+        /// <summary>
         /// Get a system prompt resource.
         /// </summary>
         /// <remarks>
@@ -876,7 +944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -893,7 +961,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -1103,6 +1171,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<IVR> PostArchitectIvrsWithHttpInfo (IVR body = null);
         
         /// <summary>
+        /// Generate prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>Operation</returns>
+        Operation PostArchitectPromptHistory (string promptId);
+
+        /// <summary>
+        /// Generate prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>ApiResponse of Operation</returns>
+        ApiResponse<Operation> PostArchitectPromptHistoryWithHttpInfo (string promptId);
+        
+        /// <summary>
         /// Create a new user prompt resource
         /// </summary>
         /// <remarks>
@@ -1191,6 +1281,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Schedule</returns>
         ApiResponse<Schedule> PostArchitectSchedulesWithHttpInfo (Schedule body = null);
+        
+        /// <summary>
+        /// Generate system prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>Operation</returns>
+        Operation PostArchitectSystempromptHistory (string promptId);
+
+        /// <summary>
+        /// Generate system prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>ApiResponse of Operation</returns>
+        ApiResponse<Operation> PostArchitectSystempromptHistoryWithHttpInfo (string promptId);
         
         /// <summary>
         /// Create system prompt resource override.
@@ -2107,6 +2219,40 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Prompt>> GetArchitectPromptAsyncWithHttpInfo (string promptId);
         
         /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of HistoryListing</returns>
+        System.Threading.Tasks.Task<HistoryListing> GetArchitectPromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+
+        /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectPromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+        
+        /// <summary>
         /// Get specified user prompt resource
         /// </summary>
         /// <remarks>
@@ -2313,6 +2459,40 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SystemPrompt>> GetArchitectSystempromptAsyncWithHttpInfo (string promptId);
         
         /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of HistoryListing</returns>
+        System.Threading.Tasks.Task<HistoryListing> GetArchitectSystempromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+
+        /// <summary>
+        /// Get generated prompt history
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectSystempromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null);
+        
+        /// <summary>
         /// Get a system prompt resource.
         /// </summary>
         /// <remarks>
@@ -2432,7 +2612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -2449,7 +2629,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -2659,6 +2839,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body = null);
         
         /// <summary>
+        /// Generate prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>Task of Operation</returns>
+        System.Threading.Tasks.Task<Operation> PostArchitectPromptHistoryAsync (string promptId);
+
+        /// <summary>
+        /// Generate prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectPromptHistoryAsyncWithHttpInfo (string promptId);
+        
+        /// <summary>
         /// Create a new user prompt resource
         /// </summary>
         /// <remarks>
@@ -2747,6 +2949,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
         System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body = null);
+        
+        /// <summary>
+        /// Generate system prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>Task of Operation</returns>
+        System.Threading.Tasks.Task<Operation> PostArchitectSystempromptHistoryAsync (string promptId);
+
+        /// <summary>
+        /// Generate system prompt history
+        /// </summary>
+        /// <remarks>
+        /// Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectSystempromptHistoryAsyncWithHttpInfo (string promptId);
         
         /// <summary>
         /// Create system prompt resource override.
@@ -7430,6 +7654,240 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>HistoryListing</returns>
+        public HistoryListing GetArchitectPromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        {
+             ApiResponse<HistoryListing> localVarResponse = GetArchitectPromptHistoryHistoryIdWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>ApiResponse of HistoryListing</returns>
+        public ApiResponse< HistoryListing > GetArchitectPromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptHistoryHistoryId");
+            // verify the required parameter 'historyId' is set
+            if (historyId == null)
+                throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectPromptHistoryHistoryId");
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/history/{historyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectPromptHistoryHistoryId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectPromptHistoryHistoryId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HistoryListing>(localVarStatusCode,
+                localVarHeaders,
+                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of HistoryListing</returns>
+        public async System.Threading.Tasks.Task<HistoryListing> GetArchitectPromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        {
+             ApiResponse<HistoryListing> localVarResponse = await GetArchitectPromptHistoryHistoryIdAsyncWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectPromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptHistoryHistoryId");
+            
+            // verify the required parameter 'historyId' is set
+            if (historyId == null)
+                throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectPromptHistoryHistoryId");
+            
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/history/{historyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectPromptHistoryHistoryId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectPromptHistoryHistoryId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HistoryListing>(localVarStatusCode,
+                localVarHeaders,
+                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Get specified user prompt resource 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9034,6 +9492,240 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>HistoryListing</returns>
+        public HistoryListing GetArchitectSystempromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        {
+             ApiResponse<HistoryListing> localVarResponse = GetArchitectSystempromptHistoryHistoryIdWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>ApiResponse of HistoryListing</returns>
+        public ApiResponse< HistoryListing > GetArchitectSystempromptHistoryHistoryIdWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptHistoryHistoryId");
+            // verify the required parameter 'historyId' is set
+            if (historyId == null)
+                throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectSystempromptHistoryHistoryId");
+
+            var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history/{historyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSystempromptHistoryHistoryId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSystempromptHistoryHistoryId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HistoryListing>(localVarStatusCode,
+                localVarHeaders,
+                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of HistoryListing</returns>
+        public async System.Threading.Tasks.Task<HistoryListing> GetArchitectSystempromptHistoryHistoryIdAsync (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        {
+             ApiResponse<HistoryListing> localVarResponse = await GetArchitectSystempromptHistoryHistoryIdAsyncWithHttpInfo(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get generated prompt history 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <param name="historyId">History request ID</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortOrder">Sort order (optional, default to desc)</param>
+        /// <param name="sortBy">Sort by (optional, default to timestamp)</param>
+        /// <param name="action">Flow actions to include (omit to include all) (optional)</param>
+        /// <returns>Task of ApiResponse (HistoryListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HistoryListing>> GetArchitectSystempromptHistoryHistoryIdAsyncWithHttpInfo (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptHistoryHistoryId");
+            
+            // verify the required parameter 'historyId' is set
+            if (historyId == null)
+                throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectSystempromptHistoryHistoryId");
+            
+
+            var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history/{historyId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSystempromptHistoryHistoryId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectSystempromptHistoryHistoryId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<HistoryListing>(localVarStatusCode,
+                localVarHeaders,
+                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Get a system prompt resource. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9874,7 +10566,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -9892,7 +10584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -9989,7 +10681,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -10008,7 +10700,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="historyId">History ID (generated history)</param>
+        /// <param name="historyId">History request ID</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="sortOrder">Sort order (optional, default to desc)</param>
@@ -11585,6 +12277,197 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Generate prompt history Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>Operation</returns>
+        public Operation PostArchitectPromptHistory (string promptId)
+        {
+             ApiResponse<Operation> localVarResponse = PostArchitectPromptHistoryWithHttpInfo(promptId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate prompt history Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>ApiResponse of Operation</returns>
+        public ApiResponse< Operation > PostArchitectPromptHistoryWithHttpInfo (string promptId)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptHistory");
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Operation>(localVarStatusCode,
+                localVarHeaders,
+                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+            
+        }
+
+        
+        /// <summary>
+        /// Generate prompt history Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>Task of Operation</returns>
+        public async System.Threading.Tasks.Task<Operation> PostArchitectPromptHistoryAsync (string promptId)
+        {
+             ApiResponse<Operation> localVarResponse = await PostArchitectPromptHistoryAsyncWithHttpInfo(promptId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Generate prompt history Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">Prompt ID</param>
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectPromptHistoryAsyncWithHttpInfo (string promptId)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptHistory");
+            
+
+            var localVarPath = "/api/v2/architect/prompts/{promptId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectPromptHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Operation>(localVarStatusCode,
+                localVarHeaders,
+                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Create a new user prompt resource 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -12360,6 +13243,197 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Schedule>(localVarStatusCode,
                 localVarHeaders,
                 (Schedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Generate system prompt history Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>Operation</returns>
+        public Operation PostArchitectSystempromptHistory (string promptId)
+        {
+             ApiResponse<Operation> localVarResponse = PostArchitectSystempromptHistoryWithHttpInfo(promptId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Generate system prompt history Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>ApiResponse of Operation</returns>
+        public ApiResponse< Operation > PostArchitectSystempromptHistoryWithHttpInfo (string promptId)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptHistory");
+
+            var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Operation>(localVarStatusCode,
+                localVarHeaders,
+                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+            
+        }
+
+        
+        /// <summary>
+        /// Generate system prompt history Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>Task of Operation</returns>
+        public async System.Threading.Tasks.Task<Operation> PostArchitectSystempromptHistoryAsync (string promptId)
+        {
+             ApiResponse<Operation> localVarResponse = await PostArchitectSystempromptHistoryAsyncWithHttpInfo(promptId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Generate system prompt history Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="promptId">promptId</param>
+        /// <returns>Task of ApiResponse (Operation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Operation>> PostArchitectSystempromptHistoryAsyncWithHttpInfo (string promptId)
+        { 
+            // verify the required parameter 'promptId' is set
+            if (promptId == null)
+                throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptHistory");
+            
+
+            var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptHistory: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectSystempromptHistory: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Operation>(localVarStatusCode,
+                localVarHeaders,
+                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 

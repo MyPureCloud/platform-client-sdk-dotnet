@@ -325,7 +325,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
@@ -352,7 +352,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
@@ -1191,7 +1191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
@@ -1218,7 +1218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
@@ -3980,7 +3980,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
@@ -4008,7 +4008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
@@ -4119,7 +4119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>
@@ -4148,7 +4148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">queue id (optional)</param>
         /// <param name="startTime">start time of the evaluation query (optional)</param>
         /// <param name="endTime">end time of the evaluation query (optional)</param>
-        /// <param name="evaluationState">evaluation state options: Pending, InProgress, Finished (optional)</param>
+        /// <param name="evaluationState"> (optional)</param>
         /// <param name="isReleased">the evaluation has been released (optional)</param>
         /// <param name="agentHasRead">agent has the evaluation (optional)</param>
         /// <param name="expandAnswerTotalScores">get the total scores for evaluations (optional)</param>

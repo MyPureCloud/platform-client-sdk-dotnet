@@ -28,6 +28,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectIvr**](ArchitectApi.html#getarchitectivr) | **GET** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
 | [**GetArchitectIvrs**](ArchitectApi.html#getarchitectivrs) | **GET** /api/v2/architect/ivrs | Get IVR configs. |
 | [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **GET** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
+| [**GetArchitectPromptHistoryHistoryId**](ArchitectApi.html#getarchitectprompthistoryhistoryid) | **GET** /api/v2/architect/prompts/{promptId}/history/{historyId} | Get generated prompt history |
 | [**GetArchitectPromptResource**](ArchitectApi.html#getarchitectpromptresource) | **GET** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Get specified user prompt resource |
 | [**GetArchitectPromptResources**](ArchitectApi.html#getarchitectpromptresources) | **GET** /api/v2/architect/prompts/{promptId}/resources | Get a pageable list of user prompt resources |
 | [**GetArchitectPrompts**](ArchitectApi.html#getarchitectprompts) | **GET** /api/v2/architect/prompts | Get a pageable list of user prompts |
@@ -36,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectSchedulegroups**](ArchitectApi.html#getarchitectschedulegroups) | **GET** /api/v2/architect/schedulegroups | Get a list of schedule groups. |
 | [**GetArchitectSchedules**](ArchitectApi.html#getarchitectschedules) | **GET** /api/v2/architect/schedules | Get a list of schedules. |
 | [**GetArchitectSystemprompt**](ArchitectApi.html#getarchitectsystemprompt) | **GET** /api/v2/architect/systemprompts/{promptId} | Get a system prompt |
+| [**GetArchitectSystempromptHistoryHistoryId**](ArchitectApi.html#getarchitectsystemprompthistoryhistoryid) | **GET** /api/v2/architect/systemprompts/{promptId}/history/{historyId} | Get generated prompt history |
 | [**GetArchitectSystempromptResource**](ArchitectApi.html#getarchitectsystempromptresource) | **GET** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Get a system prompt resource. |
 | [**GetArchitectSystempromptResources**](ArchitectApi.html#getarchitectsystempromptresources) | **GET** /api/v2/architect/systemprompts/{promptId}/resources | Get system prompt resources. |
 | [**GetArchitectSystemprompts**](ArchitectApi.html#getarchitectsystemprompts) | **GET** /api/v2/architect/systemprompts | Get System Prompts |
@@ -48,10 +50,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
 | [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **POST** /api/v2/architect/ivrs | Create IVR config. |
+| [**PostArchitectPromptHistory**](ArchitectApi.html#postarchitectprompthistory) | **POST** /api/v2/architect/prompts/{promptId}/history | Generate prompt history |
 | [**PostArchitectPromptResources**](ArchitectApi.html#postarchitectpromptresources) | **POST** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
 | [**PostArchitectPrompts**](ArchitectApi.html#postarchitectprompts) | **POST** /api/v2/architect/prompts | Create a new user prompt |
 | [**PostArchitectSchedulegroups**](ArchitectApi.html#postarchitectschedulegroups) | **POST** /api/v2/architect/schedulegroups | Creates a new schedule group |
 | [**PostArchitectSchedules**](ArchitectApi.html#postarchitectschedules) | **POST** /api/v2/architect/schedules | Create a new schedule. |
+| [**PostArchitectSystempromptHistory**](ArchitectApi.html#postarchitectsystemprompthistory) | **POST** /api/v2/architect/systemprompts/{promptId}/history | Generate system prompt history |
 | [**PostArchitectSystempromptResources**](ArchitectApi.html#postarchitectsystempromptresources) | **POST** /api/v2/architect/systemprompts/{promptId}/resources | Create system prompt resource override. |
 | [**PostFlowVersions**](ArchitectApi.html#postflowversions) | **POST** /api/v2/flows/{flowId}/versions | Create flow version |
 | [**PostFlows**](ArchitectApi.html#postflows) | **POST** /api/v2/flows | Create flow |
@@ -1620,6 +1624,106 @@ namespace Example
 
 [**Prompt**](Prompt.html)
 
+<a name="getarchitectprompthistoryhistoryid"></a>
+
+## [**HistoryListing**](HistoryListing.html) GetArchitectPromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+
+Get generated prompt history
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectPromptHistoryHistoryIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+            
+            var historyId = historyId_example;  // string | History request ID
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
+            
+            
+            
+            
+            
+            var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
+            
+            
+
+            try
+            {
+                
+                // Get generated prompt history
+                
+                HistoryListing result = apiInstance.GetArchitectPromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectPromptHistoryHistoryId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **promptId** | **string**| Prompt ID |  |
+| **historyId** | **string**| History request ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortOrder** | **string**| Sort order | [optional] [default to desc] |
+| **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
+| **action** | [**List<string>**](string.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
+{: class="table table-striped"}
+
+### Return type
+
+[**HistoryListing**](HistoryListing.html)
+
 <a name="getarchitectpromptresource"></a>
 
 ## [**PromptAsset**](PromptAsset.html) GetArchitectPromptResource (string promptId, string languageCode)
@@ -2222,6 +2326,106 @@ namespace Example
 
 [**SystemPrompt**](SystemPrompt.html)
 
+<a name="getarchitectsystemprompthistoryhistoryid"></a>
+
+## [**HistoryListing**](HistoryListing.html) GetArchitectSystempromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
+
+Get generated prompt history
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectSystempromptHistoryHistoryIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var promptId = promptId_example;  // string | promptId
+            
+            
+            
+            
+            var historyId = historyId_example;  // string | History request ID
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to desc)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
+            
+            
+            
+            
+            
+            var action = new List<string>(); // List<string> | Flow actions to include (omit to include all) (optional) 
+            
+            
+
+            try
+            {
+                
+                // Get generated prompt history
+                
+                HistoryListing result = apiInstance.GetArchitectSystempromptHistoryHistoryId(promptId, historyId, pageNumber, pageSize, sortOrder, sortBy, action);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectSystempromptHistoryHistoryId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **promptId** | **string**| promptId |  |
+| **historyId** | **string**| History request ID |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortOrder** | **string**| Sort order | [optional] [default to desc] |
+| **sortBy** | **string**| Sort by | [optional] [default to timestamp]<br />**Values**: action, timestamp, user |
+| **action** | [**List<string>**](string.html)| Flow actions to include (omit to include all) | [optional] <br />**Values**: checkin, checkout, create, deactivate, debug, delete, publish, revert, save |
+{: class="table table-striped"}
+
+### Return type
+
+[**HistoryListing**](HistoryListing.html)
+
 <a name="getarchitectsystempromptresource"></a>
 
 ## [**SystemPromptAsset**](SystemPromptAsset.html) GetArchitectSystempromptResource (string promptId, string languageCode)
@@ -2585,7 +2789,7 @@ namespace Example
             
             
             
-            var historyId = historyId_example;  // string | History ID (generated history)
+            var historyId = historyId_example;  // string | History request ID
             
             
             
@@ -2638,7 +2842,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-| **historyId** | **string**| History ID (generated history) |  |
+| **historyId** | **string**| History request ID |  |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortOrder** | **string**| Sort order | [optional] [default to desc] |
@@ -3232,6 +3436,70 @@ namespace Example
 
 [**IVR**](IVR.html)
 
+<a name="postarchitectprompthistory"></a>
+
+## [**Operation**](Operation.html) PostArchitectPromptHistory (string promptId)
+
+Generate prompt history
+
+Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectPromptHistoryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var promptId = promptId_example;  // string | Prompt ID
+            
+            
+            
+
+            try
+            {
+                
+                // Generate prompt history
+                
+                Operation result = apiInstance.PostArchitectPromptHistory(promptId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectPromptHistory: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **promptId** | **string**| Prompt ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Operation**](Operation.html)
+
 <a name="postarchitectpromptresources"></a>
 
 ## [**PromptAsset**](PromptAsset.html) PostArchitectPromptResources (string promptId, PromptAssetCreate body = null)
@@ -3493,6 +3761,70 @@ namespace Example
 ### Return type
 
 [**Schedule**](Schedule.html)
+
+<a name="postarchitectsystemprompthistory"></a>
+
+## [**Operation**](Operation.html) PostArchitectSystempromptHistory (string promptId)
+
+Generate system prompt history
+
+Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectSystempromptHistoryExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var promptId = promptId_example;  // string | promptId
+            
+            
+            
+
+            try
+            {
+                
+                // Generate system prompt history
+                
+                Operation result = apiInstance.PostArchitectSystempromptHistory(promptId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectSystempromptHistory: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **promptId** | **string**| promptId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Operation**](Operation.html)
 
 <a name="postarchitectsystempromptresources"></a>
 

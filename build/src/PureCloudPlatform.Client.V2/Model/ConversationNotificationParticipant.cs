@@ -116,7 +116,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Error for "ERROR"
             /// </summary>
             [EnumMember(Value = "ERROR")]
-            Error
+            Error,
+            
+            /// <summary>
+            /// Enum Timeout for "TIMEOUT"
+            /// </summary>
+            [EnumMember(Value = "TIMEOUT")]
+            Timeout
         }
         
         

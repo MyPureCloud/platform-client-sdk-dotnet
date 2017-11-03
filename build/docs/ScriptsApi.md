@@ -84,7 +84,7 @@ namespace Example
 
 <a name="getscriptpage"></a>
 
-## [**Page**](Page.html) GetScriptPage (string scriptId, string pageId)
+## [**Page**](Page.html) GetScriptPage (string scriptId, string pageId, string scriptDataVersion = null)
 
 Get a page
 
@@ -121,13 +121,18 @@ namespace Example
             
             
             
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get a page
                 
-                Page result = apiInstance.GetScriptPage(scriptId, pageId);
+                Page result = apiInstance.GetScriptPage(scriptId, pageId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -146,6 +151,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **scriptId** | **string**| Script ID |  |
 | **pageId** | **string**| Page ID |  |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -154,7 +160,7 @@ namespace Example
 
 <a name="getscriptpages"></a>
 
-## [**List&lt;Page&gt;**](Page.html) GetScriptPages (string scriptId)
+## [**List&lt;Page&gt;**](Page.html) GetScriptPages (string scriptId, string scriptDataVersion = null)
 
 Get the list of pages
 
@@ -186,13 +192,18 @@ namespace Example
             
             
             
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the list of pages
                 
-                List&lt;Page&gt; result = apiInstance.GetScriptPages(scriptId);
+                List&lt;Page&gt; result = apiInstance.GetScriptPages(scriptId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -210,6 +221,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scriptId** | **string**| Script ID |  |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -218,7 +230,7 @@ namespace Example
 
 <a name="getscripts"></a>
 
-## [**ScriptEntityListing**](ScriptEntityListing.html) GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null)
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null)
 
 Get the list of scripts
 
@@ -285,13 +297,18 @@ namespace Example
             
             
             
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the list of scripts
                 
-                ScriptEntityListing result = apiInstance.GetScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder);
+                ScriptEntityListing result = apiInstance.GetScripts(pageSize, pageNumber, expand, name, feature, flowId, sortBy, sortOrder, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -316,6 +333,7 @@ namespace Example
 | **flowId** | **string**| Secure flow id filter | [optional]  |
 | **sortBy** | **string**| SortBy | [optional] <br />**Values**: modifiedDate, createdDate |
 | **sortOrder** | **string**| SortOrder | [optional] <br />**Values**: ascending, descending |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -324,7 +342,7 @@ namespace Example
 
 <a name="getscriptspublished"></a>
 
-## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublished (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null)
+## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublished (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
 
 Get the published scripts.
 
@@ -350,6 +368,11 @@ namespace Example
             
 
             var apiInstance = new ScriptsApi();
+            
+            
+            var scriptId = scriptId_example;  // string | Script ID
+            
+            
             
             
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
@@ -381,13 +404,18 @@ namespace Example
             
             
             
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the published scripts.
                 
-                ScriptEntityListing result = apiInstance.GetScriptsPublished(pageSize, pageNumber, expand, name, feature, flowId);
+                ScriptEntityListing result = apiInstance.GetScriptsPublished(scriptId, pageSize, pageNumber, expand, name, feature, flowId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -404,12 +432,14 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **scriptId** | **string**| Script ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **expand** | **string**| Expand | [optional]  |
 | **name** | **string**| Name filter | [optional]  |
 | **feature** | **string**| Feature filter | [optional]  |
 | **flowId** | **string**| Secure flow id filter | [optional]  |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -418,7 +448,7 @@ namespace Example
 
 <a name="getscriptspublishedscriptid"></a>
 
-## [**Script**](Script.html) GetScriptsPublishedScriptId (string scriptId)
+## [**Script**](Script.html) GetScriptsPublishedScriptId (string scriptId, string scriptDataVersion = null)
 
 Get the published script.
 
@@ -450,13 +480,18 @@ namespace Example
             
             
             
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the published script.
                 
-                Script result = apiInstance.GetScriptsPublishedScriptId(scriptId);
+                Script result = apiInstance.GetScriptsPublishedScriptId(scriptId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -474,6 +509,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scriptId** | **string**| Script ID |  |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -482,7 +518,7 @@ namespace Example
 
 <a name="getscriptspublishedscriptidpage"></a>
 
-## [**Page**](Page.html) GetScriptsPublishedScriptIdPage (string scriptId, string pageId)
+## [**Page**](Page.html) GetScriptsPublishedScriptIdPage (string scriptId, string pageId, string scriptDataVersion = null)
 
 Get the published page.
 
@@ -519,13 +555,18 @@ namespace Example
             
             
             
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the published page.
                 
-                Page result = apiInstance.GetScriptsPublishedScriptIdPage(scriptId, pageId);
+                Page result = apiInstance.GetScriptsPublishedScriptIdPage(scriptId, pageId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -544,6 +585,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **scriptId** | **string**| Script ID |  |
 | **pageId** | **string**| Page ID |  |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -552,7 +594,7 @@ namespace Example
 
 <a name="getscriptspublishedscriptidpages"></a>
 
-## [**List&lt;Page&gt;**](Page.html) GetScriptsPublishedScriptIdPages (string scriptId)
+## [**List&lt;Page&gt;**](Page.html) GetScriptsPublishedScriptIdPages (string scriptId, int? foo = null, string scriptDataVersion = null)
 
 Get the list of published pages
 
@@ -584,13 +626,23 @@ namespace Example
             
             
             
+            
+            var foo = 56;  // int? |  (optional)  (default to 25)
+            
+            
+            
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the list of published pages
                 
-                List&lt;Page&gt; result = apiInstance.GetScriptsPublishedScriptIdPages(scriptId);
+                List&lt;Page&gt; result = apiInstance.GetScriptsPublishedScriptIdPages(scriptId, foo, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -608,6 +660,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scriptId** | **string**| Script ID |  |
+| **foo** | **int?**|  | [optional] [default to 25] |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -616,7 +670,7 @@ namespace Example
 
 <a name="getscriptspublishedscriptidvariables"></a>
 
-## **Object** GetScriptsPublishedScriptIdVariables (string scriptId, string input = null, string output = null, string type = null)
+## **Object** GetScriptsPublishedScriptIdVariables (string scriptId, string input = null, string output = null, string type = null, string scriptDataVersion = null)
 
 Get the published variables
 
@@ -663,13 +717,18 @@ namespace Example
             
             
             
+            
+            var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get the published variables
                 
-                Object result = apiInstance.GetScriptsPublishedScriptIdVariables(scriptId, input, output, type);
+                Object result = apiInstance.GetScriptsPublishedScriptIdVariables(scriptId, input, output, type, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -690,6 +749,7 @@ namespace Example
 | **input** | **string**| input | [optional]  |
 | **output** | **string**| output | [optional]  |
 | **type** | **string**| type | [optional]  |
+| **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

@@ -22,6 +22,8 @@ title: CallHistoryParticipant
 | **DisconnectType** | **string** | The reason the participant was disconnected from the conversation. | [optional] |
 | **ExternalContact** | [**ExternalContact**](ExternalContact.html) | The PureCloud external contact | [optional] |
 | **ExternalOrganization** | [**ExternalOrganization**](ExternalOrganization.html) | The PureCloud external organization | [optional] |
+| **DidInteract** | **bool?** | Indicates whether the contact ever connected | [optional] |
+| **SipResponseCodes** | **List&lt;long?&gt;** | Indicates SIP Response codes associated with the participant | [optional] |
 {: class="table table-striped"}
 
 

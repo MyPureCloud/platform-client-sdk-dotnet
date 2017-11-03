@@ -75,6 +75,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Email,
             
             /// <summary>
+            /// Enum Message for "MESSAGE"
+            /// </summary>
+            [EnumMember(Value = "MESSAGE")]
+            Message,
+            
+            /// <summary>
             /// Enum SocialExpression for "SOCIAL_EXPRESSION"
             /// </summary>
             [EnumMember(Value = "SOCIAL_EXPRESSION")]

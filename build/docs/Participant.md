@@ -39,6 +39,7 @@ title: Participant
 | **Chats** | [**List&lt;ConversationChat&gt;**](ConversationChat.html) |  | [optional] |
 | **Cobrowsesessions** | [**List&lt;Cobrowsesession&gt;**](Cobrowsesession.html) |  | [optional] |
 | **Emails** | [**List&lt;Email&gt;**](Email.html) |  | [optional] |
+| **Messages** | [**List&lt;Message&gt;**](Message.html) |  | [optional] |
 | **Screenshares** | [**List&lt;Screenshare&gt;**](Screenshare.html) |  | [optional] |
 | **SocialExpressions** | [**List&lt;SocialExpression&gt;**](SocialExpression.html) |  | [optional] |
 | **Videos** | [**List&lt;Video&gt;**](Video.html) |  | [optional] |

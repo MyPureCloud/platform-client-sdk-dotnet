@@ -161,6 +161,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Tagentresponsetime,
             
             /// <summary>
+            /// Enum Tvoicemail for "tVoicemail"
+            /// </summary>
+            [EnumMember(Value = "tVoicemail")]
+            Tvoicemail,
+            
+            /// <summary>
+            /// Enum Nstatetransitionerror for "nStateTransitionError"
+            /// </summary>
+            [EnumMember(Value = "nStateTransitionError")]
+            Nstatetransitionerror,
+            
+            /// <summary>
             /// Enum Noffered for "nOffered"
             /// </summary>
             [EnumMember(Value = "nOffered")]

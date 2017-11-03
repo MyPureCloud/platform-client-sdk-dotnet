@@ -1010,7 +1010,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>EdgeTrunkBase</returns>
-        EdgeTrunkBase GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis (string edgegroupId, string edgetrunkbaseId);
+        EdgeTrunkBase GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId);
 
         /// <summary>
         /// Gets the edge trunk base associated with the edge group
@@ -1022,7 +1022,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
-        ApiResponse<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisWithHttpInfo (string edgegroupId, string edgetrunkbaseId);
+        ApiResponse<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId);
         
         /// <summary>
         /// Get the list of edge groups.
@@ -2849,7 +2849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>EdgeTrunkBase</returns>
-        EdgeTrunkBase PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
+        EdgeTrunkBase PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
 
         /// <summary>
         /// Update the edge trunk base associated with the edge group
@@ -2862,7 +2862,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
-        ApiResponse<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
+        ApiResponse<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
         
         /// <summary>
         /// Update endpoint
@@ -4104,7 +4104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of EdgeTrunkBase</returns>
-        System.Threading.Tasks.Task<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsync (string edgegroupId, string edgetrunkbaseId);
+        System.Threading.Tasks.Task<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId);
 
         /// <summary>
         /// Gets the edge trunk base associated with the edge group
@@ -4116,7 +4116,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId);
+        System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId);
         
         /// <summary>
         /// Get the list of edge groups.
@@ -5943,7 +5943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of EdgeTrunkBase</returns>
-        System.Threading.Tasks.Task<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsync (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
+        System.Threading.Tasks.Task<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
 
         /// <summary>
         /// Update the edge trunk base associated with the edge group
@@ -5956,7 +5956,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
+        System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body);
         
         /// <summary>
         /// Update endpoint
@@ -14397,9 +14397,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>EdgeTrunkBase</returns>
-        public EdgeTrunkBase GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis (string edgegroupId, string edgetrunkbaseId)
+        public EdgeTrunkBase GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId)
         {
-             ApiResponse<EdgeTrunkBase> localVarResponse = GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisWithHttpInfo(edgegroupId, edgetrunkbaseId);
+             ApiResponse<EdgeTrunkBase> localVarResponse = GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo(edgegroupId, edgetrunkbaseId);
              return localVarResponse.Data;
         }
 
@@ -14410,14 +14410,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
-        public ApiResponse< EdgeTrunkBase > GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisWithHttpInfo (string edgegroupId, string edgetrunkbaseId)
+        public ApiResponse< EdgeTrunkBase > GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId)
         { 
             // verify the required parameter 'edgegroupId' is set
             if (edgegroupId == null)
-                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             // verify the required parameter 'edgetrunkbaseId' is set
             if (edgetrunkbaseId == null)
-                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -14479,9 +14479,9 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EdgeTrunkBase>(localVarStatusCode,
                 localVarHeaders,
@@ -14497,9 +14497,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of EdgeTrunkBase</returns>
-        public async System.Threading.Tasks.Task<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsync (string edgegroupId, string edgetrunkbaseId)
+        public async System.Threading.Tasks.Task<EdgeTrunkBase> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId)
         {
-             ApiResponse<EdgeTrunkBase> localVarResponse = await GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsyncWithHttpInfo(edgegroupId, edgetrunkbaseId);
+             ApiResponse<EdgeTrunkBase> localVarResponse = await GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo(edgegroupId, edgetrunkbaseId);
              return localVarResponse.Data;
 
         }
@@ -14511,15 +14511,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgegroupId">Edge Group ID</param>
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId)
         { 
             // verify the required parameter 'edgegroupId' is set
             if (edgegroupId == null)
-                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             
             // verify the required parameter 'edgetrunkbaseId' is set
             if (edgetrunkbaseId == null)
-                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
@@ -14582,9 +14582,9 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EdgeTrunkBase>(localVarStatusCode,
                 localVarHeaders,
@@ -29517,9 +29517,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>EdgeTrunkBase</returns>
-        public EdgeTrunkBase PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
+        public EdgeTrunkBase PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         {
-             ApiResponse<EdgeTrunkBase> localVarResponse = PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisWithHttpInfo(edgegroupId, edgetrunkbaseId, body);
+             ApiResponse<EdgeTrunkBase> localVarResponse = PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo(edgegroupId, edgetrunkbaseId, body);
              return localVarResponse.Data;
         }
 
@@ -29531,17 +29531,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>ApiResponse of EdgeTrunkBase</returns>
-        public ApiResponse< EdgeTrunkBase > PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
+        public ApiResponse< EdgeTrunkBase > PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         { 
             // verify the required parameter 'edgegroupId' is set
             if (edgegroupId == null)
-                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             // verify the required parameter 'edgetrunkbaseId' is set
             if (edgetrunkbaseId == null)
-                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -29608,9 +29608,9 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EdgeTrunkBase>(localVarStatusCode,
                 localVarHeaders,
@@ -29627,9 +29627,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of EdgeTrunkBase</returns>
-        public async System.Threading.Tasks.Task<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsync (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
+        public async System.Threading.Tasks.Task<EdgeTrunkBase> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsync (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         {
-             ApiResponse<EdgeTrunkBase> localVarResponse = await PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsyncWithHttpInfo(edgegroupId, edgetrunkbaseId, body);
+             ApiResponse<EdgeTrunkBase> localVarResponse = await PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo(edgegroupId, edgetrunkbaseId, body);
              return localVarResponse.Data;
 
         }
@@ -29642,19 +29642,19 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="edgetrunkbaseId">Edge Trunk Base ID</param>
         /// <param name="body">EdgeTrunkBase</param>
         /// <returns>Task of ApiResponse (EdgeTrunkBase)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
+        public async System.Threading.Tasks.Task<ApiResponse<EdgeTrunkBase>> PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseAsyncWithHttpInfo (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
         { 
             // verify the required parameter 'edgegroupId' is set
             if (edgegroupId == null)
-                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgegroupId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             
             // verify the required parameter 'edgetrunkbaseId' is set
             if (edgetrunkbaseId == null)
-                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             
             // verify the required parameter 'body' is set
             if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis");
+                throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
             
 
             var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
@@ -29722,9 +29722,9 @@ namespace PureCloudPlatform.Client.V2.Api
             Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
 
             if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+                throw new ApiException (localVarStatusCode, "Error calling PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<EdgeTrunkBase>(localVarStatusCode,
                 localVarHeaders,

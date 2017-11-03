@@ -48,7 +48,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesDidpools**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdidpools) | **GET** /api/v2/telephony/providers/edges/didpools | Get a listing of DID Pools |
 | [**GetTelephonyProvidersEdgesDids**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesdids) | **GET** /api/v2/telephony/providers/edges/dids | Get a listing of DIDs |
 | [**GetTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroup) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Get edge group. |
-| [**GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroupedgetrunkbasis) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Gets the edge trunk base associated with the edge group |
+| [**GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroupedgetrunkbase) | **GET** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Gets the edge trunk base associated with the edge group |
 | [**GetTelephonyProvidersEdgesEdgegroups**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgegroups) | **GET** /api/v2/telephony/providers/edges/edgegroups | Get the list of edge groups. |
 | [**GetTelephonyProvidersEdgesEdgeversionreport**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesedgeversionreport) | **GET** /api/v2/telephony/providers/edges/edgeversionreport | Get the edge version report. |
 | [**GetTelephonyProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#gettelephonyprovidersedgesendpoint) | **GET** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Get endpoint |
@@ -123,7 +123,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutTelephonyProvidersEdgesDid**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesdid) | **PUT** /api/v2/telephony/providers/edges/dids/{didId} | Update a DID by ID. |
 | [**PutTelephonyProvidersEdgesDidpool**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesdidpool) | **PUT** /api/v2/telephony/providers/edges/didpools/{didPoolId} | Update a DID Pool by ID. |
 | [**PutTelephonyProvidersEdgesEdgegroup**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesedgegroup) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgeGroupId} | Update an edge group. |
-| [**PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesedgegroupedgetrunkbasis) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Update the edge trunk base associated with the edge group |
+| [**PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesedgegroupedgetrunkbase) | **PUT** /api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId} | Update the edge trunk base associated with the edge group |
 | [**PutTelephonyProvidersEdgesEndpoint**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesendpoint) | **PUT** /api/v2/telephony/providers/edges/endpoints/{endpointId} | Update endpoint |
 | [**PutTelephonyProvidersEdgesExtension**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesextension) | **PUT** /api/v2/telephony/providers/edges/extensions/{extensionId} | Update an extension by ID. |
 | [**PutTelephonyProvidersEdgesExtensionpool**](TelephonyProvidersEdgeApi.html#puttelephonyprovidersedgesextensionpool) | **PUT** /api/v2/telephony/providers/edges/extensionpools/{extensionPoolId} | Update an extension pool by ID |
@@ -2986,9 +2986,9 @@ namespace Example
 
 [**EdgeGroup**](EdgeGroup.html)
 
-<a name="gettelephonyprovidersedgesedgegroupedgetrunkbasis"></a>
+<a name="gettelephonyprovidersedgesedgegroupedgetrunkbase"></a>
 
-## [**EdgeTrunkBase**](EdgeTrunkBase.html) GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis (string edgegroupId, string edgetrunkbaseId)
+## [**EdgeTrunkBase**](EdgeTrunkBase.html) GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId)
 
 Gets the edge trunk base associated with the edge group
 
@@ -3004,7 +3004,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasisExample
+    public class GetTelephonyProvidersEdgesEdgegroupEdgetrunkbaseExample
     {
         public void main()
         {
@@ -3031,12 +3031,12 @@ namespace Example
                 
                 // Gets the edge trunk base associated with the edge group
                 
-                EdgeTrunkBase result = apiInstance.GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis(edgegroupId, edgetrunkbaseId);
+                EdgeTrunkBase result = apiInstance.GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase(edgegroupId, edgetrunkbaseId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + e.Message );
             }
         }
     }
@@ -8343,9 +8343,9 @@ namespace Example
 
 [**EdgeGroup**](EdgeGroup.html)
 
-<a name="puttelephonyprovidersedgesedgegroupedgetrunkbasis"></a>
+<a name="puttelephonyprovidersedgesedgegroupedgetrunkbase"></a>
 
-## [**EdgeTrunkBase**](EdgeTrunkBase.html) PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
+## [**EdgeTrunkBase**](EdgeTrunkBase.html) PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
 
 Update the edge trunk base associated with the edge group
 
@@ -8361,7 +8361,7 @@ using PureCloudPlatform.Client.V2.Model;
 
 namespace Example
 {
-    public class PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasisExample
+    public class PutTelephonyProvidersEdgesEdgegroupEdgetrunkbaseExample
     {
         public void main()
         {
@@ -8393,12 +8393,12 @@ namespace Example
                 
                 // Update the edge trunk base associated with the edge group
                 
-                EdgeTrunkBase result = apiInstance.PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis(edgegroupId, edgetrunkbaseId, body);
+                EdgeTrunkBase result = apiInstance.PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase(edgegroupId, edgetrunkbaseId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutTelephonyProvidersEdgesEdgegroupEdgetrunkbasis: " + e.Message );
+                Debug.Print("Exception when calling TelephonyProvidersEdgeApi.PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase: " + e.Message );
             }
         }
     }

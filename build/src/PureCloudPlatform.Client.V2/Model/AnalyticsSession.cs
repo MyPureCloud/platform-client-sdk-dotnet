@@ -75,8 +75,20 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Screenshare for "screenshare"
             /// </summary>
             [EnumMember(Value = "screenshare")]
-            Screenshare
+            Screenshare,
+            
+            /// <summary>
+            /// Enum Message for "message"
+            /// </summary>
+            [EnumMember(Value = "message")]
+            Message
         }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -261,12 +273,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
         /// <value>The session media type</value>
         [DataMember(Name="mediaType", EmitDefaultValue=false)]
         public MediaTypeEnum? MediaType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -345,6 +364,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsSession" /> class.
@@ -364,6 +385,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="AddressSelf">AddressSelf.</param>
+        
+        
+        
+        /// <param name="AddressFrom">AddressFrom.</param>
+        
+        
+        
+        /// <param name="AddressTo">AddressTo.</param>
         
         
         
@@ -435,6 +464,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="PeerId">A unique identifier for a peer.</param>
+        
+        
+        
         /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
         
         
@@ -478,8 +511,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Segments">List of segments for this session.</param>
         
         
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -650,6 +695,24 @@ this.AddressSelf = AddressSelf;
             
             
             
+this.AddressFrom = AddressFrom;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AddressTo = AddressTo;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Ani = Ani;
             
             
@@ -803,6 +866,15 @@ this.ScriptId = ScriptId;
             
             
             
+this.PeerId = PeerId;
+            
+            
+            
+            
+            
+            
+            
+            
 this.SkipEnabled = SkipEnabled;
             
             
@@ -926,6 +998,22 @@ this.Segments = Segments;
         /// </summary>
         [DataMember(Name="addressSelf", EmitDefaultValue=false)]
         public string AddressSelf { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AddressFrom
+        /// </summary>
+        [DataMember(Name="addressFrom", EmitDefaultValue=false)]
+        public string AddressFrom { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AddressTo
+        /// </summary>
+        [DataMember(Name="addressTo", EmitDefaultValue=false)]
+        public string AddressTo { get; set; }
         
         
         
@@ -1067,6 +1155,15 @@ this.Segments = Segments;
         
         
         /// <summary>
+        /// A unique identifier for a peer
+        /// </summary>
+        /// <value>A unique identifier for a peer</value>
+        [DataMember(Name="peerId", EmitDefaultValue=false)]
+        public string PeerId { get; set; }
+        
+        
+        
+        /// <summary>
         /// (Dialer) Whether the agent can skip the dialer contact
         /// </summary>
         /// <value>(Dialer) Whether the agent can skip the dialer contact</value>
@@ -1180,6 +1277,10 @@ this.Segments = Segments;
             
             sb.Append("  AddressSelf: ").Append(AddressSelf).Append("\n");
             
+            sb.Append("  AddressFrom: ").Append(AddressFrom).Append("\n");
+            
+            sb.Append("  AddressTo: ").Append(AddressTo).Append("\n");
+            
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             
             sb.Append("  Direction: ").Append(Direction).Append("\n");
@@ -1213,6 +1314,8 @@ this.Segments = Segments;
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
             
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
+            
+            sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
             
@@ -1291,6 +1394,16 @@ this.Segments = Segments;
                     this.AddressSelf == other.AddressSelf ||
                     this.AddressSelf != null &&
                     this.AddressSelf.Equals(other.AddressSelf)
+                ) &&
+                (
+                    this.AddressFrom == other.AddressFrom ||
+                    this.AddressFrom != null &&
+                    this.AddressFrom.Equals(other.AddressFrom)
+                ) &&
+                (
+                    this.AddressTo == other.AddressTo ||
+                    this.AddressTo != null &&
+                    this.AddressTo.Equals(other.AddressTo)
                 ) &&
                 (
                     this.Ani == other.Ani ||
@@ -1378,6 +1491,11 @@ this.Segments = Segments;
                     this.ScriptId.Equals(other.ScriptId)
                 ) &&
                 (
+                    this.PeerId == other.PeerId ||
+                    this.PeerId != null &&
+                    this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
                     this.SkipEnabled == other.SkipEnabled ||
                     this.SkipEnabled != null &&
                     this.SkipEnabled.Equals(other.SkipEnabled)
@@ -1458,6 +1576,12 @@ this.Segments = Segments;
                 if (this.AddressSelf != null)
                     hash = hash * 59 + this.AddressSelf.GetHashCode();
                 
+                if (this.AddressFrom != null)
+                    hash = hash * 59 + this.AddressFrom.GetHashCode();
+                
+                if (this.AddressTo != null)
+                    hash = hash * 59 + this.AddressTo.GetHashCode();
+                
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();
                 
@@ -1508,6 +1632,9 @@ this.Segments = Segments;
                 
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();
+                
+                if (this.PeerId != null)
+                    hash = hash * 59 + this.PeerId.GetHashCode();
                 
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();

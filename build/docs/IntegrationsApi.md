@@ -654,7 +654,7 @@ namespace Example
 
 <a name="getintegrationsactions"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (string category = null, string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
 
 Retrieves all actions associated with filters passed in via query param.
 
@@ -688,6 +688,11 @@ namespace Example
             
             
             var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
+            
+            
+            
+            
+            var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional) 
             
             
             
@@ -727,7 +732,7 @@ namespace Example
                 
                 // Retrieves all actions associated with filters passed in via query param.
                 
-                ActionEntityListing result = apiInstance.GetIntegrationsActions(category, secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                ActionEntityListing result = apiInstance.GetIntegrationsActions(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -746,6 +751,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **category** | **string**| Filter by category name | [optional]  |
 | **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+| **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
@@ -860,7 +866,7 @@ namespace Example
 
 <a name="getintegrationsactionsdrafts"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (string category = null, string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
 
 Retrieves all action drafts associated with the filters passed in via query param.
 
@@ -894,6 +900,11 @@ namespace Example
             
             
             var secure = secure_example;  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
+            
+            
+            
+            
+            var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional) 
             
             
             
@@ -933,7 +944,7 @@ namespace Example
                 
                 // Retrieves all action drafts associated with the filters passed in via query param.
                 
-                ActionEntityListing result = apiInstance.GetIntegrationsActionsDrafts(category, secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                ActionEntityListing result = apiInstance.GetIntegrationsActionsDrafts(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -952,6 +963,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **category** | **string**| Filter by category name | [optional]  |
 | **secure** | **string**| Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
+| **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] <br />**Values**: true, false |
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |

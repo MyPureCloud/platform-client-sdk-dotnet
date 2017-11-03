@@ -151,6 +151,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Requestedlanguageid,
             
             /// <summary>
+            /// Enum Requestedroutinguserids for "requestedRoutingUserIds"
+            /// </summary>
+            [EnumMember(Value = "requestedRoutingUserIds")]
+            Requestedroutinguserids,
+            
+            /// <summary>
             /// Enum Purpose for "purpose"
             /// </summary>
             [EnumMember(Value = "purpose")]
@@ -203,6 +209,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "externalOrganizationId")]
             Externalorganizationid,
+            
+            /// <summary>
+            /// Enum Convertedfrom for "convertedFrom"
+            /// </summary>
+            [EnumMember(Value = "convertedFrom")]
+            Convertedfrom,
+            
+            /// <summary>
+            /// Enum Convertedto for "convertedTo"
+            /// </summary>
+            [EnumMember(Value = "convertedTo")]
+            Convertedto,
             
             /// <summary>
             /// Enum Stationid for "stationId"
@@ -323,6 +341,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "addressTo")]
             Addressto,
+            
+            /// <summary>
+            /// Enum Addressself for "addressSelf"
+            /// </summary>
+            [EnumMember(Value = "addressSelf")]
+            Addressself,
+            
+            /// <summary>
+            /// Enum Addressother for "addressOther"
+            /// </summary>
+            [EnumMember(Value = "addressOther")]
+            Addressother,
             
             /// <summary>
             /// Enum Subject for "subject"
@@ -598,6 +628,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tAgentResponseTime")]
             Tagentresponsetime,
+            
+            /// <summary>
+            /// Enum Tvoicemail for "tVoicemail"
+            /// </summary>
+            [EnumMember(Value = "tVoicemail")]
+            Tvoicemail,
+            
+            /// <summary>
+            /// Enum Nstatetransitionerror for "nStateTransitionError"
+            /// </summary>
+            [EnumMember(Value = "nStateTransitionError")]
+            Nstatetransitionerror,
             
             /// <summary>
             /// Enum Noffered for "nOffered"

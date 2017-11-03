@@ -206,6 +206,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The participant's direction.  Values can be: 'inbound' or 'outbound'
         /// </summary>
@@ -231,6 +237,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The reason the participant was disconnected from the conversation.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -302,8 +312,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalOrganization">The PureCloud external organization.</param>
         
         
-        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null)
+        
+        /// <param name="DidInteract">Indicates whether the contact ever connected.</param>
+        
+        
+        
+        /// <param name="SipResponseCodes">Indicates SIP Response codes associated with the participant.</param>
+        
+        
+        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null, bool? DidInteract = null, List<long?> SipResponseCodes = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -501,6 +527,24 @@ this.ExternalOrganization = ExternalOrganization;
             
             
             
+            
+            
+            
+            
+this.DidInteract = DidInteract;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SipResponseCodes = SipResponseCodes;
+            
+            
+            
+            
         }
         
         
@@ -625,6 +669,24 @@ this.ExternalOrganization = ExternalOrganization;
         public ExternalOrganization ExternalOrganization { get; set; }
         
         
+        
+        /// <summary>
+        /// Indicates whether the contact ever connected
+        /// </summary>
+        /// <value>Indicates whether the contact ever connected</value>
+        [DataMember(Name="didInteract", EmitDefaultValue=false)]
+        public bool? DidInteract { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates SIP Response codes associated with the participant
+        /// </summary>
+        /// <value>Indicates SIP Response codes associated with the participant</value>
+        [DataMember(Name="sipResponseCodes", EmitDefaultValue=false)]
+        public List<long?> SipResponseCodes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -663,6 +725,10 @@ this.ExternalOrganization = ExternalOrganization;
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
             
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
+            
+            sb.Append("  DidInteract: ").Append(DidInteract).Append("\n");
+            
+            sb.Append("  SipResponseCodes: ").Append(SipResponseCodes).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -774,6 +840,16 @@ this.ExternalOrganization = ExternalOrganization;
                     this.ExternalOrganization == other.ExternalOrganization ||
                     this.ExternalOrganization != null &&
                     this.ExternalOrganization.Equals(other.ExternalOrganization)
+                ) &&
+                (
+                    this.DidInteract == other.DidInteract ||
+                    this.DidInteract != null &&
+                    this.DidInteract.Equals(other.DidInteract)
+                ) &&
+                (
+                    this.SipResponseCodes == other.SipResponseCodes ||
+                    this.SipResponseCodes != null &&
+                    this.SipResponseCodes.SequenceEqual(other.SipResponseCodes)
                 );
         }
 
@@ -833,6 +909,12 @@ this.ExternalOrganization = ExternalOrganization;
                 
                 if (this.ExternalOrganization != null)
                     hash = hash * 59 + this.ExternalOrganization.GetHashCode();
+                
+                if (this.DidInteract != null)
+                    hash = hash * 59 + this.DidInteract.GetHashCode();
+                
+                if (this.SipResponseCodes != null)
+                    hash = hash * 59 + this.SipResponseCodes.GetHashCode();
                 
                 return hash;
             }

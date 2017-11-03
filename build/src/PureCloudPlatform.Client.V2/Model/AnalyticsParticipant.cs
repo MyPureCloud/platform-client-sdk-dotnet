@@ -120,7 +120,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum External for "external"
             /// </summary>
             [EnumMember(Value = "external")]
-            External
+            External,
+            
+            /// <summary>
+            /// Enum Fax for "fax"
+            /// </summary>
+            [EnumMember(Value = "fax")]
+            Fax,
+            
+            /// <summary>
+            /// Enum Workflow for "workflow"
+            /// </summary>
+            [EnumMember(Value = "workflow")]
+            Workflow
         }
         
         
