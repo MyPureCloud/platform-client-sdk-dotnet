@@ -173,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Extension">Use extension instead of address for setting internal extensions.</param>
+        /// <param name="Extension">Use internal extension instead of address. Mutually exclusive with the address field..</param>
         
         
         public Contact(string Address = null, MediaTypeEnum? MediaType = null, TypeEnum? Type = null, string Extension = null)
@@ -263,9 +263,9 @@ this.Extension = Extension;
         
         
         /// <summary>
-        /// Use extension instead of address for setting internal extensions
+        /// Use internal extension instead of address. Mutually exclusive with the address field.
         /// </summary>
-        /// <value>Use extension instead of address for setting internal extensions</value>
+        /// <value>Use internal extension instead of address. Mutually exclusive with the address field.</value>
         [DataMember(Name="extension", EmitDefaultValue=false)]
         public string Extension { get; set; }
         

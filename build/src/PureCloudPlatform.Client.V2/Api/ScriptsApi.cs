@@ -268,6 +268,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object</returns>
         ApiResponse<Object> GetScriptsPublishedScriptIdVariablesWithHttpInfo (string scriptId, string input = null, string output = null, string type = null, string scriptDataVersion = null);
         
+        /// <summary>
+        /// Get the upload status of an imported script
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>ImportScriptStatusResponse</returns>
+        ImportScriptStatusResponse GetScriptsUploadStatus (string uploadId, bool? longPoll = null);
+
+        /// <summary>
+        /// Get the upload status of an imported script
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>ApiResponse of ImportScriptStatusResponse</returns>
+        ApiResponse<ImportScriptStatusResponse> GetScriptsUploadStatusWithHttpInfo (string uploadId, bool? longPoll = null);
+        
         #endregion Synchronous Operations
         
         #region Asynchronous Operations
@@ -523,6 +547,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="scriptDataVersion">Advanced usage - controls the data version of the script (optional)</param>
         /// <returns>Task of ApiResponse (Object)</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> GetScriptsPublishedScriptIdVariablesAsyncWithHttpInfo (string scriptId, string input = null, string output = null, string type = null, string scriptDataVersion = null);
+        
+        /// <summary>
+        /// Get the upload status of an imported script
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>Task of ImportScriptStatusResponse</returns>
+        System.Threading.Tasks.Task<ImportScriptStatusResponse> GetScriptsUploadStatusAsync (string uploadId, bool? longPoll = null);
+
+        /// <summary>
+        /// Get the upload status of an imported script
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ImportScriptStatusResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ImportScriptStatusResponse>> GetScriptsUploadStatusAsyncWithHttpInfo (string uploadId, bool? longPoll = null);
         
         #endregion Asynchronous Operations
         
@@ -2499,6 +2547,203 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Get the upload status of an imported script 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>ImportScriptStatusResponse</returns>
+        public ImportScriptStatusResponse GetScriptsUploadStatus (string uploadId, bool? longPoll = null)
+        {
+             ApiResponse<ImportScriptStatusResponse> localVarResponse = GetScriptsUploadStatusWithHttpInfo(uploadId, longPoll);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the upload status of an imported script 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>ApiResponse of ImportScriptStatusResponse</returns>
+        public ApiResponse< ImportScriptStatusResponse > GetScriptsUploadStatusWithHttpInfo (string uploadId, bool? longPoll = null)
+        { 
+            // verify the required parameter 'uploadId' is set
+            if (uploadId == null)
+                throw new ApiException(400, "Missing required parameter 'uploadId' when calling ScriptsApi->GetScriptsUploadStatus");
+
+            var localVarPath = "/api/v2/scripts/uploads/{uploadId}/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (uploadId != null) localVarPathParams.Add("uploadId", Configuration.ApiClient.ParameterToString(uploadId));
+
+            // Query params
+            if (longPoll != null) localVarQueryParams.Add(new Tuple<string, string>("longPoll", Configuration.ApiClient.ParameterToString(longPoll)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsUploadStatus: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsUploadStatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportScriptStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportScriptStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportScriptStatusResponse)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get the upload status of an imported script 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>Task of ImportScriptStatusResponse</returns>
+        public async System.Threading.Tasks.Task<ImportScriptStatusResponse> GetScriptsUploadStatusAsync (string uploadId, bool? longPoll = null)
+        {
+             ApiResponse<ImportScriptStatusResponse> localVarResponse = await GetScriptsUploadStatusAsyncWithHttpInfo(uploadId, longPoll);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the upload status of an imported script 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="uploadId">Upload ID</param>
+        /// <param name="longPoll">Enable longPolling endpoint (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (ImportScriptStatusResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ImportScriptStatusResponse>> GetScriptsUploadStatusAsyncWithHttpInfo (string uploadId, bool? longPoll = null)
+        { 
+            // verify the required parameter 'uploadId' is set
+            if (uploadId == null)
+                throw new ApiException(400, "Missing required parameter 'uploadId' when calling ScriptsApi->GetScriptsUploadStatus");
+            
+
+            var localVarPath = "/api/v2/scripts/uploads/{uploadId}/status";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (uploadId != null) localVarPathParams.Add("uploadId", Configuration.ApiClient.ParameterToString(uploadId));
+
+            // Query params
+            if (longPoll != null) localVarQueryParams.Add(new Tuple<string, string>("longPoll", Configuration.ApiClient.ParameterToString(longPoll)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsUploadStatus: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetScriptsUploadStatus: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ImportScriptStatusResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ImportScriptStatusResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ImportScriptStatusResponse)));
             
         }
 

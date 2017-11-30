@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Management Unit object for Workforce Management.
+    /// Management Unit object for Workforce Management
     /// </summary>
     [DataContract]
     public partial class ManagementUnit :  IEquatable<ManagementUnit>
@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Start day of week for workforce management planning purposes
+        /// Start day of week for scheduling and forecasting purposes
         /// </summary>
-        /// <value>Start day of week for workforce management planning purposes</value>
+        /// <value>Start day of week for scheduling and forecasting purposes</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StartDayOfWeekEnum
         {
@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sunday for "Sunday"
+            /// </summary>
+            [EnumMember(Value = "Sunday")]
+            Sunday,
             
             /// <summary>
             /// Enum Monday for "Monday"
@@ -75,13 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Saturday for "Saturday"
             /// </summary>
             [EnumMember(Value = "Saturday")]
-            Saturday,
-            
-            /// <summary>
-            /// Enum Sunday for "Sunday"
-            /// </summary>
-            [EnumMember(Value = "Sunday")]
-            Sunday
+            Saturday
         }
         
         
@@ -104,12 +104,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
-        /// Start day of week for workforce management planning purposes
+        /// Start day of week for scheduling and forecasting purposes
         /// </summary>
-        /// <value>Start day of week for workforce management planning purposes</value>
+        /// <value>Start day of week for scheduling and forecasting purposes</value>
         [DataMember(Name="startDayOfWeek", EmitDefaultValue=false)]
         public StartDayOfWeekEnum? StartDayOfWeek { get; set; }
+        
+        
+        
+        
         
         
         
@@ -138,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="StartDayOfWeek">Start day of week for workforce management planning purposes.</param>
+        /// <param name="StartDayOfWeek">Start day of week for scheduling and forecasting purposes.</param>
         
         
         
@@ -146,17 +156,29 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Version">The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests (required).</param>
+        /// <param name="Settings">The configuration settings for this management unit.</param>
         
         
         
-        /// <param name="DateModified">The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Version">The version of the underlying entity (required).</param>
+        
+        
+        
+        /// <param name="DateModified">The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
+        /// <param name="ModifiedBy">The user who last modified this entity.</param>
         
         
         
         
-        public ManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, int? Version = null, DateTime? DateModified = null)
+        public ManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettings Settings = null, int? Version = null, DateTime? DateModified = null, User ModifiedBy = null)
         {
+            
+            
+            
+            
             
             
             
@@ -183,6 +205,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
             
             
             
@@ -226,11 +252,29 @@ this.TimeZone = TimeZone;
             
             
             
+this.Settings = Settings;
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
             
 this.DateModified = DateModified;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ModifiedBy = ModifiedBy;
             
             
             
@@ -270,20 +314,38 @@ this.DateModified = DateModified;
         
         
         /// <summary>
-        /// The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests
+        /// The configuration settings for this management unit
         /// </summary>
-        /// <value>The version of the underlying ManagementUnit object. Useful for handling eventual consistency issues.  User must submit the current version they of the ManagementUnit in any write requests</value>
+        /// <value>The configuration settings for this management unit</value>
+        [DataMember(Name="settings", EmitDefaultValue=false)]
+        public ManagementUnitSettings Settings { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The version of the underlying entity
+        /// </summary>
+        /// <value>The version of the underlying entity</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         
         
         
         /// <summary>
-        /// The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The date and time at which this management unit was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The user who last modified this entity
+        /// </summary>
+        /// <value>The user who last modified this entity</value>
+        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
+        public User ModifiedBy { get; set; }
         
         
         
@@ -312,9 +374,13 @@ this.DateModified = DateModified;
             
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
             
+            sb.Append("  Settings: ").Append(Settings).Append("\n");
+            
             sb.Append("  Version: ").Append(Version).Append("\n");
             
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
+            
+            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -375,6 +441,11 @@ this.DateModified = DateModified;
                     this.TimeZone.Equals(other.TimeZone)
                 ) &&
                 (
+                    this.Settings == other.Settings ||
+                    this.Settings != null &&
+                    this.Settings.Equals(other.Settings)
+                ) &&
+                (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
@@ -383,6 +454,11 @@ this.DateModified = DateModified;
                     this.DateModified == other.DateModified ||
                     this.DateModified != null &&
                     this.DateModified.Equals(other.DateModified)
+                ) &&
+                (
+                    this.ModifiedBy == other.ModifiedBy ||
+                    this.ModifiedBy != null &&
+                    this.ModifiedBy.Equals(other.ModifiedBy)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -415,11 +491,17 @@ this.DateModified = DateModified;
                 if (this.TimeZone != null)
                     hash = hash * 59 + this.TimeZone.GetHashCode();
                 
+                if (this.Settings != null)
+                    hash = hash * 59 + this.Settings.GetHashCode();
+                
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
                 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
+                
+                if (this.ModifiedBy != null)
+                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

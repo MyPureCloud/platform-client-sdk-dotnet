@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "21.0.1";
+        public const string Version = "22.0.0";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -278,7 +278,7 @@ namespace PureCloudPlatform.Client.V2.Client
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             
             report += "    Version of the API: v2\n";
-            report += "    SDK Package Version: 21.0.1\n";
+            report += "    SDK Package Version: 22.0.0\n";
 
             return report;
         }

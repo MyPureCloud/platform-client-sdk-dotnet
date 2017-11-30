@@ -19,6 +19,9 @@ title: Message
 | **ConnectedTime** | **DateTime?** | The timestamp when this communication was connected in the cloud clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Provider** | **string** | The source provider for the message. | [optional] |
+| **Type** | **string** | Indicates the type of message platform from which the message originated. | [optional] |
+| **RecipientCountry** | **string** | Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format. | [optional] |
+| **RecipientType** | **string** | The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type. | [optional] |
 | **ScriptId** | **string** | The UUID of the script to use. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
 | **ToAddress** | [**Address**](Address.html) | Address and name data for a call endpoint. | [optional] |

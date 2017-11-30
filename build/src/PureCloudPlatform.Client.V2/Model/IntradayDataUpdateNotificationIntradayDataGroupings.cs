@@ -56,7 +56,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Callback for "CALLBACK"
             /// </summary>
             [EnumMember(Value = "CALLBACK")]
-            Callback
+            Callback,
+            
+            /// <summary>
+            /// Enum Message for "MESSAGE"
+            /// </summary>
+            [EnumMember(Value = "MESSAGE")]
+            Message
         }
         
         

@@ -329,6 +329,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "SMS"
+            /// </summary>
+            [EnumMember(Value = "SMS")]
+            Sms
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -397,6 +427,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         
         
         
@@ -520,8 +562,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Messages">Messages.</param>
         
         
-        public MessageConversationNotificationMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, MessageConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, MessageConversationNotificationErrorInfo ErrorInfo = null, MessageConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, MessageConversationNotificationUriReference ExternalContact = null, MessageConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, List<MessageConversationNotificationMessages> Messages = null)
+        
+        /// <param name="Type">Type.</param>
+        
+        
+        
+        /// <param name="RecipientCountry">RecipientCountry.</param>
+        
+        
+        
+        /// <param name="RecipientType">RecipientType.</param>
+        
+        
+        public MessageConversationNotificationMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, MessageConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, MessageConversationNotificationErrorInfo ErrorInfo = null, MessageConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, MessageConversationNotificationUriReference ExternalContact = null, MessageConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, List<MessageConversationNotificationMessages> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -888,6 +954,33 @@ this.Messages = Messages;
             
             
             
+            
+            
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecipientCountry = RecipientCountry;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecipientType = RecipientType;
+            
+            
+            
+            
         }
         
         
@@ -1097,6 +1190,24 @@ this.Messages = Messages;
         public List<MessageConversationNotificationMessages> Messages { get; set; }
         
         
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets RecipientCountry
+        /// </summary>
+        [DataMember(Name="recipientCountry", EmitDefaultValue=false)]
+        public string RecipientCountry { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets RecipientType
+        /// </summary>
+        [DataMember(Name="recipientType", EmitDefaultValue=false)]
+        public string RecipientType { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1161,6 +1272,12 @@ this.Messages = Messages;
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
             sb.Append("  Messages: ").Append(Messages).Append("\n");
+            
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            
+            sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
+            
+            sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1337,6 +1454,21 @@ this.Messages = Messages;
                     this.Messages == other.Messages ||
                     this.Messages != null &&
                     this.Messages.SequenceEqual(other.Messages)
+                ) &&
+                (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.RecipientCountry == other.RecipientCountry ||
+                    this.RecipientCountry != null &&
+                    this.RecipientCountry.Equals(other.RecipientCountry)
+                ) &&
+                (
+                    this.RecipientType == other.RecipientType ||
+                    this.RecipientType != null &&
+                    this.RecipientType.Equals(other.RecipientType)
                 );
         }
 
@@ -1435,6 +1567,15 @@ this.Messages = Messages;
                 
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.RecipientCountry != null)
+                    hash = hash * 59 + this.RecipientCountry.GetHashCode();
+                
+                if (this.RecipientType != null)
+                    hash = hash * 59 + this.RecipientType.GetHashCode();
                 
                 return hash;
             }

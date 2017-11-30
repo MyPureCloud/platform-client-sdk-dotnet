@@ -12,6 +12,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsEmailMessagesDraftAttachment**](ConversationsApi.html#deleteconversationsemailmessagesdraftattachment) | **DELETE** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
 | [**GetAnalyticsConversationDetails**](ConversationsApi.html#getanalyticsconversationdetails) | **GET** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetConversation**](ConversationsApi.html#getconversation) | **GET** /api/v2/conversations/{conversationId} | Get conversation |
+| [**GetConversationParticipantSecureivrsession**](ConversationsApi.html#getconversationparticipantsecureivrsession) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId} | Fetch info on a secure session |
+| [**GetConversationParticipantSecureivrsessions**](ConversationsApi.html#getconversationparticipantsecureivrsessions) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Get a list of secure sessions for this participant. |
 | [**GetConversationParticipantWrapup**](ConversationsApi.html#getconversationparticipantwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationParticipantWrapupcodes**](ConversationsApi.html#getconversationparticipantwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get conversations |
@@ -69,6 +71,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationParticipantCallbacks**](ConversationsApi.html#postconversationparticipantcallbacks) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationParticipantDigits**](ConversationsApi.html#postconversationparticipantdigits) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
 | [**PostConversationParticipantReplace**](ConversationsApi.html#postconversationparticipantreplace) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationParticipantSecureivrsessions**](ConversationsApi.html#postconversationparticipantsecureivrsessions) | **POST** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**PostConversationsCall**](ConversationsApi.html#postconversationscall) | **POST** /api/v2/conversations/calls/{conversationId} | Place a new call as part of a callback conversation. |
 | [**PostConversationsCallParticipantConsult**](ConversationsApi.html#postconversationscallparticipantconsult) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
 | [**PostConversationsCallParticipantMonitor**](ConversationsApi.html#postconversationscallparticipantmonitor) | **POST** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
@@ -429,6 +432,152 @@ namespace Example
 ### Return type
 
 [**Conversation**](Conversation.html)
+
+<a name="getconversationparticipantsecureivrsession"></a>
+
+## [**SecureSession**](SecureSession.html) GetConversationParticipantSecureivrsession (string conversationId, string participantId, string secureSessionId)
+
+Fetch info on a secure session
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationParticipantSecureivrsessionExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
+            var secureSessionId = secureSessionId_example;  // string | secure IVR session ID
+            
+            
+            
+
+            try
+            {
+                
+                // Fetch info on a secure session
+                
+                SecureSession result = apiInstance.GetConversationParticipantSecureivrsession(conversationId, participantId, secureSessionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationParticipantSecureivrsession: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **secureSessionId** | **string**| secure IVR session ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SecureSession**](SecureSession.html)
+
+<a name="getconversationparticipantsecureivrsessions"></a>
+
+## [**SecureSessionEntityListing**](SecureSessionEntityListing.html) GetConversationParticipantSecureivrsessions (string conversationId, string participantId)
+
+Get a list of secure sessions for this participant.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationParticipantSecureivrsessionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get a list of secure sessions for this participant.
+                
+                SecureSessionEntityListing result = apiInstance.GetConversationParticipantSecureivrsessions(conversationId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationParticipantSecureivrsessions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SecureSessionEntityListing**](SecureSessionEntityListing.html)
 
 <a name="getconversationparticipantwrapup"></a>
 
@@ -4458,6 +4607,82 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postconversationparticipantsecureivrsessions"></a>
+
+## [**SecureSession**](SecureSession.html) PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null)
+
+Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationParticipantSecureivrsessionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversation ID
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participant ID
+            
+            
+            
+            
+            
+            var body = new CreateSecureSession(); // CreateSecureSession |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+                
+                SecureSession result = apiInstance.PostConversationParticipantSecureivrsessions(conversationId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantSecureivrsessions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **body** | [**CreateSecureSession**](CreateSecureSession.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SecureSession**](SecureSession.html)
 
 <a name="postconversationscall"></a>
 

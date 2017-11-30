@@ -35,6 +35,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum ApproachingContactLimit for "APPROACHING_CONTACT_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "APPROACHING_CONTACT_LIMIT")]
+            ApproachingContactLimit,
+            
+            /// <summary>
             /// Enum ApproachingEntityLimit for "APPROACHING_ENTITY_LIMIT"
             /// </summary>
             [EnumMember(Value = "APPROACHING_ENTITY_LIMIT")]
@@ -111,6 +117,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "CONTACT_LIST_FILTER_EVALUATION_FAILED")]
             ContactListFilterEvaluationFailed,
+            
+            /// <summary>
+            /// Enum ExceededContactLimit for "EXCEEDED_CONTACT_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "EXCEEDED_CONTACT_LIMIT")]
+            ExceededContactLimit,
             
             /// <summary>
             /// Enum InactiveEdgesFailedPlaceCalls for "INACTIVE_EDGES_FAILED_PLACE_CALLS"

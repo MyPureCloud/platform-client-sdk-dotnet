@@ -646,8 +646,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>PromptEntityListing</returns>
-        PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null);
+        PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a pageable list of user prompts
@@ -661,8 +663,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
-        ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null);
+        ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a schedule by ID
@@ -2314,8 +2318,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of PromptEntityListing</returns>
-        System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null);
+        System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a pageable list of user prompts
@@ -2329,8 +2335,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a schedule by ID
@@ -8303,10 +8311,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>PromptEntityListing</returns>
-        public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null)
+        public PromptEntityListing GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<PromptEntityListing> localVarResponse = GetArchitectPromptsWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription);
+             ApiResponse<PromptEntityListing> localVarResponse = GetArchitectPromptsWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -8319,8 +8329,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>ApiResponse of PromptEntityListing</returns>
-        public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null)
+        public ApiResponse< PromptEntityListing > GetArchitectPromptsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/architect/prompts";
@@ -8361,6 +8373,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
             if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -8406,10 +8420,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of PromptEntityListing</returns>
-        public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null)
+        public async System.Threading.Tasks.Task<PromptEntityListing> GetArchitectPromptsAsync (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<PromptEntityListing> localVarResponse = await GetArchitectPromptsAsyncWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription);
+             ApiResponse<PromptEntityListing> localVarResponse = await GetArchitectPromptsAsyncWithHttpInfo(pageNumber, pageSize, name, description, nameOrDescription, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -8423,8 +8439,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">Name (optional)</param>
         /// <param name="description">Description (optional)</param>
         /// <param name="nameOrDescription">Name or description (optional)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <returns>Task of ApiResponse (PromptEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/architect/prompts";
@@ -8465,6 +8483,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
             if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
             if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 

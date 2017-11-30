@@ -361,6 +361,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Subject,
             
             /// <summary>
+            /// Enum Messagetype for "messageType"
+            /// </summary>
+            [EnumMember(Value = "messageType")]
+            Messagetype,
+            
+            /// <summary>
             /// Enum Peerid for "peerId"
             /// </summary>
             [EnumMember(Value = "peerId")]
@@ -550,6 +556,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tAnswered")]
             Tanswered,
+            
+            /// <summary>
+            /// Enum Tflowout for "tFlowOut"
+            /// </summary>
+            [EnumMember(Value = "tFlowOut")]
+            Tflowout,
             
             /// <summary>
             /// Enum Tacd for "tAcd"

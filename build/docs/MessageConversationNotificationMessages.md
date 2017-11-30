@@ -9,6 +9,8 @@ title: MessageConversationNotificationMessages
 |------------ | ------------- | ------------- | -------------|
 | **Message** | [**MessageConversationNotificationUriReference**](MessageConversationNotificationUriReference.html) |  | [optional] |
 | **MessageTime** | **DateTime?** |  | [optional] |
+| **MessageSegmentCount** | **int?** |  | [optional] |
+| **MessageStatus** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

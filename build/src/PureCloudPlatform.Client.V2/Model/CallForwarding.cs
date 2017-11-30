@@ -38,6 +38,39 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The type of voicemail to use with the callForwarding configuration
+        /// </summary>
+        /// <value>The type of voicemail to use with the callForwarding configuration</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum VoicemailEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Purecloud for "PURECLOUD"
+            /// </summary>
+            [EnumMember(Value = "PURECLOUD")]
+            Purecloud,
+            
+            /// <summary>
+            /// Enum Lastcall for "LASTCALL"
+            /// </summary>
+            [EnumMember(Value = "LASTCALL")]
+            Lastcall,
+            
+            /// <summary>
+            /// Enum None for "NONE"
+            /// </summary>
+            [EnumMember(Value = "NONE")]
+            None
+        }
         
         
         
@@ -49,6 +82,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The type of voicemail to use with the callForwarding configuration
+        /// </summary>
+        /// <value>The type of voicemail to use with the callForwarding configuration</value>
+        [DataMember(Name="voicemail", EmitDefaultValue=false)]
+        public VoicemailEnum? Voicemail { get; set; }
         
         
         
@@ -71,11 +122,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Enabled">Enabled.</param>
+        /// <param name="Enabled">Whether or not CallForwarding is enabled.</param>
         
         
         
-        /// <param name="PhoneNumber">PhoneNumber.</param>
+        /// <param name="PhoneNumber">This property is deprecated. Please use the calls property.</param>
+        
+        
+        
+        /// <param name="Calls">An ordered list of CallRoutes to be executed when CallForwarding is enabled.</param>
+        
+        
+        
+        /// <param name="Voicemail">The type of voicemail to use with the callForwarding configuration.</param>
         
         
         
@@ -84,8 +143,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public CallForwarding(string Name = null, User User = null, bool? Enabled = null, string PhoneNumber = null, DateTime? ModifiedDate = null)
+        public CallForwarding(string Name = null, User User = null, bool? Enabled = null, string PhoneNumber = null, List<CallRoute> Calls = null, VoicemailEnum? Voicemail = null, DateTime? ModifiedDate = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -154,6 +221,24 @@ this.PhoneNumber = PhoneNumber;
             
             
             
+this.Calls = Calls;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Voicemail = Voicemail;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ModifiedDate = ModifiedDate;
             
             
@@ -191,18 +276,31 @@ this.ModifiedDate = ModifiedDate;
         
         
         /// <summary>
-        /// Gets or Sets Enabled
+        /// Whether or not CallForwarding is enabled
         /// </summary>
+        /// <value>Whether or not CallForwarding is enabled</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets PhoneNumber
+        /// This property is deprecated. Please use the calls property
         /// </summary>
+        /// <value>This property is deprecated. Please use the calls property</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public string PhoneNumber { get; set; }
+        
+        
+        
+        /// <summary>
+        /// An ordered list of CallRoutes to be executed when CallForwarding is enabled
+        /// </summary>
+        /// <value>An ordered list of CallRoutes to be executed when CallForwarding is enabled</value>
+        [DataMember(Name="calls", EmitDefaultValue=false)]
+        public List<CallRoute> Calls { get; set; }
+        
+        
         
         
         
@@ -241,6 +339,10 @@ this.ModifiedDate = ModifiedDate;
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
+            
+            sb.Append("  Calls: ").Append(Calls).Append("\n");
+            
+            sb.Append("  Voicemail: ").Append(Voicemail).Append("\n");
             
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             
@@ -308,6 +410,16 @@ this.ModifiedDate = ModifiedDate;
                     this.PhoneNumber.Equals(other.PhoneNumber)
                 ) &&
                 (
+                    this.Calls == other.Calls ||
+                    this.Calls != null &&
+                    this.Calls.SequenceEqual(other.Calls)
+                ) &&
+                (
+                    this.Voicemail == other.Voicemail ||
+                    this.Voicemail != null &&
+                    this.Voicemail.Equals(other.Voicemail)
+                ) &&
+                (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
@@ -345,6 +457,12 @@ this.ModifiedDate = ModifiedDate;
                 
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                
+                if (this.Calls != null)
+                    hash = hash * 59 + this.Calls.GetHashCode();
+                
+                if (this.Voicemail != null)
+                    hash = hash * 59 + this.Voicemail.GetHashCode();
                 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();

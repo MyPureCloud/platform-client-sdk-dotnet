@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserConversationSummaryNotification" /> class.
@@ -77,6 +82,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Message">Message.</param>
+        
+        
+        
         /// <param name="Chat">Chat.</param>
         
         
@@ -88,8 +97,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Video">Video.</param>
         
         
-        public UserConversationSummaryNotification(string UserId = null, UserConversationSummaryNotificationCall Call = null, UserConversationSummaryNotificationMediaSummary Callback = null, UserConversationSummaryNotificationMediaSummary Email = null, UserConversationSummaryNotificationMediaSummary Chat = null, UserConversationSummaryNotificationMediaSummary SocialExpression = null, UserConversationSummaryNotificationMediaSummary Video = null)
+        public UserConversationSummaryNotification(string UserId = null, UserConversationSummaryNotificationCall Call = null, UserConversationSummaryNotificationMediaSummary Callback = null, UserConversationSummaryNotificationMediaSummary Email = null, UserConversationSummaryNotificationMediaSummary Message = null, UserConversationSummaryNotificationMediaSummary Chat = null, UserConversationSummaryNotificationMediaSummary SocialExpression = null, UserConversationSummaryNotificationMediaSummary Video = null)
         {
+            
+            
+            
+            
             
             
             
@@ -160,6 +173,15 @@ this.Email = Email;
             
             
             
+this.Message = Message;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Chat = Chat;
             
             
@@ -220,6 +242,14 @@ this.Video = Video;
         
         
         /// <summary>
+        /// Gets or Sets Message
+        /// </summary>
+        [DataMember(Name="message", EmitDefaultValue=false)]
+        public UserConversationSummaryNotificationMediaSummary Message { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Chat
         /// </summary>
         [DataMember(Name="chat", EmitDefaultValue=false)]
@@ -258,6 +288,8 @@ this.Video = Video;
             sb.Append("  Callback: ").Append(Callback).Append("\n");
             
             sb.Append("  Email: ").Append(Email).Append("\n");
+            
+            sb.Append("  Message: ").Append(Message).Append("\n");
             
             sb.Append("  Chat: ").Append(Chat).Append("\n");
             
@@ -322,6 +354,11 @@ this.Video = Video;
                     this.Email.Equals(other.Email)
                 ) &&
                 (
+                    this.Message == other.Message ||
+                    this.Message != null &&
+                    this.Message.Equals(other.Message)
+                ) &&
+                (
                     this.Chat == other.Chat ||
                     this.Chat != null &&
                     this.Chat.Equals(other.Chat)
@@ -361,6 +398,9 @@ this.Video = Video;
                 
                 if (this.Email != null)
                     hash = hash * 59 + this.Email.GetHashCode();
+                
+                if (this.Message != null)
+                    hash = hash * 59 + this.Message.GetHashCode();
                 
                 if (this.Chat != null)
                     hash = hash * 59 + this.Chat.GetHashCode();

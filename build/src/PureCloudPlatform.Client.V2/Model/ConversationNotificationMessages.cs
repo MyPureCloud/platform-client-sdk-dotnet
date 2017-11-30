@@ -26,6 +26,61 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets MessageStatus
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessageStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Queued for "QUEUED"
+            /// </summary>
+            [EnumMember(Value = "QUEUED")]
+            Queued,
+            
+            /// <summary>
+            /// Enum Sent for "SENT"
+            /// </summary>
+            [EnumMember(Value = "SENT")]
+            Sent,
+            
+            /// <summary>
+            /// Enum Failed for "FAILED"
+            /// </summary>
+            [EnumMember(Value = "FAILED")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Received for "RECEIVED"
+            /// </summary>
+            [EnumMember(Value = "RECEIVED")]
+            Received
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessageStatus
+        /// </summary>
+        [DataMember(Name="messageStatus", EmitDefaultValue=false)]
+        public MessageStatusEnum? MessageStatus { get; set; }
         
         
         
@@ -43,8 +98,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageTime">MessageTime.</param>
         
         
-        public ConversationNotificationMessages(string MessageId = null, DateTime? MessageTime = null)
+        
+        /// <param name="MessageStatus">MessageStatus.</param>
+        
+        
+        
+        /// <param name="MessageSegmentCount">MessageSegmentCount.</param>
+        
+        
+        public ConversationNotificationMessages(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -73,6 +144,24 @@ this.MessageTime = MessageTime;
             
             
             
+            
+            
+            
+            
+this.MessageStatus = MessageStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MessageSegmentCount = MessageSegmentCount;
+            
+            
+            
+            
         }
         
         
@@ -92,6 +181,16 @@ this.MessageTime = MessageTime;
         public DateTime? MessageTime { get; set; }
         
         
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets MessageSegmentCount
+        /// </summary>
+        [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
+        public int? MessageSegmentCount { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,6 +203,10 @@ this.MessageTime = MessageTime;
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
+            
+            sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
+            
+            sb.Append("  MessageSegmentCount: ").Append(MessageSegmentCount).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -150,6 +253,16 @@ this.MessageTime = MessageTime;
                     this.MessageTime == other.MessageTime ||
                     this.MessageTime != null &&
                     this.MessageTime.Equals(other.MessageTime)
+                ) &&
+                (
+                    this.MessageStatus == other.MessageStatus ||
+                    this.MessageStatus != null &&
+                    this.MessageStatus.Equals(other.MessageStatus)
+                ) &&
+                (
+                    this.MessageSegmentCount == other.MessageSegmentCount ||
+                    this.MessageSegmentCount != null &&
+                    this.MessageSegmentCount.Equals(other.MessageSegmentCount)
                 );
         }
 
@@ -170,6 +283,12 @@ this.MessageTime = MessageTime;
                 
                 if (this.MessageTime != null)
                     hash = hash * 59 + this.MessageTime.GetHashCode();
+                
+                if (this.MessageStatus != null)
+                    hash = hash * 59 + this.MessageStatus.GetHashCode();
+                
+                if (this.MessageSegmentCount != null)
+                    hash = hash * 59 + this.MessageSegmentCount.GetHashCode();
                 
                 return hash;
             }

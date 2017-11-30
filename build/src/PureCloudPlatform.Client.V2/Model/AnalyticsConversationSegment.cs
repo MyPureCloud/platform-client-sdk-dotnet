@@ -235,7 +235,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Scheduled for "scheduled"
             /// </summary>
             [EnumMember(Value = "scheduled")]
-            Scheduled
+            Scheduled,
+            
+            /// <summary>
+            /// Enum Contacting for "contacting"
+            /// </summary>
+            [EnumMember(Value = "contacting")]
+            Contacting,
+            
+            /// <summary>
+            /// Enum Transmitting for "transmitting"
+            /// </summary>
+            [EnumMember(Value = "transmitting")]
+            Transmitting,
+            
+            /// <summary>
+            /// Enum Converting for "converting"
+            /// </summary>
+            [EnumMember(Value = "converting")]
+            Converting,
+            
+            /// <summary>
+            /// Enum Uploading for "uploading"
+            /// </summary>
+            [EnumMember(Value = "uploading")]
+            Uploading,
+            
+            /// <summary>
+            /// Enum Sharing for "sharing"
+            /// </summary>
+            [EnumMember(Value = "sharing")]
+            Sharing
         }
         
         

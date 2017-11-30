@@ -35,6 +35,9 @@ title: MessageConversationNotificationParticipants
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
 | **Messages** | [**List&lt;MessageConversationNotificationMessages&gt;**](MessageConversationNotificationMessages.html) |  | [optional] |
+| **Type** | **string** |  | [optional] |
+| **RecipientCountry** | **string** |  | [optional] |
+| **RecipientType** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

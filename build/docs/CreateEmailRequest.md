@@ -20,6 +20,8 @@ title: CreateEmailRequest
 | **FromName** | **string** | The name of the sender of the email. | [optional] |
 | **Subject** | **string** | The subject of the email | [optional] |
 | **Direction** | **string** | Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue. | [optional] |
+| **HtmlBody** | **string** | An HTML body content of the email. | [optional] |
+| **TextBody** | **string** | A text body content of the email. | [optional] |
 {: class="table table-striped"}
 
 

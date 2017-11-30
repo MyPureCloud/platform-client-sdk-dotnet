@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequest) | **GET** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user by id |
 | [**GetWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequests) | **GET** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
 | [**PatchWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementtimeoffrequest) | **PATCH** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Mark a time off request for the current user as read or unread |
+| [**PostWorkforcemanagementAgentsManagementunits**](WorkforceManagementApi.html#postworkforcemanagementagentsmanagementunits) | **POST** /api/v2/workforcemanagement/agents/managementunits | Get the management units to which the agents belong |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunithistoricaladherencequery) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery | Request a historical adherence report |
 | [**PostWorkforcemanagementManagementunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitintraday) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/intraday | Get intraday data for the given date for the requested queueIds |
 | [**PostWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/schedules/search | Get user schedules within the given time range |
@@ -703,6 +704,70 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="postworkforcemanagementagentsmanagementunits"></a>
+
+## [**List&lt;AgentManagementUnitReference&gt;**](AgentManagementUnitReference.html) PostWorkforcemanagementAgentsManagementunits (List<string> body = null)
+
+Get the management units to which the agents belong
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsManagementunitsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new WorkforceManagementApi();
+            
+            
+            var body = ;  // List<string> | body (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get the management units to which the agents belong
+                
+                List&lt;AgentManagementUnitReference&gt; result = apiInstance.PostWorkforcemanagementAgentsManagementunits(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentsManagementunits: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | **List<string>**| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<AgentManagementUnitReference>**](AgentManagementUnitReference.html)
 
 <a name="postworkforcemanagementmanagementunithistoricaladherencequery"></a>
 

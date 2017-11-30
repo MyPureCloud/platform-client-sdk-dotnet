@@ -88,6 +88,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tanswered,
             
             /// <summary>
+            /// Enum Tflowout for "tFlowOut"
+            /// </summary>
+            [EnumMember(Value = "tFlowOut")]
+            Tflowout,
+            
+            /// <summary>
             /// Enum Tacd for "tAcd"
             /// </summary>
             [EnumMember(Value = "tAcd")]

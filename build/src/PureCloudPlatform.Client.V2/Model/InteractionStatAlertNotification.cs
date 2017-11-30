@@ -182,10 +182,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Callback,
             
             /// <summary>
-            /// Enum Sms for "sms"
+            /// Enum Message for "message"
             /// </summary>
-            [EnumMember(Value = "sms")]
-            Sms
+            [EnumMember(Value = "message")]
+            Message
         }
         
         

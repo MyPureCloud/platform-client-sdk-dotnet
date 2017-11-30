@@ -230,6 +230,37 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Indicates the type of message platform from which the message originated.
+        /// </summary>
+        /// <value>Indicates the type of message platform from which the message originated.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "sms"
+            /// </summary>
+            [EnumMember(Value = "sms")]
+            Sms
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -284,6 +315,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Indicates the type of message platform from which the message originated.
+        /// </summary>
+        /// <value>Indicates the type of message platform from which the message originated.</value>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         
         
         
@@ -354,6 +398,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Type">Indicates the type of message platform from which the message originated..</param>
+        
+        
+        
+        /// <param name="RecipientCountry">Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format..</param>
+        
+        
+        
+        /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
+        
+        
+        
         /// <param name="ScriptId">The UUID of the script to use..</param>
         
         
@@ -373,8 +429,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Messages">The messages sent on this communication channel..</param>
         
         
-        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null)
+        public Message(StateEnum? State = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -557,6 +625,33 @@ this.Provider = Provider;
             
             
             
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecipientCountry = RecipientCountry;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecipientType = RecipientType;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ScriptId = ScriptId;
             
             
@@ -688,6 +783,26 @@ this.Messages = Messages;
         
         
         
+        
+        
+        /// <summary>
+        /// Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format.
+        /// </summary>
+        /// <value>Indicates the country where the recipient is associated in ISO 3166-1 alpha-2 format.</value>
+        [DataMember(Name="recipientCountry", EmitDefaultValue=false)]
+        public string RecipientCountry { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type.
+        /// </summary>
+        /// <value>The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type.</value>
+        [DataMember(Name="recipientType", EmitDefaultValue=false)]
+        public string RecipientType { get; set; }
+        
+        
+        
         /// <summary>
         /// The UUID of the script to use.
         /// </summary>
@@ -764,6 +879,12 @@ this.Messages = Messages;
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
             
             sb.Append("  Provider: ").Append(Provider).Append("\n");
+            
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            
+            sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
+            
+            sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
             
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
             
@@ -872,6 +993,21 @@ this.Messages = Messages;
                     this.Provider.Equals(other.Provider)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.RecipientCountry == other.RecipientCountry ||
+                    this.RecipientCountry != null &&
+                    this.RecipientCountry.Equals(other.RecipientCountry)
+                ) &&
+                (
+                    this.RecipientType == other.RecipientType ||
+                    this.RecipientType != null &&
+                    this.RecipientType.Equals(other.RecipientType)
+                ) &&
+                (
                     this.ScriptId == other.ScriptId ||
                     this.ScriptId != null &&
                     this.ScriptId.Equals(other.ScriptId)
@@ -945,6 +1081,15 @@ this.Messages = Messages;
                 
                 if (this.Provider != null)
                     hash = hash * 59 + this.Provider.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.RecipientCountry != null)
+                    hash = hash * 59 + this.RecipientCountry.GetHashCode();
+                
+                if (this.RecipientType != null)
+                    hash = hash * 59 + this.RecipientType.GetHashCode();
                 
                 if (this.ScriptId != null)
                     hash = hash * 59 + this.ScriptId.GetHashCode();

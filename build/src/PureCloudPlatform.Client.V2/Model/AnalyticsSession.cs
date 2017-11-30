@@ -102,6 +102,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Message type for messaging services such as sms
+        /// </summary>
+        /// <value>Message type for messaging services such as sms</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessageTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "sms"
+            /// </summary>
+            [EnumMember(Value = "sms")]
+            Sms
+        }
+        
+        
+        
+        
         
         
         
@@ -295,6 +320,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Message type for messaging services such as sms
+        /// </summary>
+        /// <value>Message type for messaging services such as sms</value>
+        [DataMember(Name="messageType", EmitDefaultValue=false)]
+        public MessageTypeEnum? MessageType { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -393,6 +427,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="AddressTo">AddressTo.</param>
+        
+        
+        
+        /// <param name="MessageType">Message type for messaging services such as sms.</param>
         
         
         
@@ -511,8 +549,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Segments">List of segments for this session.</param>
         
         
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
         {
+            
+            
+            
+            
             
             
             
@@ -705,6 +747,15 @@ this.AddressFrom = AddressFrom;
             
             
 this.AddressTo = AddressTo;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MessageType = MessageType;
             
             
             
@@ -1017,6 +1068,8 @@ this.Segments = Segments;
         
         
         
+        
+        
         /// <summary>
         /// Automatic Number Identification (caller&#39;s number)
         /// </summary>
@@ -1281,6 +1334,8 @@ this.Segments = Segments;
             
             sb.Append("  AddressTo: ").Append(AddressTo).Append("\n");
             
+            sb.Append("  MessageType: ").Append(MessageType).Append("\n");
+            
             sb.Append("  Ani: ").Append(Ani).Append("\n");
             
             sb.Append("  Direction: ").Append(Direction).Append("\n");
@@ -1404,6 +1459,11 @@ this.Segments = Segments;
                     this.AddressTo == other.AddressTo ||
                     this.AddressTo != null &&
                     this.AddressTo.Equals(other.AddressTo)
+                ) &&
+                (
+                    this.MessageType == other.MessageType ||
+                    this.MessageType != null &&
+                    this.MessageType.Equals(other.MessageType)
                 ) &&
                 (
                     this.Ani == other.Ani ||
@@ -1581,6 +1641,9 @@ this.Segments = Segments;
                 
                 if (this.AddressTo != null)
                     hash = hash * 59 + this.AddressTo.GetHashCode();
+                
+                if (this.MessageType != null)
+                    hash = hash * 59 + this.MessageType.GetHashCode();
                 
                 if (this.Ani != null)
                     hash = hash * 59 + this.Ani.GetHashCode();

@@ -392,6 +392,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The participant's state.  Values can be: 'alerting', 'connected', 'disconnected', 'dialing', 'contacting
         /// </summary>
@@ -461,6 +464,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The state of the call recording.</value>
         [DataMember(Name="recordingState", EmitDefaultValue=false)]
         public RecordingStateEnum? RecordingState { get; set; }
+        
+        
         
         
         
@@ -630,8 +635,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConsultParticipantId">The ID of the consult transfer target participant when performing a consult transfer..</param>
         
         
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null)
+        
+        /// <param name="UuiData">User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567..</param>
+        
+        
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
         {
+            
+            
+            
+            
             
             
             
@@ -1115,6 +1128,15 @@ this.ConsultParticipantId = ConsultParticipantId;
             
             
             
+            
+            
+            
+            
+this.UuiData = UuiData;
+            
+            
+            
+            
         }
         
         
@@ -1423,6 +1445,15 @@ this.ConsultParticipantId = ConsultParticipantId;
         public string ConsultParticipantId { get; set; }
         
         
+        
+        /// <summary>
+        /// User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567.
+        /// </summary>
+        /// <value>User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567.</value>
+        [DataMember(Name="uuiData", EmitDefaultValue=false)]
+        public string UuiData { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1505,6 +1536,8 @@ this.ConsultParticipantId = ConsultParticipantId;
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             
             sb.Append("  ConsultParticipantId: ").Append(ConsultParticipantId).Append("\n");
+            
+            sb.Append("  UuiData: ").Append(UuiData).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1726,6 +1759,11 @@ this.ConsultParticipantId = ConsultParticipantId;
                     this.ConsultParticipantId == other.ConsultParticipantId ||
                     this.ConsultParticipantId != null &&
                     this.ConsultParticipantId.Equals(other.ConsultParticipantId)
+                ) &&
+                (
+                    this.UuiData == other.UuiData ||
+                    this.UuiData != null &&
+                    this.UuiData.Equals(other.UuiData)
                 );
         }
 
@@ -1851,6 +1889,9 @@ this.ConsultParticipantId = ConsultParticipantId;
                 
                 if (this.ConsultParticipantId != null)
                     hash = hash * 59 + this.ConsultParticipantId.GetHashCode();
+                
+                if (this.UuiData != null)
+                    hash = hash * 59 + this.UuiData.GetHashCode();
                 
                 return hash;
             }

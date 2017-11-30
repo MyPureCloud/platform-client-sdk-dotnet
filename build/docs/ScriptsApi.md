@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetScriptsPublishedScriptIdPage**](ScriptsApi.html#getscriptspublishedscriptidpage) | **GET** /api/v2/scripts/published/{scriptId}/pages/{pageId} | Get the published page. |
 | [**GetScriptsPublishedScriptIdPages**](ScriptsApi.html#getscriptspublishedscriptidpages) | **GET** /api/v2/scripts/published/{scriptId}/pages | Get the list of published pages |
 | [**GetScriptsPublishedScriptIdVariables**](ScriptsApi.html#getscriptspublishedscriptidvariables) | **GET** /api/v2/scripts/published/{scriptId}/variables | Get the published variables |
+| [**GetScriptsUploadStatus**](ScriptsApi.html#getscriptsuploadstatus) | **GET** /api/v2/scripts/uploads/{uploadId}/status | Get the upload status of an imported script |
 {: class="table table-striped"}
 
 <a name="getscript"></a>
@@ -755,4 +756,74 @@ namespace Example
 ### Return type
 
 **Object**
+
+<a name="getscriptsuploadstatus"></a>
+
+## [**ImportScriptStatusResponse**](ImportScriptStatusResponse.html) GetScriptsUploadStatus (string uploadId, bool? longPoll = null)
+
+Get the upload status of an imported script
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetScriptsUploadStatusExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ScriptsApi();
+            
+            
+            var uploadId = uploadId_example;  // string | Upload ID
+            
+            
+            
+            
+            var longPoll = true;  // bool? | Enable longPolling endpoint (optional)  (default to false)
+            
+            
+            
+
+            try
+            {
+                
+                // Get the upload status of an imported script
+                
+                ImportScriptStatusResponse result = apiInstance.GetScriptsUploadStatus(uploadId, longPoll);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ScriptsApi.GetScriptsUploadStatus: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **uploadId** | **string**| Upload ID |  |
+| **longPoll** | **bool?**| Enable longPolling endpoint | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**ImportScriptStatusResponse**](ImportScriptStatusResponse.html)
 

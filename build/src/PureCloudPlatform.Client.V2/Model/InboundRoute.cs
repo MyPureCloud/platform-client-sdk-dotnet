@@ -75,6 +75,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
@@ -125,8 +130,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ReplyRoute">The route to use for email replies..</param>
         
-        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null)
+        
+        
+        
+        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, UriReference ReplyRoute = null)
         {
             
             
@@ -206,6 +215,10 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
 this.Name = Name;
             
             
@@ -264,6 +277,15 @@ this.Language = Language;
             
             
 this.Flow = Flow;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ReplyRoute = ReplyRoute;
             
             
             
@@ -364,6 +386,15 @@ this.Flow = Flow;
         
         
         /// <summary>
+        /// The route to use for email replies.
+        /// </summary>
+        /// <value>The route to use for email replies.</value>
+        [DataMember(Name="replyRoute", EmitDefaultValue=false)]
+        public UriReference ReplyRoute { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -399,6 +430,8 @@ this.Flow = Flow;
             sb.Append("  FromEmail: ").Append(FromEmail).Append("\n");
             
             sb.Append("  Flow: ").Append(Flow).Append("\n");
+            
+            sb.Append("  ReplyRoute: ").Append(ReplyRoute).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -489,6 +522,11 @@ this.Flow = Flow;
                     this.Flow.Equals(other.Flow)
                 ) &&
                 (
+                    this.ReplyRoute == other.ReplyRoute ||
+                    this.ReplyRoute != null &&
+                    this.ReplyRoute.Equals(other.ReplyRoute)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -536,6 +574,9 @@ this.Flow = Flow;
                 
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
+                
+                if (this.ReplyRoute != null)
+                    hash = hash * 59 + this.ReplyRoute.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

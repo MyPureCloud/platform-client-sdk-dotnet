@@ -135,6 +135,56 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Conversation> GetConversationWithHttpInfo (string conversationId);
         
         /// <summary>
+        /// Fetch info on a secure session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>SecureSession</returns>
+        SecureSession GetConversationParticipantSecureivrsession (string conversationId, string participantId, string secureSessionId);
+
+        /// <summary>
+        /// Fetch info on a secure session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>ApiResponse of SecureSession</returns>
+        ApiResponse<SecureSession> GetConversationParticipantSecureivrsessionWithHttpInfo (string conversationId, string participantId, string secureSessionId);
+        
+        /// <summary>
+        /// Get a list of secure sessions for this participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>SecureSessionEntityListing</returns>
+        SecureSessionEntityListing GetConversationParticipantSecureivrsessions (string conversationId, string participantId);
+
+        /// <summary>
+        /// Get a list of secure sessions for this participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>ApiResponse of SecureSessionEntityListing</returns>
+        ApiResponse<SecureSessionEntityListing> GetConversationParticipantSecureivrsessionsWithHttpInfo (string conversationId, string participantId);
+        
+        /// <summary>
         /// Get the wrap-up for this conversation participant. 
         /// </summary>
         /// <remarks>
@@ -1527,6 +1577,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostConversationParticipantReplaceWithHttpInfo (string conversationId, string participantId, TransferRequest body);
         
         /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>SecureSession</returns>
+        SecureSession PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null);
+
+        /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of SecureSession</returns>
+        ApiResponse<SecureSession> PostConversationParticipantSecureivrsessionsWithHttpInfo (string conversationId, string participantId, CreateSecureSession body = null);
+        
+        /// <summary>
         /// Place a new call as part of a callback conversation.
         /// </summary>
         /// <remarks>
@@ -2085,6 +2161,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <returns>Task of ApiResponse (Conversation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Conversation>> GetConversationAsyncWithHttpInfo (string conversationId);
+        
+        /// <summary>
+        /// Fetch info on a secure session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>Task of SecureSession</returns>
+        System.Threading.Tasks.Task<SecureSession> GetConversationParticipantSecureivrsessionAsync (string conversationId, string participantId, string secureSessionId);
+
+        /// <summary>
+        /// Fetch info on a secure session
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>Task of ApiResponse (SecureSession)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecureSession>> GetConversationParticipantSecureivrsessionAsyncWithHttpInfo (string conversationId, string participantId, string secureSessionId);
+        
+        /// <summary>
+        /// Get a list of secure sessions for this participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of SecureSessionEntityListing</returns>
+        System.Threading.Tasks.Task<SecureSessionEntityListing> GetConversationParticipantSecureivrsessionsAsync (string conversationId, string participantId);
+
+        /// <summary>
+        /// Get a list of secure sessions for this participant.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of ApiResponse (SecureSessionEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecureSessionEntityListing>> GetConversationParticipantSecureivrsessionsAsyncWithHttpInfo (string conversationId, string participantId);
         
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -3477,6 +3603,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Transfer request</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationParticipantReplaceAsyncWithHttpInfo (string conversationId, string participantId, TransferRequest body);
+        
+        /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of SecureSession</returns>
+        System.Threading.Tasks.Task<SecureSession> PostConversationParticipantSecureivrsessionsAsync (string conversationId, string participantId, CreateSecureSession body = null);
+
+        /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (SecureSession)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SecureSession>> PostConversationParticipantSecureivrsessionsAsyncWithHttpInfo (string conversationId, string participantId, CreateSecureSession body = null);
         
         /// <summary>
         /// Place a new call as part of a callback conversation.
@@ -5004,6 +5156,427 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Conversation>(localVarStatusCode,
                 localVarHeaders,
                 (Conversation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Conversation)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Fetch info on a secure session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>SecureSession</returns>
+        public SecureSession GetConversationParticipantSecureivrsession (string conversationId, string participantId, string secureSessionId)
+        {
+             ApiResponse<SecureSession> localVarResponse = GetConversationParticipantSecureivrsessionWithHttpInfo(conversationId, participantId, secureSessionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Fetch info on a secure session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>ApiResponse of SecureSession</returns>
+        public ApiResponse< SecureSession > GetConversationParticipantSecureivrsessionWithHttpInfo (string conversationId, string participantId, string secureSessionId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
+            // verify the required parameter 'secureSessionId' is set
+            if (secureSessionId == null)
+                throw new ApiException(400, "Missing required parameter 'secureSessionId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+            if (secureSessionId != null) localVarPathParams.Add("secureSessionId", Configuration.ApiClient.ParameterToString(secureSessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsession: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SecureSession>(localVarStatusCode,
+                localVarHeaders,
+                (SecureSession) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecureSession)));
+            
+        }
+
+        
+        /// <summary>
+        /// Fetch info on a secure session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>Task of SecureSession</returns>
+        public async System.Threading.Tasks.Task<SecureSession> GetConversationParticipantSecureivrsessionAsync (string conversationId, string participantId, string secureSessionId)
+        {
+             ApiResponse<SecureSession> localVarResponse = await GetConversationParticipantSecureivrsessionAsyncWithHttpInfo(conversationId, participantId, secureSessionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Fetch info on a secure session 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="secureSessionId">secure IVR session ID</param>
+        /// <returns>Task of ApiResponse (SecureSession)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecureSession>> GetConversationParticipantSecureivrsessionAsyncWithHttpInfo (string conversationId, string participantId, string secureSessionId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
+            
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
+            
+            // verify the required parameter 'secureSessionId' is set
+            if (secureSessionId == null)
+                throw new ApiException(400, "Missing required parameter 'secureSessionId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+            if (secureSessionId != null) localVarPathParams.Add("secureSessionId", Configuration.ApiClient.ParameterToString(secureSessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsession: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsession: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SecureSession>(localVarStatusCode,
+                localVarHeaders,
+                (SecureSession) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecureSession)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of secure sessions for this participant. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>SecureSessionEntityListing</returns>
+        public SecureSessionEntityListing GetConversationParticipantSecureivrsessions (string conversationId, string participantId)
+        {
+             ApiResponse<SecureSessionEntityListing> localVarResponse = GetConversationParticipantSecureivrsessionsWithHttpInfo(conversationId, participantId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of secure sessions for this participant. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>ApiResponse of SecureSessionEntityListing</returns>
+        public ApiResponse< SecureSessionEntityListing > GetConversationParticipantSecureivrsessionsWithHttpInfo (string conversationId, string participantId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationParticipantSecureivrsessions");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantSecureivrsessions");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SecureSessionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SecureSessionEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecureSessionEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get a list of secure sessions for this participant. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of SecureSessionEntityListing</returns>
+        public async System.Threading.Tasks.Task<SecureSessionEntityListing> GetConversationParticipantSecureivrsessionsAsync (string conversationId, string participantId)
+        {
+             ApiResponse<SecureSessionEntityListing> localVarResponse = await GetConversationParticipantSecureivrsessionsAsyncWithHttpInfo(conversationId, participantId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of secure sessions for this participant. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <returns>Task of ApiResponse (SecureSessionEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecureSessionEntityListing>> GetConversationParticipantSecureivrsessionsAsyncWithHttpInfo (string conversationId, string participantId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationParticipantSecureivrsessions");
+            
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantSecureivrsessions");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantSecureivrsessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SecureSessionEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SecureSessionEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecureSessionEntityListing)));
             
         }
 
@@ -16886,6 +17459,224 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null);
+        }
+
+        
+        
+        /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>SecureSession</returns>
+        public SecureSession PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null)
+        {
+             ApiResponse<SecureSession> localVarResponse = PostConversationParticipantSecureivrsessionsWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of SecureSession</returns>
+        public ApiResponse< SecureSession > PostConversationParticipantSecureivrsessionsWithHttpInfo (string conversationId, string participantId, CreateSecureSession body = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationParticipantSecureivrsessions");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantSecureivrsessions");
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantSecureivrsessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SecureSession>(localVarStatusCode,
+                localVarHeaders,
+                (SecureSession) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecureSession)));
+            
+        }
+
+        
+        /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of SecureSession</returns>
+        public async System.Threading.Tasks.Task<SecureSession> PostConversationParticipantSecureivrsessionsAsync (string conversationId, string participantId, CreateSecureSession body = null)
+        {
+             ApiResponse<SecureSession> localVarResponse = await PostConversationParticipantSecureivrsessionsAsyncWithHttpInfo(conversationId, participantId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversation ID</param>
+        /// <param name="participantId">participant ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (SecureSession)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SecureSession>> PostConversationParticipantSecureivrsessionsAsyncWithHttpInfo (string conversationId, string participantId, CreateSecureSession body = null)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationParticipantSecureivrsessions");
+            
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantSecureivrsessions");
+            
+
+            var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", Configuration.ApiClient.ParameterToString(participantId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantSecureivrsessions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationParticipantSecureivrsessions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SecureSession>(localVarStatusCode,
+                localVarHeaders,
+                (SecureSession) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SecureSession)));
+            
         }
 
         

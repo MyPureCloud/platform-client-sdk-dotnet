@@ -176,11 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="PrimaryContactInfo">PrimaryContactInfo.</param>
+        /// <param name="PrimaryContactInfo">The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here..</param>
         
         
         
-        /// <param name="Addresses">Email addresses and phone numbers for this user.</param>
+        /// <param name="Addresses">Email address, phone number, and/or extension for this user. One entry is allowed per media type.</param>
         
         
         
@@ -479,17 +479,18 @@ this.State = State;
         
         
         /// <summary>
-        /// Gets or Sets PrimaryContactInfo
+        /// The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here.
         /// </summary>
+        /// <value>The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here.</value>
         [DataMember(Name="primaryContactInfo", EmitDefaultValue=false)]
         public List<Contact> PrimaryContactInfo { get; set; }
         
         
         
         /// <summary>
-        /// Email addresses and phone numbers for this user
+        /// Email address, phone number, and/or extension for this user. One entry is allowed per media type
         /// </summary>
-        /// <value>Email addresses and phone numbers for this user</value>
+        /// <value>Email address, phone number, and/or extension for this user. One entry is allowed per media type</value>
         [DataMember(Name="addresses", EmitDefaultValue=false)]
         public List<Contact> Addresses { get; set; }
         

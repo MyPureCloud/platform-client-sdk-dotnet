@@ -206,6 +206,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "SMS"
+            /// </summary>
+            [EnumMember(Value = "SMS")]
+            Sms
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -243,6 +273,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         
         
         
@@ -313,11 +355,35 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Type">Type.</param>
+        
+        
+        
+        /// <param name="RecipientCountry">RecipientCountry.</param>
+        
+        
+        
+        /// <param name="RecipientType">RecipientType.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public ConversationNotificationMessage(string Id = null, StateEnum? State = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationNotificationAddress ToAddress = null, ConversationNotificationAddress FromAddress = null, List<ConversationNotificationMessages> Messages = null, string MessagesTranscriptUri = null, Object AdditionalProperties = null)
+        public ConversationNotificationMessage(string Id = null, StateEnum? State = null, bool? Held = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, ConversationNotificationAddress ToAddress = null, ConversationNotificationAddress FromAddress = null, List<ConversationNotificationMessages> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -510,6 +576,33 @@ this.MessagesTranscriptUri = MessagesTranscriptUri;
             
             
             
+this.Type = Type;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecipientCountry = RecipientCountry;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecipientType = RecipientType;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AdditionalProperties = AdditionalProperties;
             
             
@@ -619,6 +712,24 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         
+        
+        
+        /// <summary>
+        /// Gets or Sets RecipientCountry
+        /// </summary>
+        [DataMember(Name="recipientCountry", EmitDefaultValue=false)]
+        public string RecipientCountry { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets RecipientType
+        /// </summary>
+        [DataMember(Name="recipientType", EmitDefaultValue=false)]
+        public string RecipientType { get; set; }
+        
+        
+        
         /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
@@ -662,6 +773,12 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             
             sb.Append("  MessagesTranscriptUri: ").Append(MessagesTranscriptUri).Append("\n");
+            
+            sb.Append("  Type: ").Append(Type).Append("\n");
+            
+            sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
+            
+            sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
             
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             
@@ -772,6 +889,21 @@ this.AdditionalProperties = AdditionalProperties;
                     this.MessagesTranscriptUri.Equals(other.MessagesTranscriptUri)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.RecipientCountry == other.RecipientCountry ||
+                    this.RecipientCountry != null &&
+                    this.RecipientCountry.Equals(other.RecipientCountry)
+                ) &&
+                (
+                    this.RecipientType == other.RecipientType ||
+                    this.RecipientType != null &&
+                    this.RecipientType.Equals(other.RecipientType)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -831,6 +963,15 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.MessagesTranscriptUri != null)
                     hash = hash * 59 + this.MessagesTranscriptUri.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
+                
+                if (this.RecipientCountry != null)
+                    hash = hash * 59 + this.RecipientCountry.GetHashCode();
+                
+                if (this.RecipientType != null)
+                    hash = hash * 59 + this.RecipientType.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

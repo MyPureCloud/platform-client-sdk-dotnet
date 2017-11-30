@@ -26,9 +26,66 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Indicates the delivery status of the message.
+        /// </summary>
+        /// <value>Indicates the delivery status of the message.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessageStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Queued for "queued"
+            /// </summary>
+            [EnumMember(Value = "queued")]
+            Queued,
+            
+            /// <summary>
+            /// Enum Sent for "sent"
+            /// </summary>
+            [EnumMember(Value = "sent")]
+            Sent,
+            
+            /// <summary>
+            /// Enum Failed for "failed"
+            /// </summary>
+            [EnumMember(Value = "failed")]
+            Failed,
+            
+            /// <summary>
+            /// Enum Received for "received"
+            /// </summary>
+            [EnumMember(Value = "received")]
+            Received
+        }
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Indicates the delivery status of the message.
+        /// </summary>
+        /// <value>Indicates the delivery status of the message.</value>
+        [DataMember(Name="messageStatus", EmitDefaultValue=false)]
+        public MessageStatusEnum? MessageStatus { get; set; }
         
         
         
@@ -49,11 +106,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="MessageStatus">Indicates the delivery status of the message..</param>
+        
+        
+        
+        /// <param name="MessageSegmentCount">The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits..</param>
+        
+        
+        
         /// <param name="MessageTime">The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
-        public MessageDetails(string MessageId = null, string MessageURI = null, DateTime? MessageTime = null)
+        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -90,6 +163,24 @@ this.MessageURI = MessageURI;
             
             
             
+this.MessageStatus = MessageStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MessageSegmentCount = MessageSegmentCount;
+            
+            
+            
+            
+            
+            
+            
+            
 this.MessageTime = MessageTime;
             
             
@@ -117,6 +208,17 @@ this.MessageTime = MessageTime;
         
         
         
+        
+        
+        /// <summary>
+        /// The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.
+        /// </summary>
+        /// <value>The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits.</value>
+        [DataMember(Name="messageSegmentCount", EmitDefaultValue=false)]
+        public int? MessageSegmentCount { get; set; }
+        
+        
+        
         /// <summary>
         /// The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
@@ -137,6 +239,10 @@ this.MessageTime = MessageTime;
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             
             sb.Append("  MessageURI: ").Append(MessageURI).Append("\n");
+            
+            sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
+            
+            sb.Append("  MessageSegmentCount: ").Append(MessageSegmentCount).Append("\n");
             
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
             
@@ -187,6 +293,16 @@ this.MessageTime = MessageTime;
                     this.MessageURI.Equals(other.MessageURI)
                 ) &&
                 (
+                    this.MessageStatus == other.MessageStatus ||
+                    this.MessageStatus != null &&
+                    this.MessageStatus.Equals(other.MessageStatus)
+                ) &&
+                (
+                    this.MessageSegmentCount == other.MessageSegmentCount ||
+                    this.MessageSegmentCount != null &&
+                    this.MessageSegmentCount.Equals(other.MessageSegmentCount)
+                ) &&
+                (
                     this.MessageTime == other.MessageTime ||
                     this.MessageTime != null &&
                     this.MessageTime.Equals(other.MessageTime)
@@ -210,6 +326,12 @@ this.MessageTime = MessageTime;
                 
                 if (this.MessageURI != null)
                     hash = hash * 59 + this.MessageURI.GetHashCode();
+                
+                if (this.MessageStatus != null)
+                    hash = hash * 59 + this.MessageStatus.GetHashCode();
+                
+                if (this.MessageSegmentCount != null)
+                    hash = hash * 59 + this.MessageSegmentCount.GetHashCode();
                 
                 if (this.MessageTime != null)
                     hash = hash * 59 + this.MessageTime.GetHashCode();

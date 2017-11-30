@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Target">Target metric name (required).</param>
+        /// <param name="Target">CallTarget metric name (required).</param>
         
         
         
@@ -172,9 +172,9 @@ this.Range = Range;
         
         
         /// <summary>
-        /// Target metric name
+        /// CallTarget metric name
         /// </summary>
-        /// <value>Target metric name</value>
+        /// <value>CallTarget metric name</value>
         [DataMember(Name="target", EmitDefaultValue=false)]
         public string Target { get; set; }
         

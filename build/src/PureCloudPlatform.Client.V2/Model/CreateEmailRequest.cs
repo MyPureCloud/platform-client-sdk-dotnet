@@ -112,12 +112,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
         /// </summary>
         /// <value>Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
+        
+        
         
         
     
@@ -183,7 +193,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Direction">Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue..</param>
         
         
-        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null)
+        
+        /// <param name="HtmlBody">An HTML body content of the email..</param>
+        
+        
+        
+        /// <param name="TextBody">A text body content of the email..</param>
+        
+        
+        public CreateEmailRequest(string QueueId = null, string FlowId = null, string Provider = null, List<string> SkillIds = null, string LanguageId = null, long? Priority = null, Dictionary<string, string> Attributes = null, string ToAddress = null, string ToName = null, string FromAddress = null, string FromName = null, string Subject = null, DirectionEnum? Direction = null, string HtmlBody = null, string TextBody = null)
         {
             
             
@@ -205,6 +223,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Provider = Provider;
             }
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -361,6 +387,24 @@ this.Direction = Direction;
             
             
             
+            
+            
+            
+            
+this.HtmlBody = HtmlBody;
+            
+            
+            
+            
+            
+            
+            
+            
+this.TextBody = TextBody;
+            
+            
+            
+            
         }
         
         
@@ -474,6 +518,24 @@ this.Direction = Direction;
         
         
         
+        
+        /// <summary>
+        /// An HTML body content of the email.
+        /// </summary>
+        /// <value>An HTML body content of the email.</value>
+        [DataMember(Name="htmlBody", EmitDefaultValue=false)]
+        public string HtmlBody { get; set; }
+        
+        
+        
+        /// <summary>
+        /// A text body content of the email.
+        /// </summary>
+        /// <value>A text body content of the email.</value>
+        [DataMember(Name="textBody", EmitDefaultValue=false)]
+        public string TextBody { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -508,6 +570,10 @@ this.Direction = Direction;
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             
             sb.Append("  Direction: ").Append(Direction).Append("\n");
+            
+            sb.Append("  HtmlBody: ").Append(HtmlBody).Append("\n");
+            
+            sb.Append("  TextBody: ").Append(TextBody).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -609,6 +675,16 @@ this.Direction = Direction;
                     this.Direction == other.Direction ||
                     this.Direction != null &&
                     this.Direction.Equals(other.Direction)
+                ) &&
+                (
+                    this.HtmlBody == other.HtmlBody ||
+                    this.HtmlBody != null &&
+                    this.HtmlBody.Equals(other.HtmlBody)
+                ) &&
+                (
+                    this.TextBody == other.TextBody ||
+                    this.TextBody != null &&
+                    this.TextBody.Equals(other.TextBody)
                 );
         }
 
@@ -662,6 +738,12 @@ this.Direction = Direction;
                 
                 if (this.Direction != null)
                     hash = hash * 59 + this.Direction.GetHashCode();
+                
+                if (this.HtmlBody != null)
+                    hash = hash * 59 + this.HtmlBody.GetHashCode();
+                
+                if (this.TextBody != null)
+                    hash = hash * 59 + this.TextBody.GetHashCode();
                 
                 return hash;
             }

@@ -134,6 +134,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Language,
             
             /// <summary>
+            /// Enum Lexbot for "LEXBOT"
+            /// </summary>
+            [EnumMember(Value = "LEXBOT")]
+            Lexbot,
+            
+            /// <summary>
+            /// Enum Lexbotalias for "LEXBOTALIAS"
+            /// </summary>
+            [EnumMember(Value = "LEXBOTALIAS")]
+            Lexbotalias,
+            
+            /// <summary>
             /// Enum Outboundcallflow for "OUTBOUNDCALLFLOW"
             /// </summary>
             [EnumMember(Value = "OUTBOUNDCALLFLOW")]

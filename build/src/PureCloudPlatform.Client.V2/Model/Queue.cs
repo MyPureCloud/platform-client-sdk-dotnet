@@ -171,6 +171,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
@@ -196,6 +202,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The skill evaluation method to use when routing conversations.</value>
         [DataMember(Name="skillEvaluationMethod", EmitDefaultValue=false)]
         public SkillEvaluationMethodEnum? SkillEvaluationMethod { get; set; }
+        
+        
+        
+        
         
         
         
@@ -286,6 +296,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Whisper">The prompt used for whisper audio on the queue, if configured..</param>
+        
+        
+        
+        /// <param name="AutoAnswerOnly">Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered..</param>
+        
+        
+        
         /// <param name="CallingPartyName">The name to use for caller identification for outbound calls from this queue..</param>
         
         
@@ -307,7 +325,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
+        public Queue(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference Whisper = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
         {
             
             
@@ -395,6 +413,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.SkillEvaluationMethod = SkillEvaluationMethod;
             }
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -543,6 +569,24 @@ this.Bullseye = Bullseye;
             
             
 this.QueueFlow = QueueFlow;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Whisper = Whisper;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AutoAnswerOnly = AutoAnswerOnly;
             
             
             
@@ -728,6 +772,24 @@ this.MemberCount = MemberCount;
         
         
         /// <summary>
+        /// The prompt used for whisper audio on the queue, if configured.
+        /// </summary>
+        /// <value>The prompt used for whisper audio on the queue, if configured.</value>
+        [DataMember(Name="whisper", EmitDefaultValue=false)]
+        public UriReference Whisper { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered.
+        /// </summary>
+        /// <value>Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered.</value>
+        [DataMember(Name="autoAnswerOnly", EmitDefaultValue=false)]
+        public bool? AutoAnswerOnly { get; set; }
+        
+        
+        
+        /// <summary>
         /// The name to use for caller identification for outbound calls from this queue.
         /// </summary>
         /// <value>The name to use for caller identification for outbound calls from this queue.</value>
@@ -818,6 +880,10 @@ this.MemberCount = MemberCount;
             sb.Append("  SkillEvaluationMethod: ").Append(SkillEvaluationMethod).Append("\n");
             
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
+            
+            sb.Append("  Whisper: ").Append(Whisper).Append("\n");
+            
+            sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
             
             sb.Append("  CallingPartyName: ").Append(CallingPartyName).Append("\n");
             
@@ -948,6 +1014,16 @@ this.MemberCount = MemberCount;
                     this.QueueFlow.Equals(other.QueueFlow)
                 ) &&
                 (
+                    this.Whisper == other.Whisper ||
+                    this.Whisper != null &&
+                    this.Whisper.Equals(other.Whisper)
+                ) &&
+                (
+                    this.AutoAnswerOnly == other.AutoAnswerOnly ||
+                    this.AutoAnswerOnly != null &&
+                    this.AutoAnswerOnly.Equals(other.AutoAnswerOnly)
+                ) &&
+                (
                     this.CallingPartyName == other.CallingPartyName ||
                     this.CallingPartyName != null &&
                     this.CallingPartyName.Equals(other.CallingPartyName)
@@ -1038,6 +1114,12 @@ this.MemberCount = MemberCount;
                 
                 if (this.QueueFlow != null)
                     hash = hash * 59 + this.QueueFlow.GetHashCode();
+                
+                if (this.Whisper != null)
+                    hash = hash * 59 + this.Whisper.GetHashCode();
+                
+                if (this.AutoAnswerOnly != null)
+                    hash = hash * 59 + this.AutoAnswerOnly.GetHashCode();
                 
                 if (this.CallingPartyName != null)
                     hash = hash * 59 + this.CallingPartyName.GetHashCode();

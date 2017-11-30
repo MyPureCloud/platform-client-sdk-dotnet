@@ -12,8 +12,8 @@ title: UpdateUser
 | **Chat** | [**Chat**](Chat.html) |  | [optional] |
 | **Department** | **string** |  | [optional] |
 | **Email** | **string** |  | [optional] |
-| **PrimaryContactInfo** | [**List&lt;Contact&gt;**](Contact.html) |  | [optional] |
-| **Addresses** | [**List&lt;Contact&gt;**](Contact.html) | Email addresses and phone numbers for this user | [optional] |
+| **PrimaryContactInfo** | [**List&lt;Contact&gt;**](Contact.html) | The address(s) used for primary contact. Updates to the corresponding address in the addresses list will be reflected here. | [optional] |
+| **Addresses** | [**List&lt;Contact&gt;**](Contact.html) | Email address, phone number, and/or extension for this user. One entry is allowed per media type | [optional] |
 | **Title** | **string** |  | [optional] |
 | **Username** | **string** |  | [optional] |
 | **Manager** | **string** |  | [optional] |

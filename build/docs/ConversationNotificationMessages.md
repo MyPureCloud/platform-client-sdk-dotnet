@@ -9,6 +9,8 @@ title: ConversationNotificationMessages
 |------------ | ------------- | ------------- | -------------|
 | **MessageId** | **string** |  | [optional] |
 | **MessageTime** | **DateTime?** |  | [optional] |
+| **MessageStatus** | **string** |  | [optional] |
+| **MessageSegmentCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 
 
