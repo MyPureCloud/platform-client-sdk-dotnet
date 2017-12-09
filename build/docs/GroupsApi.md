@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetGroup**](GroupsApi.html#getgroup) | **GET** /api/v2/groups/{groupId} | Get group |
 | [**GetGroupMembers**](GroupsApi.html#getgroupmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
+| [**GetGroupProfile**](GroupsApi.html#getgroupprofile) | **GET** /api/v2/groups/{groupId}/profile | Get group profile |
 | [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
 | [**GetGroupsSearch**](GroupsApi.html#getgroupssearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
 | [**PostGroupMembers**](GroupsApi.html#postgroupmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
@@ -368,6 +369,70 @@ namespace Example
 ### Return type
 
 [**UserEntityListing**](UserEntityListing.html)
+
+<a name="getgroupprofile"></a>
+
+## [**GroupProfile**](GroupProfile.html) GetGroupProfile (string groupId)
+
+Get group profile
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGroupProfileExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new GroupsApi();
+            
+            
+            var groupId = groupId_example;  // string | groupId
+            
+            
+            
+
+            try
+            {
+                
+                // Get group profile
+                
+                GroupProfile result = apiInstance.GetGroupProfile(groupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.GetGroupProfile: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| groupId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**GroupProfile**](GroupProfile.html)
 
 <a name="getgroups"></a>
 

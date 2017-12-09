@@ -17,7 +17,7 @@ title: InboundRoute
 | **FromName** | **string** | The sender name to use for outgoing replies. | |
 | **FromEmail** | **string** | The sender email to use for outgoing replies. | |
 | **Flow** | [**UriReference**](UriReference.html) | The flow to use for processing the email. | [optional] |
-| **ReplyRoute** | [**UriReference**](UriReference.html) | The route to use for email replies. | [optional] |
+| **ReplyEmailAddress** | [**QueueEmailAddress**](QueueEmailAddress.html) | The route to use for email replies. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}
 

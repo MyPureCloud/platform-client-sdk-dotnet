@@ -154,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Organization">The  oauth client&#39;s organization..</param>
         
         
-        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, Entity Organization = null)
+        public OrgOAuthClient(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, UriReference CreatedBy = null, UriReference ModifiedBy = null, AuthorizedGrantTypeEnum? AuthorizedGrantType = null, NamedEntity Organization = null)
         {
             
             
@@ -328,7 +328,7 @@ this.Organization = Organization;
         /// </summary>
         /// <value>The  oauth client&#39;s organization.</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public Entity Organization { get; set; }
+        public NamedEntity Organization { get; set; }
         
         
         /// <summary>

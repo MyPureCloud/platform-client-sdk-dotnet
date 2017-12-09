@@ -119,6 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ContactListFilterEvaluationFailed,
             
             /// <summary>
+            /// Enum DncAuthenticationFailure for "DNC_AUTHENTICATION_FAILURE"
+            /// </summary>
+            [EnumMember(Value = "DNC_AUTHENTICATION_FAILURE")]
+            DncAuthenticationFailure,
+            
+            /// <summary>
             /// Enum ExceededContactLimit for "EXCEEDED_CONTACT_LIMIT"
             /// </summary>
             [EnumMember(Value = "EXCEEDED_CONTACT_LIMIT")]

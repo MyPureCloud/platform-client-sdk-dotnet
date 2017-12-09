@@ -165,10 +165,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
-        ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null);
+        ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get management units
@@ -177,10 +178,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
-        ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
         
         /// <summary>
         /// Get a time off request for the current user by id
@@ -519,10 +521,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
-        System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null);
 
         /// <summary>
         /// Get management units
@@ -531,10 +534,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
         
         /// <summary>
         /// Get a time off request for the current user by id
@@ -2020,12 +2024,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
-        public ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null)
+        public ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<ManagementUnitListing> localVarResponse = GetWorkforcemanagementManagementunitsWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<ManagementUnitListing> localVarResponse = GetWorkforcemanagementManagementunitsWithHttpInfo(pageSize, pageNumber, expand);
              return localVarResponse.Data;
         }
 
@@ -2033,10 +2038,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
-        public ApiResponse< ManagementUnitListing > GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< ManagementUnitListing > GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits";
@@ -2074,6 +2080,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -2114,12 +2121,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
-        public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null)
         {
-             ApiResponse<ManagementUnitListing> localVarResponse = await GetWorkforcemanagementManagementunitsAsyncWithHttpInfo(pageSize, pageNumber);
+             ApiResponse<ManagementUnitListing> localVarResponse = await GetWorkforcemanagementManagementunitsAsyncWithHttpInfo(pageSize, pageNumber, expand);
              return localVarResponse.Data;
 
         }
@@ -2128,10 +2136,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get management units 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize"> (optional, default to 25)</param>
+        /// <param name="pageSize"> (optional)</param>
         /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/workforcemanagement/managementunits";
@@ -2169,6 +2178,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 

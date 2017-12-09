@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MediaPolicies" /> class.
@@ -52,8 +57,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailPolicy">Conditions and actions for emails.</param>
         
         
-        public MediaPolicies(CallMediaPolicy CallPolicy = null, ChatMediaPolicy ChatPolicy = null, EmailMediaPolicy EmailPolicy = null)
+        
+        /// <param name="MessagePolicy">Conditions and actions for messages.</param>
+        
+        
+        public MediaPolicies(CallMediaPolicy CallPolicy = null, ChatMediaPolicy ChatPolicy = null, EmailMediaPolicy EmailPolicy = null, MessageMediaPolicy MessagePolicy = null)
         {
+            
+            
+            
+            
             
             
             
@@ -95,6 +108,15 @@ this.EmailPolicy = EmailPolicy;
             
             
             
+            
+            
+            
+            
+this.MessagePolicy = MessagePolicy;
+            
+            
+            
+            
         }
         
         
@@ -125,6 +147,15 @@ this.EmailPolicy = EmailPolicy;
         public EmailMediaPolicy EmailPolicy { get; set; }
         
         
+        
+        /// <summary>
+        /// Conditions and actions for messages
+        /// </summary>
+        /// <value>Conditions and actions for messages</value>
+        [DataMember(Name="messagePolicy", EmitDefaultValue=false)]
+        public MessageMediaPolicy MessagePolicy { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -139,6 +170,8 @@ this.EmailPolicy = EmailPolicy;
             sb.Append("  ChatPolicy: ").Append(ChatPolicy).Append("\n");
             
             sb.Append("  EmailPolicy: ").Append(EmailPolicy).Append("\n");
+            
+            sb.Append("  MessagePolicy: ").Append(MessagePolicy).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -190,6 +223,11 @@ this.EmailPolicy = EmailPolicy;
                     this.EmailPolicy == other.EmailPolicy ||
                     this.EmailPolicy != null &&
                     this.EmailPolicy.Equals(other.EmailPolicy)
+                ) &&
+                (
+                    this.MessagePolicy == other.MessagePolicy ||
+                    this.MessagePolicy != null &&
+                    this.MessagePolicy.Equals(other.MessagePolicy)
                 );
         }
 
@@ -213,6 +251,9 @@ this.EmailPolicy = EmailPolicy;
                 
                 if (this.EmailPolicy != null)
                     hash = hash * 59 + this.EmailPolicy.GetHashCode();
+                
+                if (this.MessagePolicy != null)
+                    hash = hash * 59 + this.MessagePolicy.GetHashCode();
                 
                 return hash;
             }

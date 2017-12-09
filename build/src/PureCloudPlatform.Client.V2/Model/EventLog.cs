@@ -122,6 +122,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ContactListFilter,
             
             /// <summary>
+            /// Enum DncList for "DNC_LIST"
+            /// </summary>
+            [EnumMember(Value = "DNC_LIST")]
+            DncList,
+            
+            /// <summary>
             /// Enum EntityLimit for "ENTITY_LIMIT"
             /// </summary>
             [EnumMember(Value = "ENTITY_LIMIT")]

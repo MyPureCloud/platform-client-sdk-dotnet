@@ -130,12 +130,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ReplyRoute">The route to use for email replies..</param>
+        /// <param name="ReplyEmailAddress">The route to use for email replies..</param>
         
         
         
         
-        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, UriReference ReplyRoute = null)
+        public InboundRoute(string Name = null, string Pattern = null, UriReference Queue = null, int? Priority = null, List<UriReference> Skills = null, UriReference Language = null, string FromName = null, string FromEmail = null, UriReference Flow = null, QueueEmailAddress ReplyEmailAddress = null)
         {
             
             
@@ -285,7 +285,7 @@ this.Flow = Flow;
             
             
             
-this.ReplyRoute = ReplyRoute;
+this.ReplyEmailAddress = ReplyEmailAddress;
             
             
             
@@ -389,8 +389,8 @@ this.ReplyRoute = ReplyRoute;
         /// The route to use for email replies.
         /// </summary>
         /// <value>The route to use for email replies.</value>
-        [DataMember(Name="replyRoute", EmitDefaultValue=false)]
-        public UriReference ReplyRoute { get; set; }
+        [DataMember(Name="replyEmailAddress", EmitDefaultValue=false)]
+        public QueueEmailAddress ReplyEmailAddress { get; set; }
         
         
         
@@ -431,7 +431,7 @@ this.ReplyRoute = ReplyRoute;
             
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             
-            sb.Append("  ReplyRoute: ").Append(ReplyRoute).Append("\n");
+            sb.Append("  ReplyEmailAddress: ").Append(ReplyEmailAddress).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -522,9 +522,9 @@ this.ReplyRoute = ReplyRoute;
                     this.Flow.Equals(other.Flow)
                 ) &&
                 (
-                    this.ReplyRoute == other.ReplyRoute ||
-                    this.ReplyRoute != null &&
-                    this.ReplyRoute.Equals(other.ReplyRoute)
+                    this.ReplyEmailAddress == other.ReplyEmailAddress ||
+                    this.ReplyEmailAddress != null &&
+                    this.ReplyEmailAddress.Equals(other.ReplyEmailAddress)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -575,8 +575,8 @@ this.ReplyRoute = ReplyRoute;
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
                 
-                if (this.ReplyRoute != null)
-                    hash = hash * 59 + this.ReplyRoute.GetHashCode();
+                if (this.ReplyEmailAddress != null)
+                    hash = hash * 59 + this.ReplyEmailAddress.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

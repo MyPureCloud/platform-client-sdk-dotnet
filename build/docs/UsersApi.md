@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserStationAssociatedstation**](UsersApi.html#deleteuserstationassociatedstation) | **DELETE** /api/v2/users/{userId}/station/associatedstation | Clear associated station |
 | [**DeleteUserStationDefaultstation**](UsersApi.html#deleteuserstationdefaultstation) | **DELETE** /api/v2/users/{userId}/station/defaultstation | Clear default station |
 | [**GetFieldconfig**](UsersApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
+| [**GetProfilesUsers**](UsersApi.html#getprofilesusers) | **GET** /api/v2/profiles/users | Get a user profile listing |
 | [**GetUser**](UsersApi.html#getuser) | **GET** /api/v2/users/{userId} | Get user. |
 | [**GetUserAdjacents**](UsersApi.html#getuseradjacents) | **GET** /api/v2/users/{userId}/adjacents | Get adjacents |
 | [**GetUserCallforwarding**](UsersApi.html#getusercallforwarding) | **GET** /api/v2/users/{userId}/callforwarding | Get a user&#39;s CallForwarding |
@@ -20,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserFavorites**](UsersApi.html#getuserfavorites) | **GET** /api/v2/users/{userId}/favorites | Get favorites |
 | [**GetUserGeolocation**](UsersApi.html#getusergeolocation) | **GET** /api/v2/users/{userId}/geolocations/{clientId} | Get a user&#39;s Geolocation |
 | [**GetUserOutofoffice**](UsersApi.html#getuseroutofoffice) | **GET** /api/v2/users/{userId}/outofoffice | Get a OutOfOffice |
+| [**GetUserProfile**](UsersApi.html#getuserprofile) | **GET** /api/v2/users/{userId}/profile | Get user profile |
 | [**GetUserProfileskills**](UsersApi.html#getuserprofileskills) | **GET** /api/v2/users/{userId}/profileskills | List profile skills for a user |
 | [**GetUserQueues**](UsersApi.html#getuserqueues) | **GET** /api/v2/users/{userId}/queues | Get queues for user |
 | [**GetUserRoles**](UsersApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
@@ -437,6 +439,106 @@ namespace Example
 ### Return type
 
 [**FieldConfig**](FieldConfig.html)
+
+<a name="getprofilesusers"></a>
+
+## [**UserProfileEntityListing**](UserProfileEntityListing.html) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string state = null)
+
+Get a user profile listing
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetProfilesUsersExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
+            
+            
+            var jid = new List<string>(); // List<string> | jid (optional) 
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            
+            
+            
+            
+            
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
+            
+            var state = state_example;  // string | Only list users of this state (optional)  (default to active)
+            
+            
+            
+
+            try
+            {
+                
+                // Get a user profile listing
+                
+                UserProfileEntityListing result = apiInstance.GetProfilesUsers(pageSize, pageNumber, id, jid, sortOrder, expand, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetProfilesUsers: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
+| **jid** | [**List<string>**](string.html)| jid | [optional]  |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization |
+| **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, deleted |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserProfileEntityListing**](UserProfileEntityListing.html)
 
 <a name="getuser"></a>
 
@@ -939,6 +1041,76 @@ namespace Example
 ### Return type
 
 [**OutOfOffice**](OutOfOffice.html)
+
+<a name="getuserprofile"></a>
+
+## [**UserProfile**](UserProfile.html) GetUserProfile (string userId, List<string> expand = null)
+
+Get user profile
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserProfileExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var userId = userId_example;  // string | userId
+            
+            
+            
+            
+            
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+            
+            
+
+            try
+            {
+                
+                // Get user profile
+                
+                UserProfile result = apiInstance.GetUserProfile(userId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserProfile: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| userId |  |
+| **expand** | [**List<string>**](string.html)| Which fields, if any, to expand | [optional] <br />**Values**: routingStatus, presence, conversationSummary, outOfOffice, geolocation, station, authorization, profileSkills, locations, groups |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserProfile**](UserProfile.html)
 
 <a name="getuserprofileskills"></a>
 

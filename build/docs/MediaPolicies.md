@@ -10,6 +10,7 @@ title: MediaPolicies
 | **CallPolicy** | [**CallMediaPolicy**](CallMediaPolicy.html) | Conditions and actions for calls | [optional] |
 | **ChatPolicy** | [**ChatMediaPolicy**](ChatMediaPolicy.html) | Conditions and actions for chats | [optional] |
 | **EmailPolicy** | [**EmailMediaPolicy**](EmailMediaPolicy.html) | Conditions and actions for emails | [optional] |
+| **MessagePolicy** | [**MessageMediaPolicy**](MessageMediaPolicy.html) | Conditions and actions for messages | [optional] |
 {: class="table table-striped"}
 
 

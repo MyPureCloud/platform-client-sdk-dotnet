@@ -852,7 +852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        List<WrapupCode> PostRoutingQueueWrapupcodes (string queueId, List<WrapupCode> body);
+        List<WrapupCode> PostRoutingQueueWrapupcodes (string queueId, List<Entity> body);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -864,7 +864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        ApiResponse<List<WrapupCode>> PostRoutingQueueWrapupcodesWithHttpInfo (string queueId, List<WrapupCode> body);
+        ApiResponse<List<WrapupCode>> PostRoutingQueueWrapupcodesWithHttpInfo (string queueId, List<Entity> body);
         
         /// <summary>
         /// Create queue
@@ -1918,7 +1918,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        System.Threading.Tasks.Task<List<WrapupCode>> PostRoutingQueueWrapupcodesAsync (string queueId, List<WrapupCode> body);
+        System.Threading.Tasks.Task<List<WrapupCode>> PostRoutingQueueWrapupcodesAsync (string queueId, List<Entity> body);
 
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -1930,7 +1930,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, List<WrapupCode> body);
+        System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, List<Entity> body);
         
         /// <summary>
         /// Create queue
@@ -9030,7 +9030,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>List&lt;WrapupCode&gt;</returns>
-        public List<WrapupCode> PostRoutingQueueWrapupcodes (string queueId, List<WrapupCode> body)
+        public List<WrapupCode> PostRoutingQueueWrapupcodes (string queueId, List<Entity> body)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = PostRoutingQueueWrapupcodesWithHttpInfo(queueId, body);
              return localVarResponse.Data;
@@ -9043,7 +9043,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>ApiResponse of List&lt;WrapupCode&gt;</returns>
-        public ApiResponse< List<WrapupCode> > PostRoutingQueueWrapupcodesWithHttpInfo (string queueId, List<WrapupCode> body)
+        public ApiResponse< List<WrapupCode> > PostRoutingQueueWrapupcodesWithHttpInfo (string queueId, List<Entity> body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -9134,7 +9134,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of List&lt;WrapupCode&gt;</returns>
-        public async System.Threading.Tasks.Task<List<WrapupCode>> PostRoutingQueueWrapupcodesAsync (string queueId, List<WrapupCode> body)
+        public async System.Threading.Tasks.Task<List<WrapupCode>> PostRoutingQueueWrapupcodesAsync (string queueId, List<Entity> body)
         {
              ApiResponse<List<WrapupCode>> localVarResponse = await PostRoutingQueueWrapupcodesAsyncWithHttpInfo(queueId, body);
              return localVarResponse.Data;
@@ -9148,7 +9148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="body">List of wrapup codes</param>
         /// <returns>Task of ApiResponse (List&lt;WrapupCode&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, List<WrapupCode> body)
+        public async System.Threading.Tasks.Task<ApiResponse<List<WrapupCode>>> PostRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, List<Entity> body)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)

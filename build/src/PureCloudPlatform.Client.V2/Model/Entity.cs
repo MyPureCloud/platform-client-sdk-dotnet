@@ -25,11 +25,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Entity" /> class.
@@ -37,27 +32,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        /// <param name="Name">Name.</param>
-        
-        
-        public Entity(string Name = null)
+        public Entity()
         {
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
             
             
             
@@ -74,14 +52,6 @@ this.Name = Name;
         public string Id { get; private set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -92,8 +62,6 @@ this.Name = Name;
             sb.Append("class Entity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
-            sb.Append("  Name: ").Append(Name).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -135,11 +103,6 @@ this.Name = Name;
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 );
         }
 
@@ -157,9 +120,6 @@ this.Name = Name;
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 return hash;
             }

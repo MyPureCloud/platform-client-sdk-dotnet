@@ -440,7 +440,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunits"></a>
 
-## [**ManagementUnitListing**](ManagementUnitListing.html) GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null)
+## [**ManagementUnitListing**](ManagementUnitListing.html) GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null)
 
 Get management units
 
@@ -468,12 +468,17 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var pageSize = 56;  // int? |  (optional)  (default to 25)
+            var pageSize = 56;  // int? |  (optional) 
             
             
             
             
             var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            
+            
+            
+            
+            var expand = expand_example;  // string |  (optional) 
             
             
             
@@ -483,7 +488,7 @@ namespace Example
                 
                 // Get management units
                 
-                ManagementUnitListing result = apiInstance.GetWorkforcemanagementManagementunits(pageSize, pageNumber);
+                ManagementUnitListing result = apiInstance.GetWorkforcemanagementManagementunits(pageSize, pageNumber, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -500,8 +505,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **pageSize** | **int?**|  | [optional] [default to 25] |
+| **pageSize** | **int?**|  | [optional]  |
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **expand** | **string**|  | [optional] <br />**Values**: details |
 {: class="table table-striped"}
 
 ### Return type

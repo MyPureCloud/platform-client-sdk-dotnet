@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OAuthClient">OAuthClient.</param>
         
         
-        public TokenInfo(Entity Organization = null, Entity HomeOrganization = null, OrgOAuthClient OAuthClient = null)
+        public TokenInfo(NamedEntity Organization = null, NamedEntity HomeOrganization = null, OrgOAuthClient OAuthClient = null)
         {
             
             
@@ -104,7 +104,7 @@ this.OAuthClient = OAuthClient;
         /// </summary>
         /// <value>The current organization</value>
         [DataMember(Name="organization", EmitDefaultValue=false)]
-        public Entity Organization { get; set; }
+        public NamedEntity Organization { get; set; }
         
         
         
@@ -113,7 +113,7 @@ this.OAuthClient = OAuthClient;
         /// </summary>
         /// <value>The token&#39;s home organization</value>
         [DataMember(Name="homeOrganization", EmitDefaultValue=false)]
-        public Entity HomeOrganization { get; set; }
+        public NamedEntity HomeOrganization { get; set; }
         
         
         
