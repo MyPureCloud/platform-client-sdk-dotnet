@@ -343,6 +343,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -392,6 +398,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
+        
+        
         
         
         
@@ -507,8 +517,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">User to User Information (UUI) data managed by SIP session application..</param>
         
         
-        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null)
+        
+        /// <param name="Self">Address and name data for a call endpoint..</param>
+        
+        
+        
+        /// <param name="Other">Address and name data for a call endpoint..</param>
+        
+        
+        public Call(StateEnum? State = null, string Id = null, DirectionEnum? Direction = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, string RecordingId = null, List<Segment> Segments = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, string DocumentId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<DisconnectReason> DisconnectReasons = null, FaxStatus FaxStatus = null, string Provider = null, string ScriptId = null, string PeerId = null, string UuiData = null, Address Self = null, Address Other = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -797,6 +823,24 @@ this.UuiData = UuiData;
             
             
             
+            
+            
+            
+            
+this.Self = Self;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Other = Other;
+            
+            
+            
+            
         }
         
         
@@ -969,6 +1013,24 @@ this.UuiData = UuiData;
         public string UuiData { get; set; }
         
         
+        
+        /// <summary>
+        /// Address and name data for a call endpoint.
+        /// </summary>
+        /// <value>Address and name data for a call endpoint.</value>
+        [DataMember(Name="self", EmitDefaultValue=false)]
+        public Address Self { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Address and name data for a call endpoint.
+        /// </summary>
+        /// <value>Address and name data for a call endpoint.</value>
+        [DataMember(Name="other", EmitDefaultValue=false)]
+        public Address Other { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1021,6 +1083,10 @@ this.UuiData = UuiData;
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
             
             sb.Append("  UuiData: ").Append(UuiData).Append("\n");
+            
+            sb.Append("  Self: ").Append(Self).Append("\n");
+            
+            sb.Append("  Other: ").Append(Other).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1167,6 +1233,16 @@ this.UuiData = UuiData;
                     this.UuiData == other.UuiData ||
                     this.UuiData != null &&
                     this.UuiData.Equals(other.UuiData)
+                ) &&
+                (
+                    this.Self == other.Self ||
+                    this.Self != null &&
+                    this.Self.Equals(other.Self)
+                ) &&
+                (
+                    this.Other == other.Other ||
+                    this.Other != null &&
+                    this.Other.Equals(other.Other)
                 );
         }
 
@@ -1247,6 +1323,12 @@ this.UuiData = UuiData;
                 
                 if (this.UuiData != null)
                     hash = hash * 59 + this.UuiData.GetHashCode();
+                
+                if (this.Self != null)
+                    hash = hash * 59 + this.Self.GetHashCode();
+                
+                if (this.Other != null)
+                    hash = hash * 59 + this.Other.GetHashCode();
                 
                 return hash;
             }

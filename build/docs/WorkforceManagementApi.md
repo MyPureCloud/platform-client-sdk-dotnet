@@ -8,7 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**GetWorkforcemanagementAdherence**](WorkforceManagementApi.html#getworkforcemanagementadherence) | **GET** /api/v2/workforcemanagement/adherence | Get a list of UserScheduleAdherence records for the requested users |
-| [**GetWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitactivitycodes) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Get activity codes corresponding to a management unit |
+| [**GetWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitactivitycodes) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Get activity codes |
 | [**GetWorkforcemanagementManagementunitIntradayQueues**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitintradayqueues) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/intraday/queues | Get intraday queues for the given date |
 | [**GetWorkforcemanagementManagementunitUserTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitusertimeoffrequest) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Get a time off request by id |
 | [**GetWorkforcemanagementManagementunitUserTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementmanagementunitusertimeoffrequests) | **GET** /api/v2/workforcemanagement/managementunits/{muId}/users/{userId}/timeoffrequests | Get a list of time off requests for any user |
@@ -17,7 +17,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequest) | **GET** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user by id |
 | [**GetWorkforcemanagementTimeoffrequests**](WorkforceManagementApi.html#getworkforcemanagementtimeoffrequests) | **GET** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
 | [**PatchWorkforcemanagementTimeoffrequest**](WorkforceManagementApi.html#patchworkforcemanagementtimeoffrequest) | **PATCH** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Mark a time off request for the current user as read or unread |
+| [**PostWorkforcemanagementAgents**](WorkforceManagementApi.html#postworkforcemanagementagents) | **POST** /api/v2/workforcemanagement/agents | Move agents in and out of management unit |
 | [**PostWorkforcemanagementAgentsManagementunits**](WorkforceManagementApi.html#postworkforcemanagementagentsmanagementunits) | **POST** /api/v2/workforcemanagement/agents/managementunits | Get the management units to which the agents belong |
+| [**PostWorkforcemanagementManagementunitActivitycodes**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitactivitycodes) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/activitycodes | Create a new activity code |
 | [**PostWorkforcemanagementManagementunitHistoricaladherencequery**](WorkforceManagementApi.html#postworkforcemanagementmanagementunithistoricaladherencequery) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/historicaladherencequery | Request a historical adherence report |
 | [**PostWorkforcemanagementManagementunitIntraday**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitintraday) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/intraday | Get intraday data for the given date for the requested queueIds |
 | [**PostWorkforcemanagementManagementunitSchedulesSearch**](WorkforceManagementApi.html#postworkforcemanagementmanagementunitschedulessearch) | **POST** /api/v2/workforcemanagement/managementunits/{muId}/schedules/search | Get user schedules within the given time range |
@@ -92,7 +94,7 @@ namespace Example
 
 ## [**ActivityCodeContainer**](ActivityCodeContainer.html) GetWorkforcemanagementManagementunitActivitycodes (string muId)
 
-Get activity codes corresponding to a management unit
+Get activity codes
 
 
 
@@ -126,7 +128,7 @@ namespace Example
             try
             {
                 
-                // Get activity codes corresponding to a management unit
+                // Get activity codes
                 
                 ActivityCodeContainer result = apiInstance.GetWorkforcemanagementManagementunitActivitycodes(muId);
                 Debug.WriteLine(result);
@@ -711,6 +713,70 @@ namespace Example
 
 void (empty response body)
 
+<a name="postworkforcemanagementagents"></a>
+
+## [**MoveAgentsResponse**](MoveAgentsResponse.html) PostWorkforcemanagementAgents (MoveAgentsRequest body = null)
+
+Move agents in and out of management unit
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new WorkforceManagementApi();
+            
+            
+            
+            var body = new MoveAgentsRequest(); // MoveAgentsRequest | body (optional) 
+            
+            
+
+            try
+            {
+                
+                // Move agents in and out of management unit
+                
+                MoveAgentsResponse result = apiInstance.PostWorkforcemanagementAgents(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgents: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**MoveAgentsRequest**](MoveAgentsRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MoveAgentsResponse**](MoveAgentsResponse.html)
+
 <a name="postworkforcemanagementagentsmanagementunits"></a>
 
 ## [**List&lt;AgentManagementUnitReference&gt;**](AgentManagementUnitReference.html) PostWorkforcemanagementAgentsManagementunits (List<string> body = null)
@@ -774,6 +840,76 @@ namespace Example
 ### Return type
 
 [**List<AgentManagementUnitReference>**](AgentManagementUnitReference.html)
+
+<a name="postworkforcemanagementmanagementunitactivitycodes"></a>
+
+## [**ActivityCode**](ActivityCode.html) PostWorkforcemanagementManagementunitActivitycodes (string muId, CreateActivityCodeRequest body = null)
+
+Create a new activity code
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementManagementunitActivitycodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new WorkforceManagementApi();
+            
+            
+            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            
+            
+            
+            
+            
+            var body = new CreateActivityCodeRequest(); // CreateActivityCodeRequest | body (optional) 
+            
+            
+
+            try
+            {
+                
+                // Create a new activity code
+                
+                ActivityCode result = apiInstance.PostWorkforcemanagementManagementunitActivitycodes(muId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementManagementunitActivitycodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **body** | [**CreateActivityCodeRequest**](CreateActivityCodeRequest.html)| body | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ActivityCode**](ActivityCode.html)
 
 <a name="postworkforcemanagementmanagementunithistoricaladherencequery"></a>
 

@@ -125,6 +125,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalContact" /> class.
@@ -211,12 +216,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ExternalSystemUrl">ExternalSystemUrl.</param>
+        
+        
+        
         /// <param name="ExternalDataSources">Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param..</param>
         
         
         
         
-        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalContact(string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             
             
@@ -250,6 +259,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.LastName = LastName;
             }
+            
+            
+            
+            
             
             
             
@@ -478,6 +491,15 @@ this.SurveyOptOut = SurveyOptOut;
             
             
             
+this.ExternalSystemUrl = ExternalSystemUrl;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ExternalDataSources = ExternalDataSources;
             
             
@@ -647,6 +669,14 @@ this.ExternalDataSources = ExternalDataSources;
         
         
         /// <summary>
+        /// Gets or Sets ExternalSystemUrl
+        /// </summary>
+        [DataMember(Name="externalSystemUrl", EmitDefaultValue=false)]
+        public string ExternalSystemUrl { get; set; }
+        
+        
+        
+        /// <summary>
         /// Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.
         /// </summary>
         /// <value>Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param.</value>
@@ -709,6 +739,8 @@ this.ExternalDataSources = ExternalDataSources;
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             
             sb.Append("  SurveyOptOut: ").Append(SurveyOptOut).Append("\n");
+            
+            sb.Append("  ExternalSystemUrl: ").Append(ExternalSystemUrl).Append("\n");
             
             sb.Append("  ExternalDataSources: ").Append(ExternalDataSources).Append("\n");
             
@@ -846,6 +878,11 @@ this.ExternalDataSources = ExternalDataSources;
                     this.SurveyOptOut.Equals(other.SurveyOptOut)
                 ) &&
                 (
+                    this.ExternalSystemUrl == other.ExternalSystemUrl ||
+                    this.ExternalSystemUrl != null &&
+                    this.ExternalSystemUrl.Equals(other.ExternalSystemUrl)
+                ) &&
+                (
                     this.ExternalDataSources == other.ExternalDataSources ||
                     this.ExternalDataSources != null &&
                     this.ExternalDataSources.SequenceEqual(other.ExternalDataSources)
@@ -925,6 +962,9 @@ this.ExternalDataSources = ExternalDataSources;
                 
                 if (this.SurveyOptOut != null)
                     hash = hash * 59 + this.SurveyOptOut.GetHashCode();
+                
+                if (this.ExternalSystemUrl != null)
+                    hash = hash * 59 + this.ExternalSystemUrl.GetHashCode();
                 
                 if (this.ExternalDataSources != null)
                     hash = hash * 59 + this.ExternalDataSources.GetHashCode();

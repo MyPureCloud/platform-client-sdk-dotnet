@@ -3371,10 +3371,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns></returns>
         public ArchitectApi(String basePath)
         {
-            this.Configuration = new Configuration(new ApiClient(basePath));
+            this.Configuration = new PureCloudPlatform.Client.V2.Client.Configuration(new ApiClient(basePath));
 
             // ensure API client has configuration ready
-            if (Configuration.ApiClient.Configuration == null)
+            if (this.Configuration.ApiClient.Configuration == null)
             {
                 this.Configuration.ApiClient.Configuration = this.Configuration;
             }
@@ -3386,15 +3386,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public ArchitectApi(Configuration configuration = null)
+        public ArchitectApi(PureCloudPlatform.Client.V2.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = PureCloudPlatform.Client.V2.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
             // ensure API client has configuration ready
-            if (Configuration.ApiClient.Configuration == null)
+            if (this.Configuration.ApiClient.Configuration == null)
             {
                 this.Configuration.ApiClient.Configuration = this.Configuration;
             }
@@ -3413,7 +3413,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Sets the base path of the API client.
         /// </summary>
         /// <value>The base path</value>
-        [Obsolete("SetBasePath is deprecated, please do 'Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
+        [Obsolete("SetBasePath is deprecated, please do 'this.Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
         public void SetBasePath(String basePath)
         {
             // do nothing
@@ -3423,13 +3423,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public PureCloudPlatform.Client.V2.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Gets the default header.
         /// </summary>
         /// <returns>Dictionary of HTTP header</returns>
-        [Obsolete("DefaultHeader is deprecated, please use Configuration.DefaultHeader instead.")]
+        [Obsolete("DefaultHeader is deprecated, please use this.Configuration.DefaultHeader instead.")]
         public Dictionary<String, String> DefaultHeader()
         {
             return this.Configuration.DefaultHeader;
@@ -3441,7 +3441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="key">Header field name.</param>
         /// <param name="value">Header field value.</param>
         /// <returns></returns>
-        [Obsolete("AddDefaultHeader is deprecated, please use Configuration.AddDefaultHeader instead.")]
+        [Obsolete("AddDefaultHeader is deprecated, please use this.Configuration.AddDefaultHeader instead.")]
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
@@ -3485,7 +3485,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -3493,7 +3493,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3502,7 +3502,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (ivrId != null) localVarPathParams.Add("ivrId", Configuration.ApiClient.ParameterToString(ivrId));
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
 
             // Query params
 
@@ -3517,11 +3517,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3580,7 +3580,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -3588,7 +3588,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3597,7 +3597,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (ivrId != null) localVarPathParams.Add("ivrId", Configuration.ApiClient.ParameterToString(ivrId));
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
 
             // Query params
 
@@ -3612,11 +3612,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3676,7 +3676,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -3684,7 +3684,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3693,10 +3693,10 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
-            if (allResources != null) localVarQueryParams.Add(new Tuple<string, string>("allResources", Configuration.ApiClient.ParameterToString(allResources)));
+            if (allResources != null) localVarQueryParams.Add(new Tuple<string, string>("allResources", this.Configuration.ApiClient.ParameterToString(allResources)));
 
             // Header params
 
@@ -3709,11 +3709,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3774,7 +3774,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -3782,7 +3782,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3791,10 +3791,10 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
-            if (allResources != null) localVarQueryParams.Add(new Tuple<string, string>("allResources", Configuration.ApiClient.ParameterToString(allResources)));
+            if (allResources != null) localVarQueryParams.Add(new Tuple<string, string>("allResources", this.Configuration.ApiClient.ParameterToString(allResources)));
 
             // Header params
 
@@ -3807,11 +3807,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3874,7 +3874,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -3882,7 +3882,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3891,8 +3891,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -3907,11 +3907,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -3976,7 +3976,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -3984,7 +3984,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -3993,8 +3993,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -4009,11 +4009,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4072,7 +4072,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4080,7 +4080,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4091,7 +4091,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -4104,11 +4104,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4123,7 +4123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -4168,7 +4168,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4176,7 +4176,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4187,7 +4187,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -4200,11 +4200,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4219,7 +4219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -4262,7 +4262,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4270,7 +4270,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4279,7 +4279,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
 
@@ -4294,11 +4294,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4357,7 +4357,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4365,7 +4365,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4374,7 +4374,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
 
@@ -4389,11 +4389,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4451,7 +4451,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4459,7 +4459,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4468,7 +4468,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", Configuration.ApiClient.ParameterToString(scheduleGroupId));
+            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", this.Configuration.ApiClient.ParameterToString(scheduleGroupId));
 
             // Query params
 
@@ -4483,11 +4483,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4546,7 +4546,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4554,7 +4554,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4563,7 +4563,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", Configuration.ApiClient.ParameterToString(scheduleGroupId));
+            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", this.Configuration.ApiClient.ParameterToString(scheduleGroupId));
 
             // Query params
 
@@ -4578,11 +4578,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4645,7 +4645,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4653,7 +4653,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4662,8 +4662,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -4678,11 +4678,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4747,7 +4747,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4755,7 +4755,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4764,8 +4764,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -4780,11 +4780,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4842,7 +4842,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4850,7 +4850,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4859,7 +4859,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
 
@@ -4874,11 +4874,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -4937,7 +4937,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -4945,7 +4945,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -4954,7 +4954,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
 
@@ -4969,11 +4969,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5032,7 +5032,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5040,7 +5040,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5051,7 +5051,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5064,11 +5064,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5083,7 +5083,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -5128,7 +5128,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5136,7 +5136,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5147,7 +5147,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5160,11 +5160,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5179,7 +5179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -5237,7 +5237,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5245,7 +5245,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5256,14 +5256,14 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", this.Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5276,11 +5276,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5295,7 +5295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObjectEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
+                (DependencyObjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
             
         }
 
@@ -5354,7 +5354,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5362,7 +5362,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5373,14 +5373,14 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", this.Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5393,11 +5393,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5412,7 +5412,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObjectEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
+                (DependencyObjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
             
         }
 
@@ -5451,7 +5451,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5459,7 +5459,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5482,11 +5482,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5501,7 +5501,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyStatus>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyStatus)));
+                (DependencyStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyStatus)));
             
         }
 
@@ -5540,7 +5540,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5548,7 +5548,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5571,11 +5571,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5590,7 +5590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyStatus>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyStatus) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyStatus)));
+                (DependencyStatus) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyStatus)));
             
         }
 
@@ -5646,7 +5646,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5654,7 +5654,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5665,10 +5665,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
-            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
-            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
-            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5681,11 +5681,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5700,7 +5700,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ConsumedResourcesEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ConsumedResourcesEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumedResourcesEntityListing)));
+                (ConsumedResourcesEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumedResourcesEntityListing)));
             
         }
 
@@ -5759,7 +5759,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5767,7 +5767,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5778,10 +5778,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
-            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
-            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
-            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5794,11 +5794,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5813,7 +5813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ConsumedResourcesEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ConsumedResourcesEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumedResourcesEntityListing)));
+                (ConsumedResourcesEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumedResourcesEntityListing)));
             
         }
 
@@ -5864,7 +5864,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5872,7 +5872,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5883,9 +5883,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
-            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
-            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -5898,11 +5898,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -5917,7 +5917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ConsumingResourcesEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ConsumingResourcesEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumingResourcesEntityListing)));
+                (ConsumingResourcesEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumingResourcesEntityListing)));
             
         }
 
@@ -5970,7 +5970,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -5978,7 +5978,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -5989,9 +5989,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
-            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
-            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(objectType)));
+            if (resourceType != null) resourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("resourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -6004,11 +6004,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6023,7 +6023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ConsumingResourcesEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ConsumingResourcesEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumingResourcesEntityListing)));
+                (ConsumingResourcesEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsumingResourcesEntityListing)));
             
         }
 
@@ -6076,7 +6076,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6084,7 +6084,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6095,13 +6095,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", Configuration.ApiClient.ParameterToString(flowFilter)));
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", this.Configuration.ApiClient.ParameterToString(flowFilter)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -6114,11 +6114,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6133,7 +6133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObjectEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
+                (DependencyObjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
             
         }
 
@@ -6186,7 +6186,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6194,7 +6194,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6205,13 +6205,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", Configuration.ApiClient.ParameterToString(flowFilter)));
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (flowFilter != null) localVarQueryParams.Add(new Tuple<string, string>("flowFilter", this.Configuration.ApiClient.ParameterToString(flowFilter)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -6224,11 +6224,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6243,7 +6243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObjectEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
+                (DependencyObjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
             
         }
 
@@ -6299,7 +6299,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6307,7 +6307,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6318,13 +6318,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
-            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
-            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(objectType)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", this.Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -6337,11 +6337,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6356,7 +6356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObject>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObject)));
+                (DependencyObject) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObject)));
             
         }
 
@@ -6413,7 +6413,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6421,7 +6421,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6432,13 +6432,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(id)));
-            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
-            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(objectType)));
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", Configuration.ApiClient.ParameterToString(consumingResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", Configuration.ApiClient.ParameterToString(obj))); });
+            if (id != null) localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(id)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
+            if (objectType != null) localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(objectType)));
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumingResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumingResources", this.Configuration.ApiClient.ParameterToString(consumingResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumingResourceType != null) consumingResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumingResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -6451,11 +6451,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6470,7 +6470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObject>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObject)));
+                (DependencyObject) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObject)));
             
         }
 
@@ -6514,7 +6514,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6522,7 +6522,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6531,7 +6531,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (typeId != null) localVarPathParams.Add("typeId", Configuration.ApiClient.ParameterToString(typeId));
+            if (typeId != null) localVarPathParams.Add("typeId", this.Configuration.ApiClient.ParameterToString(typeId));
 
             // Query params
 
@@ -6546,11 +6546,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6565,7 +6565,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyType>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyType) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyType)));
+                (DependencyType) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyType)));
             
         }
 
@@ -6610,7 +6610,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6618,7 +6618,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6627,7 +6627,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (typeId != null) localVarPathParams.Add("typeId", Configuration.ApiClient.ParameterToString(typeId));
+            if (typeId != null) localVarPathParams.Add("typeId", this.Configuration.ApiClient.ParameterToString(typeId));
 
             // Query params
 
@@ -6642,11 +6642,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6661,7 +6661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyType>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyType) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyType)));
+                (DependencyType) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyType)));
             
         }
 
@@ -6704,7 +6704,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6712,7 +6712,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6723,8 +6723,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -6737,11 +6737,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6756,7 +6756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyTypeEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyTypeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyTypeEntityListing)));
+                (DependencyTypeEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyTypeEntityListing)));
             
         }
 
@@ -6799,7 +6799,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6807,7 +6807,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6818,8 +6818,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -6832,11 +6832,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6851,7 +6851,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyTypeEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyTypeEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyTypeEntityListing)));
+                (DependencyTypeEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyTypeEntityListing)));
             
         }
 
@@ -6902,7 +6902,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -6910,7 +6910,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -6921,12 +6921,12 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -6939,11 +6939,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -6958,7 +6958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObjectEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
+                (DependencyObjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
             
         }
 
@@ -7009,7 +7009,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7017,7 +7017,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7028,12 +7028,12 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", Configuration.ApiClient.ParameterToString(consumedResources)));
-            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", Configuration.ApiClient.ParameterToString(obj))); });
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (objectType != null) objectType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("objectType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (consumedResources != null) localVarQueryParams.Add(new Tuple<string, string>("consumedResources", this.Configuration.ApiClient.ParameterToString(consumedResources)));
+            if (consumedResourceType != null) consumedResourceType.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("consumedResourceType", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -7046,11 +7046,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7065,7 +7065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<DependencyObjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (DependencyObjectEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
+                (DependencyObjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
             
         }
 
@@ -7109,7 +7109,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7117,7 +7117,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7126,7 +7126,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (ivrId != null) localVarPathParams.Add("ivrId", Configuration.ApiClient.ParameterToString(ivrId));
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
 
             // Query params
 
@@ -7141,11 +7141,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7160,7 +7160,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
-                (IVR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
+                (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
             
         }
 
@@ -7205,7 +7205,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7213,7 +7213,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7222,7 +7222,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (ivrId != null) localVarPathParams.Add("ivrId", Configuration.ApiClient.ParameterToString(ivrId));
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
 
             // Query params
 
@@ -7237,11 +7237,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7256,7 +7256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
-                (IVR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
+                (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
             
         }
 
@@ -7305,7 +7305,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7313,7 +7313,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7324,11 +7324,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -7341,11 +7341,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7360,7 +7360,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVREntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (IVREntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVREntityListing)));
+                (IVREntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVREntityListing)));
             
         }
 
@@ -7409,7 +7409,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7417,7 +7417,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7428,11 +7428,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -7445,11 +7445,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7464,7 +7464,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVREntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (IVREntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVREntityListing)));
+                (IVREntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVREntityListing)));
             
         }
 
@@ -7508,7 +7508,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7516,7 +7516,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7525,7 +7525,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -7540,11 +7540,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7559,7 +7559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Prompt>(localVarStatusCode,
                 localVarHeaders,
-                (Prompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
+                (Prompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
             
         }
 
@@ -7604,7 +7604,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7612,7 +7612,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7621,7 +7621,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -7636,11 +7636,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7655,7 +7655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Prompt>(localVarStatusCode,
                 localVarHeaders,
-                (Prompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
+                (Prompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
             
         }
 
@@ -7714,7 +7714,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7722,7 +7722,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7731,15 +7731,15 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", this.Configuration.ApiClient.ParameterToString(historyId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7752,11 +7752,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7771,7 +7771,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<HistoryListing>(localVarStatusCode,
                 localVarHeaders,
-                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+                (HistoryListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
             
         }
 
@@ -7832,7 +7832,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7840,7 +7840,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7849,15 +7849,15 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", this.Configuration.ApiClient.ParameterToString(historyId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7870,11 +7870,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7889,7 +7889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<HistoryListing>(localVarStatusCode,
                 localVarHeaders,
-                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+                (HistoryListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
             
         }
 
@@ -7938,7 +7938,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -7946,7 +7946,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -7955,8 +7955,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -7971,11 +7971,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -7990,7 +7990,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
+                (PromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
             
         }
 
@@ -8041,7 +8041,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8049,7 +8049,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8058,8 +8058,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -8074,11 +8074,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8093,7 +8093,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
+                (PromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
             
         }
 
@@ -8141,7 +8141,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8149,7 +8149,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8158,11 +8158,11 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -8175,11 +8175,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8194,7 +8194,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAssetEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAssetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetEntityListing)));
+                (PromptAssetEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetEntityListing)));
             
         }
 
@@ -8243,7 +8243,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8251,7 +8251,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8260,11 +8260,11 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
             // Header params
 
@@ -8277,11 +8277,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8296,7 +8296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAssetEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAssetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetEntityListing)));
+                (PromptAssetEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAssetEntityListing)));
             
         }
 
@@ -8349,7 +8349,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8357,7 +8357,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8368,13 +8368,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
-            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -8387,11 +8387,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8406,7 +8406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PromptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptEntityListing)));
+                (PromptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptEntityListing)));
             
         }
 
@@ -8459,7 +8459,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8467,7 +8467,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8478,13 +8478,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
-            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -8497,11 +8497,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8516,7 +8516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PromptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptEntityListing)));
+                (PromptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptEntityListing)));
             
         }
 
@@ -8560,7 +8560,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8568,7 +8568,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8577,7 +8577,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
 
@@ -8592,11 +8592,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8611,7 +8611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Schedule>(localVarStatusCode,
                 localVarHeaders,
-                (Schedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
+                (Schedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
             
         }
 
@@ -8656,7 +8656,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8664,7 +8664,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8673,7 +8673,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
 
@@ -8688,11 +8688,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8707,7 +8707,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Schedule>(localVarStatusCode,
                 localVarHeaders,
-                (Schedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
+                (Schedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
             
         }
 
@@ -8751,7 +8751,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8759,7 +8759,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8768,7 +8768,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", Configuration.ApiClient.ParameterToString(scheduleGroupId));
+            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", this.Configuration.ApiClient.ParameterToString(scheduleGroupId));
 
             // Query params
 
@@ -8783,11 +8783,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8802,7 +8802,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroup>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
+                (ScheduleGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
             
         }
 
@@ -8847,7 +8847,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8855,7 +8855,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8864,7 +8864,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", Configuration.ApiClient.ParameterToString(scheduleGroupId));
+            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", this.Configuration.ApiClient.ParameterToString(scheduleGroupId));
 
             // Query params
 
@@ -8879,11 +8879,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -8898,7 +8898,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroup>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
+                (ScheduleGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
             
         }
 
@@ -8947,7 +8947,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -8955,7 +8955,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -8966,11 +8966,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -8983,11 +8983,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9002,7 +9002,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroupEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroupEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroupEntityListing)));
+                (ScheduleGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroupEntityListing)));
             
         }
 
@@ -9051,7 +9051,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9059,7 +9059,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9070,11 +9070,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -9087,11 +9087,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9106,7 +9106,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroupEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroupEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroupEntityListing)));
+                (ScheduleGroupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroupEntityListing)));
             
         }
 
@@ -9155,7 +9155,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9163,7 +9163,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9174,11 +9174,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -9191,11 +9191,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9210,7 +9210,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleEntityListing)));
+                (ScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleEntityListing)));
             
         }
 
@@ -9259,7 +9259,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9267,7 +9267,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9278,11 +9278,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -9295,11 +9295,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9314,7 +9314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleEntityListing)));
+                (ScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleEntityListing)));
             
         }
 
@@ -9358,7 +9358,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9366,7 +9366,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9375,7 +9375,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -9390,11 +9390,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9409,7 +9409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPrompt>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPrompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPrompt)));
+                (SystemPrompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPrompt)));
             
         }
 
@@ -9454,7 +9454,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9462,7 +9462,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9471,7 +9471,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -9486,11 +9486,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9505,7 +9505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPrompt>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPrompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPrompt)));
+                (SystemPrompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPrompt)));
             
         }
 
@@ -9564,7 +9564,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9572,7 +9572,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9581,15 +9581,15 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", this.Configuration.ApiClient.ParameterToString(historyId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -9602,11 +9602,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9621,7 +9621,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<HistoryListing>(localVarStatusCode,
                 localVarHeaders,
-                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+                (HistoryListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
             
         }
 
@@ -9682,7 +9682,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9690,7 +9690,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9699,15 +9699,15 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (historyId != null) localVarPathParams.Add("historyId", this.Configuration.ApiClient.ParameterToString(historyId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -9720,11 +9720,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9739,7 +9739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<HistoryListing>(localVarStatusCode,
                 localVarHeaders,
-                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+                (HistoryListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
             
         }
 
@@ -9788,7 +9788,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9796,7 +9796,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9805,8 +9805,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -9821,11 +9821,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9840,7 +9840,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
+                (SystemPromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
             
         }
 
@@ -9891,7 +9891,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -9899,7 +9899,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -9908,8 +9908,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -9924,11 +9924,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -9943,7 +9943,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
+                (SystemPromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
             
         }
 
@@ -9995,7 +9995,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10003,7 +10003,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10012,13 +10012,13 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -10031,11 +10031,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10050,7 +10050,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAssetEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAssetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAssetEntityListing)));
+                (SystemPromptAssetEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAssetEntityListing)));
             
         }
 
@@ -10103,7 +10103,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10111,7 +10111,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10120,13 +10120,13 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -10139,11 +10139,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10158,7 +10158,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAssetEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAssetEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAssetEntityListing)));
+                (SystemPromptAssetEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAssetEntityListing)));
             
         }
 
@@ -10211,7 +10211,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10219,7 +10219,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10230,13 +10230,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
-            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
 
             // Header params
 
@@ -10249,11 +10249,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10268,7 +10268,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptEntityListing)));
+                (SystemPromptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptEntityListing)));
             
         }
 
@@ -10321,7 +10321,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10329,7 +10329,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10340,13 +10340,13 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
-            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
 
             // Header params
 
@@ -10359,11 +10359,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10378,7 +10378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptEntityListing)));
+                (SystemPromptEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptEntityListing)));
             
         }
 
@@ -10424,7 +10424,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10432,7 +10432,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10441,10 +10441,10 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -10457,11 +10457,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10476,7 +10476,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -10523,7 +10523,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10531,7 +10531,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10540,10 +10540,10 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -10556,11 +10556,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10575,7 +10575,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -10634,7 +10634,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10642,7 +10642,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10651,15 +10651,15 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (historyId != null) localVarPathParams.Add("historyId", this.Configuration.ApiClient.ParameterToString(historyId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -10672,11 +10672,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10691,7 +10691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<HistoryListing>(localVarStatusCode,
                 localVarHeaders,
-                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+                (HistoryListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
             
         }
 
@@ -10752,7 +10752,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10760,7 +10760,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10769,15 +10769,15 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
-            if (historyId != null) localVarPathParams.Add("historyId", Configuration.ApiClient.ParameterToString(historyId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (historyId != null) localVarPathParams.Add("historyId", this.Configuration.ApiClient.ParameterToString(historyId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", Configuration.ApiClient.ParameterToString(obj))); });
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (action != null) action.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("action", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -10790,11 +10790,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10809,7 +10809,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<HistoryListing>(localVarStatusCode,
                 localVarHeaders,
-                (HistoryListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
+                (HistoryListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HistoryListing)));
             
         }
 
@@ -10855,7 +10855,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10863,7 +10863,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10872,10 +10872,10 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -10888,11 +10888,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -10907,7 +10907,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -10954,7 +10954,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -10962,7 +10962,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -10971,10 +10971,10 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -10987,11 +10987,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11006,7 +11006,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -11057,7 +11057,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11065,7 +11065,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11074,11 +11074,11 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -11091,11 +11091,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11110,7 +11110,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowVersion>(localVarStatusCode,
                 localVarHeaders,
-                (FlowVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
+                (FlowVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
             
         }
 
@@ -11163,7 +11163,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11171,7 +11171,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11180,11 +11180,11 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -11197,11 +11197,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11216,7 +11216,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowVersion>(localVarStatusCode,
                 localVarHeaders,
-                (FlowVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
+                (FlowVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
             
         }
 
@@ -11267,7 +11267,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11275,7 +11275,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11284,11 +11284,11 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -11301,11 +11301,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11320,7 +11320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -11373,7 +11373,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11381,7 +11381,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11390,11 +11390,11 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
-            if (versionId != null) localVarPathParams.Add("versionId", Configuration.ApiClient.ParameterToString(versionId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
 
             // Query params
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -11407,11 +11407,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11426,7 +11426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
-                (Object) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
+                (Object) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Object)));
             
         }
 
@@ -11476,7 +11476,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11484,7 +11484,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11493,12 +11493,12 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -11511,11 +11511,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11530,7 +11530,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowVersionEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (FlowVersionEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersionEntityListing)));
+                (FlowVersionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersionEntityListing)));
             
         }
 
@@ -11581,7 +11581,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11589,7 +11589,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11598,12 +11598,12 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
 
             // Header params
 
@@ -11616,11 +11616,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11635,7 +11635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowVersionEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (FlowVersionEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersionEntityListing)));
+                (FlowVersionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersionEntityListing)));
             
         }
 
@@ -11711,7 +11711,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11719,7 +11719,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11730,23 +11730,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", Configuration.ApiClient.ParameterToString(type)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
-            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
-            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)));
-            if (editableBy != null) localVarQueryParams.Add(new Tuple<string, string>("editableBy", Configuration.ApiClient.ParameterToString(editableBy)));
-            if (lockedBy != null) localVarQueryParams.Add(new Tuple<string, string>("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)));
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", Configuration.ApiClient.ParameterToString(secure)));
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
-            if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)));
-            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", Configuration.ApiClient.ParameterToString(publishedAfter)));
-            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", Configuration.ApiClient.ParameterToString(publishedBefore)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", this.Configuration.ApiClient.ParameterToString(publishVersionId)));
+            if (editableBy != null) localVarQueryParams.Add(new Tuple<string, string>("editableBy", this.Configuration.ApiClient.ParameterToString(editableBy)));
+            if (lockedBy != null) localVarQueryParams.Add(new Tuple<string, string>("lockedBy", this.Configuration.ApiClient.ParameterToString(lockedBy)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
+            if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", this.Configuration.ApiClient.ParameterToString(includeSchemas)));
+            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", this.Configuration.ApiClient.ParameterToString(publishedAfter)));
+            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", this.Configuration.ApiClient.ParameterToString(publishedBefore)));
 
             // Header params
 
@@ -11759,11 +11759,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11778,7 +11778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (FlowEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
+                (FlowEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
             
         }
 
@@ -11855,7 +11855,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11863,7 +11863,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11874,23 +11874,23 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", Configuration.ApiClient.ParameterToString(type)));
-            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", Configuration.ApiClient.ParameterToString(pageNumber)));
-            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", Configuration.ApiClient.ParameterToString(pageSize)));
-            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", Configuration.ApiClient.ParameterToString(sortBy)));
-            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", Configuration.ApiClient.ParameterToString(sortOrder)));
-            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", Configuration.ApiClient.ParameterToString(obj))); });
-            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", Configuration.ApiClient.ParameterToString(name)));
-            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", Configuration.ApiClient.ParameterToString(description)));
-            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", Configuration.ApiClient.ParameterToString(nameOrDescription)));
-            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", Configuration.ApiClient.ParameterToString(publishVersionId)));
-            if (editableBy != null) localVarQueryParams.Add(new Tuple<string, string>("editableBy", Configuration.ApiClient.ParameterToString(editableBy)));
-            if (lockedBy != null) localVarQueryParams.Add(new Tuple<string, string>("lockedBy", Configuration.ApiClient.ParameterToString(lockedBy)));
-            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", Configuration.ApiClient.ParameterToString(secure)));
-            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", Configuration.ApiClient.ParameterToString(deleted)));
-            if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", Configuration.ApiClient.ParameterToString(includeSchemas)));
-            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", Configuration.ApiClient.ParameterToString(publishedAfter)));
-            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", Configuration.ApiClient.ParameterToString(publishedBefore)));
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (description != null) localVarQueryParams.Add(new Tuple<string, string>("description", this.Configuration.ApiClient.ParameterToString(description)));
+            if (nameOrDescription != null) localVarQueryParams.Add(new Tuple<string, string>("nameOrDescription", this.Configuration.ApiClient.ParameterToString(nameOrDescription)));
+            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", this.Configuration.ApiClient.ParameterToString(publishVersionId)));
+            if (editableBy != null) localVarQueryParams.Add(new Tuple<string, string>("editableBy", this.Configuration.ApiClient.ParameterToString(editableBy)));
+            if (lockedBy != null) localVarQueryParams.Add(new Tuple<string, string>("lockedBy", this.Configuration.ApiClient.ParameterToString(lockedBy)));
+            if (secure != null) localVarQueryParams.Add(new Tuple<string, string>("secure", this.Configuration.ApiClient.ParameterToString(secure)));
+            if (deleted != null) localVarQueryParams.Add(new Tuple<string, string>("deleted", this.Configuration.ApiClient.ParameterToString(deleted)));
+            if (includeSchemas != null) localVarQueryParams.Add(new Tuple<string, string>("includeSchemas", this.Configuration.ApiClient.ParameterToString(includeSchemas)));
+            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", this.Configuration.ApiClient.ParameterToString(publishedAfter)));
+            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", this.Configuration.ApiClient.ParameterToString(publishedBefore)));
 
             // Header params
 
@@ -11903,11 +11903,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -11922,7 +11922,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (FlowEntityListing) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
+                (FlowEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowEntityListing)));
             
         }
 
@@ -11960,7 +11960,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -11968,7 +11968,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -11991,11 +11991,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12048,7 +12048,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12056,7 +12056,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12079,11 +12079,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12139,7 +12139,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12147,7 +12147,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12165,7 +12165,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -12175,11 +12175,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12194,7 +12194,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
-                (IVR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
+                (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
             
         }
 
@@ -12235,7 +12235,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12243,7 +12243,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12261,7 +12261,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -12271,11 +12271,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12290,7 +12290,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
-                (IVR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
+                (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
             
         }
 
@@ -12334,7 +12334,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12342,7 +12342,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12351,7 +12351,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -12366,11 +12366,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12385,7 +12385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -12430,7 +12430,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12438,7 +12438,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12447,7 +12447,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -12462,11 +12462,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12481,7 +12481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -12527,7 +12527,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12535,7 +12535,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12544,7 +12544,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -12554,7 +12554,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -12564,11 +12564,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12583,7 +12583,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
+                (PromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
             
         }
 
@@ -12630,7 +12630,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12638,7 +12638,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12647,7 +12647,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -12657,7 +12657,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -12667,11 +12667,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12686,7 +12686,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
+                (PromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
             
         }
 
@@ -12727,7 +12727,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12735,7 +12735,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12753,7 +12753,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -12763,11 +12763,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12782,7 +12782,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Prompt>(localVarStatusCode,
                 localVarHeaders,
-                (Prompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
+                (Prompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
             
         }
 
@@ -12823,7 +12823,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12831,7 +12831,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12849,7 +12849,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -12859,11 +12859,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12878,7 +12878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Prompt>(localVarStatusCode,
                 localVarHeaders,
-                (Prompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
+                (Prompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
             
         }
 
@@ -12919,7 +12919,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -12927,7 +12927,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -12945,7 +12945,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -12955,11 +12955,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -12974,7 +12974,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroup>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
+                (ScheduleGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
             
         }
 
@@ -13015,7 +13015,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13023,7 +13023,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13041,7 +13041,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13051,11 +13051,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13070,7 +13070,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroup>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
+                (ScheduleGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
             
         }
 
@@ -13111,7 +13111,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13119,7 +13119,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13137,7 +13137,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13147,11 +13147,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13166,7 +13166,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Schedule>(localVarStatusCode,
                 localVarHeaders,
-                (Schedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
+                (Schedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
             
         }
 
@@ -13207,7 +13207,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13215,7 +13215,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13233,7 +13233,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13243,11 +13243,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13262,7 +13262,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Schedule>(localVarStatusCode,
                 localVarHeaders,
-                (Schedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
+                (Schedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
             
         }
 
@@ -13306,7 +13306,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13314,7 +13314,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13323,7 +13323,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -13338,11 +13338,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13357,7 +13357,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -13402,7 +13402,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13410,7 +13410,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13419,7 +13419,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -13434,11 +13434,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13453,7 +13453,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -13499,7 +13499,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13507,7 +13507,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13516,7 +13516,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -13526,7 +13526,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13536,11 +13536,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13555,7 +13555,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
+                (SystemPromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
             
         }
 
@@ -13602,7 +13602,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13610,7 +13610,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13619,7 +13619,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -13629,7 +13629,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13639,11 +13639,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13658,7 +13658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
+                (SystemPromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
             
         }
 
@@ -13704,7 +13704,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13712,7 +13712,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13721,7 +13721,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
 
@@ -13731,7 +13731,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13741,11 +13741,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13760,7 +13760,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowVersion>(localVarStatusCode,
                 localVarHeaders,
-                (FlowVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
+                (FlowVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
             
         }
 
@@ -13807,7 +13807,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13815,7 +13815,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13824,7 +13824,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
 
@@ -13834,7 +13834,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13844,11 +13844,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13863,7 +13863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<FlowVersion>(localVarStatusCode,
                 localVarHeaders,
-                (FlowVersion) Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
+                (FlowVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowVersion)));
             
         }
 
@@ -13904,7 +13904,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -13912,7 +13912,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -13930,7 +13930,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -13940,11 +13940,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -13959,7 +13959,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14000,7 +14000,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14008,7 +14008,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14026,7 +14026,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -14036,11 +14036,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14055,7 +14055,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14099,7 +14099,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14107,7 +14107,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14118,7 +14118,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14131,11 +14131,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14150,7 +14150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14195,7 +14195,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14203,7 +14203,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14214,7 +14214,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14227,11 +14227,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14246,7 +14246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14290,7 +14290,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14298,7 +14298,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14309,7 +14309,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14322,11 +14322,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14341,7 +14341,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14386,7 +14386,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14394,7 +14394,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14405,7 +14405,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14418,11 +14418,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14437,7 +14437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14481,7 +14481,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14489,7 +14489,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14500,7 +14500,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14513,11 +14513,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14532,7 +14532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14577,7 +14577,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14585,7 +14585,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14596,7 +14596,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14609,11 +14609,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14628,7 +14628,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14674,7 +14674,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14682,7 +14682,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14693,8 +14693,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
-            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
 
             // Header params
 
@@ -14707,11 +14707,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14726,7 +14726,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -14773,7 +14773,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14781,7 +14781,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14792,8 +14792,8 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
-            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", Configuration.ApiClient.ParameterToString(version)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
+            if (version != null) localVarQueryParams.Add(new Tuple<string, string>("version", this.Configuration.ApiClient.ParameterToString(version)));
 
             // Header params
 
@@ -14806,11 +14806,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14825,7 +14825,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Operation>(localVarStatusCode,
                 localVarHeaders,
-                (Operation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
+                (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
         }
 
@@ -14869,7 +14869,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14877,7 +14877,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14888,7 +14888,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14901,11 +14901,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -14920,7 +14920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -14965,7 +14965,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -14973,7 +14973,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -14984,7 +14984,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -14997,11 +14997,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15016,7 +15016,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -15060,7 +15060,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15068,7 +15068,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15079,7 +15079,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -15092,11 +15092,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15111,7 +15111,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -15156,7 +15156,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15164,7 +15164,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15175,7 +15175,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", Configuration.ApiClient.ParameterToString(flow)));
+            if (flow != null) localVarQueryParams.Add(new Tuple<string, string>("flow", this.Configuration.ApiClient.ParameterToString(flow)));
 
             // Header params
 
@@ -15188,11 +15188,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15207,7 +15207,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -15253,7 +15253,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15261,7 +15261,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15270,7 +15270,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (ivrId != null) localVarPathParams.Add("ivrId", Configuration.ApiClient.ParameterToString(ivrId));
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
 
             // Query params
 
@@ -15280,7 +15280,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -15290,11 +15290,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15309,7 +15309,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
-                (IVR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
+                (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
             
         }
 
@@ -15356,7 +15356,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15364,7 +15364,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15373,7 +15373,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (ivrId != null) localVarPathParams.Add("ivrId", Configuration.ApiClient.ParameterToString(ivrId));
+            if (ivrId != null) localVarPathParams.Add("ivrId", this.Configuration.ApiClient.ParameterToString(ivrId));
 
             // Query params
 
@@ -15383,7 +15383,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -15393,11 +15393,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15412,7 +15412,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<IVR>(localVarStatusCode,
                 localVarHeaders,
-                (IVR) Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
+                (IVR) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVR)));
             
         }
 
@@ -15458,7 +15458,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15466,7 +15466,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15475,7 +15475,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -15485,7 +15485,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -15495,11 +15495,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15514,7 +15514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Prompt>(localVarStatusCode,
                 localVarHeaders,
-                (Prompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
+                (Prompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
             
         }
 
@@ -15561,7 +15561,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15569,7 +15569,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15578,7 +15578,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
 
             // Query params
 
@@ -15588,7 +15588,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -15598,11 +15598,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15617,7 +15617,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Prompt>(localVarStatusCode,
                 localVarHeaders,
-                (Prompt) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
+                (Prompt) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Prompt)));
             
         }
 
@@ -15668,7 +15668,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15676,7 +15676,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15685,8 +15685,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -15696,7 +15696,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -15706,11 +15706,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15725,7 +15725,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
+                (PromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
             
         }
 
@@ -15778,7 +15778,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15786,7 +15786,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15795,8 +15795,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -15806,7 +15806,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -15816,11 +15816,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15835,7 +15835,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<PromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (PromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
+                (PromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PromptAsset)));
             
         }
 
@@ -15881,7 +15881,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15889,7 +15889,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -15898,7 +15898,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
 
@@ -15908,7 +15908,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -15918,11 +15918,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -15937,7 +15937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Schedule>(localVarStatusCode,
                 localVarHeaders,
-                (Schedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
+                (Schedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
             
         }
 
@@ -15984,7 +15984,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -15992,7 +15992,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -16001,7 +16001,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleId != null) localVarPathParams.Add("scheduleId", Configuration.ApiClient.ParameterToString(scheduleId));
+            if (scheduleId != null) localVarPathParams.Add("scheduleId", this.Configuration.ApiClient.ParameterToString(scheduleId));
 
             // Query params
 
@@ -16011,7 +16011,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -16021,11 +16021,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16040,7 +16040,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Schedule>(localVarStatusCode,
                 localVarHeaders,
-                (Schedule) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
+                (Schedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Schedule)));
             
         }
 
@@ -16086,7 +16086,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -16094,7 +16094,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -16103,7 +16103,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", Configuration.ApiClient.ParameterToString(scheduleGroupId));
+            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", this.Configuration.ApiClient.ParameterToString(scheduleGroupId));
 
             // Query params
 
@@ -16113,7 +16113,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -16123,11 +16123,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16142,7 +16142,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroup>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
+                (ScheduleGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
             
         }
 
@@ -16189,7 +16189,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -16197,7 +16197,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -16206,7 +16206,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", Configuration.ApiClient.ParameterToString(scheduleGroupId));
+            if (scheduleGroupId != null) localVarPathParams.Add("scheduleGroupId", this.Configuration.ApiClient.ParameterToString(scheduleGroupId));
 
             // Query params
 
@@ -16216,7 +16216,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -16226,11 +16226,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16245,7 +16245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<ScheduleGroup>(localVarStatusCode,
                 localVarHeaders,
-                (ScheduleGroup) Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
+                (ScheduleGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduleGroup)));
             
         }
 
@@ -16296,7 +16296,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -16304,7 +16304,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -16313,8 +16313,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -16324,7 +16324,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -16334,11 +16334,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16353,7 +16353,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
+                (SystemPromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
             
         }
 
@@ -16406,7 +16406,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -16414,7 +16414,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -16423,8 +16423,8 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (promptId != null) localVarPathParams.Add("promptId", Configuration.ApiClient.ParameterToString(promptId));
-            if (languageCode != null) localVarPathParams.Add("languageCode", Configuration.ApiClient.ParameterToString(languageCode));
+            if (promptId != null) localVarPathParams.Add("promptId", this.Configuration.ApiClient.ParameterToString(promptId));
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
 
             // Query params
 
@@ -16434,7 +16434,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -16444,11 +16444,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16463,7 +16463,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<SystemPromptAsset>(localVarStatusCode,
                 localVarHeaders,
-                (SystemPromptAsset) Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
+                (SystemPromptAsset) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SystemPromptAsset)));
             
         }
 
@@ -16509,7 +16509,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -16517,7 +16517,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -16526,7 +16526,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
 
@@ -16536,7 +16536,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -16546,11 +16546,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16565,7 +16565,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 
@@ -16612,7 +16612,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -16620,7 +16620,7 @@ namespace PureCloudPlatform.Client.V2.Api
                 "application/json"
                 
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
@@ -16629,7 +16629,7 @@ namespace PureCloudPlatform.Client.V2.Api
             localVarPathParams.Add("format", "json");
 
             // Path params
-            if (flowId != null) localVarPathParams.Add("flowId", Configuration.ApiClient.ParameterToString(flowId));
+            if (flowId != null) localVarPathParams.Add("flowId", this.Configuration.ApiClient.ParameterToString(flowId));
 
             // Query params
 
@@ -16639,7 +16639,7 @@ namespace PureCloudPlatform.Client.V2.Api
             
             // Body param
             if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = Configuration.ApiClient.Serialize(body); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
             else
                 localVarPostBody = body; // byte array
             
@@ -16649,11 +16649,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // oauth required
             if (!String.IsNullOrEmpty(Configuration.AccessToken))
             {
-                localVarHeaderParams["Authorization"] = "Bearer " + Configuration.AccessToken;
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
             }
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -16668,7 +16668,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
-                (Flow) Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+                (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
             
         }
 

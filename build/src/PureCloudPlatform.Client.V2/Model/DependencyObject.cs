@@ -92,6 +92,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Emailroute,
             
             /// <summary>
+            /// Enum Emergencygroup for "EMERGENCYGROUP"
+            /// </summary>
+            [EnumMember(Value = "EMERGENCYGROUP")]
+            Emergencygroup,
+            
+            /// <summary>
             /// Enum Group for "GROUP"
             /// </summary>
             [EnumMember(Value = "GROUP")]

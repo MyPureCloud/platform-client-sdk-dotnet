@@ -50,6 +50,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
@@ -190,6 +193,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc
         /// </summary>
@@ -273,6 +278,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="MessagingTranscript">Represents a messaging transcript.</param>
+        
+        
+        
         /// <param name="FileState">Represents the current file state for a recording. Examples: Uploading, Archived, etc.</param>
         
         
@@ -322,8 +331,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null)
+        public Recording(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, List<Annotation> Annotations = null, List<ChatMessage> Transcript = null, List<RecordingEmailMessage> EmailTranscript = null, List<RecordingMessagingMessage> MessagingTranscript = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, Dictionary<string, MediaResult> MediaUris = null, long? EstimatedTranscodeTimeMs = null, long? ActualTranscodeTimeMs = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, List<User> Users = null)
         {
+            
+            
+            
+            
             
             
             
@@ -493,6 +506,15 @@ this.Transcript = Transcript;
             
             
 this.EmailTranscript = EmailTranscript;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MessagingTranscript = MessagingTranscript;
             
             
             
@@ -696,6 +718,15 @@ this.Users = Users;
         
         
         
+        /// <summary>
+        /// Represents a messaging transcript
+        /// </summary>
+        /// <value>Represents a messaging transcript</value>
+        [DataMember(Name="messagingTranscript", EmitDefaultValue=false)]
+        public List<RecordingMessagingMessage> MessagingTranscript { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -825,6 +856,8 @@ this.Users = Users;
             
             sb.Append("  EmailTranscript: ").Append(EmailTranscript).Append("\n");
             
+            sb.Append("  MessagingTranscript: ").Append(MessagingTranscript).Append("\n");
+            
             sb.Append("  FileState: ").Append(FileState).Append("\n");
             
             sb.Append("  RestoreExpirationTime: ").Append(RestoreExpirationTime).Append("\n");
@@ -938,6 +971,11 @@ this.Users = Users;
                     this.EmailTranscript.SequenceEqual(other.EmailTranscript)
                 ) &&
                 (
+                    this.MessagingTranscript == other.MessagingTranscript ||
+                    this.MessagingTranscript != null &&
+                    this.MessagingTranscript.SequenceEqual(other.MessagingTranscript)
+                ) &&
+                (
                     this.FileState == other.FileState ||
                     this.FileState != null &&
                     this.FileState.Equals(other.FileState)
@@ -1045,6 +1083,9 @@ this.Users = Users;
                 
                 if (this.EmailTranscript != null)
                     hash = hash * 59 + this.EmailTranscript.GetHashCode();
+                
+                if (this.MessagingTranscript != null)
+                    hash = hash * 59 + this.MessagingTranscript.GetHashCode();
                 
                 if (this.FileState != null)
                     hash = hash * 59 + this.FileState.GetHashCode();

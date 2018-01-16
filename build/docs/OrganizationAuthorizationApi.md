@@ -1125,7 +1125,7 @@ namespace Example
 
 <a name="postorgauthorizationtrusteeusers"></a>
 
-## [**TrustUser**](TrustUser.html) PostOrgauthorizationTrusteeUsers (string trusteeOrgId, TrustUserCreate body)
+## [**TrustUser**](TrustUser.html) PostOrgauthorizationTrusteeUsers (string trusteeOrgId, TrustMemberCreate body)
 
 Add a user to the trust.
 
@@ -1159,7 +1159,7 @@ namespace Example
             
             
             
-            var body = new TrustUserCreate(); // TrustUserCreate | Trust
+            var body = new TrustMemberCreate(); // TrustMemberCreate | Trust
             
             
 
@@ -1186,7 +1186,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **trusteeOrgId** | **string**| Trustee Organization Id |  |
-| **body** | [**TrustUserCreate**](TrustUserCreate.html)| Trust |  |
+| **body** | [**TrustMemberCreate**](TrustMemberCreate.html)| Trust |  |
 {: class="table table-striped"}
 
 ### Return type

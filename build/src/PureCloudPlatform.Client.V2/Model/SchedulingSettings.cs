@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingSettings" /> class.
@@ -43,8 +48,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultShrinkagePercent">Default shrinkage percent for scheduling.</param>
         
         
-        public SchedulingSettings(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null)
+        
+        /// <param name="ShrinkageOverrides">Shrinkage overrides for scheduling.</param>
+        
+        
+        public SchedulingSettings(int? MaxOccupancyPercentForDeferredWork = null, double? DefaultShrinkagePercent = null, ShrinkageOverrides ShrinkageOverrides = null)
         {
+            
+            
+            
+            
             
             
             
@@ -73,6 +86,15 @@ this.DefaultShrinkagePercent = DefaultShrinkagePercent;
             
             
             
+            
+            
+            
+            
+this.ShrinkageOverrides = ShrinkageOverrides;
+            
+            
+            
+            
         }
         
         
@@ -94,6 +116,15 @@ this.DefaultShrinkagePercent = DefaultShrinkagePercent;
         public double? DefaultShrinkagePercent { get; set; }
         
         
+        
+        /// <summary>
+        /// Shrinkage overrides for scheduling
+        /// </summary>
+        /// <value>Shrinkage overrides for scheduling</value>
+        [DataMember(Name="shrinkageOverrides", EmitDefaultValue=false)]
+        public ShrinkageOverrides ShrinkageOverrides { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,6 +137,8 @@ this.DefaultShrinkagePercent = DefaultShrinkagePercent;
             sb.Append("  MaxOccupancyPercentForDeferredWork: ").Append(MaxOccupancyPercentForDeferredWork).Append("\n");
             
             sb.Append("  DefaultShrinkagePercent: ").Append(DefaultShrinkagePercent).Append("\n");
+            
+            sb.Append("  ShrinkageOverrides: ").Append(ShrinkageOverrides).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +185,11 @@ this.DefaultShrinkagePercent = DefaultShrinkagePercent;
                     this.DefaultShrinkagePercent == other.DefaultShrinkagePercent ||
                     this.DefaultShrinkagePercent != null &&
                     this.DefaultShrinkagePercent.Equals(other.DefaultShrinkagePercent)
+                ) &&
+                (
+                    this.ShrinkageOverrides == other.ShrinkageOverrides ||
+                    this.ShrinkageOverrides != null &&
+                    this.ShrinkageOverrides.Equals(other.ShrinkageOverrides)
                 );
         }
 
@@ -172,6 +210,9 @@ this.DefaultShrinkagePercent = DefaultShrinkagePercent;
                 
                 if (this.DefaultShrinkagePercent != null)
                     hash = hash * 59 + this.DefaultShrinkagePercent.GetHashCode();
+                
+                if (this.ShrinkageOverrides != null)
+                    hash = hash * 59 + this.ShrinkageOverrides.GetHashCode();
                 
                 return hash;
             }

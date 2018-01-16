@@ -75,7 +75,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Videocomm for "VIDEOCOMM"
             /// </summary>
             [EnumMember(Value = "VIDEOCOMM")]
-            Videocomm
+            Videocomm,
+            
+            /// <summary>
+            /// Enum Message for "MESSAGE"
+            /// </summary>
+            [EnumMember(Value = "MESSAGE")]
+            Message
         }
         
         

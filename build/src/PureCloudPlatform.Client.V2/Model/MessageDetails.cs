@@ -80,12 +80,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates the delivery status of the message.
         /// </summary>
         /// <value>Indicates the delivery status of the message.</value>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        
+        
         
         
         
@@ -117,8 +122,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageTime">The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
-        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null)
+        
+        /// <param name="Media">The media (images, files, etc) associated with this message, if any.</param>
+        
+        
+        public MessageDetails(string MessageId = null, string MessageURI = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, DateTime? MessageTime = null, List<MessageMedia> Media = null)
         {
+            
+            
+            
+            
             
             
             
@@ -186,6 +199,15 @@ this.MessageTime = MessageTime;
             
             
             
+            
+            
+            
+            
+this.Media = Media;
+            
+            
+            
+            
         }
         
         
@@ -227,6 +249,15 @@ this.MessageTime = MessageTime;
         public DateTime? MessageTime { get; set; }
         
         
+        
+        /// <summary>
+        /// The media (images, files, etc) associated with this message, if any
+        /// </summary>
+        /// <value>The media (images, files, etc) associated with this message, if any</value>
+        [DataMember(Name="media", EmitDefaultValue=false)]
+        public List<MessageMedia> Media { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -245,6 +276,8 @@ this.MessageTime = MessageTime;
             sb.Append("  MessageSegmentCount: ").Append(MessageSegmentCount).Append("\n");
             
             sb.Append("  MessageTime: ").Append(MessageTime).Append("\n");
+            
+            sb.Append("  Media: ").Append(Media).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -306,6 +339,11 @@ this.MessageTime = MessageTime;
                     this.MessageTime == other.MessageTime ||
                     this.MessageTime != null &&
                     this.MessageTime.Equals(other.MessageTime)
+                ) &&
+                (
+                    this.Media == other.Media ||
+                    this.Media != null &&
+                    this.Media.SequenceEqual(other.Media)
                 );
         }
 
@@ -335,6 +373,9 @@ this.MessageTime = MessageTime;
                 
                 if (this.MessageTime != null)
                     hash = hash * 59 + this.MessageTime.GetHashCode();
+                
+                if (this.Media != null)
+                    hash = hash * 59 + this.Media.GetHashCode();
                 
                 return hash;
             }

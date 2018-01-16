@@ -119,6 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ContactListFilterEvaluationFailed,
             
             /// <summary>
+            /// Enum ContactZipCodeColumnValueInvalid for "CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID")]
+            ContactZipCodeColumnValueInvalid,
+            
+            /// <summary>
             /// Enum DncAuthenticationFailure for "DNC_AUTHENTICATION_FAILURE"
             /// </summary>
             [EnumMember(Value = "DNC_AUTHENTICATION_FAILURE")]
@@ -201,6 +207,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "IMPORT_LIST_NO_LONGER_EXISTS")]
             ImportListNoLongerExists,
+            
+            /// <summary>
+            /// Enum ImportFailedContactZipCodeColumnValueInvalid for "IMPORT_FAILED_CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_FAILED_CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID")]
+            ImportFailedContactZipCodeColumnValueInvalid,
             
             /// <summary>
             /// Enum OrganizationHasNoDomainSet for "ORGANIZATION_HAS_NO_DOMAIN_SET"

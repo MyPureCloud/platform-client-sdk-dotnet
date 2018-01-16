@@ -25,39 +25,50 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustRequestCreate" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected TrustRequestCreate() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TrustRequestCreate" /> class.
-        /// </summary>
         
         
-        /// <param name="UserIds">The list of trustee users that are requesting access. (required).</param>
+        /// <param name="UserIds">The list of trustee users that are requesting access. If no users are specified, at least one group is required..</param>
         
         
-        public TrustRequestCreate(List<string> UserIds = null)
+        
+        /// <param name="GroupIds">The list of trustee groups that are requesting access. If no groups are specified, at least one user is required..</param>
+        
+        
+        public TrustRequestCreate(List<string> UserIds = null, List<string> GroupIds = null)
         {
             
             
             
-            // to ensure "UserIds" is required (not null)
-            if (UserIds == null)
-            {
-                throw new InvalidDataException("UserIds is a required property for TrustRequestCreate and cannot be null");
-            }
-            else
-            {
-                this.UserIds = UserIds;
-            }
             
             
             
             
+            
+            
+            
+            
+            
+            
+            
+this.UserIds = UserIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.GroupIds = GroupIds;
             
             
             
@@ -67,11 +78,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The list of trustee users that are requesting access.
+        /// The list of trustee users that are requesting access. If no users are specified, at least one group is required.
         /// </summary>
-        /// <value>The list of trustee users that are requesting access.</value>
+        /// <value>The list of trustee users that are requesting access. If no users are specified, at least one group is required.</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of trustee groups that are requesting access. If no groups are specified, at least one user is required.
+        /// </summary>
+        /// <value>The list of trustee groups that are requesting access. If no groups are specified, at least one user is required.</value>
+        [DataMember(Name="groupIds", EmitDefaultValue=false)]
+        public List<string> GroupIds { get; set; }
         
         
         /// <summary>
@@ -84,6 +104,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TrustRequestCreate {\n");
             
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
+            
+            sb.Append("  GroupIds: ").Append(GroupIds).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -125,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserIds == other.UserIds ||
                     this.UserIds != null &&
                     this.UserIds.SequenceEqual(other.UserIds)
+                ) &&
+                (
+                    this.GroupIds == other.GroupIds ||
+                    this.GroupIds != null &&
+                    this.GroupIds.SequenceEqual(other.GroupIds)
                 );
         }
 
@@ -142,6 +169,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
+                
+                if (this.GroupIds != null)
+                    hash = hash * 59 + this.GroupIds.GetHashCode();
                 
                 return hash;
             }

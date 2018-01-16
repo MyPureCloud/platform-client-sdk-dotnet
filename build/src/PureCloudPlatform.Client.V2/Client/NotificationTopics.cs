@@ -57,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.alerting.heartbeat.rules", typeof(HeartBeatRuleNotification)},
               {"v2.users.{id}.alerting.interactionstats.alerts", typeof(InteractionStatAlertNotification)},
               {"v2.users.{id}.alerting.interactionstats.rules", typeof(InteractionStatRuleNotification)},
+              {"v2.users.{id}.callforwarding", typeof(CallForwardingNotification)},
               {"v2.users.{id}.conversations", typeof(ConversationNotification)},
               {"v2.users.{id}.conversations.callbacks", typeof(CallbackConversationNotification)},
               {"v2.users.{id}.conversations.calls", typeof(CallConversationNotification)},

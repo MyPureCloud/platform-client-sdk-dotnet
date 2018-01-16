@@ -13,11 +13,21 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Entity
+    /// BatchDownloadJobSubmissionResult
     /// </summary>
     [DataContract]
-    public partial class Entity :  IEquatable<Entity>
+    public partial class BatchDownloadJobSubmissionResult :  IEquatable<BatchDownloadJobSubmissionResult>
     {
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -27,13 +37,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="Entity" /> class.
+        /// Initializes a new instance of the <see cref="BatchDownloadJobSubmissionResult" /> class.
         /// </summary>
         
         
         
-        public Entity()
+        
+        /// <param name="Name">Name.</param>
+        
+        
+        
+        
+        public BatchDownloadJobSubmissionResult(string Name = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
             
             
             
@@ -52,6 +85,23 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; private set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -59,9 +109,13 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class Entity {\n");
+            sb.Append("class BatchDownloadJobSubmissionResult {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -84,15 +138,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as Entity);
+            return this.Equals(obj as BatchDownloadJobSubmissionResult);
         }
 
         /// <summary>
-        /// Returns true if Entity instances are equal
+        /// Returns true if BatchDownloadJobSubmissionResult instances are equal
         /// </summary>
-        /// <param name="other">Instance of Entity to be compared</param>
+        /// <param name="other">Instance of BatchDownloadJobSubmissionResult to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(Entity other)
+        public bool Equals(BatchDownloadJobSubmissionResult other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -103,6 +157,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -120,6 +184,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// TrustUserCreate
+    /// BatchDownloadRequest
     /// </summary>
     [DataContract]
-    public partial class TrustUserCreate :  IEquatable<TrustUserCreate>
+    public partial class BatchDownloadRequest :  IEquatable<BatchDownloadRequest>
     {
         
         
@@ -32,51 +32,22 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TrustUserCreate" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected TrustUserCreate() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TrustUserCreate" /> class.
+        /// Initializes a new instance of the <see cref="BatchDownloadRequest" /> class.
         /// </summary>
         
         
-        /// <param name="Id">Trustee User Id (required).</param>
+        /// <param name="ConversationId">Conversation id requested.</param>
         
         
         
-        /// <param name="RoleIds">The list of trustor organization roles granting this user access. (required).</param>
+        /// <param name="RecordingId">Recording id requested, optional.  Leave null for all recordings on the conversation.</param>
         
         
-        public TrustUserCreate(string Id = null, List<string> RoleIds = null)
+        public BatchDownloadRequest(string ConversationId = null, string RecordingId = null)
         {
             
             
             
-            // to ensure "Id" is required (not null)
-            if (Id == null)
-            {
-                throw new InvalidDataException("Id is a required property for TrustUserCreate and cannot be null");
-            }
-            else
-            {
-                this.Id = Id;
-            }
-            
-            
-            
-            
-            
-            // to ensure "RoleIds" is required (not null)
-            if (RoleIds == null)
-            {
-                throw new InvalidDataException("RoleIds is a required property for TrustUserCreate and cannot be null");
-            }
-            else
-            {
-                this.RoleIds = RoleIds;
-            }
             
             
             
@@ -85,6 +56,19 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+this.ConversationId = ConversationId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RecordingId = RecordingId;
             
             
             
@@ -94,20 +78,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Trustee User Id
+        /// Conversation id requested
         /// </summary>
-        /// <value>Trustee User Id</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        /// <value>Conversation id requested</value>
+        [DataMember(Name="conversationId", EmitDefaultValue=false)]
+        public string ConversationId { get; set; }
         
         
         
         /// <summary>
-        /// The list of trustor organization roles granting this user access.
+        /// Recording id requested, optional.  Leave null for all recordings on the conversation
         /// </summary>
-        /// <value>The list of trustor organization roles granting this user access.</value>
-        [DataMember(Name="roleIds", EmitDefaultValue=false)]
-        public List<string> RoleIds { get; set; }
+        /// <value>Recording id requested, optional.  Leave null for all recordings on the conversation</value>
+        [DataMember(Name="recordingId", EmitDefaultValue=false)]
+        public string RecordingId { get; set; }
         
         
         /// <summary>
@@ -117,11 +101,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TrustUserCreate {\n");
+            sb.Append("class BatchDownloadRequest {\n");
             
-            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             
-            sb.Append("  RoleIds: ").Append(RoleIds).Append("\n");
+            sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -144,15 +128,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TrustUserCreate);
+            return this.Equals(obj as BatchDownloadRequest);
         }
 
         /// <summary>
-        /// Returns true if TrustUserCreate instances are equal
+        /// Returns true if BatchDownloadRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of TrustUserCreate to be compared</param>
+        /// <param name="other">Instance of BatchDownloadRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TrustUserCreate other)
+        public bool Equals(BatchDownloadRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -160,14 +144,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.ConversationId == other.ConversationId ||
+                    this.ConversationId != null &&
+                    this.ConversationId.Equals(other.ConversationId)
                 ) &&
                 (
-                    this.RoleIds == other.RoleIds ||
-                    this.RoleIds != null &&
-                    this.RoleIds.SequenceEqual(other.RoleIds)
+                    this.RecordingId == other.RecordingId ||
+                    this.RecordingId != null &&
+                    this.RecordingId.Equals(other.RecordingId)
                 );
         }
 
@@ -183,11 +167,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.ConversationId != null)
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
                 
-                if (this.RoleIds != null)
-                    hash = hash * 59 + this.RoleIds.GetHashCode();
+                if (this.RecordingId != null)
+                    hash = hash * 59 + this.RecordingId.GetHashCode();
                 
                 return hash;
             }

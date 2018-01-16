@@ -134,12 +134,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
         /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -254,8 +259,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="NtpSettings">Network Time Protocol settings for the site.</param>
         
-        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null)
+        
+        
+        
+        public Site(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<UriReference> PrimarySites = null, List<UriReference> SecondarySites = null, List<Edge> PrimaryEdges = null, List<Edge> SecondaryEdges = null, List<Contact> Addresses = null, List<Edge> Edges = null, EdgeAutoUpdateConfig EdgeAutoUpdateConfig = null, LocationDefinition Location = null, bool? Managed = null, NTPSettings NtpSettings = null)
         {
             
             
@@ -347,6 +356,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Location = Location;
             }
+            
+            
+            
+            
             
             
             
@@ -509,6 +522,15 @@ this.EdgeAutoUpdateConfig = EdgeAutoUpdateConfig;
             
             
 this.Managed = Managed;
+            
+            
+            
+            
+            
+            
+            
+            
+this.NtpSettings = NtpSettings;
             
             
             
@@ -686,6 +708,15 @@ this.Managed = Managed;
         
         
         /// <summary>
+        /// Network Time Protocol settings for the site
+        /// </summary>
+        /// <value>Network Time Protocol settings for the site</value>
+        [DataMember(Name="ntpSettings", EmitDefaultValue=false)]
+        public NTPSettings NtpSettings { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -741,6 +772,8 @@ this.Managed = Managed;
             sb.Append("  Location: ").Append(Location).Append("\n");
             
             sb.Append("  Managed: ").Append(Managed).Append("\n");
+            
+            sb.Append("  NtpSettings: ").Append(NtpSettings).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -881,6 +914,11 @@ this.Managed = Managed;
                     this.Managed.Equals(other.Managed)
                 ) &&
                 (
+                    this.NtpSettings == other.NtpSettings ||
+                    this.NtpSettings != null &&
+                    this.NtpSettings.Equals(other.NtpSettings)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -958,6 +996,9 @@ this.Managed = Managed;
                 
                 if (this.Managed != null)
                     hash = hash * 59 + this.Managed.GetHashCode();
+                
+                if (this.NtpSettings != null)
+                    hash = hash * 59 + this.NtpSettings.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -70,6 +70,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundCampaigns**](OutboundApi.html#postoutboundcampaigns) | **POST** /api/v2/outbound/campaigns | Create a campaign. |
 | [**PostOutboundCampaignsProgress**](OutboundApi.html#postoutboundcampaignsprogress) | **POST** /api/v2/outbound/campaigns/progress | Get progress for a list of campaigns |
 | [**PostOutboundContactlistContacts**](OutboundApi.html#postoutboundcontactlistcontacts) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts | Add contacts to a contact list. |
+| [**PostOutboundContactlistContactsBulk**](OutboundApi.html#postoutboundcontactlistcontactsbulk) | **POST** /api/v2/outbound/contactlists/{contactListId}/contacts/bulk | Get contacts from a contact list. |
 | [**PostOutboundContactlistExport**](OutboundApi.html#postoutboundcontactlistexport) | **POST** /api/v2/outbound/contactlists/{contactListId}/export | Initiate the export of a contact list. |
 | [**PostOutboundContactlistfilters**](OutboundApi.html#postoutboundcontactlistfilters) | **POST** /api/v2/outbound/contactlistfilters | Create Contact List Filter |
 | [**PostOutboundContactlistfiltersPreview**](OutboundApi.html#postoutboundcontactlistfilterspreview) | **POST** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
@@ -4575,6 +4576,76 @@ namespace Example
 | **body** | [**List<DialerContact>**](DialerContact.html)| Contact |  |
 | **priority** | **bool?**| Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. | [optional]  |
 | **clearSystemData** | **bool?**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<DialerContact>**](DialerContact.html)
+
+<a name="postoutboundcontactlistcontactsbulk"></a>
+
+## [**List&lt;DialerContact&gt;**](DialerContact.html) PostOutboundContactlistContactsBulk (string contactListId, List<string> body)
+
+Get contacts from a contact list.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistContactsBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var contactListId = contactListId_example;  // string | Contact List ID
+            
+            
+            
+            
+            var body = ;  // List<string> | ContactIds to get.
+            
+            
+            
+
+            try
+            {
+                
+                // Get contacts from a contact list.
+                
+                List&lt;DialerContact&gt; result = apiInstance.PostOutboundContactlistContactsBulk(contactListId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistContactsBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactListId** | **string**| Contact List ID |  |
+| **body** | **List<string>**| ContactIds to get. |  |
 {: class="table table-striped"}
 
 ### Return type

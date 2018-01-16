@@ -29,10 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
-        /// The activity code's category
+        /// The activity code's category.
         /// </summary>
-        /// <value>The activity code's category</value>
+        /// <value>The activity code's category.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum CategoryEnum
         {
@@ -121,12 +124,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
-        /// The activity code's category
+        /// The activity code's category.
         /// </summary>
-        /// <value>The activity code's category</value>
+        /// <value>The activity code's category.</value>
         [DataMember(Name="category", EmitDefaultValue=false)]
         public CategoryEnum? Category { get; set; }
+        
+        
+        
+        
         
         
         
@@ -141,13 +156,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCode" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivityCode() { }
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivityCode" /> class.
+        /// </summary>
         
         
-        /// <param name="Name">The activity code&#39;s name.</param>
+        
+        
+        /// <param name="Name">The name of the activity code. Default activity codes will be created with an empty name.</param>
         
         
         
-        /// <param name="IsActive">Whether this activity code is active or only used for historical schedules.</param>
+        /// <param name="IsActive">Whether this activity code is active or has been deleted.</param>
         
         
         
@@ -155,7 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Category">The activity code&#39;s category.</param>
+        /// <param name="Category">The activity code&#39;s category..</param>
         
         
         
@@ -167,14 +190,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
+        /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints.</param>
         
         
         
-        /// <param name="IsAgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
+        /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off..</param>
         
         
-        public ActivityCode(string Name = null, bool? IsActive = null, bool? IsDefault = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? IsAgentTimeOffSelectable = null)
+        
+        /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
+        
+        
+        
+        
+        public ActivityCode(string Name = null, bool? IsActive = null, bool? IsDefault = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
             
             
@@ -202,6 +231,26 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // to ensure "Metadata" is required (not null)
+            if (Metadata == null)
+            {
+                throw new InvalidDataException("Metadata is a required property for ActivityCode and cannot be null");
+            }
+            else
+            {
+                this.Metadata = Metadata;
+            }
             
             
             
@@ -277,7 +326,13 @@ this.CountsAsWorkTime = CountsAsWorkTime;
             
             
             
-this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
+this.AgentTimeOffSelectable = AgentTimeOffSelectable;
+            
+            
+            
+            
+            
+            
             
             
             
@@ -287,18 +342,27 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
         
         
         /// <summary>
-        /// The activity code&#39;s name
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The activity code&#39;s name</value>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// The name of the activity code. Default activity codes will be created with an empty name
+        /// </summary>
+        /// <value>The name of the activity code. Default activity codes will be created with an empty name</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Whether this activity code is active or only used for historical schedules
+        /// Whether this activity code is active or has been deleted
         /// </summary>
-        /// <value>Whether this activity code is active or only used for historical schedules</value>
+        /// <value>Whether this activity code is active or has been deleted</value>
         [DataMember(Name="isActive", EmitDefaultValue=false)]
         public bool? IsActive { get; set; }
         
@@ -334,20 +398,38 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
         
         
         /// <summary>
-        /// Indicates whether or not the activity should be counted as work time
+        /// Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints
         /// </summary>
-        /// <value>Indicates whether or not the activity should be counted as work time</value>
+        /// <value>Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints</value>
         [DataMember(Name="countsAsWorkTime", EmitDefaultValue=false)]
         public bool? CountsAsWorkTime { get; set; }
         
         
         
         /// <summary>
-        /// Whether an agent can select this activity code when creating or editing a time off request
+        /// Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.
         /// </summary>
-        /// <value>Whether an agent can select this activity code when creating or editing a time off request</value>
-        [DataMember(Name="isAgentTimeOffSelectable", EmitDefaultValue=false)]
-        public bool? IsAgentTimeOffSelectable { get; set; }
+        /// <value>Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off.</value>
+        [DataMember(Name="agentTimeOffSelectable", EmitDefaultValue=false)]
+        public bool? AgentTimeOffSelectable { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Version metadata for the associated management unit&#39;s list of activity codes
+        /// </summary>
+        /// <value>Version metadata for the associated management unit&#39;s list of activity codes</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
         
         
         /// <summary>
@@ -358,6 +440,8 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
         {
             var sb = new StringBuilder();
             sb.Append("class ActivityCode {\n");
+            
+            sb.Append("  Id: ").Append(Id).Append("\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             
@@ -373,7 +457,11 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
             
             sb.Append("  CountsAsWorkTime: ").Append(CountsAsWorkTime).Append("\n");
             
-            sb.Append("  IsAgentTimeOffSelectable: ").Append(IsAgentTimeOffSelectable).Append("\n");
+            sb.Append("  AgentTimeOffSelectable: ").Append(AgentTimeOffSelectable).Append("\n");
+            
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -412,6 +500,11 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
@@ -447,9 +540,19 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
                     this.CountsAsWorkTime.Equals(other.CountsAsWorkTime)
                 ) &&
                 (
-                    this.IsAgentTimeOffSelectable == other.IsAgentTimeOffSelectable ||
-                    this.IsAgentTimeOffSelectable != null &&
-                    this.IsAgentTimeOffSelectable.Equals(other.IsAgentTimeOffSelectable)
+                    this.AgentTimeOffSelectable == other.AgentTimeOffSelectable ||
+                    this.AgentTimeOffSelectable != null &&
+                    this.AgentTimeOffSelectable.Equals(other.AgentTimeOffSelectable)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -464,6 +567,9 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
@@ -486,8 +592,14 @@ this.IsAgentTimeOffSelectable = IsAgentTimeOffSelectable;
                 if (this.CountsAsWorkTime != null)
                     hash = hash * 59 + this.CountsAsWorkTime.GetHashCode();
                 
-                if (this.IsAgentTimeOffSelectable != null)
-                    hash = hash * 59 + this.IsAgentTimeOffSelectable.GetHashCode();
+                if (this.AgentTimeOffSelectable != null)
+                    hash = hash * 59 + this.AgentTimeOffSelectable.GetHashCode();
+                
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
+                
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
                 
                 return hash;
             }

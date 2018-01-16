@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="OutOfOfficeNotification" /> class.
@@ -54,6 +59,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Indefinite">Indefinite.</param>
+        
+        
+        
         /// <param name="StartDate">StartDate.</param>
         
         
@@ -61,8 +70,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EndDate">EndDate.</param>
         
         
-        public OutOfOfficeNotification(DocumentDataV2NotificationWorkspace User = null, bool? Active = null, DateTime? StartDate = null, DateTime? EndDate = null)
+        public OutOfOfficeNotification(DocumentDataV2NotificationWorkspace User = null, bool? Active = null, bool? Indefinite = null, DateTime? StartDate = null, DateTime? EndDate = null)
         {
+            
+            
+            
+            
             
             
             
@@ -95,6 +108,15 @@ this.User = User;
             
             
 this.Active = Active;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Indefinite = Indefinite;
             
             
             
@@ -138,6 +160,14 @@ this.EndDate = EndDate;
         
         
         /// <summary>
+        /// Gets or Sets Indefinite
+        /// </summary>
+        [DataMember(Name="indefinite", EmitDefaultValue=false)]
+        public bool? Indefinite { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
@@ -164,6 +194,8 @@ this.EndDate = EndDate;
             sb.Append("  User: ").Append(User).Append("\n");
             
             sb.Append("  Active: ").Append(Active).Append("\n");
+            
+            sb.Append("  Indefinite: ").Append(Indefinite).Append("\n");
             
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             
@@ -216,6 +248,11 @@ this.EndDate = EndDate;
                     this.Active.Equals(other.Active)
                 ) &&
                 (
+                    this.Indefinite == other.Indefinite ||
+                    this.Indefinite != null &&
+                    this.Indefinite.Equals(other.Indefinite)
+                ) &&
+                (
                     this.StartDate == other.StartDate ||
                     this.StartDate != null &&
                     this.StartDate.Equals(other.StartDate)
@@ -244,6 +281,9 @@ this.EndDate = EndDate;
                 
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+                
+                if (this.Indefinite != null)
+                    hash = hash * 59 + this.Indefinite.GetHashCode();
                 
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();

@@ -9,6 +9,7 @@ title: OutOfOfficeNotification
 |------------ | ------------- | ------------- | -------------|
 | **User** | [**DocumentDataV2NotificationWorkspace**](DocumentDataV2NotificationWorkspace.html) |  | [optional] |
 | **Active** | **bool?** |  | [optional] |
+| **Indefinite** | **bool?** |  | [optional] |
 | **StartDate** | **DateTime?** |  | [optional] |
 | **EndDate** | **DateTime?** |  | [optional] |
 {: class="table table-striped"}

@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SignedData
+    /// CallForwardingNotificationCalls
     /// </summary>
     [DataContract]
-    public partial class SignedData :  IEquatable<SignedData>
+    public partial class CallForwardingNotificationCalls :  IEquatable<CallForwardingNotificationCalls>
     {
         
         
@@ -27,14 +27,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="SignedData" /> class.
+        /// Initializes a new instance of the <see cref="CallForwardingNotificationCalls" /> class.
         /// </summary>
         
         
-        /// <param name="Jwt">Jwt.</param>
+        /// <param name="Targets">Targets.</param>
         
         
-        public SignedData(string Jwt = null)
+        public CallForwardingNotificationCalls(List<CallForwardingNotificationTargets> Targets = null)
         {
             
             
@@ -46,7 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Jwt = Jwt;
+this.Targets = Targets;
             
             
             
@@ -56,10 +56,10 @@ this.Jwt = Jwt;
         
         
         /// <summary>
-        /// Gets or Sets Jwt
+        /// Gets or Sets Targets
         /// </summary>
-        [DataMember(Name="jwt", EmitDefaultValue=false)]
-        public string Jwt { get; set; }
+        [DataMember(Name="targets", EmitDefaultValue=false)]
+        public List<CallForwardingNotificationTargets> Targets { get; set; }
         
         
         /// <summary>
@@ -69,9 +69,9 @@ this.Jwt = Jwt;
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SignedData {\n");
+            sb.Append("class CallForwardingNotificationCalls {\n");
             
-            sb.Append("  Jwt: ").Append(Jwt).Append("\n");
+            sb.Append("  Targets: ").Append(Targets).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -94,15 +94,15 @@ this.Jwt = Jwt;
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SignedData);
+            return this.Equals(obj as CallForwardingNotificationCalls);
         }
 
         /// <summary>
-        /// Returns true if SignedData instances are equal
+        /// Returns true if CallForwardingNotificationCalls instances are equal
         /// </summary>
-        /// <param name="other">Instance of SignedData to be compared</param>
+        /// <param name="other">Instance of CallForwardingNotificationCalls to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SignedData other)
+        public bool Equals(CallForwardingNotificationCalls other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -110,9 +110,9 @@ this.Jwt = Jwt;
 
             return true &&
                 (
-                    this.Jwt == other.Jwt ||
-                    this.Jwt != null &&
-                    this.Jwt.Equals(other.Jwt)
+                    this.Targets == other.Targets ||
+                    this.Targets != null &&
+                    this.Targets.SequenceEqual(other.Targets)
                 );
         }
 
@@ -128,8 +128,8 @@ this.Jwt = Jwt;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Jwt != null)
-                    hash = hash * 59 + this.Jwt.GetHashCode();
+                if (this.Targets != null)
+                    hash = hash * 59 + this.Targets.GetHashCode();
                 
                 return hash;
             }

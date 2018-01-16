@@ -413,7 +413,7 @@ namespace Example
 
 <a name="getauthorizationroles"></a>
 
-## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null)
+## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null)
 
 Retrieve a list of all roles defined for the organization
 
@@ -490,13 +490,18 @@ namespace Example
             
             
             
+            
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
 
             try
             {
                 
                 // Retrieve a list of all roles defined for the organization
                 
-                OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount);
+                OrganizationRoleEntityListing result = apiInstance.GetAuthorizationRoles(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount, id);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -523,6 +528,7 @@ namespace Example
 | **permission** | [**List<Object>**](Object.html)|  | [optional]  |
 | **defaultRoleId** | [**List<Object>**](Object.html)|  | [optional]  |
 | **userCount** | **bool?**|  | [optional] [default to true] |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

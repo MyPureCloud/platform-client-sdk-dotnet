@@ -35,6 +35,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustCreate" /> class.
@@ -55,10 +60,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Users">The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. (required).</param>
+        /// <param name="Users">The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required..</param>
         
         
-        public TrustCreate(string PairingId = null, bool? Enabled = null, List<TrustUserCreate> Users = null)
+        
+        /// <param name="Groups">The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required..</param>
+        
+        
+        public TrustCreate(string PairingId = null, bool? Enabled = null, List<TrustMemberCreate> Users = null, List<TrustMemberCreate> Groups = null)
         {
             
             
@@ -91,15 +100,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "Users" is required (not null)
-            if (Users == null)
-            {
-                throw new InvalidDataException("Users is a required property for TrustCreate and cannot be null");
-            }
-            else
-            {
-                this.Users = Users;
-            }
             
             
             
@@ -112,6 +112,23 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+this.Users = Users;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Groups = Groups;
             
             
             
@@ -139,11 +156,20 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor.
+        /// The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required.
         /// </summary>
-        /// <value>The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor.</value>
+        /// <value>The list of users and their roles to which access will be granted. The users are from the trustee and the roles are from the trustor. If no users are specified, at least one group is required.</value>
         [DataMember(Name="users", EmitDefaultValue=false)]
-        public List<TrustUserCreate> Users { get; set; }
+        public List<TrustMemberCreate> Users { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required.
+        /// </summary>
+        /// <value>The list of groups and their roles to which access will be granted. The groups are from the trustee and the roles are from the trustor. If no groups are specified, at least one user is required.</value>
+        [DataMember(Name="groups", EmitDefaultValue=false)]
+        public List<TrustMemberCreate> Groups { get; set; }
         
         
         /// <summary>
@@ -160,6 +186,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             
             sb.Append("  Users: ").Append(Users).Append("\n");
+            
+            sb.Append("  Groups: ").Append(Groups).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -211,6 +239,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Users == other.Users ||
                     this.Users != null &&
                     this.Users.SequenceEqual(other.Users)
+                ) &&
+                (
+                    this.Groups == other.Groups ||
+                    this.Groups != null &&
+                    this.Groups.SequenceEqual(other.Groups)
                 );
         }
 
@@ -234,6 +267,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.Users != null)
                     hash = hash * 59 + this.Users.GetHashCode();
+                
+                if (this.Groups != null)
+                    hash = hash * 59 + this.Groups.GetHashCode();
                 
                 return hash;
             }

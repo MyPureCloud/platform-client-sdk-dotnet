@@ -2444,7 +2444,7 @@ namespace Example
 
 <a name="postroutingqueuewrapupcodes"></a>
 
-## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostRoutingQueueWrapupcodes (string queueId, List<Entity> body)
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostRoutingQueueWrapupcodes (string queueId, List<WrapUpCodeReference> body)
 
 Add up to 100 wrap-up codes to a queue
 
@@ -2478,7 +2478,7 @@ namespace Example
             
             
             
-            var body = new List<Entity>(); // List<Entity> | List of wrapup codes
+            var body = new List<WrapUpCodeReference>(); // List<WrapUpCodeReference> | List of wrapup codes
             
             
 
@@ -2505,7 +2505,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**List<Entity>**](Entity.html)| List of wrapup codes |  |
+| **body** | [**List<WrapUpCodeReference>**](WrapUpCodeReference.html)| List of wrapup codes |  |
 {: class="table table-striped"}
 
 ### Return type

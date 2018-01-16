@@ -37,77 +37,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// Gets or Sets IgnoredActivityCategories
-        /// </summary>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum IgnoredActivityCategoriesEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Onqueuework for "OnQueueWork"
-            /// </summary>
-            [EnumMember(Value = "OnQueueWork")]
-            Onqueuework,
-            
-            /// <summary>
-            /// Enum Break for "Break"
-            /// </summary>
-            [EnumMember(Value = "Break")]
-            Break,
-            
-            /// <summary>
-            /// Enum Meal for "Meal"
-            /// </summary>
-            [EnumMember(Value = "Meal")]
-            Meal,
-            
-            /// <summary>
-            /// Enum Meeting for "Meeting"
-            /// </summary>
-            [EnumMember(Value = "Meeting")]
-            Meeting,
-            
-            /// <summary>
-            /// Enum Offqueuework for "OffQueueWork"
-            /// </summary>
-            [EnumMember(Value = "OffQueueWork")]
-            Offqueuework,
-            
-            /// <summary>
-            /// Enum Timeoff for "TimeOff"
-            /// </summary>
-            [EnumMember(Value = "TimeOff")]
-            Timeoff,
-            
-            /// <summary>
-            /// Enum Training for "Training"
-            /// </summary>
-            [EnumMember(Value = "Training")]
-            Training,
-            
-            /// <summary>
-            /// Enum Unavailable for "Unavailable"
-            /// </summary>
-            [EnumMember(Value = "Unavailable")]
-            Unavailable,
-            
-            /// <summary>
-            /// Enum Unscheduled for "Unscheduled"
-            /// </summary>
-            [EnumMember(Value = "Unscheduled")]
-            Unscheduled
-        }
-        
-        
-        
         
         
         
@@ -150,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IgnoredActivityCategories">Activity categories that should be ignored for adherence purposes.</param>
         
         
-        public AdherenceSettings(int? SevereAlertThresholdMinutes = null, int? AdherenceTargetPercent = null, int? AdherenceExceptionThresholdSeconds = null, bool? NonOnQueueActivitiesEquivalent = null, bool? TrackOnQueueActivity = null, List<IgnoredActivityCategoriesEnum> IgnoredActivityCategories = null)
+        public AdherenceSettings(int? SevereAlertThresholdMinutes = null, int? AdherenceTargetPercent = null, int? AdherenceExceptionThresholdSeconds = null, bool? NonOnQueueActivitiesEquivalent = null, bool? TrackOnQueueActivity = null, IgnoredActivityCategories IgnoredActivityCategories = null)
         {
             
             
@@ -286,7 +215,7 @@ this.IgnoredActivityCategories = IgnoredActivityCategories;
         /// </summary>
         /// <value>Activity categories that should be ignored for adherence purposes</value>
         [DataMember(Name="ignoredActivityCategories", EmitDefaultValue=false)]
-        public List<IgnoredActivityCategoriesEnum> IgnoredActivityCategories { get; set; }
+        public IgnoredActivityCategories IgnoredActivityCategories { get; set; }
         
         
         /// <summary>
@@ -374,7 +303,7 @@ this.IgnoredActivityCategories = IgnoredActivityCategories;
                 (
                     this.IgnoredActivityCategories == other.IgnoredActivityCategories ||
                     this.IgnoredActivityCategories != null &&
-                    this.IgnoredActivityCategories.SequenceEqual(other.IgnoredActivityCategories)
+                    this.IgnoredActivityCategories.Equals(other.IgnoredActivityCategories)
                 );
         }
 

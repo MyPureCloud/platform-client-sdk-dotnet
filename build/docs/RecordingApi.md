@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOrphanrecording**](RecordingApi.html#getorphanrecording) | **GET** /api/v2/orphanrecordings/{orphanId} | Gets a single orphan recording |
 | [**GetOrphanrecordingMedia**](RecordingApi.html#getorphanrecordingmedia) | **GET** /api/v2/orphanrecordings/{orphanId}/media | Gets the media of a single orphan recording |
 | [**GetOrphanrecordings**](RecordingApi.html#getorphanrecordings) | **GET** /api/v2/orphanrecordings | Gets all orphan recordings |
+| [**GetRecordingBatchrequest**](RecordingApi.html#getrecordingbatchrequest) | **GET** /api/v2/recording/batchrequests/{jobId} | Get the status and results for a batch request job, only the user that submitted the job may retrieve results |
 | [**GetRecordingLocalkeysSetting**](RecordingApi.html#getrecordinglocalkeyssetting) | **GET** /api/v2/recording/localkeys/settings/{settingsId} | Get the local encryption settings |
 | [**GetRecordingLocalkeysSettings**](RecordingApi.html#getrecordinglocalkeyssettings) | **GET** /api/v2/recording/localkeys/settings | gets a list local key settings data |
 | [**GetRecordingMediaretentionpolicies**](RecordingApi.html#getrecordingmediaretentionpolicies) | **GET** /api/v2/recording/mediaretentionpolicies | Gets media retention policy list with query options to filter on name and enabled. |
@@ -31,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingsScreensession**](RecordingApi.html#patchrecordingsscreensession) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
 | [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
+| [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **POST** /api/v2/recording/batchrequests | Submit a batch download request |
 | [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local recording key |
 | [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
 | [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
@@ -1005,6 +1007,70 @@ namespace Example
 
 [**OrphanRecordingListing**](OrphanRecordingListing.html)
 
+<a name="getrecordingbatchrequest"></a>
+
+## [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html) GetRecordingBatchrequest (string jobId)
+
+Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRecordingBatchrequestExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RecordingApi();
+            
+            
+            var jobId = jobId_example;  // string | jobId
+            
+            
+            
+
+            try
+            {
+                
+                // Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+                
+                BatchDownloadJobStatusResult result = apiInstance.GetRecordingBatchrequest(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.GetRecordingBatchrequest: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html)
+
 <a name="getrecordinglocalkeyssetting"></a>
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) GetRecordingLocalkeysSetting (string settingsId)
@@ -1779,6 +1845,70 @@ namespace Example
 ### Return type
 
 [**Annotation**](Annotation.html)
+
+<a name="postrecordingbatchrequests"></a>
+
+## [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) PostRecordingBatchrequests (BatchDownloadJobSubmission body)
+
+Submit a batch download request
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRecordingBatchrequestsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RecordingApi();
+            
+            
+            
+            var body = new BatchDownloadJobSubmission(); // BatchDownloadJobSubmission | Job submission criteria
+            
+            
+
+            try
+            {
+                
+                // Submit a batch download request
+                
+                BatchDownloadJobSubmissionResult result = apiInstance.PostRecordingBatchrequests(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RecordingApi.PostRecordingBatchrequests: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BatchDownloadJobSubmission**](BatchDownloadJobSubmission.html)| Job submission criteria |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html)
 
 <a name="postrecordinglocalkeys"></a>
 

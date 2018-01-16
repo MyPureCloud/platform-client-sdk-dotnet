@@ -25,6 +25,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivityCodeContainer" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivityCodeContainer() { }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCodeContainer" /> class.
@@ -34,10 +45,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActivityCodes">Map of activity code id to activity code.</param>
         
         
-        public ActivityCodeContainer(Dictionary<string, ActivityCode> ActivityCodes = null)
+        
+        /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
+        
+        
+        public ActivityCodeContainer(Dictionary<string, ActivityCode> ActivityCodes = null, WfmVersionedEntityMetadata Metadata = null)
         {
             
             
+            
+            
+            
+            
+            
+            // to ensure "Metadata" is required (not null)
+            if (Metadata == null)
+            {
+                throw new InvalidDataException("Metadata is a required property for ActivityCodeContainer and cannot be null");
+            }
+            else
+            {
+                this.Metadata = Metadata;
+            }
             
             
             
@@ -47,6 +76,10 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
 this.ActivityCodes = ActivityCodes;
+            
+            
+            
+            
             
             
             
@@ -63,6 +96,15 @@ this.ActivityCodes = ActivityCodes;
         public Dictionary<string, ActivityCode> ActivityCodes { get; set; }
         
         
+        
+        /// <summary>
+        /// Version metadata for the associated management unit&#39;s list of activity codes
+        /// </summary>
+        /// <value>Version metadata for the associated management unit&#39;s list of activity codes</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -73,6 +115,8 @@ this.ActivityCodes = ActivityCodes;
             sb.Append("class ActivityCodeContainer {\n");
             
             sb.Append("  ActivityCodes: ").Append(ActivityCodes).Append("\n");
+            
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -114,6 +158,11 @@ this.ActivityCodes = ActivityCodes;
                     this.ActivityCodes == other.ActivityCodes ||
                     this.ActivityCodes != null &&
                     this.ActivityCodes.SequenceEqual(other.ActivityCodes)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
                 );
         }
 
@@ -131,6 +180,9 @@ this.ActivityCodes = ActivityCodes;
                 
                 if (this.ActivityCodes != null)
                     hash = hash * 59 + this.ActivityCodes.GetHashCode();
+                
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
                 
                 return hash;
             }

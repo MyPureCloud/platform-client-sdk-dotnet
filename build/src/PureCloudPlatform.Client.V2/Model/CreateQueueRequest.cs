@@ -44,10 +44,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
-        /// Indicates if the resource is active, inactive, or deleted.
+        /// Indicates if the queue is active, inactive, or deleted.
         /// </summary>
-        /// <value>Indicates if the resource is active, inactive, or deleted.</value>
+        /// <value>Indicates if the queue is active, inactive, or deleted.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StateEnum
         {
@@ -180,10 +183,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
-        /// Indicates if the resource is active, inactive, or deleted.
+        /// Indicates if the queue is active, inactive, or deleted.
         /// </summary>
-        /// <value>Indicates if the resource is active, inactive, or deleted.</value>
+        /// <value>Indicates if the queue is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
         
@@ -245,39 +250,43 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Description">The resource&#39;s description..</param>
+        /// <param name="Description">The queue description..</param>
         
         
         
-        /// <param name="Version">The current version of the resource..</param>
+        /// <param name="Version">The current version of the queue..</param>
         
         
         
-        /// <param name="DateCreated">The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Division">The division to which this queue belongs..</param>
         
         
         
-        /// <param name="DateModified">The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="DateCreated">The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="ModifiedBy">The ID of the user that last modified the resource..</param>
+        /// <param name="DateModified">The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
         
-        /// <param name="CreatedBy">The ID of the user that created the resource..</param>
+        /// <param name="ModifiedBy">The ID of the user that last modified the queue..</param>
         
         
         
-        /// <param name="State">Indicates if the resource is active, inactive, or deleted..</param>
+        /// <param name="CreatedBy">The ID of the user that created the queue..</param>
         
         
         
-        /// <param name="ModifiedByApp">The application that last modified the resource..</param>
+        /// <param name="State">Indicates if the queue is active, inactive, or deleted..</param>
         
         
         
-        /// <param name="CreatedByApp">The application that created the resource..</param>
+        /// <param name="ModifiedByApp">The application that last modified the queue..</param>
+        
+        
+        
+        /// <param name="CreatedByApp">The application that created the queue..</param>
         
         
         
@@ -301,11 +310,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Whisper">The prompt used for whisper audio on the queue, if configured..</param>
+        /// <param name="Whisper">ID of the whisper configured for this queue, if any..</param>
         
         
         
-        /// <param name="AutoAnswerOnly">Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered..</param>
+        /// <param name="AutoAnswerOnly">Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered..</param>
         
         
         
@@ -334,8 +343,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public CreateQueueRequest(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference Whisper = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, string SourceQueueId = null, int? MemberCount = null)
+        public CreateQueueRequest(string Name = null, string Description = null, int? Version = null, UriReference Division = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference Whisper = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, string SourceQueueId = null, int? MemberCount = null)
         {
+            
+            
+            
+            
             
             
             
@@ -489,6 +502,15 @@ this.Description = Description;
             
             
 this.Version = Version;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Division = Division;
             
             
             
@@ -682,54 +704,63 @@ this.MemberCount = MemberCount;
         
         
         /// <summary>
-        /// The resource&#39;s description.
+        /// The queue description.
         /// </summary>
-        /// <value>The resource&#39;s description.</value>
+        /// <value>The queue description.</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
         
         
         
         /// <summary>
-        /// The current version of the resource.
+        /// The current version of the queue.
         /// </summary>
-        /// <value>The current version of the resource.</value>
+        /// <value>The current version of the queue.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
         
         
         
         /// <summary>
-        /// The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The division to which this queue belongs.
         /// </summary>
-        /// <value>The date the resource was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The division to which this queue belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public UriReference Division { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>The date the queue was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateCreated", EmitDefaultValue=false)]
         public DateTime? DateCreated { get; set; }
         
         
         
         /// <summary>
-        /// The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
-        /// <value>The date of the last modification to the resource. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        /// <value>The date of the last modification to the queue. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
         
         
         
         /// <summary>
-        /// The ID of the user that last modified the resource.
+        /// The ID of the user that last modified the queue.
         /// </summary>
-        /// <value>The ID of the user that last modified the resource.</value>
+        /// <value>The ID of the user that last modified the queue.</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
         public string ModifiedBy { get; set; }
         
         
         
         /// <summary>
-        /// The ID of the user that created the resource.
+        /// The ID of the user that created the queue.
         /// </summary>
-        /// <value>The ID of the user that created the resource.</value>
+        /// <value>The ID of the user that created the queue.</value>
         [DataMember(Name="createdBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
         
@@ -738,18 +769,18 @@ this.MemberCount = MemberCount;
         
         
         /// <summary>
-        /// The application that last modified the resource.
+        /// The application that last modified the queue.
         /// </summary>
-        /// <value>The application that last modified the resource.</value>
+        /// <value>The application that last modified the queue.</value>
         [DataMember(Name="modifiedByApp", EmitDefaultValue=false)]
         public string ModifiedByApp { get; set; }
         
         
         
         /// <summary>
-        /// The application that created the resource.
+        /// The application that created the queue.
         /// </summary>
-        /// <value>The application that created the resource.</value>
+        /// <value>The application that created the queue.</value>
         [DataMember(Name="createdByApp", EmitDefaultValue=false)]
         public string CreatedByApp { get; set; }
         
@@ -794,18 +825,18 @@ this.MemberCount = MemberCount;
         
         
         /// <summary>
-        /// The prompt used for whisper audio on the queue, if configured.
+        /// ID of the whisper configured for this queue, if any.
         /// </summary>
-        /// <value>The prompt used for whisper audio on the queue, if configured.</value>
+        /// <value>ID of the whisper configured for this queue, if any.</value>
         [DataMember(Name="whisper", EmitDefaultValue=false)]
         public UriReference Whisper { get; set; }
         
         
         
         /// <summary>
-        /// Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered.
+        /// Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.
         /// </summary>
-        /// <value>Specifies whether the configured whisper audio should play for all ACD calls, or only for those which are auto-answered.</value>
+        /// <value>Specifies whether the configured whisper should play for all ACD calls, or only for those which are auto-answered.</value>
         [DataMember(Name="autoAnswerOnly", EmitDefaultValue=false)]
         public bool? AutoAnswerOnly { get; set; }
         
@@ -887,6 +918,8 @@ this.MemberCount = MemberCount;
             sb.Append("  Description: ").Append(Description).Append("\n");
             
             sb.Append("  Version: ").Append(Version).Append("\n");
+            
+            sb.Append("  Division: ").Append(Division).Append("\n");
             
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             
@@ -985,6 +1018,11 @@ this.MemberCount = MemberCount;
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.DateCreated == other.DateCreated ||
@@ -1116,6 +1154,9 @@ this.MemberCount = MemberCount;
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

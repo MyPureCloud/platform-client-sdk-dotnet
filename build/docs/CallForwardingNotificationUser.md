@@ -1,13 +1,13 @@
 ---
-title: SignedData
+title: CallForwardingNotificationUser
 ---
-## ININ.PureCloudApi.Model.SignedData
+## ININ.PureCloudApi.Model.CallForwardingNotificationUser
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Jwt** | **string** |  | [optional] |
+| **Id** | **string** |  | [optional] |
 {: class="table table-striped"}
 
 

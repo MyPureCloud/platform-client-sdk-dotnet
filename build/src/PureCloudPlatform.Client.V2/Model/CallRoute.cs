@@ -25,11 +25,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CallRoute" /> class.
@@ -39,11 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Targets">A list of CallTargets to be called when the CallRoute is executed.</param>
         
         
-        
-        /// <param name="TimeoutMilliseconds">The amount of time until the call times out.</param>
-        
-        
-        public CallRoute(List<CallTarget> Targets = null, long? TimeoutMilliseconds = null)
+        public CallRoute(List<CallTarget> Targets = null)
         {
             
             
@@ -55,20 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
 this.Targets = Targets;
-            
-            
-            
-            
-            
-            
-            
-            
-this.TimeoutMilliseconds = TimeoutMilliseconds;
             
             
             
@@ -85,15 +63,6 @@ this.TimeoutMilliseconds = TimeoutMilliseconds;
         public List<CallTarget> Targets { get; set; }
         
         
-        
-        /// <summary>
-        /// The amount of time until the call times out
-        /// </summary>
-        /// <value>The amount of time until the call times out</value>
-        [DataMember(Name="timeoutMilliseconds", EmitDefaultValue=false)]
-        public long? TimeoutMilliseconds { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,8 +73,6 @@ this.TimeoutMilliseconds = TimeoutMilliseconds;
             sb.Append("class CallRoute {\n");
             
             sb.Append("  Targets: ").Append(Targets).Append("\n");
-            
-            sb.Append("  TimeoutMilliseconds: ").Append(TimeoutMilliseconds).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -147,11 +114,6 @@ this.TimeoutMilliseconds = TimeoutMilliseconds;
                     this.Targets == other.Targets ||
                     this.Targets != null &&
                     this.Targets.SequenceEqual(other.Targets)
-                ) &&
-                (
-                    this.TimeoutMilliseconds == other.TimeoutMilliseconds ||
-                    this.TimeoutMilliseconds != null &&
-                    this.TimeoutMilliseconds.Equals(other.TimeoutMilliseconds)
                 );
         }
 
@@ -169,9 +131,6 @@ this.TimeoutMilliseconds = TimeoutMilliseconds;
                 
                 if (this.Targets != null)
                     hash = hash * 59 + this.Targets.GetHashCode();
-                
-                if (this.TimeoutMilliseconds != null)
-                    hash = hash * 59 + this.TimeoutMilliseconds.GetHashCode();
                 
                 return hash;
             }

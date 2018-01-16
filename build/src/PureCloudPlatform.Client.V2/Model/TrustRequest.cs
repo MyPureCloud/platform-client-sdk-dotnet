@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="TrustRequest" /> class.
@@ -74,12 +79,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Users">The list of trustee users that are requesting access. (required).</param>
+        /// <param name="Users">The list of trustee users that are requesting access..</param>
+        
+        
+        
+        /// <param name="Groups">The list of trustee groups that are requesting access..</param>
         
         
         
         
-        public TrustRequest(OrgUser CreatedBy = null, Organization Trustee = null, List<OrgUser> Users = null)
+        public TrustRequest(OrgUser CreatedBy = null, Organization Trustee = null, List<OrgUser> Users = null, List<TrustGroup> Groups = null)
         {
             
             
@@ -106,15 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "Users" is required (not null)
-            if (Users == null)
-            {
-                throw new InvalidDataException("Users is a required property for TrustRequest and cannot be null");
-            }
-            else
-            {
-                this.Users = Users;
-            }
+            
+            
+            
             
             
             
@@ -138,6 +141,20 @@ this.CreatedBy = CreatedBy;
             
             
             
+            
+            
+            
+            
+this.Users = Users;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Groups = Groups;
             
             
             
@@ -194,6 +211,15 @@ this.CreatedBy = CreatedBy;
         
         
         /// <summary>
+        /// The list of trustee groups that are requesting access.
+        /// </summary>
+        /// <value>The list of trustee groups that are requesting access.</value>
+        [DataMember(Name="groups", EmitDefaultValue=false)]
+        public List<TrustGroup> Groups { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -219,6 +245,8 @@ this.CreatedBy = CreatedBy;
             sb.Append("  Trustee: ").Append(Trustee).Append("\n");
             
             sb.Append("  Users: ").Append(Users).Append("\n");
+            
+            sb.Append("  Groups: ").Append(Groups).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -284,6 +312,11 @@ this.CreatedBy = CreatedBy;
                     this.Users.SequenceEqual(other.Users)
                 ) &&
                 (
+                    this.Groups == other.Groups ||
+                    this.Groups != null &&
+                    this.Groups.SequenceEqual(other.Groups)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -316,6 +349,9 @@ this.CreatedBy = CreatedBy;
                 
                 if (this.Users != null)
                     hash = hash * 59 + this.Users.GetHashCode();
+                
+                if (this.Groups != null)
+                    hash = hash * 59 + this.Groups.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

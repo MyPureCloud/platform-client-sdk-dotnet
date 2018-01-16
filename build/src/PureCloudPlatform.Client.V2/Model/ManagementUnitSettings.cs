@@ -45,16 +45,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ManagementUnitSettings" /> class.
@@ -83,18 +73,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Version">The version of the underlying entity (required).</param>
+        /// <param name="Metadata">Version info metadata for the associated management unit (required).</param>
         
         
-        
-        /// <param name="DateModified">The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
-        
-        
-        
-        /// <param name="ModifiedBy">The user who last modified this entity.</param>
-        
-        
-        public ManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, int? Version = null, DateTime? DateModified = null, User ModifiedBy = null)
+        public ManagementUnitSettings(AdherenceSettings Adherence = null, ShortTermForecastingSettings ShortTermForecasting = null, TimeOffRequestSettings TimeOff = null, SchedulingSettings Scheduling = null, WfmVersionedEntityMetadata Metadata = null)
         {
             
             
@@ -115,23 +97,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "Version" is required (not null)
-            if (Version == null)
+            // to ensure "Metadata" is required (not null)
+            if (Metadata == null)
             {
-                throw new InvalidDataException("Version is a required property for ManagementUnitSettings and cannot be null");
+                throw new InvalidDataException("Metadata is a required property for ManagementUnitSettings and cannot be null");
             }
             else
             {
-                this.Version = Version;
+                this.Metadata = Metadata;
             }
-            
-            
-            
-            
-            
-            
-            
-            
             
             
             
@@ -172,24 +146,6 @@ this.Scheduling = Scheduling;
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-this.DateModified = DateModified;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ModifiedBy = ModifiedBy;
             
             
             
@@ -235,29 +191,11 @@ this.ModifiedBy = ModifiedBy;
         
         
         /// <summary>
-        /// The version of the underlying entity
+        /// Version info metadata for the associated management unit
         /// </summary>
-        /// <value>The version of the underlying entity</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
-        /// </summary>
-        /// <value>The date and time at which this entity was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
-        [DataMember(Name="dateModified", EmitDefaultValue=false)]
-        public DateTime? DateModified { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The user who last modified this entity
-        /// </summary>
-        /// <value>The user who last modified this entity</value>
-        [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public User ModifiedBy { get; set; }
+        /// <value>Version info metadata for the associated management unit</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
         
         
         /// <summary>
@@ -277,11 +215,7 @@ this.ModifiedBy = ModifiedBy;
             
             sb.Append("  Scheduling: ").Append(Scheduling).Append("\n");
             
-            sb.Append("  Version: ").Append(Version).Append("\n");
-            
-            sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            
-            sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -340,19 +274,9 @@ this.ModifiedBy = ModifiedBy;
                     this.Scheduling.Equals(other.Scheduling)
                 ) &&
                 (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.DateModified == other.DateModified ||
-                    this.DateModified != null &&
-                    this.DateModified.Equals(other.DateModified)
-                ) &&
-                (
-                    this.ModifiedBy == other.ModifiedBy ||
-                    this.ModifiedBy != null &&
-                    this.ModifiedBy.Equals(other.ModifiedBy)
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
                 );
         }
 
@@ -380,14 +304,8 @@ this.ModifiedBy = ModifiedBy;
                 if (this.Scheduling != null)
                     hash = hash * 59 + this.Scheduling.GetHashCode();
                 
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
-                
-                if (this.DateModified != null)
-                    hash = hash * 59 + this.DateModified.GetHashCode();
-                
-                if (this.ModifiedBy != null)
-                    hash = hash * 59 + this.ModifiedBy.GetHashCode();
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
                 
                 return hash;
             }
