@@ -116,6 +116,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignRule,
             
             /// <summary>
+            /// Enum Contact for "CONTACT"
+            /// </summary>
+            [EnumMember(Value = "CONTACT")]
+            Contact,
+            
+            /// <summary>
             /// Enum ContactListFilter for "CONTACT_LIST_FILTER"
             /// </summary>
             [EnumMember(Value = "CONTACT_LIST_FILTER")]

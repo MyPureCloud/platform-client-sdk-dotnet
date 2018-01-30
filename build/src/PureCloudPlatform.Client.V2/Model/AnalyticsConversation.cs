@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversation" /> class.
@@ -67,11 +72,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Evaluations">Evaluations tied to this conersation.</param>
+        /// <param name="Evaluations">Evaluations tied to this conversation.</param>
         
         
-        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null)
+        
+        /// <param name="DivisionIds">Identifiers of divisions associated with this conversation.</param>
+        
+        
+        public AnalyticsConversation(string ConversationId = null, DateTime? ConversationStart = null, DateTime? ConversationEnd = null, List<AnalyticsParticipant> Participants = null, List<AnalyticsEvaluation> Evaluations = null, List<string> DivisionIds = null)
         {
+            
+            
+            
+            
             
             
             
@@ -139,6 +152,15 @@ this.Evaluations = Evaluations;
             
             
             
+            
+            
+            
+            
+this.DivisionIds = DivisionIds;
+            
+            
+            
+            
         }
         
         
@@ -180,11 +202,20 @@ this.Evaluations = Evaluations;
         
         
         /// <summary>
-        /// Evaluations tied to this conersation
+        /// Evaluations tied to this conversation
         /// </summary>
-        /// <value>Evaluations tied to this conersation</value>
+        /// <value>Evaluations tied to this conversation</value>
         [DataMember(Name="evaluations", EmitDefaultValue=false)]
         public List<AnalyticsEvaluation> Evaluations { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Identifiers of divisions associated with this conversation
+        /// </summary>
+        /// <value>Identifiers of divisions associated with this conversation</value>
+        [DataMember(Name="divisionIds", EmitDefaultValue=false)]
+        public List<string> DivisionIds { get; set; }
         
         
         /// <summary>
@@ -205,6 +236,8 @@ this.Evaluations = Evaluations;
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
+            
+            sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -266,6 +299,11 @@ this.Evaluations = Evaluations;
                     this.Evaluations == other.Evaluations ||
                     this.Evaluations != null &&
                     this.Evaluations.SequenceEqual(other.Evaluations)
+                ) &&
+                (
+                    this.DivisionIds == other.DivisionIds ||
+                    this.DivisionIds != null &&
+                    this.DivisionIds.SequenceEqual(other.DivisionIds)
                 );
         }
 
@@ -295,6 +333,9 @@ this.Evaluations = Evaluations;
                 
                 if (this.Evaluations != null)
                     hash = hash * 59 + this.Evaluations.GetHashCode();
+                
+                if (this.DivisionIds != null)
+                    hash = hash * 59 + this.DivisionIds.GetHashCode();
                 
                 return hash;
             }

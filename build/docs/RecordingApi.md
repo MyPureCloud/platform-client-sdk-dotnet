@@ -32,7 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRecordingMediaretentionpolicy**](RecordingApi.html#patchrecordingmediaretentionpolicy) | **PATCH** /api/v2/recording/mediaretentionpolicies/{policyId} | Patch a media retention policy |
 | [**PatchRecordingsScreensession**](RecordingApi.html#patchrecordingsscreensession) | **PATCH** /api/v2/recordings/screensessions/{recordingSessionId} | Update a screen recording session |
 | [**PostConversationRecordingAnnotations**](RecordingApi.html#postconversationrecordingannotations) | **POST** /api/v2/conversations/{conversationId}/recordings/{recordingId}/annotations | Create annotation |
-| [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **POST** /api/v2/recording/batchrequests | Submit a batch download request |
+| [**PostRecordingBatchrequests**](RecordingApi.html#postrecordingbatchrequests) | **POST** /api/v2/recording/batchrequests | Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. |
 | [**PostRecordingLocalkeys**](RecordingApi.html#postrecordinglocalkeys) | **POST** /api/v2/recording/localkeys | create a local recording key |
 | [**PostRecordingLocalkeysSettings**](RecordingApi.html#postrecordinglocalkeyssettings) | **POST** /api/v2/recording/localkeys/settings | create settings for local key creation |
 | [**PostRecordingMediaretentionpolicies**](RecordingApi.html#postrecordingmediaretentionpolicies) | **POST** /api/v2/recording/mediaretentionpolicies | Create media retention policy |
@@ -719,7 +719,7 @@ namespace Example
             
             
             
-            var formatId = formatId_example;  // string | The desired media format (optional)  (default to WEBM)
+            var formatId = formatId_example;  // string | The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional)  (default to WEBM)
             
             
             
@@ -748,7 +748,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
 | **maxWaitMs** | **int?**| The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. | [optional] [default to 5000] |
-| **formatId** | **string**| The desired media format | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
+| **formatId** | **string**| The desired media format. Possible values: NONE, MP3, WAV, or WEBM | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
 {: class="table table-striped"}
 
 ### Return type
@@ -1850,7 +1850,7 @@ namespace Example
 
 ## [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) PostRecordingBatchrequests (BatchDownloadJobSubmission body)
 
-Submit a batch download request
+Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
 
 
 
@@ -1884,7 +1884,7 @@ namespace Example
             try
             {
                 
-                // Submit a batch download request
+                // Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
                 
                 BatchDownloadJobSubmissionResult result = apiInstance.PostRecordingBatchrequests(body);
                 Debug.WriteLine(result);

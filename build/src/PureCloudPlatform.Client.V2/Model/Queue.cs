@@ -305,7 +305,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Whisper">ID of the whisper configured for this queue, if any..</param>
+        /// <param name="WhisperPrompt">The prompt used for whisper on the queue, if configured..</param>
         
         
         
@@ -334,7 +334,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Queue(string Name = null, string Description = null, int? Version = null, UriReference Division = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference Whisper = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
+        public Queue(string Name = null, string Description = null, int? Version = null, UriReference Division = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, int? MemberCount = null)
         {
             
             
@@ -599,7 +599,7 @@ this.QueueFlow = QueueFlow;
             
             
             
-this.Whisper = Whisper;
+this.WhisperPrompt = WhisperPrompt;
             
             
             
@@ -803,11 +803,11 @@ this.MemberCount = MemberCount;
         
         
         /// <summary>
-        /// ID of the whisper configured for this queue, if any.
+        /// The prompt used for whisper on the queue, if configured.
         /// </summary>
-        /// <value>ID of the whisper configured for this queue, if any.</value>
-        [DataMember(Name="whisper", EmitDefaultValue=false)]
-        public UriReference Whisper { get; set; }
+        /// <value>The prompt used for whisper on the queue, if configured.</value>
+        [DataMember(Name="whisperPrompt", EmitDefaultValue=false)]
+        public UriReference WhisperPrompt { get; set; }
         
         
         
@@ -914,7 +914,7 @@ this.MemberCount = MemberCount;
             
             sb.Append("  QueueFlow: ").Append(QueueFlow).Append("\n");
             
-            sb.Append("  Whisper: ").Append(Whisper).Append("\n");
+            sb.Append("  WhisperPrompt: ").Append(WhisperPrompt).Append("\n");
             
             sb.Append("  AutoAnswerOnly: ").Append(AutoAnswerOnly).Append("\n");
             
@@ -1052,9 +1052,9 @@ this.MemberCount = MemberCount;
                     this.QueueFlow.Equals(other.QueueFlow)
                 ) &&
                 (
-                    this.Whisper == other.Whisper ||
-                    this.Whisper != null &&
-                    this.Whisper.Equals(other.Whisper)
+                    this.WhisperPrompt == other.WhisperPrompt ||
+                    this.WhisperPrompt != null &&
+                    this.WhisperPrompt.Equals(other.WhisperPrompt)
                 ) &&
                 (
                     this.AutoAnswerOnly == other.AutoAnswerOnly ||
@@ -1156,8 +1156,8 @@ this.MemberCount = MemberCount;
                 if (this.QueueFlow != null)
                     hash = hash * 59 + this.QueueFlow.GetHashCode();
                 
-                if (this.Whisper != null)
-                    hash = hash * 59 + this.Whisper.GetHashCode();
+                if (this.WhisperPrompt != null)
+                    hash = hash * 59 + this.WhisperPrompt.GetHashCode();
                 
                 if (this.AutoAnswerOnly != null)
                     hash = hash * 59 + this.AutoAnswerOnly.GetHashCode();

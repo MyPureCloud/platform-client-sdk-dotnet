@@ -17,6 +17,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetScriptsPublishedScriptIdPages**](ScriptsApi.html#getscriptspublishedscriptidpages) | **GET** /api/v2/scripts/published/{scriptId}/pages | Get the list of published pages |
 | [**GetScriptsPublishedScriptIdVariables**](ScriptsApi.html#getscriptspublishedscriptidvariables) | **GET** /api/v2/scripts/published/{scriptId}/variables | Get the published variables |
 | [**GetScriptsUploadStatus**](ScriptsApi.html#getscriptsuploadstatus) | **GET** /api/v2/scripts/uploads/{uploadId}/status | Get the upload status of an imported script |
+| [**PostScriptExport**](ScriptsApi.html#postscriptexport) | **POST** /api/v2/scripts/{scriptId}/export | Export a script via download service. |
 {: class="table table-striped"}
 
 <a name="getscript"></a>
@@ -595,7 +596,7 @@ namespace Example
 
 <a name="getscriptspublishedscriptidpages"></a>
 
-## [**List&lt;Page&gt;**](Page.html) GetScriptsPublishedScriptIdPages (string scriptId, int? foo = null, string scriptDataVersion = null)
+## [**List&lt;Page&gt;**](Page.html) GetScriptsPublishedScriptIdPages (string scriptId, string scriptDataVersion = null)
 
 Get the list of published pages
 
@@ -628,11 +629,6 @@ namespace Example
             
             
             
-            var foo = 56;  // int? |  (optional)  (default to 25)
-            
-            
-            
-            
             var scriptDataVersion = scriptDataVersion_example;  // string | Advanced usage - controls the data version of the script (optional) 
             
             
@@ -643,7 +639,7 @@ namespace Example
                 
                 // Get the list of published pages
                 
-                List&lt;Page&gt; result = apiInstance.GetScriptsPublishedScriptIdPages(scriptId, foo, scriptDataVersion);
+                List&lt;Page&gt; result = apiInstance.GetScriptsPublishedScriptIdPages(scriptId, scriptDataVersion);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -661,7 +657,6 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scriptId** | **string**| Script ID |  |
-| **foo** | **int?**|  | [optional] [default to 25] |
 | **scriptDataVersion** | **string**| Advanced usage - controls the data version of the script | [optional]  |
 {: class="table table-striped"}
 
@@ -826,4 +821,74 @@ namespace Example
 ### Return type
 
 [**ImportScriptStatusResponse**](ImportScriptStatusResponse.html)
+
+<a name="postscriptexport"></a>
+
+## [**ExportScriptResponse**](ExportScriptResponse.html) PostScriptExport (string scriptId, ExportScriptRequest body = null)
+
+Export a script via download service.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostScriptExportExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ScriptsApi();
+            
+            
+            var scriptId = scriptId_example;  // string | Script ID
+            
+            
+            
+            
+            
+            var body = new ExportScriptRequest(); // ExportScriptRequest |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Export a script via download service.
+                
+                ExportScriptResponse result = apiInstance.PostScriptExport(scriptId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ScriptsApi.PostScriptExport: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scriptId** | **string**| Script ID |  |
+| **body** | [**ExportScriptRequest**](ExportScriptRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ExportScriptResponse**](ExportScriptResponse.html)
 

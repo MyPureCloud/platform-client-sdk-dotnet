@@ -47,6 +47,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ApproachingEntityLimit,
             
             /// <summary>
+            /// Enum AutomaticTimeZoneZipCodeInvalid for "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID"
+            /// </summary>
+            [EnumMember(Value = "AUTOMATIC_TIME_ZONE_ZIP_CODE_INVALID")]
+            AutomaticTimeZoneZipCodeInvalid,
+            
+            /// <summary>
             /// Enum CampaignStartError for "CAMPAIGN_START_ERROR"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_START_ERROR")]

@@ -76,11 +76,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageStatus
         /// </summary>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        
+        
         
         
         
@@ -106,8 +111,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageSegmentCount">MessageSegmentCount.</param>
         
         
-        public ConversationNotificationMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null)
+        
+        /// <param name="Media">Media.</param>
+        
+        
+        public ConversationNotificationMessageDetails(string MessageId = null, DateTime? MessageTime = null, MessageStatusEnum? MessageStatus = null, int? MessageSegmentCount = null, List<ConversationNotificationMedia> Media = null)
         {
+            
+            
+            
+            
             
             
             
@@ -162,6 +175,15 @@ this.MessageSegmentCount = MessageSegmentCount;
             
             
             
+            
+            
+            
+            
+this.Media = Media;
+            
+            
+            
+            
         }
         
         
@@ -191,6 +213,14 @@ this.MessageSegmentCount = MessageSegmentCount;
         public int? MessageSegmentCount { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Media
+        /// </summary>
+        [DataMember(Name="media", EmitDefaultValue=false)]
+        public List<ConversationNotificationMedia> Media { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -207,6 +237,8 @@ this.MessageSegmentCount = MessageSegmentCount;
             sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
             
             sb.Append("  MessageSegmentCount: ").Append(MessageSegmentCount).Append("\n");
+            
+            sb.Append("  Media: ").Append(Media).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -263,6 +295,11 @@ this.MessageSegmentCount = MessageSegmentCount;
                     this.MessageSegmentCount == other.MessageSegmentCount ||
                     this.MessageSegmentCount != null &&
                     this.MessageSegmentCount.Equals(other.MessageSegmentCount)
+                ) &&
+                (
+                    this.Media == other.Media ||
+                    this.Media != null &&
+                    this.Media.SequenceEqual(other.Media)
                 );
         }
 
@@ -289,6 +326,9 @@ this.MessageSegmentCount = MessageSegmentCount;
                 
                 if (this.MessageSegmentCount != null)
                     hash = hash * 59 + this.MessageSegmentCount.GetHashCode();
+                
+                if (this.Media != null)
+                    hash = hash * 59 + this.Media.GetHashCode();
                 
                 return hash;
             }

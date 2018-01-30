@@ -18,7 +18,7 @@ namespace PureCloudPlatform.Client.V2.Client
                 writer.WriteNull();
             else
             {
-                var dateString = date.Value.ToUniversalTime().ToString("yyyy-MM-ddThh:mm:ss.FFFK", CultureInfo.InvariantCulture);
+                var dateString = date.Value.ToUniversalTime().ToString("yyyy-MM-ddTHH:mm:ss.FFFK", CultureInfo.InvariantCulture);
                 writer.WriteValue(dateString);
             }
         }

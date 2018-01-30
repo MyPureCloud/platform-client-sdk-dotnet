@@ -37,7 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="BatchDownloadRequestList">List of items requested (required).</param>
+        /// <param name="BatchDownloadRequestList">List of up to 100 items requested (required).</param>
         
         
         public BatchDownloadJobSubmission(List<BatchDownloadRequest> BatchDownloadRequestList = null)
@@ -67,9 +67,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// List of items requested
+        /// List of up to 100 items requested
         /// </summary>
-        /// <value>List of items requested</value>
+        /// <value>List of up to 100 items requested</value>
         [DataMember(Name="batchDownloadRequestList", EmitDefaultValue=false)]
         public List<BatchDownloadRequest> BatchDownloadRequestList { get; set; }
         

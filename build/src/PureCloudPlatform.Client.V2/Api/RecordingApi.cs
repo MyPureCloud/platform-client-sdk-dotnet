@@ -243,7 +243,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null);
 
@@ -256,7 +256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         ApiResponse<List<Recording>> GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
         
@@ -637,7 +637,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Annotation> PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
         
         /// <summary>
-        /// Submit a batch download request
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -648,7 +648,7 @@ namespace PureCloudPlatform.Client.V2.Api
         BatchDownloadJobSubmissionResult PostRecordingBatchrequests (BatchDownloadJobSubmission body);
 
         /// <summary>
-        /// Submit a batch download request
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -1145,7 +1145,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null);
 
@@ -1158,7 +1158,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null);
         
@@ -1539,7 +1539,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
         
         /// <summary>
-        /// Submit a batch download request
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -1550,7 +1550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<BatchDownloadJobSubmissionResult> PostRecordingBatchrequestsAsync (BatchDownloadJobSubmission body);
 
         /// <summary>
-        /// Submit a batch download request
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
         /// </summary>
         /// <remarks>
         /// 
@@ -3736,7 +3736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>List&lt;Recording&gt;</returns>
         public List<Recording> GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
@@ -3750,7 +3750,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>ApiResponse of List&lt;Recording&gt;</returns>
         public ApiResponse< List<Recording> > GetConversationRecordingsWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         { 
@@ -3836,7 +3836,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>Task of List&lt;Recording&gt;</returns>
         public async System.Threading.Tasks.Task<List<Recording>> GetConversationRecordingsAsync (string conversationId, int? maxWaitMs = null, string formatId = null)
         {
@@ -3851,7 +3851,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
         /// <param name="maxWaitMs">The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional, default to 5000)</param>
-        /// <param name="formatId">The desired media format (optional, default to WEBM)</param>
+        /// <param name="formatId">The desired media format. Possible values: NONE, MP3, WAV, or WEBM (optional, default to WEBM)</param>
         /// <returns>Task of ApiResponse (List&lt;Recording&gt;)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<List<Recording>>> GetConversationRecordingsAsyncWithHttpInfo (string conversationId, int? maxWaitMs = null, string formatId = null)
         { 
@@ -6931,7 +6931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Submit a batch download request 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
@@ -6943,7 +6943,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Submit a batch download request 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
@@ -7029,7 +7029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Submit a batch download request 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>
@@ -7042,7 +7042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Submit a batch download request 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Job submission criteria</param>

@@ -196,6 +196,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Convertedto,
             
             /// <summary>
+            /// Enum Divisionid for "divisionId"
+            /// </summary>
+            [EnumMember(Value = "divisionId")]
+            Divisionid,
+            
+            /// <summary>
             /// Enum Stationid for "stationId"
             /// </summary>
             [EnumMember(Value = "stationId")]
