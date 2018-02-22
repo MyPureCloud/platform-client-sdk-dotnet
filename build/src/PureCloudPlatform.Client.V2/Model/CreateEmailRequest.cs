@@ -57,9 +57,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
+        /// Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.
         /// </summary>
-        /// <value>Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.</value>
+        /// <value>Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum DirectionEnum
         {
@@ -119,9 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.
+        /// Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.
         /// </summary>
-        /// <value>Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue.</value>
+        /// <value>Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based.</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         
@@ -142,15 +142,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="QueueId">The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId.</param>
+        /// <param name="QueueId">The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId.</param>
         
         
         
-        /// <param name="FlowId">The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId.</param>
+        /// <param name="FlowId">The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId.</param>
         
         
         
-        /// <param name="Provider">The name of the provider that is sourcing the web chat. (required).</param>
+        /// <param name="Provider">The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails. (required).</param>
         
         
         
@@ -190,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Direction">Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue..</param>
+        /// <param name="Direction">Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based..</param>
         
         
         
@@ -410,27 +410,27 @@ this.TextBody = TextBody;
         
         
         /// <summary>
-        /// The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId
+        /// The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId
         /// </summary>
-        /// <value>The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId</value>
+        /// <value>The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId</value>
         [DataMember(Name="queueId", EmitDefaultValue=false)]
         public string QueueId { get; set; }
         
         
         
         /// <summary>
-        /// The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId
+        /// The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId
         /// </summary>
-        /// <value>The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId</value>
+        /// <value>The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId</value>
         [DataMember(Name="flowId", EmitDefaultValue=false)]
         public string FlowId { get; set; }
         
         
         
         /// <summary>
-        /// The name of the provider that is sourcing the web chat.
+        /// The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails.
         /// </summary>
-        /// <value>The name of the provider that is sourcing the web chat.</value>
+        /// <value>The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails.</value>
         [DataMember(Name="provider", EmitDefaultValue=false)]
         public string Provider { get; set; }
         

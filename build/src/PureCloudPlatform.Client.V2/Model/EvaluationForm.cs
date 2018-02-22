@@ -60,11 +60,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationForm" /> class.
@@ -80,10 +75,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="Name">The evaluation form name (required).</param>
-        
-        
-        
-        /// <param name="Type">The form type (evaluation) (required).</param>
         
         
         
@@ -108,7 +99,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public EvaluationForm(string Name = null, string Type = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
+        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null)
         {
             
             
@@ -123,20 +114,6 @@ namespace PureCloudPlatform.Client.V2.Model
             else
             {
                 this.Name = Name;
-            }
-            
-            
-            
-            
-            
-            // to ensure "Type" is required (not null)
-            if (Type == null)
-            {
-                throw new InvalidDataException("Type is a required property for EvaluationForm and cannot be null");
-            }
-            else
-            {
-                this.Type = Type;
             }
             
             
@@ -164,10 +141,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.QuestionGroups = QuestionGroups;
             }
-            
-            
-            
-            
             
             
             
@@ -249,15 +222,6 @@ this.PublishedVersions = PublishedVersions;
         
         
         /// <summary>
-        /// The form type (evaluation)
-        /// </summary>
-        /// <value>The form type (evaluation)</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-        
-        
-        
-        /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
@@ -320,8 +284,6 @@ this.PublishedVersions = PublishedVersions;
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             
             sb.Append("  Published: ").Append(Published).Append("\n");
@@ -381,11 +343,6 @@ this.PublishedVersions = PublishedVersions;
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-                ) &&
-                (
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
@@ -434,9 +391,6 @@ this.PublishedVersions = PublishedVersions;
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
-                
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();

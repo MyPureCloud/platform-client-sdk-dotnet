@@ -23,6 +23,75 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The activity code's category
+        /// </summary>
+        /// <value>The activity code's category</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CategoryEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Onqueuework for "OnQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OnQueueWork")]
+            Onqueuework,
+            
+            /// <summary>
+            /// Enum Break for "Break"
+            /// </summary>
+            [EnumMember(Value = "Break")]
+            Break,
+            
+            /// <summary>
+            /// Enum Meal for "Meal"
+            /// </summary>
+            [EnumMember(Value = "Meal")]
+            Meal,
+            
+            /// <summary>
+            /// Enum Meeting for "Meeting"
+            /// </summary>
+            [EnumMember(Value = "Meeting")]
+            Meeting,
+            
+            /// <summary>
+            /// Enum Offqueuework for "OffQueueWork"
+            /// </summary>
+            [EnumMember(Value = "OffQueueWork")]
+            Offqueuework,
+            
+            /// <summary>
+            /// Enum Timeoff for "TimeOff"
+            /// </summary>
+            [EnumMember(Value = "TimeOff")]
+            Timeoff,
+            
+            /// <summary>
+            /// Enum Training for "Training"
+            /// </summary>
+            [EnumMember(Value = "Training")]
+            Training,
+            
+            /// <summary>
+            /// Enum Unavailable for "Unavailable"
+            /// </summary>
+            [EnumMember(Value = "Unavailable")]
+            Unavailable,
+            
+            /// <summary>
+            /// Enum Unscheduled for "Unscheduled"
+            /// </summary>
+            [EnumMember(Value = "Unscheduled")]
+            Unscheduled
+        }
         
         
         
@@ -40,6 +109,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        /// <summary>
+        /// The activity code's category
+        /// </summary>
+        /// <value>The activity code's category</value>
+        [DataMember(Name="category", EmitDefaultValue=false)]
+        public CategoryEnum? Category { get; set; }
         
         
         
@@ -85,7 +162,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request.</param>
         
         
-        public CreateActivityCodeRequest(string Name = null, string Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null)
+        public CreateActivityCodeRequest(string Name = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null)
         {
             
             
@@ -204,13 +281,6 @@ this.AgentTimeOffSelectable = AgentTimeOffSelectable;
         public string Name { get; set; }
         
         
-        
-        /// <summary>
-        /// The activity code&#39;s category
-        /// </summary>
-        /// <value>The activity code&#39;s category</value>
-        [DataMember(Name="category", EmitDefaultValue=false)]
-        public string Category { get; set; }
         
         
         

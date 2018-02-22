@@ -12,6 +12,12 @@ title: AgentActivity
 | **Agent** | [**User**](User.html) |  | [optional] |
 | **NumEvaluations** | **int?** |  | [optional] |
 | **AverageEvaluationScore** | **int?** |  | [optional] |
+| **NumCriticalEvaluations** | **int?** |  | [optional] |
+| **AverageCriticalScore** | **float?** |  | [optional] |
+| **HighestEvaluationScore** | **float?** |  | [optional] |
+| **LowestEvaluationScore** | **float?** |  | [optional] |
+| **HighestCriticalScore** | **float?** |  | [optional] |
+| **LowestCriticalScore** | **float?** |  | [optional] |
 | **AgentEvaluatorActivityList** | [**List&lt;AgentEvaluatorActivity&gt;**](AgentEvaluatorActivity.html) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 {: class="table table-striped"}

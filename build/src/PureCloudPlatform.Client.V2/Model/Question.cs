@@ -29,6 +29,44 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Multiplechoicequestion for "multipleChoiceQuestion"
+            /// </summary>
+            [EnumMember(Value = "multipleChoiceQuestion")]
+            Multiplechoicequestion,
+            
+            /// <summary>
+            /// Enum Freetextquestion for "freeTextQuestion"
+            /// </summary>
+            [EnumMember(Value = "freeTextQuestion")]
+            Freetextquestion,
+            
+            /// <summary>
+            /// Enum Npsquestion for "npsQuestion"
+            /// </summary>
+            [EnumMember(Value = "npsQuestion")]
+            Npsquestion,
+            
+            /// <summary>
+            /// Enum Readonlytextblockquestion for "readOnlyTextBlockQuestion"
+            /// </summary>
+            [EnumMember(Value = "readOnlyTextBlockQuestion")]
+            Readonlytextblockquestion
+        }
         
         
         
@@ -62,6 +100,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         
         
         
@@ -102,15 +147,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Weight">Weight.</param>
-        
-        
-        
-        /// <param name="NaRequired">NaRequired.</param>
+        /// <param name="NaEnabled">NaEnabled.</param>
         
         
         
         /// <param name="CommentsRequired">CommentsRequired.</param>
+        
+        
+        
+        /// <param name="VisibilityCondition">VisibilityCondition.</param>
+        
+        
+        
+        /// <param name="AnswerOptions">Options from which to choose an answer for this question. Only used by Multiple Choice type questions..</param>
+        
+        
+        
+        /// <param name="MaxResponseCharacters">How many characters are allowed in the text response to this question. Used by NPS and Free Text question types..</param>
+        
+        
+        
+        /// <param name="ExplanationPrompt">Prompt for details explaining the chosen NPS score. Used by NPS questions..</param>
         
         
         
@@ -121,19 +178,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsCritical">IsCritical.</param>
         
         
-        
-        /// <param name="NaEnabled">NaEnabled.</param>
-        
-        
-        
-        /// <param name="VisibilityCondition">VisibilityCondition.</param>
-        
-        
-        
-        /// <param name="AnswerOptions">AnswerOptions.</param>
-        
-        
-        public Question(string Id = null, string Text = null, string HelpText = null, string Type = null, double? Weight = null, bool? NaRequired = null, bool? CommentsRequired = null, bool? IsKill = null, bool? IsCritical = null, bool? NaEnabled = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null)
+        public Question(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, int? MaxResponseCharacters = null, string ExplanationPrompt = null, bool? IsKill = null, bool? IsCritical = null)
         {
             
             
@@ -225,16 +270,7 @@ this.Type = Type;
             
             
             
-this.Weight = Weight;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NaRequired = NaRequired;
+this.NaEnabled = NaEnabled;
             
             
             
@@ -244,33 +280,6 @@ this.NaRequired = NaRequired;
             
             
 this.CommentsRequired = CommentsRequired;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsKill = IsKill;
-            
-            
-            
-            
-            
-            
-            
-            
-this.IsCritical = IsCritical;
-            
-            
-            
-            
-            
-            
-            
-            
-this.NaEnabled = NaEnabled;
             
             
             
@@ -289,6 +298,42 @@ this.VisibilityCondition = VisibilityCondition;
             
             
 this.AnswerOptions = AnswerOptions;
+            
+            
+            
+            
+            
+            
+            
+            
+this.MaxResponseCharacters = MaxResponseCharacters;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ExplanationPrompt = ExplanationPrompt;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IsKill = IsKill;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IsCritical = IsCritical;
             
             
             
@@ -321,27 +366,13 @@ this.AnswerOptions = AnswerOptions;
         
         
         
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public string Type { get; set; }
-        
         
         
         /// <summary>
-        /// Gets or Sets Weight
+        /// Gets or Sets NaEnabled
         /// </summary>
-        [DataMember(Name="weight", EmitDefaultValue=false)]
-        public double? Weight { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets NaRequired
-        /// </summary>
-        [DataMember(Name="naRequired", EmitDefaultValue=false)]
-        public bool? NaRequired { get; set; }
+        [DataMember(Name="naEnabled", EmitDefaultValue=false)]
+        public bool? NaEnabled { get; set; }
         
         
         
@@ -350,6 +381,41 @@ this.AnswerOptions = AnswerOptions;
         /// </summary>
         [DataMember(Name="commentsRequired", EmitDefaultValue=false)]
         public bool? CommentsRequired { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets VisibilityCondition
+        /// </summary>
+        [DataMember(Name="visibilityCondition", EmitDefaultValue=false)]
+        public VisibilityCondition VisibilityCondition { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Options from which to choose an answer for this question. Only used by Multiple Choice type questions.
+        /// </summary>
+        /// <value>Options from which to choose an answer for this question. Only used by Multiple Choice type questions.</value>
+        [DataMember(Name="answerOptions", EmitDefaultValue=false)]
+        public List<AnswerOption> AnswerOptions { get; set; }
+        
+        
+        
+        /// <summary>
+        /// How many characters are allowed in the text response to this question. Used by NPS and Free Text question types.
+        /// </summary>
+        /// <value>How many characters are allowed in the text response to this question. Used by NPS and Free Text question types.</value>
+        [DataMember(Name="maxResponseCharacters", EmitDefaultValue=false)]
+        public int? MaxResponseCharacters { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Prompt for details explaining the chosen NPS score. Used by NPS questions.
+        /// </summary>
+        /// <value>Prompt for details explaining the chosen NPS score. Used by NPS questions.</value>
+        [DataMember(Name="explanationPrompt", EmitDefaultValue=false)]
+        public string ExplanationPrompt { get; set; }
         
         
         
@@ -366,30 +432,6 @@ this.AnswerOptions = AnswerOptions;
         /// </summary>
         [DataMember(Name="isCritical", EmitDefaultValue=false)]
         public bool? IsCritical { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets NaEnabled
-        /// </summary>
-        [DataMember(Name="naEnabled", EmitDefaultValue=false)]
-        public bool? NaEnabled { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets VisibilityCondition
-        /// </summary>
-        [DataMember(Name="visibilityCondition", EmitDefaultValue=false)]
-        public VisibilityCondition VisibilityCondition { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets AnswerOptions
-        /// </summary>
-        [DataMember(Name="answerOptions", EmitDefaultValue=false)]
-        public List<AnswerOption> AnswerOptions { get; set; }
         
         
         /// <summary>
@@ -409,21 +451,21 @@ this.AnswerOptions = AnswerOptions;
             
             sb.Append("  Type: ").Append(Type).Append("\n");
             
-            sb.Append("  Weight: ").Append(Weight).Append("\n");
-            
-            sb.Append("  NaRequired: ").Append(NaRequired).Append("\n");
+            sb.Append("  NaEnabled: ").Append(NaEnabled).Append("\n");
             
             sb.Append("  CommentsRequired: ").Append(CommentsRequired).Append("\n");
-            
-            sb.Append("  IsKill: ").Append(IsKill).Append("\n");
-            
-            sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
-            
-            sb.Append("  NaEnabled: ").Append(NaEnabled).Append("\n");
             
             sb.Append("  VisibilityCondition: ").Append(VisibilityCondition).Append("\n");
             
             sb.Append("  AnswerOptions: ").Append(AnswerOptions).Append("\n");
+            
+            sb.Append("  MaxResponseCharacters: ").Append(MaxResponseCharacters).Append("\n");
+            
+            sb.Append("  ExplanationPrompt: ").Append(ExplanationPrompt).Append("\n");
+            
+            sb.Append("  IsKill: ").Append(IsKill).Append("\n");
+            
+            sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -482,34 +524,14 @@ this.AnswerOptions = AnswerOptions;
                     this.Type.Equals(other.Type)
                 ) &&
                 (
-                    this.Weight == other.Weight ||
-                    this.Weight != null &&
-                    this.Weight.Equals(other.Weight)
-                ) &&
-                (
-                    this.NaRequired == other.NaRequired ||
-                    this.NaRequired != null &&
-                    this.NaRequired.Equals(other.NaRequired)
+                    this.NaEnabled == other.NaEnabled ||
+                    this.NaEnabled != null &&
+                    this.NaEnabled.Equals(other.NaEnabled)
                 ) &&
                 (
                     this.CommentsRequired == other.CommentsRequired ||
                     this.CommentsRequired != null &&
                     this.CommentsRequired.Equals(other.CommentsRequired)
-                ) &&
-                (
-                    this.IsKill == other.IsKill ||
-                    this.IsKill != null &&
-                    this.IsKill.Equals(other.IsKill)
-                ) &&
-                (
-                    this.IsCritical == other.IsCritical ||
-                    this.IsCritical != null &&
-                    this.IsCritical.Equals(other.IsCritical)
-                ) &&
-                (
-                    this.NaEnabled == other.NaEnabled ||
-                    this.NaEnabled != null &&
-                    this.NaEnabled.Equals(other.NaEnabled)
                 ) &&
                 (
                     this.VisibilityCondition == other.VisibilityCondition ||
@@ -520,6 +542,26 @@ this.AnswerOptions = AnswerOptions;
                     this.AnswerOptions == other.AnswerOptions ||
                     this.AnswerOptions != null &&
                     this.AnswerOptions.SequenceEqual(other.AnswerOptions)
+                ) &&
+                (
+                    this.MaxResponseCharacters == other.MaxResponseCharacters ||
+                    this.MaxResponseCharacters != null &&
+                    this.MaxResponseCharacters.Equals(other.MaxResponseCharacters)
+                ) &&
+                (
+                    this.ExplanationPrompt == other.ExplanationPrompt ||
+                    this.ExplanationPrompt != null &&
+                    this.ExplanationPrompt.Equals(other.ExplanationPrompt)
+                ) &&
+                (
+                    this.IsKill == other.IsKill ||
+                    this.IsKill != null &&
+                    this.IsKill.Equals(other.IsKill)
+                ) &&
+                (
+                    this.IsCritical == other.IsCritical ||
+                    this.IsCritical != null &&
+                    this.IsCritical.Equals(other.IsCritical)
                 );
         }
 
@@ -547,29 +589,29 @@ this.AnswerOptions = AnswerOptions;
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
                 
-                if (this.Weight != null)
-                    hash = hash * 59 + this.Weight.GetHashCode();
-                
-                if (this.NaRequired != null)
-                    hash = hash * 59 + this.NaRequired.GetHashCode();
+                if (this.NaEnabled != null)
+                    hash = hash * 59 + this.NaEnabled.GetHashCode();
                 
                 if (this.CommentsRequired != null)
                     hash = hash * 59 + this.CommentsRequired.GetHashCode();
-                
-                if (this.IsKill != null)
-                    hash = hash * 59 + this.IsKill.GetHashCode();
-                
-                if (this.IsCritical != null)
-                    hash = hash * 59 + this.IsCritical.GetHashCode();
-                
-                if (this.NaEnabled != null)
-                    hash = hash * 59 + this.NaEnabled.GetHashCode();
                 
                 if (this.VisibilityCondition != null)
                     hash = hash * 59 + this.VisibilityCondition.GetHashCode();
                 
                 if (this.AnswerOptions != null)
                     hash = hash * 59 + this.AnswerOptions.GetHashCode();
+                
+                if (this.MaxResponseCharacters != null)
+                    hash = hash * 59 + this.MaxResponseCharacters.GetHashCode();
+                
+                if (this.ExplanationPrompt != null)
+                    hash = hash * 59 + this.ExplanationPrompt.GetHashCode();
+                
+                if (this.IsKill != null)
+                    hash = hash * 59 + this.IsKill.GetHashCode();
+                
+                if (this.IsCritical != null)
+                    hash = hash * 59 + this.IsCritical.GetHashCode();
                 
                 return hash;
             }

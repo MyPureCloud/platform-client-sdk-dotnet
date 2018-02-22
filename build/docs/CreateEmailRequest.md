@@ -7,9 +7,9 @@ title: CreateEmailRequest
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **QueueId** | **string** | The ID of the queue to use for routing the chat conversation. This field is mutually exclusive with flowId | [optional] |
-| **FlowId** | **string** | The ID of the flow to use for routing chat conversation. This field is mutually exclusive with queueId | [optional] |
-| **Provider** | **string** | The name of the provider that is sourcing the web chat. | |
+| **QueueId** | **string** | The ID of the queue to use for routing the email conversation. This field is mutually exclusive with flowId | [optional] |
+| **FlowId** | **string** | The ID of the flow to use for routing email conversation. This field is mutually exclusive with queueId | [optional] |
+| **Provider** | **string** | The name of the provider that is sourcing the emails. The Provider \&quot;PureCloud Email\&quot; is reserved for native emails. | |
 | **SkillIds** | **List&lt;string&gt;** | The list of skill ID&#39;s to use for routing. | [optional] |
 | **LanguageId** | **string** | The ID of the language to use for routing. | [optional] |
 | **Priority** | **long?** | The priority to assign to the conversation for routing. | [optional] |
@@ -19,7 +19,7 @@ title: CreateEmailRequest
 | **FromAddress** | **string** | The email address of the sender of the email. | [optional] |
 | **FromName** | **string** | The name of the sender of the email. | [optional] |
 | **Subject** | **string** | The subject of the email | [optional] |
-| **Direction** | **string** | Specify INBOUND to create an inbound email conversation to route to a queue, or OUTBOUND to send an email on behalf of a queue. | [optional] |
+| **Direction** | **string** | Specify OUTBOUND to send an email on behalf of a queue, or INBOUND to create an external conversation. An external conversation is one where the provider is not PureCloud based. | [optional] |
 | **HtmlBody** | **string** | An HTML body content of the email. | [optional] |
 | **TextBody** | **string** | A text body content of the email. | [optional] |
 {: class="table table-striped"}

@@ -9,7 +9,6 @@ title: EvaluationForm
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The evaluation form name | |
-| **Type** | **string** | The form type (evaluation) | |
 | **ModifiedDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Published** | **bool?** |  | [optional] |
 | **ContextId** | **string** |  | [optional] |

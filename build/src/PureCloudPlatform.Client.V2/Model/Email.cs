@@ -57,7 +57,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum None for "none"
             /// </summary>
             [EnumMember(Value = "none")]
-            None
+            None,
+            
+            /// <summary>
+            /// Enum Transmitting for "transmitting"
+            /// </summary>
+            [EnumMember(Value = "transmitting")]
+            Transmitting
         }
         
         

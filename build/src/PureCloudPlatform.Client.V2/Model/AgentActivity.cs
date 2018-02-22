@@ -55,6 +55,36 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentActivity" /> class.
@@ -79,13 +109,61 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="NumCriticalEvaluations">NumCriticalEvaluations.</param>
+        
+        
+        
+        /// <param name="AverageCriticalScore">AverageCriticalScore.</param>
+        
+        
+        
+        /// <param name="HighestEvaluationScore">HighestEvaluationScore.</param>
+        
+        
+        
+        /// <param name="LowestEvaluationScore">LowestEvaluationScore.</param>
+        
+        
+        
+        /// <param name="HighestCriticalScore">HighestCriticalScore.</param>
+        
+        
+        
+        /// <param name="LowestCriticalScore">LowestCriticalScore.</param>
+        
+        
+        
         /// <param name="AgentEvaluatorActivityList">AgentEvaluatorActivityList.</param>
         
         
         
         
-        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null)
+        public AgentActivity(string Name = null, User Agent = null, int? NumEvaluations = null, int? AverageEvaluationScore = null, int? NumCriticalEvaluations = null, float? AverageCriticalScore = null, float? HighestEvaluationScore = null, float? LowestEvaluationScore = null, float? HighestCriticalScore = null, float? LowestCriticalScore = null, List<AgentEvaluatorActivity> AgentEvaluatorActivityList = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -154,6 +232,60 @@ this.AverageEvaluationScore = AverageEvaluationScore;
             
             
             
+this.NumCriticalEvaluations = NumCriticalEvaluations;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AverageCriticalScore = AverageCriticalScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HighestEvaluationScore = HighestEvaluationScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LowestEvaluationScore = LowestEvaluationScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HighestCriticalScore = HighestCriticalScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LowestCriticalScore = LowestCriticalScore;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
             
             
@@ -207,6 +339,54 @@ this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
         
         
         /// <summary>
+        /// Gets or Sets NumCriticalEvaluations
+        /// </summary>
+        [DataMember(Name="numCriticalEvaluations", EmitDefaultValue=false)]
+        public int? NumCriticalEvaluations { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AverageCriticalScore
+        /// </summary>
+        [DataMember(Name="averageCriticalScore", EmitDefaultValue=false)]
+        public float? AverageCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets HighestEvaluationScore
+        /// </summary>
+        [DataMember(Name="highestEvaluationScore", EmitDefaultValue=false)]
+        public float? HighestEvaluationScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets LowestEvaluationScore
+        /// </summary>
+        [DataMember(Name="lowestEvaluationScore", EmitDefaultValue=false)]
+        public float? LowestEvaluationScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets HighestCriticalScore
+        /// </summary>
+        [DataMember(Name="highestCriticalScore", EmitDefaultValue=false)]
+        public float? HighestCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets LowestCriticalScore
+        /// </summary>
+        [DataMember(Name="lowestCriticalScore", EmitDefaultValue=false)]
+        public float? LowestCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AgentEvaluatorActivityList
         /// </summary>
         [DataMember(Name="agentEvaluatorActivityList", EmitDefaultValue=false)]
@@ -240,6 +420,18 @@ this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
             sb.Append("  NumEvaluations: ").Append(NumEvaluations).Append("\n");
             
             sb.Append("  AverageEvaluationScore: ").Append(AverageEvaluationScore).Append("\n");
+            
+            sb.Append("  NumCriticalEvaluations: ").Append(NumCriticalEvaluations).Append("\n");
+            
+            sb.Append("  AverageCriticalScore: ").Append(AverageCriticalScore).Append("\n");
+            
+            sb.Append("  HighestEvaluationScore: ").Append(HighestEvaluationScore).Append("\n");
+            
+            sb.Append("  LowestEvaluationScore: ").Append(LowestEvaluationScore).Append("\n");
+            
+            sb.Append("  HighestCriticalScore: ").Append(HighestCriticalScore).Append("\n");
+            
+            sb.Append("  LowestCriticalScore: ").Append(LowestCriticalScore).Append("\n");
             
             sb.Append("  AgentEvaluatorActivityList: ").Append(AgentEvaluatorActivityList).Append("\n");
             
@@ -307,6 +499,36 @@ this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
                     this.AverageEvaluationScore.Equals(other.AverageEvaluationScore)
                 ) &&
                 (
+                    this.NumCriticalEvaluations == other.NumCriticalEvaluations ||
+                    this.NumCriticalEvaluations != null &&
+                    this.NumCriticalEvaluations.Equals(other.NumCriticalEvaluations)
+                ) &&
+                (
+                    this.AverageCriticalScore == other.AverageCriticalScore ||
+                    this.AverageCriticalScore != null &&
+                    this.AverageCriticalScore.Equals(other.AverageCriticalScore)
+                ) &&
+                (
+                    this.HighestEvaluationScore == other.HighestEvaluationScore ||
+                    this.HighestEvaluationScore != null &&
+                    this.HighestEvaluationScore.Equals(other.HighestEvaluationScore)
+                ) &&
+                (
+                    this.LowestEvaluationScore == other.LowestEvaluationScore ||
+                    this.LowestEvaluationScore != null &&
+                    this.LowestEvaluationScore.Equals(other.LowestEvaluationScore)
+                ) &&
+                (
+                    this.HighestCriticalScore == other.HighestCriticalScore ||
+                    this.HighestCriticalScore != null &&
+                    this.HighestCriticalScore.Equals(other.HighestCriticalScore)
+                ) &&
+                (
+                    this.LowestCriticalScore == other.LowestCriticalScore ||
+                    this.LowestCriticalScore != null &&
+                    this.LowestCriticalScore.Equals(other.LowestCriticalScore)
+                ) &&
+                (
                     this.AgentEvaluatorActivityList == other.AgentEvaluatorActivityList ||
                     this.AgentEvaluatorActivityList != null &&
                     this.AgentEvaluatorActivityList.SequenceEqual(other.AgentEvaluatorActivityList)
@@ -344,6 +566,24 @@ this.AgentEvaluatorActivityList = AgentEvaluatorActivityList;
                 
                 if (this.AverageEvaluationScore != null)
                     hash = hash * 59 + this.AverageEvaluationScore.GetHashCode();
+                
+                if (this.NumCriticalEvaluations != null)
+                    hash = hash * 59 + this.NumCriticalEvaluations.GetHashCode();
+                
+                if (this.AverageCriticalScore != null)
+                    hash = hash * 59 + this.AverageCriticalScore.GetHashCode();
+                
+                if (this.HighestEvaluationScore != null)
+                    hash = hash * 59 + this.HighestEvaluationScore.GetHashCode();
+                
+                if (this.LowestEvaluationScore != null)
+                    hash = hash * 59 + this.LowestEvaluationScore.GetHashCode();
+                
+                if (this.HighestCriticalScore != null)
+                    hash = hash * 59 + this.HighestCriticalScore.GetHashCode();
+                
+                if (this.LowestCriticalScore != null)
+                    hash = hash * 59 + this.LowestCriticalScore.GetHashCode();
                 
                 if (this.AgentEvaluatorActivityList != null)
                     hash = hash * 59 + this.AgentEvaluatorActivityList.GetHashCode();

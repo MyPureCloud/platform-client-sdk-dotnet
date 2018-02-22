@@ -10,6 +10,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteQualityCalibration**](QualityApi.html#deletequalitycalibration) | **DELETE** /api/v2/quality/calibrations/{calibrationId} | Delete a calibration by id. |
 | [**DeleteQualityConversationEvaluation**](QualityApi.html#deletequalityconversationevaluation) | **DELETE** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Delete an evaluation |
 | [**DeleteQualityForm**](QualityApi.html#deletequalityform) | **DELETE** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
+| [**DeleteQualityFormsEvaluation**](QualityApi.html#deletequalityformsevaluation) | **DELETE** /api/v2/quality/forms/evaluations/{formId} | Delete an evaluation form. |
+| [**DeleteQualityFormsSurvey**](QualityApi.html#deletequalityformssurvey) | **DELETE** /api/v2/quality/forms/surveys/{formId} | Delete a survey form. |
 | [**DeleteQualityKeywordset**](QualityApi.html#deletequalitykeywordset) | **DELETE** /api/v2/quality/keywordsets/{keywordSetId} | Delete a keywordSet by id. |
 | [**DeleteQualityKeywordsets**](QualityApi.html#deletequalitykeywordsets) | **DELETE** /api/v2/quality/keywordsets | Delete keyword sets |
 | [**GetQualityAgentsActivity**](QualityApi.html#getqualityagentsactivity) | **GET** /api/v2/quality/agents/activity | Gets a list of Agent Activities |
@@ -22,21 +24,38 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityForm**](QualityApi.html#getqualityform) | **GET** /api/v2/quality/forms/{formId} | Get an evaluation form |
 | [**GetQualityFormVersions**](QualityApi.html#getqualityformversions) | **GET** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
 | [**GetQualityForms**](QualityApi.html#getqualityforms) | **GET** /api/v2/quality/forms | Get the list of evaluation forms |
+| [**GetQualityFormsEvaluation**](QualityApi.html#getqualityformsevaluation) | **GET** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
+| [**GetQualityFormsEvaluationVersions**](QualityApi.html#getqualityformsevaluationversions) | **GET** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
+| [**GetQualityFormsEvaluations**](QualityApi.html#getqualityformsevaluations) | **GET** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
+| [**GetQualityFormsSurvey**](QualityApi.html#getqualityformssurvey) | **GET** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
+| [**GetQualityFormsSurveyVersions**](QualityApi.html#getqualityformssurveyversions) | **GET** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
+| [**GetQualityFormsSurveys**](QualityApi.html#getqualityformssurveys) | **GET** /api/v2/quality/forms/surveys | Get the list of survey forms |
 | [**GetQualityKeywordset**](QualityApi.html#getqualitykeywordset) | **GET** /api/v2/quality/keywordsets/{keywordSetId} | Get a keywordSet by id. |
 | [**GetQualityKeywordsets**](QualityApi.html#getqualitykeywordsets) | **GET** /api/v2/quality/keywordsets | Get the list of keyword sets |
 | [**GetQualityPublishedform**](QualityApi.html#getqualitypublishedform) | **GET** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
 | [**GetQualityPublishedforms**](QualityApi.html#getqualitypublishedforms) | **GET** /api/v2/quality/publishedforms | Get the published evaluation forms. |
+| [**GetQualityPublishedformsEvaluation**](QualityApi.html#getqualitypublishedformsevaluation) | **GET** /api/v2/quality/publishedforms/evaluations/{formId} | Get the most recent published version of an evaluation form. |
+| [**GetQualityPublishedformsEvaluations**](QualityApi.html#getqualitypublishedformsevaluations) | **GET** /api/v2/quality/publishedforms/evaluations | Get the published evaluation forms. |
+| [**GetQualityPublishedformsSurvey**](QualityApi.html#getqualitypublishedformssurvey) | **GET** /api/v2/quality/publishedforms/surveys/{formId} | Get the most recent published version of a survey form. |
+| [**GetQualityPublishedformsSurveys**](QualityApi.html#getqualitypublishedformssurveys) | **GET** /api/v2/quality/publishedforms/surveys | Get the published survey forms. |
+| [**PatchQualityFormsSurvey**](QualityApi.html#patchqualityformssurvey) | **PATCH** /api/v2/quality/forms/surveys/{formId} | Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form. |
 | [**PostAnalyticsEvaluationsAggregatesQuery**](QualityApi.html#postanalyticsevaluationsaggregatesquery) | **POST** /api/v2/analytics/evaluations/aggregates/query | Query for evaluation aggregates |
 | [**PostQualityCalibrations**](QualityApi.html#postqualitycalibrations) | **POST** /api/v2/quality/calibrations | Create a calibration |
 | [**PostQualityConversationEvaluations**](QualityApi.html#postqualityconversationevaluations) | **POST** /api/v2/quality/conversations/{conversationId}/evaluations | Create an evaluation |
 | [**PostQualityEvaluationsScoring**](QualityApi.html#postqualityevaluationsscoring) | **POST** /api/v2/quality/evaluations/scoring | Score evaluation |
 | [**PostQualityForms**](QualityApi.html#postqualityforms) | **POST** /api/v2/quality/forms | Create an evaluation form. |
+| [**PostQualityFormsEvaluations**](QualityApi.html#postqualityformsevaluations) | **POST** /api/v2/quality/forms/evaluations | Create an evaluation form. |
+| [**PostQualityFormsSurveys**](QualityApi.html#postqualityformssurveys) | **POST** /api/v2/quality/forms/surveys | Create a survey form. |
 | [**PostQualityKeywordsets**](QualityApi.html#postqualitykeywordsets) | **POST** /api/v2/quality/keywordsets | Create a Keyword Set |
 | [**PostQualityPublishedforms**](QualityApi.html#postqualitypublishedforms) | **POST** /api/v2/quality/publishedforms | Publish an evaluation form. |
+| [**PostQualityPublishedformsEvaluations**](QualityApi.html#postqualitypublishedformsevaluations) | **POST** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
+| [**PostQualityPublishedformsSurveys**](QualityApi.html#postqualitypublishedformssurveys) | **POST** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
 | [**PostQualitySpotability**](QualityApi.html#postqualityspotability) | **POST** /api/v2/quality/spotability | Retrieve the spotability statistic |
 | [**PutQualityCalibration**](QualityApi.html#putqualitycalibration) | **PUT** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
 | [**PutQualityConversationEvaluation**](QualityApi.html#putqualityconversationevaluation) | **PUT** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
 | [**PutQualityForm**](QualityApi.html#putqualityform) | **PUT** /api/v2/quality/forms/{formId} | Update an evaluation form. |
+| [**PutQualityFormsEvaluation**](QualityApi.html#putqualityformsevaluation) | **PUT** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
+| [**PutQualityFormsSurvey**](QualityApi.html#putqualityformssurvey) | **PUT** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
 | [**PutQualityKeywordset**](QualityApi.html#putqualitykeywordset) | **PUT** /api/v2/quality/keywordsets/{keywordSetId} | Update a keywordSet to the specified keywordSet via PUT. |
 {: class="table table-striped"}
 
@@ -231,6 +250,132 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling QualityApi.DeleteQualityForm: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletequalityformsevaluation"></a>
+
+## void DeleteQualityFormsEvaluation (string formId)
+
+Delete an evaluation form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteQualityFormsEvaluationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+
+            try
+            {
+                
+                // Delete an evaluation form.
+                
+                apiInstance.DeleteQualityFormsEvaluation(formId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.DeleteQualityFormsEvaluation: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deletequalityformssurvey"></a>
+
+## void DeleteQualityFormsSurvey (string formId)
+
+Delete a survey form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteQualityFormsSurveyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a survey form.
+                
+                apiInstance.DeleteQualityFormsSurvey(formId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.DeleteQualityFormsSurvey: " + e.Message );
             }
         }
     }
@@ -1417,6 +1562,486 @@ namespace Example
 
 [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
 
+<a name="getqualityformsevaluation"></a>
+
+## [**EvaluationForm**](EvaluationForm.html) GetQualityFormsEvaluation (string formId)
+
+Get an evaluation form
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsEvaluationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get an evaluation form
+                
+                EvaluationForm result = apiInstance.GetQualityFormsEvaluation(formId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsEvaluation: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+<a name="getqualityformsevaluationversions"></a>
+
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null)
+
+Gets all the revisions for a specific evaluation.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsEvaluationVersionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+
+            try
+            {
+                
+                // Gets all the revisions for a specific evaluation.
+                
+                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluationVersions(formId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsEvaluationVersions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+<a name="getqualityformsevaluations"></a>
+
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+
+Get the list of evaluation forms
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsEvaluationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
+            var expand = expand_example;  // string | Expand (optional) 
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get the list of evaluation forms
+                
+                EvaluationFormEntityListing result = apiInstance.GetQualityFormsEvaluations(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsEvaluations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+| **expand** | **string**| Expand | [optional]  |
+| **name** | **string**| Name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+<a name="getqualityformssurvey"></a>
+
+## [**SurveyForm**](SurveyForm.html) GetQualityFormsSurvey (string formId)
+
+Get a survey form
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsSurveyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get a survey form
+                
+                SurveyForm result = apiInstance.GetQualityFormsSurvey(formId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsSurvey: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
+
+<a name="getqualityformssurveyversions"></a>
+
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveyVersions (string formId, int? pageSize = null, int? pageNumber = null)
+
+Gets all the revisions for a specific survey.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsSurveyVersionsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+
+            try
+            {
+                
+                // Gets all the revisions for a specific survey.
+                
+                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveyVersions(formId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsSurveyVersions: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+<a name="getqualityformssurveys"></a>
+
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
+
+Get the list of survey forms
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsSurveysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+            
+            var expand = expand_example;  // string | Expand (optional) 
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get the list of survey forms
+                
+                SurveyFormEntityListing result = apiInstance.GetQualityFormsSurveys(pageSize, pageNumber, sortBy, nextPage, previousPage, expand, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsSurveys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+| **expand** | **string**| Expand | [optional]  |
+| **name** | **string**| Name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
 <a name="getqualitykeywordset"></a>
 
 ## [**KeywordSet**](KeywordSet.html) GetQualityKeywordset (string keywordSetId)
@@ -1738,6 +2363,356 @@ namespace Example
 ### Return type
 
 [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+<a name="getqualitypublishedformsevaluation"></a>
+
+## [**EvaluationForm**](EvaluationForm.html) GetQualityPublishedformsEvaluation (string formId)
+
+Get the most recent published version of an evaluation form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityPublishedformsEvaluationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get the most recent published version of an evaluation form.
+                
+                EvaluationForm result = apiInstance.GetQualityPublishedformsEvaluation(formId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityPublishedformsEvaluation: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+<a name="getqualitypublishedformsevaluations"></a>
+
+## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null)
+
+Get the published evaluation forms.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityPublishedformsEvaluationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get the published evaluation forms.
+                
+                EvaluationFormEntityListing result = apiInstance.GetQualityPublishedformsEvaluations(pageSize, pageNumber, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityPublishedformsEvaluations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationFormEntityListing**](EvaluationFormEntityListing.html)
+
+<a name="getqualitypublishedformssurvey"></a>
+
+## [**SurveyForm**](SurveyForm.html) GetQualityPublishedformsSurvey (string formId)
+
+Get the most recent published version of a survey form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityPublishedformsSurveyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get the most recent published version of a survey form.
+                
+                SurveyForm result = apiInstance.GetQualityPublishedformsSurvey(formId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityPublishedformsSurvey: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
+
+<a name="getqualitypublishedformssurveys"></a>
+
+## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null)
+
+Get the published survey forms.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityPublishedformsSurveysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get the published survey forms.
+                
+                SurveyFormEntityListing result = apiInstance.GetQualityPublishedformsSurveys(pageSize, pageNumber, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityPublishedformsSurveys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Name | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyFormEntityListing**](SurveyFormEntityListing.html)
+
+<a name="patchqualityformssurvey"></a>
+
+## [**SurveyForm**](SurveyForm.html) PatchQualityFormsSurvey (string formId, SurveyForm body)
+
+Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchQualityFormsSurveyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+            
+            
+            var body = new SurveyForm(); // SurveyForm | Survey form
+            
+            
+
+            try
+            {
+                
+                // Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
+                
+                SurveyForm result = apiInstance.PatchQualityFormsSurvey(formId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PatchQualityFormsSurvey: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+| **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
 
 <a name="postanalyticsevaluationsaggregatesquery"></a>
 
@@ -2077,6 +3052,134 @@ namespace Example
 
 [**EvaluationForm**](EvaluationForm.html)
 
+<a name="postqualityformsevaluations"></a>
+
+## [**EvaluationForm**](EvaluationForm.html) PostQualityFormsEvaluations (EvaluationForm body)
+
+Create an evaluation form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityFormsEvaluationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var body = new EvaluationForm(); // EvaluationForm | Evaluation form
+            
+            
+
+            try
+            {
+                
+                // Create an evaluation form.
+                
+                EvaluationForm result = apiInstance.PostQualityFormsEvaluations(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityFormsEvaluations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+<a name="postqualityformssurveys"></a>
+
+## [**SurveyForm**](SurveyForm.html) PostQualityFormsSurveys (SurveyForm body)
+
+Create a survey form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityFormsSurveysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var body = new SurveyForm(); // SurveyForm | Survey form
+            
+            
+
+            try
+            {
+                
+                // Create a survey form.
+                
+                SurveyForm result = apiInstance.PostQualityFormsSurveys(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityFormsSurveys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
+
 <a name="postqualitykeywordsets"></a>
 
 ## [**KeywordSet**](KeywordSet.html) PostQualityKeywordsets (KeywordSet body, string expand = null)
@@ -2210,6 +3313,134 @@ namespace Example
 ### Return type
 
 [**EvaluationForm**](EvaluationForm.html)
+
+<a name="postqualitypublishedformsevaluations"></a>
+
+## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedformsEvaluations (PublishForm body)
+
+Publish an evaluation form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityPublishedformsEvaluationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var body = new PublishForm(); // PublishForm | Evaluation form
+            
+            
+
+            try
+            {
+                
+                // Publish an evaluation form.
+                
+                EvaluationForm result = apiInstance.PostQualityPublishedformsEvaluations(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityPublishedformsEvaluations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**PublishForm**](PublishForm.html)| Evaluation form |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+<a name="postqualitypublishedformssurveys"></a>
+
+## [**SurveyForm**](SurveyForm.html) PostQualityPublishedformsSurveys (PublishForm body)
+
+Publish a survey form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityPublishedformsSurveysExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            
+            var body = new PublishForm(); // PublishForm | Survey form
+            
+            
+
+            try
+            {
+                
+                // Publish a survey form.
+                
+                SurveyForm result = apiInstance.PostQualityPublishedformsSurveys(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityPublishedformsSurveys: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**PublishForm**](PublishForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
 
 <a name="postqualityspotability"></a>
 
@@ -2496,6 +3727,146 @@ namespace Example
 ### Return type
 
 [**EvaluationForm**](EvaluationForm.html)
+
+<a name="putqualityformsevaluation"></a>
+
+## [**EvaluationForm**](EvaluationForm.html) PutQualityFormsEvaluation (string formId, EvaluationForm body)
+
+Update an evaluation form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutQualityFormsEvaluationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+            
+            
+            var body = new EvaluationForm(); // EvaluationForm | Evaluation form
+            
+            
+
+            try
+            {
+                
+                // Update an evaluation form.
+                
+                EvaluationForm result = apiInstance.PutQualityFormsEvaluation(formId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PutQualityFormsEvaluation: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EvaluationForm**](EvaluationForm.html)
+
+<a name="putqualityformssurvey"></a>
+
+## [**SurveyForm**](SurveyForm.html) PutQualityFormsSurvey (string formId, SurveyForm body)
+
+Update a survey form.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutQualityFormsSurveyExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new QualityApi();
+            
+            
+            var formId = formId_example;  // string | Form ID
+            
+            
+            
+            
+            
+            var body = new SurveyForm(); // SurveyForm | Survey form
+            
+            
+
+            try
+            {
+                
+                // Update a survey form.
+                
+                SurveyForm result = apiInstance.PutQualityFormsSurvey(formId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PutQualityFormsSurvey: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **formId** | **string**| Form ID |  |
+| **body** | [**SurveyForm**](SurveyForm.html)| Survey form |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**SurveyForm**](SurveyForm.html)
 
 <a name="putqualitykeywordset"></a>
 

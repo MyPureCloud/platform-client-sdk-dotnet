@@ -301,6 +301,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The session media type
         /// </summary>
@@ -356,6 +359,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>(Dialer) Result of the analysis (for example disposition.classification.callable.machine) </value>
         [DataMember(Name="dispositionName", EmitDefaultValue=false)]
         public DispositionNameEnum? DispositionName { get; set; }
+        
+        
         
         
         
@@ -549,8 +554,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Segments">List of segments for this session.</param>
         
         
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null)
+        
+        /// <param name="Metrics">List of metrics for this session.</param>
+        
+        
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null)
         {
+            
+            
+            
+            
             
             
             
@@ -1021,6 +1034,15 @@ this.Segments = Segments;
             
             
             
+            
+            
+            
+            
+this.Metrics = Metrics;
+            
+            
+            
+            
         }
         
         
@@ -1313,6 +1335,15 @@ this.Segments = Segments;
         public List<AnalyticsConversationSegment> Segments { get; set; }
         
         
+        
+        /// <summary>
+        /// List of metrics for this session
+        /// </summary>
+        /// <value>List of metrics for this session</value>
+        [DataMember(Name="metrics", EmitDefaultValue=false)]
+        public List<AnalyticsSessionMetric> Metrics { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1393,6 +1424,8 @@ this.Segments = Segments;
             sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
             
             sb.Append("  Segments: ").Append(Segments).Append("\n");
+            
+            sb.Append("  Metrics: ").Append(Metrics).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1609,6 +1642,11 @@ this.Segments = Segments;
                     this.Segments == other.Segments ||
                     this.Segments != null &&
                     this.Segments.SequenceEqual(other.Segments)
+                ) &&
+                (
+                    this.Metrics == other.Metrics ||
+                    this.Metrics != null &&
+                    this.Metrics.SequenceEqual(other.Metrics)
                 );
         }
 
@@ -1731,6 +1769,9 @@ this.Segments = Segments;
                 
                 if (this.Segments != null)
                     hash = hash * 59 + this.Segments.GetHashCode();
+                
+                if (this.Metrics != null)
+                    hash = hash * 59 + this.Metrics.GetHashCode();
                 
                 return hash;
             }

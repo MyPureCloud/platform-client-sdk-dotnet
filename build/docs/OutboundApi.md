@@ -4502,7 +4502,7 @@ namespace Example
 
 <a name="postoutboundcontactlistcontacts"></a>
 
-## [**List&lt;DialerContact&gt;**](DialerContact.html) PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
+## [**List&lt;DialerContact&gt;**](DialerContact.html) PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
 
 Add contacts to a contact list.
 
@@ -4540,12 +4540,17 @@ namespace Example
             
             
             
-            var priority = true;  // bool? | Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional) 
+            var priority = true;  // bool? | Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional) 
             
             
             
             
-            var clearSystemData = true;  // bool? | Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won't. (optional) 
+            var clearSystemData = true;  // bool? | Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't. (optional) 
+            
+            
+            
+            
+            var doNotQueue = true;  // bool? | Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the 'priority' parameter. (optional) 
             
             
             
@@ -4555,7 +4560,7 @@ namespace Example
                 
                 // Add contacts to a contact list.
                 
-                List&lt;DialerContact&gt; result = apiInstance.PostOutboundContactlistContacts(contactListId, body, priority, clearSystemData);
+                List&lt;DialerContact&gt; result = apiInstance.PostOutboundContactlistContacts(contactListId, body, priority, clearSystemData, doNotQueue);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4574,8 +4579,9 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactListId** | **string**| Contact List ID |  |
 | **body** | [**List<DialerContact>**](DialerContact.html)| Contact |  |
-| **priority** | **bool?**| Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. | [optional]  |
-| **clearSystemData** | **bool?**| Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. | [optional]  |
+| **priority** | **bool?**| Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. | [optional]  |
+| **clearSystemData** | **bool?**| Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. | [optional]  |
+| **doNotQueue** | **bool?**| Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

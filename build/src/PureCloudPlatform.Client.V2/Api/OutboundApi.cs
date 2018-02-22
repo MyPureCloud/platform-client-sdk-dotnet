@@ -1543,10 +1543,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
-        List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
+        List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -1557,10 +1558,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
-        ApiResponse<List<DialerContact>> PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
+        ApiResponse<List<DialerContact>> PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
         
         /// <summary>
         /// Get contacts from a contact list.
@@ -3701,10 +3703,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
-        System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
+        System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
 
         /// <summary>
         /// Add contacts to a contact list.
@@ -3715,10 +3718,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null);
+        System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null);
         
         /// <summary>
         /// Get contacts from a contact list.
@@ -16693,12 +16697,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>List&lt;DialerContact&gt;</returns>
-        public List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
+        public List<DialerContact> PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         {
-             ApiResponse<List<DialerContact>> localVarResponse = PostOutboundContactlistContactsWithHttpInfo(contactListId, body, priority, clearSystemData);
+             ApiResponse<List<DialerContact>> localVarResponse = PostOutboundContactlistContactsWithHttpInfo(contactListId, body, priority, clearSystemData, doNotQueue);
              return localVarResponse.Data;
         }
 
@@ -16708,10 +16713,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>ApiResponse of List&lt;DialerContact&gt;</returns>
-        public ApiResponse< List<DialerContact> > PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
+        public ApiResponse< List<DialerContact> > PostOutboundContactlistContactsWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         { 
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -16756,6 +16762,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (priority != null) localVarQueryParams.Add(new Tuple<string, string>("priority", this.Configuration.ApiClient.ParameterToString(priority)));
             if (clearSystemData != null) localVarQueryParams.Add(new Tuple<string, string>("clearSystemData", this.Configuration.ApiClient.ParameterToString(clearSystemData)));
+            if (doNotQueue != null) localVarQueryParams.Add(new Tuple<string, string>("doNotQueue", this.Configuration.ApiClient.ParameterToString(doNotQueue)));
 
             // Header params
 
@@ -16803,12 +16810,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of List&lt;DialerContact&gt;</returns>
-        public async System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
+        public async System.Threading.Tasks.Task<List<DialerContact>> PostOutboundContactlistContactsAsync (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         {
-             ApiResponse<List<DialerContact>> localVarResponse = await PostOutboundContactlistContactsAsyncWithHttpInfo(contactListId, body, priority, clearSystemData);
+             ApiResponse<List<DialerContact>> localVarResponse = await PostOutboundContactlistContactsAsyncWithHttpInfo(contactListId, body, priority, clearSystemData, doNotQueue);
              return localVarResponse.Data;
 
         }
@@ -16819,10 +16827,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactListId">Contact List ID</param>
         /// <param name="body">Contact</param>
-        /// <param name="priority">Contact priority.  True means the contact(s) will be dialed next, false means the contact will go to the end of the contact queue. (optional)</param>
-        /// <param name="clearSystemData">Clear system data.  True means the system data stored on the contact will be cleared if the contact already exists (attempts, callable status, etc), false means it won&#39;t. (optional)</param>
+        /// <param name="priority">Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional)</param>
+        /// <param name="clearSystemData">Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won&#39;t. (optional)</param>
+        /// <param name="doNotQueue">Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed; False means that updated contacts will be requeued, according to the &#39;priority&#39; parameter. (optional)</param>
         /// <returns>Task of ApiResponse (List&lt;DialerContact&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null)
+        public async System.Threading.Tasks.Task<ApiResponse<List<DialerContact>>> PostOutboundContactlistContactsAsyncWithHttpInfo (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
         { 
             // verify the required parameter 'contactListId' is set
             if (contactListId == null)
@@ -16869,6 +16878,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (priority != null) localVarQueryParams.Add(new Tuple<string, string>("priority", this.Configuration.ApiClient.ParameterToString(priority)));
             if (clearSystemData != null) localVarQueryParams.Add(new Tuple<string, string>("clearSystemData", this.Configuration.ApiClient.ParameterToString(clearSystemData)));
+            if (doNotQueue != null) localVarQueryParams.Add(new Tuple<string, string>("doNotQueue", this.Configuration.ApiClient.ParameterToString(doNotQueue)));
 
             // Header params
 
