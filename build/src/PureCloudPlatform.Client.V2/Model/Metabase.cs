@@ -87,6 +87,66 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum External for "EXTERNAL"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL")]
+            External,
+            
+            /// <summary>
+            /// Enum ExternalPcv for "EXTERNAL_PCV"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_PCV")]
+            ExternalPcv,
+            
+            /// <summary>
+            /// Enum ExternalPcvAws for "EXTERNAL_PCV_AWS"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_PCV_AWS")]
+            ExternalPcvAws,
+            
+            /// <summary>
+            /// Enum ExternalByocCarrier for "EXTERNAL_BYOC_CARRIER"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_BYOC_CARRIER")]
+            ExternalByocCarrier,
+            
+            /// <summary>
+            /// Enum ExternalByocPbx for "EXTERNAL_BYOC_PBX"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_BYOC_PBX")]
+            ExternalByocPbx,
+            
+            /// <summary>
+            /// Enum Station for "STATION"
+            /// </summary>
+            [EnumMember(Value = "STATION")]
+            Station,
+            
+            /// <summary>
+            /// Enum Tie for "TIE"
+            /// </summary>
+            [EnumMember(Value = "TIE")]
+            Tie
+        }
+        
+        
+        
+        
         
         
         
@@ -117,6 +177,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Type
+        /// </summary>
+        [DataMember(Name="type", EmitDefaultValue=false)]
+        public TypeEnum? Type { get; set; }
         
         
         
@@ -173,8 +241,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Type">Type.</param>
         
-        public Metabase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null)
+        
+        
+        
+        public Metabase(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, TypeEnum? Type = null)
         {
             
             
@@ -190,6 +262,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
             
             
             
@@ -312,6 +388,15 @@ this.CreatedByApp = CreatedByApp;
             
             
             
+            
+            
+this.Type = Type;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -407,6 +492,8 @@ this.CreatedByApp = CreatedByApp;
         
         
         
+        
+        
         /// <summary>
         /// The URI for this object
         /// </summary>
@@ -445,6 +532,8 @@ this.CreatedByApp = CreatedByApp;
             sb.Append("  ModifiedByApp: ").Append(ModifiedByApp).Append("\n");
             
             sb.Append("  CreatedByApp: ").Append(CreatedByApp).Append("\n");
+            
+            sb.Append("  Type: ").Append(Type).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -540,6 +629,11 @@ this.CreatedByApp = CreatedByApp;
                     this.CreatedByApp.Equals(other.CreatedByApp)
                 ) &&
                 (
+                    this.Type == other.Type ||
+                    this.Type != null &&
+                    this.Type.Equals(other.Type)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -590,6 +684,9 @@ this.CreatedByApp = CreatedByApp;
                 
                 if (this.CreatedByApp != null)
                     hash = hash * 59 + this.CreatedByApp.GetHashCode();
+                
+                if (this.Type != null)
+                    hash = hash * 59 + this.Type.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -21,6 +21,7 @@ title: ExternalOrganization
 | **Websites** | **List&lt;string&gt;** |  | [optional] |
 | **Tickers** | [**List&lt;Ticker&gt;**](Ticker.html) |  | [optional] |
 | **TwitterId** | [**TwitterId**](TwitterId.html) |  | [optional] |
+| **ExternalSystemUrl** | **string** | Identifies an external system-of-record resource that may have more detailed information on the organization | [optional] |
 | **ModifyDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **CreateDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Trustor** | [**Trustor**](Trustor.html) |  | [optional] |

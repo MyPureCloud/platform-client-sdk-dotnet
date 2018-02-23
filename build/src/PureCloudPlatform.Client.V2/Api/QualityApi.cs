@@ -1115,9 +1115,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>EvaluationForm</returns>
-        EvaluationForm PostQualityPublishedforms (EvaluationForm body);
+        EvaluationForm PostQualityPublishedforms (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -1126,9 +1126,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        ApiResponse<EvaluationForm> PostQualityPublishedformsWithHttpInfo (EvaluationForm body);
+        ApiResponse<EvaluationForm> PostQualityPublishedformsWithHttpInfo (PublishForm body);
         
         /// <summary>
         /// Publish an evaluation form.
@@ -1137,7 +1137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>EvaluationForm</returns>
         EvaluationForm PostQualityPublishedformsEvaluations (PublishForm body);
 
@@ -1148,7 +1148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
         ApiResponse<EvaluationForm> PostQualityPublishedformsEvaluationsWithHttpInfo (PublishForm body);
         
@@ -2447,9 +2447,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of EvaluationForm</returns>
-        System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (EvaluationForm body);
+        System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (PublishForm body);
 
         /// <summary>
         /// Publish an evaluation form.
@@ -2458,9 +2458,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (EvaluationForm body);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (PublishForm body);
         
         /// <summary>
         /// Publish an evaluation form.
@@ -2469,7 +2469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of EvaluationForm</returns>
         System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsEvaluationsAsync (PublishForm body);
 
@@ -2480,7 +2480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
         System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsEvaluationsAsyncWithHttpInfo (PublishForm body);
         
@@ -11075,9 +11075,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>EvaluationForm</returns>
-        public EvaluationForm PostQualityPublishedforms (EvaluationForm body)
+        public EvaluationForm PostQualityPublishedforms (PublishForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = PostQualityPublishedformsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11087,9 +11087,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
-        public ApiResponse< EvaluationForm > PostQualityPublishedformsWithHttpInfo (EvaluationForm body)
+        public ApiResponse< EvaluationForm > PostQualityPublishedformsWithHttpInfo (PublishForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -11173,9 +11173,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of EvaluationForm</returns>
-        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (EvaluationForm body)
+        public async System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsAsync (PublishForm body)
         {
              ApiResponse<EvaluationForm> localVarResponse = await PostQualityPublishedformsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -11186,9 +11186,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (EvaluationForm body)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsAsyncWithHttpInfo (PublishForm body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -11274,7 +11274,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>EvaluationForm</returns>
         public EvaluationForm PostQualityPublishedformsEvaluations (PublishForm body)
         {
@@ -11286,7 +11286,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>ApiResponse of EvaluationForm</returns>
         public ApiResponse< EvaluationForm > PostQualityPublishedformsEvaluationsWithHttpInfo (PublishForm body)
         { 
@@ -11372,7 +11372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of EvaluationForm</returns>
         public async System.Threading.Tasks.Task<EvaluationForm> PostQualityPublishedformsEvaluationsAsync (PublishForm body)
         {
@@ -11385,7 +11385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Publish an evaluation form. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Evaluation form</param>
+        /// <param name="body">Publish request containing id of form to publish</param>
         /// <returns>Task of ApiResponse (EvaluationForm)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<EvaluationForm>> PostQualityPublishedformsEvaluationsAsyncWithHttpInfo (PublishForm body)
         { 

@@ -65,6 +65,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="PolicyActions" /> class.
@@ -95,6 +100,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="AssignSurveys">AssignSurveys.</param>
+        
+        
+        
         /// <param name="RetentionDuration">RetentionDuration.</param>
         
         
@@ -106,8 +115,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaTranscriptions">MediaTranscriptions.</param>
         
         
-        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
+        public PolicyActions(bool? RetainRecording = null, bool? DeleteRecording = null, bool? AlwaysDelete = null, List<EvaluationAssignment> AssignEvaluations = null, List<MeteredEvaluationAssignment> AssignMeteredEvaluations = null, List<CalibrationAssignment> AssignCalibrations = null, List<SurveyAssignment> AssignSurveys = null, RetentionDuration RetentionDuration = null, InitiateScreenRecording InitiateScreenRecording = null, List<MediaTranscription> MediaTranscriptions = null)
         {
+            
+            
+            
+            
             
             
             
@@ -204,6 +217,15 @@ this.AssignCalibrations = AssignCalibrations;
             
             
             
+this.AssignSurveys = AssignSurveys;
+            
+            
+            
+            
+            
+            
+            
+            
 this.RetentionDuration = RetentionDuration;
             
             
@@ -283,6 +305,14 @@ this.MediaTranscriptions = MediaTranscriptions;
         
         
         /// <summary>
+        /// Gets or Sets AssignSurveys
+        /// </summary>
+        [DataMember(Name="assignSurveys", EmitDefaultValue=false)]
+        public List<SurveyAssignment> AssignSurveys { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets RetentionDuration
         /// </summary>
         [DataMember(Name="retentionDuration", EmitDefaultValue=false)]
@@ -325,6 +355,8 @@ this.MediaTranscriptions = MediaTranscriptions;
             sb.Append("  AssignMeteredEvaluations: ").Append(AssignMeteredEvaluations).Append("\n");
             
             sb.Append("  AssignCalibrations: ").Append(AssignCalibrations).Append("\n");
+            
+            sb.Append("  AssignSurveys: ").Append(AssignSurveys).Append("\n");
             
             sb.Append("  RetentionDuration: ").Append(RetentionDuration).Append("\n");
             
@@ -399,6 +431,11 @@ this.MediaTranscriptions = MediaTranscriptions;
                     this.AssignCalibrations.SequenceEqual(other.AssignCalibrations)
                 ) &&
                 (
+                    this.AssignSurveys == other.AssignSurveys ||
+                    this.AssignSurveys != null &&
+                    this.AssignSurveys.SequenceEqual(other.AssignSurveys)
+                ) &&
+                (
                     this.RetentionDuration == other.RetentionDuration ||
                     this.RetentionDuration != null &&
                     this.RetentionDuration.Equals(other.RetentionDuration)
@@ -444,6 +481,9 @@ this.MediaTranscriptions = MediaTranscriptions;
                 
                 if (this.AssignCalibrations != null)
                     hash = hash * 59 + this.AssignCalibrations.GetHashCode();
+                
+                if (this.AssignSurveys != null)
+                    hash = hash * 59 + this.AssignSurveys.GetHashCode();
                 
                 if (this.RetentionDuration != null)
                     hash = hash * 59 + this.RetentionDuration.GetHashCode();

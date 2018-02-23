@@ -82,12 +82,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// The direction of the call relating to the current user
         /// </summary>
         /// <value>The direction of the call relating to the current user</value>
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
+        
+        
+        
+        
+        
+        
         
         
         
@@ -136,9 +151,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="WasCallback">Was this conversation a callback.</param>
         
-        public CallHistoryConversation(string Name = null, List<CallHistoryParticipant> Participants = null, DirectionEnum? Direction = null, bool? WentToVoicemail = null, bool? MissedCall = null, DateTime? StartTime = null, bool? WasConference = null)
+        
+        
+        /// <param name="HadScreenShare">Did this conversation have a screen share session.</param>
+        
+        
+        
+        /// <param name="HadCobrowse">Did this conversation have a cobrowse session.</param>
+        
+        
+        
+        
+        public CallHistoryConversation(string Name = null, List<CallHistoryParticipant> Participants = null, DirectionEnum? Direction = null, bool? WentToVoicemail = null, bool? MissedCall = null, DateTime? StartTime = null, bool? WasConference = null, bool? WasCallback = null, bool? HadScreenShare = null, bool? HadCobrowse = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -240,6 +279,33 @@ this.WasConference = WasConference;
             
             
             
+            
+            
+this.WasCallback = WasCallback;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HadScreenShare = HadScreenShare;
+            
+            
+            
+            
+            
+            
+            
+            
+this.HadCobrowse = HadCobrowse;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -309,6 +375,33 @@ this.WasConference = WasConference;
         
         
         /// <summary>
+        /// Was this conversation a callback
+        /// </summary>
+        /// <value>Was this conversation a callback</value>
+        [DataMember(Name="wasCallback", EmitDefaultValue=false)]
+        public bool? WasCallback { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Did this conversation have a screen share session
+        /// </summary>
+        /// <value>Did this conversation have a screen share session</value>
+        [DataMember(Name="hadScreenShare", EmitDefaultValue=false)]
+        public bool? HadScreenShare { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Did this conversation have a cobrowse session
+        /// </summary>
+        /// <value>Did this conversation have a cobrowse session</value>
+        [DataMember(Name="hadCobrowse", EmitDefaultValue=false)]
+        public bool? HadCobrowse { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -340,6 +433,12 @@ this.WasConference = WasConference;
             sb.Append("  StartTime: ").Append(StartTime).Append("\n");
             
             sb.Append("  WasConference: ").Append(WasConference).Append("\n");
+            
+            sb.Append("  WasCallback: ").Append(WasCallback).Append("\n");
+            
+            sb.Append("  HadScreenShare: ").Append(HadScreenShare).Append("\n");
+            
+            sb.Append("  HadCobrowse: ").Append(HadCobrowse).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -420,6 +519,21 @@ this.WasConference = WasConference;
                     this.WasConference.Equals(other.WasConference)
                 ) &&
                 (
+                    this.WasCallback == other.WasCallback ||
+                    this.WasCallback != null &&
+                    this.WasCallback.Equals(other.WasCallback)
+                ) &&
+                (
+                    this.HadScreenShare == other.HadScreenShare ||
+                    this.HadScreenShare != null &&
+                    this.HadScreenShare.Equals(other.HadScreenShare)
+                ) &&
+                (
+                    this.HadCobrowse == other.HadCobrowse ||
+                    this.HadCobrowse != null &&
+                    this.HadCobrowse.Equals(other.HadCobrowse)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -461,6 +575,15 @@ this.WasConference = WasConference;
                 
                 if (this.WasConference != null)
                     hash = hash * 59 + this.WasConference.GetHashCode();
+                
+                if (this.WasCallback != null)
+                    hash = hash * 59 + this.WasCallback.GetHashCode();
+                
+                if (this.HadScreenShare != null)
+                    hash = hash * 59 + this.HadScreenShare.GetHashCode();
+                
+                if (this.HadCobrowse != null)
+                    hash = hash * 59 + this.HadCobrowse.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

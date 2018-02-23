@@ -41,8 +41,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
 | [**PostUserInvite**](UsersApi.html#postuserinvite) | **POST** /api/v2/users/{userId}/invite | Send an activation email to the user |
+| [**PostUserPassword**](UsersApi.html#postuserpassword) | **POST** /api/v2/users/{userId}/password | Change a users password |
 | [**PostUserRoutingskills**](UsersApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PostUsers**](UsersApi.html#postusers) | **POST** /api/v2/users | Create user |
+| [**PostUsersMePassword**](UsersApi.html#postusersmepassword) | **POST** /api/v2/users/me/password | Change your password |
 | [**PostUsersSearch**](UsersApi.html#postuserssearch) | **POST** /api/v2/users/search | Search users |
 | [**PutUserCallforwarding**](UsersApi.html#putusercallforwarding) | **PUT** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserOutofoffice**](UsersApi.html#putuseroutofoffice) | **PUT** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
@@ -2453,6 +2455,75 @@ namespace Example
 
 void (empty response body)
 
+<a name="postuserpassword"></a>
+
+## void PostUserPassword (string userId, ChangePasswordRequest body)
+
+Change a users password
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUserPasswordExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
+            var body = new ChangePasswordRequest(); // ChangePasswordRequest | Password
+            
+            
+
+            try
+            {
+                
+                // Change a users password
+                
+                apiInstance.PostUserPassword(userId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUserPassword: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**ChangePasswordRequest**](ChangePasswordRequest.html)| Password |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
 <a name="postuserroutingskills"></a>
 
 ## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserRoutingskills (string userId, UserRoutingSkillPost body)
@@ -2586,6 +2657,69 @@ namespace Example
 ### Return type
 
 [**User**](User.html)
+
+<a name="postusersmepassword"></a>
+
+## void PostUsersMePassword (ChangeMyPasswordRequest body)
+
+Change your password
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUsersMePasswordExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            
+            var body = new ChangeMyPasswordRequest(); // ChangeMyPasswordRequest | Password
+            
+            
+
+            try
+            {
+                
+                // Change your password
+                
+                apiInstance.PostUsersMePassword(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PostUsersMePassword: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ChangeMyPasswordRequest**](ChangeMyPasswordRequest.html)| Password |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="postuserssearch"></a>
 

@@ -85,6 +85,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactListNotification" /> class.
@@ -139,11 +149,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="AutomaticTimeZoneMapping">AutomaticTimeZoneMapping.</param>
+        
+        
+        
+        /// <param name="ZipCodeColumnName">ZipCodeColumnName.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public ContactListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactListNotificationPhoneColumns> PhoneColumns = null, ContactListNotificationImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DocumentDataV2NotificationCreatedBy AttemptLimits = null, Object AdditionalProperties = null)
+        public ContactListNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, List<string> ColumnNames = null, List<ContactListNotificationPhoneColumns> PhoneColumns = null, ContactListNotificationImportStatus ImportStatus = null, string PreviewModeColumnName = null, List<string> PreviewModeAcceptedValues = null, int? Size = null, DocumentDataV2NotificationCreatedBy AttemptLimits = null, bool? AutomaticTimeZoneMapping = null, string ZipCodeColumnName = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -310,6 +336,24 @@ this.AttemptLimits = AttemptLimits;
             
             
             
+this.AutomaticTimeZoneMapping = AutomaticTimeZoneMapping;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ZipCodeColumnName = ZipCodeColumnName;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AdditionalProperties = AdditionalProperties;
             
             
@@ -416,6 +460,22 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         /// <summary>
+        /// Gets or Sets AutomaticTimeZoneMapping
+        /// </summary>
+        [DataMember(Name="automaticTimeZoneMapping", EmitDefaultValue=false)]
+        public bool? AutomaticTimeZoneMapping { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets ZipCodeColumnName
+        /// </summary>
+        [DataMember(Name="zipCodeColumnName", EmitDefaultValue=false)]
+        public string ZipCodeColumnName { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -454,6 +514,10 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  Size: ").Append(Size).Append("\n");
             
             sb.Append("  AttemptLimits: ").Append(AttemptLimits).Append("\n");
+            
+            sb.Append("  AutomaticTimeZoneMapping: ").Append(AutomaticTimeZoneMapping).Append("\n");
+            
+            sb.Append("  ZipCodeColumnName: ").Append(ZipCodeColumnName).Append("\n");
             
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             
@@ -554,6 +618,16 @@ this.AdditionalProperties = AdditionalProperties;
                     this.AttemptLimits.Equals(other.AttemptLimits)
                 ) &&
                 (
+                    this.AutomaticTimeZoneMapping == other.AutomaticTimeZoneMapping ||
+                    this.AutomaticTimeZoneMapping != null &&
+                    this.AutomaticTimeZoneMapping.Equals(other.AutomaticTimeZoneMapping)
+                ) &&
+                (
+                    this.ZipCodeColumnName == other.ZipCodeColumnName ||
+                    this.ZipCodeColumnName != null &&
+                    this.ZipCodeColumnName.Equals(other.ZipCodeColumnName)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -607,6 +681,12 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.AttemptLimits != null)
                     hash = hash * 59 + this.AttemptLimits.GetHashCode();
+                
+                if (this.AutomaticTimeZoneMapping != null)
+                    hash = hash * 59 + this.AutomaticTimeZoneMapping.GetHashCode();
+                
+                if (this.ZipCodeColumnName != null)
+                    hash = hash * 59 + this.ZipCodeColumnName.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

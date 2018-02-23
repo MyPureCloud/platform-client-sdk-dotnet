@@ -221,6 +221,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Operation> DeleteFlowsWithHttpInfo (List<string> id);
         
         /// <summary>
+        /// deletes a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns></returns>
+        void DeleteFlowsDatatable (string datatableId);
+
+        /// <summary>
+        /// deletes a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId);
+        
+        /// <summary>
+        /// Delete a row entry
+        /// </summary>
+        /// <remarks>
+        /// Deletes a row with a given rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns></returns>
+        void DeleteFlowsDatatableRow (string datatableId, string rowId);
+
+        /// <summary>
+        /// Delete a row entry
+        /// </summary>
+        /// <remarks>
+        /// Deletes a row with a given rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteFlowsDatatableRowWithHttpInfo (string datatableId, string rowId);
+        
+        /// <summary>
         /// Get Dependency Tracking objects that have a given display name
         /// </summary>
         /// <remarks>
@@ -1133,6 +1179,102 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
         
         /// <summary>
+        /// Returns a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Given a datableid returns the schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>JsonSchemaDocument</returns>
+        JsonSchemaDocument GetFlowsDatatable (string datatableId, bool? showbrief = null);
+
+        /// <summary>
+        /// Returns a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Given a datableid returns the schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>ApiResponse of JsonSchemaDocument</returns>
+        ApiResponse<JsonSchemaDocument> GetFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null);
+        
+        /// <summary>
+        /// Returns a specific row for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null);
+
+        /// <summary>
+        /// Returns a specific row for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> GetFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
+        
+        /// <summary>
+        /// Returns the rows for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
+        List<Dictionary<string, Object>> GetFlowsDatatableRows (string datatableId, bool? showbrief = null);
+
+        /// <summary>
+        /// Returns the rows for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>ApiResponse of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
+        ApiResponse<List<Dictionary<string, Object>>> GetFlowsDatatableRowsWithHttpInfo (string datatableId, bool? showbrief = null);
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>List&lt;JsonSchemaDocument&gt;</returns>
+        List<JsonSchemaDocument> GetFlowsDatatables (bool? showbrief = null);
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>ApiResponse of List&lt;JsonSchemaDocument&gt;</returns>
+        ApiResponse<List<JsonSchemaDocument>> GetFlowsDatatablesWithHttpInfo (bool? showbrief = null);
+        
+        /// <summary>
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
@@ -1513,6 +1655,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Flow> PostFlowsActionsUnlockWithHttpInfo (string flow);
         
         /// <summary>
+        /// Create a new row entry
+        /// </summary>
+        /// <remarks>
+        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> PostFlowsDatatableRows (string datatableId, Object dataTableRow);
+
+        /// <summary>
+        /// Create a new row entry
+        /// </summary>
+        /// <remarks>
+        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> PostFlowsDatatableRowsWithHttpInfo (string datatableId, Object dataTableRow);
+        
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition
+        /// </summary>
+        /// <remarks>
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>JsonSchemaDocument</returns>
+        JsonSchemaDocument PostFlowsDatatables (JsonSchemaDocument body);
+
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition
+        /// </summary>
+        /// <remarks>
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>ApiResponse of JsonSchemaDocument</returns>
+        ApiResponse<JsonSchemaDocument> PostFlowsDatatablesWithHttpInfo (JsonSchemaDocument body);
+        
+        /// <summary>
         /// Update an IVR Config.
         /// </summary>
         /// <remarks>
@@ -1683,6 +1871,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Flow</returns>
         ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body = null);
+        
+        /// <summary>
+        /// Updates a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>JsonSchemaDocument</returns>
+        JsonSchemaDocument PutFlowsDatatable (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+
+        /// <summary>
+        /// Updates a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>ApiResponse of JsonSchemaDocument</returns>
+        ApiResponse<JsonSchemaDocument> PutFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+        
+        /// <summary>
+        /// Update a row entry
+        /// </summary>
+        /// <remarks>
+        /// Updates a row with the given to the new values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        Dictionary<string, Object> PutFlowsDatatableRow (string datatableId, string rowId, Object body = null);
+
+        /// <summary>
+        /// Update a row entry
+        /// </summary>
+        /// <remarks>
+        /// Updates a row with the given to the new values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        ApiResponse<Dictionary<string, Object>> PutFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, Object body = null);
         
         #endregion Synchronous Operations
         
@@ -1891,6 +2131,52 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">List of Flow IDs</param>
         /// <returns>Task of ApiResponse (Operation)</returns>
         System.Threading.Tasks.Task<ApiResponse<Operation>> DeleteFlowsAsyncWithHttpInfo (List<string> id);
+        
+        /// <summary>
+        /// deletes a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId);
+
+        /// <summary>
+        /// deletes a specific datatable by id
+        /// </summary>
+        /// <remarks>
+        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId);
+        
+        /// <summary>
+        /// Delete a row entry
+        /// </summary>
+        /// <remarks>
+        /// Deletes a row with a given rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteFlowsDatatableRowAsync (string datatableId, string rowId);
+
+        /// <summary>
+        /// Delete a row entry
+        /// </summary>
+        /// <remarks>
+        /// Deletes a row with a given rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId);
         
         /// <summary>
         /// Get Dependency Tracking objects that have a given display name
@@ -2805,6 +3091,102 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
         
         /// <summary>
+        /// Returns a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Given a datableid returns the schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>Task of JsonSchemaDocument</returns>
+        System.Threading.Tasks.Task<JsonSchemaDocument> GetFlowsDatatableAsync (string datatableId, bool? showbrief = null);
+
+        /// <summary>
+        /// Returns a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Given a datableid returns the schema associated with it.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null);
+        
+        /// <summary>
+        /// Returns a specific row for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> GetFlowsDatatableRowAsync (string datatableId, string rowId, bool? showbrief = null);
+
+        /// <summary>
+        /// Returns a specific row for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, bool? showbrief = null);
+        
+        /// <summary>
+        /// Returns the rows for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>Task of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
+        System.Threading.Tasks.Task<List<Dictionary<string, Object>>> GetFlowsDatatableRowsAsync (string datatableId, bool? showbrief = null);
+
+        /// <summary>
+        /// Returns the rows for the datatable
+        /// </summary>
+        /// <remarks>
+        /// Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (List&lt;Dictionary&lt;string, Object&gt;&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<Dictionary<string, Object>>>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, bool? showbrief = null);
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>Task of List&lt;JsonSchemaDocument&gt;</returns>
+        System.Threading.Tasks.Task<List<JsonSchemaDocument>> GetFlowsDatatablesAsync (bool? showbrief = null);
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org
+        /// </summary>
+        /// <remarks>
+        /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (List&lt;JsonSchemaDocument&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<List<JsonSchemaDocument>>> GetFlowsDatatablesAsyncWithHttpInfo (bool? showbrief = null);
+        
+        /// <summary>
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
@@ -3185,6 +3567,52 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsActionsUnlockAsyncWithHttpInfo (string flow);
         
         /// <summary>
+        /// Create a new row entry
+        /// </summary>
+        /// <remarks>
+        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> PostFlowsDatatableRowsAsync (string datatableId, Object dataTableRow);
+
+        /// <summary>
+        /// Create a new row entry
+        /// </summary>
+        /// <remarks>
+        /// Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, Object dataTableRow);
+        
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition
+        /// </summary>
+        /// <remarks>
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>Task of JsonSchemaDocument</returns>
+        System.Threading.Tasks.Task<JsonSchemaDocument> PostFlowsDatatablesAsync (JsonSchemaDocument body);
+
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition
+        /// </summary>
+        /// <remarks>
+        /// This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PostFlowsDatatablesAsyncWithHttpInfo (JsonSchemaDocument body);
+        
+        /// <summary>
         /// Update an IVR Config.
         /// </summary>
         /// <remarks>
@@ -3355,6 +3783,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Flow)</returns>
         System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body = null);
+        
+        /// <summary>
+        /// Updates a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>Task of JsonSchemaDocument</returns>
+        System.Threading.Tasks.Task<JsonSchemaDocument> PutFlowsDatatableAsync (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+
+        /// <summary>
+        /// Updates a specific datatable by datatableId
+        /// </summary>
+        /// <remarks>
+        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
+        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+        
+        /// <summary>
+        /// Update a row entry
+        /// </summary>
+        /// <remarks>
+        /// Updates a row with the given to the new values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        System.Threading.Tasks.Task<Dictionary<string, Object>> PutFlowsDatatableRowAsync (string datatableId, string rowId, Object body = null);
+
+        /// <summary>
+        /// Update a row entry
+        /// </summary>
+        /// <remarks>
+        /// Updates a row with the given to the new values.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PutFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, Object body = null);
         
         #endregion Asynchronous Operations
         
@@ -5181,6 +5661,397 @@ namespace PureCloudPlatform.Client.V2.Api
                 localVarHeaders,
                 (Operation) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Operation)));
             
+        }
+
+        
+        
+        /// <summary>
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns></returns>
+        public void DeleteFlowsDatatable (string datatableId)
+        {
+             DeleteFlowsDatatableWithHttpInfo(datatableId);
+        }
+
+        /// <summary>
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->DeleteFlowsDatatable");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        /// <summary>
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId)
+        {
+             await DeleteFlowsDatatableAsyncWithHttpInfo(datatableId);
+
+        }
+
+        /// <summary>
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->DeleteFlowsDatatable");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        
+        /// <summary>
+        /// Delete a row entry Deletes a row with a given rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns></returns>
+        public void DeleteFlowsDatatableRow (string datatableId, string rowId)
+        {
+             DeleteFlowsDatatableRowWithHttpInfo(datatableId, rowId);
+        }
+
+        /// <summary>
+        /// Delete a row entry Deletes a row with a given rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteFlowsDatatableRowWithHttpInfo (string datatableId, string rowId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->DeleteFlowsDatatableRow");
+            // verify the required parameter 'rowId' is set
+            if (rowId == null)
+                throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->DeleteFlowsDatatableRow");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatableRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatableRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        /// <summary>
+        /// Delete a row entry Deletes a row with a given rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteFlowsDatatableRowAsync (string datatableId, string rowId)
+        {
+             await DeleteFlowsDatatableRowAsyncWithHttpInfo(datatableId, rowId);
+
+        }
+
+        /// <summary>
+        /// Delete a row entry Deletes a row with a given rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->DeleteFlowsDatatableRow");
+            
+            // verify the required parameter 'rowId' is set
+            if (rowId == null)
+                throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->DeleteFlowsDatatableRow");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatableRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteFlowsDatatableRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
         }
 
         
@@ -11929,6 +12800,794 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>JsonSchemaDocument</returns>
+        public JsonSchemaDocument GetFlowsDatatable (string datatableId, bool? showbrief = null)
+        {
+             ApiResponse<JsonSchemaDocument> localVarResponse = GetFlowsDatatableWithHttpInfo(datatableId, showbrief);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>ApiResponse of JsonSchemaDocument</returns>
+        public ApiResponse< JsonSchemaDocument > GetFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatable");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+                localVarHeaders,
+                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+            
+        }
+
+        
+        /// <summary>
+        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>Task of JsonSchemaDocument</returns>
+        public async System.Threading.Tasks.Task<JsonSchemaDocument> GetFlowsDatatableAsync (string datatableId, bool? showbrief = null)
+        {
+             ApiResponse<JsonSchemaDocument> localVarResponse = await GetFlowsDatatableAsyncWithHttpInfo(datatableId, showbrief);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatable");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+                localVarHeaders,
+                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null)
+        {
+             ApiResponse<Dictionary<string, Object>> localVarResponse = GetFlowsDatatableRowWithHttpInfo(datatableId, rowId, showbrief);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > GetFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, bool? showbrief = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableRow");
+            // verify the required parameter 'rowId' is set
+            if (rowId == null)
+                throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->GetFlowsDatatableRow");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
+            
+        }
+
+        
+        /// <summary>
+        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> GetFlowsDatatableRowAsync (string datatableId, string rowId, bool? showbrief = null)
+        {
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await GetFlowsDatatableRowAsyncWithHttpInfo(datatableId, rowId, showbrief);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns a specific row for the datatable Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">The key for the row</param>
+        /// <param name="showbrief">if true returns just the key field for the row (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, bool? showbrief = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableRow");
+            
+            // verify the required parameter 'rowId' is set
+            if (rowId == null)
+                throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->GetFlowsDatatableRow");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
+        public List<Dictionary<string, Object>> GetFlowsDatatableRows (string datatableId, bool? showbrief = null)
+        {
+             ApiResponse<List<Dictionary<string, Object>>> localVarResponse = GetFlowsDatatableRowsWithHttpInfo(datatableId, showbrief);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>ApiResponse of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
+        public ApiResponse< List<Dictionary<string, Object>> > GetFlowsDatatableRowsWithHttpInfo (string datatableId, bool? showbrief = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableRows");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRows: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Dictionary<string, Object>>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Dictionary<string, Object>>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Dictionary<string, Object>>)));
+            
+        }
+
+        
+        /// <summary>
+        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>Task of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
+        public async System.Threading.Tasks.Task<List<Dictionary<string, Object>>> GetFlowsDatatableRowsAsync (string datatableId, bool? showbrief = null)
+        {
+             ApiResponse<List<Dictionary<string, Object>>> localVarResponse = await GetFlowsDatatableRowsAsyncWithHttpInfo(datatableId, showbrief);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Returns the rows for the datatable Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (List&lt;Dictionary&lt;string, Object&gt;&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<Dictionary<string, Object>>>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, bool? showbrief = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableRows");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRows: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Dictionary<string, Object>>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Dictionary<string, Object>>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Dictionary<string, Object>>)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>List&lt;JsonSchemaDocument&gt;</returns>
+        public List<JsonSchemaDocument> GetFlowsDatatables (bool? showbrief = null)
+        {
+             ApiResponse<List<JsonSchemaDocument>> localVarResponse = GetFlowsDatatablesWithHttpInfo(showbrief);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>ApiResponse of List&lt;JsonSchemaDocument&gt;</returns>
+        public ApiResponse< List<JsonSchemaDocument> > GetFlowsDatatablesWithHttpInfo (bool? showbrief = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/datatables";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<JsonSchemaDocument>>(localVarStatusCode,
+                localVarHeaders,
+                (List<JsonSchemaDocument>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<JsonSchemaDocument>)));
+            
+        }
+
+        
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>Task of List&lt;JsonSchemaDocument&gt;</returns>
+        public async System.Threading.Tasks.Task<List<JsonSchemaDocument>> GetFlowsDatatablesAsync (bool? showbrief = null)
+        {
+             ApiResponse<List<JsonSchemaDocument>> localVarResponse = await GetFlowsDatatablesAsyncWithHttpInfo(showbrief);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <returns>Task of ApiResponse (List&lt;JsonSchemaDocument&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<List<JsonSchemaDocument>>> GetFlowsDatatablesAsyncWithHttpInfo (bool? showbrief = null)
+        { 
+
+            var localVarPath = "/api/v2/flows/datatables";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<JsonSchemaDocument>>(localVarStatusCode,
+                localVarHeaders,
+                (List<JsonSchemaDocument>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<JsonSchemaDocument>)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Rebuild Dependency Tracking data for an organization Asynchronous.  Notification topic: v2.architect.dependencytracking.build
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -15214,6 +16873,417 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> PostFlowsDatatableRows (string datatableId, Object dataTableRow)
+        {
+             ApiResponse<Dictionary<string, Object>> localVarResponse = PostFlowsDatatableRowsWithHttpInfo(datatableId, dataTableRow);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > PostFlowsDatatableRowsWithHttpInfo (string datatableId, Object dataTableRow)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableRows");
+            // verify the required parameter 'dataTableRow' is set
+            if (dataTableRow == null)
+                throw new ApiException(400, "Missing required parameter 'dataTableRow' when calling ArchitectApi->PostFlowsDatatableRows");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (dataTableRow != null && dataTableRow.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(dataTableRow); // http body (model) parameter
+            else
+                localVarPostBody = dataTableRow; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableRows: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableRows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
+            
+        }
+
+        
+        /// <summary>
+        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> PostFlowsDatatableRowsAsync (string datatableId, Object dataTableRow)
+        {
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await PostFlowsDatatableRowsAsyncWithHttpInfo(datatableId, dataTableRow);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new row entry Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="dataTableRow"></param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, Object dataTableRow)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableRows");
+            
+            // verify the required parameter 'dataTableRow' is set
+            if (dataTableRow == null)
+                throw new ApiException(400, "Missing required parameter 'dataTableRow' when calling ArchitectApi->PostFlowsDatatableRows");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (dataTableRow != null && dataTableRow.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(dataTableRow); // http body (model) parameter
+            else
+                localVarPostBody = dataTableRow; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableRows: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableRows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>JsonSchemaDocument</returns>
+        public JsonSchemaDocument PostFlowsDatatables (JsonSchemaDocument body)
+        {
+             ApiResponse<JsonSchemaDocument> localVarResponse = PostFlowsDatatablesWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>ApiResponse of JsonSchemaDocument</returns>
+        public ApiResponse< JsonSchemaDocument > PostFlowsDatatablesWithHttpInfo (JsonSchemaDocument body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatables");
+
+            var localVarPath = "/api/v2/flows/datatables";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatables: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+                localVarHeaders,
+                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+            
+        }
+
+        
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>Task of JsonSchemaDocument</returns>
+        public async System.Threading.Tasks.Task<JsonSchemaDocument> PostFlowsDatatablesAsync (JsonSchemaDocument body)
+        {
+             ApiResponse<JsonSchemaDocument> localVarResponse = await PostFlowsDatatablesAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a new datatable with the specified json-schema definition This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">datatable json-schema</param>
+        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PostFlowsDatatablesAsyncWithHttpInfo (JsonSchemaDocument body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatables");
+            
+
+            var localVarPath = "/api/v2/flows/datatables";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatables: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+                localVarHeaders,
+                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Update an IVR Config. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -16669,6 +18739,435 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Flow>(localVarStatusCode,
                 localVarHeaders,
                 (Flow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Flow)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>JsonSchemaDocument</returns>
+        public JsonSchemaDocument PutFlowsDatatable (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        {
+             ApiResponse<JsonSchemaDocument> localVarResponse = PutFlowsDatatableWithHttpInfo(datatableId, showbrief, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>ApiResponse of JsonSchemaDocument</returns>
+        public ApiResponse< JsonSchemaDocument > PutFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PutFlowsDatatable");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+                localVarHeaders,
+                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+            
+        }
+
+        
+        /// <summary>
+        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>Task of JsonSchemaDocument</returns>
+        public async System.Threading.Tasks.Task<JsonSchemaDocument> PutFlowsDatatableAsync (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        {
+             ApiResponse<JsonSchemaDocument> localVarResponse = await PutFlowsDatatableAsyncWithHttpInfo(datatableId, showbrief, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="body">datatable json-schema (optional)</param>
+        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PutFlowsDatatable");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatable: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+                localVarHeaders,
+                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Update a row entry Updates a row with the given to the new values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>Dictionary&lt;string, Object&gt;</returns>
+        public Dictionary<string, Object> PutFlowsDatatableRow (string datatableId, string rowId, Object body = null)
+        {
+             ApiResponse<Dictionary<string, Object>> localVarResponse = PutFlowsDatatableRowWithHttpInfo(datatableId, rowId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a row entry Updates a row with the given to the new values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>ApiResponse of Dictionary&lt;string, Object&gt;</returns>
+        public ApiResponse< Dictionary<string, Object> > PutFlowsDatatableRowWithHttpInfo (string datatableId, string rowId, Object body = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PutFlowsDatatableRow");
+            // verify the required parameter 'rowId' is set
+            if (rowId == null)
+                throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->PutFlowsDatatableRow");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatableRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatableRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
+            
+        }
+
+        
+        /// <summary>
+        /// Update a row entry Updates a row with the given to the new values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>Task of Dictionary&lt;string, Object&gt;</returns>
+        public async System.Threading.Tasks.Task<Dictionary<string, Object>> PutFlowsDatatableRowAsync (string datatableId, string rowId, Object body = null)
+        {
+             ApiResponse<Dictionary<string, Object>> localVarResponse = await PutFlowsDatatableRowAsyncWithHttpInfo(datatableId, rowId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a row entry Updates a row with the given to the new values.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="rowId">the key for the row</param>
+        /// <param name="body">datatable row (optional)</param>
+        /// <returns>Task of ApiResponse (Dictionary&lt;string, Object&gt;)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PutFlowsDatatableRowAsyncWithHttpInfo (string datatableId, string rowId, Object body = null)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PutFlowsDatatableRow");
+            
+            // verify the required parameter 'rowId' is set
+            if (rowId == null)
+                throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->PutFlowsDatatableRow");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatableRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatableRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Dictionary<string, Object>>(localVarStatusCode,
+                localVarHeaders,
+                (Dictionary<string, Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Dictionary<string, Object>)));
             
         }
 

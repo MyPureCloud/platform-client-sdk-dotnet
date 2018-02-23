@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="JsonSchemaDocument" /> class.
@@ -88,8 +93,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Properties">Properties.</param>
         
         
-        public JsonSchemaDocument(string Id = null, string Schema = null, string Title = null, string Description = null, string Type = null, List<string> Required = null, Dictionary<string, Object> Properties = null)
+        
+        /// <param name="AdditionalProperties">AdditionalProperties.</param>
+        
+        
+        public JsonSchemaDocument(string Id = null, string Schema = null, string Title = null, string Description = null, string Type = null, List<string> Required = null, Dictionary<string, Object> Properties = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
             
             
             
@@ -183,6 +196,15 @@ this.Properties = Properties;
             
             
             
+            
+            
+            
+            
+this.AdditionalProperties = AdditionalProperties;
+            
+            
+            
+            
         }
         
         
@@ -242,6 +264,14 @@ this.Properties = Properties;
         public Dictionary<string, Object> Properties { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets AdditionalProperties
+        /// </summary>
+        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
+        public Object AdditionalProperties { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -264,6 +294,8 @@ this.Properties = Properties;
             sb.Append("  Required: ").Append(Required).Append("\n");
             
             sb.Append("  Properties: ").Append(Properties).Append("\n");
+            
+            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -335,6 +367,11 @@ this.Properties = Properties;
                     this.Properties == other.Properties ||
                     this.Properties != null &&
                     this.Properties.SequenceEqual(other.Properties)
+                ) &&
+                (
+                    this.AdditionalProperties == other.AdditionalProperties ||
+                    this.AdditionalProperties != null &&
+                    this.AdditionalProperties.Equals(other.AdditionalProperties)
                 );
         }
 
@@ -370,6 +407,9 @@ this.Properties = Properties;
                 
                 if (this.Properties != null)
                     hash = hash * 59 + this.Properties.GetHashCode();
+                
+                if (this.AdditionalProperties != null)
+                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
                 
                 return hash;
             }

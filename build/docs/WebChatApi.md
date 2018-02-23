@@ -13,7 +13,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWebchatDeployments**](WebChatApi.html#getwebchatdeployments) | **GET** /api/v2/webchat/deployments | List WebChat deployments |
 | [**GetWebchatSettings**](WebChatApi.html#getwebchatsettings) | **GET** /api/v2/webchat/settings | Get WebChat deployment settings |
 | [**PostWebchatDeployments**](WebChatApi.html#postwebchatdeployments) | **POST** /api/v2/webchat/deployments | Create WebChat deployment |
-| [**PostWebchatSettings**](WebChatApi.html#postwebchatsettings) | **POST** /api/v2/webchat/settings | Create WebChat deployment settings |
 | [**PutWebchatDeployment**](WebChatApi.html#putwebchatdeployment) | **PUT** /api/v2/webchat/deployments/{deploymentId} | Update a WebChat deployment |
 | [**PutWebchatSettings**](WebChatApi.html#putwebchatsettings) | **PUT** /api/v2/webchat/settings | Update WebChat deployment settings |
 {: class="table table-striped"}
@@ -372,70 +371,6 @@ namespace Example
 ### Return type
 
 [**WebChatDeployment**](WebChatDeployment.html)
-
-<a name="postwebchatsettings"></a>
-
-## [**WebChatSettings**](WebChatSettings.html) PostWebchatSettings (WebChatSettings body)
-
-Create WebChat deployment settings
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostWebchatSettingsExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new WebChatApi();
-            
-            
-            
-            var body = new WebChatSettings(); // WebChatSettings | webChatSettings
-            
-            
-
-            try
-            {
-                
-                // Create WebChat deployment settings
-                
-                WebChatSettings result = apiInstance.PostWebchatSettings(body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling WebChatApi.PostWebchatSettings: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **body** | [**WebChatSettings**](WebChatSettings.html)| webChatSettings |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**WebChatSettings**](WebChatSettings.html)
 
 <a name="putwebchatdeployment"></a>
 

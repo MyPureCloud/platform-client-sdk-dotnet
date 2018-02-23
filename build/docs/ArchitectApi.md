@@ -16,6 +16,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteArchitectSystempromptResource**](ArchitectApi.html#deletearchitectsystempromptresource) | **DELETE** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Delete a system prompt resource override. |
 | [**DeleteFlow**](ArchitectApi.html#deleteflow) | **DELETE** /api/v2/flows/{flowId} | Delete flow |
 | [**DeleteFlows**](ArchitectApi.html#deleteflows) | **DELETE** /api/v2/flows | Batch-delete a list of flows |
+| [**DeleteFlowsDatatable**](ArchitectApi.html#deleteflowsdatatable) | **DELETE** /api/v2/flows/datatables/{datatableId} | deletes a specific datatable by id |
+| [**DeleteFlowsDatatableRow**](ArchitectApi.html#deleteflowsdatatablerow) | **DELETE** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Delete a row entry |
 | [**GetArchitectDependencytracking**](ArchitectApi.html#getarchitectdependencytracking) | **GET** /api/v2/architect/dependencytracking | Get Dependency Tracking objects that have a given display name |
 | [**GetArchitectDependencytrackingBuild**](ArchitectApi.html#getarchitectdependencytrackingbuild) | **GET** /api/v2/architect/dependencytracking/build | Get Dependency Tracking build status for an organization |
 | [**GetArchitectDependencytrackingConsumedresources**](ArchitectApi.html#getarchitectdependencytrackingconsumedresources) | **GET** /api/v2/architect/dependencytracking/consumedresources | Get resources that are consumed by a given Dependency Tracking object |
@@ -48,6 +50,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowVersionConfiguration**](ArchitectApi.html#getflowversionconfiguration) | **GET** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
 | [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **GET** /api/v2/flows/{flowId}/versions | Get flow version list |
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
+| [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **GET** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by datatableId |
+| [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **GET** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
+| [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable |
+| [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
 | [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **POST** /api/v2/architect/ivrs | Create IVR config. |
 | [**PostArchitectPromptHistory**](ArchitectApi.html#postarchitectprompthistory) | **POST** /api/v2/architect/prompts/{promptId}/history | Generate prompt history |
@@ -65,6 +71,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsActionsPublish**](ArchitectApi.html#postflowsactionspublish) | **POST** /api/v2/flows/actions/publish | Publish flow |
 | [**PostFlowsActionsRevert**](ArchitectApi.html#postflowsactionsrevert) | **POST** /api/v2/flows/actions/revert | Revert flow |
 | [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **POST** /api/v2/flows/actions/unlock | Unlock flow |
+| [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry |
+| [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
 | [**PutArchitectIvr**](ArchitectApi.html#putarchitectivr) | **PUT** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
 | [**PutArchitectPrompt**](ArchitectApi.html#putarchitectprompt) | **PUT** /api/v2/architect/prompts/{promptId} | Update specified user prompt |
 | [**PutArchitectPromptResource**](ArchitectApi.html#putarchitectpromptresource) | **PUT** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Update specified user prompt resource |
@@ -72,6 +80,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutArchitectSchedulegroup**](ArchitectApi.html#putarchitectschedulegroup) | **PUT** /api/v2/architect/schedulegroups/{scheduleGroupId} | Updates a schedule group by ID |
 | [**PutArchitectSystempromptResource**](ArchitectApi.html#putarchitectsystempromptresource) | **PUT** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Updates a system prompt resource override. |
 | [**PutFlow**](ArchitectApi.html#putflow) | **PUT** /api/v2/flows/{flowId} | Update flow |
+| [**PutFlowsDatatable**](ArchitectApi.html#putflowsdatatable) | **PUT** /api/v2/flows/datatables/{datatableId} | Updates a specific datatable by datatableId |
+| [**PutFlowsDatatableRow**](ArchitectApi.html#putflowsdatatablerow) | **PUT** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Update a row entry |
 {: class="table table-striped"}
 
 <a name="deletearchitectivr"></a>
@@ -660,6 +670,138 @@ namespace Example
 ### Return type
 
 [**Operation**](Operation.html)
+
+<a name="deleteflowsdatatable"></a>
+
+## void DeleteFlowsDatatable (string datatableId)
+
+deletes a specific datatable by id
+
+deletes an entire datatable (including schema and data) with a given datatableId)
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteFlowsDatatableExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+
+            try
+            {
+                
+                // deletes a specific datatable by id
+                
+                apiInstance.DeleteFlowsDatatable(datatableId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteFlowsDatatable: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteflowsdatatablerow"></a>
+
+## void DeleteFlowsDatatableRow (string datatableId, string rowId)
+
+Delete a row entry
+
+Deletes a row with a given rowId.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteFlowsDatatableRowExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+            
+            var rowId = rowId_example;  // string | the key for the row
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a row entry
+                
+                apiInstance.DeleteFlowsDatatableRow(datatableId, rowId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteFlowsDatatableRow: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **rowId** | **string**| the key for the row |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="getarchitectdependencytracking"></a>
 
@@ -3330,6 +3472,286 @@ namespace Example
 
 [**FlowEntityListing**](FlowEntityListing.html)
 
+<a name="getflowsdatatable"></a>
+
+## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetFlowsDatatable (string datatableId, bool? showbrief = null)
+
+Returns a specific datatable by datatableId
+
+Given a datableid returns the schema associated with it.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatableExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+            
+            var showbrief = true;  // bool? | If true returns a shortened version of the schema including the name, id and description] (optional)  (default to true)
+            
+            
+            
+
+            try
+            {
+                
+                // Returns a specific datatable by datatableId
+                
+                JsonSchemaDocument result = apiInstance.GetFlowsDatatable(datatableId, showbrief);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatable: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **showbrief** | **bool?**| If true returns a shortened version of the schema including the name, id and description] | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
+<a name="getflowsdatatablerow"></a>
+
+## **Dictionary&lt;string, Object&gt;** GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null)
+
+Returns a specific row for the datatable
+
+Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatableRowExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+            
+            var rowId = rowId_example;  // string | The key for the row
+            
+            
+            
+            
+            var showbrief = true;  // bool? | if true returns just the key field for the row (optional)  (default to true)
+            
+            
+            
+
+            try
+            {
+                
+                // Returns a specific row for the datatable
+                
+                Dictionary&lt;string, Object&gt; result = apiInstance.GetFlowsDatatableRow(datatableId, rowId, showbrief);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatableRow: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **rowId** | **string**| The key for the row |  |
+| **showbrief** | **bool?**| if true returns just the key field for the row | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, Object>**
+
+<a name="getflowsdatatablerows"></a>
+
+## **List&lt;Dictionary&lt;string, Object&gt;&gt;** GetFlowsDatatableRows (string datatableId, bool? showbrief = null)
+
+Returns the rows for the datatable
+
+Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatableRowsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+            
+            var showbrief = true;  // bool? | If true returns just the key value of the row (optional)  (default to true)
+            
+            
+            
+
+            try
+            {
+                
+                // Returns the rows for the datatable
+                
+                List&lt;Dictionary&lt;string, Object&gt;&gt; result = apiInstance.GetFlowsDatatableRows(datatableId, showbrief);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatableRows: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **showbrief** | **bool?**| If true returns just the key value of the row | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+**List<Dictionary<string, Object>>**
+
+<a name="getflowsdatatables"></a>
+
+## [**List&lt;JsonSchemaDocument&gt;**](JsonSchemaDocument.html) GetFlowsDatatables (bool? showbrief = null)
+
+Retrieve a list of datatables for the org
+
+Returns a metadata list of the datatables associated with this org, including ID, name and description.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetFlowsDatatablesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var showbrief = true;  // bool? | If true, returns a shortened version of the schema including the name, id and description (optional)  (default to true)
+            
+            
+            
+
+            try
+            {
+                
+                // Retrieve a list of datatables for the org
+                
+                List&lt;JsonSchemaDocument&gt; result = apiInstance.GetFlowsDatatables(showbrief);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetFlowsDatatables: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **showbrief** | **bool?**| If true, returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<JsonSchemaDocument>**](JsonSchemaDocument.html)
+
 <a name="postarchitectdependencytrackingbuild"></a>
 
 ## void PostArchitectDependencytrackingBuild ()
@@ -4432,6 +4854,140 @@ namespace Example
 
 [**Flow**](Flow.html)
 
+<a name="postflowsdatatablerows"></a>
+
+## **Dictionary&lt;string, Object&gt;** PostFlowsDatatableRows (string datatableId, Object dataTableRow)
+
+Create a new row entry
+
+Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsDatatableRowsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+            
+            var dataTableRow = ;  // Object | 
+            
+            
+            
+
+            try
+            {
+                
+                // Create a new row entry
+                
+                Dictionary&lt;string, Object&gt; result = apiInstance.PostFlowsDatatableRows(datatableId, dataTableRow);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsDatatableRows: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **dataTableRow** | **Object**|  |  |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, Object>**
+
+<a name="postflowsdatatables"></a>
+
+## [**JsonSchemaDocument**](JsonSchemaDocument.html) PostFlowsDatatables (JsonSchemaDocument body)
+
+Create a new datatable with the specified json-schema definition
+
+This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsDatatablesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            
+            var body = new JsonSchemaDocument(); // JsonSchemaDocument | datatable json-schema
+            
+            
+
+            try
+            {
+                
+                // Create a new datatable with the specified json-schema definition
+                
+                JsonSchemaDocument result = apiInstance.PostFlowsDatatables(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsDatatables: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
 <a name="putarchitectivr"></a>
 
 ## [**IVR**](IVR.html) PutArchitectIvr (string ivrId, IVR body = null)
@@ -4933,4 +5489,156 @@ namespace Example
 ### Return type
 
 [**Flow**](Flow.html)
+
+<a name="putflowsdatatable"></a>
+
+## [**JsonSchemaDocument**](JsonSchemaDocument.html) PutFlowsDatatable (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+
+Updates a specific datatable by datatableId
+
+Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutFlowsDatatableExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+            
+            var showbrief = true;  // bool? | If true returns a shortened version of the schema including the name, id and description (optional)  (default to true)
+            
+            
+            
+            
+            
+            var body = new JsonSchemaDocument(); // JsonSchemaDocument | datatable json-schema (optional) 
+            
+            
+
+            try
+            {
+                
+                // Updates a specific datatable by datatableId
+                
+                JsonSchemaDocument result = apiInstance.PutFlowsDatatable(datatableId, showbrief, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutFlowsDatatable: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **showbrief** | **bool?**| If true returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
+| **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
+<a name="putflowsdatatablerow"></a>
+
+## **Dictionary&lt;string, Object&gt;** PutFlowsDatatableRow (string datatableId, string rowId, Object body = null)
+
+Update a row entry
+
+Updates a row with the given to the new values.
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutFlowsDatatableRowExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var datatableId = datatableId_example;  // string | id of datatable
+            
+            
+            
+            
+            var rowId = rowId_example;  // string | the key for the row
+            
+            
+            
+            
+            var body = ;  // Object | datatable row (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Update a row entry
+                
+                Dictionary&lt;string, Object&gt; result = apiInstance.PutFlowsDatatableRow(datatableId, rowId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutFlowsDatatableRow: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **rowId** | **string**| the key for the row |  |
+| **body** | **Object**| datatable row | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+**Dictionary<string, Object>**
 

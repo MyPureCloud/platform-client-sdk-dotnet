@@ -21,10 +21,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Result
+        /// Gets or Sets Status
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ResultEnum
+        public enum StatusEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -41,16 +41,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Processing,
             
             /// <summary>
-            /// Enum Error for "Error"
-            /// </summary>
-            [EnumMember(Value = "Error")]
-            Error,
-            
-            /// <summary>
             /// Enum Complete for "Complete"
             /// </summary>
             [EnumMember(Value = "Complete")]
-            Complete
+            Complete,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error
         }
         
         
@@ -58,10 +58,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets Result
+        /// Gets or Sets Status
         /// </summary>
-        [DataMember(Name="result", EmitDefaultValue=false)]
-        public ResultEnum? Result { get; set; }
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; set; }
         
         
     
@@ -70,10 +70,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Result">Result.</param>
+        /// <param name="Status">Status.</param>
         
         
-        public WfmUpdateAgentDetailsCompleteNotification(ResultEnum? Result = null)
+        public WfmUpdateAgentDetailsCompleteNotification(StatusEnum? Status = null)
         {
             
             
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Result = Result;
+this.Status = Status;
             
             
             
@@ -104,7 +104,7 @@ this.Result = Result;
             var sb = new StringBuilder();
             sb.Append("class WfmUpdateAgentDetailsCompleteNotification {\n");
             
-            sb.Append("  Result: ").Append(Result).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -143,9 +143,9 @@ this.Result = Result;
 
             return true &&
                 (
-                    this.Result == other.Result ||
-                    this.Result != null &&
-                    this.Result.Equals(other.Result)
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 );
         }
 
@@ -161,8 +161,8 @@ this.Result = Result;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Result != null)
-                    hash = hash * 59 + this.Result.GetHashCode();
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
                 
                 return hash;
             }

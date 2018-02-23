@@ -14,6 +14,7 @@ title: JsonSchemaDocument
 | **Type** | **string** |  | [optional] |
 | **Required** | **List&lt;string&gt;** |  | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 
 

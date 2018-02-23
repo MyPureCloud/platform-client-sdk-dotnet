@@ -46,10 +46,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ContextId">Unique Id for all versions of this form (required).</param>
+        /// <param name="Id">Unique Id for this version of this form (required).</param>
         
         
-        public PublishForm(bool? Published = null, string ContextId = null)
+        public PublishForm(bool? Published = null, string Id = null)
         {
             
             
@@ -68,14 +68,14 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "ContextId" is required (not null)
-            if (ContextId == null)
+            // to ensure "Id" is required (not null)
+            if (Id == null)
             {
-                throw new InvalidDataException("ContextId is a required property for PublishForm and cannot be null");
+                throw new InvalidDataException("Id is a required property for PublishForm and cannot be null");
             }
             else
             {
-                this.ContextId = ContextId;
+                this.Id = Id;
             }
             
             
@@ -103,11 +103,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Unique Id for all versions of this form
+        /// Unique Id for this version of this form
         /// </summary>
-        /// <value>Unique Id for all versions of this form</value>
-        [DataMember(Name="contextId", EmitDefaultValue=false)]
-        public string ContextId { get; set; }
+        /// <value>Unique Id for this version of this form</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         
         
         /// <summary>
@@ -121,7 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             sb.Append("  Published: ").Append(Published).Append("\n");
             
-            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -165,9 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Published.Equals(other.Published)
                 ) &&
                 (
-                    this.ContextId == other.ContextId ||
-                    this.ContextId != null &&
-                    this.ContextId.Equals(other.ContextId)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 );
         }
 
@@ -186,8 +186,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Published != null)
                     hash = hash * 59 + this.Published.GetHashCode();
                 
-                if (this.ContextId != null)
-                    hash = hash * 59 + this.ContextId.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 return hash;
             }

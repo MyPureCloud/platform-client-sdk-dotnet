@@ -197,6 +197,12 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportInvalidData,
             
             /// <summary>
+            /// Enum ImportMissingCustomId for "IMPORT_MISSING_CUSTOM_ID"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_MISSING_CUSTOM_ID")]
+            ImportMissingCustomId,
+            
+            /// <summary>
             /// Enum ImportNoColumnsDefined for "IMPORT_NO_COLUMNS_DEFINED"
             /// </summary>
             [EnumMember(Value = "IMPORT_NO_COLUMNS_DEFINED")]

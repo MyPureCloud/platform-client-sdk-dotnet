@@ -3252,7 +3252,7 @@ namespace Example
 
 <a name="postqualitypublishedforms"></a>
 
-## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedforms (EvaluationForm body)
+## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedforms (PublishForm body)
 
 Publish an evaluation form.
 
@@ -3281,7 +3281,7 @@ namespace Example
             
             
             
-            var body = new EvaluationForm(); // EvaluationForm | Evaluation form
+            var body = new PublishForm(); // PublishForm | Publish request containing id of form to publish
             
             
 
@@ -3307,7 +3307,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EvaluationForm**](EvaluationForm.html)| Evaluation form |  |
+| **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3345,7 +3345,7 @@ namespace Example
             
             
             
-            var body = new PublishForm(); // PublishForm | Evaluation form
+            var body = new PublishForm(); // PublishForm | Publish request containing id of form to publish
             
             
 
@@ -3371,7 +3371,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**PublishForm**](PublishForm.html)| Evaluation form |  |
+| **body** | [**PublishForm**](PublishForm.html)| Publish request containing id of form to publish |  |
 {: class="table table-striped"}
 
 ### Return type

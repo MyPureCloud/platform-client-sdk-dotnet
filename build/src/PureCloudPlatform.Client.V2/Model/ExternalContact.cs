@@ -216,7 +216,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="ExternalSystemUrl">ExternalSystemUrl.</param>
+        /// <param name="ExternalSystemUrl">Identifies an external system-of-record resource that may have more detailed information on the contact.</param>
         
         
         
@@ -669,8 +669,9 @@ this.ExternalDataSources = ExternalDataSources;
         
         
         /// <summary>
-        /// Gets or Sets ExternalSystemUrl
+        /// Identifies an external system-of-record resource that may have more detailed information on the contact
         /// </summary>
+        /// <value>Identifies an external system-of-record resource that may have more detailed information on the contact</value>
         [DataMember(Name="externalSystemUrl", EmitDefaultValue=false)]
         public string ExternalSystemUrl { get; set; }
         

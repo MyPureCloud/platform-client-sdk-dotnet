@@ -115,6 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
@@ -183,6 +188,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ExternalSystemUrl">Identifies an external system-of-record resource that may have more detailed information on the organization.</param>
+        
+        
+        
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
         
         
@@ -200,7 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, List<ExternalDataSource> ExternalDataSources = null)
+        public ExternalOrganization(string Id = null, string Name = null, string CompanyType = null, string Industry = null, string PrimaryContactId = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, List<ExternalDataSource> ExternalDataSources = null)
         {
             
             
@@ -218,6 +227,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
             
             
             
@@ -413,6 +426,15 @@ this.TwitterId = TwitterId;
             
             
             
+this.ExternalSystemUrl = ExternalSystemUrl;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ModifyDate = ModifyDate;
             
             
@@ -566,6 +588,15 @@ this.ExternalDataSources = ExternalDataSources;
         
         
         /// <summary>
+        /// Identifies an external system-of-record resource that may have more detailed information on the organization
+        /// </summary>
+        /// <value>Identifies an external system-of-record resource that may have more detailed information on the organization</value>
+        [DataMember(Name="externalSystemUrl", EmitDefaultValue=false)]
+        public string ExternalSystemUrl { get; set; }
+        
+        
+        
+        /// <summary>
         /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
         /// </summary>
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
@@ -644,6 +675,8 @@ this.ExternalDataSources = ExternalDataSources;
             sb.Append("  Tickers: ").Append(Tickers).Append("\n");
             
             sb.Append("  TwitterId: ").Append(TwitterId).Append("\n");
+            
+            sb.Append("  ExternalSystemUrl: ").Append(ExternalSystemUrl).Append("\n");
             
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
             
@@ -762,6 +795,11 @@ this.ExternalDataSources = ExternalDataSources;
                     this.TwitterId.Equals(other.TwitterId)
                 ) &&
                 (
+                    this.ExternalSystemUrl == other.ExternalSystemUrl ||
+                    this.ExternalSystemUrl != null &&
+                    this.ExternalSystemUrl.Equals(other.ExternalSystemUrl)
+                ) &&
+                (
                     this.ModifyDate == other.ModifyDate ||
                     this.ModifyDate != null &&
                     this.ModifyDate.Equals(other.ModifyDate)
@@ -841,6 +879,9 @@ this.ExternalDataSources = ExternalDataSources;
                 
                 if (this.TwitterId != null)
                     hash = hash * 59 + this.TwitterId.GetHashCode();
+                
+                if (this.ExternalSystemUrl != null)
+                    hash = hash * 59 + this.ExternalSystemUrl.GetHashCode();
                 
                 if (this.ModifyDate != null)
                     hash = hash * 59 + this.ModifyDate.GetHashCode();
