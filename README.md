@@ -4,8 +4,8 @@ title: Platform API Client SDK - .NET
 
 [![NuGet Badge](https://buildstats.info/nuget/PureCloudPlatform.Client.V2)](https://www.nuget.org/packages/PureCloudPlatform.Client.V2/)
 
-Documentation https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/
-Source/Releases https://github.com/MyPureCloud/platform-client-sdk-dotnet
+* Documentation https://developer.mypurecloud.com/api/rest/client-libraries/dotnet/
+* Source/Releases https://github.com/MyPureCloud/platform-client-sdk-dotnet
 
 ## Install Using nuget
 
