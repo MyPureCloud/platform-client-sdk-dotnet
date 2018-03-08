@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteAuthorizationRole**](AuthorizationApi.html#deleteauthorizationrole) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
 | [**DeleteUserRoles**](AuthorizationApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
+| [**GetAuthorizationDivisionsLimit**](AuthorizationApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
 | [**GetAuthorizationPermissions**](AuthorizationApi.html#getauthorizationpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
 | [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
@@ -151,6 +152,61 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="getauthorizationdivisionslimit"></a>
+
+## **int?** GetAuthorizationDivisionsLimit ()
+
+Returns the maximum allowed number of divisions.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionsLimitExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new AuthorizationApi();
+            
+
+            try
+            {
+                
+                // Returns the maximum allowed number of divisions.
+                
+                int? result = apiInstance.GetAuthorizationDivisionsLimit();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionsLimit: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+**int?**
 
 <a name="getauthorizationpermissions"></a>
 

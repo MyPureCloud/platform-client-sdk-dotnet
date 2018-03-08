@@ -24,10 +24,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MoveAgentResult
+        /// Gets or Sets Result
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum MoveAgentResultEnum
+        public enum ResultEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -81,10 +81,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// Gets or Sets MoveAgentResult
+        /// Gets or Sets Result
         /// </summary>
-        [DataMember(Name="moveAgentResult", EmitDefaultValue=false)]
-        public MoveAgentResultEnum? MoveAgentResult { get; set; }
+        [DataMember(Name="result", EmitDefaultValue=false)]
+        public ResultEnum? Result { get; set; }
         
         
     
@@ -97,10 +97,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="MoveAgentResult">MoveAgentResult.</param>
+        /// <param name="Result">Result.</param>
         
         
-        public WfmMoveAgentsCompleteNotificationWfmMoveAgentData(WfmMoveAgentsCompleteNotificationUser User = null, MoveAgentResultEnum? MoveAgentResult = null)
+        public WfmMoveAgentsCompleteNotificationWfmMoveAgentData(WfmMoveAgentsCompleteNotificationUser User = null, ResultEnum? Result = null)
         {
             
             
@@ -125,7 +125,7 @@ this.User = User;
             
             
             
-this.MoveAgentResult = MoveAgentResult;
+this.Result = Result;
             
             
             
@@ -154,7 +154,7 @@ this.MoveAgentResult = MoveAgentResult;
             
             sb.Append("  User: ").Append(User).Append("\n");
             
-            sb.Append("  MoveAgentResult: ").Append(MoveAgentResult).Append("\n");
+            sb.Append("  Result: ").Append(Result).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -198,9 +198,9 @@ this.MoveAgentResult = MoveAgentResult;
                     this.User.Equals(other.User)
                 ) &&
                 (
-                    this.MoveAgentResult == other.MoveAgentResult ||
-                    this.MoveAgentResult != null &&
-                    this.MoveAgentResult.Equals(other.MoveAgentResult)
+                    this.Result == other.Result ||
+                    this.Result != null &&
+                    this.Result.Equals(other.Result)
                 );
         }
 
@@ -219,8 +219,8 @@ this.MoveAgentResult = MoveAgentResult;
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
                 
-                if (this.MoveAgentResult != null)
-                    hash = hash * 59 + this.MoveAgentResult.GetHashCode();
+                if (this.Result != null)
+                    hash = hash * 59 + this.Result.GetHashCode();
                 
                 return hash;
             }

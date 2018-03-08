@@ -49,10 +49,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="MoveAgentResults">MoveAgentResults.</param>
+        /// <param name="Results">Results.</param>
         
         
-        public WfmMoveAgentsCompleteNotification(DocumentDataV2NotificationWorkspace RequestingUser = null, DocumentDataV2NotificationWorkspace DestinationManagementUnit = null, List<WfmMoveAgentsCompleteNotificationMoveAgentResults> MoveAgentResults = null)
+        public WfmMoveAgentsCompleteNotification(DocumentDataV2NotificationWorkspace RequestingUser = null, DocumentDataV2NotificationWorkspace DestinationManagementUnit = null, List<WfmMoveAgentsCompleteNotificationResults> Results = null)
         {
             
             
@@ -90,7 +90,7 @@ this.DestinationManagementUnit = DestinationManagementUnit;
             
             
             
-this.MoveAgentResults = MoveAgentResults;
+this.Results = Results;
             
             
             
@@ -116,10 +116,10 @@ this.MoveAgentResults = MoveAgentResults;
         
         
         /// <summary>
-        /// Gets or Sets MoveAgentResults
+        /// Gets or Sets Results
         /// </summary>
-        [DataMember(Name="moveAgentResults", EmitDefaultValue=false)]
-        public List<WfmMoveAgentsCompleteNotificationMoveAgentResults> MoveAgentResults { get; set; }
+        [DataMember(Name="results", EmitDefaultValue=false)]
+        public List<WfmMoveAgentsCompleteNotificationResults> Results { get; set; }
         
         
         /// <summary>
@@ -135,7 +135,7 @@ this.MoveAgentResults = MoveAgentResults;
             
             sb.Append("  DestinationManagementUnit: ").Append(DestinationManagementUnit).Append("\n");
             
-            sb.Append("  MoveAgentResults: ").Append(MoveAgentResults).Append("\n");
+            sb.Append("  Results: ").Append(Results).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -184,9 +184,9 @@ this.MoveAgentResults = MoveAgentResults;
                     this.DestinationManagementUnit.Equals(other.DestinationManagementUnit)
                 ) &&
                 (
-                    this.MoveAgentResults == other.MoveAgentResults ||
-                    this.MoveAgentResults != null &&
-                    this.MoveAgentResults.SequenceEqual(other.MoveAgentResults)
+                    this.Results == other.Results ||
+                    this.Results != null &&
+                    this.Results.SequenceEqual(other.Results)
                 );
         }
 
@@ -208,8 +208,8 @@ this.MoveAgentResults = MoveAgentResults;
                 if (this.DestinationManagementUnit != null)
                     hash = hash * 59 + this.DestinationManagementUnit.GetHashCode();
                 
-                if (this.MoveAgentResults != null)
-                    hash = hash * 59 + this.MoveAgentResults.GetHashCode();
+                if (this.Results != null)
+                    hash = hash * 59 + this.Results.GetHashCode();
                 
                 return hash;
             }

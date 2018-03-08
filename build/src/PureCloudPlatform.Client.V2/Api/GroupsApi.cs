@@ -144,8 +144,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>GroupProfile</returns>
-        GroupProfile GetGroupProfile (string groupId);
+        GroupProfile GetGroupProfile (string groupId, string fields = null);
 
         /// <summary>
         /// Get group profile
@@ -155,8 +156,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>ApiResponse of GroupProfile</returns>
-        ApiResponse<GroupProfile> GetGroupProfileWithHttpInfo (string groupId);
+        ApiResponse<GroupProfile> GetGroupProfileWithHttpInfo (string groupId, string fields = null);
         
         /// <summary>
         /// Get a group list
@@ -434,8 +436,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of GroupProfile</returns>
-        System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync (string groupId);
+        System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync (string groupId, string fields = null);
 
         /// <summary>
         /// Get group profile
@@ -445,8 +448,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of ApiResponse (GroupProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo (string groupId);
+        System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo (string groupId, string fields = null);
         
         /// <summary>
         /// Get a group list
@@ -1679,10 +1683,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>GroupProfile</returns>
-        public GroupProfile GetGroupProfile (string groupId)
+        public GroupProfile GetGroupProfile (string groupId, string fields = null)
         {
-             ApiResponse<GroupProfile> localVarResponse = GetGroupProfileWithHttpInfo(groupId);
+             ApiResponse<GroupProfile> localVarResponse = GetGroupProfileWithHttpInfo(groupId, fields);
              return localVarResponse.Data;
         }
 
@@ -1691,8 +1696,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>ApiResponse of GroupProfile</returns>
-        public ApiResponse< GroupProfile > GetGroupProfileWithHttpInfo (string groupId)
+        public ApiResponse< GroupProfile > GetGroupProfileWithHttpInfo (string groupId, string fields = null)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1732,6 +1738,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
 
             // Query params
+            if (fields != null) localVarQueryParams.Add(new Tuple<string, string>("fields", this.Configuration.ApiClient.ParameterToString(fields)));
 
             // Header params
 
@@ -1773,10 +1780,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of GroupProfile</returns>
-        public async System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync (string groupId)
+        public async System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync (string groupId, string fields = null)
         {
-             ApiResponse<GroupProfile> localVarResponse = await GetGroupProfileAsyncWithHttpInfo(groupId);
+             ApiResponse<GroupProfile> localVarResponse = await GetGroupProfileAsyncWithHttpInfo(groupId, fields);
              return localVarResponse.Data;
 
         }
@@ -1786,8 +1794,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">groupId</param>
+        /// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional)</param>
         /// <returns>Task of ApiResponse (GroupProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo (string groupId)
+        public async System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo (string groupId, string fields = null)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1828,6 +1837,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (groupId != null) localVarPathParams.Add("groupId", this.Configuration.ApiClient.ParameterToString(groupId));
 
             // Query params
+            if (fields != null) localVarQueryParams.Add(new Tuple<string, string>("fields", this.Configuration.ApiClient.ParameterToString(fields)));
 
             // Header params
 

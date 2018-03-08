@@ -224,7 +224,37 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "SMS"
             /// </summary>
             [EnumMember(Value = "SMS")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Twitter for "TWITTER"
+            /// </summary>
+            [EnumMember(Value = "TWITTER")]
+            Twitter,
+            
+            /// <summary>
+            /// Enum Facebook for "FACEBOOK"
+            /// </summary>
+            [EnumMember(Value = "FACEBOOK")]
+            Facebook,
+            
+            /// <summary>
+            /// Enum Line for "LINE"
+            /// </summary>
+            [EnumMember(Value = "LINE")]
+            Line,
+            
+            /// <summary>
+            /// Enum Viber for "VIBER"
+            /// </summary>
+            [EnumMember(Value = "VIBER")]
+            Viber,
+            
+            /// <summary>
+            /// Enum Wechat for "WECHAT"
+            /// </summary>
+            [EnumMember(Value = "WECHAT")]
+            Wechat
         }
         
         

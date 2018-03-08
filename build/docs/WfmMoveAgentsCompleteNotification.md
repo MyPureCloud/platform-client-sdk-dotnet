@@ -9,7 +9,7 @@ title: WfmMoveAgentsCompleteNotification
 |------------ | ------------- | ------------- | -------------|
 | **RequestingUser** | [**DocumentDataV2NotificationWorkspace**](DocumentDataV2NotificationWorkspace.html) |  | [optional] |
 | **DestinationManagementUnit** | [**DocumentDataV2NotificationWorkspace**](DocumentDataV2NotificationWorkspace.html) |  | [optional] |
-| **MoveAgentResults** | [**List&lt;WfmMoveAgentsCompleteNotificationMoveAgentResults&gt;**](WfmMoveAgentsCompleteNotificationMoveAgentResults.html) |  | [optional] |
+| **Results** | [**List&lt;WfmMoveAgentsCompleteNotificationResults&gt;**](WfmMoveAgentsCompleteNotificationResults.html) |  | [optional] |
 {: class="table table-striped"}
 
 

@@ -372,7 +372,7 @@ namespace Example
 
 <a name="getgroupprofile"></a>
 
-## [**GroupProfile**](GroupProfile.html) GetGroupProfile (string groupId)
+## [**GroupProfile**](GroupProfile.html) GetGroupProfile (string groupId, string fields = null)
 
 Get group profile
 
@@ -404,13 +404,18 @@ namespace Example
             
             
             
+            
+            var fields = fields_example;  // string | Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get group profile
                 
-                GroupProfile result = apiInstance.GetGroupProfile(groupId);
+                GroupProfile result = apiInstance.GetGroupProfile(groupId, fields);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -428,6 +433,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **groupId** | **string**| groupId |  |
+| **fields** | **string**| Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type=group and using the key for the elements returned by the fieldList | [optional]  |
 {: class="table table-striped"}
 
 ### Return type

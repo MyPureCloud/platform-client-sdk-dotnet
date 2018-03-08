@@ -86,6 +86,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dataaction,
             
             /// <summary>
+            /// Enum Datatable for "DATATABLE"
+            /// </summary>
+            [EnumMember(Value = "DATATABLE")]
+            Datatable,
+            
+            /// <summary>
             /// Enum Emailroute for "EMAILROUTE"
             /// </summary>
             [EnumMember(Value = "EMAILROUTE")]
