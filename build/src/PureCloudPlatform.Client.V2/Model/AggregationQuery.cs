@@ -597,6 +597,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Ntransferred,
             
             /// <summary>
+            /// Enum Tnotresponding for "tNotResponding"
+            /// </summary>
+            [EnumMember(Value = "tNotResponding")]
+            Tnotresponding,
+            
+            /// <summary>
+            /// Enum Noutbound for "nOutbound"
+            /// </summary>
+            [EnumMember(Value = "nOutbound")]
+            Noutbound,
+            
+            /// <summary>
             /// Enum Noutboundattempted for "nOutboundAttempted"
             /// </summary>
             [EnumMember(Value = "nOutboundAttempted")]
