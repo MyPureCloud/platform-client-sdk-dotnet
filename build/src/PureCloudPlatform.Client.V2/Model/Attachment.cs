@@ -51,23 +51,23 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="AttachmentId">AttachmentId.</param>
+        /// <param name="AttachmentId">The unique identifier for the attachment..</param>
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="Name">The name of the attachment..</param>
         
         
         
-        /// <param name="ContentUri">ContentUri.</param>
+        /// <param name="ContentUri">The content uri of the attachment. If set, this is commonly a public api download location..</param>
         
         
         
-        /// <param name="ContentType">ContentType.</param>
+        /// <param name="ContentType">The type of file the attachment is..</param>
         
         
         
-        /// <param name="ContentLength">ContentLength.</param>
+        /// <param name="ContentLength">The length of the attachment file..</param>
         
         
         public Attachment(string AttachmentId = null, string Name = null, string ContentUri = null, string ContentType = null, int? ContentLength = null)
@@ -144,40 +144,45 @@ this.ContentLength = ContentLength;
         
         
         /// <summary>
-        /// Gets or Sets AttachmentId
+        /// The unique identifier for the attachment.
         /// </summary>
+        /// <value>The unique identifier for the attachment.</value>
         [DataMember(Name="attachmentId", EmitDefaultValue=false)]
         public string AttachmentId { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the attachment.
         /// </summary>
+        /// <value>The name of the attachment.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentUri
+        /// The content uri of the attachment. If set, this is commonly a public api download location.
         /// </summary>
+        /// <value>The content uri of the attachment. If set, this is commonly a public api download location.</value>
         [DataMember(Name="contentUri", EmitDefaultValue=false)]
         public string ContentUri { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentType
+        /// The type of file the attachment is.
         /// </summary>
+        /// <value>The type of file the attachment is.</value>
         [DataMember(Name="contentType", EmitDefaultValue=false)]
         public string ContentType { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets ContentLength
+        /// The length of the attachment file.
         /// </summary>
+        /// <value>The length of the attachment file.</value>
         [DataMember(Name="contentLength", EmitDefaultValue=false)]
         public int? ContentLength { get; set; }
         

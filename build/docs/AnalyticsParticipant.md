@@ -13,6 +13,7 @@ title: AnalyticsParticipant
 | **Purpose** | **string** | The participant&#39;s purpose | [optional] |
 | **ExternalContactId** | **string** | External Contact Identifier | [optional] |
 | **ExternalOrganizationId** | **string** | External Organization Identifier | [optional] |
+| **FlaggedReason** | **string** | Reason for which participant flagged conversation | [optional] |
 | **Sessions** | [**List&lt;AnalyticsSession&gt;**](AnalyticsSession.html) | List of sessions associated to this participant | [optional] |
 {: class="table table-striped"}
 

@@ -171,14 +171,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="IsKill">IsKill.</param>
-        
-        
-        
         /// <param name="IsCritical">IsCritical.</param>
         
         
-        public Question(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, int? MaxResponseCharacters = null, string ExplanationPrompt = null, bool? IsKill = null, bool? IsCritical = null)
+        
+        /// <param name="IsKill">IsKill.</param>
+        
+        
+        public Question(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, int? MaxResponseCharacters = null, string ExplanationPrompt = null, bool? IsCritical = null, bool? IsKill = null)
         {
             
             
@@ -324,16 +324,16 @@ this.ExplanationPrompt = ExplanationPrompt;
             
             
             
-this.IsKill = IsKill;
-            
-            
-            
-            
-            
-            
-            
-            
 this.IsCritical = IsCritical;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IsKill = IsKill;
             
             
             
@@ -420,18 +420,18 @@ this.IsCritical = IsCritical;
         
         
         /// <summary>
-        /// Gets or Sets IsKill
-        /// </summary>
-        [DataMember(Name="isKill", EmitDefaultValue=false)]
-        public bool? IsKill { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets IsCritical
         /// </summary>
         [DataMember(Name="isCritical", EmitDefaultValue=false)]
         public bool? IsCritical { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets IsKill
+        /// </summary>
+        [DataMember(Name="isKill", EmitDefaultValue=false)]
+        public bool? IsKill { get; set; }
         
         
         /// <summary>
@@ -463,9 +463,9 @@ this.IsCritical = IsCritical;
             
             sb.Append("  ExplanationPrompt: ").Append(ExplanationPrompt).Append("\n");
             
-            sb.Append("  IsKill: ").Append(IsKill).Append("\n");
-            
             sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
+            
+            sb.Append("  IsKill: ").Append(IsKill).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -554,14 +554,14 @@ this.IsCritical = IsCritical;
                     this.ExplanationPrompt.Equals(other.ExplanationPrompt)
                 ) &&
                 (
-                    this.IsKill == other.IsKill ||
-                    this.IsKill != null &&
-                    this.IsKill.Equals(other.IsKill)
-                ) &&
-                (
                     this.IsCritical == other.IsCritical ||
                     this.IsCritical != null &&
                     this.IsCritical.Equals(other.IsCritical)
+                ) &&
+                (
+                    this.IsKill == other.IsKill ||
+                    this.IsKill != null &&
+                    this.IsKill.Equals(other.IsKill)
                 );
         }
 
@@ -607,11 +607,11 @@ this.IsCritical = IsCritical;
                 if (this.ExplanationPrompt != null)
                     hash = hash * 59 + this.ExplanationPrompt.GetHashCode();
                 
-                if (this.IsKill != null)
-                    hash = hash * 59 + this.IsKill.GetHashCode();
-                
                 if (this.IsCritical != null)
                     hash = hash * 59 + this.IsCritical.GetHashCode();
+                
+                if (this.IsKill != null)
+                    hash = hash * 59 + this.IsKill.GetHashCode();
                 
                 return hash;
             }

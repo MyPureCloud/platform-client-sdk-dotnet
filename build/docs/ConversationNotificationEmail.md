@@ -23,6 +23,7 @@ title: ConversationNotificationEmail
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
 | **MessageId** | **string** |  | [optional] |
 | **Direction** | **string** |  | [optional] |
+| **DraftAttachments** | [**List&lt;ConversationNotificationDraftAttachments&gt;**](ConversationNotificationDraftAttachments.html) |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

@@ -84,16 +84,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="LatestRelease">LatestRelease.</param>
-        
-        
-        
         /// <param name="Current">Current.</param>
         
         
         
+        /// <param name="LatestRelease">LatestRelease.</param>
         
-        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? LatestRelease = null, bool? Current = null)
+        
+        
+        
+        public DomainEdgeSoftwareVersionDto(string Name = null, string EdgeVersion = null, DateTime? PublishDate = null, string EdgeUri = null, bool? Current = null, bool? LatestRelease = null)
         {
             
             
@@ -167,16 +167,16 @@ this.EdgeUri = EdgeUri;
             
             
             
-this.LatestRelease = LatestRelease;
-            
-            
-            
-            
-            
-            
-            
-            
 this.Current = Current;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LatestRelease = LatestRelease;
             
             
             
@@ -230,18 +230,18 @@ this.Current = Current;
         
         
         /// <summary>
-        /// Gets or Sets LatestRelease
-        /// </summary>
-        [DataMember(Name="latestRelease", EmitDefaultValue=false)]
-        public bool? LatestRelease { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets Current
         /// </summary>
         [DataMember(Name="current", EmitDefaultValue=false)]
         public bool? Current { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets LatestRelease
+        /// </summary>
+        [DataMember(Name="latestRelease", EmitDefaultValue=false)]
+        public bool? LatestRelease { get; set; }
         
         
         
@@ -272,9 +272,9 @@ this.Current = Current;
             
             sb.Append("  EdgeUri: ").Append(EdgeUri).Append("\n");
             
-            sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
-            
             sb.Append("  Current: ").Append(Current).Append("\n");
+            
+            sb.Append("  LatestRelease: ").Append(LatestRelease).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -340,14 +340,14 @@ this.Current = Current;
                     this.EdgeUri.Equals(other.EdgeUri)
                 ) &&
                 (
-                    this.LatestRelease == other.LatestRelease ||
-                    this.LatestRelease != null &&
-                    this.LatestRelease.Equals(other.LatestRelease)
-                ) &&
-                (
                     this.Current == other.Current ||
                     this.Current != null &&
                     this.Current.Equals(other.Current)
+                ) &&
+                (
+                    this.LatestRelease == other.LatestRelease ||
+                    this.LatestRelease != null &&
+                    this.LatestRelease.Equals(other.LatestRelease)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -383,11 +383,11 @@ this.Current = Current;
                 if (this.EdgeUri != null)
                     hash = hash * 59 + this.EdgeUri.GetHashCode();
                 
-                if (this.LatestRelease != null)
-                    hash = hash * 59 + this.LatestRelease.GetHashCode();
-                
                 if (this.Current != null)
                     hash = hash * 59 + this.Current.GetHashCode();
+                
+                if (this.LatestRelease != null)
+                    hash = hash * 59 + this.LatestRelease.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

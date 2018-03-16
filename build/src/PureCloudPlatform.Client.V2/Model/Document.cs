@@ -402,16 +402,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-        
-        
-        
         /// <param name="SharingUri">SharingUri.</param>
         
         
         
+        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
         
-        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string DownloadSharingUri = null, string SharingUri = null)
+        
+        
+        
+        public Document(string Name = null, int? ChangeNumber = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateUploaded = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, UriReference UploadedBy = null, string ContentType = null, long? ContentLength = null, SystemTypeEnum? SystemType = null, string Filename = null, long? PageCount = null, bool? Read = null, string CallerAddress = null, string ReceiverAddress = null, List<string> Tags = null, List<TagValue> TagValues = null, List<DocumentAttribute> Attributes = null, List<DocumentThumbnail> Thumbnails = null, UriReference UploadStatus = null, string UploadDestinationUri = null, UploadMethodEnum? UploadMethod = null, LockInfo LockInfo = null, List<string> Acl = null, SharingStatusEnum? SharingStatus = null, string SharingUri = null, string DownloadSharingUri = null)
         {
             
             
@@ -784,16 +784,16 @@ this.SharingStatus = SharingStatus;
             
             
             
-this.DownloadSharingUri = DownloadSharingUri;
-            
-            
-            
-            
-            
-            
-            
-            
 this.SharingUri = SharingUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DownloadSharingUri = DownloadSharingUri;
             
             
             
@@ -1016,18 +1016,18 @@ this.SharingUri = SharingUri;
         
         
         /// <summary>
-        /// Gets or Sets DownloadSharingUri
-        /// </summary>
-        [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
-        public string DownloadSharingUri { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets SharingUri
         /// </summary>
         [DataMember(Name="sharingUri", EmitDefaultValue=false)]
         public string SharingUri { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DownloadSharingUri
+        /// </summary>
+        [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
+        public string DownloadSharingUri { get; set; }
         
         
         
@@ -1104,9 +1104,9 @@ this.SharingUri = SharingUri;
             
             sb.Append("  SharingStatus: ").Append(SharingStatus).Append("\n");
             
-            sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
-            
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
+            
+            sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -1287,14 +1287,14 @@ this.SharingUri = SharingUri;
                     this.SharingStatus.Equals(other.SharingStatus)
                 ) &&
                 (
-                    this.DownloadSharingUri == other.DownloadSharingUri ||
-                    this.DownloadSharingUri != null &&
-                    this.DownloadSharingUri.Equals(other.DownloadSharingUri)
-                ) &&
-                (
                     this.SharingUri == other.SharingUri ||
                     this.SharingUri != null &&
                     this.SharingUri.Equals(other.SharingUri)
+                ) &&
+                (
+                    this.DownloadSharingUri == other.DownloadSharingUri ||
+                    this.DownloadSharingUri != null &&
+                    this.DownloadSharingUri.Equals(other.DownloadSharingUri)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -1399,11 +1399,11 @@ this.SharingUri = SharingUri;
                 if (this.SharingStatus != null)
                     hash = hash * 59 + this.SharingStatus.GetHashCode();
                 
-                if (this.DownloadSharingUri != null)
-                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
-                
                 if (this.SharingUri != null)
                     hash = hash * 59 + this.SharingUri.GetHashCode();
+                
+                if (this.DownloadSharingUri != null)
+                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

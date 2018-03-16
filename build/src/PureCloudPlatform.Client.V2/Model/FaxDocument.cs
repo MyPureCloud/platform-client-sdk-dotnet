@@ -174,16 +174,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
-        
-        
-        
         /// <param name="SharingUri">SharingUri.</param>
         
         
         
+        /// <param name="DownloadSharingUri">DownloadSharingUri.</param>
         
-        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string DownloadSharingUri = null, string SharingUri = null)
+        
+        
+        
+        public FaxDocument(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, UriReference Workspace = null, UriReference CreatedBy = null, string ContentType = null, long? ContentLength = null, string Filename = null, bool? Read = null, long? PageCount = null, string CallerAddress = null, string ReceiverAddress = null, List<DocumentThumbnail> Thumbnails = null, string SharingUri = null, string DownloadSharingUri = null)
         {
             
             
@@ -387,16 +387,16 @@ this.Thumbnails = Thumbnails;
             
             
             
-this.DownloadSharingUri = DownloadSharingUri;
-            
-            
-            
-            
-            
-            
-            
-            
 this.SharingUri = SharingUri;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DownloadSharingUri = DownloadSharingUri;
             
             
             
@@ -531,18 +531,18 @@ this.SharingUri = SharingUri;
         
         
         /// <summary>
-        /// Gets or Sets DownloadSharingUri
-        /// </summary>
-        [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
-        public string DownloadSharingUri { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets SharingUri
         /// </summary>
         [DataMember(Name="sharingUri", EmitDefaultValue=false)]
         public string SharingUri { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DownloadSharingUri
+        /// </summary>
+        [DataMember(Name="downloadSharingUri", EmitDefaultValue=false)]
+        public string DownloadSharingUri { get; set; }
         
         
         
@@ -593,9 +593,9 @@ this.SharingUri = SharingUri;
             
             sb.Append("  Thumbnails: ").Append(Thumbnails).Append("\n");
             
-            sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
-            
             sb.Append("  SharingUri: ").Append(SharingUri).Append("\n");
+            
+            sb.Append("  DownloadSharingUri: ").Append(DownloadSharingUri).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -711,14 +711,14 @@ this.SharingUri = SharingUri;
                     this.Thumbnails.SequenceEqual(other.Thumbnails)
                 ) &&
                 (
-                    this.DownloadSharingUri == other.DownloadSharingUri ||
-                    this.DownloadSharingUri != null &&
-                    this.DownloadSharingUri.Equals(other.DownloadSharingUri)
-                ) &&
-                (
                     this.SharingUri == other.SharingUri ||
                     this.SharingUri != null &&
                     this.SharingUri.Equals(other.SharingUri)
+                ) &&
+                (
+                    this.DownloadSharingUri == other.DownloadSharingUri ||
+                    this.DownloadSharingUri != null &&
+                    this.DownloadSharingUri.Equals(other.DownloadSharingUri)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -784,11 +784,11 @@ this.SharingUri = SharingUri;
                 if (this.Thumbnails != null)
                     hash = hash * 59 + this.Thumbnails.GetHashCode();
                 
-                if (this.DownloadSharingUri != null)
-                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
-                
                 if (this.SharingUri != null)
                     hash = hash * 59 + this.SharingUri.GetHashCode();
+                
+                if (this.DownloadSharingUri != null)
+                    hash = hash * 59 + this.DownloadSharingUri.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -197,6 +197,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ntransferred,
             
             /// <summary>
+            /// Enum Talert for "tAlert"
+            /// </summary>
+            [EnumMember(Value = "tAlert")]
+            Talert,
+            
+            /// <summary>
             /// Enum Tnotresponding for "tNotResponding"
             /// </summary>
             [EnumMember(Value = "tNotResponding")]

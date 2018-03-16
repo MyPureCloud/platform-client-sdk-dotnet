@@ -202,6 +202,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Divisionid,
             
             /// <summary>
+            /// Enum Flaggedreason for "flaggedReason"
+            /// </summary>
+            [EnumMember(Value = "flaggedReason")]
+            Flaggedreason,
+            
+            /// <summary>
             /// Enum Stationid for "stationId"
             /// </summary>
             [EnumMember(Value = "stationId")]
@@ -595,6 +601,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nTransferred")]
             Ntransferred,
+            
+            /// <summary>
+            /// Enum Talert for "tAlert"
+            /// </summary>
+            [EnumMember(Value = "tAlert")]
+            Talert,
             
             /// <summary>
             /// Enum Tnotresponding for "tNotResponding"

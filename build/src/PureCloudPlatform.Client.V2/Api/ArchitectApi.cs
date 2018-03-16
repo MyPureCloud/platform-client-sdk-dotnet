@@ -224,7 +224,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes an entire datatable (including schema and data) with a given id)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -235,7 +235,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes an entire datatable (including schema and data) with a given id)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -1179,28 +1179,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
         
         /// <summary>
-        /// Returns a specific datatable by datatableId
+        /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
         /// Given a datableid returns the schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>JsonSchemaDocument</returns>
-        JsonSchemaDocument GetFlowsDatatable (string datatableId, bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>DataTable</returns>
+        DataTable GetFlowsDatatable (string datatableId, string expand = null);
 
         /// <summary>
-        /// Returns a specific datatable by datatableId
+        /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
         /// Given a datableid returns the schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        ApiResponse<JsonSchemaDocument> GetFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of DataTable</returns>
+        ApiResponse<DataTable> GetFlowsDatatableWithHttpInfo (string datatableId, string expand = null);
         
         /// <summary>
         /// Returns a specific row for the datatable
@@ -1236,9 +1236,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
-        List<Dictionary<string, Object>> GetFlowsDatatableRows (string datatableId, bool? showbrief = null);
+        /// <returns>DataTableRowEntityListing</returns>
+        DataTableRowEntityListing GetFlowsDatatableRows (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null);
 
         /// <summary>
         /// Returns the rows for the datatable
@@ -1248,9 +1250,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>ApiResponse of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
-        ApiResponse<List<Dictionary<string, Object>>> GetFlowsDatatableRowsWithHttpInfo (string datatableId, bool? showbrief = null);
+        /// <returns>ApiResponse of DataTableRowEntityListing</returns>
+        ApiResponse<DataTableRowEntityListing> GetFlowsDatatableRowsWithHttpInfo (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null);
         
         /// <summary>
         /// Retrieve a list of datatables for the org
@@ -1259,9 +1263,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>List&lt;JsonSchemaDocument&gt;</returns>
-        List<JsonSchemaDocument> GetFlowsDatatables (bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>DataTablesDomainEntityListing</returns>
+        DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Retrieve a list of datatables for the org
@@ -1270,9 +1278,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>ApiResponse of List&lt;JsonSchemaDocument&gt;</returns>
-        ApiResponse<List<JsonSchemaDocument>> GetFlowsDatatablesWithHttpInfo (bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -1686,8 +1698,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>JsonSchemaDocument</returns>
-        JsonSchemaDocument PostFlowsDatatables (JsonSchemaDocument body);
+        /// <returns>DataTable</returns>
+        DataTable PostFlowsDatatables (DataTable body);
 
         /// <summary>
         /// Create a new datatable with the specified json-schema definition
@@ -1697,8 +1709,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        ApiResponse<JsonSchemaDocument> PostFlowsDatatablesWithHttpInfo (JsonSchemaDocument body);
+        /// <returns>ApiResponse of DataTable</returns>
+        ApiResponse<DataTable> PostFlowsDatatablesWithHttpInfo (DataTable body);
         
         /// <summary>
         /// Update an IVR Config.
@@ -1873,30 +1885,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body = null);
         
         /// <summary>
-        /// Updates a specific datatable by datatableId
+        /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>JsonSchemaDocument</returns>
-        JsonSchemaDocument PutFlowsDatatable (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+        /// <returns>DataTable</returns>
+        DataTable PutFlowsDatatable (string datatableId, string expand = null, DataTable body = null);
 
         /// <summary>
-        /// Updates a specific datatable by datatableId
+        /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        ApiResponse<JsonSchemaDocument> PutFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+        /// <returns>ApiResponse of DataTable</returns>
+        ApiResponse<DataTable> PutFlowsDatatableWithHttpInfo (string datatableId, string expand = null, DataTable body = null);
         
         /// <summary>
         /// Update a row entry
@@ -2136,7 +2148,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes an entire datatable (including schema and data) with a given id)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -2147,7 +2159,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// deletes a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes an entire datatable (including schema and data) with a given id)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -3091,28 +3103,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null);
         
         /// <summary>
-        /// Returns a specific datatable by datatableId
+        /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
         /// Given a datableid returns the schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>Task of JsonSchemaDocument</returns>
-        System.Threading.Tasks.Task<JsonSchemaDocument> GetFlowsDatatableAsync (string datatableId, bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of DataTable</returns>
+        System.Threading.Tasks.Task<DataTable> GetFlowsDatatableAsync (string datatableId, string expand = null);
 
         /// <summary>
-        /// Returns a specific datatable by datatableId
+        /// Returns a specific datatable by id
         /// </summary>
         /// <remarks>
         /// Given a datableid returns the schema associated with it.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null);
         
         /// <summary>
         /// Returns a specific row for the datatable
@@ -3148,9 +3160,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>Task of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
-        System.Threading.Tasks.Task<List<Dictionary<string, Object>>> GetFlowsDatatableRowsAsync (string datatableId, bool? showbrief = null);
+        /// <returns>Task of DataTableRowEntityListing</returns>
+        System.Threading.Tasks.Task<DataTableRowEntityListing> GetFlowsDatatableRowsAsync (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null);
 
         /// <summary>
         /// Returns the rows for the datatable
@@ -3160,9 +3174,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (List&lt;Dictionary&lt;string, Object&gt;&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<Dictionary<string, Object>>>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, bool? showbrief = null);
+        /// <returns>Task of ApiResponse (DataTableRowEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTableRowEntityListing>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null);
         
         /// <summary>
         /// Retrieve a list of datatables for the org
@@ -3171,9 +3187,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>Task of List&lt;JsonSchemaDocument&gt;</returns>
-        System.Threading.Tasks.Task<List<JsonSchemaDocument>> GetFlowsDatatablesAsync (bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of DataTablesDomainEntityListing</returns>
+        System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Retrieve a list of datatables for the org
@@ -3182,9 +3202,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (List&lt;JsonSchemaDocument&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<JsonSchemaDocument>>> GetFlowsDatatablesAsyncWithHttpInfo (bool? showbrief = null);
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -3598,8 +3622,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>Task of JsonSchemaDocument</returns>
-        System.Threading.Tasks.Task<JsonSchemaDocument> PostFlowsDatatablesAsync (JsonSchemaDocument body);
+        /// <returns>Task of DataTable</returns>
+        System.Threading.Tasks.Task<DataTable> PostFlowsDatatablesAsync (DataTable body);
 
         /// <summary>
         /// Create a new datatable with the specified json-schema definition
@@ -3609,8 +3633,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PostFlowsDatatablesAsyncWithHttpInfo (JsonSchemaDocument body);
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body);
         
         /// <summary>
         /// Update an IVR Config.
@@ -3785,30 +3809,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body = null);
         
         /// <summary>
-        /// Updates a specific datatable by datatableId
+        /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>Task of JsonSchemaDocument</returns>
-        System.Threading.Tasks.Task<JsonSchemaDocument> PutFlowsDatatableAsync (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+        /// <returns>Task of DataTable</returns>
+        System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, string expand = null, DataTable body = null);
 
         /// <summary>
-        /// Updates a specific datatable by datatableId
+        /// Updates a specific datatable by id
         /// </summary>
         /// <remarks>
-        /// Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null);
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null, DataTable body = null);
         
         /// <summary>
         /// Update a row entry
@@ -5666,7 +5690,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -5677,7 +5701,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -5759,7 +5783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -5771,7 +5795,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given datatableId)
+        /// deletes a specific datatable by id deletes an entire datatable (including schema and data) with a given id)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
@@ -12800,26 +12824,26 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>JsonSchemaDocument</returns>
-        public JsonSchemaDocument GetFlowsDatatable (string datatableId, bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>DataTable</returns>
+        public DataTable GetFlowsDatatable (string datatableId, string expand = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = GetFlowsDatatableWithHttpInfo(datatableId, showbrief);
+             ApiResponse<DataTable> localVarResponse = GetFlowsDatatableWithHttpInfo(datatableId, expand);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        public ApiResponse< JsonSchemaDocument > GetFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>ApiResponse of DataTable</returns>
+        public ApiResponse< DataTable > GetFlowsDatatableWithHttpInfo (string datatableId, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -12859,7 +12883,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
-            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -12889,35 +12913,35 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+            return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
-                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)));
             
         }
 
         
         /// <summary>
-        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>Task of JsonSchemaDocument</returns>
-        public async System.Threading.Tasks.Task<JsonSchemaDocument> GetFlowsDatatableAsync (string datatableId, bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of DataTable</returns>
+        public async System.Threading.Tasks.Task<DataTable> GetFlowsDatatableAsync (string datatableId, string expand = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = await GetFlowsDatatableAsyncWithHttpInfo(datatableId, showbrief);
+             ApiResponse<DataTable> localVarResponse = await GetFlowsDatatableAsyncWithHttpInfo(datatableId, expand);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Returns a specific datatable by datatableId Given a datableid returns the schema associated with it.
+        /// Returns a specific datatable by id Given a datableid returns the schema associated with it.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description] (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTable>> GetFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -12958,7 +12982,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
-            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -12988,9 +13012,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+            return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
-                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)));
             
         }
 
@@ -13211,11 +13235,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
-        public List<Dictionary<string, Object>> GetFlowsDatatableRows (string datatableId, bool? showbrief = null)
+        /// <returns>DataTableRowEntityListing</returns>
+        public DataTableRowEntityListing GetFlowsDatatableRows (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null)
         {
-             ApiResponse<List<Dictionary<string, Object>>> localVarResponse = GetFlowsDatatableRowsWithHttpInfo(datatableId, showbrief);
+             ApiResponse<DataTableRowEntityListing> localVarResponse = GetFlowsDatatableRowsWithHttpInfo(datatableId, pageSize, pageNumber, showbrief);
              return localVarResponse.Data;
         }
 
@@ -13224,9 +13250,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>ApiResponse of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
-        public ApiResponse< List<Dictionary<string, Object>> > GetFlowsDatatableRowsWithHttpInfo (string datatableId, bool? showbrief = null)
+        /// <returns>ApiResponse of DataTableRowEntityListing</returns>
+        public ApiResponse< DataTableRowEntityListing > GetFlowsDatatableRowsWithHttpInfo (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -13266,6 +13294,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
 
             // Header params
@@ -13296,9 +13326,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<Dictionary<string, Object>>>(localVarStatusCode,
+            return new ApiResponse<DataTableRowEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<Dictionary<string, Object>>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Dictionary<string, Object>>)));
+                (DataTableRowEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableRowEntityListing)));
             
         }
 
@@ -13308,11 +13338,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>Task of List&lt;Dictionary&lt;string, Object&gt;&gt;</returns>
-        public async System.Threading.Tasks.Task<List<Dictionary<string, Object>>> GetFlowsDatatableRowsAsync (string datatableId, bool? showbrief = null)
+        /// <returns>Task of DataTableRowEntityListing</returns>
+        public async System.Threading.Tasks.Task<DataTableRowEntityListing> GetFlowsDatatableRowsAsync (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null)
         {
-             ApiResponse<List<Dictionary<string, Object>>> localVarResponse = await GetFlowsDatatableRowsAsyncWithHttpInfo(datatableId, showbrief);
+             ApiResponse<DataTableRowEntityListing> localVarResponse = await GetFlowsDatatableRowsAsyncWithHttpInfo(datatableId, pageSize, pageNumber, showbrief);
              return localVarResponse.Data;
 
         }
@@ -13322,9 +13354,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="showbrief">If true returns just the key value of the row (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (List&lt;Dictionary&lt;string, Object&gt;&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<Dictionary<string, Object>>>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, bool? showbrief = null)
+        /// <returns>Task of ApiResponse (DataTableRowEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTableRowEntityListing>> GetFlowsDatatableRowsAsyncWithHttpInfo (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -13365,6 +13399,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
 
             // Header params
@@ -13395,9 +13431,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatableRows: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<Dictionary<string, Object>>>(localVarStatusCode,
+            return new ApiResponse<DataTableRowEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<Dictionary<string, Object>>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Dictionary<string, Object>>)));
+                (DataTableRowEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableRowEntityListing)));
             
         }
 
@@ -13407,11 +13443,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>List&lt;JsonSchemaDocument&gt;</returns>
-        public List<JsonSchemaDocument> GetFlowsDatatables (bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>DataTablesDomainEntityListing</returns>
+        public DataTablesDomainEntityListing GetFlowsDatatables (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<List<JsonSchemaDocument>> localVarResponse = GetFlowsDatatablesWithHttpInfo(showbrief);
+             ApiResponse<DataTablesDomainEntityListing> localVarResponse = GetFlowsDatatablesWithHttpInfo(expand, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -13419,9 +13459,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>ApiResponse of List&lt;JsonSchemaDocument&gt;</returns>
-        public ApiResponse< List<JsonSchemaDocument> > GetFlowsDatatablesWithHttpInfo (bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>ApiResponse of DataTablesDomainEntityListing</returns>
+        public ApiResponse< DataTablesDomainEntityListing > GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/flows/datatables";
@@ -13457,7 +13501,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -13487,9 +13535,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<JsonSchemaDocument>>(localVarStatusCode,
+            return new ApiResponse<DataTablesDomainEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<JsonSchemaDocument>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<JsonSchemaDocument>)));
+                (DataTablesDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTablesDomainEntityListing)));
             
         }
 
@@ -13498,11 +13546,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>Task of List&lt;JsonSchemaDocument&gt;</returns>
-        public async System.Threading.Tasks.Task<List<JsonSchemaDocument>> GetFlowsDatatablesAsync (bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of DataTablesDomainEntityListing</returns>
+        public async System.Threading.Tasks.Task<DataTablesDomainEntityListing> GetFlowsDatatablesAsync (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<List<JsonSchemaDocument>> localVarResponse = await GetFlowsDatatablesAsyncWithHttpInfo(showbrief);
+             ApiResponse<DataTablesDomainEntityListing> localVarResponse = await GetFlowsDatatablesAsyncWithHttpInfo(expand, pageSize, pageNumber, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -13511,9 +13563,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Retrieve a list of datatables for the org Returns a metadata list of the datatables associated with this org, including ID, name and description.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="showbrief">If true, returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (List&lt;JsonSchemaDocument&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<JsonSchemaDocument>>> GetFlowsDatatablesAsyncWithHttpInfo (bool? showbrief = null)
+        /// <param name="expand">Expand instructions for the result (optional)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
+        /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/flows/datatables";
@@ -13549,7 +13605,11 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
-            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -13579,9 +13639,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<JsonSchemaDocument>>(localVarStatusCode,
+            return new ApiResponse<DataTablesDomainEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<JsonSchemaDocument>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<JsonSchemaDocument>)));
+                (DataTablesDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTablesDomainEntityListing)));
             
         }
 
@@ -17089,10 +17149,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>JsonSchemaDocument</returns>
-        public JsonSchemaDocument PostFlowsDatatables (JsonSchemaDocument body)
+        /// <returns>DataTable</returns>
+        public DataTable PostFlowsDatatables (DataTable body)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = PostFlowsDatatablesWithHttpInfo(body);
+             ApiResponse<DataTable> localVarResponse = PostFlowsDatatablesWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -17101,8 +17161,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        public ApiResponse< JsonSchemaDocument > PostFlowsDatatablesWithHttpInfo (JsonSchemaDocument body)
+        /// <returns>ApiResponse of DataTable</returns>
+        public ApiResponse< DataTable > PostFlowsDatatablesWithHttpInfo (DataTable body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -17175,9 +17235,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+            return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
-                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)));
             
         }
 
@@ -17187,10 +17247,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>Task of JsonSchemaDocument</returns>
-        public async System.Threading.Tasks.Task<JsonSchemaDocument> PostFlowsDatatablesAsync (JsonSchemaDocument body)
+        /// <returns>Task of DataTable</returns>
+        public async System.Threading.Tasks.Task<DataTable> PostFlowsDatatablesAsync (DataTable body)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = await PostFlowsDatatablesAsyncWithHttpInfo(body);
+             ApiResponse<DataTable> localVarResponse = await PostFlowsDatatablesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -17200,8 +17260,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">datatable json-schema</param>
-        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PostFlowsDatatablesAsyncWithHttpInfo (JsonSchemaDocument body)
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -17275,9 +17335,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatables: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+            return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
-                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)));
             
         }
 
@@ -18745,28 +18805,28 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>JsonSchemaDocument</returns>
-        public JsonSchemaDocument PutFlowsDatatable (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        /// <returns>DataTable</returns>
+        public DataTable PutFlowsDatatable (string datatableId, string expand = null, DataTable body = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = PutFlowsDatatableWithHttpInfo(datatableId, showbrief, body);
+             ApiResponse<DataTable> localVarResponse = PutFlowsDatatableWithHttpInfo(datatableId, expand, body);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>ApiResponse of JsonSchemaDocument</returns>
-        public ApiResponse< JsonSchemaDocument > PutFlowsDatatableWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        /// <returns>ApiResponse of DataTable</returns>
+        public ApiResponse< DataTable > PutFlowsDatatableWithHttpInfo (string datatableId, string expand = null, DataTable body = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -18806,7 +18866,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
-            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -18841,37 +18901,37 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+            return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
-                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)));
             
         }
 
         
         /// <summary>
-        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>Task of JsonSchemaDocument</returns>
-        public async System.Threading.Tasks.Task<JsonSchemaDocument> PutFlowsDatatableAsync (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        /// <returns>Task of DataTable</returns>
+        public async System.Threading.Tasks.Task<DataTable> PutFlowsDatatableAsync (string datatableId, string expand = null, DataTable body = null)
         {
-             ApiResponse<JsonSchemaDocument> localVarResponse = await PutFlowsDatatableAsyncWithHttpInfo(datatableId, showbrief, body);
+             ApiResponse<DataTable> localVarResponse = await PutFlowsDatatableAsyncWithHttpInfo(datatableId, expand, body);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Updates a specific datatable by datatableId Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+        /// Updates a specific datatable by id Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
-        /// <param name="showbrief">If true returns a shortened version of the schema including the name, id and description (optional, default to true)</param>
+        /// <param name="expand">Expand instructions for the result (optional)</param>
         /// <param name="body">datatable json-schema (optional)</param>
-        /// <returns>Task of ApiResponse (JsonSchemaDocument)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<JsonSchemaDocument>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+        /// <returns>Task of ApiResponse (DataTable)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<DataTable>> PutFlowsDatatableAsyncWithHttpInfo (string datatableId, string expand = null, DataTable body = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -18912,7 +18972,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
-            if (showbrief != null) localVarQueryParams.Add(new Tuple<string, string>("showbrief", this.Configuration.ApiClient.ParameterToString(showbrief)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -18947,9 +19007,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutFlowsDatatable: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<JsonSchemaDocument>(localVarStatusCode,
+            return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
-                (JsonSchemaDocument) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JsonSchemaDocument)));
+                (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)));
             
         }
 

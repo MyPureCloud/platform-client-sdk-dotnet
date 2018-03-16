@@ -144,6 +144,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Reason for which participant flagged conversation
+        /// </summary>
+        /// <value>Reason for which participant flagged conversation</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -164,6 +189,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// Reason for which participant flagged conversation
+        /// </summary>
+        /// <value>Reason for which participant flagged conversation</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -198,11 +232,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">Reason for which participant flagged conversation.</param>
+        
+        
+        
         /// <param name="Sessions">List of sessions associated to this participant.</param>
         
         
-        public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, List<AnalyticsSession> Sessions = null)
+        public AnalyticsParticipant(string ParticipantId = null, string ParticipantName = null, string UserId = null, PurposeEnum? Purpose = null, string ExternalContactId = null, string ExternalOrganizationId = null, FlaggedReasonEnum? FlaggedReason = null, List<AnalyticsSession> Sessions = null)
         {
+            
+            
+            
+            
             
             
             
@@ -291,6 +333,15 @@ this.ExternalOrganizationId = ExternalOrganizationId;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Sessions = Sessions;
             
             
@@ -347,6 +398,8 @@ this.Sessions = Sessions;
         
         
         
+        
+        
         /// <summary>
         /// List of sessions associated to this participant
         /// </summary>
@@ -375,6 +428,8 @@ this.Sessions = Sessions;
             sb.Append("  ExternalContactId: ").Append(ExternalContactId).Append("\n");
             
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             
@@ -445,6 +500,11 @@ this.Sessions = Sessions;
                     this.ExternalOrganizationId.Equals(other.ExternalOrganizationId)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&
                     this.Sessions.SequenceEqual(other.Sessions)
@@ -480,6 +540,9 @@ this.Sessions = Sessions;
                 
                 if (this.ExternalOrganizationId != null)
                     hash = hash * 59 + this.ExternalOrganizationId.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();

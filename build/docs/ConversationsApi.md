@@ -16,32 +16,37 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationParticipantSecureivrsessions**](ConversationsApi.html#getconversationparticipantsecureivrsessions) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Get a list of secure sessions for this participant. |
 | [**GetConversationParticipantWrapup**](ConversationsApi.html#getconversationparticipantwrapup) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationParticipantWrapupcodes**](ConversationsApi.html#getconversationparticipantwrapupcodes) | **GET** /api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get conversations |
+| [**GetConversations**](ConversationsApi.html#getconversations) | **GET** /api/v2/conversations | Get active conversations for the logged in user |
 | [**GetConversationsCall**](ConversationsApi.html#getconversationscall) | **GET** /api/v2/conversations/calls/{conversationId} | Get call conversation |
 | [**GetConversationsCallParticipantWrapup**](ConversationsApi.html#getconversationscallparticipantwrapup) | **GET** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsCallParticipantWrapupcodes**](ConversationsApi.html#getconversationscallparticipantwrapupcodes) | **GET** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsCallback**](ConversationsApi.html#getconversationscallback) | **GET** /api/v2/conversations/callbacks/{conversationId} | Get callback conversation |
 | [**GetConversationsCallbackParticipantWrapup**](ConversationsApi.html#getconversationscallbackparticipantwrapup) | **GET** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsCallbackParticipantWrapupcodes**](ConversationsApi.html#getconversationscallbackparticipantwrapupcodes) | **GET** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsCallbacks**](ConversationsApi.html#getconversationscallbacks) | **GET** /api/v2/conversations/callbacks | Get callback conversations |
-| [**GetConversationsCalls**](ConversationsApi.html#getconversationscalls) | **GET** /api/v2/conversations/calls | Get recent conversations |
+| [**GetConversationsCallbacks**](ConversationsApi.html#getconversationscallbacks) | **GET** /api/v2/conversations/callbacks | Get active callback conversations for the logged in user |
+| [**GetConversationsCalls**](ConversationsApi.html#getconversationscalls) | **GET** /api/v2/conversations/calls | Get active call conversations for the logged in user |
 | [**GetConversationsCallsHistory**](ConversationsApi.html#getconversationscallshistory) | **GET** /api/v2/conversations/calls/history | Get call history |
 | [**GetConversationsCallsMaximumconferenceparties**](ConversationsApi.html#getconversationscallsmaximumconferenceparties) | **GET** /api/v2/conversations/calls/maximumconferenceparties | Get the maximum number of participants that this user can have on a conference |
 | [**GetConversationsChat**](ConversationsApi.html#getconversationschat) | **GET** /api/v2/conversations/chats/{conversationId} | Get chat conversation |
 | [**GetConversationsChatParticipantWrapup**](ConversationsApi.html#getconversationschatparticipantwrapup) | **GET** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsChatParticipantWrapupcodes**](ConversationsApi.html#getconversationschatparticipantwrapupcodes) | **GET** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsChats**](ConversationsApi.html#getconversationschats) | **GET** /api/v2/conversations/chats | Get recent chat conversations |
+| [**GetConversationsChats**](ConversationsApi.html#getconversationschats) | **GET** /api/v2/conversations/chats | Get active chat conversations for the logged in user |
 | [**GetConversationsCobrowsesession**](ConversationsApi.html#getconversationscobrowsesession) | **GET** /api/v2/conversations/cobrowsesessions/{conversationId} | Get cobrowse conversation |
 | [**GetConversationsCobrowsesessionParticipantWrapup**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapup) | **GET** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsCobrowsesessionParticipantWrapupcodes**](ConversationsApi.html#getconversationscobrowsesessionparticipantwrapupcodes) | **GET** /api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsCobrowsesessions**](ConversationsApi.html#getconversationscobrowsesessions) | **GET** /api/v2/conversations/cobrowsesessions | Get recent cobrowse conversations |
+| [**GetConversationsCobrowsesessions**](ConversationsApi.html#getconversationscobrowsesessions) | **GET** /api/v2/conversations/cobrowsesessions | Get active cobrowse conversations for the logged in user |
 | [**GetConversationsEmail**](ConversationsApi.html#getconversationsemail) | **GET** /api/v2/conversations/emails/{conversationId} | Get email conversation |
 | [**GetConversationsEmailMessage**](ConversationsApi.html#getconversationsemailmessage) | **GET** /api/v2/conversations/emails/{conversationId}/messages/{messageId} | Get conversation message |
 | [**GetConversationsEmailMessages**](ConversationsApi.html#getconversationsemailmessages) | **GET** /api/v2/conversations/emails/{conversationId}/messages | Get conversation messages |
 | [**GetConversationsEmailMessagesDraft**](ConversationsApi.html#getconversationsemailmessagesdraft) | **GET** /api/v2/conversations/emails/{conversationId}/messages/draft | Get conversation draft reply |
 | [**GetConversationsEmailParticipantWrapup**](ConversationsApi.html#getconversationsemailparticipantwrapup) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsEmailParticipantWrapupcodes**](ConversationsApi.html#getconversationsemailparticipantwrapupcodes) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
-| [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **GET** /api/v2/conversations/emails | Get recent email conversations |
+| [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **GET** /api/v2/conversations/emails | Get active email conversations for the logged in user |
+| [**GetConversationsMessage**](ConversationsApi.html#getconversationsmessage) | **GET** /api/v2/conversations/messages/{conversationId} | Get message conversation |
+| [**GetConversationsMessageMessage**](ConversationsApi.html#getconversationsmessagemessage) | **GET** /api/v2/conversations/messages/{conversationId}/messages/{messageId} | Get message |
+| [**GetConversationsMessageParticipantWrapup**](ConversationsApi.html#getconversationsmessageparticipantwrapup) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
+| [**GetConversationsMessageParticipantWrapupcodes**](ConversationsApi.html#getconversationsmessageparticipantwrapupcodes) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
+| [**GetConversationsMessages**](ConversationsApi.html#getconversationsmessages) | **GET** /api/v2/conversations/messages | Get active message conversations for the logged in user |
 | [**PatchConversationParticipant**](ConversationsApi.html#patchconversationparticipant) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](ConversationsApi.html#patchconversationparticipantattributes) | **PATCH** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsCall**](ConversationsApi.html#patchconversationscall) | **PATCH** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting it&#39;s recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
@@ -65,6 +70,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsEmailParticipant**](ConversationsApi.html#patchconversationsemailparticipant) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsEmailParticipantAttributes**](ConversationsApi.html#patchconversationsemailparticipantattributes) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsEmailParticipantCommunication**](ConversationsApi.html#patchconversationsemailparticipantcommunication) | **PATCH** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
+| [**PatchConversationsMessage**](ConversationsApi.html#patchconversationsmessage) | **PATCH** /api/v2/conversations/messages/{conversationId} | Update a conversation by disconnecting all of the participants |
+| [**PatchConversationsMessageParticipant**](ConversationsApi.html#patchconversationsmessageparticipant) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId} | Update conversation participant |
+| [**PatchConversationsMessageParticipantAttributes**](ConversationsApi.html#patchconversationsmessageparticipantattributes) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationsMessageParticipantCommunication**](ConversationsApi.html#patchconversationsmessageparticipantcommunication) | **PATCH** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. |
 | [**PostAnalyticsConversationDetailsProperties**](ConversationsApi.html#postanalyticsconversationdetailsproperties) | **POST** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostAnalyticsConversationsAggregatesQuery**](ConversationsApi.html#postanalyticsconversationsaggregatesquery) | **POST** /api/v2/analytics/conversations/aggregates/query | Query for conversation aggregates |
 | [**PostAnalyticsConversationsDetailsQuery**](ConversationsApi.html#postanalyticsconversationsdetailsquery) | **POST** /api/v2/analytics/conversations/details/query | Query for conversation details |
@@ -88,6 +97,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsEmailParticipantReplace**](ConversationsApi.html#postconversationsemailparticipantreplace) | **POST** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **POST** /api/v2/conversations/emails | Create an email conversation |
 | [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
+| [**PostConversationsMessageCommunicationMessages**](ConversationsApi.html#postconversationsmessagecommunicationmessages) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
+| [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **POST** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
+| [**PostConversationsMessageParticipantReplace**](ConversationsApi.html#postconversationsmessageparticipantreplace) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
 | [**PutConversationsEmailMessagesDraft**](ConversationsApi.html#putconversationsemailmessagesdraft) | **PUT** /api/v2/conversations/emails/{conversationId}/messages/draft | Update conversation draft reply |
 {: class="table table-striped"}
@@ -729,7 +741,7 @@ namespace Example
 
 ## [**ConversationEntityListing**](ConversationEntityListing.html) GetConversations (string communicationType = null)
 
-Get conversations
+Get active conversations for the logged in user
 
 
 
@@ -763,7 +775,7 @@ namespace Example
             try
             {
                 
-                // Get conversations
+                // Get active conversations for the logged in user
                 
                 ConversationEntityListing result = apiInstance.GetConversations(communicationType);
                 Debug.WriteLine(result);
@@ -1213,7 +1225,7 @@ namespace Example
 
 ## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) GetConversationsCallbacks ()
 
-Get callback conversations
+Get active callback conversations for the logged in user
 
 
 
@@ -1242,7 +1254,7 @@ namespace Example
             try
             {
                 
-                // Get callback conversations
+                // Get active callback conversations for the logged in user
                 
                 CallbackConversationEntityListing result = apiInstance.GetConversationsCallbacks();
                 Debug.WriteLine(result);
@@ -1268,7 +1280,7 @@ This endpoint does require any parameters.
 
 ## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetConversationsCalls ()
 
-Get recent conversations
+Get active call conversations for the logged in user
 
 
 
@@ -1297,7 +1309,7 @@ namespace Example
             try
             {
                 
-                // Get recent conversations
+                // Get active call conversations for the logged in user
                 
                 CallConversationEntityListing result = apiInstance.GetConversationsCalls();
                 Debug.WriteLine(result);
@@ -1670,7 +1682,7 @@ namespace Example
 
 ## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetConversationsChats ()
 
-Get recent chat conversations
+Get active chat conversations for the logged in user
 
 
 
@@ -1699,7 +1711,7 @@ namespace Example
             try
             {
                 
-                // Get recent chat conversations
+                // Get active chat conversations for the logged in user
                 
                 ChatConversationEntityListing result = apiInstance.GetConversationsChats();
                 Debug.WriteLine(result);
@@ -1935,7 +1947,7 @@ namespace Example
 
 ## [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) GetConversationsCobrowsesessions ()
 
-Get recent cobrowse conversations
+Get active cobrowse conversations for the logged in user
 
 
 
@@ -1964,7 +1976,7 @@ namespace Example
             try
             {
                 
-                // Get recent cobrowse conversations
+                // Get active cobrowse conversations for the logged in user
                 
                 CobrowseConversationEntityListing result = apiInstance.GetConversationsCobrowsesessions();
                 Debug.WriteLine(result);
@@ -2398,7 +2410,7 @@ namespace Example
 
 ## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) GetConversationsEmails ()
 
-Get recent email conversations
+Get active email conversations for the logged in user
 
 
 
@@ -2427,7 +2439,7 @@ namespace Example
             try
             {
                 
-                // Get recent email conversations
+                // Get active email conversations for the logged in user
                 
                 EmailConversationEntityListing result = apiInstance.GetConversationsEmails();
                 Debug.WriteLine(result);
@@ -2448,6 +2460,341 @@ This endpoint does require any parameters.
 ### Return type
 
 [**EmailConversationEntityListing**](EmailConversationEntityListing.html)
+
+<a name="getconversationsmessage"></a>
+
+## [**MessageConversation**](MessageConversation.html) GetConversationsMessage (string conversationId)
+
+Get message conversation
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+
+            try
+            {
+                
+                // Get message conversation
+                
+                MessageConversation result = apiInstance.GetConversationsMessage(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessageConversation**](MessageConversation.html)
+
+<a name="getconversationsmessagemessage"></a>
+
+## [**MessageData**](MessageData.html) GetConversationsMessageMessage (string conversationId, string messageId)
+
+Get message
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessageMessageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var messageId = messageId_example;  // string | messageId
+            
+            
+            
+
+            try
+            {
+                
+                // Get message
+                
+                MessageData result = apiInstance.GetConversationsMessageMessage(conversationId, messageId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessageMessage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **messageId** | **string**| messageId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessageData**](MessageData.html)
+
+<a name="getconversationsmessageparticipantwrapup"></a>
+
+## [**Wrapup**](Wrapup.html) GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+Get the wrap-up for this conversation participant. 
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessageParticipantWrapupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            var provisional = true;  // bool? | Indicates if the wrap-up code is provisional. (optional)  (default to false)
+            
+            
+            
+
+            try
+            {
+                
+                // Get the wrap-up for this conversation participant. 
+                
+                Wrapup result = apiInstance.GetConversationsMessageParticipantWrapup(conversationId, participantId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessageParticipantWrapup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **provisional** | **bool?**| Indicates if the wrap-up code is provisional. | [optional] [default to false] |
+{: class="table table-striped"}
+
+### Return type
+
+[**Wrapup**](Wrapup.html)
+
+<a name="getconversationsmessageparticipantwrapupcodes"></a>
+
+## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsMessageParticipantWrapupcodes (string conversationId, string participantId)
+
+Get list of wrapup codes for this conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessageParticipantWrapupcodesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string |  conversationId
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participantId
+            
+            
+            
+
+            try
+            {
+                
+                // Get list of wrapup codes for this conversation participant
+                
+                List&lt;WrapupCode&gt; result = apiInstance.GetConversationsMessageParticipantWrapupcodes(conversationId, participantId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessageParticipantWrapupcodes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**|  conversationId |  |
+| **participantId** | **string**| participantId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<WrapupCode>**](WrapupCode.html)
+
+<a name="getconversationsmessages"></a>
+
+## [**MessageConversationEntityListing**](MessageConversationEntityListing.html) GetConversationsMessages ()
+
+Get active message conversations for the logged in user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+
+            try
+            {
+                
+                // Get active message conversations for the logged in user
+                
+                MessageConversationEntityListing result = apiInstance.GetConversationsMessages();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**MessageConversationEntityListing**](MessageConversationEntityListing.html)
 
 <a name="patchconversationparticipant"></a>
 
@@ -4185,6 +4532,308 @@ namespace Example
 
 [**Empty**](Empty.html)
 
+<a name="patchconversationsmessage"></a>
+
+## [**Conversation**](Conversation.html) PatchConversationsMessage (string conversationId, Conversation body)
+
+Update a conversation by disconnecting all of the participants
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            
+            var body = new Conversation(); // Conversation | Conversation
+            
+            
+
+            try
+            {
+                
+                // Update a conversation by disconnecting all of the participants
+                
+                Conversation result = apiInstance.PatchConversationsMessage(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**Conversation**](Conversation.html)| Conversation |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Conversation**](Conversation.html)
+
+<a name="patchconversationsmessageparticipant"></a>
+
+## void PatchConversationsMessageParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
+
+Update conversation participant
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessageParticipantExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string |  conversationId
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Update conversation participant
+                
+                apiInstance.PatchConversationsMessageParticipant(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessageParticipant: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**|  conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchconversationsmessageparticipantattributes"></a>
+
+## void PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
+
+Update the attributes on a conversation participant.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessageParticipantAttributesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string |  conversationId
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
+            var body = new ParticipantAttributes(); // ParticipantAttributes |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Update the attributes on a conversation participant.
+                
+                apiInstance.PatchConversationsMessageParticipantAttributes(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessageParticipantAttributes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**|  conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ParticipantAttributes**](ParticipantAttributes.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="patchconversationsmessageparticipantcommunication"></a>
+
+## [**Empty**](Empty.html) PatchConversationsMessageParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
+
+Update conversation participant's communication by disconnecting it.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessageParticipantCommunicationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string |  conversationId
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant
+            
+            
+
+            try
+            {
+                
+                // Update conversation participant's communication by disconnecting it.
+                
+                Empty result = apiInstance.PatchConversationsMessageParticipantCommunication(conversationId, participantId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessageParticipantCommunication: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**|  conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest.html)| Participant |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Empty**](Empty.html)
+
 <a name="postanalyticsconversationdetailsproperties"></a>
 
 ## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
@@ -5803,6 +6452,227 @@ namespace Example
 ### Return type
 
 [**FaxSendResponse**](FaxSendResponse.html)
+
+<a name="postconversationsmessagecommunicationmessages"></a>
+
+## [**MessageData**](MessageData.html) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body)
+
+Send message
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageCommunicationMessagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            
+            var body = new AdditionalMessage(); // AdditionalMessage | Message
+            
+            
+
+            try
+            {
+                
+                // Send message
+                
+                MessageData result = apiInstance.PostConversationsMessageCommunicationMessages(conversationId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageCommunicationMessages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+| **body** | [**AdditionalMessage**](AdditionalMessage.html)| Message |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessageData**](MessageData.html)
+
+<a name="postconversationsmessagemessagesbulk"></a>
+
+## [**TextMessageListing**](TextMessageListing.html) PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null)
+
+Get messages in batch
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageMessagesBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var body = ;  // List<string> | messageIds (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get messages in batch
+                
+                TextMessageListing result = apiInstance.PostConversationsMessageMessagesBulk(conversationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageMessagesBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | **List<string>**| messageIds | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**TextMessageListing**](TextMessageListing.html)
+
+<a name="postconversationsmessageparticipantreplace"></a>
+
+## void PostConversationsMessageParticipantReplace (string conversationId, string participantId, TransferRequest body)
+
+Replace this participant with the specified user and/or address
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageParticipantReplaceExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var participantId = participantId_example;  // string | participantId
+            
+            
+            
+            
+            
+            var body = new TransferRequest(); // TransferRequest | Transfer request
+            
+            
+
+            try
+            {
+                
+                // Replace this participant with the specified user and/or address
+                
+                apiInstance.PostConversationsMessageParticipantReplace(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageParticipantReplace: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**TransferRequest**](TransferRequest.html)| Transfer request |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="putconversationscallparticipantcommunicationuuidata"></a>
 

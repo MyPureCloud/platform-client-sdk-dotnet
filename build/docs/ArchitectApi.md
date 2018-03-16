@@ -50,7 +50,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowVersionConfiguration**](ArchitectApi.html#getflowversionconfiguration) | **GET** /api/v2/flows/{flowId}/versions/{versionId}/configuration | Create flow version configuration |
 | [**GetFlowVersions**](ArchitectApi.html#getflowversions) | **GET** /api/v2/flows/{flowId}/versions | Get flow version list |
 | [**GetFlows**](ArchitectApi.html#getflows) | **GET** /api/v2/flows | Get a pageable list of flows, filtered by query parameters |
-| [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **GET** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by datatableId |
+| [**GetFlowsDatatable**](ArchitectApi.html#getflowsdatatable) | **GET** /api/v2/flows/datatables/{datatableId} | Returns a specific datatable by id |
 | [**GetFlowsDatatableRow**](ArchitectApi.html#getflowsdatatablerow) | **GET** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Returns a specific row for the datatable |
 | [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable |
 | [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
@@ -80,7 +80,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutArchitectSchedulegroup**](ArchitectApi.html#putarchitectschedulegroup) | **PUT** /api/v2/architect/schedulegroups/{scheduleGroupId} | Updates a schedule group by ID |
 | [**PutArchitectSystempromptResource**](ArchitectApi.html#putarchitectsystempromptresource) | **PUT** /api/v2/architect/systemprompts/{promptId}/resources/{languageCode} | Updates a system prompt resource override. |
 | [**PutFlow**](ArchitectApi.html#putflow) | **PUT** /api/v2/flows/{flowId} | Update flow |
-| [**PutFlowsDatatable**](ArchitectApi.html#putflowsdatatable) | **PUT** /api/v2/flows/datatables/{datatableId} | Updates a specific datatable by datatableId |
+| [**PutFlowsDatatable**](ArchitectApi.html#putflowsdatatable) | **PUT** /api/v2/flows/datatables/{datatableId} | Updates a specific datatable by id |
 | [**PutFlowsDatatableRow**](ArchitectApi.html#putflowsdatatablerow) | **PUT** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Update a row entry |
 {: class="table table-striped"}
 
@@ -677,7 +677,7 @@ namespace Example
 
 deletes a specific datatable by id
 
-deletes an entire datatable (including schema and data) with a given datatableId)
+deletes an entire datatable (including schema and data) with a given id)
 
 ### Example
 ~~~csharp
@@ -3474,9 +3474,9 @@ namespace Example
 
 <a name="getflowsdatatable"></a>
 
-## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetFlowsDatatable (string datatableId, bool? showbrief = null)
+## [**DataTable**](DataTable.html) GetFlowsDatatable (string datatableId, string expand = null)
 
-Returns a specific datatable by datatableId
+Returns a specific datatable by id
 
 Given a datableid returns the schema associated with it.
 
@@ -3507,7 +3507,7 @@ namespace Example
             
             
             
-            var showbrief = true;  // bool? | If true returns a shortened version of the schema including the name, id and description] (optional)  (default to true)
+            var expand = expand_example;  // string | Expand instructions for the result (optional) 
             
             
             
@@ -3515,9 +3515,9 @@ namespace Example
             try
             {
                 
-                // Returns a specific datatable by datatableId
+                // Returns a specific datatable by id
                 
-                JsonSchemaDocument result = apiInstance.GetFlowsDatatable(datatableId, showbrief);
+                DataTable result = apiInstance.GetFlowsDatatable(datatableId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3535,12 +3535,12 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
-| **showbrief** | **bool?**| If true returns a shortened version of the schema including the name, id and description] | [optional] [default to true] |
+| **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
 {: class="table table-striped"}
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**DataTable**](DataTable.html)
 
 <a name="getflowsdatatablerow"></a>
 
@@ -3620,7 +3620,7 @@ namespace Example
 
 <a name="getflowsdatatablerows"></a>
 
-## **List&lt;Dictionary&lt;string, Object&gt;&gt;** GetFlowsDatatableRows (string datatableId, bool? showbrief = null)
+## [**DataTableRowEntityListing**](DataTableRowEntityListing.html) GetFlowsDatatableRows (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null)
 
 Returns the rows for the datatable
 
@@ -3653,6 +3653,16 @@ namespace Example
             
             
             
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
             var showbrief = true;  // bool? | If true returns just the key value of the row (optional)  (default to true)
             
             
@@ -3663,7 +3673,7 @@ namespace Example
                 
                 // Returns the rows for the datatable
                 
-                List&lt;Dictionary&lt;string, Object&gt;&gt; result = apiInstance.GetFlowsDatatableRows(datatableId, showbrief);
+                DataTableRowEntityListing result = apiInstance.GetFlowsDatatableRows(datatableId, pageSize, pageNumber, showbrief);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3681,16 +3691,18 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **showbrief** | **bool?**| If true returns just the key value of the row | [optional] [default to true] |
 {: class="table table-striped"}
 
 ### Return type
 
-**List<Dictionary<string, Object>>**
+[**DataTableRowEntityListing**](DataTableRowEntityListing.html)
 
 <a name="getflowsdatatables"></a>
 
-## [**List&lt;JsonSchemaDocument&gt;**](JsonSchemaDocument.html) GetFlowsDatatables (bool? showbrief = null)
+## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) GetFlowsDatatables (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
 Retrieve a list of datatables for the org
 
@@ -3718,7 +3730,27 @@ namespace Example
             var apiInstance = new ArchitectApi();
             
             
-            var showbrief = true;  // bool? | If true, returns a shortened version of the schema including the name, id and description (optional)  (default to true)
+            var expand = expand_example;  // string | Expand instructions for the result (optional) 
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to id)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ascending)
             
             
             
@@ -3728,7 +3760,7 @@ namespace Example
                 
                 // Retrieve a list of datatables for the org
                 
-                List&lt;JsonSchemaDocument&gt; result = apiInstance.GetFlowsDatatables(showbrief);
+                DataTablesDomainEntityListing result = apiInstance.GetFlowsDatatables(expand, pageSize, pageNumber, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3745,12 +3777,16 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **showbrief** | **bool?**| If true, returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
+| **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
+| **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 {: class="table table-striped"}
 
 ### Return type
 
-[**List<JsonSchemaDocument>**](JsonSchemaDocument.html)
+[**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html)
 
 <a name="postarchitectdependencytrackingbuild"></a>
 
@@ -4926,7 +4962,7 @@ namespace Example
 
 <a name="postflowsdatatables"></a>
 
-## [**JsonSchemaDocument**](JsonSchemaDocument.html) PostFlowsDatatables (JsonSchemaDocument body)
+## [**DataTable**](DataTable.html) PostFlowsDatatables (DataTable body)
 
 Create a new datatable with the specified json-schema definition
 
@@ -4955,7 +4991,7 @@ namespace Example
             
             
             
-            var body = new JsonSchemaDocument(); // JsonSchemaDocument | datatable json-schema
+            var body = new DataTable(); // DataTable | datatable json-schema
             
             
 
@@ -4964,7 +5000,7 @@ namespace Example
                 
                 // Create a new datatable with the specified json-schema definition
                 
-                JsonSchemaDocument result = apiInstance.PostFlowsDatatables(body);
+                DataTable result = apiInstance.PostFlowsDatatables(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4981,12 +5017,12 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema |  |
+| **body** | [**DataTable**](DataTable.html)| datatable json-schema |  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**DataTable**](DataTable.html)
 
 <a name="putarchitectivr"></a>
 
@@ -5492,11 +5528,11 @@ namespace Example
 
 <a name="putflowsdatatable"></a>
 
-## [**JsonSchemaDocument**](JsonSchemaDocument.html) PutFlowsDatatable (string datatableId, bool? showbrief = null, JsonSchemaDocument body = null)
+## [**DataTable**](DataTable.html) PutFlowsDatatable (string datatableId, string expand = null, DataTable body = null)
 
-Updates a specific datatable by datatableId
+Updates a specific datatable by id
 
-Updates a schema for a datatable with the given datatableId - updates are additive only, no changes or removals of existing fields.
+Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
 
 ### Example
 ~~~csharp
@@ -5525,22 +5561,22 @@ namespace Example
             
             
             
-            var showbrief = true;  // bool? | If true returns a shortened version of the schema including the name, id and description (optional)  (default to true)
+            var expand = expand_example;  // string | Expand instructions for the result (optional) 
             
             
             
             
             
-            var body = new JsonSchemaDocument(); // JsonSchemaDocument | datatable json-schema (optional) 
+            var body = new DataTable(); // DataTable | datatable json-schema (optional) 
             
             
 
             try
             {
                 
-                // Updates a specific datatable by datatableId
+                // Updates a specific datatable by id
                 
-                JsonSchemaDocument result = apiInstance.PutFlowsDatatable(datatableId, showbrief, body);
+                DataTable result = apiInstance.PutFlowsDatatable(datatableId, expand, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5558,13 +5594,13 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
-| **showbrief** | **bool?**| If true returns a shortened version of the schema including the name, id and description | [optional] [default to true] |
-| **body** | [**JsonSchemaDocument**](JsonSchemaDocument.html)| datatable json-schema | [optional]  |
+| **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
+| **body** | [**DataTable**](DataTable.html)| datatable json-schema | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
 
-[**JsonSchemaDocument**](JsonSchemaDocument.html)
+[**DataTable**](DataTable.html)
 
 <a name="putflowsdatatablerow"></a>
 
