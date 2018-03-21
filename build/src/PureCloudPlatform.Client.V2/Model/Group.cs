@@ -166,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Active, inactive, or deleted state.
         /// </summary>
@@ -198,6 +201,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Who can view this group</value>
         [DataMember(Name="visibility", EmitDefaultValue=false)]
         public VisibilityEnum? Visibility { get; set; }
+        
+        
         
         
         
@@ -252,8 +257,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Owners">Owners of the group.</param>
         
-        public Group(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
+        
+        
+        
+        public Group(string Name = null, string Description = null, TypeEnum? Type = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<User> Owners = null)
         {
             
             
@@ -347,6 +356,10 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
 this.Description = Description;
             
             
@@ -386,6 +399,15 @@ this.Addresses = Addresses;
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+this.Owners = Owners;
             
             
             
@@ -481,6 +503,15 @@ this.Addresses = Addresses;
         
         
         /// <summary>
+        /// Owners of the group
+        /// </summary>
+        /// <value>Owners of the group</value>
+        [DataMember(Name="owners", EmitDefaultValue=false)]
+        public List<User> Owners { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -520,6 +551,8 @@ this.Addresses = Addresses;
             sb.Append("  RulesVisible: ").Append(RulesVisible).Append("\n");
             
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
+            
+            sb.Append("  Owners: ").Append(Owners).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -620,6 +653,11 @@ this.Addresses = Addresses;
                     this.Visibility.Equals(other.Visibility)
                 ) &&
                 (
+                    this.Owners == other.Owners ||
+                    this.Owners != null &&
+                    this.Owners.SequenceEqual(other.Owners)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -673,6 +711,9 @@ this.Addresses = Addresses;
                 
                 if (this.Visibility != null)
                     hash = hash * 59 + this.Visibility.GetHashCode();
+                
+                if (this.Owners != null)
+                    hash = hash * 59 + this.Owners.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

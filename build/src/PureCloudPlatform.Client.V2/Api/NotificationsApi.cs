@@ -130,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Channel</returns>
@@ -140,7 +140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
@@ -288,7 +288,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Channel</returns>
@@ -298,7 +298,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>
@@ -1375,7 +1375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a new channel There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Channel</returns>
@@ -1386,7 +1386,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new channel There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
@@ -1463,7 +1463,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create a new channel There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Channel</returns>
@@ -1475,7 +1475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new channel There is a limit of 10 channels. Creating an 11th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>

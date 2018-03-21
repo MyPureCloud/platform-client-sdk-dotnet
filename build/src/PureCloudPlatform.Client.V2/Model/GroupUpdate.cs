@@ -100,10 +100,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Public,
             
             /// <summary>
-            /// Enum Owners for "owners"
+            /// Enum Ownerids for "ownerIds"
             /// </summary>
-            [EnumMember(Value = "owners")]
-            Owners,
+            [EnumMember(Value = "ownerIds")]
+            Ownerids,
             
             /// <summary>
             /// Enum Members for "members"
@@ -111,6 +111,9 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "members")]
             Members
         }
+        
+        
+        
         
         
         
@@ -148,6 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Who can view this group</value>
         [DataMember(Name="visibility", EmitDefaultValue=false)]
         public VisibilityEnum? Visibility { get; set; }
+        
+        
         
         
         
@@ -198,8 +203,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="OwnerIds">Owners of the group.</param>
         
-        public GroupUpdate(string Name = null, string Description = null, StateEnum? State = null, int? Version = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null)
+        
+        
+        
+        public GroupUpdate(string Name = null, string Description = null, StateEnum? State = null, int? Version = null, List<UserImage> Images = null, List<GroupContact> Addresses = null, bool? RulesVisible = null, VisibilityEnum? Visibility = null, List<string> OwnerIds = null)
         {
             
             
@@ -227,6 +236,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
             
             
             
@@ -320,6 +333,15 @@ this.Visibility = Visibility;
             
             
             
+            
+            
+this.OwnerIds = OwnerIds;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -389,6 +411,15 @@ this.Visibility = Visibility;
         
         
         /// <summary>
+        /// Owners of the group
+        /// </summary>
+        /// <value>Owners of the group</value>
+        [DataMember(Name="ownerIds", EmitDefaultValue=false)]
+        public List<string> OwnerIds { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -422,6 +453,8 @@ this.Visibility = Visibility;
             sb.Append("  RulesVisible: ").Append(RulesVisible).Append("\n");
             
             sb.Append("  Visibility: ").Append(Visibility).Append("\n");
+            
+            sb.Append("  OwnerIds: ").Append(OwnerIds).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -507,6 +540,11 @@ this.Visibility = Visibility;
                     this.Visibility.Equals(other.Visibility)
                 ) &&
                 (
+                    this.OwnerIds == other.OwnerIds ||
+                    this.OwnerIds != null &&
+                    this.OwnerIds.SequenceEqual(other.OwnerIds)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -551,6 +589,9 @@ this.Visibility = Visibility;
                 
                 if (this.Visibility != null)
                     hash = hash * 59 + this.Visibility.GetHashCode();
+                
+                if (this.OwnerIds != null)
+                    hash = hash * 59 + this.OwnerIds.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

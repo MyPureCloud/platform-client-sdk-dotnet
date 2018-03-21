@@ -81,14 +81,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="SignatureValid">SignatureValid.</param>
-        
-        
-        
         /// <param name="Valid">Valid.</param>
         
         
-        public CertificateDetails(string Issuer = null, string Subject = null, DateTime? ExpirationDate = null, DateTime? IssueDate = null, bool? Expired = null, bool? SignatureValid = null, bool? Valid = null)
+        
+        /// <param name="SignatureValid">SignatureValid.</param>
+        
+        
+        public CertificateDetails(string Issuer = null, string Subject = null, DateTime? ExpirationDate = null, DateTime? IssueDate = null, bool? Expired = null, bool? Valid = null, bool? SignatureValid = null)
         {
             
             
@@ -169,16 +169,16 @@ this.Expired = Expired;
             
             
             
-this.SignatureValid = SignatureValid;
-            
-            
-            
-            
-            
-            
-            
-            
 this.Valid = Valid;
+            
+            
+            
+            
+            
+            
+            
+            
+this.SignatureValid = SignatureValid;
             
             
             
@@ -233,18 +233,18 @@ this.Valid = Valid;
         
         
         /// <summary>
-        /// Gets or Sets SignatureValid
-        /// </summary>
-        [DataMember(Name="signatureValid", EmitDefaultValue=false)]
-        public bool? SignatureValid { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets Valid
         /// </summary>
         [DataMember(Name="valid", EmitDefaultValue=false)]
         public bool? Valid { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets SignatureValid
+        /// </summary>
+        [DataMember(Name="signatureValid", EmitDefaultValue=false)]
+        public bool? SignatureValid { get; set; }
         
         
         /// <summary>
@@ -266,9 +266,9 @@ this.Valid = Valid;
             
             sb.Append("  Expired: ").Append(Expired).Append("\n");
             
-            sb.Append("  SignatureValid: ").Append(SignatureValid).Append("\n");
-            
             sb.Append("  Valid: ").Append(Valid).Append("\n");
+            
+            sb.Append("  SignatureValid: ").Append(SignatureValid).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -332,14 +332,14 @@ this.Valid = Valid;
                     this.Expired.Equals(other.Expired)
                 ) &&
                 (
-                    this.SignatureValid == other.SignatureValid ||
-                    this.SignatureValid != null &&
-                    this.SignatureValid.Equals(other.SignatureValid)
-                ) &&
-                (
                     this.Valid == other.Valid ||
                     this.Valid != null &&
                     this.Valid.Equals(other.Valid)
+                ) &&
+                (
+                    this.SignatureValid == other.SignatureValid ||
+                    this.SignatureValid != null &&
+                    this.SignatureValid.Equals(other.SignatureValid)
                 );
         }
 
@@ -370,11 +370,11 @@ this.Valid = Valid;
                 if (this.Expired != null)
                     hash = hash * 59 + this.Expired.GetHashCode();
                 
-                if (this.SignatureValid != null)
-                    hash = hash * 59 + this.SignatureValid.GetHashCode();
-                
                 if (this.Valid != null)
                     hash = hash * 59 + this.Valid.GetHashCode();
+                
+                if (this.SignatureValid != null)
+                    hash = hash * 59 + this.SignatureValid.GetHashCode();
                 
                 return hash;
             }

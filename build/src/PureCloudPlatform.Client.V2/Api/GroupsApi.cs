@@ -245,7 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Group</returns>
-        Group PostGroups (Group body);
+        Group PostGroups (GroupCreate body);
 
         /// <summary>
         /// Create a group
@@ -256,7 +256,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>ApiResponse of Group</returns>
-        ApiResponse<Group> PostGroupsWithHttpInfo (Group body);
+        ApiResponse<Group> PostGroupsWithHttpInfo (GroupCreate body);
         
         /// <summary>
         /// Search groups
@@ -537,7 +537,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Task of Group</returns>
-        System.Threading.Tasks.Task<Group> PostGroupsAsync (Group body);
+        System.Threading.Tasks.Task<Group> PostGroupsAsync (GroupCreate body);
 
         /// <summary>
         /// Create a group
@@ -548,7 +548,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body);
+        System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (GroupCreate body);
         
         /// <summary>
         /// Search groups
@@ -2492,7 +2492,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Group</returns>
-        public Group PostGroups (Group body)
+        public Group PostGroups (GroupCreate body)
         {
              ApiResponse<Group> localVarResponse = PostGroupsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2504,7 +2504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>ApiResponse of Group</returns>
-        public ApiResponse< Group > PostGroupsWithHttpInfo (Group body)
+        public ApiResponse< Group > PostGroupsWithHttpInfo (GroupCreate body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -2590,7 +2590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Task of Group</returns>
-        public async System.Threading.Tasks.Task<Group> PostGroupsAsync (Group body)
+        public async System.Threading.Tasks.Task<Group> PostGroupsAsync (GroupCreate body)
         {
              ApiResponse<Group> localVarResponse = await PostGroupsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -2603,7 +2603,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Group</param>
         /// <returns>Task of ApiResponse (Group)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (Group body)
+        public async System.Threading.Tasks.Task<ApiResponse<Group>> PostGroupsAsyncWithHttpInfo (GroupCreate body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)

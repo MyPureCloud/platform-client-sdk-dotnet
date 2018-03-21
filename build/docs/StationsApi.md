@@ -10,6 +10,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteStationAssociateduser**](StationsApi.html#deletestationassociateduser) | **DELETE** /api/v2/stations/{stationId}/associateduser | Unassigns the user assigned to this station |
 | [**GetStation**](StationsApi.html#getstation) | **GET** /api/v2/stations/{stationId} | Get station. |
 | [**GetStations**](StationsApi.html#getstations) | **GET** /api/v2/stations | Get the list of available stations. |
+| [**GetStationsSettings**](StationsApi.html#getstationssettings) | **GET** /api/v2/stations/settings | Get an organization&#39;s StationSettings |
+| [**PatchStationsSettings**](StationsApi.html#patchstationssettings) | **PATCH** /api/v2/stations/settings | Patch an organization&#39;s StationSettings |
 {: class="table table-striped"}
 
 <a name="deletestationassociateduser"></a>
@@ -244,4 +246,123 @@ namespace Example
 ### Return type
 
 [**StationEntityListing**](StationEntityListing.html)
+
+<a name="getstationssettings"></a>
+
+## [**StationSettings**](StationSettings.html) GetStationsSettings ()
+
+Get an organization's StationSettings
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetStationsSettingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new StationsApi();
+            
+
+            try
+            {
+                
+                // Get an organization's StationSettings
+                
+                StationSettings result = apiInstance.GetStationsSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StationsApi.GetStationsSettings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**StationSettings**](StationSettings.html)
+
+<a name="patchstationssettings"></a>
+
+## [**StationSettings**](StationSettings.html) PatchStationsSettings (StationSettings body)
+
+Patch an organization's StationSettings
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchStationsSettingsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new StationsApi();
+            
+            
+            
+            var body = new StationSettings(); // StationSettings | Station settings
+            
+            
+
+            try
+            {
+                
+                // Patch an organization's StationSettings
+                
+                StationSettings result = apiInstance.PatchStationsSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling StationsApi.PatchStationsSettings: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**StationSettings**](StationSettings.html)| Station settings |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**StationSettings**](StationSettings.html)
 

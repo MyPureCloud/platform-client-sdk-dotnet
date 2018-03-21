@@ -12,8 +12,8 @@ title: CertificateDetails
 | **ExpirationDate** | **DateTime?** | The expiration date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **IssueDate** | **DateTime?** | The issue date of the certificate. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Expired** | **bool?** | True if the certificate is expired, false otherwise. | [optional] |
-| **SignatureValid** | **bool?** |  | [optional] |
 | **Valid** | **bool?** |  | [optional] |
+| **SignatureValid** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 

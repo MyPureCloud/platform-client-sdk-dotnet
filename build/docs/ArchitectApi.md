@@ -3620,7 +3620,7 @@ namespace Example
 
 <a name="getflowsdatatablerows"></a>
 
-## [**DataTableRowEntityListing**](DataTableRowEntityListing.html) GetFlowsDatatableRows (string datatableId, int? pageSize = null, int? pageNumber = null, bool? showbrief = null)
+## [**DataTableRowEntityListing**](DataTableRowEntityListing.html) GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null)
 
 Returns the rows for the datatable
 
@@ -3653,12 +3653,12 @@ namespace Example
             
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             
             
             
@@ -3673,7 +3673,7 @@ namespace Example
                 
                 // Returns the rows for the datatable
                 
-                DataTableRowEntityListing result = apiInstance.GetFlowsDatatableRows(datatableId, pageSize, pageNumber, showbrief);
+                DataTableRowEntityListing result = apiInstance.GetFlowsDatatableRows(datatableId, pageNumber, pageSize, showbrief);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3691,8 +3691,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **showbrief** | **bool?**| If true returns just the key value of the row | [optional] [default to true] |
 {: class="table table-striped"}
 
@@ -3702,7 +3702,7 @@ namespace Example
 
 <a name="getflowsdatatables"></a>
 
-## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) GetFlowsDatatables (string expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
+## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
 
 Retrieve a list of datatables for the org
 
@@ -3735,12 +3735,12 @@ namespace Example
             
             
             
-            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
-            
-            
-            
-            
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             
             
             
@@ -3760,7 +3760,7 @@ namespace Example
                 
                 // Retrieve a list of datatables for the org
                 
-                DataTablesDomainEntityListing result = apiInstance.GetFlowsDatatables(expand, pageSize, pageNumber, sortBy, sortOrder);
+                DataTablesDomainEntityListing result = apiInstance.GetFlowsDatatables(expand, pageNumber, pageSize, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3778,8 +3778,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **expand** | **string**| Expand instructions for the result | [optional] <br />**Values**: schema |
-| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
 | **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
 {: class="table table-striped"}

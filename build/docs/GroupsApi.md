@@ -664,7 +664,7 @@ namespace Example
 
 <a name="postgroups"></a>
 
-## [**Group**](Group.html) PostGroups (Group body)
+## [**Group**](Group.html) PostGroups (GroupCreate body)
 
 Create a group
 
@@ -693,7 +693,7 @@ namespace Example
             
             
             
-            var body = new Group(); // Group | Group
+            var body = new GroupCreate(); // GroupCreate | Group
             
             
 
@@ -719,7 +719,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Group**](Group.html)| Group |  |
+| **body** | [**GroupCreate**](GroupCreate.html)| Group |  |
 {: class="table table-striped"}
 
 ### Return type
