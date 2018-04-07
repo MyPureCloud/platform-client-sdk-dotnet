@@ -116,12 +116,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
         /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -200,8 +205,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="HolidaySchedules">The schedules defining the hours an organization is closed for the holidays..</param>
         
-        public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<UriReference> OpenSchedules = null, List<UriReference> ClosedSchedules = null)
+        
+        
+        
+        public ScheduleGroup(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, string TimeZone = null, List<UriReference> OpenSchedules = null, List<UriReference> ClosedSchedules = null, List<UriReference> HolidaySchedules = null)
         {
             
             
@@ -217,6 +226,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
             
             
             
@@ -378,6 +391,15 @@ this.ClosedSchedules = ClosedSchedules;
             
             
             
+            
+            
+this.HolidaySchedules = HolidaySchedules;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -502,6 +524,15 @@ this.ClosedSchedules = ClosedSchedules;
         
         
         /// <summary>
+        /// The schedules defining the hours an organization is closed for the holidays.
+        /// </summary>
+        /// <value>The schedules defining the hours an organization is closed for the holidays.</value>
+        [DataMember(Name="holidaySchedules", EmitDefaultValue=false)]
+        public List<UriReference> HolidaySchedules { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -545,6 +576,8 @@ this.ClosedSchedules = ClosedSchedules;
             sb.Append("  OpenSchedules: ").Append(OpenSchedules).Append("\n");
             
             sb.Append("  ClosedSchedules: ").Append(ClosedSchedules).Append("\n");
+            
+            sb.Append("  HolidaySchedules: ").Append(HolidaySchedules).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -655,6 +688,11 @@ this.ClosedSchedules = ClosedSchedules;
                     this.ClosedSchedules.SequenceEqual(other.ClosedSchedules)
                 ) &&
                 (
+                    this.HolidaySchedules == other.HolidaySchedules ||
+                    this.HolidaySchedules != null &&
+                    this.HolidaySchedules.SequenceEqual(other.HolidaySchedules)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -714,6 +752,9 @@ this.ClosedSchedules = ClosedSchedules;
                 
                 if (this.ClosedSchedules != null)
                     hash = hash * 59 + this.ClosedSchedules.GetHashCode();
+                
+                if (this.HolidaySchedules != null)
+                    hash = hash * 59 + this.HolidaySchedules.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

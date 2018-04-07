@@ -19,6 +19,7 @@ title: Video
 | **DisconnectedTime** | **DateTime?** | The timestamp when this communication disconnected from the conversation in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional] |
 | **Provider** | **string** | The source provider for the video. | [optional] |
 | **PeerId** | **string** | The id of the peer communication corresponding to a matching leg for this communication. | [optional] |
+| **Msids** | **List&lt;string&gt;** | List of media stream ids | [optional] |
 {: class="table table-striped"}
 
 

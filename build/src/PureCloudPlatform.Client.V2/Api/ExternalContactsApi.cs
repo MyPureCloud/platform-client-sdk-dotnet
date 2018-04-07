@@ -210,8 +210,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -225,8 +225,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
@@ -239,8 +239,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -254,8 +254,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -296,8 +296,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -312,8 +312,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -354,8 +354,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -369,8 +369,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
@@ -384,8 +384,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
@@ -399,8 +399,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
@@ -413,8 +413,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -430,8 +430,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -972,8 +972,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -987,8 +987,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
@@ -1001,8 +1001,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -1016,8 +1016,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -1058,8 +1058,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -1074,8 +1074,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -1116,8 +1116,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -1131,8 +1131,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
@@ -1146,8 +1146,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
@@ -1161,8 +1161,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
@@ -1175,8 +1175,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -1192,8 +1192,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -3200,8 +3200,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -3216,8 +3216,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
@@ -3306,8 +3306,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -3323,8 +3323,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
@@ -3414,8 +3414,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -3430,8 +3430,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -3517,8 +3517,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -3534,8 +3534,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external contacts 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -3826,8 +3826,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -3843,8 +3843,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -3935,8 +3935,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -3953,8 +3953,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">User supplied search keywords (no special syntax is currently supported) (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
@@ -4257,8 +4257,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>NoteListing</returns>
@@ -4273,8 +4273,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
@@ -4363,8 +4363,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of NoteListing</returns>
@@ -4380,8 +4380,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
@@ -4472,8 +4472,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>RelationshipListing</returns>
@@ -4488,8 +4488,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>ApiResponse of RelationshipListing</returns>
@@ -4578,8 +4578,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of RelationshipListing</returns>
@@ -4595,8 +4595,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
         /// <returns>Task of ApiResponse (RelationshipListing)</returns>
@@ -4686,8 +4686,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -4704,8 +4704,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -4795,8 +4795,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>
@@ -4814,8 +4814,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Search for external organizations 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="pageSize">Page size (optional, default to 20)</param>
-        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;= 1,000) (optional, default to 1)</param>
         /// <param name="q">Search query (optional)</param>
         /// <param name="trustorId">Search for external organizations by trustorIds (limit 25). If supplied, the &#39;q&#39; parameters is ignored. Items are returned in the order requested (optional)</param>
         /// <param name="sortOrder">Sort order (optional)</param>

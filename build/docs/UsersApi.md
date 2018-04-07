@@ -29,6 +29,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUserRoutingstatus**](UsersApi.html#getuserroutingstatus) | **GET** /api/v2/users/{userId}/routingstatus | Fetch the routing status of a user |
 | [**GetUserStation**](UsersApi.html#getuserstation) | **GET** /api/v2/users/{userId}/station | Get station information for user |
 | [**GetUserSuperiors**](UsersApi.html#getusersuperiors) | **GET** /api/v2/users/{userId}/superiors | Get superiors |
+| [**GetUserTrustors**](UsersApi.html#getusertrustors) | **GET** /api/v2/users/{userId}/trustors | List the organizations that have authorized/trusted the user. |
 | [**GetUsers**](UsersApi.html#getusers) | **GET** /api/v2/users | Get the list of available users. |
 | [**GetUsersMe**](UsersApi.html#getusersme) | **GET** /api/v2/users/me | Get current user details. |
 | [**GetUsersSearch**](UsersApi.html#getuserssearch) | **GET** /api/v2/users/search | Search users using the q64 value returned from a previous search |
@@ -1603,6 +1604,82 @@ namespace Example
 ### Return type
 
 [**List<User>**](User.html)
+
+<a name="getusertrustors"></a>
+
+## [**TrustorEntityListing**](TrustorEntityListing.html) GetUserTrustors (string userId, int? pageSize = null, int? pageNumber = null)
+
+List the organizations that have authorized/trusted the user.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserTrustorsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+
+            try
+            {
+                
+                // List the organizations that have authorized/trusted the user.
+                
+                TrustorEntityListing result = apiInstance.GetUserTrustors(userId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUserTrustors: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+{: class="table table-striped"}
+
+### Return type
+
+[**TrustorEntityListing**](TrustorEntityListing.html)
 
 <a name="getusers"></a>
 

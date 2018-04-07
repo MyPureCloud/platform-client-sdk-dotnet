@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteArchitectEmergencygroup**](ArchitectApi.html#deletearchitectemergencygroup) | **DELETE** /api/v2/architect/emergencygroups/{emergencyGroupId} | Deletes a emergency group by ID |
 | [**DeleteArchitectIvr**](ArchitectApi.html#deletearchitectivr) | **DELETE** /api/v2/architect/ivrs/{ivrId} | Delete an IVR Config. |
 | [**DeleteArchitectPrompt**](ArchitectApi.html#deletearchitectprompt) | **DELETE** /api/v2/architect/prompts/{promptId} | Delete specified user prompt |
 | [**DeleteArchitectPromptResource**](ArchitectApi.html#deletearchitectpromptresource) | **DELETE** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Delete specified user prompt resource |
@@ -27,6 +28,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetArchitectDependencytrackingType**](ArchitectApi.html#getarchitectdependencytrackingtype) | **GET** /api/v2/architect/dependencytracking/types/{typeId} | Get a Dependency Tracking type. |
 | [**GetArchitectDependencytrackingTypes**](ArchitectApi.html#getarchitectdependencytrackingtypes) | **GET** /api/v2/architect/dependencytracking/types | Get Dependency Tracking types. |
 | [**GetArchitectDependencytrackingUpdatedresourceconsumers**](ArchitectApi.html#getarchitectdependencytrackingupdatedresourceconsumers) | **GET** /api/v2/architect/dependencytracking/updatedresourceconsumers | Get Dependency Tracking objects that depend on updated resources |
+| [**GetArchitectEmergencygroup**](ArchitectApi.html#getarchitectemergencygroup) | **GET** /api/v2/architect/emergencygroups/{emergencyGroupId} | Gets a emergency group by ID |
+| [**GetArchitectEmergencygroups**](ArchitectApi.html#getarchitectemergencygroups) | **GET** /api/v2/architect/emergencygroups | Get a list of emergency groups. |
 | [**GetArchitectIvr**](ArchitectApi.html#getarchitectivr) | **GET** /api/v2/architect/ivrs/{ivrId} | Get an IVR config. |
 | [**GetArchitectIvrs**](ArchitectApi.html#getarchitectivrs) | **GET** /api/v2/architect/ivrs | Get IVR configs. |
 | [**GetArchitectPrompt**](ArchitectApi.html#getarchitectprompt) | **GET** /api/v2/architect/prompts/{promptId} | Get specified user prompt |
@@ -55,6 +58,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetFlowsDatatableRows**](ArchitectApi.html#getflowsdatatablerows) | **GET** /api/v2/flows/datatables/{datatableId}/rows | Returns the rows for the datatable |
 | [**GetFlowsDatatables**](ArchitectApi.html#getflowsdatatables) | **GET** /api/v2/flows/datatables | Retrieve a list of datatables for the org |
 | [**PostArchitectDependencytrackingBuild**](ArchitectApi.html#postarchitectdependencytrackingbuild) | **POST** /api/v2/architect/dependencytracking/build | Rebuild Dependency Tracking data for an organization |
+| [**PostArchitectEmergencygroups**](ArchitectApi.html#postarchitectemergencygroups) | **POST** /api/v2/architect/emergencygroups | Creates a new emergency group |
 | [**PostArchitectIvrs**](ArchitectApi.html#postarchitectivrs) | **POST** /api/v2/architect/ivrs | Create IVR config. |
 | [**PostArchitectPromptHistory**](ArchitectApi.html#postarchitectprompthistory) | **POST** /api/v2/architect/prompts/{promptId}/history | Generate prompt history |
 | [**PostArchitectPromptResources**](ArchitectApi.html#postarchitectpromptresources) | **POST** /api/v2/architect/prompts/{promptId}/resources | Create a new user prompt resource |
@@ -73,6 +77,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsActionsUnlock**](ArchitectApi.html#postflowsactionsunlock) | **POST** /api/v2/flows/actions/unlock | Unlock flow |
 | [**PostFlowsDatatableRows**](ArchitectApi.html#postflowsdatatablerows) | **POST** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry |
 | [**PostFlowsDatatables**](ArchitectApi.html#postflowsdatatables) | **POST** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
+| [**PutArchitectEmergencygroup**](ArchitectApi.html#putarchitectemergencygroup) | **PUT** /api/v2/architect/emergencygroups/{emergencyGroupId} | Updates a emergency group by ID |
 | [**PutArchitectIvr**](ArchitectApi.html#putarchitectivr) | **PUT** /api/v2/architect/ivrs/{ivrId} | Update an IVR Config. |
 | [**PutArchitectPrompt**](ArchitectApi.html#putarchitectprompt) | **PUT** /api/v2/architect/prompts/{promptId} | Update specified user prompt |
 | [**PutArchitectPromptResource**](ArchitectApi.html#putarchitectpromptresource) | **PUT** /api/v2/architect/prompts/{promptId}/resources/{languageCode} | Update specified user prompt resource |
@@ -83,6 +88,69 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutFlowsDatatable**](ArchitectApi.html#putflowsdatatable) | **PUT** /api/v2/flows/datatables/{datatableId} | Updates a specific datatable by id |
 | [**PutFlowsDatatableRow**](ArchitectApi.html#putflowsdatatablerow) | **PUT** /api/v2/flows/datatables/{datatableId}/rows/{rowId} | Update a row entry |
 {: class="table table-striped"}
+
+<a name="deletearchitectemergencygroup"></a>
+
+## void DeleteArchitectEmergencygroup (string emergencyGroupId)
+
+Deletes a emergency group by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteArchitectEmergencygroupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
+            
+            
+            
+
+            try
+            {
+                
+                // Deletes a emergency group by ID
+                
+                apiInstance.DeleteArchitectEmergencygroup(emergencyGroupId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.DeleteArchitectEmergencygroup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emergencyGroupId** | **string**| Emergency group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
 
 <a name="deletearchitectivr"></a>
 
@@ -673,7 +741,7 @@ namespace Example
 
 <a name="deleteflowsdatatable"></a>
 
-## void DeleteFlowsDatatable (string datatableId)
+## void DeleteFlowsDatatable (string datatableId, bool? force = null)
 
 deletes a specific datatable by id
 
@@ -705,13 +773,18 @@ namespace Example
             
             
             
+            
+            var force = true;  // bool? | force delete, even if in use (optional)  (default to false)
+            
+            
+            
 
             try
             {
                 
                 // deletes a specific datatable by id
                 
-                apiInstance.DeleteFlowsDatatable(datatableId);
+                apiInstance.DeleteFlowsDatatable(datatableId, force);
             }
             catch (Exception e)
             {
@@ -728,6 +801,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **datatableId** | **string**| id of datatable |  |
+| **force** | **bool?**| force delete, even if in use | [optional] [default to false] |
 {: class="table table-striped"}
 
 ### Return type
@@ -1549,6 +1623,158 @@ namespace Example
 ### Return type
 
 [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html)
+
+<a name="getarchitectemergencygroup"></a>
+
+## [**EmergencyGroup**](EmergencyGroup.html) GetArchitectEmergencygroup (string emergencyGroupId)
+
+Gets a emergency group by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectEmergencygroupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
+            
+            
+            
+
+            try
+            {
+                
+                // Gets a emergency group by ID
+                
+                EmergencyGroup result = apiInstance.GetArchitectEmergencygroup(emergencyGroupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectEmergencygroup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emergencyGroupId** | **string**| Emergency group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmergencyGroup**](EmergencyGroup.html)
+
+<a name="getarchitectemergencygroups"></a>
+
+## [**EmergencyGroupListing**](EmergencyGroupListing.html) GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+
+Get a list of emergency groups.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetArchitectEmergencygroupsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to ASC)
+            
+            
+            
+            
+            var name = name_example;  // string | Name of the Emergency Group to filter by. (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get a list of emergency groups.
+                
+                EmergencyGroupListing result = apiInstance.GetArchitectEmergencygroups(pageNumber, pageSize, sortBy, sortOrder, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.GetArchitectEmergencygroups: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to ASC] |
+| **name** | **string**| Name of the Emergency Group to filter by. | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmergencyGroupListing**](EmergencyGroupListing.html)
 
 <a name="getarchitectivr"></a>
 
@@ -3781,7 +4007,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **sortBy** | **string**| Sort by | [optional] [default to id]<br />**Values**: id, name |
-| **sortOrder** | **string**| Sort order | [optional] [default to ascending]<br />**Values**: ascending, descending |
+| **sortOrder** | **string**| Sort order | [optional] [default to ascending] |
 {: class="table table-striped"}
 
 ### Return type
@@ -3841,6 +4067,70 @@ This endpoint does require any parameters.
 ### Return type
 
 void (empty response body)
+
+<a name="postarchitectemergencygroups"></a>
+
+## [**EmergencyGroup**](EmergencyGroup.html) PostArchitectEmergencygroups (EmergencyGroup body = null)
+
+Creates a new emergency group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostArchitectEmergencygroupsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            
+            var body = new EmergencyGroup(); // EmergencyGroup |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Creates a new emergency group
+                
+                EmergencyGroup result = apiInstance.PostArchitectEmergencygroups(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostArchitectEmergencygroups: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmergencyGroup**](EmergencyGroup.html)
 
 <a name="postarchitectivrs"></a>
 
@@ -5023,6 +5313,76 @@ namespace Example
 ### Return type
 
 [**DataTable**](DataTable.html)
+
+<a name="putarchitectemergencygroup"></a>
+
+## [**EmergencyGroup**](EmergencyGroup.html) PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body = null)
+
+Updates a emergency group by ID
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutArchitectEmergencygroupExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ArchitectApi();
+            
+            
+            var emergencyGroupId = emergencyGroupId_example;  // string | Emergency group ID
+            
+            
+            
+            
+            
+            var body = new EmergencyGroup(); // EmergencyGroup |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Updates a emergency group by ID
+                
+                EmergencyGroup result = apiInstance.PutArchitectEmergencygroup(emergencyGroupId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PutArchitectEmergencygroup: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **emergencyGroupId** | **string**| Emergency group ID |  |
+| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**EmergencyGroup**](EmergencyGroup.html)
 
 <a name="putarchitectivr"></a>
 

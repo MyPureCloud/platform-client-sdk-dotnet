@@ -17,6 +17,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
         
         /// <summary>
+        /// Deletes a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns></returns>
+        void DeleteArchitectEmergencygroup (string emergencyGroupId);
+
+        /// <summary>
+        /// Deletes a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteArchitectEmergencygroupWithHttpInfo (string emergencyGroupId);
+        
+        /// <summary>
         /// Delete an IVR Config.
         /// </summary>
         /// <remarks>
@@ -228,8 +250,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns></returns>
-        void DeleteFlowsDatatable (string datatableId);
+        void DeleteFlowsDatatable (string datatableId, bool? force = null);
 
         /// <summary>
         /// deletes a specific datatable by id
@@ -239,8 +262,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId);
+        ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId, bool? force = null);
         
         /// <summary>
         /// Delete a row entry
@@ -521,6 +545,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of DependencyObjectEntityListing</returns>
         ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingUpdatedresourceconsumersWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Gets a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>EmergencyGroup</returns>
+        EmergencyGroup GetArchitectEmergencygroup (string emergencyGroupId);
+
+        /// <summary>
+        /// Gets a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>ApiResponse of EmergencyGroup</returns>
+        ApiResponse<EmergencyGroup> GetArchitectEmergencygroupWithHttpInfo (string emergencyGroupId);
+        
+        /// <summary>
+        /// Get a list of emergency groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>EmergencyGroupListing</returns>
+        EmergencyGroupListing GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get a list of emergency groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroupListing</returns>
+        ApiResponse<EmergencyGroupListing> GetArchitectEmergencygroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get an IVR config.
@@ -1307,6 +1383,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PostArchitectDependencytrackingBuildWithHttpInfo ();
         
         /// <summary>
+        /// Creates a new emergency group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>EmergencyGroup</returns>
+        EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body = null);
+
+        /// <summary>
+        /// Creates a new emergency group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroup</returns>
+        ApiResponse<EmergencyGroup> PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body = null);
+        
+        /// <summary>
         /// Create IVR config.
         /// </summary>
         /// <remarks>
@@ -1713,6 +1811,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataTable> PostFlowsDatatablesWithHttpInfo (DataTable body);
         
         /// <summary>
+        /// Updates a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>EmergencyGroup</returns>
+        EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body = null);
+
+        /// <summary>
+        /// Updates a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroup</returns>
+        ApiResponse<EmergencyGroup> PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null);
+        
+        /// <summary>
         /// Update an IVR Config.
         /// </summary>
         /// <remarks>
@@ -1941,6 +2063,28 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
         
         /// <summary>
+        /// Deletes a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteArchitectEmergencygroupAsync (string emergencyGroupId);
+
+        /// <summary>
+        /// Deletes a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId);
+        
+        /// <summary>
         /// Delete an IVR Config.
         /// </summary>
         /// <remarks>
@@ -2152,8 +2296,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId);
+        System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId, bool? force = null);
 
         /// <summary>
         /// deletes a specific datatable by id
@@ -2163,8 +2308,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId);
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? force = null);
         
         /// <summary>
         /// Delete a row entry
@@ -2445,6 +2591,58 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (DependencyObjectEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingUpdatedresourceconsumersAsyncWithHttpInfo (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null);
+        
+        /// <summary>
+        /// Gets a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of EmergencyGroup</returns>
+        System.Threading.Tasks.Task<EmergencyGroup> GetArchitectEmergencygroupAsync (string emergencyGroupId);
+
+        /// <summary>
+        /// Gets a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> GetArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId);
+        
+        /// <summary>
+        /// Get a list of emergency groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>Task of EmergencyGroupListing</returns>
+        System.Threading.Tasks.Task<EmergencyGroupListing> GetArchitectEmergencygroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get a list of emergency groups.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroupListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null);
         
         /// <summary>
         /// Get an IVR config.
@@ -3231,6 +3429,28 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PostArchitectDependencytrackingBuildAsyncWithHttpInfo ();
         
         /// <summary>
+        /// Creates a new emergency group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of EmergencyGroup</returns>
+        System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body = null);
+
+        /// <summary>
+        /// Creates a new emergency group
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body = null);
+        
+        /// <summary>
         /// Create IVR config.
         /// </summary>
         /// <remarks>
@@ -3637,6 +3857,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataTable>> PostFlowsDatatablesAsyncWithHttpInfo (DataTable body);
         
         /// <summary>
+        /// Updates a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of EmergencyGroup</returns>
+        System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body = null);
+
+        /// <summary>
+        /// Updates a emergency group by ID
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null);
+        
+        /// <summary>
         /// Update an IVR Config.
         /// </summary>
         /// <remarks>
@@ -3951,6 +4195,195 @@ namespace PureCloudPlatform.Client.V2.Api
             this.Configuration.AddDefaultHeader(key, value);
         }
 
+        
+        /// <summary>
+        /// Deletes a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns></returns>
+        public void DeleteArchitectEmergencygroup (string emergencyGroupId)
+        {
+             DeleteArchitectEmergencygroupWithHttpInfo(emergencyGroupId);
+        }
+
+        /// <summary>
+        /// Deletes a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteArchitectEmergencygroupWithHttpInfo (string emergencyGroupId)
+        { 
+            // verify the required parameter 'emergencyGroupId' is set
+            if (emergencyGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->DeleteArchitectEmergencygroup");
+
+            var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emergencyGroupId != null) localVarPathParams.Add("emergencyGroupId", this.Configuration.ApiClient.ParameterToString(emergencyGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectEmergencygroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectEmergencygroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        /// <summary>
+        /// Deletes a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteArchitectEmergencygroupAsync (string emergencyGroupId)
+        {
+             await DeleteArchitectEmergencygroupAsyncWithHttpInfo(emergencyGroupId);
+
+        }
+
+        /// <summary>
+        /// Deletes a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId)
+        { 
+            // verify the required parameter 'emergencyGroupId' is set
+            if (emergencyGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->DeleteArchitectEmergencygroup");
+            
+
+            var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emergencyGroupId != null) localVarPathParams.Add("emergencyGroupId", this.Configuration.ApiClient.ParameterToString(emergencyGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectEmergencygroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteArchitectEmergencygroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
         
         /// <summary>
         /// Delete an IVR Config. 
@@ -5694,10 +6127,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns></returns>
-        public void DeleteFlowsDatatable (string datatableId)
+        public void DeleteFlowsDatatable (string datatableId, bool? force = null)
         {
-             DeleteFlowsDatatableWithHttpInfo(datatableId);
+             DeleteFlowsDatatableWithHttpInfo(datatableId, force);
         }
 
         /// <summary>
@@ -5705,8 +6139,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId)
+        public ApiResponse<Object> DeleteFlowsDatatableWithHttpInfo (string datatableId, bool? force = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -5746,6 +6181,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
+            if (force != null) localVarQueryParams.Add(new Tuple<string, string>("force", this.Configuration.ApiClient.ParameterToString(force)));
 
             // Header params
 
@@ -5787,10 +6223,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId)
+        public async System.Threading.Tasks.Task DeleteFlowsDatatableAsync (string datatableId, bool? force = null)
         {
-             await DeleteFlowsDatatableAsyncWithHttpInfo(datatableId);
+             await DeleteFlowsDatatableAsyncWithHttpInfo(datatableId, force);
 
         }
 
@@ -5799,8 +6236,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
+        /// <param name="force">force delete, even if in use (optional, default to false)</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsDatatableAsyncWithHttpInfo (string datatableId, bool? force = null)
         { 
             // verify the required parameter 'datatableId' is set
             if (datatableId == null)
@@ -5841,6 +6279,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
 
             // Query params
+            if (force != null) localVarQueryParams.Add(new Tuple<string, string>("force", this.Configuration.ApiClient.ParameterToString(force)));
 
             // Header params
 
@@ -7961,6 +8400,405 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DependencyObjectEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (DependencyObjectEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DependencyObjectEntityListing)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Gets a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>EmergencyGroup</returns>
+        public EmergencyGroup GetArchitectEmergencygroup (string emergencyGroupId)
+        {
+             ApiResponse<EmergencyGroup> localVarResponse = GetArchitectEmergencygroupWithHttpInfo(emergencyGroupId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>ApiResponse of EmergencyGroup</returns>
+        public ApiResponse< EmergencyGroup > GetArchitectEmergencygroupWithHttpInfo (string emergencyGroupId)
+        { 
+            // verify the required parameter 'emergencyGroupId' is set
+            if (emergencyGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->GetArchitectEmergencygroup");
+
+            var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emergencyGroupId != null) localVarPathParams.Add("emergencyGroupId", this.Configuration.ApiClient.ParameterToString(emergencyGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroup>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroup)));
+            
+        }
+
+        
+        /// <summary>
+        /// Gets a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of EmergencyGroup</returns>
+        public async System.Threading.Tasks.Task<EmergencyGroup> GetArchitectEmergencygroupAsync (string emergencyGroupId)
+        {
+             ApiResponse<EmergencyGroup> localVarResponse = await GetArchitectEmergencygroupAsyncWithHttpInfo(emergencyGroupId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> GetArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId)
+        { 
+            // verify the required parameter 'emergencyGroupId' is set
+            if (emergencyGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->GetArchitectEmergencygroup");
+            
+
+            var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emergencyGroupId != null) localVarPathParams.Add("emergencyGroupId", this.Configuration.ApiClient.ParameterToString(emergencyGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroup>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroup)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Get a list of emergency groups. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>EmergencyGroupListing</returns>
+        public EmergencyGroupListing GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<EmergencyGroupListing> localVarResponse = GetArchitectEmergencygroupsWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of emergency groups. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroupListing</returns>
+        public ApiResponse< EmergencyGroupListing > GetArchitectEmergencygroupsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/emergencygroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroupListing>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroupListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroupListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get a list of emergency groups. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>Task of EmergencyGroupListing</returns>
+        public async System.Threading.Tasks.Task<EmergencyGroupListing> GetArchitectEmergencygroupsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<EmergencyGroupListing> localVarResponse = await GetArchitectEmergencygroupsAsyncWithHttpInfo(pageNumber, pageSize, sortBy, sortOrder, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of emergency groups. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to ASC)</param>
+        /// <param name="name">Name of the Emergency Group to filter by. (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroupListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/emergencygroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetArchitectEmergencygroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroupListing>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroupListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroupListing)));
             
         }
 
@@ -13824,6 +14662,198 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Creates a new emergency group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>EmergencyGroup</returns>
+        public EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body = null)
+        {
+             ApiResponse<EmergencyGroup> localVarResponse = PostArchitectEmergencygroupsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Creates a new emergency group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroup</returns>
+        public ApiResponse< EmergencyGroup > PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/emergencygroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectEmergencygroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectEmergencygroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroup>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroup)));
+            
+        }
+
+        
+        /// <summary>
+        /// Creates a new emergency group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of EmergencyGroup</returns>
+        public async System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body = null)
+        {
+             ApiResponse<EmergencyGroup> localVarResponse = await PostArchitectEmergencygroupsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Creates a new emergency group 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body = null)
+        { 
+
+            var localVarPath = "/api/v2/architect/emergencygroups";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectEmergencygroups: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostArchitectEmergencygroups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroup>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroup)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Create IVR config. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -17338,6 +18368,211 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataTable>(localVarStatusCode,
                 localVarHeaders,
                 (DataTable) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTable)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Updates a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>EmergencyGroup</returns>
+        public EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body = null)
+        {
+             ApiResponse<EmergencyGroup> localVarResponse = PutArchitectEmergencygroupWithHttpInfo(emergencyGroupId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Updates a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of EmergencyGroup</returns>
+        public ApiResponse< EmergencyGroup > PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null)
+        { 
+            // verify the required parameter 'emergencyGroupId' is set
+            if (emergencyGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->PutArchitectEmergencygroup");
+
+            var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emergencyGroupId != null) localVarPathParams.Add("emergencyGroupId", this.Configuration.ApiClient.ParameterToString(emergencyGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectEmergencygroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectEmergencygroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroup>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroup)));
+            
+        }
+
+        
+        /// <summary>
+        /// Updates a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of EmergencyGroup</returns>
+        public async System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body = null)
+        {
+             ApiResponse<EmergencyGroup> localVarResponse = await PutArchitectEmergencygroupAsyncWithHttpInfo(emergencyGroupId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Updates a emergency group by ID 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="emergencyGroupId">Emergency group ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null)
+        { 
+            // verify the required parameter 'emergencyGroupId' is set
+            if (emergencyGroupId == null)
+                throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->PutArchitectEmergencygroup");
+            
+
+            var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (emergencyGroupId != null) localVarPathParams.Add("emergencyGroupId", this.Configuration.ApiClient.ParameterToString(emergencyGroupId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectEmergencygroup: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutArchitectEmergencygroup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EmergencyGroup>(localVarStatusCode,
+                localVarHeaders,
+                (EmergencyGroup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmergencyGroup)));
             
         }
 

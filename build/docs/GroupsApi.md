@@ -11,10 +11,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteGroupMembers**](GroupsApi.html#deletegroupmembers) | **DELETE** /api/v2/groups/{groupId}/members | Remove members |
 | [**GetFieldconfig**](GroupsApi.html#getfieldconfig) | **GET** /api/v2/fieldconfig | Fetch field config for an entity type |
 | [**GetGroup**](GroupsApi.html#getgroup) | **GET** /api/v2/groups/{groupId} | Get group |
-| [**GetGroupMembers**](GroupsApi.html#getgroupmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members |
+| [**GetGroupIndividuals**](GroupsApi.html#getgroupindividuals) | **GET** /api/v2/groups/{groupId}/individuals | Get all individuals associated with the group |
+| [**GetGroupMembers**](GroupsApi.html#getgroupmembers) | **GET** /api/v2/groups/{groupId}/members | Get group members, includes individuals, owners, and dynamically included people |
 | [**GetGroupProfile**](GroupsApi.html#getgroupprofile) | **GET** /api/v2/groups/{groupId}/profile | Get group profile |
 | [**GetGroups**](GroupsApi.html#getgroups) | **GET** /api/v2/groups | Get a group list |
 | [**GetGroupsSearch**](GroupsApi.html#getgroupssearch) | **GET** /api/v2/groups/search | Search groups using the q64 value returned from a previous search |
+| [**GetProfilesGroups**](GroupsApi.html#getprofilesgroups) | **GET** /api/v2/profiles/groups | Get group profile listing |
 | [**PostGroupMembers**](GroupsApi.html#postgroupmembers) | **POST** /api/v2/groups/{groupId}/members | Add members |
 | [**PostGroups**](GroupsApi.html#postgroups) | **POST** /api/v2/groups | Create a group |
 | [**PostGroupsSearch**](GroupsApi.html#postgroupssearch) | **POST** /api/v2/groups/search | Search groups |
@@ -282,11 +284,75 @@ namespace Example
 
 [**Group**](Group.html)
 
+<a name="getgroupindividuals"></a>
+
+## [**List&lt;UserEntityListing&gt;**](UserEntityListing.html) GetGroupIndividuals (string groupId)
+
+Get all individuals associated with the group
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGroupIndividualsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new GroupsApi();
+            
+            
+            var groupId = groupId_example;  // string | Group ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get all individuals associated with the group
+                
+                List&lt;UserEntityListing&gt; result = apiInstance.GetGroupIndividuals(groupId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.GetGroupIndividuals: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **groupId** | **string**| Group ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**List<UserEntityListing>**](UserEntityListing.html)
+
 <a name="getgroupmembers"></a>
 
 ## [**UserEntityListing**](UserEntityListing.html) GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
-Get group members
+Get group members, includes individuals, owners, and dynamically included people
 
 
 
@@ -340,7 +406,7 @@ namespace Example
             try
             {
                 
-                // Get group members
+                // Get group members, includes individuals, owners, and dynamically included people
                 
                 UserEntityListing result = apiInstance.GetGroupMembers(groupId, pageSize, pageNumber, sortOrder, expand);
                 Debug.WriteLine(result);
@@ -591,6 +657,88 @@ namespace Example
 ### Return type
 
 [**GroupsSearchResponse**](GroupsSearchResponse.html)
+
+<a name="getprofilesgroups"></a>
+
+## [**GroupProfileEntityListing**](GroupProfileEntityListing.html) GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
+
+Get group profile listing
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetProfilesGroupsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new GroupsApi();
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            
+            var id = new List<string>(); // List<string> | id (optional) 
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            
+            
+            
+
+            try
+            {
+                
+                // Get group profile listing
+                
+                GroupProfileEntityListing result = apiInstance.GetProfilesGroups(pageSize, pageNumber, id, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GroupsApi.GetProfilesGroups: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **id** | [**List<string>**](string.html)| id | [optional]  |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**GroupProfileEntityListing**](GroupProfileEntityListing.html)
 
 <a name="postgroupmembers"></a>
 

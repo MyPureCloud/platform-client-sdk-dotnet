@@ -176,64 +176,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// (Dialer) Result of the analysis (for example disposition.classification.callable.machine) 
-        /// </summary>
-        /// <value>(Dialer) Result of the analysis (for example disposition.classification.callable.machine) </value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum DispositionNameEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Disconnect for "disconnect"
-            /// </summary>
-            [EnumMember(Value = "disconnect")]
-            Disconnect,
-            
-            /// <summary>
-            /// Enum Person for "person"
-            /// </summary>
-            [EnumMember(Value = "person")]
-            Person,
-            
-            /// <summary>
-            /// Enum Busy for "busy"
-            /// </summary>
-            [EnumMember(Value = "busy")]
-            Busy,
-            
-            /// <summary>
-            /// Enum Machine for "machine"
-            /// </summary>
-            [EnumMember(Value = "machine")]
-            Machine,
-            
-            /// <summary>
-            /// Enum Noanswer for "noanswer"
-            /// </summary>
-            [EnumMember(Value = "noanswer")]
-            Noanswer,
-            
-            /// <summary>
-            /// Enum Fax for "fax"
-            /// </summary>
-            [EnumMember(Value = "fax")]
-            Fax,
-            
-            /// <summary>
-            /// Enum Sit for "sit"
-            /// </summary>
-            [EnumMember(Value = "sit")]
-            Sit
-        }
-        
         
         
         
@@ -353,13 +295,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <summary>
-        /// (Dialer) Result of the analysis (for example disposition.classification.callable.machine) 
-        /// </summary>
-        /// <value>(Dialer) Result of the analysis (for example disposition.classification.callable.machine) </value>
-        [DataMember(Name="dispositionName", EmitDefaultValue=false)]
-        public DispositionNameEnum? DispositionName { get; set; }
-        
         
         
         
@@ -467,7 +402,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DispositionName">(Dialer) Result of the analysis (for example disposition.classification.callable.machine) .</param>
+        /// <param name="DispositionName">(Dialer) Result of the analysis.</param>
         
         
         
@@ -558,7 +493,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metrics">List of metrics for this session.</param>
         
         
-        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, DispositionNameEnum? DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null)
+        public AnalyticsSession(MediaTypeEnum? MediaType = null, string SessionId = null, string AddressOther = null, string AddressSelf = null, string AddressFrom = null, string AddressTo = null, MessageTypeEnum? MessageType = null, string Ani = null, DirectionEnum? Direction = null, string Dnis = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string DispositionAnalyzer = null, string DispositionName = null, string EdgeId = null, string RemoteNameDisplayable = null, string RoomId = null, string MonitoredSessionId = null, string MonitoredParticipantId = null, string CallbackUserName = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string ScriptId = null, string PeerId = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, string CobrowseRole = null, string CobrowseRoomId = null, string MediaBridgeId = null, string ScreenShareAddressSelf = null, bool? SharingScreen = null, string ScreenShareRoomId = null, string VideoRoomId = null, string VideoAddressSelf = null, List<AnalyticsConversationSegment> Segments = null, List<AnalyticsSessionMetric> Metrics = null)
         {
             
             
@@ -1147,6 +1082,13 @@ this.Metrics = Metrics;
         public string DispositionAnalyzer { get; set; }
         
         
+        
+        /// <summary>
+        /// (Dialer) Result of the analysis
+        /// </summary>
+        /// <value>(Dialer) Result of the analysis</value>
+        [DataMember(Name="dispositionName", EmitDefaultValue=false)]
+        public string DispositionName { get; set; }
         
         
         

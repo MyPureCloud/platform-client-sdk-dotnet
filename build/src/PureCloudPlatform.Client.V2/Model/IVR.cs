@@ -119,12 +119,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.
         /// </summary>
         /// <value>Indicates if the resource is active, inactive, or deleted.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -205,12 +210,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="HolidayHoursFlow">The Architect flow to execute during an organization&#39;s holiday hours..</param>
+        
+        
+        
         /// <param name="ScheduleGroup">The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well..</param>
         
         
         
         
-        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> Dnis = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference ScheduleGroup = null)
+        public IVR(string Name = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, string ModifiedByApp = null, string CreatedByApp = null, List<string> Dnis = null, UriReference OpenHoursFlow = null, UriReference ClosedHoursFlow = null, UriReference HolidayHoursFlow = null, UriReference ScheduleGroup = null)
         {
             
             
@@ -226,6 +235,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
             
             
             
@@ -393,6 +406,15 @@ this.ClosedHoursFlow = ClosedHoursFlow;
             
             
             
+this.HolidayHoursFlow = HolidayHoursFlow;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ScheduleGroup = ScheduleGroup;
             
             
@@ -524,6 +546,15 @@ this.ScheduleGroup = ScheduleGroup;
         
         
         /// <summary>
+        /// The Architect flow to execute during an organization&#39;s holiday hours.
+        /// </summary>
+        /// <value>The Architect flow to execute during an organization&#39;s holiday hours.</value>
+        [DataMember(Name="holidayHoursFlow", EmitDefaultValue=false)]
+        public UriReference HolidayHoursFlow { get; set; }
+        
+        
+        
+        /// <summary>
         /// The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well.
         /// </summary>
         /// <value>The schedule group defining the open and closed hours for an organization.  If this is provided, an open flow and a closed flow must be specified as well.</value>
@@ -576,6 +607,8 @@ this.ScheduleGroup = ScheduleGroup;
             sb.Append("  OpenHoursFlow: ").Append(OpenHoursFlow).Append("\n");
             
             sb.Append("  ClosedHoursFlow: ").Append(ClosedHoursFlow).Append("\n");
+            
+            sb.Append("  HolidayHoursFlow: ").Append(HolidayHoursFlow).Append("\n");
             
             sb.Append("  ScheduleGroup: ").Append(ScheduleGroup).Append("\n");
             
@@ -688,6 +721,11 @@ this.ScheduleGroup = ScheduleGroup;
                     this.ClosedHoursFlow.Equals(other.ClosedHoursFlow)
                 ) &&
                 (
+                    this.HolidayHoursFlow == other.HolidayHoursFlow ||
+                    this.HolidayHoursFlow != null &&
+                    this.HolidayHoursFlow.Equals(other.HolidayHoursFlow)
+                ) &&
+                (
                     this.ScheduleGroup == other.ScheduleGroup ||
                     this.ScheduleGroup != null &&
                     this.ScheduleGroup.Equals(other.ScheduleGroup)
@@ -752,6 +790,9 @@ this.ScheduleGroup = ScheduleGroup;
                 
                 if (this.ClosedHoursFlow != null)
                     hash = hash * 59 + this.ClosedHoursFlow.GetHashCode();
+                
+                if (this.HolidayHoursFlow != null)
+                    hash = hash * 59 + this.HolidayHoursFlow.GetHashCode();
                 
                 if (this.ScheduleGroup != null)
                     hash = hash * 59 + this.ScheduleGroup.GetHashCode();

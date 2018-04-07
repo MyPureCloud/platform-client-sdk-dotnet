@@ -233,6 +233,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The connection state of this communication.
         /// </summary>
@@ -260,6 +263,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>System defined string indicating what caused the communication to disconnect. Will be null until the communication disconnects.</value>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -323,8 +328,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The id of the peer communication corresponding to a matching leg for this communication..</param>
         
         
-        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null)
+        
+        /// <param name="Msids">List of media stream ids.</param>
+        
+        
+        public Video(StateEnum? State = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, string PeerId = null, List<string> Msids = null)
         {
+            
+            
+            
+            
             
             
             
@@ -483,6 +496,15 @@ this.PeerId = PeerId;
             
             
             
+            
+            
+            
+            
+this.Msids = Msids;
+            
+            
+            
+            
         }
         
         
@@ -580,6 +602,15 @@ this.PeerId = PeerId;
         public string PeerId { get; set; }
         
         
+        
+        /// <summary>
+        /// List of media stream ids
+        /// </summary>
+        /// <value>List of media stream ids</value>
+        [DataMember(Name="msids", EmitDefaultValue=false)]
+        public List<string> Msids { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -612,6 +643,8 @@ this.PeerId = PeerId;
             sb.Append("  Provider: ").Append(Provider).Append("\n");
             
             sb.Append("  PeerId: ").Append(PeerId).Append("\n");
+            
+            sb.Append("  Msids: ").Append(Msids).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -708,6 +741,11 @@ this.PeerId = PeerId;
                     this.PeerId == other.PeerId ||
                     this.PeerId != null &&
                     this.PeerId.Equals(other.PeerId)
+                ) &&
+                (
+                    this.Msids == other.Msids ||
+                    this.Msids != null &&
+                    this.Msids.SequenceEqual(other.Msids)
                 );
         }
 
@@ -758,6 +796,9 @@ this.PeerId = PeerId;
                 
                 if (this.PeerId != null)
                     hash = hash * 59 + this.PeerId.GetHashCode();
+                
+                if (this.Msids != null)
+                    hash = hash * 59 + this.Msids.GetHashCode();
                 
                 return hash;
             }
