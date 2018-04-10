@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingSmsPhonenumber**](RoutingApi.html#deleteroutingsmsphonenumber) | **DELETE** /api/v2/routing/sms/phonenumbers/{addressId} | Delete a phone number provisioned for SMS. |
 | [**DeleteRoutingUtilization**](RoutingApi.html#deleteroutingutilization) | **DELETE** /api/v2/routing/utilization | Delete utilization settings and revert to system defaults. |
 | [**DeleteRoutingWrapupcode**](RoutingApi.html#deleteroutingwrapupcode) | **DELETE** /api/v2/routing/wrapupcodes/{codeId} | Delete wrap-up code |
+| [**DeleteUserRoutinglanguage**](RoutingApi.html#deleteuserroutinglanguage) | **DELETE** /api/v2/users/{userId}/routinglanguages/{languageId} | Remove routing language from user |
 | [**DeleteUserRoutingskill**](RoutingApi.html#deleteuserroutingskill) | **DELETE** /api/v2/users/{userId}/routingskills/{skillId} | Remove routing skill from user |
 | [**GetRoutingEmailDomain**](RoutingApi.html#getroutingemaildomain) | **GET** /api/v2/routing/email/domains/{domainId} | Get domain |
 | [**GetRoutingEmailDomainRoute**](RoutingApi.html#getroutingemaildomainroute) | **GET** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
@@ -39,9 +40,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingUtilization**](RoutingApi.html#getroutingutilization) | **GET** /api/v2/routing/utilization | Get the utilization settings. |
 | [**GetRoutingWrapupcode**](RoutingApi.html#getroutingwrapupcode) | **GET** /api/v2/routing/wrapupcodes/{codeId} | Get details about this wrap-up code. |
 | [**GetRoutingWrapupcodes**](RoutingApi.html#getroutingwrapupcodes) | **GET** /api/v2/routing/wrapupcodes | Get list of wrapup codes. |
+| [**GetUserRoutinglanguages**](RoutingApi.html#getuserroutinglanguages) | **GET** /api/v2/users/{userId}/routinglanguages | List routing language for user |
 | [**GetUserRoutingskills**](RoutingApi.html#getuserroutingskills) | **GET** /api/v2/users/{userId}/routingskills | List routing skills for user |
 | [**PatchRoutingQueueUser**](RoutingApi.html#patchroutingqueueuser) | **PATCH** /api/v2/routing/queues/{queueId}/users/{memberId} | Update the ring number of joined status for a User in a Queue |
 | [**PatchRoutingQueueUsers**](RoutingApi.html#patchroutingqueueusers) | **PATCH** /api/v2/routing/queues/{queueId}/users | Join or unjoin a set of users for a queue |
+| [**PatchUserRoutinglanguage**](RoutingApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
 | [**PostAnalyticsQueuesObservationsQuery**](RoutingApi.html#postanalyticsqueuesobservationsquery) | **POST** /api/v2/analytics/queues/observations/query | Query for queue observations |
 | [**PostRoutingEmailDomainRoutes**](RoutingApi.html#postroutingemaildomainroutes) | **POST** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
 | [**PostRoutingEmailDomains**](RoutingApi.html#postroutingemaildomains) | **POST** /api/v2/routing/email/domains | Create a domain |
@@ -53,6 +56,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingSmsAddresses**](RoutingApi.html#postroutingsmsaddresses) | **POST** /api/v2/routing/sms/addresses | Provision an Address for SMS |
 | [**PostRoutingSmsPhonenumbers**](RoutingApi.html#postroutingsmsphonenumbers) | **POST** /api/v2/routing/sms/phonenumbers | Provision a phone number for SMS |
 | [**PostRoutingWrapupcodes**](RoutingApi.html#postroutingwrapupcodes) | **POST** /api/v2/routing/wrapupcodes | Create a wrap-up code |
+| [**PostUserRoutinglanguages**](RoutingApi.html#postuserroutinglanguages) | **POST** /api/v2/users/{userId}/routinglanguages | Add routing language to user |
 | [**PostUserRoutingskills**](RoutingApi.html#postuserroutingskills) | **POST** /api/v2/users/{userId}/routingskills | Add routing skill to user |
 | [**PutRoutingEmailDomainRoute**](RoutingApi.html#putroutingemaildomainroute) | **PUT** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Update a route |
 | [**PutRoutingMessageRecipient**](RoutingApi.html#putroutingmessagerecipient) | **PUT** /api/v2/routing/message/recipients/{recipientId} | Update a recipient |
@@ -639,6 +643,75 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **codeId** | **string**| Wrapup Code ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="deleteuserroutinglanguage"></a>
+
+## void DeleteUserRoutinglanguage (string userId, string languageId)
+
+Remove routing language from user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteUserRoutinglanguageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            var languageId = languageId_example;  // string | languageId
+            
+            
+            
+
+            try
+            {
+                
+                // Remove routing language from user
+                
+                apiInstance.DeleteUserRoutinglanguage(userId, languageId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteUserRoutinglanguage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **languageId** | **string**| languageId |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2335,6 +2408,88 @@ namespace Example
 
 [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html)
 
+<a name="getuserroutinglanguages"></a>
+
+## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+
+List routing language for user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUserRoutinglanguagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
+            
+            
+            
+
+            try
+            {
+                
+                // List routing language for user
+                
+                UserLanguageEntityListing result = apiInstance.GetUserRoutinglanguages(userId, pageSize, pageNumber, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetUserRoutinglanguages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserLanguageEntityListing**](UserLanguageEntityListing.html)
+
 <a name="getuserroutingskills"></a>
 
 ## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
@@ -2562,6 +2717,82 @@ namespace Example
 ### Return type
 
 [**QueueMemberEntityListing**](QueueMemberEntityListing.html)
+
+<a name="patchuserroutinglanguage"></a>
+
+## [**UserRoutingLanguage**](UserRoutingLanguage.html) PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
+
+Update routing language proficiency or state.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchUserRoutinglanguageExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            var languageId = languageId_example;  // string | languageId
+            
+            
+            
+            
+            
+            var body = new UserRoutingLanguage(); // UserRoutingLanguage | Language
+            
+            
+
+            try
+            {
+                
+                // Update routing language proficiency or state.
+                
+                UserRoutingLanguage result = apiInstance.PatchUserRoutinglanguage(userId, languageId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchUserRoutinglanguage: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **languageId** | **string**| languageId |  |
+| **body** | [**UserRoutingLanguage**](UserRoutingLanguage.html)| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserRoutingLanguage**](UserRoutingLanguage.html)
 
 <a name="postanalyticsqueuesobservationsquery"></a>
 
@@ -3290,6 +3521,76 @@ namespace Example
 ### Return type
 
 [**WrapupCode**](WrapupCode.html)
+
+<a name="postuserroutinglanguages"></a>
+
+## [**UserRoutingLanguage**](UserRoutingLanguage.html) PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
+
+Add routing language to user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostUserRoutinglanguagesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var userId = userId_example;  // string | User ID
+            
+            
+            
+            
+            
+            var body = new UserRoutingLanguagePost(); // UserRoutingLanguagePost | Language
+            
+            
+
+            try
+            {
+                
+                // Add routing language to user
+                
+                UserRoutingLanguage result = apiInstance.PostUserRoutinglanguages(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostUserRoutinglanguages: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| User ID |  |
+| **body** | [**UserRoutingLanguagePost**](UserRoutingLanguagePost.html)| Language |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserRoutingLanguage**](UserRoutingLanguage.html)
 
 <a name="postuserroutingskills"></a>
 

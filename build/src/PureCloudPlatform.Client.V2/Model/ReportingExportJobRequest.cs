@@ -85,7 +85,73 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum QueuePerformanceDetailView for "QUEUE_PERFORMANCE_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "QUEUE_PERFORMANCE_DETAIL_VIEW")]
-            QueuePerformanceDetailView
+            QueuePerformanceDetailView,
+            
+            /// <summary>
+            /// Enum InteractionSearchView for "INTERACTION_SEARCH_VIEW"
+            /// </summary>
+            [EnumMember(Value = "INTERACTION_SEARCH_VIEW")]
+            InteractionSearchView,
+            
+            /// <summary>
+            /// Enum AgentPerformanceSummaryView for "AGENT_PERFORMANCE_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_PERFORMANCE_SUMMARY_VIEW")]
+            AgentPerformanceSummaryView,
+            
+            /// <summary>
+            /// Enum AgentPerformanceDetailView for "AGENT_PERFORMANCE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_PERFORMANCE_DETAIL_VIEW")]
+            AgentPerformanceDetailView,
+            
+            /// <summary>
+            /// Enum AgentStatusSummaryView for "AGENT_STATUS_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_STATUS_SUMMARY_VIEW")]
+            AgentStatusSummaryView,
+            
+            /// <summary>
+            /// Enum AgentStatusDetailView for "AGENT_STATUS_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_STATUS_DETAIL_VIEW")]
+            AgentStatusDetailView,
+            
+            /// <summary>
+            /// Enum AgentEvaluationSummaryView for "AGENT_EVALUATION_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_EVALUATION_SUMMARY_VIEW")]
+            AgentEvaluationSummaryView,
+            
+            /// <summary>
+            /// Enum AgentEvaluationDetailView for "AGENT_EVALUATION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_EVALUATION_DETAIL_VIEW")]
+            AgentEvaluationDetailView,
+            
+            /// <summary>
+            /// Enum AgentQueueDetailView for "AGENT_QUEUE_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_QUEUE_DETAIL_VIEW")]
+            AgentQueueDetailView,
+            
+            /// <summary>
+            /// Enum AgentInteractionDetailView for "AGENT_INTERACTION_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "AGENT_INTERACTION_DETAIL_VIEW")]
+            AgentInteractionDetailView,
+            
+            /// <summary>
+            /// Enum AbandonInsightsView for "ABANDON_INSIGHTS_VIEW"
+            /// </summary>
+            [EnumMember(Value = "ABANDON_INSIGHTS_VIEW")]
+            AbandonInsightsView,
+            
+            /// <summary>
+            /// Enum SkillsPerformanceView for "SKILLS_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "SKILLS_PERFORMANCE_VIEW")]
+            SkillsPerformanceView
         }
         
         

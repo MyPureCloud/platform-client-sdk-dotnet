@@ -169,57 +169,200 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
         /// </summary>
         
         
-        /// <param name="MediaTypes">The media types used to filter the data export request.</param>
+        /// <param name="MediaTypes">The media types are used to filter the view.</param>
         
         
         
-        /// <param name="QueueIds">The queue ids used to filter the data export request.</param>
+        /// <param name="QueueIds">The queue ids are used to filter the view.</param>
         
         
         
-        /// <param name="SkillIds">The skill ids used to filter the data export request.</param>
+        /// <param name="SkillIds">The skill ids are used to filter the view.</param>
         
         
         
-        /// <param name="LanguageIds">The language ids used to filter the data export request.</param>
+        /// <param name="LanguageIds">The language ids are used to filter the view.</param>
         
         
         
-        /// <param name="Directions">The directions used to filter the data export request.</param>
+        /// <param name="Directions">The directions are used to filter the view.</param>
         
         
         
-        /// <param name="WrapUpCodes">The wrap up codes used to filter the data export request.</param>
+        /// <param name="WrapUpCodes">The wrap up codes are used to filter the view.</param>
         
         
         
-        /// <param name="DnisList">The dnis list used to filter the data export request.</param>
+        /// <param name="DnisList">The dnis list is used to filter the view.</param>
         
         
         
-        /// <param name="UserIds">The user ids used to filter the data export request.</param>
+        /// <param name="UserIds">The user ids are used to filter the view.</param>
         
         
         
-        /// <param name="AddressTos">The address To values used to filter the data export request.</param>
+        /// <param name="AddressTos">The address To values are used to filter the view.</param>
         
         
         
-        /// <param name="OutboundCampaignIds">The outbound campaign ids used to filter the data export request.</param>
+        /// <param name="AddressFroms">The address from values are used to filter the view.</param>
         
         
         
-        /// <param name="OutboundContactListIds">The outbound contact list ids used to filter the data export request.</param>
+        /// <param name="OutboundCampaignIds">The outbound campaign ids are used to filter the view.</param>
         
         
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<Guid?> QueueIds = null, List<Guid?> SkillIds = null, List<Guid?> LanguageIds = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<Guid?> UserIds = null, List<string> AddressTos = null, List<Guid?> OutboundCampaignIds = null, List<Guid?> OutboundContactListIds = null)
+        
+        /// <param name="OutboundContactListIds">The outbound contact list ids are used to filter the view.</param>
+        
+        
+        
+        /// <param name="ContactIds">The contact ids are used to filter the view.</param>
+        
+        
+        
+        /// <param name="AniList">The ani list ids are used to filter the view.</param>
+        
+        
+        
+        /// <param name="DurationMilliseconds">The duration is used to filter the view.</param>
+        
+        
+        
+        /// <param name="EvaluationScore">The evaluationScore is used to filter the view.</param>
+        
+        
+        
+        /// <param name="EvaluationCriticalScore">The evaluationCriticalScore is used to filter the view.</param>
+        
+        
+        
+        /// <param name="EvaluationFormIds">The evaluation form ids are used to filter the view.</param>
+        
+        
+        
+        /// <param name="EvaluatedAgentIds">The evaluated agent ids are used to filter the view.</param>
+        
+        
+        
+        /// <param name="EvaluatorIds">The evaluator ids are used to filter the view.</param>
+        
+        
+        
+        /// <param name="Transferred">Indicates filtering for transfers.</param>
+        
+        
+        
+        /// <param name="Abandoned">Indicates filtering for abandons.</param>
+        
+        
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> LanguageIds = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, NumericRange DurationMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -351,6 +494,15 @@ this.AddressTos = AddressTos;
             
             
             
+this.AddressFroms = AddressFroms;
+            
+            
+            
+            
+            
+            
+            
+            
 this.OutboundCampaignIds = OutboundCampaignIds;
             
             
@@ -365,106 +517,295 @@ this.OutboundContactListIds = OutboundContactListIds;
             
             
             
+            
+            
+            
+            
+this.ContactIds = ContactIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AniList = AniList;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DurationMilliseconds = DurationMilliseconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EvaluationScore = EvaluationScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EvaluationCriticalScore = EvaluationCriticalScore;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EvaluationFormIds = EvaluationFormIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EvaluatedAgentIds = EvaluatedAgentIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.EvaluatorIds = EvaluatorIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Transferred = Transferred;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Abandoned = Abandoned;
+            
+            
+            
+            
         }
         
         
         
         /// <summary>
-        /// The media types used to filter the data export request
+        /// The media types are used to filter the view
         /// </summary>
-        /// <value>The media types used to filter the data export request</value>
+        /// <value>The media types are used to filter the view</value>
         [DataMember(Name="mediaTypes", EmitDefaultValue=false)]
         public List<MediaTypesEnum> MediaTypes { get; set; }
         
         
         
         /// <summary>
-        /// The queue ids used to filter the data export request
+        /// The queue ids are used to filter the view
         /// </summary>
-        /// <value>The queue ids used to filter the data export request</value>
+        /// <value>The queue ids are used to filter the view</value>
         [DataMember(Name="queueIds", EmitDefaultValue=false)]
-        public List<Guid?> QueueIds { get; set; }
+        public List<string> QueueIds { get; set; }
         
         
         
         /// <summary>
-        /// The skill ids used to filter the data export request
+        /// The skill ids are used to filter the view
         /// </summary>
-        /// <value>The skill ids used to filter the data export request</value>
+        /// <value>The skill ids are used to filter the view</value>
         [DataMember(Name="skillIds", EmitDefaultValue=false)]
-        public List<Guid?> SkillIds { get; set; }
+        public List<string> SkillIds { get; set; }
         
         
         
         /// <summary>
-        /// The language ids used to filter the data export request
+        /// The language ids are used to filter the view
         /// </summary>
-        /// <value>The language ids used to filter the data export request</value>
+        /// <value>The language ids are used to filter the view</value>
         [DataMember(Name="languageIds", EmitDefaultValue=false)]
-        public List<Guid?> LanguageIds { get; set; }
+        public List<string> LanguageIds { get; set; }
         
         
         
         /// <summary>
-        /// The directions used to filter the data export request
+        /// The directions are used to filter the view
         /// </summary>
-        /// <value>The directions used to filter the data export request</value>
+        /// <value>The directions are used to filter the view</value>
         [DataMember(Name="directions", EmitDefaultValue=false)]
         public List<DirectionsEnum> Directions { get; set; }
         
         
         
         /// <summary>
-        /// The wrap up codes used to filter the data export request
+        /// The wrap up codes are used to filter the view
         /// </summary>
-        /// <value>The wrap up codes used to filter the data export request</value>
+        /// <value>The wrap up codes are used to filter the view</value>
         [DataMember(Name="wrapUpCodes", EmitDefaultValue=false)]
         public List<string> WrapUpCodes { get; set; }
         
         
         
         /// <summary>
-        /// The dnis list used to filter the data export request
+        /// The dnis list is used to filter the view
         /// </summary>
-        /// <value>The dnis list used to filter the data export request</value>
+        /// <value>The dnis list is used to filter the view</value>
         [DataMember(Name="dnisList", EmitDefaultValue=false)]
         public List<string> DnisList { get; set; }
         
         
         
         /// <summary>
-        /// The user ids used to filter the data export request
+        /// The user ids are used to filter the view
         /// </summary>
-        /// <value>The user ids used to filter the data export request</value>
+        /// <value>The user ids are used to filter the view</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
-        public List<Guid?> UserIds { get; set; }
+        public List<string> UserIds { get; set; }
         
         
         
         /// <summary>
-        /// The address To values used to filter the data export request
+        /// The address To values are used to filter the view
         /// </summary>
-        /// <value>The address To values used to filter the data export request</value>
+        /// <value>The address To values are used to filter the view</value>
         [DataMember(Name="addressTos", EmitDefaultValue=false)]
         public List<string> AddressTos { get; set; }
         
         
         
         /// <summary>
-        /// The outbound campaign ids used to filter the data export request
+        /// The address from values are used to filter the view
         /// </summary>
-        /// <value>The outbound campaign ids used to filter the data export request</value>
-        [DataMember(Name="outboundCampaignIds", EmitDefaultValue=false)]
-        public List<Guid?> OutboundCampaignIds { get; set; }
+        /// <value>The address from values are used to filter the view</value>
+        [DataMember(Name="addressFroms", EmitDefaultValue=false)]
+        public List<string> AddressFroms { get; set; }
         
         
         
         /// <summary>
-        /// The outbound contact list ids used to filter the data export request
+        /// The outbound campaign ids are used to filter the view
         /// </summary>
-        /// <value>The outbound contact list ids used to filter the data export request</value>
+        /// <value>The outbound campaign ids are used to filter the view</value>
+        [DataMember(Name="outboundCampaignIds", EmitDefaultValue=false)]
+        public List<string> OutboundCampaignIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The outbound contact list ids are used to filter the view
+        /// </summary>
+        /// <value>The outbound contact list ids are used to filter the view</value>
         [DataMember(Name="outboundContactListIds", EmitDefaultValue=false)]
-        public List<Guid?> OutboundContactListIds { get; set; }
+        public List<string> OutboundContactListIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The contact ids are used to filter the view
+        /// </summary>
+        /// <value>The contact ids are used to filter the view</value>
+        [DataMember(Name="contactIds", EmitDefaultValue=false)]
+        public List<string> ContactIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The ani list ids are used to filter the view
+        /// </summary>
+        /// <value>The ani list ids are used to filter the view</value>
+        [DataMember(Name="aniList", EmitDefaultValue=false)]
+        public List<string> AniList { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The duration is used to filter the view
+        /// </summary>
+        /// <value>The duration is used to filter the view</value>
+        [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
+        public NumericRange DurationMilliseconds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The evaluationScore is used to filter the view
+        /// </summary>
+        /// <value>The evaluationScore is used to filter the view</value>
+        [DataMember(Name="evaluationScore", EmitDefaultValue=false)]
+        public NumericRange EvaluationScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The evaluationCriticalScore is used to filter the view
+        /// </summary>
+        /// <value>The evaluationCriticalScore is used to filter the view</value>
+        [DataMember(Name="evaluationCriticalScore", EmitDefaultValue=false)]
+        public NumericRange EvaluationCriticalScore { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The evaluation form ids are used to filter the view
+        /// </summary>
+        /// <value>The evaluation form ids are used to filter the view</value>
+        [DataMember(Name="evaluationFormIds", EmitDefaultValue=false)]
+        public List<string> EvaluationFormIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The evaluated agent ids are used to filter the view
+        /// </summary>
+        /// <value>The evaluated agent ids are used to filter the view</value>
+        [DataMember(Name="evaluatedAgentIds", EmitDefaultValue=false)]
+        public List<string> EvaluatedAgentIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The evaluator ids are used to filter the view
+        /// </summary>
+        /// <value>The evaluator ids are used to filter the view</value>
+        [DataMember(Name="evaluatorIds", EmitDefaultValue=false)]
+        public List<string> EvaluatorIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for transfers
+        /// </summary>
+        /// <value>Indicates filtering for transfers</value>
+        [DataMember(Name="transferred", EmitDefaultValue=false)]
+        public bool? Transferred { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Indicates filtering for abandons
+        /// </summary>
+        /// <value>Indicates filtering for abandons</value>
+        [DataMember(Name="abandoned", EmitDefaultValue=false)]
+        public bool? Abandoned { get; set; }
         
         
         /// <summary>
@@ -494,9 +835,31 @@ this.OutboundContactListIds = OutboundContactListIds;
             
             sb.Append("  AddressTos: ").Append(AddressTos).Append("\n");
             
+            sb.Append("  AddressFroms: ").Append(AddressFroms).Append("\n");
+            
             sb.Append("  OutboundCampaignIds: ").Append(OutboundCampaignIds).Append("\n");
             
             sb.Append("  OutboundContactListIds: ").Append(OutboundContactListIds).Append("\n");
+            
+            sb.Append("  ContactIds: ").Append(ContactIds).Append("\n");
+            
+            sb.Append("  AniList: ").Append(AniList).Append("\n");
+            
+            sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
+            
+            sb.Append("  EvaluationScore: ").Append(EvaluationScore).Append("\n");
+            
+            sb.Append("  EvaluationCriticalScore: ").Append(EvaluationCriticalScore).Append("\n");
+            
+            sb.Append("  EvaluationFormIds: ").Append(EvaluationFormIds).Append("\n");
+            
+            sb.Append("  EvaluatedAgentIds: ").Append(EvaluatedAgentIds).Append("\n");
+            
+            sb.Append("  EvaluatorIds: ").Append(EvaluatorIds).Append("\n");
+            
+            sb.Append("  Transferred: ").Append(Transferred).Append("\n");
+            
+            sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -580,6 +943,11 @@ this.OutboundContactListIds = OutboundContactListIds;
                     this.AddressTos.SequenceEqual(other.AddressTos)
                 ) &&
                 (
+                    this.AddressFroms == other.AddressFroms ||
+                    this.AddressFroms != null &&
+                    this.AddressFroms.SequenceEqual(other.AddressFroms)
+                ) &&
+                (
                     this.OutboundCampaignIds == other.OutboundCampaignIds ||
                     this.OutboundCampaignIds != null &&
                     this.OutboundCampaignIds.SequenceEqual(other.OutboundCampaignIds)
@@ -588,6 +956,56 @@ this.OutboundContactListIds = OutboundContactListIds;
                     this.OutboundContactListIds == other.OutboundContactListIds ||
                     this.OutboundContactListIds != null &&
                     this.OutboundContactListIds.SequenceEqual(other.OutboundContactListIds)
+                ) &&
+                (
+                    this.ContactIds == other.ContactIds ||
+                    this.ContactIds != null &&
+                    this.ContactIds.SequenceEqual(other.ContactIds)
+                ) &&
+                (
+                    this.AniList == other.AniList ||
+                    this.AniList != null &&
+                    this.AniList.SequenceEqual(other.AniList)
+                ) &&
+                (
+                    this.DurationMilliseconds == other.DurationMilliseconds ||
+                    this.DurationMilliseconds != null &&
+                    this.DurationMilliseconds.Equals(other.DurationMilliseconds)
+                ) &&
+                (
+                    this.EvaluationScore == other.EvaluationScore ||
+                    this.EvaluationScore != null &&
+                    this.EvaluationScore.Equals(other.EvaluationScore)
+                ) &&
+                (
+                    this.EvaluationCriticalScore == other.EvaluationCriticalScore ||
+                    this.EvaluationCriticalScore != null &&
+                    this.EvaluationCriticalScore.Equals(other.EvaluationCriticalScore)
+                ) &&
+                (
+                    this.EvaluationFormIds == other.EvaluationFormIds ||
+                    this.EvaluationFormIds != null &&
+                    this.EvaluationFormIds.SequenceEqual(other.EvaluationFormIds)
+                ) &&
+                (
+                    this.EvaluatedAgentIds == other.EvaluatedAgentIds ||
+                    this.EvaluatedAgentIds != null &&
+                    this.EvaluatedAgentIds.SequenceEqual(other.EvaluatedAgentIds)
+                ) &&
+                (
+                    this.EvaluatorIds == other.EvaluatorIds ||
+                    this.EvaluatorIds != null &&
+                    this.EvaluatorIds.SequenceEqual(other.EvaluatorIds)
+                ) &&
+                (
+                    this.Transferred == other.Transferred ||
+                    this.Transferred != null &&
+                    this.Transferred.Equals(other.Transferred)
+                ) &&
+                (
+                    this.Abandoned == other.Abandoned ||
+                    this.Abandoned != null &&
+                    this.Abandoned.Equals(other.Abandoned)
                 );
         }
 
@@ -630,11 +1048,44 @@ this.OutboundContactListIds = OutboundContactListIds;
                 if (this.AddressTos != null)
                     hash = hash * 59 + this.AddressTos.GetHashCode();
                 
+                if (this.AddressFroms != null)
+                    hash = hash * 59 + this.AddressFroms.GetHashCode();
+                
                 if (this.OutboundCampaignIds != null)
                     hash = hash * 59 + this.OutboundCampaignIds.GetHashCode();
                 
                 if (this.OutboundContactListIds != null)
                     hash = hash * 59 + this.OutboundContactListIds.GetHashCode();
+                
+                if (this.ContactIds != null)
+                    hash = hash * 59 + this.ContactIds.GetHashCode();
+                
+                if (this.AniList != null)
+                    hash = hash * 59 + this.AniList.GetHashCode();
+                
+                if (this.DurationMilliseconds != null)
+                    hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
+                
+                if (this.EvaluationScore != null)
+                    hash = hash * 59 + this.EvaluationScore.GetHashCode();
+                
+                if (this.EvaluationCriticalScore != null)
+                    hash = hash * 59 + this.EvaluationCriticalScore.GetHashCode();
+                
+                if (this.EvaluationFormIds != null)
+                    hash = hash * 59 + this.EvaluationFormIds.GetHashCode();
+                
+                if (this.EvaluatedAgentIds != null)
+                    hash = hash * 59 + this.EvaluatedAgentIds.GetHashCode();
+                
+                if (this.EvaluatorIds != null)
+                    hash = hash * 59 + this.EvaluatorIds.GetHashCode();
+                
+                if (this.Transferred != null)
+                    hash = hash * 59 + this.Transferred.GetHashCode();
+                
+                if (this.Abandoned != null)
+                    hash = hash * 59 + this.Abandoned.GetHashCode();
                 
                 return hash;
             }

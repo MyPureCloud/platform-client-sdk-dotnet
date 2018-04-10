@@ -147,15 +147,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="LengthInMinutes">The default length of the activity in minutes (required).</param>
+        /// <param name="LengthInMinutes">The default length of the activity in minutes.</param>
         
         
         
-        /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity (required).</param>
+        /// <param name="CountsAsPaidTime">Whether an agent is paid while performing this activity.</param>
         
         
         
-        /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time (required).</param>
+        /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as work time.</param>
         
         
         
@@ -195,43 +195,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "LengthInMinutes" is required (not null)
-            if (LengthInMinutes == null)
-            {
-                throw new InvalidDataException("LengthInMinutes is a required property for CreateActivityCodeRequest and cannot be null");
-            }
-            else
-            {
-                this.LengthInMinutes = LengthInMinutes;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CountsAsPaidTime" is required (not null)
-            if (CountsAsPaidTime == null)
-            {
-                throw new InvalidDataException("CountsAsPaidTime is a required property for CreateActivityCodeRequest and cannot be null");
-            }
-            else
-            {
-                this.CountsAsPaidTime = CountsAsPaidTime;
-            }
-            
-            
-            
-            
-            
-            // to ensure "CountsAsWorkTime" is required (not null)
-            if (CountsAsWorkTime == null)
-            {
-                throw new InvalidDataException("CountsAsWorkTime is a required property for CreateActivityCodeRequest and cannot be null");
-            }
-            else
-            {
-                this.CountsAsWorkTime = CountsAsWorkTime;
-            }
             
             
             
@@ -256,6 +219,28 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+this.LengthInMinutes = LengthInMinutes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CountsAsPaidTime = CountsAsPaidTime;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CountsAsWorkTime = CountsAsWorkTime;
             
             
             

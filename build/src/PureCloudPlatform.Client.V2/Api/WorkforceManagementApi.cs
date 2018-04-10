@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>WfmIntradayQueueListing</returns>
         WfmIntradayQueueListing GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date);
@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>ApiResponse of WfmIntradayQueueListing</returns>
         ApiResponse<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date);
@@ -91,7 +91,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequest</returns>
@@ -104,7 +104,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequest</returns>
@@ -117,7 +117,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
@@ -130,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
@@ -143,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string muId);
 
@@ -154,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         ApiResponse<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersWithHttpInfo (string muId);
         
@@ -215,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string muId, WfmHistoricalAdherenceQuery body = null);
@@ -227,7 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null);
@@ -239,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>IntradayResponse</returns>
         IntradayResponse PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null);
@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of IntradayResponse</returns>
         ApiResponse<IntradayResponse> PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId, IntradayQueryDataCommand body = null);
@@ -263,7 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string muId, UserListScheduleRequestBody body = null);
@@ -275,7 +275,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         ApiResponse<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
@@ -335,7 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>Task of WfmIntradayQueueListing</returns>
         System.Threading.Tasks.Task<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId, string date);
@@ -347,7 +347,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>Task of ApiResponse (WfmIntradayQueueListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date);
@@ -359,7 +359,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequest</returns>
@@ -372,7 +372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequest)</returns>
@@ -385,7 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
@@ -398,7 +398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
@@ -411,7 +411,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string muId);
 
@@ -422,7 +422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string muId);
         
@@ -483,7 +483,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string muId, WfmHistoricalAdherenceQuery body = null);
@@ -495,7 +495,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null);
@@ -507,7 +507,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of IntradayResponse</returns>
         System.Threading.Tasks.Task<IntradayResponse> PostWorkforcemanagementManagementunitIntradayAsync (string muId, IntradayQueryDataCommand body = null);
@@ -519,7 +519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (IntradayResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<IntradayResponse>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId, IntradayQueryDataCommand body = null);
@@ -531,7 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string muId, UserListScheduleRequestBody body = null);
@@ -543,7 +543,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null);
@@ -1026,7 +1026,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday queues for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>WfmIntradayQueueListing</returns>
         public WfmIntradayQueueListing GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date)
@@ -1039,7 +1039,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday queues for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>ApiResponse of WfmIntradayQueueListing</returns>
         public ApiResponse< WfmIntradayQueueListing > GetWorkforcemanagementManagementunitIntradayQueuesWithHttpInfo (string muId, string date)
@@ -1126,7 +1126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday queues for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>Task of WfmIntradayQueueListing</returns>
         public async System.Threading.Tasks.Task<WfmIntradayQueueListing> GetWorkforcemanagementManagementunitIntradayQueuesAsync (string muId, string date)
@@ -1140,7 +1140,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday queues for the given date 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="date">ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23</param>
         /// <returns>Task of ApiResponse (WfmIntradayQueueListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmIntradayQueueListing>> GetWorkforcemanagementManagementunitIntradayQueuesAsyncWithHttpInfo (string muId, string date)
@@ -1230,7 +1230,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>TimeOffRequest</returns>
@@ -1244,7 +1244,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>ApiResponse of TimeOffRequest</returns>
@@ -1336,7 +1336,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of TimeOffRequest</returns>
@@ -1351,7 +1351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a time off request by id 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="timeOffRequestId">Time Off Request Id</param>
         /// <returns>Task of ApiResponse (TimeOffRequest)</returns>
@@ -1447,7 +1447,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for any user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>TimeOffRequestList</returns>
@@ -1461,7 +1461,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for any user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>ApiResponse of TimeOffRequestList</returns>
@@ -1550,7 +1550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for any user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of TimeOffRequestList</returns>
@@ -1565,7 +1565,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of time off requests for any user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="userId">The userId to whom the Time Off Request applies.</param>
         /// <param name="recentlyReviewed">Limit results to requests that have been reviewed within the preceding 30 days (optional, default to false)</param>
         /// <returns>Task of ApiResponse (TimeOffRequestList)</returns>
@@ -1657,7 +1657,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get agents in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>WfmUserEntityListing</returns>
         public WfmUserEntityListing GetWorkforcemanagementManagementunitUsers (string muId)
         {
@@ -1669,7 +1669,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get agents in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>ApiResponse of WfmUserEntityListing</returns>
         public ApiResponse< WfmUserEntityListing > GetWorkforcemanagementManagementunitUsersWithHttpInfo (string muId)
         { 
@@ -1751,7 +1751,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get agents in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of WfmUserEntityListing</returns>
         public async System.Threading.Tasks.Task<WfmUserEntityListing> GetWorkforcemanagementManagementunitUsersAsync (string muId)
         {
@@ -1764,7 +1764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get agents in the management unit 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <returns>Task of ApiResponse (WfmUserEntityListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmUserEntityListing>> GetWorkforcemanagementManagementunitUsersAsyncWithHttpInfo (string muId)
         { 
@@ -2249,7 +2249,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>WfmHistoricalAdherenceResponse</returns>
         public WfmHistoricalAdherenceResponse PostWorkforcemanagementManagementunitHistoricaladherencequery (string muId, WfmHistoricalAdherenceQuery body = null)
@@ -2262,7 +2262,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of WfmHistoricalAdherenceResponse</returns>
         public ApiResponse< WfmHistoricalAdherenceResponse > PostWorkforcemanagementManagementunitHistoricaladherencequeryWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null)
@@ -2350,7 +2350,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of WfmHistoricalAdherenceResponse</returns>
         public async System.Threading.Tasks.Task<WfmHistoricalAdherenceResponse> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsync (string muId, WfmHistoricalAdherenceQuery body = null)
@@ -2364,7 +2364,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Request a historical adherence report 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (WfmHistoricalAdherenceResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementManagementunitHistoricaladherencequeryAsyncWithHttpInfo (string muId, WfmHistoricalAdherenceQuery body = null)
@@ -2454,7 +2454,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested queueIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>IntradayResponse</returns>
         public IntradayResponse PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null)
@@ -2467,7 +2467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested queueIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of IntradayResponse</returns>
         public ApiResponse< IntradayResponse > PostWorkforcemanagementManagementunitIntradayWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
@@ -2555,7 +2555,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested queueIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of IntradayResponse</returns>
         public async System.Threading.Tasks.Task<IntradayResponse> PostWorkforcemanagementManagementunitIntradayAsync (string muId, IntradayQueryDataCommand body = null)
@@ -2569,7 +2569,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get intraday data for the given date for the requested queueIds 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (IntradayResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<IntradayResponse>> PostWorkforcemanagementManagementunitIntradayAsyncWithHttpInfo (string muId, IntradayQueryDataCommand body = null)
@@ -2659,7 +2659,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user schedules within the given time range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>UserScheduleContainer</returns>
         public UserScheduleContainer PostWorkforcemanagementManagementunitSchedulesSearch (string muId, UserListScheduleRequestBody body = null)
@@ -2672,7 +2672,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user schedules within the given time range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>ApiResponse of UserScheduleContainer</returns>
         public ApiResponse< UserScheduleContainer > PostWorkforcemanagementManagementunitSchedulesSearchWithHttpInfo (string muId, UserListScheduleRequestBody body = null)
@@ -2760,7 +2760,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user schedules within the given time range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of UserScheduleContainer</returns>
         public async System.Threading.Tasks.Task<UserScheduleContainer> PostWorkforcemanagementManagementunitSchedulesSearchAsync (string muId, UserListScheduleRequestBody body = null)
@@ -2774,7 +2774,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get user schedules within the given time range 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="muId">The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
+        /// <param name="muId">The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user.</param>
         /// <param name="body">body (optional)</param>
         /// <returns>Task of ApiResponse (UserScheduleContainer)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementManagementunitSchedulesSearchAsyncWithHttpInfo (string muId, UserListScheduleRequestBody body = null)

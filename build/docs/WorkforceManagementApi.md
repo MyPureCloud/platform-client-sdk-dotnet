@@ -178,7 +178,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             
             
             
@@ -210,7 +210,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **date** | **string**| ISO-8601 date string with no time or timezone component, interpreted in the configured management unit time zone, e.g. 2017-01-23 |  |
 {: class="table table-striped"}
 
@@ -248,7 +248,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             
             
             
@@ -285,7 +285,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The userId to whom the Time Off Request applies. |  |
 | **timeOffRequestId** | **string**| Time Off Request Id |  |
 {: class="table table-striped"}
@@ -324,7 +324,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             
             
             
@@ -361,7 +361,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **userId** | **string**| The userId to whom the Time Off Request applies. |  |
 | **recentlyReviewed** | **bool?**| Limit results to requests that have been reviewed within the preceding 30 days | [optional] [default to false] |
 {: class="table table-striped"}
@@ -400,7 +400,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             
             
             
@@ -427,7 +427,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -610,7 +610,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             
             
             
@@ -642,7 +642,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**WfmHistoricalAdherenceQuery**](WfmHistoricalAdherenceQuery.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -680,7 +680,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             
             
             
@@ -712,7 +712,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**IntradayQueryDataCommand**](IntradayQueryDataCommand.html)| body | [optional]  |
 {: class="table table-striped"}
 
@@ -750,7 +750,7 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             
             
-            var muId = muId_example;  // string | The muId of the management unit, or 'mine' for the management unit of the logged-in user.
+            var muId = muId_example;  // string | The management unit ID of the management unit, or 'mine' for the management unit of the logged-in user.
             
             
             
@@ -782,7 +782,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **muId** | **string**| The muId of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
+| **muId** | **string**| The management unit ID of the management unit, or &#39;mine&#39; for the management unit of the logged-in user. |  |
 | **body** | [**UserListScheduleRequestBody**](UserListScheduleRequestBody.html)| body | [optional]  |
 {: class="table table-striped"}
 

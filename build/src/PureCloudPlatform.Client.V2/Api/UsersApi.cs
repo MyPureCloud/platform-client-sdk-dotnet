@@ -61,6 +61,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteUserRolesWithHttpInfo (string userId);
         
         /// <summary>
+        /// Remove routing language from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns></returns>
+        void DeleteUserRoutinglanguage (string userId, string languageId);
+
+        /// <summary>
+        /// Remove routing language from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        ApiResponse<Object> DeleteUserRoutinglanguageWithHttpInfo (string userId, string languageId);
+        
+        /// <summary>
         /// Remove routing skill from user
         /// </summary>
         /// <remarks>
@@ -453,6 +477,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserAuthorization> GetUserRolesWithHttpInfo (string userId);
         
         /// <summary>
+        /// List routing language for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>UserLanguageEntityListing</returns>
+        UserLanguageEntityListing GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+
+        /// <summary>
+        /// List routing language for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        ApiResponse<UserLanguageEntityListing> GetUserRoutinglanguagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        
+        /// <summary>
         /// List routing skills for user
         /// </summary>
         /// <remarks>
@@ -777,6 +829,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body);
         
         /// <summary>
+        /// Update routing language proficiency or state.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>UserRoutingLanguage</returns>
+        UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body);
+
+        /// <summary>
+        /// Update routing language proficiency or state.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        ApiResponse<UserRoutingLanguage> PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
+        
+        /// <summary>
         /// Query for user aggregates
         /// </summary>
         /// <remarks>
@@ -889,6 +967,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>ApiResponse of Object(void)</returns>
         ApiResponse<Object> PostUserPasswordWithHttpInfo (string userId, ChangePasswordRequest body);
+        
+        /// <summary>
+        /// Add routing language to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>UserRoutingLanguage</returns>
+        UserRoutingLanguage PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body);
+
+        /// <summary>
+        /// Add routing language to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        ApiResponse<UserRoutingLanguage> PostUserRoutinglanguagesWithHttpInfo (string userId, UserRoutingLanguagePost body);
         
         /// <summary>
         /// Add routing skill to user
@@ -1221,6 +1323,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRolesAsyncWithHttpInfo (string userId);
+        
+        /// <summary>
+        /// Remove routing language from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns>Task of void</returns>
+        System.Threading.Tasks.Task DeleteUserRoutinglanguageAsync (string userId, string languageId);
+
+        /// <summary>
+        /// Remove routing language from user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns>Task of ApiResponse</returns>
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId);
         
         /// <summary>
         /// Remove routing skill from user
@@ -1615,6 +1741,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserAuthorization>> GetUserRolesAsyncWithHttpInfo (string userId);
         
         /// <summary>
+        /// List routing language for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>Task of UserLanguageEntityListing</returns>
+        System.Threading.Tasks.Task<UserLanguageEntityListing> GetUserRoutinglanguagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+
+        /// <summary>
+        /// List routing language for user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> GetUserRoutinglanguagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
+        
+        /// <summary>
         /// List routing skills for user
         /// </summary>
         /// <remarks>
@@ -1939,6 +2093,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body);
         
         /// <summary>
+        /// Update routing language proficiency or state.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of UserRoutingLanguage</returns>
+        System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body);
+
+        /// <summary>
+        /// Update routing language proficiency or state.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body);
+        
+        /// <summary>
         /// Query for user aggregates
         /// </summary>
         /// <remarks>
@@ -2051,6 +2231,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Password</param>
         /// <returns>Task of ApiResponse</returns>
         System.Threading.Tasks.Task<ApiResponse<Object>> PostUserPasswordAsyncWithHttpInfo (string userId, ChangePasswordRequest body);
+        
+        /// <summary>
+        /// Add routing language to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of UserRoutingLanguage</returns>
+        System.Threading.Tasks.Task<UserRoutingLanguage> PostUserRoutinglanguagesAsync (string userId, UserRoutingLanguagePost body);
+
+        /// <summary>
+        /// Add routing language to user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PostUserRoutinglanguagesAsyncWithHttpInfo (string userId, UserRoutingLanguagePost body);
         
         /// <summary>
         /// Add routing skill to user
@@ -2799,6 +3003,208 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoles: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoles: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        
+        /// <summary>
+        /// Remove routing language from user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns></returns>
+        public void DeleteUserRoutinglanguage (string userId, string languageId)
+        {
+             DeleteUserRoutinglanguageWithHttpInfo(userId, languageId);
+        }
+
+        /// <summary>
+        /// Remove routing language from user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        public ApiResponse<Object> DeleteUserRoutinglanguageWithHttpInfo (string userId, string languageId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserRoutinglanguage");
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->DeleteUserRoutinglanguage");
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutinglanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutinglanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null);
+        }
+
+        
+        /// <summary>
+        /// Remove routing language from user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns>Task of void</returns>
+        public async System.Threading.Tasks.Task DeleteUserRoutinglanguageAsync (string userId, string languageId)
+        {
+             await DeleteUserRoutinglanguageAsyncWithHttpInfo(userId, languageId);
+
+        }
+
+        /// <summary>
+        /// Remove routing language from user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <returns>Task of ApiResponse</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserRoutinglanguage");
+            
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->DeleteUserRoutinglanguage");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutinglanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserRoutinglanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             
             return new ApiResponse<Object>(localVarStatusCode,
@@ -5986,6 +6392,215 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// List routing language for user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>UserLanguageEntityListing</returns>
+        public UserLanguageEntityListing GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+             ApiResponse<UserLanguageEntityListing> localVarResponse = GetUserRoutinglanguagesWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// List routing language for user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>ApiResponse of UserLanguageEntityListing</returns>
+        public ApiResponse< UserLanguageEntityListing > GetUserRoutinglanguagesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutinglanguages");
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutinglanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutinglanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLanguageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserLanguageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLanguageEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// List routing language for user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>Task of UserLanguageEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserLanguageEntityListing> GetUserRoutinglanguagesAsync (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        {
+             ApiResponse<UserLanguageEntityListing> localVarResponse = await GetUserRoutinglanguagesAsyncWithHttpInfo(userId, pageSize, pageNumber, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// List routing language for user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
+        /// <returns>Task of ApiResponse (UserLanguageEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserLanguageEntityListing>> GetUserRoutinglanguagesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutinglanguages");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutinglanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserRoutinglanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserLanguageEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (UserLanguageEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserLanguageEntityListing)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// List routing skills for user 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -8658,6 +9273,231 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
+        /// Update routing language proficiency or state. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>UserRoutingLanguage</returns>
+        public UserRoutingLanguage PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
+        {
+             ApiResponse<UserRoutingLanguage> localVarResponse = PatchUserRoutinglanguageWithHttpInfo(userId, languageId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update routing language proficiency or state. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        public ApiResponse< UserRoutingLanguage > PatchUserRoutinglanguageWithHttpInfo (string userId, string languageId, UserRoutingLanguage body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserRoutinglanguage");
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->PatchUserRoutinglanguage");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutinglanguage");
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserRoutingLanguage>(localVarStatusCode,
+                localVarHeaders,
+                (UserRoutingLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingLanguage)));
+            
+        }
+
+        
+        /// <summary>
+        /// Update routing language proficiency or state. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of UserRoutingLanguage</returns>
+        public async System.Threading.Tasks.Task<UserRoutingLanguage> PatchUserRoutinglanguageAsync (string userId, string languageId, UserRoutingLanguage body)
+        {
+             ApiResponse<UserRoutingLanguage> localVarResponse = await PatchUserRoutinglanguageAsyncWithHttpInfo(userId, languageId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update routing language proficiency or state. 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="languageId">languageId</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PatchUserRoutinglanguageAsyncWithHttpInfo (string userId, string languageId, UserRoutingLanguage body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserRoutinglanguage");
+            
+            // verify the required parameter 'languageId' is set
+            if (languageId == null)
+                throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->PatchUserRoutinglanguage");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutinglanguage");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (languageId != null) localVarPathParams.Add("languageId", this.Configuration.ApiClient.ParameterToString(languageId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PATCH, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguage: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserRoutinglanguage: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserRoutingLanguage>(localVarStatusCode,
+                localVarHeaders,
+                (UserRoutingLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingLanguage)));
+            
+        }
+
+        
+        
+        /// <summary>
         /// Query for user aggregates 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -9655,6 +10495,218 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null);
+        }
+
+        
+        
+        /// <summary>
+        /// Add routing language to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>UserRoutingLanguage</returns>
+        public UserRoutingLanguage PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
+        {
+             ApiResponse<UserRoutingLanguage> localVarResponse = PostUserRoutinglanguagesWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add routing language to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>ApiResponse of UserRoutingLanguage</returns>
+        public ApiResponse< UserRoutingLanguage > PostUserRoutinglanguagesWithHttpInfo (string userId, UserRoutingLanguagePost body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserRoutinglanguages");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserRoutinglanguages");
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutinglanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutinglanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserRoutingLanguage>(localVarStatusCode,
+                localVarHeaders,
+                (UserRoutingLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingLanguage)));
+            
+        }
+
+        
+        /// <summary>
+        /// Add routing language to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of UserRoutingLanguage</returns>
+        public async System.Threading.Tasks.Task<UserRoutingLanguage> PostUserRoutinglanguagesAsync (string userId, UserRoutingLanguagePost body)
+        {
+             ApiResponse<UserRoutingLanguage> localVarResponse = await PostUserRoutinglanguagesAsyncWithHttpInfo(userId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add routing language to user 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">User ID</param>
+        /// <param name="body">Language</param>
+        /// <returns>Task of ApiResponse (UserRoutingLanguage)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserRoutingLanguage>> PostUserRoutinglanguagesAsyncWithHttpInfo (string userId, UserRoutingLanguagePost body)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserRoutinglanguages");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserRoutinglanguages");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+            
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutinglanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUserRoutinglanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserRoutingLanguage>(localVarStatusCode,
+                localVarHeaders,
+                (UserRoutingLanguage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserRoutingLanguage)));
+            
         }
 
         

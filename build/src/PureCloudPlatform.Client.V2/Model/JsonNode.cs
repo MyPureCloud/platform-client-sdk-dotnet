@@ -226,10 +226,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="FloatingPointNumber">FloatingPointNumber.</param>
-        
-        
-        
         /// <param name="ContainerNode">ContainerNode.</param>
         
         
@@ -243,6 +239,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="IntegralNumber">IntegralNumber.</param>
+        
+        
+        
+        /// <param name="FloatingPointNumber">FloatingPointNumber.</param>
         
         
         
@@ -289,7 +289,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="_Null">_Null.</param>
         
         
-        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? FloatingPointNumber = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? ValueNode = null, bool? Array = null, bool? _Null = null)
+        public JsonNode(NodeTypeEnum? NodeType = null, bool? _Object = null, bool? Boolean = null, bool? Number = null, bool? _Float = null, bool? ContainerNode = null, bool? MissingNode = null, bool? Pojo = null, bool? IntegralNumber = null, bool? FloatingPointNumber = null, bool? _Short = null, bool? _Int = null, bool? _Long = null, bool? _Double = null, bool? BigDecimal = null, bool? BigInteger = null, bool? Textual = null, bool? Binary = null, bool? ValueNode = null, bool? Array = null, bool? _Null = null)
         {
             
             
@@ -426,15 +426,6 @@ this._Float = _Float;
             
             
             
-this.FloatingPointNumber = FloatingPointNumber;
-            
-            
-            
-            
-            
-            
-            
-            
 this.ContainerNode = ContainerNode;
             
             
@@ -463,6 +454,15 @@ this.Pojo = Pojo;
             
             
 this.IntegralNumber = IntegralNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.FloatingPointNumber = FloatingPointNumber;
             
             
             
@@ -605,14 +605,6 @@ this._Null = _Null;
         
         
         /// <summary>
-        /// Gets or Sets FloatingPointNumber
-        /// </summary>
-        [DataMember(Name="floatingPointNumber", EmitDefaultValue=false)]
-        public bool? FloatingPointNumber { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets ContainerNode
         /// </summary>
         [DataMember(Name="containerNode", EmitDefaultValue=false)]
@@ -641,6 +633,14 @@ this._Null = _Null;
         /// </summary>
         [DataMember(Name="integralNumber", EmitDefaultValue=false)]
         public bool? IntegralNumber { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FloatingPointNumber
+        /// </summary>
+        [DataMember(Name="floatingPointNumber", EmitDefaultValue=false)]
+        public bool? FloatingPointNumber { get; set; }
         
         
         
@@ -750,8 +750,6 @@ this._Null = _Null;
             
             sb.Append("  _Float: ").Append(_Float).Append("\n");
             
-            sb.Append("  FloatingPointNumber: ").Append(FloatingPointNumber).Append("\n");
-            
             sb.Append("  ContainerNode: ").Append(ContainerNode).Append("\n");
             
             sb.Append("  MissingNode: ").Append(MissingNode).Append("\n");
@@ -759,6 +757,8 @@ this._Null = _Null;
             sb.Append("  Pojo: ").Append(Pojo).Append("\n");
             
             sb.Append("  IntegralNumber: ").Append(IntegralNumber).Append("\n");
+            
+            sb.Append("  FloatingPointNumber: ").Append(FloatingPointNumber).Append("\n");
             
             sb.Append("  _Short: ").Append(_Short).Append("\n");
             
@@ -844,11 +844,6 @@ this._Null = _Null;
                     this._Float.Equals(other._Float)
                 ) &&
                 (
-                    this.FloatingPointNumber == other.FloatingPointNumber ||
-                    this.FloatingPointNumber != null &&
-                    this.FloatingPointNumber.Equals(other.FloatingPointNumber)
-                ) &&
-                (
                     this.ContainerNode == other.ContainerNode ||
                     this.ContainerNode != null &&
                     this.ContainerNode.Equals(other.ContainerNode)
@@ -867,6 +862,11 @@ this._Null = _Null;
                     this.IntegralNumber == other.IntegralNumber ||
                     this.IntegralNumber != null &&
                     this.IntegralNumber.Equals(other.IntegralNumber)
+                ) &&
+                (
+                    this.FloatingPointNumber == other.FloatingPointNumber ||
+                    this.FloatingPointNumber != null &&
+                    this.FloatingPointNumber.Equals(other.FloatingPointNumber)
                 ) &&
                 (
                     this._Short == other._Short ||
@@ -952,9 +952,6 @@ this._Null = _Null;
                 if (this._Float != null)
                     hash = hash * 59 + this._Float.GetHashCode();
                 
-                if (this.FloatingPointNumber != null)
-                    hash = hash * 59 + this.FloatingPointNumber.GetHashCode();
-                
                 if (this.ContainerNode != null)
                     hash = hash * 59 + this.ContainerNode.GetHashCode();
                 
@@ -966,6 +963,9 @@ this._Null = _Null;
                 
                 if (this.IntegralNumber != null)
                     hash = hash * 59 + this.IntegralNumber.GetHashCode();
+                
+                if (this.FloatingPointNumber != null)
+                    hash = hash * 59 + this.FloatingPointNumber.GetHashCode();
                 
                 if (this._Short != null)
                     hash = hash * 59 + this._Short.GetHashCode();
