@@ -34,11 +34,13 @@ title: VideoConversationNotificationVideoMediaParticipant
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
+| **FlaggedReason** | **string** |  | [optional] |
 | **AudioMuted** | **bool?** |  | [optional] |
 | **VideoMuted** | **bool?** |  | [optional] |
 | **SharingScreen** | **bool?** |  | [optional] |
 | **PeerCount** | **int?** |  | [optional] |
 | **Context** | **string** |  | [optional] |
+| **Msids** | **List&lt;string&gt;** |  | [optional] |
 {: class="table table-striped"}
 
 

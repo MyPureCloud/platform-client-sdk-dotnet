@@ -197,6 +197,18 @@ namespace PureCloudPlatform.Client.V2.Model
             ImportInvalidData,
             
             /// <summary>
+            /// Enum ImportColumnExceedsLengthLimit for "IMPORT_COLUMN_EXCEEDS_LENGTH_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_COLUMN_EXCEEDS_LENGTH_LIMIT")]
+            ImportColumnExceedsLengthLimit,
+            
+            /// <summary>
+            /// Enum ImportDatumExceedsLengthLimit for "IMPORT_DATUM_EXCEEDS_LENGTH_LIMIT"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_DATUM_EXCEEDS_LENGTH_LIMIT")]
+            ImportDatumExceedsLengthLimit,
+            
+            /// <summary>
             /// Enum ImportMissingCustomId for "IMPORT_MISSING_CUSTOM_ID"
             /// </summary>
             [EnumMember(Value = "IMPORT_MISSING_CUSTOM_ID")]
@@ -225,6 +237,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "IMPORT_FAILED_CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID")]
             ImportFailedContactZipCodeColumnValueInvalid,
+            
+            /// <summary>
+            /// Enum ImportTooManyColumns for "IMPORT_TOO_MANY_COLUMNS"
+            /// </summary>
+            [EnumMember(Value = "IMPORT_TOO_MANY_COLUMNS")]
+            ImportTooManyColumns,
             
             /// <summary>
             /// Enum OrganizationHasNoDomainSet for "ORGANIZATION_HAS_NO_DOMAIN_SET"

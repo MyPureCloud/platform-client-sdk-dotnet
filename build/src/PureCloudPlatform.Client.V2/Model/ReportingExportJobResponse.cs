@@ -103,9 +103,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
@@ -299,6 +296,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the export request
         /// </summary>
@@ -323,8 +323,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
@@ -340,6 +338,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The error message in case the export request failed</value>
         [DataMember(Name="exportErrorMessagesType", EmitDefaultValue=false)]
         public ExportErrorMessagesTypeEnum? ExportErrorMessagesType { get; set; }
+        
+        
         
         
         
@@ -388,10 +388,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DataColumns">The data columns included in the export (required).</param>
-        
-        
-        
         /// <param name="DownloadUrl">The url to download the request if it&#39;s status is completed.</param>
         
         
@@ -424,8 +420,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
         
-        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, List<DataColumn> DataColumns = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null)
+        
+        
+        
+        public ReportingExportJobResponse(string Name = null, StatusEnum? Status = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string DownloadUrl = null, ViewTypeEnum? ViewType = null, ExportErrorMessagesTypeEnum? ExportErrorMessagesType = null, string Period = null, ViewFilter Filter = null, bool? Read = null, DateTime? CreatedDateTime = null, DateTime? ModifiedDateTime = null, string Locale = null)
         {
             
             
@@ -477,20 +477,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
-            
-            // to ensure "DataColumns" is required (not null)
-            if (DataColumns == null)
-            {
-                throw new InvalidDataException("DataColumns is a required property for ReportingExportJobResponse and cannot be null");
-            }
-            else
-            {
-                this.DataColumns = DataColumns;
-            }
             
             
             
@@ -578,6 +564,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            // to ensure "Locale" is required (not null)
+            if (Locale == null)
+            {
+                throw new InvalidDataException("Locale is a required property for ReportingExportJobResponse and cannot be null");
+            }
+            else
+            {
+                this.Locale = Locale;
+            }
+            
+            
+            
+            
+            
             
             
             
@@ -615,10 +615,6 @@ this.Interval = Interval;
             
             
             
-            
-            
-            
-            
 this.DownloadUrl = DownloadUrl;
             
             
@@ -642,6 +638,10 @@ this.ExportErrorMessagesType = ExportErrorMessagesType;
             
             
 this.Period = Period;
+            
+            
+            
+            
             
             
             
@@ -708,15 +708,6 @@ this.Period = Period;
         
         
         /// <summary>
-        /// The data columns included in the export
-        /// </summary>
-        /// <value>The data columns included in the export</value>
-        [DataMember(Name="dataColumns", EmitDefaultValue=false)]
-        public List<DataColumn> DataColumns { get; set; }
-        
-        
-        
-        /// <summary>
         /// The url to download the request if it&#39;s status is completed
         /// </summary>
         /// <value>The url to download the request if it&#39;s status is completed</value>
@@ -775,6 +766,15 @@ this.Period = Period;
         
         
         /// <summary>
+        /// The locale use for localization of the exported data, i.e. en-us, es-mx  
+        /// </summary>
+        /// <value>The locale use for localization of the exported data, i.e. en-us, es-mx  </value>
+        [DataMember(Name="locale", EmitDefaultValue=false)]
+        public string Locale { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -803,8 +803,6 @@ this.Period = Period;
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             
-            sb.Append("  DataColumns: ").Append(DataColumns).Append("\n");
-            
             sb.Append("  DownloadUrl: ").Append(DownloadUrl).Append("\n");
             
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
@@ -820,6 +818,8 @@ this.Period = Period;
             sb.Append("  CreatedDateTime: ").Append(CreatedDateTime).Append("\n");
             
             sb.Append("  ModifiedDateTime: ").Append(ModifiedDateTime).Append("\n");
+            
+            sb.Append("  Locale: ").Append(Locale).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -890,11 +890,6 @@ this.Period = Period;
                     this.Interval.Equals(other.Interval)
                 ) &&
                 (
-                    this.DataColumns == other.DataColumns ||
-                    this.DataColumns != null &&
-                    this.DataColumns.SequenceEqual(other.DataColumns)
-                ) &&
-                (
                     this.DownloadUrl == other.DownloadUrl ||
                     this.DownloadUrl != null &&
                     this.DownloadUrl.Equals(other.DownloadUrl)
@@ -935,6 +930,11 @@ this.Period = Period;
                     this.ModifiedDateTime.Equals(other.ModifiedDateTime)
                 ) &&
                 (
+                    this.Locale == other.Locale ||
+                    this.Locale != null &&
+                    this.Locale.Equals(other.Locale)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -971,9 +971,6 @@ this.Period = Period;
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
                 
-                if (this.DataColumns != null)
-                    hash = hash * 59 + this.DataColumns.GetHashCode();
-                
                 if (this.DownloadUrl != null)
                     hash = hash * 59 + this.DownloadUrl.GetHashCode();
                 
@@ -997,6 +994,9 @@ this.Period = Period;
                 
                 if (this.ModifiedDateTime != null)
                     hash = hash * 59 + this.ModifiedDateTime.GetHashCode();
+                
+                if (this.Locale != null)
+                    hash = hash * 59 + this.Locale.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

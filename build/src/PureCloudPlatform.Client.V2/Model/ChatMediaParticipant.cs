@@ -308,6 +308,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -382,6 +407,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -496,11 +530,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
+        
+        
+        
         /// <param name="RoomId">The ID of the chat room..</param>
         
         
-        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, string RoomId = null)
+        public ChatMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, string RoomId = null)
         {
+            
+            
+            
+            
             
             
             
@@ -849,6 +891,15 @@ this.Peer = Peer;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.RoomId = RoomId;
             
             
@@ -1071,6 +1122,8 @@ this.RoomId = RoomId;
         
         
         
+        
+        
         /// <summary>
         /// The ID of the chat room.
         /// </summary>
@@ -1139,6 +1192,8 @@ this.RoomId = RoomId;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("  RoomId: ").Append(RoomId).Append("\n");
             
@@ -1309,6 +1364,11 @@ this.RoomId = RoomId;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.RoomId == other.RoomId ||
                     this.RoomId != null &&
                     this.RoomId.Equals(other.RoomId)
@@ -1404,6 +1464,9 @@ this.RoomId = RoomId;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 if (this.RoomId != null)
                     hash = hash * 59 + this.RoomId.GetHashCode();

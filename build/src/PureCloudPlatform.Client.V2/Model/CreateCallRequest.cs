@@ -65,6 +65,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateCallRequest" /> class.
@@ -72,6 +82,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="PhoneNumber">The phone number to dial..</param>
+        
+        
+        
+        /// <param name="CallerId">The caller id phone number for this outbound call..</param>
+        
+        
+        
+        /// <param name="CallerIdName">The caller id name for this outbound call..</param>
         
         
         
@@ -106,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Participants">The list of participants to call to create a new ad-hoc conference..</param>
         
         
-        public CreateCallRequest(string PhoneNumber = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null)
+        public CreateCallRequest(string PhoneNumber = null, string CallerId = null, string CallerIdName = null, string CallFromQueueId = null, string CallQueueId = null, string CallUserId = null, int? Priority = null, string LanguageId = null, List<string> RoutingSkillsIds = null, List<string> ConversationIds = null, List<Destination> Participants = null)
         {
             
             
@@ -150,7 +168,33 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
 this.PhoneNumber = PhoneNumber;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallerId = CallerId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.CallerIdName = CallerIdName;
             
             
             
@@ -241,6 +285,24 @@ this.Participants = Participants;
         
         
         /// <summary>
+        /// The caller id phone number for this outbound call.
+        /// </summary>
+        /// <value>The caller id phone number for this outbound call.</value>
+        [DataMember(Name="callerId", EmitDefaultValue=false)]
+        public string CallerId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The caller id name for this outbound call.
+        /// </summary>
+        /// <value>The caller id name for this outbound call.</value>
+        [DataMember(Name="callerIdName", EmitDefaultValue=false)]
+        public string CallerIdName { get; set; }
+        
+        
+        
+        /// <summary>
         /// The queue ID to call on behalf of.
         /// </summary>
         /// <value>The queue ID to call on behalf of.</value>
@@ -322,6 +384,10 @@ this.Participants = Participants;
             
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             
+            sb.Append("  CallerId: ").Append(CallerId).Append("\n");
+            
+            sb.Append("  CallerIdName: ").Append(CallerIdName).Append("\n");
+            
             sb.Append("  CallFromQueueId: ").Append(CallFromQueueId).Append("\n");
             
             sb.Append("  CallQueueId: ").Append(CallQueueId).Append("\n");
@@ -380,6 +446,16 @@ this.Participants = Participants;
                     this.PhoneNumber.Equals(other.PhoneNumber)
                 ) &&
                 (
+                    this.CallerId == other.CallerId ||
+                    this.CallerId != null &&
+                    this.CallerId.Equals(other.CallerId)
+                ) &&
+                (
+                    this.CallerIdName == other.CallerIdName ||
+                    this.CallerIdName != null &&
+                    this.CallerIdName.Equals(other.CallerIdName)
+                ) &&
+                (
                     this.CallFromQueueId == other.CallFromQueueId ||
                     this.CallFromQueueId != null &&
                     this.CallFromQueueId.Equals(other.CallFromQueueId)
@@ -435,6 +511,12 @@ this.Participants = Participants;
                 
                 if (this.PhoneNumber != null)
                     hash = hash * 59 + this.PhoneNumber.GetHashCode();
+                
+                if (this.CallerId != null)
+                    hash = hash * 59 + this.CallerId.GetHashCode();
+                
+                if (this.CallerIdName != null)
+                    hash = hash * 59 + this.CallerIdName.GetHashCode();
                 
                 if (this.CallFromQueueId != null)
                     hash = hash * 59 + this.CallFromQueueId.GetHashCode();

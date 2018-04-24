@@ -308,6 +308,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -336,7 +361,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "sms"
             /// </summary>
             [EnumMember(Value = "sms")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Twitter for "twitter"
+            /// </summary>
+            [EnumMember(Value = "twitter")]
+            Twitter,
+            
+            /// <summary>
+            /// Enum Facebook for "facebook"
+            /// </summary>
+            [EnumMember(Value = "facebook")]
+            Facebook,
+            
+            /// <summary>
+            /// Enum Line for "line"
+            /// </summary>
+            [EnumMember(Value = "line")]
+            Line
         }
         
         
@@ -419,6 +462,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -550,6 +602,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
+        
+        
+        
         /// <param name="ToAddress">Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended..</param>
         
         
@@ -573,8 +629,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecipientType">The type of the recipient. Eg: Provisioned phoneNumber is the recipient for sms message type..</param>
         
         
-        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        public MessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
+            
+            
+            
+            
             
             
             
@@ -943,6 +1003,15 @@ this.Peer = Peer;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.ToAddress = ToAddress;
             
             
@@ -1210,6 +1279,8 @@ this.RecipientType = RecipientType;
         
         
         
+        
+        
         /// <summary>
         /// Address for the participant on receiving side of the message conversation. If the address is a phone number, E.164 format is recommended.
         /// </summary>
@@ -1316,6 +1387,8 @@ this.RecipientType = RecipientType;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("  ToAddress: ").Append(ToAddress).Append("\n");
             
@@ -1496,6 +1569,11 @@ this.RecipientType = RecipientType;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.ToAddress == other.ToAddress ||
                     this.ToAddress != null &&
                     this.ToAddress.Equals(other.ToAddress)
@@ -1616,6 +1694,9 @@ this.RecipientType = RecipientType;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 if (this.ToAddress != null)
                     hash = hash * 59 + this.ToAddress.GetHashCode();

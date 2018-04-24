@@ -326,6 +326,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -409,6 +436,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -537,6 +574,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">FlaggedReason.</param>
+        
+        
+        
         /// <param name="AudioMuted">AudioMuted.</param>
         
         
@@ -556,8 +597,20 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Context">Context.</param>
         
         
-        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, VideoConversationNotificationUriReference ExternalContact = null, VideoConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null)
+        
+        /// <param name="Msids">Msids.</param>
+        
+        
+        public VideoConversationNotificationVideoMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, VideoConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, VideoConversationNotificationErrorInfo ErrorInfo = null, VideoConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, VideoConversationNotificationUriReference ExternalContact = null, VideoConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, int? PeerCount = null, string Context = null, List<string> Msids = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -935,6 +988,15 @@ this.ScreenRecordingState = ScreenRecordingState;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AudioMuted = AudioMuted;
             
             
@@ -972,6 +1034,15 @@ this.PeerCount = PeerCount;
             
             
 this.Context = Context;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Msids = Msids;
             
             
             
@@ -1178,6 +1249,8 @@ this.Context = Context;
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets AudioMuted
         /// </summary>
@@ -1215,6 +1288,14 @@ this.Context = Context;
         /// </summary>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public string Context { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Msids
+        /// </summary>
+        [DataMember(Name="msids", EmitDefaultValue=false)]
+        public List<string> Msids { get; set; }
         
         
         /// <summary>
@@ -1280,6 +1361,8 @@ this.Context = Context;
             
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
             
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
+            
             sb.Append("  AudioMuted: ").Append(AudioMuted).Append("\n");
             
             sb.Append("  VideoMuted: ").Append(VideoMuted).Append("\n");
@@ -1289,6 +1372,8 @@ this.Context = Context;
             sb.Append("  PeerCount: ").Append(PeerCount).Append("\n");
             
             sb.Append("  Context: ").Append(Context).Append("\n");
+            
+            sb.Append("  Msids: ").Append(Msids).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1462,6 +1547,11 @@ this.Context = Context;
                     this.ScreenRecordingState.Equals(other.ScreenRecordingState)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.AudioMuted == other.AudioMuted ||
                     this.AudioMuted != null &&
                     this.AudioMuted.Equals(other.AudioMuted)
@@ -1485,6 +1575,11 @@ this.Context = Context;
                     this.Context == other.Context ||
                     this.Context != null &&
                     this.Context.Equals(other.Context)
+                ) &&
+                (
+                    this.Msids == other.Msids ||
+                    this.Msids != null &&
+                    this.Msids.SequenceEqual(other.Msids)
                 );
         }
 
@@ -1581,6 +1676,9 @@ this.Context = Context;
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
                 
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
+                
                 if (this.AudioMuted != null)
                     hash = hash * 59 + this.AudioMuted.GetHashCode();
                 
@@ -1595,6 +1693,9 @@ this.Context = Context;
                 
                 if (this.Context != null)
                     hash = hash * 59 + this.Context.GetHashCode();
+                
+                if (this.Msids != null)
+                    hash = hash * 59 + this.Msids.GetHashCode();
                 
                 return hash;
             }

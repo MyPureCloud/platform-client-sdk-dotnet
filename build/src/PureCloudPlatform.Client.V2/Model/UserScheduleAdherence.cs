@@ -419,6 +419,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Activity for which the user is scheduled
         /// </summary>
@@ -480,6 +483,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleAdherence" /> class.
@@ -497,6 +502,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <param name="ManagementUnit">The management unit to which this user belongs.</param>
+        
+        
         
         
         
@@ -563,6 +570,8 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
 this.Name = Name;
             
             
@@ -582,6 +591,8 @@ this.User = User;
             
             
 this.ManagementUnit = ManagementUnit;
+            
+            
             
             
             
@@ -680,7 +691,16 @@ this.ManagementUnit = ManagementUnit;
         /// </summary>
         /// <value>Time when the user entered the current adherenceState in ISO-8601 format</value>
         [DataMember(Name="timeOfAdherenceChange", EmitDefaultValue=false)]
-        public string TimeOfAdherenceChange { get; private set; }
+        public DateTime? TimeOfAdherenceChange { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Time when presence was last updated.  Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Time when presence was last updated.  Used to calculate time in current status. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="presenceUpdateTime", EmitDefaultValue=false)]
+        public DateTime? PresenceUpdateTime { get; private set; }
         
         
         
@@ -726,6 +746,8 @@ this.ManagementUnit = ManagementUnit;
             sb.Append("  Impact: ").Append(Impact).Append("\n");
             
             sb.Append("  TimeOfAdherenceChange: ").Append(TimeOfAdherenceChange).Append("\n");
+            
+            sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -831,6 +853,11 @@ this.ManagementUnit = ManagementUnit;
                     this.TimeOfAdherenceChange.Equals(other.TimeOfAdherenceChange)
                 ) &&
                 (
+                    this.PresenceUpdateTime == other.PresenceUpdateTime ||
+                    this.PresenceUpdateTime != null &&
+                    this.PresenceUpdateTime.Equals(other.PresenceUpdateTime)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -887,6 +914,9 @@ this.ManagementUnit = ManagementUnit;
                 
                 if (this.TimeOfAdherenceChange != null)
                     hash = hash * 59 + this.TimeOfAdherenceChange.GetHashCode();
+                
+                if (this.PresenceUpdateTime != null)
+                    hash = hash * 59 + this.PresenceUpdateTime.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

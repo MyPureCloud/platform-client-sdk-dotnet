@@ -34,6 +34,7 @@ title: CallbackConversationNotificationCallbackMediaParticipant
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
+| **FlaggedReason** | **string** |  | [optional] |
 | **OutboundPreview** | [**ConversationNotificationDialerPreview**](ConversationNotificationDialerPreview.html) |  | [optional] |
 | **Voicemail** | [**ConversationNotificationVoicemail**](ConversationNotificationVoicemail.html) |  | [optional] |
 | **CallbackNumbers** | **List&lt;string&gt;** |  | [optional] |

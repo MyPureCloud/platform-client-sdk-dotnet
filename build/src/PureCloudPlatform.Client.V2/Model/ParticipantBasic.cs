@@ -226,6 +226,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -314,6 +339,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The current screen recording state for this participant.</value>
         [DataMember(Name="screenRecordingState", EmitDefaultValue=false)]
         public ScreenRecordingStateEnum? ScreenRecordingState { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
     
@@ -473,8 +507,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScreenRecordingState">The current screen recording state for this participant..</param>
         
         
-        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null)
+        
+        /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
+        
+        
+        public ParticipantBasic(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, string MonitoredParticipantId = null, Dictionary<string, string> Attributes = null, List<CallBasic> Calls = null, List<CallbackBasic> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null)
         {
+            
+            
+            
+            
             
             
             
@@ -971,6 +1013,15 @@ this.ScreenRecordingState = ScreenRecordingState;
             
             
             
+            
+            
+            
+            
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
         }
         
         
@@ -1292,6 +1343,8 @@ this.ScreenRecordingState = ScreenRecordingState;
         
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -1376,6 +1429,8 @@ this.ScreenRecordingState = ScreenRecordingState;
             sb.Append("  Evaluations: ").Append(Evaluations).Append("\n");
             
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1602,6 +1657,11 @@ this.ScreenRecordingState = ScreenRecordingState;
                     this.ScreenRecordingState == other.ScreenRecordingState ||
                     this.ScreenRecordingState != null &&
                     this.ScreenRecordingState.Equals(other.ScreenRecordingState)
+                ) &&
+                (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
                 );
         }
 
@@ -1730,6 +1790,9 @@ this.ScreenRecordingState = ScreenRecordingState;
                 
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 return hash;
             }

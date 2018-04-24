@@ -88,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IntradayDataGroupings">IntradayDataGroupings.</param>
         
         
-        public IntradayDataUpdateNotification(DateTime? StartDate = null, DateTime? EndDate = null, int? IntervalLengthMinutes = null, int? NumberOfIntervals = null, List<IntradayDataUpdateNotificationMetrics> Metrics = null, List<string> QueueIds = null, List<IntradayDataUpdateNotificationIntradayDataGroupings> IntradayDataGroupings = null)
+        public IntradayDataUpdateNotification(IntradayDataUpdateNotificationStartDate StartDate = null, IntradayDataUpdateNotificationDateTime EndDate = null, int? IntervalLengthMinutes = null, int? NumberOfIntervals = null, List<IntradayDataUpdateNotificationMetrics> Metrics = null, List<string> QueueIds = null, List<IntradayDataUpdateNotificationIntradayDataGroupings> IntradayDataGroupings = null)
         {
             
             
@@ -191,7 +191,7 @@ this.IntradayDataGroupings = IntradayDataGroupings;
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
-        public DateTime? StartDate { get; set; }
+        public IntradayDataUpdateNotificationStartDate StartDate { get; set; }
         
         
         
@@ -199,7 +199,7 @@ this.IntradayDataGroupings = IntradayDataGroupings;
         /// Gets or Sets EndDate
         /// </summary>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
-        public DateTime? EndDate { get; set; }
+        public IntradayDataUpdateNotificationDateTime EndDate { get; set; }
         
         
         

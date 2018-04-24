@@ -9,7 +9,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteAuthorizationRole**](AuthorizationApi.html#deleteauthorizationrole) | **DELETE** /api/v2/authorization/roles/{roleId} | Delete an organization role. |
 | [**DeleteUserRoles**](AuthorizationApi.html#deleteuserroles) | **DELETE** /api/v2/users/{userId}/roles | Removes all the roles from the user. |
-| [**GetAuthorizationDivisionsLimit**](AuthorizationApi.html#getauthorizationdivisionslimit) | **GET** /api/v2/authorization/divisions/limit | Returns the maximum allowed number of divisions. |
 | [**GetAuthorizationPermissions**](AuthorizationApi.html#getauthorizationpermissions) | **GET** /api/v2/authorization/permissions | Get all permissions. |
 | [**GetAuthorizationProducts**](AuthorizationApi.html#getauthorizationproducts) | **GET** /api/v2/authorization/products | Get the list of enabled products |
 | [**GetAuthorizationRole**](AuthorizationApi.html#getauthorizationrole) | **GET** /api/v2/authorization/roles/{roleId} | Get a single organization role. |
@@ -17,7 +16,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAuthorizationRoles**](AuthorizationApi.html#getauthorizationroles) | **GET** /api/v2/authorization/roles | Retrieve a list of all roles defined for the organization |
 | [**GetUserRoles**](AuthorizationApi.html#getuserroles) | **GET** /api/v2/users/{userId}/roles | Returns a listing of roles and permissions for a user. |
 | [**PatchAuthorizationRole**](AuthorizationApi.html#patchauthorizationrole) | **PATCH** /api/v2/authorization/roles/{roleId} | Patch Organization Role for needsUpdate Field |
-| [**PostAuthorizationDivisionObject**](AuthorizationApi.html#postauthorizationdivisionobject) | **POST** /api/v2/authorization/divisions/{divisionId}/objects/{objectType} | Set the division of a list of objects. The objects must all be of the same type: CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, QUEUE, USER |
 | [**PostAuthorizationRoleComparedefaultRightRoleId**](AuthorizationApi.html#postauthorizationrolecomparedefaultrightroleid) | **POST** /api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId} | Get an unsaved org role to default role comparison |
 | [**PostAuthorizationRoles**](AuthorizationApi.html#postauthorizationroles) | **POST** /api/v2/authorization/roles | Create an organization role. |
 | [**PostAuthorizationRolesDefault**](AuthorizationApi.html#postauthorizationrolesdefault) | **POST** /api/v2/authorization/roles/default | Restores all default roles |
@@ -153,61 +151,6 @@ namespace Example
 ### Return type
 
 void (empty response body)
-
-<a name="getauthorizationdivisionslimit"></a>
-
-## **int?** GetAuthorizationDivisionsLimit ()
-
-Returns the maximum allowed number of divisions.
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetAuthorizationDivisionsLimitExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new AuthorizationApi();
-            
-
-            try
-            {
-                
-                // Returns the maximum allowed number of divisions.
-                
-                int? result = apiInstance.GetAuthorizationDivisionsLimit();
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.GetAuthorizationDivisionsLimit: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-This endpoint does require any parameters.
-{: class="table table-striped"}
-
-### Return type
-
-**int?**
 
 <a name="getauthorizationpermissions"></a>
 
@@ -725,82 +668,6 @@ namespace Example
 ### Return type
 
 [**DomainOrganizationRole**](DomainOrganizationRole.html)
-
-<a name="postauthorizationdivisionobject"></a>
-
-## [**List&lt;AuthzTypedObject&gt;**](AuthzTypedObject.html) PostAuthorizationDivisionObject (string divisionId, string objectType, List<string> body)
-
-Set the division of a list of objects. The objects must all be of the same type: CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, QUEUE, USER
-
-
-
-### Example
-~~~csharp
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PostAuthorizationDivisionObjectExample
-    {
-        public void main()
-        {
-            
-            // Configure OAuth2 access token for authorization: PureCloud Auth
-            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
-            
-
-            var apiInstance = new AuthorizationApi();
-            
-            
-            var divisionId = divisionId_example;  // string | Division ID
-            
-            
-            
-            
-            var objectType = objectType_example;  // string | The type of the objects. Must be one of the valid object types
-            
-            
-            
-            
-            var body = ;  // List<string> | Object Id List
-            
-            
-            
-
-            try
-            {
-                
-                // Set the division of a list of objects. The objects must all be of the same type: CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, QUEUE, USER
-                
-                List&lt;AuthzTypedObject&gt; result = apiInstance.PostAuthorizationDivisionObject(divisionId, objectType, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling AuthorizationApi.PostAuthorizationDivisionObject: " + e.Message );
-            }
-        }
-    }
-}
-~~~
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **divisionId** | **string**| Division ID |  |
-| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, MANAGEMENTUNIT, FLOW, USER |
-| **body** | **List<string>**| Object Id List |  |
-{: class="table table-striped"}
-
-### Return type
-
-[**List<AuthzTypedObject>**](AuthzTypedObject.html)
 
 <a name="postauthorizationrolecomparedefaultrightroleid"></a>
 

@@ -80,11 +80,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="IssuerURI">IssuerURI.</param>
-        
-        
-        
         /// <param name="SsoTargetURI">SsoTargetURI.</param>
+        
+        
+        
+        /// <param name="IssuerURI">IssuerURI.</param>
         
         
         
@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public PingIdentity(string Name = null, string RelyingPartyIdentifier = null, string Certificate = null, string IssuerURI = null, string SsoTargetURI = null, bool? Disabled = null)
+        public PingIdentity(string Name = null, string RelyingPartyIdentifier = null, string Certificate = null, string SsoTargetURI = null, string IssuerURI = null, bool? Disabled = null)
         {
             
             
@@ -158,16 +158,16 @@ this.Certificate = Certificate;
             
             
             
-this.IssuerURI = IssuerURI;
-            
-            
-            
-            
-            
-            
-            
-            
 this.SsoTargetURI = SsoTargetURI;
+            
+            
+            
+            
+            
+            
+            
+            
+this.IssuerURI = IssuerURI;
             
             
             
@@ -221,18 +221,18 @@ this.Disabled = Disabled;
         
         
         /// <summary>
-        /// Gets or Sets IssuerURI
-        /// </summary>
-        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
-        public string IssuerURI { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets SsoTargetURI
         /// </summary>
         [DataMember(Name="ssoTargetURI", EmitDefaultValue=false)]
         public string SsoTargetURI { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets IssuerURI
+        /// </summary>
+        [DataMember(Name="issuerURI", EmitDefaultValue=false)]
+        public string IssuerURI { get; set; }
         
         
         
@@ -269,9 +269,9 @@ this.Disabled = Disabled;
             
             sb.Append("  Certificate: ").Append(Certificate).Append("\n");
             
-            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
-            
             sb.Append("  SsoTargetURI: ").Append(SsoTargetURI).Append("\n");
+            
+            sb.Append("  IssuerURI: ").Append(IssuerURI).Append("\n");
             
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             
@@ -334,14 +334,14 @@ this.Disabled = Disabled;
                     this.Certificate.Equals(other.Certificate)
                 ) &&
                 (
-                    this.IssuerURI == other.IssuerURI ||
-                    this.IssuerURI != null &&
-                    this.IssuerURI.Equals(other.IssuerURI)
-                ) &&
-                (
                     this.SsoTargetURI == other.SsoTargetURI ||
                     this.SsoTargetURI != null &&
                     this.SsoTargetURI.Equals(other.SsoTargetURI)
+                ) &&
+                (
+                    this.IssuerURI == other.IssuerURI ||
+                    this.IssuerURI != null &&
+                    this.IssuerURI.Equals(other.IssuerURI)
                 ) &&
                 (
                     this.Disabled == other.Disabled ||
@@ -379,11 +379,11 @@ this.Disabled = Disabled;
                 if (this.Certificate != null)
                     hash = hash * 59 + this.Certificate.GetHashCode();
                 
-                if (this.IssuerURI != null)
-                    hash = hash * 59 + this.IssuerURI.GetHashCode();
-                
                 if (this.SsoTargetURI != null)
                     hash = hash * 59 + this.SsoTargetURI.GetHashCode();
+                
+                if (this.IssuerURI != null)
+                    hash = hash * 59 + this.IssuerURI.GetHashCode();
                 
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();

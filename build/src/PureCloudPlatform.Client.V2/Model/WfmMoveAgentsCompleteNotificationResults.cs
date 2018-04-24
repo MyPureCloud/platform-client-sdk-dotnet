@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Result">Result.</param>
         
         
-        public WfmMoveAgentsCompleteNotificationResults(WfmMoveAgentsCompleteNotificationUser User = null, ResultEnum? Result = null)
+        public WfmMoveAgentsCompleteNotificationResults(WfmMoveAgentsCompleteNotificationUserReference User = null, ResultEnum? Result = null)
         {
             
             
@@ -138,7 +138,7 @@ this.Result = Result;
         /// Gets or Sets User
         /// </summary>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public WfmMoveAgentsCompleteNotificationUser User { get; set; }
+        public WfmMoveAgentsCompleteNotificationUserReference User { get; set; }
         
         
         

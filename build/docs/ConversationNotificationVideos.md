@@ -20,6 +20,7 @@ title: ConversationNotificationVideos
 | **DisconnectType** | **string** |  | [optional] |
 | **ConnectedTime** | **DateTime?** |  | [optional] |
 | **DisconnectedTime** | **DateTime?** |  | [optional] |
+| **Msids** | **List&lt;string&gt;** |  | [optional] |
 | **AdditionalProperties** | **Object** |  | [optional] |
 {: class="table table-striped"}
 

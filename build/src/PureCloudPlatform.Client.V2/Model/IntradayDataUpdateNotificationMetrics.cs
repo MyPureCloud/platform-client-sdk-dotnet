@@ -35,40 +35,40 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum HistoricalQueueData for "HISTORICAL_QUEUE_DATA"
+            /// Enum Historicalqueuedata for "HistoricalQueueData"
             /// </summary>
-            [EnumMember(Value = "HISTORICAL_QUEUE_DATA")]
-            HistoricalQueueData,
+            [EnumMember(Value = "HistoricalQueueData")]
+            Historicalqueuedata,
             
             /// <summary>
-            /// Enum HistoricalAgentData for "HISTORICAL_AGENT_DATA"
+            /// Enum Historicalagentdata for "HistoricalAgentData"
             /// </summary>
-            [EnumMember(Value = "HISTORICAL_AGENT_DATA")]
-            HistoricalAgentData,
+            [EnumMember(Value = "HistoricalAgentData")]
+            Historicalagentdata,
             
             /// <summary>
-            /// Enum ForecastData for "FORECAST_DATA"
+            /// Enum Forecastdata for "ForecastData"
             /// </summary>
-            [EnumMember(Value = "FORECAST_DATA")]
-            ForecastData,
+            [EnumMember(Value = "ForecastData")]
+            Forecastdata,
             
             /// <summary>
-            /// Enum ScheduleData for "SCHEDULE_DATA"
+            /// Enum Scheduledata for "ScheduleData"
             /// </summary>
-            [EnumMember(Value = "SCHEDULE_DATA")]
-            ScheduleData,
+            [EnumMember(Value = "ScheduleData")]
+            Scheduledata,
             
             /// <summary>
-            /// Enum PerformancePredictionAgentData for "PERFORMANCE_PREDICTION_AGENT_DATA"
+            /// Enum Performancepredictionagentdata for "PerformancePredictionAgentData"
             /// </summary>
-            [EnumMember(Value = "PERFORMANCE_PREDICTION_AGENT_DATA")]
-            PerformancePredictionAgentData,
+            [EnumMember(Value = "PerformancePredictionAgentData")]
+            Performancepredictionagentdata,
             
             /// <summary>
-            /// Enum PerformancePredictionQueueData for "PERFORMANCE_PREDICTION_QUEUE_DATA"
+            /// Enum Performancepredictionqueuedata for "PerformancePredictionQueueData"
             /// </summary>
-            [EnumMember(Value = "PERFORMANCE_PREDICTION_QUEUE_DATA")]
-            PerformancePredictionQueueData
+            [EnumMember(Value = "PerformancePredictionQueueData")]
+            Performancepredictionqueuedata
         }
         
         

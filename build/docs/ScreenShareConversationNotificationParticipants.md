@@ -34,6 +34,7 @@ title: ScreenShareConversationNotificationParticipants
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
+| **FlaggedReason** | **string** |  | [optional] |
 | **Context** | **string** |  | [optional] |
 | **PeerCount** | **int?** |  | [optional] |
 | **Sharing** | **bool?** |  | [optional] |

@@ -35,33 +35,33 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Voice for "VOICE"
+            /// Enum Voice for "Voice"
             /// </summary>
-            [EnumMember(Value = "VOICE")]
+            [EnumMember(Value = "Voice")]
             Voice,
             
             /// <summary>
-            /// Enum Chat for "CHAT"
+            /// Enum Chat for "Chat"
             /// </summary>
-            [EnumMember(Value = "CHAT")]
+            [EnumMember(Value = "Chat")]
             Chat,
             
             /// <summary>
-            /// Enum Email for "EMAIL"
+            /// Enum Email for "Email"
             /// </summary>
-            [EnumMember(Value = "EMAIL")]
+            [EnumMember(Value = "Email")]
             Email,
             
             /// <summary>
-            /// Enum Callback for "CALLBACK"
+            /// Enum Callback for "Callback"
             /// </summary>
-            [EnumMember(Value = "CALLBACK")]
+            [EnumMember(Value = "Callback")]
             Callback,
             
             /// <summary>
-            /// Enum Message for "MESSAGE"
+            /// Enum Message for "Message"
             /// </summary>
-            [EnumMember(Value = "MESSAGE")]
+            [EnumMember(Value = "Message")]
             Message
         }
         

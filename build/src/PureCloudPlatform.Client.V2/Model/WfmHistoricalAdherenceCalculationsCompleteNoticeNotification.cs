@@ -41,22 +41,22 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Complete for "COMPLETE"
+            /// Enum Processing for "Processing"
             /// </summary>
-            [EnumMember(Value = "COMPLETE")]
+            [EnumMember(Value = "Processing")]
+            Processing,
+            
+            /// <summary>
+            /// Enum Complete for "Complete"
+            /// </summary>
+            [EnumMember(Value = "Complete")]
             Complete,
             
             /// <summary>
-            /// Enum Error for "ERROR"
+            /// Enum Error for "Error"
             /// </summary>
-            [EnumMember(Value = "ERROR")]
-            Error,
-            
-            /// <summary>
-            /// Enum Processing for "PROCESSING"
-            /// </summary>
-            [EnumMember(Value = "PROCESSING")]
-            Processing
+            [EnumMember(Value = "Error")]
+            Error
         }
         
         

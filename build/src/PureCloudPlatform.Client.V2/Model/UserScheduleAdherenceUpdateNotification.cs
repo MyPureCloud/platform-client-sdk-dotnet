@@ -98,6 +98,54 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets AdherenceState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AdherenceStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inadherence for "InAdherence"
+            /// </summary>
+            [EnumMember(Value = "InAdherence")]
+            Inadherence,
+            
+            /// <summary>
+            /// Enum Outofadherence for "OutOfAdherence"
+            /// </summary>
+            [EnumMember(Value = "OutOfAdherence")]
+            Outofadherence,
+            
+            /// <summary>
+            /// Enum Unscheduled for "Unscheduled"
+            /// </summary>
+            [EnumMember(Value = "Unscheduled")]
+            Unscheduled,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Ignored for "Ignored"
+            /// </summary>
+            [EnumMember(Value = "Ignored")]
+            Ignored
+        }
+        
+        
+        
+        
         
         
         
@@ -125,6 +173,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets AdherenceState
+        /// </summary>
+        [DataMember(Name="adherenceState", EmitDefaultValue=false)]
+        public AdherenceStateEnum? AdherenceState { get; set; }
         
         
         
@@ -178,8 +234,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdherenceChangeTime">AdherenceChangeTime.</param>
         
         
-        public UserScheduleAdherenceUpdateNotification(DocumentDataV2NotificationWorkspace User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, string AdherenceState = null, string Impact = null, string AdherenceChangeTime = null)
+        
+        /// <param name="PresenceUpdateTime">PresenceUpdateTime.</param>
+        
+        
+        public UserScheduleAdherenceUpdateNotification(DocumentDataV2NotificationWorkspace User = null, string ManagementUnitId = null, string ScheduledActivityCategory = null, string SystemPresence = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, IntradayDataUpdateNotificationStartDate AdherenceChangeTime = null, UserScheduleAdherenceUpdateNotificationDateTime PresenceUpdateTime = null)
         {
+            
+            
+            
+            
             
             
             
@@ -312,6 +376,15 @@ this.AdherenceChangeTime = AdherenceChangeTime;
             
             
             
+            
+            
+            
+            
+this.PresenceUpdateTime = PresenceUpdateTime;
+            
+            
+            
+            
         }
         
         
@@ -366,12 +439,6 @@ this.AdherenceChangeTime = AdherenceChangeTime;
         
         
         
-        /// <summary>
-        /// Gets or Sets AdherenceState
-        /// </summary>
-        [DataMember(Name="adherenceState", EmitDefaultValue=false)]
-        public string AdherenceState { get; set; }
-        
         
         
         /// <summary>
@@ -386,7 +453,15 @@ this.AdherenceChangeTime = AdherenceChangeTime;
         /// Gets or Sets AdherenceChangeTime
         /// </summary>
         [DataMember(Name="adherenceChangeTime", EmitDefaultValue=false)]
-        public string AdherenceChangeTime { get; set; }
+        public IntradayDataUpdateNotificationStartDate AdherenceChangeTime { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets PresenceUpdateTime
+        /// </summary>
+        [DataMember(Name="presenceUpdateTime", EmitDefaultValue=false)]
+        public UserScheduleAdherenceUpdateNotificationDateTime PresenceUpdateTime { get; set; }
         
         
         /// <summary>
@@ -417,6 +492,8 @@ this.AdherenceChangeTime = AdherenceChangeTime;
             sb.Append("  Impact: ").Append(Impact).Append("\n");
             
             sb.Append("  AdherenceChangeTime: ").Append(AdherenceChangeTime).Append("\n");
+            
+            sb.Append("  PresenceUpdateTime: ").Append(PresenceUpdateTime).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -503,6 +580,11 @@ this.AdherenceChangeTime = AdherenceChangeTime;
                     this.AdherenceChangeTime == other.AdherenceChangeTime ||
                     this.AdherenceChangeTime != null &&
                     this.AdherenceChangeTime.Equals(other.AdherenceChangeTime)
+                ) &&
+                (
+                    this.PresenceUpdateTime == other.PresenceUpdateTime ||
+                    this.PresenceUpdateTime != null &&
+                    this.PresenceUpdateTime.Equals(other.PresenceUpdateTime)
                 );
         }
 
@@ -547,6 +629,9 @@ this.AdherenceChangeTime = AdherenceChangeTime;
                 
                 if (this.AdherenceChangeTime != null)
                     hash = hash * 59 + this.AdherenceChangeTime.GetHashCode();
+                
+                if (this.PresenceUpdateTime != null)
+                    hash = hash * 59 + this.PresenceUpdateTime.GetHashCode();
                 
                 return hash;
             }

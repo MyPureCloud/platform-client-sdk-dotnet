@@ -34,6 +34,7 @@ title: SocialConversationNotificationParticipants
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **Peer** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
+| **FlaggedReason** | **string** |  | [optional] |
 | **SocialMediaId** | **string** |  | [optional] |
 | **SocialMediaHub** | **string** |  | [optional] |
 | **SocialUserName** | **string** |  | [optional] |

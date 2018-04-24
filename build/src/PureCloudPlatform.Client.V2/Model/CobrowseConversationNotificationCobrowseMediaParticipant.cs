@@ -326,6 +326,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -411,6 +435,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -537,6 +569,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">FlaggedReason.</param>
+        
+        
+        
         /// <param name="CobrowseSessionId">CobrowseSessionId.</param>
         
         
@@ -556,8 +592,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Controlling">Controlling.</param>
         
         
-        public CobrowseConversationNotificationCobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CobrowseConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CobrowseConversationNotificationErrorInfo ErrorInfo = null, CobrowseConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CobrowseConversationNotificationUriReference ExternalContact = null, CobrowseConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
+        public CobrowseConversationNotificationCobrowseMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CobrowseConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CobrowseConversationNotificationErrorInfo ErrorInfo = null, CobrowseConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CobrowseConversationNotificationUriReference ExternalContact = null, CobrowseConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, string CobrowseSessionId = null, string CobrowseRole = null, string ViewerUrl = null, DateTime? ProviderEventTime = null, List<string> Controlling = null)
         {
+            
+            
+            
+            
             
             
             
@@ -935,6 +975,15 @@ this.ScreenRecordingState = ScreenRecordingState;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.CobrowseSessionId = CobrowseSessionId;
             
             
@@ -1178,6 +1227,8 @@ this.Controlling = Controlling;
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets CobrowseSessionId
         /// </summary>
@@ -1279,6 +1330,8 @@ this.Controlling = Controlling;
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("  CobrowseSessionId: ").Append(CobrowseSessionId).Append("\n");
             
@@ -1462,6 +1515,11 @@ this.Controlling = Controlling;
                     this.ScreenRecordingState.Equals(other.ScreenRecordingState)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.CobrowseSessionId == other.CobrowseSessionId ||
                     this.CobrowseSessionId != null &&
                     this.CobrowseSessionId.Equals(other.CobrowseSessionId)
@@ -1580,6 +1638,9 @@ this.Controlling = Controlling;
                 
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 if (this.CobrowseSessionId != null)
                     hash = hash * 59 + this.CobrowseSessionId.GetHashCode();

@@ -237,6 +237,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets State
         /// </summary>
@@ -268,6 +271,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="disconnectType", EmitDefaultValue=false)]
         public DisconnectTypeEnum? DisconnectType { get; set; }
+        
+        
         
         
         
@@ -334,11 +339,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Msids">Msids.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public ConversationNotificationVideo(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, Object AdditionalProperties = null)
+        public ConversationNotificationVideo(StateEnum? State = null, ConversationNotificationAddress Self = null, string Id = null, string Context = null, bool? AudioMuted = null, bool? VideoMuted = null, bool? SharingScreen = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<string> Msids = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
             
             
             
@@ -518,6 +531,15 @@ this.DisconnectedTime = DisconnectedTime;
             
             
             
+this.Msids = Msids;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AdditionalProperties = AdditionalProperties;
             
             
@@ -620,6 +642,14 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         /// <summary>
+        /// Gets or Sets Msids
+        /// </summary>
+        [DataMember(Name="msids", EmitDefaultValue=false)]
+        public List<string> Msids { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -660,6 +690,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  ConnectedTime: ").Append(ConnectedTime).Append("\n");
             
             sb.Append("  DisconnectedTime: ").Append(DisconnectedTime).Append("\n");
+            
+            sb.Append("  Msids: ").Append(Msids).Append("\n");
             
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             
@@ -765,6 +797,11 @@ this.AdditionalProperties = AdditionalProperties;
                     this.DisconnectedTime.Equals(other.DisconnectedTime)
                 ) &&
                 (
+                    this.Msids == other.Msids ||
+                    this.Msids != null &&
+                    this.Msids.SequenceEqual(other.Msids)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -821,6 +858,9 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.DisconnectedTime != null)
                     hash = hash * 59 + this.DisconnectedTime.GetHashCode();
+                
+                if (this.Msids != null)
+                    hash = hash * 59 + this.Msids.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

@@ -308,6 +308,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -452,6 +477,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
+        
+        
+        
         
         
         
@@ -592,6 +626,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
+        
+        
+        
         /// <param name="Muted">Value is true when the call is muted..</param>
         
         
@@ -639,8 +677,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UuiData">User-to-User information which maps to a SIP header field defined in RFC7433. UUI data is used in the Public Switched Telephone Network (PSTN) for use cases described in RFC6567..</param>
         
         
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, UriReference User = null, UriReference Queue = null, Dictionary<string, string> Attributes = null, ErrorBody ErrorInfo = null, UriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, UriReference ExternalContact = null, UriReference ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, UriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, string UuiData = null)
         {
+            
+            
+            
+            
             
             
             
@@ -1033,6 +1075,15 @@ this.Peer = Peer;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Muted = Muted;
             
             
@@ -1354,6 +1405,8 @@ this.UuiData = UuiData;
         
         
         
+        
+        
         /// <summary>
         /// Value is true when the call is muted.
         /// </summary>
@@ -1514,6 +1567,8 @@ this.UuiData = UuiData;
             sb.Append("  Wrapup: ").Append(Wrapup).Append("\n");
             
             sb.Append("  Peer: ").Append(Peer).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             
@@ -1706,6 +1761,11 @@ this.UuiData = UuiData;
                     this.Peer.Equals(other.Peer)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
@@ -1856,6 +1916,9 @@ this.UuiData = UuiData;
                 
                 if (this.Peer != null)
                     hash = hash * 59 + this.Peer.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();

@@ -26,6 +26,7 @@ title: ConversationNotificationParticipants
 | **Wrapup** | [**ConversationNotificationWrapup**](ConversationNotificationWrapup.html) |  | [optional] |
 | **MonitoredParticipantId** | **string** |  | [optional] |
 | **ScreenRecordingState** | **string** |  | [optional] |
+| **FlaggedReason** | **string** |  | [optional] |
 | **Attributes** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 | **Calls** | [**List&lt;ConversationNotificationCalls&gt;**](ConversationNotificationCalls.html) |  | [optional] |
 | **Callbacks** | [**List&lt;ConversationNotificationCallbacks&gt;**](ConversationNotificationCallbacks.html) |  | [optional] |

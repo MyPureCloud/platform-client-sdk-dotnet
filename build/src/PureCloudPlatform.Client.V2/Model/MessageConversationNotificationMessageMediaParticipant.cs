@@ -326,6 +326,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -462,6 +486,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -589,6 +621,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">FlaggedReason.</param>
+        
+        
+        
         /// <param name="Messages">Messages.</param>
         
         
@@ -604,8 +640,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecipientType">RecipientType.</param>
         
         
-        public MessageConversationNotificationMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, MessageConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, MessageConversationNotificationErrorInfo ErrorInfo = null, MessageConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, MessageConversationNotificationUriReference ExternalContact = null, MessageConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, List<MessageConversationNotificationMessages> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
+        public MessageConversationNotificationMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, MessageConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, MessageConversationNotificationErrorInfo ErrorInfo = null, MessageConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, MessageConversationNotificationUriReference ExternalContact = null, MessageConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, List<MessageConversationNotificationMessages> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null)
         {
+            
+            
+            
+            
             
             
             
@@ -979,6 +1019,15 @@ this.ScreenRecordingState = ScreenRecordingState;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Messages = Messages;
             
             
@@ -1213,6 +1262,8 @@ this.RecipientType = RecipientType;
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Messages
         /// </summary>
@@ -1300,6 +1351,8 @@ this.RecipientType = RecipientType;
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("  Messages: ").Append(Messages).Append("\n");
             
@@ -1481,6 +1534,11 @@ this.RecipientType = RecipientType;
                     this.ScreenRecordingState.Equals(other.ScreenRecordingState)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.Messages == other.Messages ||
                     this.Messages != null &&
                     this.Messages.SequenceEqual(other.Messages)
@@ -1594,6 +1652,9 @@ this.RecipientType = RecipientType;
                 
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();

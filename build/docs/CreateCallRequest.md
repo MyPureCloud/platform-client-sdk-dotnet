@@ -8,6 +8,8 @@ title: CreateCallRequest
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **PhoneNumber** | **string** | The phone number to dial. | [optional] |
+| **CallerId** | **string** | The caller id phone number for this outbound call. | [optional] |
+| **CallerIdName** | **string** | The caller id name for this outbound call. | [optional] |
 | **CallFromQueueId** | **string** | The queue ID to call on behalf of. | [optional] |
 | **CallQueueId** | **string** | The queue ID to call. | [optional] |
 | **CallUserId** | **string** | The user ID to call. | [optional] |

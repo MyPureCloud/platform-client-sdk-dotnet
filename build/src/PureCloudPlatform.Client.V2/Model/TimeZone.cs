@@ -46,18 +46,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        
-        
-        /// <param name="Name">Name.</param>
-        
-        
-        
-        /// <param name="Offset">Offset.</param>
+        /// <param name="DisplayName">DisplayName.</param>
         
         
         
+        /// <param name="Id">Id.</param>
         
-        public TimeZone(string Name = null, long? Offset = null)
+        
+        
+        /// <param name="Dstsavings">Dstsavings.</param>
+        
+        
+        
+        /// <param name="RawOffset">RawOffset.</param>
+        
+        
+        public TimeZone(string DisplayName = null, string Id = null, int? Dstsavings = null, int? RawOffset = null)
         {
             
             
@@ -79,7 +83,9 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Name = Name;
+            
+            
+this.DisplayName = DisplayName;
             
             
             
@@ -88,9 +94,25 @@ this.Name = Name;
             
             
             
-this.Offset = Offset;
+this.Id = Id;
             
             
+            
+            
+            
+            
+            
+            
+this.Dstsavings = Dstsavings;
+            
+            
+            
+            
+            
+            
+            
+            
+this.RawOffset = RawOffset;
             
             
             
@@ -100,36 +122,34 @@ this.Offset = Offset;
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets DisplayName
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets Dstsavings
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        [DataMember(Name="dstsavings", EmitDefaultValue=false)]
+        public int? Dstsavings { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Offset
+        /// Gets or Sets RawOffset
         /// </summary>
-        [DataMember(Name="offset", EmitDefaultValue=false)]
-        public long? Offset { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        [DataMember(Name="rawOffset", EmitDefaultValue=false)]
+        public int? RawOffset { get; set; }
         
         
         /// <summary>
@@ -141,13 +161,13 @@ this.Offset = Offset;
             var sb = new StringBuilder();
             sb.Append("class TimeZone {\n");
             
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            
             sb.Append("  Id: ").Append(Id).Append("\n");
             
-            sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Dstsavings: ").Append(Dstsavings).Append("\n");
             
-            sb.Append("  Offset: ").Append(Offset).Append("\n");
-            
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  RawOffset: ").Append(RawOffset).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -186,24 +206,24 @@ this.Offset = Offset;
 
             return true &&
                 (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
+                    this.Dstsavings == other.Dstsavings ||
+                    this.Dstsavings != null &&
+                    this.Dstsavings.Equals(other.Dstsavings)
                 ) &&
                 (
-                    this.Offset == other.Offset ||
-                    this.Offset != null &&
-                    this.Offset.Equals(other.Offset)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
+                    this.RawOffset == other.RawOffset ||
+                    this.RawOffset != null &&
+                    this.RawOffset.Equals(other.RawOffset)
                 );
         }
 
@@ -219,17 +239,17 @@ this.Offset = Offset;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+                if (this.Dstsavings != null)
+                    hash = hash * 59 + this.Dstsavings.GetHashCode();
                 
-                if (this.Offset != null)
-                    hash = hash * 59 + this.Offset.GetHashCode();
-                
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+                if (this.RawOffset != null)
+                    hash = hash * 59 + this.RawOffset.GetHashCode();
                 
                 return hash;
             }

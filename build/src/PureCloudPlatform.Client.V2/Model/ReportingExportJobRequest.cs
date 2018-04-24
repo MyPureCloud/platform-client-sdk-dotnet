@@ -57,9 +57,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
@@ -168,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The requested format of the exported data
         /// </summary>
@@ -181,14 +181,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
         /// <summary>
         /// The type of view export job to be created
         /// </summary>
         /// <value>The type of view export job to be created</value>
         [DataMember(Name="viewType", EmitDefaultValue=false)]
         public ViewTypeEnum? ViewType { get; set; }
+        
+        
         
         
         
@@ -223,10 +223,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DataColumns">The data columns included in the export (required).</param>
-        
-        
-        
         /// <param name="Period">The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H.</param>
         
         
@@ -242,7 +238,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Read">Indicates if the request has been marked as read.</param>
         
         
-        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, List<DataColumn> DataColumns = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null)
+        
+        /// <param name="Locale">The locale use for localization of the exported data, i.e. en-us, es-mx   (required).</param>
+        
+        
+        public ReportingExportJobRequest(string Name = null, TimeZone TimeZone = null, ExportFormatEnum? ExportFormat = null, string Interval = null, string Period = null, ViewTypeEnum? ViewType = null, ViewFilter Filter = null, bool? Read = null, string Locale = null)
         {
             
             
@@ -293,20 +293,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "DataColumns" is required (not null)
-            if (DataColumns == null)
-            {
-                throw new InvalidDataException("DataColumns is a required property for ReportingExportJobRequest and cannot be null");
-            }
-            else
-            {
-                this.DataColumns = DataColumns;
-            }
-            
-            
-            
-            
-            
             
             
             
@@ -343,6 +329,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            // to ensure "Locale" is required (not null)
+            if (Locale == null)
+            {
+                throw new InvalidDataException("Locale is a required property for ReportingExportJobRequest and cannot be null");
+            }
+            else
+            {
+                this.Locale = Locale;
+            }
+            
+            
+            
+            
+            
             
             
             
@@ -359,10 +359,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
 this.Interval = Interval;
-            
-            
-            
-            
             
             
             
@@ -389,6 +385,10 @@ this.Period = Period;
             
             
 this.Read = Read;
+            
+            
+            
+            
             
             
             
@@ -427,15 +427,6 @@ this.Read = Read;
         
         
         /// <summary>
-        /// The data columns included in the export
-        /// </summary>
-        /// <value>The data columns included in the export</value>
-        [DataMember(Name="dataColumns", EmitDefaultValue=false)]
-        public List<DataColumn> DataColumns { get; set; }
-        
-        
-        
-        /// <summary>
         /// The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H
         /// </summary>
         /// <value>The Period of the request in which to break down the intervals. Periods are represented as an ISO-8601 string. For example: P1D or P1DT12H</value>
@@ -463,6 +454,15 @@ this.Read = Read;
         public bool? Read { get; set; }
         
         
+        
+        /// <summary>
+        /// The locale use for localization of the exported data, i.e. en-us, es-mx  
+        /// </summary>
+        /// <value>The locale use for localization of the exported data, i.e. en-us, es-mx  </value>
+        [DataMember(Name="locale", EmitDefaultValue=false)]
+        public string Locale { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -480,8 +480,6 @@ this.Read = Read;
             
             sb.Append("  Interval: ").Append(Interval).Append("\n");
             
-            sb.Append("  DataColumns: ").Append(DataColumns).Append("\n");
-            
             sb.Append("  Period: ").Append(Period).Append("\n");
             
             sb.Append("  ViewType: ").Append(ViewType).Append("\n");
@@ -489,6 +487,8 @@ this.Read = Read;
             sb.Append("  Filter: ").Append(Filter).Append("\n");
             
             sb.Append("  Read: ").Append(Read).Append("\n");
+            
+            sb.Append("  Locale: ").Append(Locale).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -547,11 +547,6 @@ this.Read = Read;
                     this.Interval.Equals(other.Interval)
                 ) &&
                 (
-                    this.DataColumns == other.DataColumns ||
-                    this.DataColumns != null &&
-                    this.DataColumns.SequenceEqual(other.DataColumns)
-                ) &&
-                (
                     this.Period == other.Period ||
                     this.Period != null &&
                     this.Period.Equals(other.Period)
@@ -570,6 +565,11 @@ this.Read = Read;
                     this.Read == other.Read ||
                     this.Read != null &&
                     this.Read.Equals(other.Read)
+                ) &&
+                (
+                    this.Locale == other.Locale ||
+                    this.Locale != null &&
+                    this.Locale.Equals(other.Locale)
                 );
         }
 
@@ -597,9 +597,6 @@ this.Read = Read;
                 if (this.Interval != null)
                     hash = hash * 59 + this.Interval.GetHashCode();
                 
-                if (this.DataColumns != null)
-                    hash = hash * 59 + this.DataColumns.GetHashCode();
-                
                 if (this.Period != null)
                     hash = hash * 59 + this.Period.GetHashCode();
                 
@@ -611,6 +608,9 @@ this.Read = Read;
                 
                 if (this.Read != null)
                     hash = hash * 59 + this.Read.GetHashCode();
+                
+                if (this.Locale != null)
+                    hash = hash * 59 + this.Locale.GetHashCode();
                 
                 return hash;
             }

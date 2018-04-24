@@ -170,6 +170,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Queue,
             
             /// <summary>
+            /// Enum Recordingpolicy for "RECORDINGPOLICY"
+            /// </summary>
+            [EnumMember(Value = "RECORDINGPOLICY")]
+            Recordingpolicy,
+            
+            /// <summary>
             /// Enum Response for "RESPONSE"
             /// </summary>
             [EnumMember(Value = "RESPONSE")]

@@ -326,6 +326,30 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -462,6 +486,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets FlaggedReason
+        /// </summary>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
         
@@ -606,6 +638,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="FlaggedReason">FlaggedReason.</param>
+        
+        
+        
         /// <param name="Muted">Muted.</param>
         
         
@@ -649,8 +685,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FaxStatus">FaxStatus.</param>
         
         
-        public CallConversationNotificationCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
+        public CallConversationNotificationCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, DocumentDataV2NotificationCreatedBy User = null, CallConversationNotificationUriReference Queue = null, Dictionary<string, string> Attributes = null, CallConversationNotificationErrorInfo ErrorInfo = null, CallConversationNotificationUriReference Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, string Provider = null, CallConversationNotificationUriReference ExternalContact = null, CallConversationNotificationUriReference ExternalOrganization = null, ConversationNotificationWrapup Wrapup = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, CallConversationNotificationUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string ConsultParticipantId = null, CallConversationNotificationFaxStatus FaxStatus = null)
         {
+            
+            
+            
+            
             
             
             
@@ -1052,6 +1092,15 @@ this.ScreenRecordingState = ScreenRecordingState;
             
             
             
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Muted = Muted;
             
             
@@ -1349,6 +1398,8 @@ this.FaxStatus = FaxStatus;
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Muted
         /// </summary>
@@ -1492,6 +1543,8 @@ this.FaxStatus = FaxStatus;
             sb.Append("  Peer: ").Append(Peer).Append("\n");
             
             sb.Append("  ScreenRecordingState: ").Append(ScreenRecordingState).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("  Muted: ").Append(Muted).Append("\n");
             
@@ -1687,6 +1740,11 @@ this.FaxStatus = FaxStatus;
                     this.ScreenRecordingState.Equals(other.ScreenRecordingState)
                 ) &&
                 (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
+                ) &&
+                (
                     this.Muted == other.Muted ||
                     this.Muted != null &&
                     this.Muted.Equals(other.Muted)
@@ -1835,6 +1893,9 @@ this.FaxStatus = FaxStatus;
                 
                 if (this.ScreenRecordingState != null)
                     hash = hash * 59 + this.ScreenRecordingState.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 if (this.Muted != null)
                     hash = hash * 59 + this.Muted.GetHashCode();

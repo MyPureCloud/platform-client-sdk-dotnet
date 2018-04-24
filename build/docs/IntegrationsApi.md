@@ -7,8 +7,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteIntegration**](IntegrationsApi.html#deleteintegration) | **DELETE** /api/v2/integrations/{integrationId} | Delete integration. |
 | [**DeleteIntegrationsAction**](IntegrationsApi.html#deleteintegrationsaction) | **DELETE** /api/v2/integrations/actions/{actionId} | Delete an Action |
 | [**DeleteIntegrationsActionDraft**](IntegrationsApi.html#deleteintegrationsactiondraft) | **DELETE** /api/v2/integrations/actions/{actionId}/draft | Delete a Draft |
+| [**DeleteIntegrationsCredential**](IntegrationsApi.html#deleteintegrationscredential) | **DELETE** /api/v2/integrations/credentials/{credentialId} | Delete a set of credentials |
+| [**GetIntegration**](IntegrationsApi.html#getintegration) | **GET** /api/v2/integrations/{integrationId} | Get integration. |
+| [**GetIntegrationConfigCurrent**](IntegrationsApi.html#getintegrationconfigcurrent) | **GET** /api/v2/integrations/{integrationId}/config/current | Get integration configuration. |
+| [**GetIntegrations**](IntegrationsApi.html#getintegrations) | **GET** /api/v2/integrations | List integrations |
 | [**GetIntegrationsAction**](IntegrationsApi.html#getintegrationsaction) | **GET** /api/v2/integrations/actions/{actionId} | Retrieves a single Action matching id. |
 | [**GetIntegrationsActionDraft**](IntegrationsApi.html#getintegrationsactiondraft) | **GET** /api/v2/integrations/actions/{actionId}/draft | Retrieve a Draft |
 | [**GetIntegrationsActionDraftSchema**](IntegrationsApi.html#getintegrationsactiondraftschema) | **GET** /api/v2/integrations/actions/{actionId}/draft/schemas/{fileName} | Retrieve schema for a Draft based on filename. |
@@ -19,8 +24,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetIntegrationsActions**](IntegrationsApi.html#getintegrationsactions) | **GET** /api/v2/integrations/actions | Retrieves all actions associated with filters passed in via query param. |
 | [**GetIntegrationsActionsCategories**](IntegrationsApi.html#getintegrationsactionscategories) | **GET** /api/v2/integrations/actions/categories | Retrieves all categories of available Actions |
 | [**GetIntegrationsActionsDrafts**](IntegrationsApi.html#getintegrationsactionsdrafts) | **GET** /api/v2/integrations/actions/drafts | Retrieves all action drafts associated with the filters passed in via query param. |
+| [**GetIntegrationsClientapps**](IntegrationsApi.html#getintegrationsclientapps) | **GET** /api/v2/integrations/clientapps | List permitted client app integrations for the logged in user |
+| [**GetIntegrationsCredential**](IntegrationsApi.html#getintegrationscredential) | **GET** /api/v2/integrations/credentials/{credentialId} | Get a single credential with sensitive fields redacted |
+| [**GetIntegrationsCredentials**](IntegrationsApi.html#getintegrationscredentials) | **GET** /api/v2/integrations/credentials | List multiple sets of credentials |
+| [**GetIntegrationsCredentialsTypes**](IntegrationsApi.html#getintegrationscredentialstypes) | **GET** /api/v2/integrations/credentials/types | List all credential types |
+| [**GetIntegrationsEventlog**](IntegrationsApi.html#getintegrationseventlog) | **GET** /api/v2/integrations/eventlog | List all events |
+| [**GetIntegrationsEventlogEventId**](IntegrationsApi.html#getintegrationseventlogeventid) | **GET** /api/v2/integrations/eventlog/{eventId} | Get a single event |
+| [**GetIntegrationsType**](IntegrationsApi.html#getintegrationstype) | **GET** /api/v2/integrations/types/{typeId} | Get integration type. |
+| [**GetIntegrationsTypeConfigschema**](IntegrationsApi.html#getintegrationstypeconfigschema) | **GET** /api/v2/integrations/types/{typeId}/configschemas/{configType} | Get properties config schema for an integration type. |
+| [**GetIntegrationsTypes**](IntegrationsApi.html#getintegrationstypes) | **GET** /api/v2/integrations/types | List integration types |
+| [**PatchIntegration**](IntegrationsApi.html#patchintegration) | **PATCH** /api/v2/integrations/{integrationId} | Update an integration. |
 | [**PatchIntegrationsAction**](IntegrationsApi.html#patchintegrationsaction) | **PATCH** /api/v2/integrations/actions/{actionId} | Patch an Action |
 | [**PatchIntegrationsActionDraft**](IntegrationsApi.html#patchintegrationsactiondraft) | **PATCH** /api/v2/integrations/actions/{actionId}/draft | Update an existing Draft |
+| [**PostIntegrations**](IntegrationsApi.html#postintegrations) | **POST** /api/v2/integrations | Create an integration. |
 | [**PostIntegrationsActionDraft**](IntegrationsApi.html#postintegrationsactiondraft) | **POST** /api/v2/integrations/actions/{actionId}/draft | Create a new Draft from existing Action |
 | [**PostIntegrationsActionDraftPublish**](IntegrationsApi.html#postintegrationsactiondraftpublish) | **POST** /api/v2/integrations/actions/{actionId}/draft/publish | Publish a Draft and make it the active Action configuration |
 | [**PostIntegrationsActionDraftTest**](IntegrationsApi.html#postintegrationsactiondrafttest) | **POST** /api/v2/integrations/actions/{actionId}/draft/test | Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging. |
@@ -28,7 +44,75 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostIntegrationsActionTest**](IntegrationsApi.html#postintegrationsactiontest) | **POST** /api/v2/integrations/actions/{actionId}/test | Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging. |
 | [**PostIntegrationsActions**](IntegrationsApi.html#postintegrationsactions) | **POST** /api/v2/integrations/actions | Create a new Action |
 | [**PostIntegrationsActionsDrafts**](IntegrationsApi.html#postintegrationsactionsdrafts) | **POST** /api/v2/integrations/actions/drafts | Create a new Draft |
+| [**PostIntegrationsCredentials**](IntegrationsApi.html#postintegrationscredentials) | **POST** /api/v2/integrations/credentials | Create a set of credentials |
+| [**PostIntegrationsWorkforcemanagementVendorconnection**](IntegrationsApi.html#postintegrationsworkforcemanagementvendorconnection) | **POST** /api/v2/integrations/workforcemanagement/vendorconnection | Add a vendor connection |
+| [**PutIntegrationConfigCurrent**](IntegrationsApi.html#putintegrationconfigcurrent) | **PUT** /api/v2/integrations/{integrationId}/config/current | Update integration configuration. |
+| [**PutIntegrationsCredential**](IntegrationsApi.html#putintegrationscredential) | **PUT** /api/v2/integrations/credentials/{credentialId} | Update a set of credentials |
 {: class="table table-striped"}
+
+<a name="deleteintegration"></a>
+
+## [**Integration**](Integration.html) DeleteIntegration (string integrationId)
+
+Delete integration.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteIntegrationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var integrationId = integrationId_example;  // string | Integration Id
+            
+            
+            
+
+            try
+            {
+                
+                // Delete integration.
+                
+                Integration result = apiInstance.DeleteIntegration(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.DeleteIntegration: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Integration**](Integration.html)
 
 <a name="deleteintegrationsaction"></a>
 
@@ -155,6 +239,327 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+<a name="deleteintegrationscredential"></a>
+
+## void DeleteIntegrationsCredential (string credentialId)
+
+Delete a set of credentials
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteIntegrationsCredentialExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var credentialId = credentialId_example;  // string | Credential ID
+            
+            
+            
+
+            try
+            {
+                
+                // Delete a set of credentials
+                
+                apiInstance.DeleteIntegrationsCredential(credentialId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.DeleteIntegrationsCredential: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **credentialId** | **string**| Credential ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+void (empty response body)
+
+<a name="getintegration"></a>
+
+## [**Integration**](Integration.html) GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+
+Get integration.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var integrationId = integrationId_example;  // string | Integration Id
+            
+            
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
+            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Get integration.
+                
+                Integration result = apiInstance.GetIntegration(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegration: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration Id |  |
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Integration**](Integration.html)
+
+<a name="getintegrationconfigcurrent"></a>
+
+## [**IntegrationConfiguration**](IntegrationConfiguration.html) GetIntegrationConfigCurrent (string integrationId)
+
+Get integration configuration.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationConfigCurrentExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var integrationId = integrationId_example;  // string | Integration Id
+            
+            
+            
+
+            try
+            {
+                
+                // Get integration configuration.
+                
+                IntegrationConfiguration result = apiInstance.GetIntegrationConfigCurrent(integrationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationConfigCurrent: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IntegrationConfiguration**](IntegrationConfiguration.html)
+
+<a name="getintegrations"></a>
+
+## [**IntegrationEntityListing**](IntegrationEntityListing.html) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+
+List integrations
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
+            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // List integrations
+                
+                IntegrationEntityListing result = apiInstance.GetIntegrations(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IntegrationEntityListing**](IntegrationEntityListing.html)
 
 <a name="getintegrationsaction"></a>
 
@@ -976,6 +1381,775 @@ namespace Example
 
 [**ActionEntityListing**](ActionEntityListing.html)
 
+<a name="getintegrationsclientapps"></a>
+
+## [**ClientAppEntityListing**](ClientAppEntityListing.html) GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+
+List permitted client app integrations for the logged in user
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsClientappsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
+            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // List permitted client app integrations for the logged in user
+                
+                ClientAppEntityListing result = apiInstance.GetIntegrationsClientapps(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsClientapps: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**ClientAppEntityListing**](ClientAppEntityListing.html)
+
+<a name="getintegrationscredential"></a>
+
+## [**Credential**](Credential.html) GetIntegrationsCredential (string credentialId)
+
+Get a single credential with sensitive fields redacted
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsCredentialExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var credentialId = credentialId_example;  // string | Credential ID
+            
+            
+            
+
+            try
+            {
+                
+                // Get a single credential with sensitive fields redacted
+                
+                Credential result = apiInstance.GetIntegrationsCredential(credentialId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsCredential: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **credentialId** | **string**| Credential ID |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Credential**](Credential.html)
+
+<a name="getintegrationscredentials"></a>
+
+## [**CredentialInfoListing**](CredentialInfoListing.html) GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
+
+List multiple sets of credentials
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsCredentialsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+
+            try
+            {
+                
+                // List multiple sets of credentials
+                
+                CredentialInfoListing result = apiInstance.GetIntegrationsCredentials(pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsCredentials: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+{: class="table table-striped"}
+
+### Return type
+
+[**CredentialInfoListing**](CredentialInfoListing.html)
+
+<a name="getintegrationscredentialstypes"></a>
+
+## [**CredentialTypeListing**](CredentialTypeListing.html) GetIntegrationsCredentialsTypes ()
+
+List all credential types
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsCredentialsTypesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+
+            try
+            {
+                
+                // List all credential types
+                
+                CredentialTypeListing result = apiInstance.GetIntegrationsCredentialsTypes();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsCredentialsTypes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+This endpoint does require any parameters.
+{: class="table table-striped"}
+
+### Return type
+
+[**CredentialTypeListing**](CredentialTypeListing.html)
+
+<a name="getintegrationseventlog"></a>
+
+## [**IntegrationEventEntityListing**](IntegrationEventEntityListing.html) GetIntegrationsEventlog (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string entityId = null)
+
+List all events
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsEventlogExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to timestamp)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Order by (optional)  (default to descending)
+            
+            
+            
+            
+            var entityId = entityId_example;  // string | Include only events with this entity ID (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // List all events
+                
+                IntegrationEventEntityListing result = apiInstance.GetIntegrationsEventlog(pageSize, pageNumber, sortBy, sortOrder, entityId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsEventlog: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to timestamp] |
+| **sortOrder** | **string**| Order by | [optional] [default to descending] |
+| **entityId** | **string**| Include only events with this entity ID | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IntegrationEventEntityListing**](IntegrationEventEntityListing.html)
+
+<a name="getintegrationseventlogeventid"></a>
+
+## [**IntegrationEvent**](IntegrationEvent.html) GetIntegrationsEventlogEventId (string eventId)
+
+Get a single event
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsEventlogEventIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var eventId = eventId_example;  // string | Event Id
+            
+            
+            
+
+            try
+            {
+                
+                // Get a single event
+                
+                IntegrationEvent result = apiInstance.GetIntegrationsEventlogEventId(eventId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsEventlogEventId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **eventId** | **string**| Event Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IntegrationEvent**](IntegrationEvent.html)
+
+<a name="getintegrationstype"></a>
+
+## [**IntegrationType**](IntegrationType.html) GetIntegrationsType (string typeId)
+
+Get integration type.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsTypeExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var typeId = typeId_example;  // string | Integration Type Id
+            
+            
+            
+
+            try
+            {
+                
+                // Get integration type.
+                
+                IntegrationType result = apiInstance.GetIntegrationsType(typeId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsType: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **typeId** | **string**| Integration Type Id |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IntegrationType**](IntegrationType.html)
+
+<a name="getintegrationstypeconfigschema"></a>
+
+## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsTypeConfigschema (string typeId, string configType)
+
+Get properties config schema for an integration type.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsTypeConfigschemaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var typeId = typeId_example;  // string | Integration Type Id
+            
+            
+            
+            
+            var configType = configType_example;  // string | Config schema type
+            
+            
+            
+
+            try
+            {
+                
+                // Get properties config schema for an integration type.
+                
+                JsonSchemaDocument result = apiInstance.GetIntegrationsTypeConfigschema(typeId, configType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsTypeConfigschema: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **typeId** | **string**| Integration Type Id |  |
+| **configType** | **string**| Config schema type | <br />**Values**: properties, advanced |
+{: class="table table-striped"}
+
+### Return type
+
+[**JsonSchemaDocument**](JsonSchemaDocument.html)
+
+<a name="getintegrationstypes"></a>
+
+## [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+
+List integration types
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetIntegrationsTypesExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
+            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // List integration types
+                
+                IntegrationTypeEntityListing result = apiInstance.GetIntegrationsTypes(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.GetIntegrationsTypes: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html)
+
+<a name="patchintegration"></a>
+
+## [**Integration**](Integration.html) PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+
+Update an integration.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchIntegrationExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var integrationId = integrationId_example;  // string | Integration Id
+            
+            
+            
+            
+            
+            var body = new Integration(); // Integration | Integration Update (optional) 
+            
+            
+            
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | variable name requested to sort by (optional) 
+            
+            
+            
+            
+            
+            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            
+            
+            
+            var nextPage = nextPage_example;  // string | next page token (optional) 
+            
+            
+            
+            
+            var previousPage = previousPage_example;  // string | Previous page token (optional) 
+            
+            
+            
+
+            try
+            {
+                
+                // Update an integration.
+                
+                Integration result = apiInstance.PatchIntegration(integrationId, body, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PatchIntegration: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration Id |  |
+| **body** | [**Integration**](Integration.html)| Integration Update | [optional]  |
+| **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
+| **sortBy** | **string**| variable name requested to sort by | [optional]  |
+| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **nextPage** | **string**| next page token | [optional]  |
+| **previousPage** | **string**| Previous page token | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Integration**](Integration.html)
+
 <a name="patchintegrationsaction"></a>
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PatchIntegrationsAction (string actionId, UpdateActionInput body)
@@ -1115,6 +2289,70 @@ namespace Example
 ### Return type
 
 [**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+
+<a name="postintegrations"></a>
+
+## [**Integration**](Integration.html) PostIntegrations (CreateIntegrationRequest body = null)
+
+Create an integration.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            
+            var body = new CreateIntegrationRequest(); // CreateIntegrationRequest | Integration (optional) 
+            
+            
+
+            try
+            {
+                
+                // Create an integration.
+                
+                Integration result = apiInstance.PostIntegrations(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrations: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateIntegrationRequest**](CreateIntegrationRequest.html)| Integration | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**Integration**](Integration.html)
 
 <a name="postintegrationsactiondraft"></a>
 
@@ -1587,4 +2825,272 @@ namespace Example
 ### Return type
 
 [**PureCloudPlatform.Client.V2.Model.Action**](Action.html)
+
+<a name="postintegrationscredentials"></a>
+
+## [**CredentialInfo**](CredentialInfo.html) PostIntegrationsCredentials (Credential body = null)
+
+Create a set of credentials
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsCredentialsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            
+            var body = new Credential(); // Credential | Credential (optional) 
+            
+            
+
+            try
+            {
+                
+                // Create a set of credentials
+                
+                CredentialInfo result = apiInstance.PostIntegrationsCredentials(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsCredentials: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**Credential**](Credential.html)| Credential | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CredentialInfo**](CredentialInfo.html)
+
+<a name="postintegrationsworkforcemanagementvendorconnection"></a>
+
+## [**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html) PostIntegrationsWorkforcemanagementVendorconnection (VendorConnectionRequest body = null)
+
+Add a vendor connection
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostIntegrationsWorkforcemanagementVendorconnectionExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            
+            var body = new VendorConnectionRequest(); // VendorConnectionRequest |  (optional) 
+            
+            
+
+            try
+            {
+                
+                // Add a vendor connection
+                
+                UserActionCategoryEntityListing result = apiInstance.PostIntegrationsWorkforcemanagementVendorconnection(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PostIntegrationsWorkforcemanagementVendorconnection: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**VendorConnectionRequest**](VendorConnectionRequest.html)|  | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html)
+
+<a name="putintegrationconfigcurrent"></a>
+
+## [**IntegrationConfiguration**](IntegrationConfiguration.html) PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
+
+Update integration configuration.
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIntegrationConfigCurrentExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var integrationId = integrationId_example;  // string | Integration Id
+            
+            
+            
+            
+            
+            var body = new IntegrationConfiguration(); // IntegrationConfiguration | Integration Configuration (optional) 
+            
+            
+
+            try
+            {
+                
+                // Update integration configuration.
+                
+                IntegrationConfiguration result = apiInstance.PutIntegrationConfigCurrent(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PutIntegrationConfigCurrent: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration Id |  |
+| **body** | [**IntegrationConfiguration**](IntegrationConfiguration.html)| Integration Configuration | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**IntegrationConfiguration**](IntegrationConfiguration.html)
+
+<a name="putintegrationscredential"></a>
+
+## [**CredentialInfo**](CredentialInfo.html) PutIntegrationsCredential (string credentialId, Credential body = null)
+
+Update a set of credentials
+
+
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutIntegrationsCredentialExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new IntegrationsApi();
+            
+            
+            var credentialId = credentialId_example;  // string | Credential ID
+            
+            
+            
+            
+            
+            var body = new Credential(); // Credential | Credential (optional) 
+            
+            
+
+            try
+            {
+                
+                // Update a set of credentials
+                
+                CredentialInfo result = apiInstance.PutIntegrationsCredential(credentialId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling IntegrationsApi.PutIntegrationsCredential: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **credentialId** | **string**| Credential ID |  |
+| **body** | [**Credential**](Credential.html)| Credential | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**CredentialInfo**](CredentialInfo.html)
 
