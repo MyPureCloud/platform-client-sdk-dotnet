@@ -61,19 +61,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="EndDate">End of the date range to query in ISO-8601 format (required).</param>
+        /// <param name="EndDate">End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time.</param>
         
         
         
-        /// <param name="TimeZone">The time zone to use for returned results in olson format (See https://www.ibm.com/developerworks/aix/library/au-aix-posix/).</param>
+        /// <param name="TimeZone">The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence.</param>
         
         
         
-        /// <param name="UserIds">The userIds to report on (required).</param>
+        /// <param name="UserIds">The userIds to report on. If it is not set, adherence will be computed for all the users in management unit.</param>
         
         
         
-        /// <param name="IncludeExceptions">IncludeExceptions.</param>
+        /// <param name="IncludeExceptions">Whether user exceptions should be returned as part of the results.</param>
         
         
         public WfmHistoricalAdherenceQuery(DateTime? StartDate = null, DateTime? EndDate = null, string TimeZone = null, List<string> UserIds = null, bool? IncludeExceptions = null)
@@ -95,33 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "EndDate" is required (not null)
-            if (EndDate == null)
-            {
-                throw new InvalidDataException("EndDate is a required property for WfmHistoricalAdherenceQuery and cannot be null");
-            }
-            else
-            {
-                this.EndDate = EndDate;
-            }
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "UserIds" is required (not null)
-            if (UserIds == null)
-            {
-                throw new InvalidDataException("UserIds is a required property for WfmHistoricalAdherenceQuery and cannot be null");
-            }
-            else
-            {
-                this.UserIds = UserIds;
-            }
             
             
             
@@ -134,6 +107,18 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.EndDate = EndDate;
             
             
             
@@ -147,6 +132,11 @@ this.TimeZone = TimeZone;
             
             
             
+            
+            
+            
+            
+this.UserIds = UserIds;
             
             
             
@@ -174,35 +164,36 @@ this.IncludeExceptions = IncludeExceptions;
         
         
         /// <summary>
-        /// End of the date range to query in ISO-8601 format
+        /// End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time
         /// </summary>
-        /// <value>End of the date range to query in ISO-8601 format</value>
+        /// <value>End of the date range to query in ISO-8601 format. If it is not set, end date will be set to current time</value>
         [DataMember(Name="endDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
         
         
         
         /// <summary>
-        /// The time zone to use for returned results in olson format (See https://www.ibm.com/developerworks/aix/library/au-aix-posix/)
+        /// The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence
         /// </summary>
-        /// <value>The time zone to use for returned results in olson format (See https://www.ibm.com/developerworks/aix/library/au-aix-posix/)</value>
+        /// <value>The time zone to use for returned results in olson format. If it is not set, the management unit time zone will be used to compute adherence</value>
         [DataMember(Name="timeZone", EmitDefaultValue=false)]
         public string TimeZone { get; set; }
         
         
         
         /// <summary>
-        /// The userIds to report on
+        /// The userIds to report on. If it is not set, adherence will be computed for all the users in management unit
         /// </summary>
-        /// <value>The userIds to report on</value>
+        /// <value>The userIds to report on. If it is not set, adherence will be computed for all the users in management unit</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets IncludeExceptions
+        /// Whether user exceptions should be returned as part of the results
         /// </summary>
+        /// <value>Whether user exceptions should be returned as part of the results</value>
         [DataMember(Name="includeExceptions", EmitDefaultValue=false)]
         public bool? IncludeExceptions { get; set; }
         

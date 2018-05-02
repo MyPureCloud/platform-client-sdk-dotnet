@@ -50,10 +50,6 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="BeforeNow">BeforeNow.</param>
-        
-        
-        
         /// <param name="AfterNow">AfterNow.</param>
         
         
@@ -61,7 +57,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EqualNow">EqualNow.</param>
         
         
-        public UserScheduleAdherenceUpdateNotificationDateTime(int? IMillis = null, bool? BeforeNow = null, bool? AfterNow = null, bool? EqualNow = null)
+        
+        /// <param name="BeforeNow">BeforeNow.</param>
+        
+        
+        public UserScheduleAdherenceUpdateNotificationDateTime(int? IMillis = null, bool? AfterNow = null, bool? EqualNow = null, bool? BeforeNow = null)
         {
             
             
@@ -94,15 +94,6 @@ this.IMillis = IMillis;
             
             
             
-this.BeforeNow = BeforeNow;
-            
-            
-            
-            
-            
-            
-            
-            
 this.AfterNow = AfterNow;
             
             
@@ -117,6 +108,15 @@ this.EqualNow = EqualNow;
             
             
             
+            
+            
+            
+            
+this.BeforeNow = BeforeNow;
+            
+            
+            
+            
         }
         
         
@@ -126,14 +126,6 @@ this.EqualNow = EqualNow;
         /// </summary>
         [DataMember(Name="iMillis", EmitDefaultValue=false)]
         public int? IMillis { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets BeforeNow
-        /// </summary>
-        [DataMember(Name="beforeNow", EmitDefaultValue=false)]
-        public bool? BeforeNow { get; set; }
         
         
         
@@ -152,6 +144,14 @@ this.EqualNow = EqualNow;
         public bool? EqualNow { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets BeforeNow
+        /// </summary>
+        [DataMember(Name="beforeNow", EmitDefaultValue=false)]
+        public bool? BeforeNow { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -163,11 +163,11 @@ this.EqualNow = EqualNow;
             
             sb.Append("  IMillis: ").Append(IMillis).Append("\n");
             
-            sb.Append("  BeforeNow: ").Append(BeforeNow).Append("\n");
-            
             sb.Append("  AfterNow: ").Append(AfterNow).Append("\n");
             
             sb.Append("  EqualNow: ").Append(EqualNow).Append("\n");
+            
+            sb.Append("  BeforeNow: ").Append(BeforeNow).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -211,11 +211,6 @@ this.EqualNow = EqualNow;
                     this.IMillis.Equals(other.IMillis)
                 ) &&
                 (
-                    this.BeforeNow == other.BeforeNow ||
-                    this.BeforeNow != null &&
-                    this.BeforeNow.Equals(other.BeforeNow)
-                ) &&
-                (
                     this.AfterNow == other.AfterNow ||
                     this.AfterNow != null &&
                     this.AfterNow.Equals(other.AfterNow)
@@ -224,6 +219,11 @@ this.EqualNow = EqualNow;
                     this.EqualNow == other.EqualNow ||
                     this.EqualNow != null &&
                     this.EqualNow.Equals(other.EqualNow)
+                ) &&
+                (
+                    this.BeforeNow == other.BeforeNow ||
+                    this.BeforeNow != null &&
+                    this.BeforeNow.Equals(other.BeforeNow)
                 );
         }
 
@@ -242,14 +242,14 @@ this.EqualNow = EqualNow;
                 if (this.IMillis != null)
                     hash = hash * 59 + this.IMillis.GetHashCode();
                 
-                if (this.BeforeNow != null)
-                    hash = hash * 59 + this.BeforeNow.GetHashCode();
-                
                 if (this.AfterNow != null)
                     hash = hash * 59 + this.AfterNow.GetHashCode();
                 
                 if (this.EqualNow != null)
                     hash = hash * 59 + this.EqualNow.GetHashCode();
+                
+                if (this.BeforeNow != null)
+                    hash = hash * 59 + this.BeforeNow.GetHashCode();
                 
                 return hash;
             }

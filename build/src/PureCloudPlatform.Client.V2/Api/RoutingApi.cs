@@ -1059,7 +1059,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>string</returns>
-        string PostRoutingQueueUsers (string queueId, List<QueueMember> body, bool? delete = null);
+        string PostRoutingQueueUsers (string queueId, List<Entity> body, bool? delete = null);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -1072,7 +1072,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> PostRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
+        ApiResponse<string> PostRoutingQueueUsersWithHttpInfo (string queueId, List<Entity> body, bool? delete = null);
         
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -2473,7 +2473,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> PostRoutingQueueUsersAsync (string queueId, List<QueueMember> body, bool? delete = null);
+        System.Threading.Tasks.Task<string> PostRoutingQueueUsersAsync (string queueId, List<Entity> body, bool? delete = null);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -2486,7 +2486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> PostRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null);
+        System.Threading.Tasks.Task<ApiResponse<string>> PostRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<Entity> body, bool? delete = null);
         
         /// <summary>
         /// Add up to 100 wrap-up codes to a queue
@@ -11348,7 +11348,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>string</returns>
-        public string PostRoutingQueueUsers (string queueId, List<QueueMember> body, bool? delete = null)
+        public string PostRoutingQueueUsers (string queueId, List<Entity> body, bool? delete = null)
         {
              ApiResponse<string> localVarResponse = PostRoutingQueueUsersWithHttpInfo(queueId, body, delete);
              return localVarResponse.Data;
@@ -11362,7 +11362,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > PostRoutingQueueUsersWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
+        public ApiResponse< string > PostRoutingQueueUsersWithHttpInfo (string queueId, List<Entity> body, bool? delete = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -11455,7 +11455,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> PostRoutingQueueUsersAsync (string queueId, List<QueueMember> body, bool? delete = null)
+        public async System.Threading.Tasks.Task<string> PostRoutingQueueUsersAsync (string queueId, List<Entity> body, bool? delete = null)
         {
              ApiResponse<string> localVarResponse = await PostRoutingQueueUsersAsyncWithHttpInfo(queueId, body, delete);
              return localVarResponse.Data;
@@ -11470,7 +11470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Queue Members</param>
         /// <param name="delete">True to delete queue members (optional, default to false)</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> PostRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<QueueMember> body, bool? delete = null)
+        public async System.Threading.Tasks.Task<ApiResponse<string>> PostRoutingQueueUsersAsyncWithHttpInfo (string queueId, List<Entity> body, bool? delete = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)

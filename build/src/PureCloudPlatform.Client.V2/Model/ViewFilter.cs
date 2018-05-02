@@ -286,7 +286,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DurationMilliseconds">The duration is used to filter the view.</param>
+        /// <param name="DurationsMilliseconds">The durations in milliseconds used to filter the view.</param>
         
         
         
@@ -317,7 +317,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Abandoned">Indicates filtering for abandons.</param>
         
         
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> LanguageIds = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, NumericRange DurationMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null)
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> LanguageIds = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null)
         {
             
             
@@ -539,7 +539,7 @@ this.AniList = AniList;
             
             
             
-this.DurationMilliseconds = DurationMilliseconds;
+this.DurationsMilliseconds = DurationsMilliseconds;
             
             
             
@@ -738,11 +738,11 @@ this.Abandoned = Abandoned;
         
         
         /// <summary>
-        /// The duration is used to filter the view
+        /// The durations in milliseconds used to filter the view
         /// </summary>
-        /// <value>The duration is used to filter the view</value>
-        [DataMember(Name="durationMilliseconds", EmitDefaultValue=false)]
-        public NumericRange DurationMilliseconds { get; set; }
+        /// <value>The durations in milliseconds used to filter the view</value>
+        [DataMember(Name="durationsMilliseconds", EmitDefaultValue=false)]
+        public List<NumericRange> DurationsMilliseconds { get; set; }
         
         
         
@@ -845,7 +845,7 @@ this.Abandoned = Abandoned;
             
             sb.Append("  AniList: ").Append(AniList).Append("\n");
             
-            sb.Append("  DurationMilliseconds: ").Append(DurationMilliseconds).Append("\n");
+            sb.Append("  DurationsMilliseconds: ").Append(DurationsMilliseconds).Append("\n");
             
             sb.Append("  EvaluationScore: ").Append(EvaluationScore).Append("\n");
             
@@ -968,9 +968,9 @@ this.Abandoned = Abandoned;
                     this.AniList.SequenceEqual(other.AniList)
                 ) &&
                 (
-                    this.DurationMilliseconds == other.DurationMilliseconds ||
-                    this.DurationMilliseconds != null &&
-                    this.DurationMilliseconds.Equals(other.DurationMilliseconds)
+                    this.DurationsMilliseconds == other.DurationsMilliseconds ||
+                    this.DurationsMilliseconds != null &&
+                    this.DurationsMilliseconds.SequenceEqual(other.DurationsMilliseconds)
                 ) &&
                 (
                     this.EvaluationScore == other.EvaluationScore ||
@@ -1063,8 +1063,8 @@ this.Abandoned = Abandoned;
                 if (this.AniList != null)
                     hash = hash * 59 + this.AniList.GetHashCode();
                 
-                if (this.DurationMilliseconds != null)
-                    hash = hash * 59 + this.DurationMilliseconds.GetHashCode();
+                if (this.DurationsMilliseconds != null)
+                    hash = hash * 59 + this.DurationsMilliseconds.GetHashCode();
                 
                 if (this.EvaluationScore != null)
                     hash = hash * 59 + this.EvaluationScore.GetHashCode();

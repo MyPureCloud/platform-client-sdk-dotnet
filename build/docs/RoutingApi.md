@@ -3058,7 +3058,7 @@ namespace Example
 
 <a name="postroutingqueueusers"></a>
 
-## **string** PostRoutingQueueUsers (string queueId, List<QueueMember> body, bool? delete = null)
+## **string** PostRoutingQueueUsers (string queueId, List<Entity> body, bool? delete = null)
 
 Bulk add or delete up to 100 queue members
 
@@ -3092,7 +3092,7 @@ namespace Example
             
             
             
-            var body = new List<QueueMember>(); // List<QueueMember> | Queue Members
+            var body = new List<Entity>(); // List<Entity> | Queue Members
             
             
             
@@ -3124,7 +3124,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **body** | [**List<QueueMember>**](QueueMember.html)| Queue Members |  |
+| **body** | [**List<Entity>**](Entity.html)| Queue Members |  |
 | **delete** | **bool?**| True to delete queue members | [optional] [default to false] |
 {: class="table table-striped"}
 

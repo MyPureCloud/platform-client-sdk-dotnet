@@ -8,9 +8,9 @@ title: IntradayDataUpdateNotificationStartDate
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **IMillis** | **int?** |  | [optional] |
-| **BeforeNow** | **bool?** |  | [optional] |
 | **AfterNow** | **bool?** |  | [optional] |
 | **EqualNow** | **bool?** |  | [optional] |
+| **BeforeNow** | **bool?** |  | [optional] |
 {: class="table table-striped"}
 
 
