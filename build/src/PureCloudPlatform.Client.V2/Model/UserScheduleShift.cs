@@ -35,24 +35,47 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleShift" /> class.
         /// </summary>
         
         
-        /// <param name="StartDate">Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        /// <param name="Id">ID of the schedule shift. This is only for the case of updating and deleting an existing shift.</param>
         
         
         
-        /// <param name="LengthInMinutes">Length of this shift in minutes.</param>
+        
         
         
         
         /// <param name="Activities">List of activities in this shift.</param>
         
         
-        public UserScheduleShift(DateTime? StartDate = null, int? LengthInMinutes = null, List<UserScheduleActivity> Activities = null)
+        
+        /// <param name="Delete">If marked true for updating this schedule shift, it will be deleted.</param>
+        
+        
+        
+        /// <param name="ManuallyEdited">Whether the shift was set as manually edited.</param>
+        
+        
+        public UserScheduleShift(string Id = null, List<UserScheduleActivity> Activities = null, bool? Delete = null, bool? ManuallyEdited = null)
         {
             
             
@@ -72,7 +95,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.StartDate = StartDate;
             
             
             
@@ -81,7 +103,11 @@ this.StartDate = StartDate;
             
             
             
-this.LengthInMinutes = LengthInMinutes;
+this.Id = Id;
+            
+            
+            
+            
             
             
             
@@ -95,7 +121,34 @@ this.Activities = Activities;
             
             
             
+            
+            
+            
+            
+this.Delete = Delete;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ManuallyEdited = ManuallyEdited;
+            
+            
+            
+            
         }
+        
+        
+        
+        /// <summary>
+        /// ID of the schedule shift. This is only for the case of updating and deleting an existing shift
+        /// </summary>
+        /// <value>ID of the schedule shift. This is only for the case of updating and deleting an existing shift</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         
         
         
@@ -104,7 +157,7 @@ this.Activities = Activities;
         /// </summary>
         /// <value>Start time in UTC for this shift. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="startDate", EmitDefaultValue=false)]
-        public DateTime? StartDate { get; set; }
+        public DateTime? StartDate { get; private set; }
         
         
         
@@ -113,7 +166,7 @@ this.Activities = Activities;
         /// </summary>
         /// <value>Length of this shift in minutes</value>
         [DataMember(Name="lengthInMinutes", EmitDefaultValue=false)]
-        public int? LengthInMinutes { get; set; }
+        public int? LengthInMinutes { get; private set; }
         
         
         
@@ -125,6 +178,24 @@ this.Activities = Activities;
         public List<UserScheduleActivity> Activities { get; set; }
         
         
+        
+        /// <summary>
+        /// If marked true for updating this schedule shift, it will be deleted
+        /// </summary>
+        /// <value>If marked true for updating this schedule shift, it will be deleted</value>
+        [DataMember(Name="delete", EmitDefaultValue=false)]
+        public bool? Delete { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Whether the shift was set as manually edited
+        /// </summary>
+        /// <value>Whether the shift was set as manually edited</value>
+        [DataMember(Name="manuallyEdited", EmitDefaultValue=false)]
+        public bool? ManuallyEdited { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -134,11 +205,17 @@ this.Activities = Activities;
             var sb = new StringBuilder();
             sb.Append("class UserScheduleShift {\n");
             
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             
             sb.Append("  Activities: ").Append(Activities).Append("\n");
+            
+            sb.Append("  Delete: ").Append(Delete).Append("\n");
+            
+            sb.Append("  ManuallyEdited: ").Append(ManuallyEdited).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -177,6 +254,11 @@ this.Activities = Activities;
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.StartDate == other.StartDate ||
                     this.StartDate != null &&
                     this.StartDate.Equals(other.StartDate)
@@ -190,6 +272,16 @@ this.Activities = Activities;
                     this.Activities == other.Activities ||
                     this.Activities != null &&
                     this.Activities.SequenceEqual(other.Activities)
+                ) &&
+                (
+                    this.Delete == other.Delete ||
+                    this.Delete != null &&
+                    this.Delete.Equals(other.Delete)
+                ) &&
+                (
+                    this.ManuallyEdited == other.ManuallyEdited ||
+                    this.ManuallyEdited != null &&
+                    this.ManuallyEdited.Equals(other.ManuallyEdited)
                 );
         }
 
@@ -205,6 +297,9 @@ this.Activities = Activities;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.StartDate != null)
                     hash = hash * 59 + this.StartDate.GetHashCode();
                 
@@ -213,6 +308,12 @@ this.Activities = Activities;
                 
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();
+                
+                if (this.Delete != null)
+                    hash = hash * 59 + this.Delete.GetHashCode();
+                
+                if (this.ManuallyEdited != null)
+                    hash = hash * 59 + this.ManuallyEdited.GetHashCode();
                 
                 return hash;
             }

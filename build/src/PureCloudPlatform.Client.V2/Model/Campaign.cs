@@ -96,6 +96,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.
         /// </summary>
@@ -233,6 +236,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// The current status of the Campaign. A Campaign may be turned 'on' or 'off'. Required for updates.
         /// </summary>
@@ -327,6 +332,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Site">The identifier of the site to be used for dialing; can be set in place of an edge group..</param>
+        
+        
+        
         /// <param name="CampaignStatus">The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates..</param>
         
         
@@ -408,7 +417,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
+        public Campaign(string Name = null, int? Version = null, UriReference ContactList = null, UriReference Queue = null, DialingModeEnum? DialingMode = null, UriReference Script = null, UriReference EdgeGroup = null, UriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<UriReference> DncLists = null, UriReference CallableTimeSet = null, UriReference CallAnalysisResponseSet = null, List<RestErrorDetail> Errors = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<UriReference> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<UriReference> ContactListFilters = null)
         {
             
             
@@ -464,6 +473,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.DialingMode = DialingMode;
             }
+            
+            
+            
+            
             
             
             
@@ -638,6 +651,15 @@ this.Script = Script;
             
             
 this.EdgeGroup = EdgeGroup;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Site = Site;
             
             
             
@@ -896,6 +918,15 @@ this.ContactListFilters = ContactListFilters;
         
         
         
+        /// <summary>
+        /// The identifier of the site to be used for dialing; can be set in place of an edge group.
+        /// </summary>
+        /// <value>The identifier of the site to be used for dialing; can be set in place of an edge group.</value>
+        [DataMember(Name="site", EmitDefaultValue=false)]
+        public UriReference Site { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -1106,6 +1137,8 @@ this.ContactListFilters = ContactListFilters;
             
             sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
             
+            sb.Append("  Site: ").Append(Site).Append("\n");
+            
             sb.Append("  CampaignStatus: ").Append(CampaignStatus).Append("\n");
             
             sb.Append("  PhoneColumns: ").Append(PhoneColumns).Append("\n");
@@ -1233,6 +1266,11 @@ this.ContactListFilters = ContactListFilters;
                     this.EdgeGroup == other.EdgeGroup ||
                     this.EdgeGroup != null &&
                     this.EdgeGroup.Equals(other.EdgeGroup)
+                ) &&
+                (
+                    this.Site == other.Site ||
+                    this.Site != null &&
+                    this.Site.Equals(other.Site)
                 ) &&
                 (
                     this.CampaignStatus == other.CampaignStatus ||
@@ -1382,6 +1420,9 @@ this.ContactListFilters = ContactListFilters;
                 
                 if (this.EdgeGroup != null)
                     hash = hash * 59 + this.EdgeGroup.GetHashCode();
+                
+                if (this.Site != null)
+                    hash = hash * 59 + this.Site.GetHashCode();
                 
                 if (this.CampaignStatus != null)
                     hash = hash * 59 + this.CampaignStatus.GetHashCode();

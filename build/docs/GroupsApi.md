@@ -286,7 +286,7 @@ namespace Example
 
 <a name="getgroupindividuals"></a>
 
-## [**List&lt;UserEntityListing&gt;**](UserEntityListing.html) GetGroupIndividuals (string groupId)
+## [**UserEntityListing**](UserEntityListing.html) GetGroupIndividuals (string groupId)
 
 Get all individuals associated with the group
 
@@ -324,7 +324,7 @@ namespace Example
                 
                 // Get all individuals associated with the group
                 
-                List&lt;UserEntityListing&gt; result = apiInstance.GetGroupIndividuals(groupId);
+                UserEntityListing result = apiInstance.GetGroupIndividuals(groupId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -346,7 +346,7 @@ namespace Example
 
 ### Return type
 
-[**List<UserEntityListing>**](UserEntityListing.html)
+[**UserEntityListing**](UserEntityListing.html)
 
 <a name="getgroupmembers"></a>
 

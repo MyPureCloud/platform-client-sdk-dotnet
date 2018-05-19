@@ -45,6 +45,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DomainPermission" /> class.
@@ -70,8 +75,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AllowsConditions">AllowsConditions.</param>
         
         
-        public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, bool? AllowsConditions = null)
+        
+        /// <param name="DivisionAware">DivisionAware.</param>
+        
+        
+        public DomainPermission(string Domain = null, string EntityType = null, string Action = null, string Label = null, bool? AllowsConditions = null, bool? DivisionAware = null)
         {
+            
+            
+            
+            
             
             
             
@@ -139,6 +152,15 @@ this.AllowsConditions = AllowsConditions;
             
             
             
+            
+            
+            
+            
+this.DivisionAware = DivisionAware;
+            
+            
+            
+            
         }
         
         
@@ -182,6 +204,14 @@ this.AllowsConditions = AllowsConditions;
         public bool? AllowsConditions { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets DivisionAware
+        /// </summary>
+        [DataMember(Name="divisionAware", EmitDefaultValue=false)]
+        public bool? DivisionAware { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -200,6 +230,8 @@ this.AllowsConditions = AllowsConditions;
             sb.Append("  Label: ").Append(Label).Append("\n");
             
             sb.Append("  AllowsConditions: ").Append(AllowsConditions).Append("\n");
+            
+            sb.Append("  DivisionAware: ").Append(DivisionAware).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -261,6 +293,11 @@ this.AllowsConditions = AllowsConditions;
                     this.AllowsConditions == other.AllowsConditions ||
                     this.AllowsConditions != null &&
                     this.AllowsConditions.Equals(other.AllowsConditions)
+                ) &&
+                (
+                    this.DivisionAware == other.DivisionAware ||
+                    this.DivisionAware != null &&
+                    this.DivisionAware.Equals(other.DivisionAware)
                 );
         }
 
@@ -290,6 +327,9 @@ this.AllowsConditions = AllowsConditions;
                 
                 if (this.AllowsConditions != null)
                     hash = hash * 59 + this.AllowsConditions.GetHashCode();
+                
+                if (this.DivisionAware != null)
+                    hash = hash * 59 + this.DivisionAware.GetHashCode();
                 
                 return hash;
             }

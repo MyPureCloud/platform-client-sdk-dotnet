@@ -522,7 +522,7 @@ void (empty response body)
 
 <a name="getqualityagentsactivity"></a>
 
-## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
 
 Gets a list of Agent Activities
 
@@ -566,7 +566,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -591,7 +591,7 @@ namespace Example
             
             
             
-            var agentUserId = new List<Object>(); // List<Object> | user id of agent requested (optional) 
+            var agentUserId = new List<string>(); // List<string> | user id of agent requested (optional) 
             
             
             
@@ -635,12 +635,12 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **startTime** | **DateTime?**| Start time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
 | **endTime** | **DateTime?**| End time of agent activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
-| **agentUserId** | [**List<Object>**](Object.html)| user id of agent requested | [optional]  |
+| **agentUserId** | [**List<string>**](string.html)| user id of agent requested | [optional]  |
 | **evaluatorUserId** | **string**| user id of the evaluator | [optional]  |
 | **name** | **string**| name | [optional]  |
 | **group** | **string**| group id | [optional]  |
@@ -728,7 +728,7 @@ namespace Example
 
 <a name="getqualitycalibrations"></a>
 
-## [**CalibrationEntityListing**](CalibrationEntityListing.html) GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+## [**CalibrationEntityListing**](CalibrationEntityListing.html) GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
 
 Get the list of calibrations
 
@@ -777,7 +777,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -832,7 +832,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversation id | [optional]  |
@@ -846,7 +846,7 @@ namespace Example
 
 <a name="getqualityconversationaudits"></a>
 
-## [**QualityAuditPage**](QualityAuditPage.html) GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+## [**QualityAuditPage**](QualityAuditPage.html) GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
 
 Get audits for conversation or recording
 
@@ -895,7 +895,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -945,7 +945,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **recordingId** | **string**| id of the recording | [optional]  |
@@ -1034,7 +1034,7 @@ namespace Example
 
 <a name="getqualityevaluationsquery"></a>
 
-## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
 
 Queries Evaluations and returns a paged list
 
@@ -1078,7 +1078,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -1123,7 +1123,7 @@ namespace Example
             
             
             
-            var evaluationState = new List<Object>(); // List<Object> |  (optional) 
+            var evaluationState = new List<string>(); // List<string> |  (optional) 
             
             
             
@@ -1177,7 +1177,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **conversationId** | **string**| conversationId specified | [optional]  |
@@ -1186,7 +1186,7 @@ namespace Example
 | **queueId** | **string**| queue id | [optional]  |
 | **startTime** | **string**| start time of the evaluation query | [optional]  |
 | **endTime** | **string**| end time of the evaluation query | [optional]  |
-| **evaluationState** | [**List<Object>**](Object.html)|  | [optional]  |
+| **evaluationState** | [**List<string>**](string.html)|  | [optional]  |
 | **isReleased** | **bool?**| the evaluation has been released | [optional]  |
 | **agentHasRead** | **bool?**| agent has the evaluation | [optional]  |
 | **expandAnswerTotalScores** | **bool?**| get the total scores for evaluations | [optional]  |
@@ -1200,7 +1200,7 @@ namespace Example
 
 <a name="getqualityevaluatorsactivity"></a>
 
-## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
+## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
 
 Get an evaluator activity
 
@@ -1244,7 +1244,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -1274,7 +1274,7 @@ namespace Example
             
             
             
-            var permission = new List<Object>(); // List<Object> | permission strings (optional) 
+            var permission = new List<string>(); // List<string> | permission strings (optional) 
             
             
             
@@ -1308,13 +1308,13 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **startTime** | **DateTime?**| The start time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
 | **endTime** | **DateTime?**| The end time specified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ | [optional]  |
 | **name** | **string**| Evaluator name | [optional]  |
-| **permission** | [**List<Object>**](Object.html)| permission strings | [optional]  |
+| **permission** | [**List<string>**](string.html)| permission strings | [optional]  |
 | **group** | **string**| group id | [optional]  |
 {: class="table table-striped"}
 
@@ -2108,7 +2108,7 @@ namespace Example
 
 <a name="getqualitykeywordsets"></a>
 
-## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
+## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
 
 Get the list of keyword sets
 
@@ -2152,7 +2152,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -2211,7 +2211,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 | **name** | **string**| the keyword set name - used for filtering results in searches. | [optional]  |

@@ -29,15 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="Digits" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected Digits() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="Digits" /> class.
-        /// </summary>
         
         
-        /// <param name="_Digits">A string representing the DTMF tones to play. Valid DTMF values: 1234567890#*ABCD (required).</param>
+        /// <param name="_Digits">A string representing the digits pressed on phone..</param>
         
         
         public Digits(string _Digits = null)
@@ -45,19 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "_Digits" is required (not null)
-            if (_Digits == null)
-            {
-                throw new InvalidDataException("_Digits is a required property for Digits and cannot be null");
-            }
-            else
-            {
-                this._Digits = _Digits;
-            }
             
             
             
             
+            
+            
+            
+this._Digits = _Digits;
             
             
             
@@ -67,9 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         /// <summary>
-        /// A string representing the DTMF tones to play. Valid DTMF values: 1234567890#*ABCD
+        /// A string representing the digits pressed on phone.
         /// </summary>
-        /// <value>A string representing the DTMF tones to play. Valid DTMF values: 1234567890#*ABCD</value>
+        /// <value>A string representing the digits pressed on phone.</value>
         [DataMember(Name="digits", EmitDefaultValue=false)]
         public string _Digits { get; set; }
         

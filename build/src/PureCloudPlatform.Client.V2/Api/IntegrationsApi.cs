@@ -119,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Integration</returns>
-        Integration GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        Integration GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Get integration.
@@ -136,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
-        ApiResponse<Integration> GetIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<Integration> GetIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Get integration configuration.
@@ -174,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationEntityListing</returns>
-        IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List integrations
@@ -190,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationEntityListing</returns>
-        ApiResponse<IntegrationEntityListing> GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<IntegrationEntityListing> GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Retrieves a single Action matching id.
@@ -379,7 +379,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ActionEntityListing</returns>
-        ActionEntityListing GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ActionEntityListing GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param.
@@ -398,7 +398,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        ApiResponse<ActionEntityListing> GetIntegrationsActionsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<ActionEntityListing> GetIntegrationsActionsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -415,7 +415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>CategoryEntityListing</returns>
-        CategoryEntityListing GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        CategoryEntityListing GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -432,7 +432,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
-        ApiResponse<CategoryEntityListing> GetIntegrationsActionsCategoriesWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<CategoryEntityListing> GetIntegrationsActionsCategoriesWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -451,7 +451,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ActionEntityListing</returns>
-        ActionEntityListing GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ActionEntityListing GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -470,7 +470,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -486,7 +486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ClientAppEntityListing</returns>
-        ClientAppEntityListing GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ClientAppEntityListing GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -502,7 +502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ClientAppEntityListing</returns>
-        ApiResponse<ClientAppEntityListing> GetIntegrationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<ClientAppEntityListing> GetIntegrationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Get a single credential with sensitive fields redacted
@@ -682,7 +682,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationTypeEntityListing</returns>
-        IntegrationTypeEntityListing GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        IntegrationTypeEntityListing GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List integration types
@@ -698,7 +698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationTypeEntityListing</returns>
-        ApiResponse<IntegrationTypeEntityListing> GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<IntegrationTypeEntityListing> GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Update an integration.
@@ -716,7 +716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Integration</returns>
-        Integration PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        Integration PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Update an integration.
@@ -734,7 +734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
-        ApiResponse<Integration> PatchIntegrationWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<Integration> PatchIntegrationWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Patch an Action
@@ -1167,7 +1167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of Integration</returns>
-        System.Threading.Tasks.Task<Integration> GetIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<Integration> GetIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Get integration.
@@ -1184,7 +1184,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Integration>> GetIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<Integration>> GetIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Get integration configuration.
@@ -1222,7 +1222,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationEntityListing</returns>
-        System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List integrations
@@ -1238,7 +1238,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Retrieves a single Action matching id.
@@ -1427,7 +1427,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Retrieves all actions associated with filters passed in via query param.
@@ -1446,7 +1446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -1463,7 +1463,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
-        System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Retrieves all categories of available Actions
@@ -1480,7 +1480,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -1499,7 +1499,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Retrieves all action drafts associated with the filters passed in via query param.
@@ -1518,7 +1518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -1534,7 +1534,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ClientAppEntityListing</returns>
-        System.Threading.Tasks.Task<ClientAppEntityListing> GetIntegrationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ClientAppEntityListing> GetIntegrationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List permitted client app integrations for the logged in user
@@ -1550,7 +1550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ClientAppEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ClientAppEntityListing>> GetIntegrationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<ClientAppEntityListing>> GetIntegrationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Get a single credential with sensitive fields redacted
@@ -1730,7 +1730,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationTypeEntityListing</returns>
-        System.Threading.Tasks.Task<IntegrationTypeEntityListing> GetIntegrationsTypesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<IntegrationTypeEntityListing> GetIntegrationsTypesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// List integration types
@@ -1746,7 +1746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationTypeEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Update an integration.
@@ -1764,7 +1764,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of Integration</returns>
-        System.Threading.Tasks.Task<Integration> PatchIntegrationAsync (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<Integration> PatchIntegrationAsync (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
 
         /// <summary>
         /// Update an integration.
@@ -1782,7 +1782,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Integration>> PatchIntegrationAsyncWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<Integration>> PatchIntegrationAsyncWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
         
         /// <summary>
         /// Patch an Action
@@ -2970,7 +2970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Integration</returns>
-        public Integration GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public Integration GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<Integration> localVarResponse = GetIntegrationWithHttpInfo(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -2988,7 +2988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
-        public ApiResponse< Integration > GetIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< Integration > GetIntegrationWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -3082,7 +3082,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of Integration</returns>
-        public async System.Threading.Tasks.Task<Integration> GetIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<Integration> GetIntegrationAsync (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<Integration> localVarResponse = await GetIntegrationAsyncWithHttpInfo(integrationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -3101,7 +3101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Integration>> GetIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Integration>> GetIntegrationAsyncWithHttpInfo (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -3387,7 +3387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationEntityListing</returns>
-        public IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationEntityListing> localVarResponse = GetIntegrationsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -3404,7 +3404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationEntityListing</returns>
-        public ApiResponse< IntegrationEntityListing > GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< IntegrationEntityListing > GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations";
@@ -3493,7 +3493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationEntityListing> localVarResponse = await GetIntegrationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -3511,7 +3511,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations";
@@ -5017,7 +5017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ActionEntityListing</returns>
-        public ActionEntityListing GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ActionEntityListing GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5037,7 +5037,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        public ApiResponse< ActionEntityListing > GetIntegrationsActionsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< ActionEntityListing > GetIntegrationsActionsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions";
@@ -5132,7 +5132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsAsyncWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5153,7 +5153,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions";
@@ -5247,7 +5247,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>CategoryEntityListing</returns>
-        public CategoryEntityListing GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public CategoryEntityListing GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<CategoryEntityListing> localVarResponse = GetIntegrationsActionsCategoriesWithHttpInfo(secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5265,7 +5265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of CategoryEntityListing</returns>
-        public ApiResponse< CategoryEntityListing > GetIntegrationsActionsCategoriesWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< CategoryEntityListing > GetIntegrationsActionsCategoriesWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/categories";
@@ -5356,7 +5356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of CategoryEntityListing</returns>
-        public async System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<CategoryEntityListing> GetIntegrationsActionsCategoriesAsync (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<CategoryEntityListing> localVarResponse = await GetIntegrationsActionsCategoriesAsyncWithHttpInfo(secure, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5375,7 +5375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (CategoryEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/categories";
@@ -5469,7 +5469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ActionEntityListing</returns>
-        public ActionEntityListing GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ActionEntityListing GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = GetIntegrationsActionsDraftsWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5489,7 +5489,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ActionEntityListing</returns>
-        public ApiResponse< ActionEntityListing > GetIntegrationsActionsDraftsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< ActionEntityListing > GetIntegrationsActionsDraftsWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/drafts";
@@ -5584,7 +5584,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ActionEntityListing</returns>
-        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ActionEntityListing> GetIntegrationsActionsDraftsAsync (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ActionEntityListing> localVarResponse = await GetIntegrationsActionsDraftsAsyncWithHttpInfo(category, secure, includeAuthActions, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5605,7 +5605,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ActionEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/actions/drafts";
@@ -5698,7 +5698,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ClientAppEntityListing</returns>
-        public ClientAppEntityListing GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ClientAppEntityListing GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ClientAppEntityListing> localVarResponse = GetIntegrationsClientappsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5715,7 +5715,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of ClientAppEntityListing</returns>
-        public ApiResponse< ClientAppEntityListing > GetIntegrationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< ClientAppEntityListing > GetIntegrationsClientappsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/clientapps";
@@ -5804,7 +5804,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ClientAppEntityListing</returns>
-        public async System.Threading.Tasks.Task<ClientAppEntityListing> GetIntegrationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ClientAppEntityListing> GetIntegrationsClientappsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<ClientAppEntityListing> localVarResponse = await GetIntegrationsClientappsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -5822,7 +5822,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (ClientAppEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ClientAppEntityListing>> GetIntegrationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ClientAppEntityListing>> GetIntegrationsClientappsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/clientapps";
@@ -7265,7 +7265,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>IntegrationTypeEntityListing</returns>
-        public IntegrationTypeEntityListing GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public IntegrationTypeEntityListing GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationTypeEntityListing> localVarResponse = GetIntegrationsTypesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -7282,7 +7282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of IntegrationTypeEntityListing</returns>
-        public ApiResponse< IntegrationTypeEntityListing > GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< IntegrationTypeEntityListing > GetIntegrationsTypesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/types";
@@ -7371,7 +7371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of IntegrationTypeEntityListing</returns>
-        public async System.Threading.Tasks.Task<IntegrationTypeEntityListing> GetIntegrationsTypesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<IntegrationTypeEntityListing> GetIntegrationsTypesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<IntegrationTypeEntityListing> localVarResponse = await GetIntegrationsTypesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -7389,7 +7389,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationTypeEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
 
             var localVarPath = "/api/v2/integrations/types";
@@ -7481,7 +7481,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Integration</returns>
-        public Integration PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public Integration PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<Integration> localVarResponse = PatchIntegrationWithHttpInfo(integrationId, body, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -7500,7 +7500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>ApiResponse of Integration</returns>
-        public ApiResponse< Integration > PatchIntegrationWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< Integration > PatchIntegrationWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -7600,7 +7600,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of Integration</returns>
-        public async System.Threading.Tasks.Task<Integration> PatchIntegrationAsync (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<Integration> PatchIntegrationAsync (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         {
              ApiResponse<Integration> localVarResponse = await PatchIntegrationAsyncWithHttpInfo(integrationId, body, pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
              return localVarResponse.Data;
@@ -7620,7 +7620,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
         /// <returns>Task of ApiResponse (Integration)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Integration>> PatchIntegrationAsyncWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Integration>> PatchIntegrationAsyncWithHttpInfo (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)

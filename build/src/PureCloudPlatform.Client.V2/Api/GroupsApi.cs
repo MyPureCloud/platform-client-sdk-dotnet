@@ -114,8 +114,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>List&lt;UserEntityListing&gt;</returns>
-        List<UserEntityListing> GetGroupIndividuals (string groupId);
+        /// <returns>UserEntityListing</returns>
+        UserEntityListing GetGroupIndividuals (string groupId);
 
         /// <summary>
         /// Get all individuals associated with the group
@@ -125,8 +125,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>ApiResponse of List&lt;UserEntityListing&gt;</returns>
-        ApiResponse<List<UserEntityListing>> GetGroupIndividualsWithHttpInfo (string groupId);
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        ApiResponse<UserEntityListing> GetGroupIndividualsWithHttpInfo (string groupId);
         
         /// <summary>
         /// Get group members, includes individuals, owners, and dynamically included people
@@ -456,8 +456,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of List&lt;UserEntityListing&gt;</returns>
-        System.Threading.Tasks.Task<List<UserEntityListing>> GetGroupIndividualsAsync (string groupId);
+        /// <returns>Task of UserEntityListing</returns>
+        System.Threading.Tasks.Task<UserEntityListing> GetGroupIndividualsAsync (string groupId);
 
         /// <summary>
         /// Get all individuals associated with the group
@@ -467,8 +467,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of ApiResponse (List&lt;UserEntityListing&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UserEntityListing>>> GetGroupIndividualsAsyncWithHttpInfo (string groupId);
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIndividualsAsyncWithHttpInfo (string groupId);
         
         /// <summary>
         /// Get group members, includes individuals, owners, and dynamically included people
@@ -1568,10 +1568,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>List&lt;UserEntityListing&gt;</returns>
-        public List<UserEntityListing> GetGroupIndividuals (string groupId)
+        /// <returns>UserEntityListing</returns>
+        public UserEntityListing GetGroupIndividuals (string groupId)
         {
-             ApiResponse<List<UserEntityListing>> localVarResponse = GetGroupIndividualsWithHttpInfo(groupId);
+             ApiResponse<UserEntityListing> localVarResponse = GetGroupIndividualsWithHttpInfo(groupId);
              return localVarResponse.Data;
         }
 
@@ -1580,8 +1580,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>ApiResponse of List&lt;UserEntityListing&gt;</returns>
-        public ApiResponse< List<UserEntityListing> > GetGroupIndividualsWithHttpInfo (string groupId)
+        /// <returns>ApiResponse of UserEntityListing</returns>
+        public ApiResponse< UserEntityListing > GetGroupIndividualsWithHttpInfo (string groupId)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1650,9 +1650,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetGroupIndividuals: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<UserEntityListing>>(localVarStatusCode,
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<UserEntityListing>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserEntityListing>)));
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
             
         }
 
@@ -1662,10 +1662,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of List&lt;UserEntityListing&gt;</returns>
-        public async System.Threading.Tasks.Task<List<UserEntityListing>> GetGroupIndividualsAsync (string groupId)
+        /// <returns>Task of UserEntityListing</returns>
+        public async System.Threading.Tasks.Task<UserEntityListing> GetGroupIndividualsAsync (string groupId)
         {
-             ApiResponse<List<UserEntityListing>> localVarResponse = await GetGroupIndividualsAsyncWithHttpInfo(groupId);
+             ApiResponse<UserEntityListing> localVarResponse = await GetGroupIndividualsAsyncWithHttpInfo(groupId);
              return localVarResponse.Data;
 
         }
@@ -1675,8 +1675,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="groupId">Group ID</param>
-        /// <returns>Task of ApiResponse (List&lt;UserEntityListing&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UserEntityListing>>> GetGroupIndividualsAsyncWithHttpInfo (string groupId)
+        /// <returns>Task of ApiResponse (UserEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetGroupIndividualsAsyncWithHttpInfo (string groupId)
         { 
             // verify the required parameter 'groupId' is set
             if (groupId == null)
@@ -1746,9 +1746,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetGroupIndividuals: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<List<UserEntityListing>>(localVarStatusCode,
+            return new ApiResponse<UserEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (List<UserEntityListing>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<UserEntityListing>)));
+                (UserEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserEntityListing)));
             
         }
 

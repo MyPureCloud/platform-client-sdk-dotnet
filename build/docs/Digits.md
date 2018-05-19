@@ -7,7 +7,7 @@ title: Digits
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **_Digits** | **string** | A string representing the DTMF tones to play. Valid DTMF values: 1234567890#*ABCD | |
+| **_Digits** | **string** | A string representing the digits pressed on phone. | [optional] |
 {: class="table table-striped"}
 
 

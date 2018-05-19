@@ -169,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        OrganizationRoleEntityListing GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null);
+        OrganizationRoleEntityListing GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -190,7 +190,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        ApiResponse<OrganizationRoleEntityListing> GetAuthorizationRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null);
+        ApiResponse<OrganizationRoleEntityListing> GetAuthorizationRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
         
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -583,7 +583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetAuthorizationRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null);
+        System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetAuthorizationRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
 
         /// <summary>
         /// Retrieve a list of all roles defined for the organization
@@ -604,7 +604,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null);
+        System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null);
         
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -2089,7 +2089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>OrganizationRoleEntityListing</returns>
-        public OrganizationRoleEntityListing GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null)
+        public OrganizationRoleEntityListing GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = GetAuthorizationRolesWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount, id);
              return localVarResponse.Data;
@@ -2111,7 +2111,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>ApiResponse of OrganizationRoleEntityListing</returns>
-        public ApiResponse< OrganizationRoleEntityListing > GetAuthorizationRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null)
+        public ApiResponse< OrganizationRoleEntityListing > GetAuthorizationRolesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/authorization/roles";
@@ -2210,7 +2210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of OrganizationRoleEntityListing</returns>
-        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetAuthorizationRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null)
+        public async System.Threading.Tasks.Task<OrganizationRoleEntityListing> GetAuthorizationRolesAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         {
              ApiResponse<OrganizationRoleEntityListing> localVarResponse = await GetAuthorizationRolesAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, permission, defaultRoleId, userCount, id);
              return localVarResponse.Data;
@@ -2233,7 +2233,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userCount"> (optional, default to true)</param>
         /// <param name="id">id (optional)</param>
         /// <returns>Task of ApiResponse (OrganizationRoleEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, List<Object> permission = null, List<Object> defaultRoleId = null, bool? userCount = null, List<string> id = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
         { 
 
             var localVarPath = "/api/v2/authorization/roles";

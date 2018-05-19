@@ -36,7 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Id">Topic id for subscription.</param>
+        /// <param name="Id">Id.</param>
         
         
         
@@ -67,9 +67,8 @@ this.Id = Id;
         
         
         /// <summary>
-        /// Topic id for subscription
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>Topic id for subscription</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
         

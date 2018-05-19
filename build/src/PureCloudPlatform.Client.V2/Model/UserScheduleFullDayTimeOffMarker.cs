@@ -45,13 +45,18 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleFullDayTimeOffMarker" /> class.
         /// </summary>
         
         
-        /// <param name="ManagementUnitDate">The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format.</param>
+        /// <param name="ManagementUnitDate">The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format..</param>
         
         
         
@@ -70,8 +75,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description associated with the time off request that this marker corresponds to.</param>
         
         
-        public UserScheduleFullDayTimeOffMarker(string ManagementUnitDate = null, string ActivityCodeId = null, bool? IsPaid = null, int? LengthInMinutes = null, string Description = null)
+        
+        /// <param name="Delete">If marked true for updating an existing full day time off marker, it will be deleted.</param>
+        
+        
+        public UserScheduleFullDayTimeOffMarker(string ManagementUnitDate = null, string ActivityCodeId = null, bool? IsPaid = null, int? LengthInMinutes = null, string Description = null, bool? Delete = null)
         {
+            
+            
+            
+            
             
             
             
@@ -139,14 +152,23 @@ this.Description = Description;
             
             
             
+            
+            
+            
+            
+this.Delete = Delete;
+            
+            
+            
+            
         }
         
         
         
         /// <summary>
-        /// The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format
+        /// The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format.
         /// </summary>
-        /// <value>The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format</value>
+        /// <value>The date associated with the time off request that this marker corresponds to.  Date only, in ISO-8601 format.</value>
         [DataMember(Name="managementUnitDate", EmitDefaultValue=false)]
         public string ManagementUnitDate { get; set; }
         
@@ -187,6 +209,15 @@ this.Description = Description;
         public string Description { get; set; }
         
         
+        
+        /// <summary>
+        /// If marked true for updating an existing full day time off marker, it will be deleted
+        /// </summary>
+        /// <value>If marked true for updating an existing full day time off marker, it will be deleted</value>
+        [DataMember(Name="delete", EmitDefaultValue=false)]
+        public bool? Delete { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -205,6 +236,8 @@ this.Description = Description;
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
             
             sb.Append("  Description: ").Append(Description).Append("\n");
+            
+            sb.Append("  Delete: ").Append(Delete).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -266,6 +299,11 @@ this.Description = Description;
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.Delete == other.Delete ||
+                    this.Delete != null &&
+                    this.Delete.Equals(other.Delete)
                 );
         }
 
@@ -295,6 +333,9 @@ this.Description = Description;
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
+                if (this.Delete != null)
+                    hash = hash * 59 + this.Delete.GetHashCode();
                 
                 return hash;
             }

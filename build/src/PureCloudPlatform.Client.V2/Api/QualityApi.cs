@@ -196,7 +196,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>AgentActivityEntityListing</returns>
-        AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -218,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         
         /// <summary>
         /// Get a calibration by id.  Requires either calibrator id or conversation id
@@ -264,7 +264,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>CalibrationEntityListing</returns>
-        CalibrationEntityListing GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        CalibrationEntityListing GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
 
         /// <summary>
         /// Get the list of calibrations
@@ -284,7 +284,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
-        ApiResponse<CalibrationEntityListing> GetQualityCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        ApiResponse<CalibrationEntityListing> GetQualityCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         
         /// <summary>
         /// Get audits for conversation or recording
@@ -303,7 +303,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
-        QualityAuditPage GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        QualityAuditPage GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -322,7 +322,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        ApiResponse<QualityAuditPage> GetQualityConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        ApiResponse<QualityAuditPage> GetQualityConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         
         /// <summary>
         /// Get an evaluation
@@ -376,7 +376,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
-        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -404,7 +404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
         
         /// <summary>
         /// Get an evaluator activity
@@ -425,7 +425,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>EvaluatorActivityEntityListing</returns>
-        EvaluatorActivityEntityListing GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
+        EvaluatorActivityEntityListing GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -446,7 +446,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        ApiResponse<EvaluatorActivityEntityListing> GetQualityEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
+        ApiResponse<EvaluatorActivityEntityListing> GetQualityEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
         
         /// <summary>
         /// Get an evaluation form
@@ -734,7 +734,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        KeywordSetEntityListing GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
+        KeywordSetEntityListing GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -754,7 +754,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        ApiResponse<KeywordSetEntityListing> GetQualityKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
+        ApiResponse<KeywordSetEntityListing> GetQualityKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -1528,7 +1528,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
 
         /// <summary>
         /// Gets a list of Agent Activities
@@ -1550,7 +1550,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null);
         
         /// <summary>
         /// Get a calibration by id.  Requires either calibrator id or conversation id
@@ -1596,7 +1596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of CalibrationEntityListing</returns>
-        System.Threading.Tasks.Task<CalibrationEntityListing> GetQualityCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        System.Threading.Tasks.Task<CalibrationEntityListing> GetQualityCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
 
         /// <summary>
         /// Get the list of calibrations
@@ -1616,7 +1616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetQualityCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
+        System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetQualityCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null);
         
         /// <summary>
         /// Get audits for conversation or recording
@@ -1635,7 +1635,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
-        System.Threading.Tasks.Task<QualityAuditPage> GetQualityConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<QualityAuditPage> GetQualityConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
 
         /// <summary>
         /// Get audits for conversation or recording
@@ -1654,7 +1654,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetQualityConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
+        System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetQualityConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null);
         
         /// <summary>
         /// Get an evaluation
@@ -1708,7 +1708,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
 
         /// <summary>
         /// Queries Evaluations and returns a paged list
@@ -1736,7 +1736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null);
         
         /// <summary>
         /// Get an evaluator activity
@@ -1757,7 +1757,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetQualityEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
+        System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetQualityEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
 
         /// <summary>
         /// Get an evaluator activity
@@ -1778,7 +1778,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetQualityEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetQualityEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null);
         
         /// <summary>
         /// Get an evaluation form
@@ -2066,7 +2066,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        System.Threading.Tasks.Task<KeywordSetEntityListing> GetQualityKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
+        System.Threading.Tasks.Task<KeywordSetEntityListing> GetQualityKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
 
         /// <summary>
         /// Get the list of keyword sets
@@ -2086,7 +2086,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetQualityKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
+        System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetQualityKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null);
         
         /// <summary>
         /// Get the published evaluation forms.
@@ -4144,7 +4144,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>AgentActivityEntityListing</returns>
-        public AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public AgentActivityEntityListing GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
              ApiResponse<AgentActivityEntityListing> localVarResponse = GetQualityAgentsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return localVarResponse.Data;
@@ -4167,7 +4167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of AgentActivityEntityListing</returns>
-        public ApiResponse< AgentActivityEntityListing > GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public ApiResponse< AgentActivityEntityListing > GetQualityAgentsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         { 
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -4268,7 +4268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of AgentActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<AgentActivityEntityListing> GetQualityAgentsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         {
              ApiResponse<AgentActivityEntityListing> localVarResponse = await GetQualityAgentsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group);
              return localVarResponse.Data;
@@ -4292,7 +4292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="name">name (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (AgentActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<Object> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
         { 
 
             var localVarPath = "/api/v2/quality/agents/activity";
@@ -4595,7 +4595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>CalibrationEntityListing</returns>
-        public CalibrationEntityListing GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public CalibrationEntityListing GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
              ApiResponse<CalibrationEntityListing> localVarResponse = GetQualityCalibrationsWithHttpInfo(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
              return localVarResponse.Data;
@@ -4616,7 +4616,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>ApiResponse of CalibrationEntityListing</returns>
-        public ApiResponse< CalibrationEntityListing > GetQualityCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public ApiResponse< CalibrationEntityListing > GetQualityCalibrationsWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         { 
             // verify the required parameter 'calibratorId' is set
             if (calibratorId == null)
@@ -4716,7 +4716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of CalibrationEntityListing</returns>
-        public async System.Threading.Tasks.Task<CalibrationEntityListing> GetQualityCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public async System.Threading.Tasks.Task<CalibrationEntityListing> GetQualityCalibrationsAsync (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         {
              ApiResponse<CalibrationEntityListing> localVarResponse = await GetQualityCalibrationsAsyncWithHttpInfo(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
              return localVarResponse.Data;
@@ -4738,7 +4738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="startTime">Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <param name="endTime">end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ (optional)</param>
         /// <returns>Task of ApiResponse (CalibrationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetQualityCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CalibrationEntityListing>> GetQualityCalibrationsAsyncWithHttpInfo (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
         { 
             // verify the required parameter 'calibratorId' is set
             if (calibratorId == null)
@@ -4839,7 +4839,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>QualityAuditPage</returns>
-        public QualityAuditPage GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public QualityAuditPage GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
              ApiResponse<QualityAuditPage> localVarResponse = GetQualityConversationAuditsWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
              return localVarResponse.Data;
@@ -4859,7 +4859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>ApiResponse of QualityAuditPage</returns>
-        public ApiResponse< QualityAuditPage > GetQualityConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public ApiResponse< QualityAuditPage > GetQualityConversationAuditsWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -4957,7 +4957,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of QualityAuditPage</returns>
-        public async System.Threading.Tasks.Task<QualityAuditPage> GetQualityConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<QualityAuditPage> GetQualityConversationAuditsAsync (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         {
              ApiResponse<QualityAuditPage> localVarResponse = await GetQualityConversationAuditsAsyncWithHttpInfo(conversationId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, recordingId, entityType);
              return localVarResponse.Data;
@@ -4978,7 +4978,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="recordingId">id of the recording (optional)</param>
         /// <param name="entityType">entity type options: Recording, Calibration, Evaluation, Annotation, Screen_Recording (optional, default to RECORDING)</param>
         /// <returns>Task of ApiResponse (QualityAuditPage)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetQualityConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
+        public async System.Threading.Tasks.Task<ApiResponse<QualityAuditPage>> GetQualityConversationAuditsAsyncWithHttpInfo (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -5297,7 +5297,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>EvaluationEntityListing</returns>
-        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public EvaluationEntityListing GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
              ApiResponse<EvaluationEntityListing> localVarResponse = GetQualityEvaluationsQueryWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
@@ -5326,7 +5326,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>ApiResponse of EvaluationEntityListing</returns>
-        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public ApiResponse< EvaluationEntityListing > GetQualityEvaluationsQueryWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -5439,7 +5439,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of EvaluationEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<EvaluationEntityListing> GetQualityEvaluationsQueryAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         {
              ApiResponse<EvaluationEntityListing> localVarResponse = await GetQualityEvaluationsQueryAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, agentUserId, evaluatorUserId, queueId, startTime, endTime, evaluationState, isReleased, agentHasRead, expandAnswerTotalScores, maximum, sortOrder);
              return localVarResponse.Data;
@@ -5469,7 +5469,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="maximum">maximum (optional)</param>
         /// <param name="sortOrder">sort order options for agentUserId or evaluatorUserId query. Valid options are &#39;a&#39;, &#39;asc&#39;, &#39;ascending&#39;, &#39;d&#39;, &#39;desc&#39;, &#39;descending&#39; (optional)</param>
         /// <returns>Task of ApiResponse (EvaluationEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<Object> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluations/query";
@@ -5576,7 +5576,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>EvaluatorActivityEntityListing</returns>
-        public EvaluatorActivityEntityListing GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
+        public EvaluatorActivityEntityListing GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
              ApiResponse<EvaluatorActivityEntityListing> localVarResponse = GetQualityEvaluatorsActivityWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
              return localVarResponse.Data;
@@ -5598,7 +5598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>ApiResponse of EvaluatorActivityEntityListing</returns>
-        public ApiResponse< EvaluatorActivityEntityListing > GetQualityEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
+        public ApiResponse< EvaluatorActivityEntityListing > GetQualityEvaluatorsActivityWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluators/activity";
@@ -5697,7 +5697,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of EvaluatorActivityEntityListing</returns>
-        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetQualityEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<EvaluatorActivityEntityListing> GetQualityEvaluatorsActivityAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         {
              ApiResponse<EvaluatorActivityEntityListing> localVarResponse = await GetQualityEvaluatorsActivityAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group);
              return localVarResponse.Data;
@@ -5720,7 +5720,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="permission">permission strings (optional)</param>
         /// <param name="group">group id (optional)</param>
         /// <returns>Task of ApiResponse (EvaluatorActivityEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetQualityEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<Object> permission = null, string group = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetQualityEvaluatorsActivityAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
         { 
 
             var localVarPath = "/api/v2/quality/evaluators/activity";
@@ -7852,7 +7852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>KeywordSetEntityListing</returns>
-        public KeywordSetEntityListing GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
+        public KeywordSetEntityListing GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         {
              ApiResponse<KeywordSetEntityListing> localVarResponse = GetQualityKeywordsetsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
              return localVarResponse.Data;
@@ -7873,7 +7873,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>ApiResponse of KeywordSetEntityListing</returns>
-        public ApiResponse< KeywordSetEntityListing > GetQualityKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
+        public ApiResponse< KeywordSetEntityListing > GetQualityKeywordsetsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         { 
 
             var localVarPath = "/api/v2/quality/keywordsets";
@@ -7970,7 +7970,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of KeywordSetEntityListing</returns>
-        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetQualityKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
+        public async System.Threading.Tasks.Task<KeywordSetEntityListing> GetQualityKeywordsetsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         {
              ApiResponse<KeywordSetEntityListing> localVarResponse = await GetQualityKeywordsetsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, queueId, agentId, _operator);
              return localVarResponse.Data;
@@ -7992,7 +7992,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="agentId">the agent id - used for filtering results in searches. (optional)</param>
         /// <param name="_operator">If agentID and queueId are both present, this determines whether the query is an AND or OR between those parameters. (optional)</param>
         /// <returns>Task of ApiResponse (KeywordSetEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetQualityKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
+        public async System.Threading.Tasks.Task<ApiResponse<KeywordSetEntityListing>> GetQualityKeywordsetsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
         { 
 
             var localVarPath = "/api/v2/quality/keywordsets";

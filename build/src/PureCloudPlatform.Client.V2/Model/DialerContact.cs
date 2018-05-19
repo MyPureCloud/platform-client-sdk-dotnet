@@ -60,6 +60,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="DialerContact" /> class.
@@ -98,8 +103,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="ContactColumnTimeZones">Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip.</param>
         
-        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null)
+        
+        
+        
+        public DialerContact(string Name = null, string ContactListId = null, Dictionary<string, Object> Data = null, Dictionary<string, CallRecord> CallRecords = null, bool? Callable = null, Dictionary<string, PhoneNumberStatus> PhoneNumberStatus = null, Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones = null)
         {
             
             
@@ -133,6 +142,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Data = Data;
             }
+            
+            
+            
+            
             
             
             
@@ -193,6 +206,15 @@ this.Callable = Callable;
             
             
 this.PhoneNumberStatus = PhoneNumberStatus;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ContactColumnTimeZones = ContactColumnTimeZones;
             
             
             
@@ -266,6 +288,15 @@ this.PhoneNumberStatus = PhoneNumberStatus;
         
         
         /// <summary>
+        /// Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip
+        /// </summary>
+        /// <value>Map containing data about the timezone the contact is mapped to. This will only be populated if the contact list has automatic timezone mapping turned on. The key is the column name. The value is the timezone it mapped to and the type of column: Phone or Zip</value>
+        [DataMember(Name="contactColumnTimeZones", EmitDefaultValue=false)]
+        public Dictionary<string, ContactColumnTimeZone> ContactColumnTimeZones { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -295,6 +326,8 @@ this.PhoneNumberStatus = PhoneNumberStatus;
             sb.Append("  Callable: ").Append(Callable).Append("\n");
             
             sb.Append("  PhoneNumberStatus: ").Append(PhoneNumberStatus).Append("\n");
+            
+            sb.Append("  ContactColumnTimeZones: ").Append(ContactColumnTimeZones).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -370,6 +403,11 @@ this.PhoneNumberStatus = PhoneNumberStatus;
                     this.PhoneNumberStatus.SequenceEqual(other.PhoneNumberStatus)
                 ) &&
                 (
+                    this.ContactColumnTimeZones == other.ContactColumnTimeZones ||
+                    this.ContactColumnTimeZones != null &&
+                    this.ContactColumnTimeZones.SequenceEqual(other.ContactColumnTimeZones)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -408,6 +446,9 @@ this.PhoneNumberStatus = PhoneNumberStatus;
                 
                 if (this.PhoneNumberStatus != null)
                     hash = hash * 59 + this.PhoneNumberStatus.GetHashCode();
+                
+                if (this.ContactColumnTimeZones != null)
+                    hash = hash * 59 + this.ContactColumnTimeZones.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

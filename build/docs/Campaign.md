@@ -17,6 +17,7 @@ title: Campaign
 | **DialingMode** | **string** | The strategy this Campaign will use for dialing. | |
 | **Script** | [**UriReference**](UriReference.html) | The Script to be displayed to agents that are handling outbound calls. Required for all dialing modes except agentless. | [optional] |
 | **EdgeGroup** | [**UriReference**](UriReference.html) | The EdgeGroup that will place the calls. Required for all dialing modes except preview. | [optional] |
+| **Site** | [**UriReference**](UriReference.html) | The identifier of the site to be used for dialing; can be set in place of an edge group. | [optional] |
 | **CampaignStatus** | **string** | The current status of the Campaign. A Campaign may be turned &#39;on&#39; or &#39;off&#39;. Required for updates. | [optional] |
 | **PhoneColumns** | [**List&lt;PhoneColumn&gt;**](PhoneColumn.html) | The ContactPhoneNumberColumns on the ContactList that this Campaign should dial. | |
 | **AbandonRate** | **double?** | The targeted abandon rate percentage. Required for progressive, power, and predictive campaigns. | [optional] |

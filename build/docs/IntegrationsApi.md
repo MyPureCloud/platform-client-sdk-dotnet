@@ -305,7 +305,7 @@ void (empty response body)
 
 <a name="getintegration"></a>
 
-## [**Integration**](Integration.html) GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**Integration**](Integration.html) GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 Get integration.
 
@@ -354,7 +354,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -394,7 +394,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -469,7 +469,7 @@ namespace Example
 
 <a name="getintegrations"></a>
 
-## [**IntegrationEntityListing**](IntegrationEntityListing.html) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**IntegrationEntityListing**](IntegrationEntityListing.html) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 List integrations
 
@@ -513,7 +513,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -552,7 +552,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -1059,7 +1059,7 @@ namespace Example
 
 <a name="getintegrationsactions"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 Retrieves all actions associated with filters passed in via query param.
 
@@ -1118,7 +1118,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -1160,7 +1160,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -1171,7 +1171,7 @@ namespace Example
 
 <a name="getintegrationsactionscategories"></a>
 
-## [**CategoryEntityListing**](CategoryEntityListing.html) GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**CategoryEntityListing**](CategoryEntityListing.html) GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 Retrieves all categories of available Actions
 
@@ -1220,7 +1220,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -1260,7 +1260,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -1271,7 +1271,7 @@ namespace Example
 
 <a name="getintegrationsactionsdrafts"></a>
 
-## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 Retrieves all action drafts associated with the filters passed in via query param.
 
@@ -1330,7 +1330,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -1372,7 +1372,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -1383,7 +1383,7 @@ namespace Example
 
 <a name="getintegrationsclientapps"></a>
 
-## [**ClientAppEntityListing**](ClientAppEntityListing.html) GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**ClientAppEntityListing**](ClientAppEntityListing.html) GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 List permitted client app integrations for the logged in user
 
@@ -1427,7 +1427,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -1466,7 +1466,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -1952,7 +1952,7 @@ namespace Example
 
 <a name="getintegrationstypes"></a>
 
-## [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 List integration types
 
@@ -1996,7 +1996,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -2035,7 +2035,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}
@@ -2046,7 +2046,7 @@ namespace Example
 
 <a name="patchintegration"></a>
 
-## [**Integration**](Integration.html) PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<Object> expand = null, string nextPage = null, string previousPage = null)
+## [**Integration**](Integration.html) PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
 Update an integration.
 
@@ -2100,7 +2100,7 @@ namespace Example
             
             
             
-            var expand = new List<Object>(); // List<Object> | variable name requested by expand list (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
             
             
             
@@ -2141,7 +2141,7 @@ namespace Example
 | **pageSize** | **int?**| The total page size requested | [optional] [default to 25] |
 | **pageNumber** | **int?**| The page number requested | [optional] [default to 1] |
 | **sortBy** | **string**| variable name requested to sort by | [optional]  |
-| **expand** | [**List<Object>**](Object.html)| variable name requested by expand list | [optional]  |
+| **expand** | [**List<string>**](string.html)| variable name requested by expand list | [optional]  |
 | **nextPage** | **string**| next page token | [optional]  |
 | **previousPage** | **string**| Previous page token | [optional]  |
 {: class="table table-striped"}

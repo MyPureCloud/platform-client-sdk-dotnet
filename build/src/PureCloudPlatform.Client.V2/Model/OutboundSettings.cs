@@ -44,6 +44,33 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The denominator to be used in determining the compliance abandon rate
+        /// </summary>
+        /// <value>The denominator to be used in determining the compliance abandon rate</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ComplianceAbandonRateDenominatorEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum AllCalls for "ALL_CALLS"
+            /// </summary>
+            [EnumMember(Value = "ALL_CALLS")]
+            AllCalls,
+            
+            /// <summary>
+            /// Enum CallsThatReachedQueue for "CALLS_THAT_REACHED_QUEUE"
+            /// </summary>
+            [EnumMember(Value = "CALLS_THAT_REACHED_QUEUE")]
+            CallsThatReachedQueue
+        }
         
         
         
@@ -56,6 +83,24 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        /// <summary>
+        /// The denominator to be used in determining the compliance abandon rate
+        /// </summary>
+        /// <value>The denominator to be used in determining the compliance abandon rate</value>
+        [DataMember(Name="complianceAbandonRateDenominator", EmitDefaultValue=false)]
+        public ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator { get; set; }
         
         
         
@@ -88,9 +133,25 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="AbandonSeconds">The number of seconds used to determine if a call is abandoned.</param>
         
-        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null)
+        
+        
+        /// <param name="ComplianceAbandonRateDenominator">The denominator to be used in determining the compliance abandon rate.</param>
+        
+        
+        
+        
+        public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -155,6 +216,24 @@ this.MaxCallsPerAgent = MaxCallsPerAgent;
             
             
 this.MaxLineUtilization = MaxLineUtilization;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AbandonSeconds = AbandonSeconds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
             
             
             
@@ -228,6 +307,17 @@ this.MaxLineUtilization = MaxLineUtilization;
         
         
         /// <summary>
+        /// The number of seconds used to determine if a call is abandoned
+        /// </summary>
+        /// <value>The number of seconds used to determine if a call is abandoned</value>
+        [DataMember(Name="abandonSeconds", EmitDefaultValue=false)]
+        public double? AbandonSeconds { get; set; }
+        
+        
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -257,6 +347,10 @@ this.MaxLineUtilization = MaxLineUtilization;
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
             
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
+            
+            sb.Append("  AbandonSeconds: ").Append(AbandonSeconds).Append("\n");
+            
+            sb.Append("  ComplianceAbandonRateDenominator: ").Append(ComplianceAbandonRateDenominator).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -332,6 +426,16 @@ this.MaxLineUtilization = MaxLineUtilization;
                     this.MaxLineUtilization.Equals(other.MaxLineUtilization)
                 ) &&
                 (
+                    this.AbandonSeconds == other.AbandonSeconds ||
+                    this.AbandonSeconds != null &&
+                    this.AbandonSeconds.Equals(other.AbandonSeconds)
+                ) &&
+                (
+                    this.ComplianceAbandonRateDenominator == other.ComplianceAbandonRateDenominator ||
+                    this.ComplianceAbandonRateDenominator != null &&
+                    this.ComplianceAbandonRateDenominator.Equals(other.ComplianceAbandonRateDenominator)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -370,6 +474,12 @@ this.MaxLineUtilization = MaxLineUtilization;
                 
                 if (this.MaxLineUtilization != null)
                     hash = hash * 59 + this.MaxLineUtilization.GetHashCode();
+                
+                if (this.AbandonSeconds != null)
+                    hash = hash * 59 + this.AbandonSeconds.GetHashCode();
+                
+                if (this.ComplianceAbandonRateDenominator != null)
+                    hash = hash * 59 + this.ComplianceAbandonRateDenominator.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

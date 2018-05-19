@@ -40,6 +40,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignDiagnostics" /> class.
@@ -59,8 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         public CampaignDiagnostics(CallableContactsDiagnostic CallableContacts = null, QueueUtilizationDiagnostic QueueUtilizationDiagnostic = null, List<RuleSetDiagnostic> RuleSetDiagnostics = null)
         {
+            
+            
             
             
             
@@ -106,6 +115,8 @@ this.RuleSetDiagnostics = RuleSetDiagnostics;
             
             
             
+            
+            
         }
         
         
@@ -145,6 +156,15 @@ this.RuleSetDiagnostics = RuleSetDiagnostics;
         public int? OutstandingInteractionsCount { get; private set; }
         
         
+        
+        /// <summary>
+        /// Current number of scheduled interactions on the campaign
+        /// </summary>
+        /// <value>Current number of scheduled interactions on the campaign</value>
+        [DataMember(Name="scheduledInteractionsCount", EmitDefaultValue=false)]
+        public int? ScheduledInteractionsCount { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -161,6 +181,8 @@ this.RuleSetDiagnostics = RuleSetDiagnostics;
             sb.Append("  RuleSetDiagnostics: ").Append(RuleSetDiagnostics).Append("\n");
             
             sb.Append("  OutstandingInteractionsCount: ").Append(OutstandingInteractionsCount).Append("\n");
+            
+            sb.Append("  ScheduledInteractionsCount: ").Append(ScheduledInteractionsCount).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -217,6 +239,11 @@ this.RuleSetDiagnostics = RuleSetDiagnostics;
                     this.OutstandingInteractionsCount == other.OutstandingInteractionsCount ||
                     this.OutstandingInteractionsCount != null &&
                     this.OutstandingInteractionsCount.Equals(other.OutstandingInteractionsCount)
+                ) &&
+                (
+                    this.ScheduledInteractionsCount == other.ScheduledInteractionsCount ||
+                    this.ScheduledInteractionsCount != null &&
+                    this.ScheduledInteractionsCount.Equals(other.ScheduledInteractionsCount)
                 );
         }
 
@@ -243,6 +270,9 @@ this.RuleSetDiagnostics = RuleSetDiagnostics;
                 
                 if (this.OutstandingInteractionsCount != null)
                     hash = hash * 59 + this.OutstandingInteractionsCount.GetHashCode();
+                
+                if (this.ScheduledInteractionsCount != null)
+                    hash = hash * 59 + this.ScheduledInteractionsCount.GetHashCode();
                 
                 return hash;
             }

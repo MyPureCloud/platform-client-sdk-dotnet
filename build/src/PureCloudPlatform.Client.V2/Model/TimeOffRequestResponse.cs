@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// TimeOffRequest
+    /// TimeOffRequestResponse
     /// </summary>
     [DataContract]
-    public partial class TimeOffRequest :  IEquatable<TimeOffRequest>
+    public partial class TimeOffRequestResponse :  IEquatable<TimeOffRequestResponse>
     {
         
         
@@ -35,13 +35,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
         /// <summary>
-        /// The administrative status of this TimeOffRequest
+        /// The status of this time off request
         /// </summary>
-        /// <value>The administrative status of this TimeOffRequest</value>
+        /// <value>The status of this time off request</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum StatusEnum
         {
@@ -127,10 +124,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
         /// <summary>
-        /// The administrative status of this TimeOffRequest
+        /// The status of this time off request
         /// </summary>
-        /// <value>The administrative status of this TimeOffRequest</value>
+        /// <value>The status of this time off request</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         
@@ -157,80 +155,82 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="TimeOffRequest" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected TimeOffRequest() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="TimeOffRequest" /> class.
+        /// Initializes a new instance of the <see cref="TimeOffRequestResponse" /> class.
         /// </summary>
         
         
         
         
-        /// <param name="Name">Name.</param>
+        /// <param name="User">The user associated with this time off request.</param>
         
         
         
-        /// <param name="User">The user associated with this TimeOffRequest (required).</param>
+        /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
         
         
         
-        /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day) (required).</param>
+        /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent.</param>
         
         
         
-        /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent (required).</param>
+        /// <param name="ActivityCodeId">The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category.</param>
         
         
         
-        /// <param name="ActivityCodeId">The ID of the activity code associated with this TimeOffRequest (required).</param>
+        /// <param name="Status">The status of this time off request.</param>
         
         
         
-        /// <param name="Status">The administrative status of this TimeOffRequest (required).</param>
+        /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false.</param>
         
         
         
-        /// <param name="PartialDayStartDateTimes">The start date-times for partial day requests.  Required if isFullDayRequest == false.</param>
+        /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true.</param>
         
         
         
-        /// <param name="DailyDurationMinutes">The daily duration of this TimeOffRequest in minutes (required).</param>
+        /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes.</param>
         
         
         
-        /// <param name="Notes">The notes as input by the one who entered the TimeOffRequest.</param>
+        /// <param name="Notes">Notes about the time off request.</param>
         
         
         
-        /// <param name="SubmittedBy">The user who submitted this TimeOffRequest.</param>
+        /// <param name="SubmittedBy">The user who submitted this time off request.</param>
+        
+        
+        
+        /// <param name="SubmittedDate">The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
+        /// <param name="ReviewedBy">The user who reviewed this time off request.</param>
+        
+        
+        
+        /// <param name="ReviewedDate">The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
+        /// <param name="ModifiedBy">The user who last modified this TimeOffRequestResponse.</param>
+        
+        
+        
+        /// <param name="ModifiedDate">The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        
+        /// <param name="Metadata">The version metadata of the time off request.</param>
         
         
         
         
-        
-        /// <param name="ReviewedBy">The user who reviewed this TimeOffRequest.</param>
-        
-        
-        
-        
-        
-        /// <param name="ModifiedBy">The user who last modified this TimeOffRequest.</param>
-        
-        
-        
-        
-        
-        
-        
-        /// <param name="FullDayManagementUnitDates">ISO-8601 date only with no timezones.  Should be interpreted in the Management Unit&#39;s configured time zone.  Required if isFullDayRequest == true.</param>
-        
-        
-        public TimeOffRequest(string Name = null, User User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, string Notes = null, User SubmittedBy = null, User ReviewedBy = null, User ModifiedBy = null, List<string> FullDayManagementUnitDates = null)
+        public TimeOffRequestResponse(User User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, StatusEnum? Status = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, string Notes = null, User SubmittedBy = null, DateTime? SubmittedDate = null, User ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, WfmVersionedEntityMetadata Metadata = null)
         {
             
             
@@ -241,71 +241,26 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "User" is required (not null)
-            if (User == null)
-            {
-                throw new InvalidDataException("User is a required property for TimeOffRequest and cannot be null");
-            }
-            else
-            {
-                this.User = User;
-            }
             
             
             
             
             
-            // to ensure "IsFullDayRequest" is required (not null)
-            if (IsFullDayRequest == null)
-            {
-                throw new InvalidDataException("IsFullDayRequest is a required property for TimeOffRequest and cannot be null");
-            }
-            else
-            {
-                this.IsFullDayRequest = IsFullDayRequest;
-            }
             
             
             
             
             
-            // to ensure "MarkedAsRead" is required (not null)
-            if (MarkedAsRead == null)
-            {
-                throw new InvalidDataException("MarkedAsRead is a required property for TimeOffRequest and cannot be null");
-            }
-            else
-            {
-                this.MarkedAsRead = MarkedAsRead;
-            }
             
             
             
             
             
-            // to ensure "ActivityCodeId" is required (not null)
-            if (ActivityCodeId == null)
-            {
-                throw new InvalidDataException("ActivityCodeId is a required property for TimeOffRequest and cannot be null");
-            }
-            else
-            {
-                this.ActivityCodeId = ActivityCodeId;
-            }
             
             
             
             
             
-            // to ensure "Status" is required (not null)
-            if (Status == null)
-            {
-                throw new InvalidDataException("Status is a required property for TimeOffRequest and cannot be null");
-            }
-            else
-            {
-                this.Status = Status;
-            }
             
             
             
@@ -315,15 +270,6 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            // to ensure "DailyDurationMinutes" is required (not null)
-            if (DailyDurationMinutes == null)
-            {
-                throw new InvalidDataException("DailyDurationMinutes is a required property for TimeOffRequest and cannot be null");
-            }
-            else
-            {
-                this.DailyDurationMinutes = DailyDurationMinutes;
-            }
             
             
             
@@ -362,7 +308,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Name = Name;
+this.User = User;
             
             
             
@@ -371,6 +317,7 @@ this.Name = Name;
             
             
             
+this.IsFullDayRequest = IsFullDayRequest;
             
             
             
@@ -379,10 +326,25 @@ this.Name = Name;
             
             
             
+this.MarkedAsRead = MarkedAsRead;
             
             
             
             
+            
+            
+            
+            
+this.ActivityCodeId = ActivityCodeId;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Status = Status;
             
             
             
@@ -396,6 +358,20 @@ this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             
             
             
+            
+            
+            
+            
+this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            
+            
+            
+            
+            
+            
+            
+            
+this.DailyDurationMinutes = DailyDurationMinutes;
             
             
             
@@ -422,11 +398,25 @@ this.SubmittedBy = SubmittedBy;
             
             
             
+this.SubmittedDate = SubmittedDate;
+            
+            
+            
+            
+            
+            
             
             
 this.ReviewedBy = ReviewedBy;
             
             
+            
+            
+            
+            
+            
+            
+this.ReviewedDate = ReviewedDate;
             
             
             
@@ -444,11 +434,18 @@ this.ModifiedBy = ModifiedBy;
             
             
             
+this.ModifiedDate = ModifiedDate;
             
             
             
             
-this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            
+            
+            
+            
+this.Metadata = Metadata;
+            
+            
             
             
             
@@ -467,17 +464,9 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         
         
         /// <summary>
-        /// Gets or Sets Name
+        /// The user associated with this time off request
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The user associated with this TimeOffRequest
-        /// </summary>
-        /// <value>The user associated with this TimeOffRequest</value>
+        /// <value>The user associated with this time off request</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public User User { get; set; }
         
@@ -502,9 +491,9 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         
         
         /// <summary>
-        /// The ID of the activity code associated with this TimeOffRequest
+        /// The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category
         /// </summary>
-        /// <value>The ID of the activity code associated with this TimeOffRequest</value>
+        /// <value>The ID of the activity code associated with this time off request. Activity code must be of the TimeOff category</value>
         [DataMember(Name="activityCodeId", EmitDefaultValue=false)]
         public string ActivityCodeId { get; set; }
         
@@ -513,36 +502,45 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         
         
         /// <summary>
-        /// The start date-times for partial day requests.  Required if isFullDayRequest == false
+        /// A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false
         /// </summary>
-        /// <value>The start date-times for partial day requests.  Required if isFullDayRequest == false</value>
+        /// <value>A set of start date-times in ISO-8601 format for partial day requests.  Will be not empty if isFullDayRequest == false</value>
         [DataMember(Name="partialDayStartDateTimes", EmitDefaultValue=false)]
         public List<DateTime?> PartialDayStartDateTimes { get; set; }
         
         
         
         /// <summary>
-        /// The daily duration of this TimeOffRequest in minutes
+        /// A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true
         /// </summary>
-        /// <value>The daily duration of this TimeOffRequest in minutes</value>
+        /// <value>A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.  Will be not empty if isFullDayRequest == true</value>
+        [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
+        public List<string> FullDayManagementUnitDates { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The daily duration of this time off request in minutes
+        /// </summary>
+        /// <value>The daily duration of this time off request in minutes</value>
         [DataMember(Name="dailyDurationMinutes", EmitDefaultValue=false)]
         public int? DailyDurationMinutes { get; set; }
         
         
         
         /// <summary>
-        /// The notes as input by the one who entered the TimeOffRequest
+        /// Notes about the time off request
         /// </summary>
-        /// <value>The notes as input by the one who entered the TimeOffRequest</value>
+        /// <value>Notes about the time off request</value>
         [DataMember(Name="notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
         
         
         
         /// <summary>
-        /// The user who submitted this TimeOffRequest
+        /// The user who submitted this time off request
         /// </summary>
-        /// <value>The user who submitted this TimeOffRequest</value>
+        /// <value>The user who submitted this time off request</value>
         [DataMember(Name="submittedBy", EmitDefaultValue=false)]
         public User SubmittedBy { get; set; }
         
@@ -553,14 +551,14 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         /// </summary>
         /// <value>The timestamp when this request was submitted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="submittedDate", EmitDefaultValue=false)]
-        public DateTime? SubmittedDate { get; private set; }
+        public DateTime? SubmittedDate { get; set; }
         
         
         
         /// <summary>
-        /// The user who reviewed this TimeOffRequest
+        /// The user who reviewed this time off request
         /// </summary>
-        /// <value>The user who reviewed this TimeOffRequest</value>
+        /// <value>The user who reviewed this time off request</value>
         [DataMember(Name="reviewedBy", EmitDefaultValue=false)]
         public User ReviewedBy { get; set; }
         
@@ -571,16 +569,16 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         /// </summary>
         /// <value>The timestamp when this request was reviewed. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="reviewedDate", EmitDefaultValue=false)]
-        public DateTime? ReviewedDate { get; private set; }
+        public DateTime? ReviewedDate { get; set; }
         
         
         
         /// <summary>
-        /// The user who last modified this TimeOffRequest
+        /// The user who last modified this TimeOffRequestResponse
         /// </summary>
-        /// <value>The user who last modified this TimeOffRequest</value>
+        /// <value>The user who last modified this TimeOffRequestResponse</value>
         [DataMember(Name="modifiedBy", EmitDefaultValue=false)]
-        public User ModifiedBy { get; set; }
+        public UserReference ModifiedBy { get; set; }
         
         
         
@@ -589,7 +587,16 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         /// </summary>
         /// <value>The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
         [DataMember(Name="modifiedDate", EmitDefaultValue=false)]
-        public DateTime? ModifiedDate { get; private set; }
+        public DateTime? ModifiedDate { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The version metadata of the time off request
+        /// </summary>
+        /// <value>The version metadata of the time off request</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
         
         
         
@@ -601,15 +608,6 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         public string SelfUri { get; private set; }
         
         
-        
-        /// <summary>
-        /// ISO-8601 date only with no timezones.  Should be interpreted in the Management Unit&#39;s configured time zone.  Required if isFullDayRequest == true
-        /// </summary>
-        /// <value>ISO-8601 date only with no timezones.  Should be interpreted in the Management Unit&#39;s configured time zone.  Required if isFullDayRequest == true</value>
-        [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
-        public List<string> FullDayManagementUnitDates { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -617,11 +615,9 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class TimeOffRequest {\n");
+            sb.Append("class TimeOffRequestResponse {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
-            sb.Append("  Name: ").Append(Name).Append("\n");
             
             sb.Append("  User: ").Append(User).Append("\n");
             
@@ -634,6 +630,8 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             sb.Append("  Status: ").Append(Status).Append("\n");
             
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
+            
+            sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
             
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
             
@@ -651,9 +649,9 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
             
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             
-            sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -676,15 +674,15 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as TimeOffRequest);
+            return this.Equals(obj as TimeOffRequestResponse);
         }
 
         /// <summary>
-        /// Returns true if TimeOffRequest instances are equal
+        /// Returns true if TimeOffRequestResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of TimeOffRequest to be compared</param>
+        /// <param name="other">Instance of TimeOffRequestResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(TimeOffRequest other)
+        public bool Equals(TimeOffRequestResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -695,11 +693,6 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.User == other.User ||
@@ -730,6 +723,11 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
                     this.PartialDayStartDateTimes == other.PartialDayStartDateTimes ||
                     this.PartialDayStartDateTimes != null &&
                     this.PartialDayStartDateTimes.SequenceEqual(other.PartialDayStartDateTimes)
+                ) &&
+                (
+                    this.FullDayManagementUnitDates == other.FullDayManagementUnitDates ||
+                    this.FullDayManagementUnitDates != null &&
+                    this.FullDayManagementUnitDates.SequenceEqual(other.FullDayManagementUnitDates)
                 ) &&
                 (
                     this.DailyDurationMinutes == other.DailyDurationMinutes ||
@@ -772,14 +770,14 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
                     this.ModifiedDate.Equals(other.ModifiedDate)
                 ) &&
                 (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.FullDayManagementUnitDates == other.FullDayManagementUnitDates ||
-                    this.FullDayManagementUnitDates != null &&
-                    this.FullDayManagementUnitDates.SequenceEqual(other.FullDayManagementUnitDates)
                 );
         }
 
@@ -798,9 +796,6 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
                 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-                
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
                 
@@ -818,6 +813,9 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
                 
                 if (this.PartialDayStartDateTimes != null)
                     hash = hash * 59 + this.PartialDayStartDateTimes.GetHashCode();
+                
+                if (this.FullDayManagementUnitDates != null)
+                    hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
                 
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();
@@ -843,11 +841,11 @@ this.FullDayManagementUnitDates = FullDayManagementUnitDates;
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
                 
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
+                
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-                
-                if (this.FullDayManagementUnitDates != null)
-                    hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
                 
                 return hash;
             }

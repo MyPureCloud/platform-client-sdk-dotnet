@@ -40,9 +40,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Id">Id.</param>
         
-        public Channel(string ConnectUri = null)
+        
+        public Channel(string ConnectUri = null, string Id = null)
         {
+            
+            
             
             
             
@@ -62,6 +66,13 @@ this.ConnectUri = ConnectUri;
             
             
             
+            
+            
+this.Id = Id;
+            
+            
+            
+            
         }
         
         
@@ -75,11 +86,10 @@ this.ConnectUri = ConnectUri;
         
         
         /// <summary>
-        /// The channel identifier.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The channel identifier.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         /// <summary>

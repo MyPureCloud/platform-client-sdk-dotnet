@@ -30,6 +30,27 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+    
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UserSchedule" /> class.
+        /// </summary>
+        [JsonConstructorAttribute]
+        protected UserSchedule() { }
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserSchedule" /> class.
@@ -43,12 +64,42 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FullDayTimeOffMarkers">Markers to indicate a full day time off request, relative to the management unit time zone.</param>
         
         
-        public UserSchedule(List<UserScheduleShift> Shifts = null, List<UserScheduleFullDayTimeOffMarker> FullDayTimeOffMarkers = null)
+        
+        /// <param name="Delete">If marked true for updating an existing user schedule, it will be deleted.</param>
+        
+        
+        
+        /// <param name="Metadata">Version metadata for this schedule (required).</param>
+        
+        
+        
+        
+        public UserSchedule(List<UserScheduleShift> Shifts = null, List<UserScheduleFullDayTimeOffMarker> FullDayTimeOffMarkers = null, bool? Delete = null, WfmVersionedEntityMetadata Metadata = null)
         {
             
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            // to ensure "Metadata" is required (not null)
+            if (Metadata == null)
+            {
+                throw new InvalidDataException("Metadata is a required property for UserSchedule and cannot be null");
+            }
+            else
+            {
+                this.Metadata = Metadata;
+            }
             
             
             
@@ -69,6 +120,21 @@ this.Shifts = Shifts;
             
             
 this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Delete = Delete;
+            
+            
+            
+            
+            
+            
             
             
             
@@ -94,6 +160,33 @@ this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
         public List<UserScheduleFullDayTimeOffMarker> FullDayTimeOffMarkers { get; set; }
         
         
+        
+        /// <summary>
+        /// If marked true for updating an existing user schedule, it will be deleted
+        /// </summary>
+        /// <value>If marked true for updating an existing user schedule, it will be deleted</value>
+        [DataMember(Name="delete", EmitDefaultValue=false)]
+        public bool? Delete { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Version metadata for this schedule
+        /// </summary>
+        /// <value>Version metadata for this schedule</value>
+        [DataMember(Name="metadata", EmitDefaultValue=false)]
+        public WfmVersionedEntityMetadata Metadata { get; set; }
+        
+        
+        
+        /// <summary>
+        /// ID of the work plan associated with the user during schedule creation
+        /// </summary>
+        /// <value>ID of the work plan associated with the user during schedule creation</value>
+        [DataMember(Name="workPlanId", EmitDefaultValue=false)]
+        public string WorkPlanId { get; private set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,6 +199,12 @@ this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
             sb.Append("  Shifts: ").Append(Shifts).Append("\n");
             
             sb.Append("  FullDayTimeOffMarkers: ").Append(FullDayTimeOffMarkers).Append("\n");
+            
+            sb.Append("  Delete: ").Append(Delete).Append("\n");
+            
+            sb.Append("  Metadata: ").Append(Metadata).Append("\n");
+            
+            sb.Append("  WorkPlanId: ").Append(WorkPlanId).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +251,21 @@ this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
                     this.FullDayTimeOffMarkers == other.FullDayTimeOffMarkers ||
                     this.FullDayTimeOffMarkers != null &&
                     this.FullDayTimeOffMarkers.SequenceEqual(other.FullDayTimeOffMarkers)
+                ) &&
+                (
+                    this.Delete == other.Delete ||
+                    this.Delete != null &&
+                    this.Delete.Equals(other.Delete)
+                ) &&
+                (
+                    this.Metadata == other.Metadata ||
+                    this.Metadata != null &&
+                    this.Metadata.Equals(other.Metadata)
+                ) &&
+                (
+                    this.WorkPlanId == other.WorkPlanId ||
+                    this.WorkPlanId != null &&
+                    this.WorkPlanId.Equals(other.WorkPlanId)
                 );
         }
 
@@ -172,6 +286,15 @@ this.FullDayTimeOffMarkers = FullDayTimeOffMarkers;
                 
                 if (this.FullDayTimeOffMarkers != null)
                     hash = hash * 59 + this.FullDayTimeOffMarkers.GetHashCode();
+                
+                if (this.Delete != null)
+                    hash = hash * 59 + this.Delete.GetHashCode();
+                
+                if (this.Metadata != null)
+                    hash = hash * 59 + this.Metadata.GetHashCode();
+                
+                if (this.WorkPlanId != null)
+                    hash = hash * 59 + this.WorkPlanId.GetHashCode();
                 
                 return hash;
             }

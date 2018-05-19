@@ -50,6 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="UserScheduleActivity" /> class.
@@ -79,8 +84,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsDstFallback">Whether this activity spans a DST fallback.</param>
         
         
-        public UserScheduleActivity(string ActivityCodeId = null, DateTime? StartDate = null, int? LengthInMinutes = null, string Description = null, bool? CountsAsPaidTime = null, bool? IsDstFallback = null)
+        
+        /// <param name="TimeOffRequestId">Time off request id of this activity.</param>
+        
+        
+        public UserScheduleActivity(string ActivityCodeId = null, DateTime? StartDate = null, int? LengthInMinutes = null, string Description = null, bool? CountsAsPaidTime = null, bool? IsDstFallback = null, string TimeOffRequestId = null)
         {
+            
+            
+            
+            
             
             
             
@@ -161,6 +174,15 @@ this.IsDstFallback = IsDstFallback;
             
             
             
+            
+            
+            
+            
+this.TimeOffRequestId = TimeOffRequestId;
+            
+            
+            
+            
         }
         
         
@@ -218,6 +240,15 @@ this.IsDstFallback = IsDstFallback;
         public bool? IsDstFallback { get; set; }
         
         
+        
+        /// <summary>
+        /// Time off request id of this activity
+        /// </summary>
+        /// <value>Time off request id of this activity</value>
+        [DataMember(Name="timeOffRequestId", EmitDefaultValue=false)]
+        public string TimeOffRequestId { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -238,6 +269,8 @@ this.IsDstFallback = IsDstFallback;
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
             
             sb.Append("  IsDstFallback: ").Append(IsDstFallback).Append("\n");
+            
+            sb.Append("  TimeOffRequestId: ").Append(TimeOffRequestId).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -304,6 +337,11 @@ this.IsDstFallback = IsDstFallback;
                     this.IsDstFallback == other.IsDstFallback ||
                     this.IsDstFallback != null &&
                     this.IsDstFallback.Equals(other.IsDstFallback)
+                ) &&
+                (
+                    this.TimeOffRequestId == other.TimeOffRequestId ||
+                    this.TimeOffRequestId != null &&
+                    this.TimeOffRequestId.Equals(other.TimeOffRequestId)
                 );
         }
 
@@ -336,6 +374,9 @@ this.IsDstFallback = IsDstFallback;
                 
                 if (this.IsDstFallback != null)
                     hash = hash * 59 + this.IsDstFallback.GetHashCode();
+                
+                if (this.TimeOffRequestId != null)
+                    hash = hash * 59 + this.TimeOffRequestId.GetHashCode();
                 
                 return hash;
             }

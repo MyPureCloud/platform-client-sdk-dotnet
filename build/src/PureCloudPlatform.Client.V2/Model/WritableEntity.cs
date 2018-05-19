@@ -13,16 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Represents the optional integration registry support for a listing
+    /// WritableEntity
     /// </summary>
     [DataContract]
-    public partial class AppFoundryListingRegistryInfo :  IEquatable<AppFoundryListingRegistryInfo>
+    public partial class WritableEntity :  IEquatable<WritableEntity>
     {
-        
-        
-        
-        
-        
         
         
         
@@ -32,23 +27,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AppFoundryListingRegistryInfo" /> class.
+        /// Initializes a new instance of the <see cref="WritableEntity" /> class.
         /// </summary>
         
         
-        /// <param name="Id">The ID of the integration registry entry that is represented by the listing.</param>
+        /// <param name="Id">The globally unique identifier for the object..</param>
         
         
-        
-        /// <param name="Regions">Supported regions where the listing may be installed.</param>
-        
-        
-        public AppFoundryListingRegistryInfo(string Id = null, List<string> Regions = null)
+        public WritableEntity(string Id = null)
         {
-            
-            
-            
-            
             
             
             
@@ -64,34 +51,16 @@ this.Id = Id;
             
             
             
-            
-            
-            
-            
-this.Regions = Regions;
-            
-            
-            
-            
         }
         
         
         
         /// <summary>
-        /// The ID of the integration registry entry that is represented by the listing
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The ID of the integration registry entry that is represented by the listing</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Supported regions where the listing may be installed
-        /// </summary>
-        /// <value>Supported regions where the listing may be installed</value>
-        [DataMember(Name="regions", EmitDefaultValue=false)]
-        public List<string> Regions { get; set; }
         
         
         /// <summary>
@@ -101,11 +70,9 @@ this.Regions = Regions;
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AppFoundryListingRegistryInfo {\n");
+            sb.Append("class WritableEntity {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
-            
-            sb.Append("  Regions: ").Append(Regions).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -128,15 +95,15 @@ this.Regions = Regions;
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AppFoundryListingRegistryInfo);
+            return this.Equals(obj as WritableEntity);
         }
 
         /// <summary>
-        /// Returns true if AppFoundryListingRegistryInfo instances are equal
+        /// Returns true if WritableEntity instances are equal
         /// </summary>
-        /// <param name="other">Instance of AppFoundryListingRegistryInfo to be compared</param>
+        /// <param name="other">Instance of WritableEntity to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AppFoundryListingRegistryInfo other)
+        public bool Equals(WritableEntity other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -147,11 +114,6 @@ this.Regions = Regions;
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Regions == other.Regions ||
-                    this.Regions != null &&
-                    this.Regions.SequenceEqual(other.Regions)
                 );
         }
 
@@ -169,9 +131,6 @@ this.Regions = Regions;
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.Regions != null)
-                    hash = hash * 59 + this.Regions.GetHashCode();
                 
                 return hash;
             }

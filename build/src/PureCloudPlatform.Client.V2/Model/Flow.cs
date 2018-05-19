@@ -29,6 +29,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -144,6 +147,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -197,6 +202,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Division">Division.</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
         
         
@@ -246,7 +255,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Flow(string Name = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        public Flow(string Name = null, string Description = null, AuthzDivision Division = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
             
             
@@ -330,7 +339,20 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
 this.Description = Description;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Division = Division;
             
             
             
@@ -475,6 +497,14 @@ this.CurrentOperation = CurrentOperation;
         
         
         
+        /// <summary>
+        /// Gets or Sets Division
+        /// </summary>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public AuthzDivision Division { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -590,6 +620,8 @@ this.CurrentOperation = CurrentOperation;
             
             sb.Append("  Description: ").Append(Description).Append("\n");
             
+            sb.Append("  Division: ").Append(Division).Append("\n");
+            
             sb.Append("  Type: ").Append(Type).Append("\n");
             
             sb.Append("  LockedUser: ").Append(LockedUser).Append("\n");
@@ -666,6 +698,11 @@ this.CurrentOperation = CurrentOperation;
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.Type == other.Type ||
@@ -754,6 +791,9 @@ this.CurrentOperation = CurrentOperation;
                 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

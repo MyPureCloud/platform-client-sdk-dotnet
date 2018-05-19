@@ -50,6 +50,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Id">Id.</param>
+        
         
         
         /// <param name="RequiresPermissions">RequiresPermissions.</param>
@@ -59,8 +61,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Schema">Schema.</param>
         
         
-        public AvailableTopic(string Description = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null)
+        public AvailableTopic(string Description = null, string Id = null, List<string> RequiresPermissions = null, Dictionary<string, Object> Schema = null)
         {
+            
+            
             
             
             
@@ -84,6 +88,13 @@ namespace PureCloudPlatform.Client.V2.Model
 this.Description = Description;
             
             
+            
+            
+            
+            
+            
+            
+this.Id = Id;
             
             
             
@@ -119,11 +130,10 @@ this.Schema = Schema;
         
         
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
         
         
         

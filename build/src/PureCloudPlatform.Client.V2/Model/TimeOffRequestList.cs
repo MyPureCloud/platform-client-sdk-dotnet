@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public TimeOffRequestList(string Name = null, List<TimeOffRequest> TimeOffRequests = null)
+        public TimeOffRequestList(string Name = null, List<TimeOffRequestResponse> TimeOffRequests = null)
         {
             
             
@@ -120,7 +120,7 @@ this.TimeOffRequests = TimeOffRequests;
         /// Gets or Sets TimeOffRequests
         /// </summary>
         [DataMember(Name="timeOffRequests", EmitDefaultValue=false)]
-        public List<TimeOffRequest> TimeOffRequests { get; set; }
+        public List<TimeOffRequestResponse> TimeOffRequests { get; set; }
         
         
         

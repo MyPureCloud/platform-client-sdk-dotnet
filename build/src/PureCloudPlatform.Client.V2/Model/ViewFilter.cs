@@ -182,6 +182,52 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// Gets or Sets MessageTypes
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MessageTypesEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Sms for "sms"
+            /// </summary>
+            [EnumMember(Value = "sms")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Twitter for "twitter"
+            /// </summary>
+            [EnumMember(Value = "twitter")]
+            Twitter,
+            
+            /// <summary>
+            /// Enum Line for "line"
+            /// </summary>
+            [EnumMember(Value = "line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Facebook for "facebook"
+            /// </summary>
+            [EnumMember(Value = "facebook")]
+            Facebook
+        }
+        
+        
+        
+        
+        
+        
+        
+        
         
         
         
@@ -317,8 +363,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Abandoned">Indicates filtering for abandons.</param>
         
         
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> LanguageIds = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null)
+        
+        /// <param name="MessageTypes">The message media types used to filter the view.</param>
+        
+        
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> LanguageIds = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null)
         {
+            
+            
+            
+            
             
             
             
@@ -607,6 +661,15 @@ this.Abandoned = Abandoned;
             
             
             
+            
+            
+            
+            
+this.MessageTypes = MessageTypes;
+            
+            
+            
+            
         }
         
         
@@ -808,6 +871,15 @@ this.Abandoned = Abandoned;
         public bool? Abandoned { get; set; }
         
         
+        
+        /// <summary>
+        /// The message media types used to filter the view
+        /// </summary>
+        /// <value>The message media types used to filter the view</value>
+        [DataMember(Name="messageTypes", EmitDefaultValue=false)]
+        public List<MessageTypesEnum> MessageTypes { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -860,6 +932,8 @@ this.Abandoned = Abandoned;
             sb.Append("  Transferred: ").Append(Transferred).Append("\n");
             
             sb.Append("  Abandoned: ").Append(Abandoned).Append("\n");
+            
+            sb.Append("  MessageTypes: ").Append(MessageTypes).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -1006,6 +1080,11 @@ this.Abandoned = Abandoned;
                     this.Abandoned == other.Abandoned ||
                     this.Abandoned != null &&
                     this.Abandoned.Equals(other.Abandoned)
+                ) &&
+                (
+                    this.MessageTypes == other.MessageTypes ||
+                    this.MessageTypes != null &&
+                    this.MessageTypes.SequenceEqual(other.MessageTypes)
                 );
         }
 
@@ -1086,6 +1165,9 @@ this.Abandoned = Abandoned;
                 
                 if (this.Abandoned != null)
                     hash = hash * 59 + this.Abandoned.GetHashCode();
+                
+                if (this.MessageTypes != null)
+                    hash = hash * 59 + this.MessageTypes.GetHashCode();
                 
                 return hash;
             }

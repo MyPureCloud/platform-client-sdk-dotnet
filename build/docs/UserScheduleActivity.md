@@ -13,6 +13,7 @@ title: UserScheduleActivity
 | **Description** | **string** | Description for this activity | [optional] |
 | **CountsAsPaidTime** | **bool?** | Whether this activity is paid | [optional] |
 | **IsDstFallback** | **bool?** | Whether this activity spans a DST fallback | [optional] |
+| **TimeOffRequestId** | **string** | Time off request id of this activity | [optional] |
 {: class="table table-striped"}
 
 

@@ -199,6 +199,31 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FlaggedReasonEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum General for "general"
+            /// </summary>
+            [EnumMember(Value = "general")]
+            General
+        }
+        
+        
+        
+        
         
         
         
@@ -245,6 +270,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        /// <summary>
+        /// The reason specifying why participant flagged the conversation.
+        /// </summary>
+        /// <value>The reason specifying why participant flagged the conversation.</value>
+        [DataMember(Name="flaggedReason", EmitDefaultValue=false)]
+        public FlaggedReasonEnum? FlaggedReason { get; set; }
         
         
     
@@ -320,8 +354,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SipResponseCodes">Indicates SIP Response codes associated with the participant.</param>
         
         
-        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null, bool? DidInteract = null, List<long?> SipResponseCodes = null)
+        
+        /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
+        
+        
+        public CallHistoryParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? EndTime = null, string Purpose = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, User User = null, Queue Queue = null, Group Group = null, DisconnectTypeEnum? DisconnectType = null, ExternalContact ExternalContact = null, ExternalOrganization ExternalOrganization = null, bool? DidInteract = null, List<long?> SipResponseCodes = null, FlaggedReasonEnum? FlaggedReason = null)
         {
+            
+            
+            
+            
             
             
             
@@ -545,6 +587,15 @@ this.SipResponseCodes = SipResponseCodes;
             
             
             
+            
+            
+            
+            
+this.FlaggedReason = FlaggedReason;
+            
+            
+            
+            
         }
         
         
@@ -687,6 +738,8 @@ this.SipResponseCodes = SipResponseCodes;
         public List<long?> SipResponseCodes { get; set; }
         
         
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -729,6 +782,8 @@ this.SipResponseCodes = SipResponseCodes;
             sb.Append("  DidInteract: ").Append(DidInteract).Append("\n");
             
             sb.Append("  SipResponseCodes: ").Append(SipResponseCodes).Append("\n");
+            
+            sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -850,6 +905,11 @@ this.SipResponseCodes = SipResponseCodes;
                     this.SipResponseCodes == other.SipResponseCodes ||
                     this.SipResponseCodes != null &&
                     this.SipResponseCodes.SequenceEqual(other.SipResponseCodes)
+                ) &&
+                (
+                    this.FlaggedReason == other.FlaggedReason ||
+                    this.FlaggedReason != null &&
+                    this.FlaggedReason.Equals(other.FlaggedReason)
                 );
         }
 
@@ -915,6 +975,9 @@ this.SipResponseCodes = SipResponseCodes;
                 
                 if (this.SipResponseCodes != null)
                     hash = hash * 59 + this.SipResponseCodes.GetHashCode();
+                
+                if (this.FlaggedReason != null)
+                    hash = hash * 59 + this.FlaggedReason.GetHashCode();
                 
                 return hash;
             }

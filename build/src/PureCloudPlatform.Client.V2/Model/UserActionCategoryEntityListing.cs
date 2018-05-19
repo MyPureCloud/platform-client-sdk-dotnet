@@ -100,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="LastUri">LastUri.</param>
+        /// <param name="PreviousUri">PreviousUri.</param>
         
         
         
@@ -108,14 +108,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="PreviousUri">PreviousUri.</param>
+        /// <param name="LastUri">LastUri.</param>
         
         
         
         /// <param name="PageCount">PageCount.</param>
         
         
-        public UserActionCategoryEntityListing(List<UserActionCategory> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string LastUri = null, string NextUri = null, string PreviousUri = null, int? PageCount = null)
+        public UserActionCategoryEntityListing(List<UserActionCategory> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string SelfUri = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, int? PageCount = null)
         {
             
             
@@ -217,7 +217,7 @@ this.FirstUri = FirstUri;
             
             
             
-this.LastUri = LastUri;
+this.PreviousUri = PreviousUri;
             
             
             
@@ -235,7 +235,7 @@ this.NextUri = NextUri;
             
             
             
-this.PreviousUri = PreviousUri;
+this.LastUri = LastUri;
             
             
             
@@ -302,10 +302,10 @@ this.PageCount = PageCount;
         
         
         /// <summary>
-        /// Gets or Sets LastUri
+        /// Gets or Sets PreviousUri
         /// </summary>
-        [DataMember(Name="lastUri", EmitDefaultValue=false)]
-        public string LastUri { get; set; }
+        [DataMember(Name="previousUri", EmitDefaultValue=false)]
+        public string PreviousUri { get; set; }
         
         
         
@@ -318,10 +318,10 @@ this.PageCount = PageCount;
         
         
         /// <summary>
-        /// Gets or Sets PreviousUri
+        /// Gets or Sets LastUri
         /// </summary>
-        [DataMember(Name="previousUri", EmitDefaultValue=false)]
-        public string PreviousUri { get; set; }
+        [DataMember(Name="lastUri", EmitDefaultValue=false)]
+        public string LastUri { get; set; }
         
         
         
@@ -353,11 +353,11 @@ this.PageCount = PageCount;
             
             sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
             
-            sb.Append("  LastUri: ").Append(LastUri).Append("\n");
+            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
             
-            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
+            sb.Append("  LastUri: ").Append(LastUri).Append("\n");
             
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             
@@ -428,9 +428,9 @@ this.PageCount = PageCount;
                     this.FirstUri.Equals(other.FirstUri)
                 ) &&
                 (
-                    this.LastUri == other.LastUri ||
-                    this.LastUri != null &&
-                    this.LastUri.Equals(other.LastUri)
+                    this.PreviousUri == other.PreviousUri ||
+                    this.PreviousUri != null &&
+                    this.PreviousUri.Equals(other.PreviousUri)
                 ) &&
                 (
                     this.NextUri == other.NextUri ||
@@ -438,9 +438,9 @@ this.PageCount = PageCount;
                     this.NextUri.Equals(other.NextUri)
                 ) &&
                 (
-                    this.PreviousUri == other.PreviousUri ||
-                    this.PreviousUri != null &&
-                    this.PreviousUri.Equals(other.PreviousUri)
+                    this.LastUri == other.LastUri ||
+                    this.LastUri != null &&
+                    this.LastUri.Equals(other.LastUri)
                 ) &&
                 (
                     this.PageCount == other.PageCount ||
@@ -479,14 +479,14 @@ this.PageCount = PageCount;
                 if (this.FirstUri != null)
                     hash = hash * 59 + this.FirstUri.GetHashCode();
                 
-                if (this.LastUri != null)
-                    hash = hash * 59 + this.LastUri.GetHashCode();
+                if (this.PreviousUri != null)
+                    hash = hash * 59 + this.PreviousUri.GetHashCode();
                 
                 if (this.NextUri != null)
                     hash = hash * 59 + this.NextUri.GetHashCode();
                 
-                if (this.PreviousUri != null)
-                    hash = hash * 59 + this.PreviousUri.GetHashCode();
+                if (this.LastUri != null)
+                    hash = hash * 59 + this.LastUri.GetHashCode();
                 
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();
