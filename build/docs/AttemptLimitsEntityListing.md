@@ -12,10 +12,10 @@ title: AttemptLimitsEntityListing
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 {: class="table table-striped"}
 

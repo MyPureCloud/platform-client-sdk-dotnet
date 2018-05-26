@@ -250,15 +250,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Division">The division to which this entity belongs..</param>
+        
+        
+        
         /// <param name="Description">The queue description..</param>
         
         
         
         /// <param name="Version">The current version of the queue..</param>
-        
-        
-        
-        /// <param name="Division">The division to which this queue belongs..</param>
         
         
         
@@ -343,7 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public UserQueue(string Name = null, string Description = null, int? Version = null, UriReference Division = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
+        public UserQueue(string Name = null, UriReference Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, bool? Joined = null, int? MemberCount = null)
         {
             
             
@@ -492,6 +492,15 @@ this.Name = Name;
             
             
             
+this.Division = Division;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Description = Description;
             
             
@@ -502,15 +511,6 @@ this.Description = Description;
             
             
 this.Version = Version;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Division = Division;
             
             
             
@@ -704,6 +704,15 @@ this.MemberCount = MemberCount;
         
         
         /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public UriReference Division { get; set; }
+        
+        
+        
+        /// <summary>
         /// The queue description.
         /// </summary>
         /// <value>The queue description.</value>
@@ -718,15 +727,6 @@ this.MemberCount = MemberCount;
         /// <value>The current version of the queue.</value>
         [DataMember(Name="version", EmitDefaultValue=false)]
         public int? Version { get; set; }
-        
-        
-        
-        /// <summary>
-        /// The division to which this queue belongs.
-        /// </summary>
-        /// <value>The division to which this queue belongs.</value>
-        [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
         
         
         
@@ -914,11 +914,11 @@ this.MemberCount = MemberCount;
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             
+            sb.Append("  Division: ").Append(Division).Append("\n");
+            
             sb.Append("  Description: ").Append(Description).Append("\n");
             
             sb.Append("  Version: ").Append(Version).Append("\n");
-            
-            sb.Append("  Division: ").Append(Division).Append("\n");
             
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             
@@ -1009,6 +1009,11 @@ this.MemberCount = MemberCount;
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -1017,11 +1022,6 @@ this.MemberCount = MemberCount;
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.Division == other.Division ||
-                    this.Division != null &&
-                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.DateCreated == other.DateCreated ||
@@ -1148,14 +1148,14 @@ this.MemberCount = MemberCount;
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
+                
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-                
-                if (this.Division != null)
-                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

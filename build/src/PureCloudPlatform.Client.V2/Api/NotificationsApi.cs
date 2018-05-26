@@ -89,8 +89,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ChannelEntityListing</returns>
-        ChannelEntityListing GetNotificationsChannels ();
+        ChannelEntityListing GetNotificationsChannels (string includechannels = null);
 
         /// <summary>
         /// The list of existing channels
@@ -99,8 +100,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ApiResponse of ChannelEntityListing</returns>
-        ApiResponse<ChannelEntityListing> GetNotificationsChannelsWithHttpInfo ();
+        ApiResponse<ChannelEntityListing> GetNotificationsChannelsWithHttpInfo (string includechannels = null);
         
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -130,7 +132,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Channel</returns>
@@ -140,7 +142,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
@@ -247,8 +249,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ChannelEntityListing</returns>
-        System.Threading.Tasks.Task<ChannelEntityListing> GetNotificationsChannelsAsync ();
+        System.Threading.Tasks.Task<ChannelEntityListing> GetNotificationsChannelsAsync (string includechannels = null);
 
         /// <summary>
         /// The list of existing channels
@@ -257,8 +260,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo (string includechannels = null);
         
         /// <summary>
         /// Add a list of subscriptions to the existing list of subscriptions
@@ -288,7 +292,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Channel</returns>
@@ -298,7 +302,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new channel
         /// </summary>
         /// <remarks>
-        /// There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>
@@ -988,10 +992,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The list of existing channels 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ChannelEntityListing</returns>
-        public ChannelEntityListing GetNotificationsChannels ()
+        public ChannelEntityListing GetNotificationsChannels (string includechannels = null)
         {
-             ApiResponse<ChannelEntityListing> localVarResponse = GetNotificationsChannelsWithHttpInfo();
+             ApiResponse<ChannelEntityListing> localVarResponse = GetNotificationsChannelsWithHttpInfo(includechannels);
              return localVarResponse.Data;
         }
 
@@ -999,8 +1004,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The list of existing channels 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>ApiResponse of ChannelEntityListing</returns>
-        public ApiResponse< ChannelEntityListing > GetNotificationsChannelsWithHttpInfo ()
+        public ApiResponse< ChannelEntityListing > GetNotificationsChannelsWithHttpInfo (string includechannels = null)
         { 
 
             var localVarPath = "/api/v2/notifications/channels";
@@ -1036,6 +1042,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (includechannels != null) localVarQueryParams.Add(new Tuple<string, string>("includechannels", this.Configuration.ApiClient.ParameterToString(includechannels)));
 
             // Header params
 
@@ -1076,10 +1083,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The list of existing channels 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ChannelEntityListing</returns>
-        public async System.Threading.Tasks.Task<ChannelEntityListing> GetNotificationsChannelsAsync ()
+        public async System.Threading.Tasks.Task<ChannelEntityListing> GetNotificationsChannelsAsync (string includechannels = null)
         {
-             ApiResponse<ChannelEntityListing> localVarResponse = await GetNotificationsChannelsAsyncWithHttpInfo();
+             ApiResponse<ChannelEntityListing> localVarResponse = await GetNotificationsChannelsAsyncWithHttpInfo(includechannels);
              return localVarResponse.Data;
 
         }
@@ -1088,8 +1096,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// The list of existing channels 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="includechannels">Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional, default to token)</param>
         /// <returns>Task of ApiResponse (ChannelEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo (string includechannels = null)
         { 
 
             var localVarPath = "/api/v2/notifications/channels";
@@ -1125,6 +1134,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (includechannels != null) localVarQueryParams.Add(new Tuple<string, string>("includechannels", this.Configuration.ApiClient.ParameterToString(includechannels)));
 
             // Header params
 
@@ -1375,7 +1385,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Channel</returns>
@@ -1386,7 +1396,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Channel</returns>
@@ -1463,7 +1473,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of Channel</returns>
@@ -1475,7 +1485,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create a new channel There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+        /// Create a new channel There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (Channel)</returns>

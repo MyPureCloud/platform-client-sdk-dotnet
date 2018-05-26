@@ -99,6 +99,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
         /// <summary>
         /// Gets or Sets Directions
         /// </summary>
@@ -270,6 +276,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="ViewFilter" /> class.
@@ -288,7 +298,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="SkillGroups">The skill groups used to filter the view.</param>
+        
+        
+        
         /// <param name="LanguageIds">The language ids are used to filter the view.</param>
+        
+        
+        
+        /// <param name="LanguageGroups">The language groups used to filter the view.</param>
         
         
         
@@ -367,8 +385,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageTypes">The message media types used to filter the view.</param>
         
         
-        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> LanguageIds = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null)
+        public ViewFilter(List<MediaTypesEnum> MediaTypes = null, List<string> QueueIds = null, List<string> SkillIds = null, List<string> SkillGroups = null, List<string> LanguageIds = null, List<string> LanguageGroups = null, List<DirectionsEnum> Directions = null, List<string> WrapUpCodes = null, List<string> DnisList = null, List<string> UserIds = null, List<string> AddressTos = null, List<string> AddressFroms = null, List<string> OutboundCampaignIds = null, List<string> OutboundContactListIds = null, List<string> ContactIds = null, List<string> AniList = null, List<NumericRange> DurationsMilliseconds = null, NumericRange EvaluationScore = null, NumericRange EvaluationCriticalScore = null, List<string> EvaluationFormIds = null, List<string> EvaluatedAgentIds = null, List<string> EvaluatorIds = null, bool? Transferred = null, bool? Abandoned = null, List<MessageTypesEnum> MessageTypes = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -494,7 +520,25 @@ this.SkillIds = SkillIds;
             
             
             
+this.SkillGroups = SkillGroups;
+            
+            
+            
+            
+            
+            
+            
+            
 this.LanguageIds = LanguageIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.LanguageGroups = LanguageGroups;
             
             
             
@@ -702,11 +746,29 @@ this.MessageTypes = MessageTypes;
         
         
         /// <summary>
+        /// The skill groups used to filter the view
+        /// </summary>
+        /// <value>The skill groups used to filter the view</value>
+        [DataMember(Name="skillGroups", EmitDefaultValue=false)]
+        public List<string> SkillGroups { get; set; }
+        
+        
+        
+        /// <summary>
         /// The language ids are used to filter the view
         /// </summary>
         /// <value>The language ids are used to filter the view</value>
         [DataMember(Name="languageIds", EmitDefaultValue=false)]
         public List<string> LanguageIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The language groups used to filter the view
+        /// </summary>
+        /// <value>The language groups used to filter the view</value>
+        [DataMember(Name="languageGroups", EmitDefaultValue=false)]
+        public List<string> LanguageGroups { get; set; }
         
         
         
@@ -895,7 +957,11 @@ this.MessageTypes = MessageTypes;
             
             sb.Append("  SkillIds: ").Append(SkillIds).Append("\n");
             
+            sb.Append("  SkillGroups: ").Append(SkillGroups).Append("\n");
+            
             sb.Append("  LanguageIds: ").Append(LanguageIds).Append("\n");
+            
+            sb.Append("  LanguageGroups: ").Append(LanguageGroups).Append("\n");
             
             sb.Append("  Directions: ").Append(Directions).Append("\n");
             
@@ -987,9 +1053,19 @@ this.MessageTypes = MessageTypes;
                     this.SkillIds.SequenceEqual(other.SkillIds)
                 ) &&
                 (
+                    this.SkillGroups == other.SkillGroups ||
+                    this.SkillGroups != null &&
+                    this.SkillGroups.SequenceEqual(other.SkillGroups)
+                ) &&
+                (
                     this.LanguageIds == other.LanguageIds ||
                     this.LanguageIds != null &&
                     this.LanguageIds.SequenceEqual(other.LanguageIds)
+                ) &&
+                (
+                    this.LanguageGroups == other.LanguageGroups ||
+                    this.LanguageGroups != null &&
+                    this.LanguageGroups.SequenceEqual(other.LanguageGroups)
                 ) &&
                 (
                     this.Directions == other.Directions ||
@@ -1109,8 +1185,14 @@ this.MessageTypes = MessageTypes;
                 if (this.SkillIds != null)
                     hash = hash * 59 + this.SkillIds.GetHashCode();
                 
+                if (this.SkillGroups != null)
+                    hash = hash * 59 + this.SkillGroups.GetHashCode();
+                
                 if (this.LanguageIds != null)
                     hash = hash * 59 + this.LanguageIds.GetHashCode();
+                
+                if (this.LanguageGroups != null)
+                    hash = hash * 59 + this.LanguageGroups.GetHashCode();
                 
                 if (this.Directions != null)
                     hash = hash * 59 + this.Directions.GetHashCode();

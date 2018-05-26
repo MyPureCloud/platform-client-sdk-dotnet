@@ -30,6 +30,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="Channel" /> class.
@@ -43,8 +48,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         
         
-        public Channel(string ConnectUri = null, string Id = null)
+        
+        /// <param name="Expires">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ.</param>
+        
+        
+        public Channel(string ConnectUri = null, string Id = null, DateTime? Expires = null)
         {
+            
+            
+            
+            
             
             
             
@@ -73,6 +86,15 @@ this.Id = Id;
             
             
             
+            
+            
+            
+            
+this.Expires = Expires;
+            
+            
+            
+            
         }
         
         
@@ -92,6 +114,15 @@ this.Id = Id;
         public string Id { get; set; }
         
         
+        
+        /// <summary>
+        /// Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ
+        /// </summary>
+        /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss.SSSZ</value>
+        [DataMember(Name="expires", EmitDefaultValue=false)]
+        public DateTime? Expires { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,6 +135,8 @@ this.Id = Id;
             sb.Append("  ConnectUri: ").Append(ConnectUri).Append("\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
+            
+            sb.Append("  Expires: ").Append(Expires).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -150,6 +183,11 @@ this.Id = Id;
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Expires == other.Expires ||
+                    this.Expires != null &&
+                    this.Expires.Equals(other.Expires)
                 );
         }
 
@@ -170,6 +208,9 @@ this.Id = Id;
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+                
+                if (this.Expires != null)
+                    hash = hash * 59 + this.Expires.GetHashCode();
                 
                 return hash;
             }

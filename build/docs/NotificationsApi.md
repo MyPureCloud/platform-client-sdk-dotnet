@@ -209,7 +209,7 @@ namespace Example
 
 <a name="getnotificationschannels"></a>
 
-## [**ChannelEntityListing**](ChannelEntityListing.html) GetNotificationsChannels ()
+## [**ChannelEntityListing**](ChannelEntityListing.html) GetNotificationsChannels (string includechannels = null)
 
 The list of existing channels
 
@@ -236,13 +236,18 @@ namespace Example
 
             var apiInstance = new NotificationsApi();
             
+            
+            var includechannels = includechannels_example;  // string | Show user's channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. (optional)  (default to token)
+            
+            
+            
 
             try
             {
                 
                 // The list of existing channels
                 
-                ChannelEntityListing result = apiInstance.GetNotificationsChannels();
+                ChannelEntityListing result = apiInstance.GetNotificationsChannels(includechannels);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -255,7 +260,11 @@ namespace Example
 ~~~
 
 ### Parameters
-This endpoint does require any parameters.
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **includechannels** | **string**| Show user&#39;s channels for this specific token or across all tokens for this user and app.  Channel Ids for other access tokens will not be shown, but will be presented to show their existence. | [optional] [default to token]<br />**Values**: token, oauthclient |
 {: class="table table-striped"}
 
 ### Return type
@@ -338,7 +347,7 @@ namespace Example
 
 Create a new channel
 
-There is a limit of 5 channels. Creating a 6th channel will remove the channel with oldest last used date.
+There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
 
 ### Example
 ~~~csharp

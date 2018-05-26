@@ -10,7 +10,9 @@ title: ViewFilter
 | **MediaTypes** | **List&lt;string&gt;** | The media types are used to filter the view | [optional] |
 | **QueueIds** | **List&lt;string&gt;** | The queue ids are used to filter the view | [optional] |
 | **SkillIds** | **List&lt;string&gt;** | The skill ids are used to filter the view | [optional] |
+| **SkillGroups** | **List&lt;string&gt;** | The skill groups used to filter the view | [optional] |
 | **LanguageIds** | **List&lt;string&gt;** | The language ids are used to filter the view | [optional] |
+| **LanguageGroups** | **List&lt;string&gt;** | The language groups used to filter the view | [optional] |
 | **Directions** | **List&lt;string&gt;** | The directions are used to filter the view | [optional] |
 | **WrapUpCodes** | **List&lt;string&gt;** | The wrap up codes are used to filter the view | [optional] |
 | **DnisList** | **List&lt;string&gt;** | The dnis list is used to filter the view | [optional] |

@@ -46,11 +46,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Dstsavings">Dstsavings.</param>
-        
-        
-        
-        /// <param name="RawOffset">RawOffset.</param>
+        /// <param name="DisplayName">DisplayName.</param>
         
         
         
@@ -58,10 +54,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="DisplayName">DisplayName.</param>
+        /// <param name="Dstsavings">Dstsavings.</param>
         
         
-        public TimeZone(int? Dstsavings = null, int? RawOffset = null, string Id = null, string DisplayName = null)
+        
+        /// <param name="RawOffset">RawOffset.</param>
+        
+        
+        public TimeZone(string DisplayName = null, string Id = null, int? Dstsavings = null, int? RawOffset = null)
         {
             
             
@@ -77,6 +77,24 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+this.DisplayName = DisplayName;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
             
             
             
@@ -99,25 +117,23 @@ this.RawOffset = RawOffset;
             
             
             
-            
-            
-            
-            
-this.Id = Id;
-            
-            
-            
-            
-            
-            
-            
-            
-this.DisplayName = DisplayName;
-            
-            
-            
-            
         }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets DisplayName
+        /// </summary>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets Id
+        /// </summary>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
         
         
         
@@ -136,22 +152,6 @@ this.DisplayName = DisplayName;
         public int? RawOffset { get; set; }
         
         
-        
-        /// <summary>
-        /// Gets or Sets Id
-        /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets DisplayName
-        /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
-        
-        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -161,13 +161,13 @@ this.DisplayName = DisplayName;
             var sb = new StringBuilder();
             sb.Append("class TimeZone {\n");
             
-            sb.Append("  Dstsavings: ").Append(Dstsavings).Append("\n");
-            
-            sb.Append("  RawOffset: ").Append(RawOffset).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Dstsavings: ").Append(Dstsavings).Append("\n");
+            
+            sb.Append("  RawOffset: ").Append(RawOffset).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -206,6 +206,16 @@ this.DisplayName = DisplayName;
 
             return true &&
                 (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Dstsavings == other.Dstsavings ||
                     this.Dstsavings != null &&
                     this.Dstsavings.Equals(other.Dstsavings)
@@ -214,16 +224,6 @@ this.DisplayName = DisplayName;
                     this.RawOffset == other.RawOffset ||
                     this.RawOffset != null &&
                     this.RawOffset.Equals(other.RawOffset)
-                ) &&
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
                 );
         }
 
@@ -239,17 +239,17 @@ this.DisplayName = DisplayName;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+                
                 if (this.Dstsavings != null)
                     hash = hash * 59 + this.Dstsavings.GetHashCode();
                 
                 if (this.RawOffset != null)
                     hash = hash * 59 + this.RawOffset.GetHashCode();
-                
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-                
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
                 
                 return hash;
             }

@@ -1363,6 +1363,46 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of /flow consisting of name and type.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>FlowDivisionViewEntityListing</returns>
+        FlowDivisionViewEntityListing GetFlowsDivisionviews (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null);
+
+        /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of /flow consisting of name and type.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>ApiResponse of FlowDivisionViewEntityListing</returns>
+        ApiResponse<FlowDivisionViewEntityListing> GetFlowsDivisionviewsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null);
+        
+        /// <summary>
         /// Rebuild Dependency Tracking data for an organization
         /// </summary>
         /// <remarks>
@@ -3407,6 +3447,46 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (DataTablesDomainEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null);
+        
+        /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of /flow consisting of name and type.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>Task of FlowDivisionViewEntityListing</returns>
+        System.Threading.Tasks.Task<FlowDivisionViewEntityListing> GetFlowsDivisionviewsAsync (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null);
+
+        /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of /flow consisting of name and type.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>Task of ApiResponse (FlowDivisionViewEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null);
         
         /// <summary>
         /// Rebuild Dependency Tracking data for an organization
@@ -14480,6 +14560,251 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataTablesDomainEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (DataTablesDomainEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTablesDomainEntityListing)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>FlowDivisionViewEntityListing</returns>
+        public FlowDivisionViewEntityListing GetFlowsDivisionviews (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null)
+        {
+             ApiResponse<FlowDivisionViewEntityListing> localVarResponse = GetFlowsDivisionviewsWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>ApiResponse of FlowDivisionViewEntityListing</returns>
+        public ApiResponse< FlowDivisionViewEntityListing > GetFlowsDivisionviewsWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null)
+        { 
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ArchitectApi->GetFlowsDivisionviews");
+
+            var localVarPath = "/api/v2/flows/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", this.Configuration.ApiClient.ParameterToString(publishVersionId)));
+            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", this.Configuration.ApiClient.ParameterToString(publishedAfter)));
+            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", this.Configuration.ApiClient.ParameterToString(publishedBefore)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (FlowDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowDivisionViewEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>Task of FlowDivisionViewEntityListing</returns>
+        public async System.Threading.Tasks.Task<FlowDivisionViewEntityListing> GetFlowsDivisionviewsAsync (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null)
+        {
+             ApiResponse<FlowDivisionViewEntityListing> localVarResponse = await GetFlowsDivisionviewsAsyncWithHttpInfo(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a pageable list of basic flow information objects filterable by query parameters. This returns a simplified version of /flow consisting of name and type.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="type">Type</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="sortBy">Sort by (optional, default to id)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="id">ID (optional)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="publishVersionId">Publish version ID (optional)</param>
+        /// <param name="publishedAfter">Published after (optional)</param>
+        /// <param name="publishedBefore">Published before (optional)</param>
+        /// <returns>Task of ApiResponse (FlowDivisionViewEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null)
+        { 
+            // verify the required parameter 'type' is set
+            if (type == null)
+                throw new ApiException(400, "Missing required parameter 'type' when calling ArchitectApi->GetFlowsDivisionviews");
+            
+
+            var localVarPath = "/api/v2/flows/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (type != null) localVarQueryParams.Add(new Tuple<string, string>("type", this.Configuration.ApiClient.ParameterToString(type)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (publishVersionId != null) localVarQueryParams.Add(new Tuple<string, string>("publishVersionId", this.Configuration.ApiClient.ParameterToString(publishVersionId)));
+            if (publishedAfter != null) localVarQueryParams.Add(new Tuple<string, string>("publishedAfter", this.Configuration.ApiClient.ParameterToString(publishedAfter)));
+            if (publishedBefore != null) localVarQueryParams.Add(new Tuple<string, string>("publishedBefore", this.Configuration.ApiClient.ParameterToString(publishedBefore)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetFlowsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<FlowDivisionViewEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (FlowDivisionViewEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FlowDivisionViewEntityListing)));
             
         }
 
