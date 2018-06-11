@@ -50,7 +50,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
 
+
+
 Delete annotation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -125,9 +131,15 @@ void (empty response body)
 
 ## [**OrphanRecording**](OrphanRecording.html) DeleteOrphanrecording (string orphanId)
 
+
+
 Deletes a single orphan recording
 
 
+
+Requires ANY permissions: 
+
+* recording:orphan:delete
 
 ### Example
 ~~~csharp
@@ -189,9 +201,15 @@ namespace Example
 
 ## void DeleteRecordingMediaretentionpolicies (string ids)
 
+
+
 Delete media retention policies
 
 Bulk delete of media retention policies, this will only delete the polices that match the ids specified in the query param.
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:delete
 
 ### Example
 ~~~csharp
@@ -252,9 +270,15 @@ void (empty response body)
 
 ## void DeleteRecordingMediaretentionpolicy (string policyId)
 
+
+
 Delete a media retention policy
 
 
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:delete
 
 ### Example
 ~~~csharp
@@ -315,7 +339,13 @@ void (empty response body)
 
 ## [**Recording**](Recording.html) GetConversationRecording (string conversationId, string recordingId, string formatId = null, bool? download = null, string fileName = null)
 
+
+
 Gets a specific recording.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -403,7 +433,13 @@ namespace Example
 
 ## [**Annotation**](Annotation.html) GetConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId)
 
+
+
 Get annotation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -479,7 +515,13 @@ namespace Example
 
 ## [**List&lt;Annotation&gt;**](Annotation.html) GetConversationRecordingAnnotations (string conversationId, string recordingId)
 
+
+
 Get annotations for recording
+
+
+
+Requires NO permissions: 
 
 
 
@@ -549,7 +591,13 @@ namespace Example
 
 ## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordingmetadata (string conversationId)
 
+
+
 Get recording metadata for a conversation. Does not return playable media.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -613,7 +661,13 @@ namespace Example
 
 ## [**Recording**](Recording.html) GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId)
 
+
+
 Get metadata for a specific recording. Does not return playable media.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -683,7 +737,13 @@ namespace Example
 
 ## [**List&lt;Recording&gt;**](Recording.html) GetConversationRecordings (string conversationId, int? maxWaitMs = null, string formatId = null)
 
+
+
 Get all of a Conversation's Recordings.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -759,9 +819,15 @@ namespace Example
 
 ## [**OrphanRecording**](OrphanRecording.html) GetOrphanrecording (string orphanId)
 
+
+
 Gets a single orphan recording
 
 
+
+Requires ANY permissions: 
+
+* recording:orphan:view
 
 ### Example
 ~~~csharp
@@ -823,9 +889,15 @@ namespace Example
 
 ## [**Recording**](Recording.html) GetOrphanrecordingMedia (string orphanId, string formatId = null, bool? download = null, string fileName = null)
 
+
+
 Gets the media of a single orphan recording
 
 A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -905,9 +977,15 @@ namespace Example
 
 ## [**OrphanRecordingListing**](OrphanRecordingListing.html) GetOrphanrecordings (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? hasConversation = null, string media = null)
 
+
+
 Gets all orphan recordings
 
 
+
+Requires ANY permissions: 
+
+* recording:orphan:view
 
 ### Example
 ~~~csharp
@@ -1011,7 +1089,13 @@ namespace Example
 
 ## [**BatchDownloadJobStatusResult**](BatchDownloadJobStatusResult.html) GetRecordingBatchrequest (string jobId)
 
+
+
 Get the status and results for a batch request job, only the user that submitted the job may retrieve results
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1075,9 +1159,15 @@ namespace Example
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) GetRecordingLocalkeysSetting (string settingsId)
 
+
+
 Get the local encryption settings
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:view
 
 ### Example
 ~~~csharp
@@ -1139,9 +1229,15 @@ namespace Example
 
 ## [**LocalEncryptionConfigurationListing**](LocalEncryptionConfigurationListing.html) GetRecordingLocalkeysSettings ()
 
+
+
 gets a list local key settings data
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:view
 
 ### Example
 ~~~csharp
@@ -1194,9 +1290,15 @@ This endpoint does require any parameters.
 
 ## [**PolicyEntityListing**](PolicyEntityListing.html) GetRecordingMediaretentionpolicies (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, bool? enabled = null, bool? summary = null, bool? hasErrors = null)
 
+
+
 Gets media retention policy list with query options to filter on name and enabled.
 
 for a less verbose response, add summary=true to this endpoint
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:view
 
 ### Example
 ~~~csharp
@@ -1312,9 +1414,15 @@ namespace Example
 
 ## [**Policy**](Policy.html) GetRecordingMediaretentionpolicy (string policyId)
 
+
+
 Get a media retention policy
 
 
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:view
 
 ### Example
 ~~~csharp
@@ -1376,9 +1484,15 @@ namespace Example
 
 ## [**EncryptionKeyEntityListing**](EncryptionKeyEntityListing.html) GetRecordingRecordingkeys (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get encryption key list
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:view
 
 ### Example
 ~~~csharp
@@ -1446,9 +1560,15 @@ namespace Example
 
 ## [**KeyRotationSchedule**](KeyRotationSchedule.html) GetRecordingRecordingkeysRotationschedule ()
 
+
+
 Get key rotation schedule
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:view
 
 ### Example
 ~~~csharp
@@ -1501,7 +1621,13 @@ This endpoint does require any parameters.
 
 ## [**RecordingSettings**](RecordingSettings.html) GetRecordingSettings (bool? createDefault = null)
 
+
+
 Get the Recording Settings for the Organization
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1565,7 +1691,13 @@ namespace Example
 
 ## [**ScreenRecordingSessionListing**](ScreenRecordingSessionListing.html) GetRecordingsScreensessions (int? pageSize = null, int? pageNumber = null)
 
+
+
 Retrieves a paged listing of screen recording sessions
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1635,9 +1767,15 @@ namespace Example
 
 ## [**Policy**](Policy.html) PatchRecordingMediaretentionpolicy (string policyId, Policy body)
 
+
+
 Patch a media retention policy
 
 
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:edit
 
 ### Example
 ~~~csharp
@@ -1705,7 +1843,13 @@ namespace Example
 
 ## void PatchRecordingsScreensession (string recordingSessionId, ScreenRecordingSessionRequest body = null)
 
+
+
 Update a screen recording session
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1774,7 +1918,13 @@ void (empty response body)
 
 ## [**Annotation**](Annotation.html) PostConversationRecordingAnnotations (string conversationId, string recordingId, Annotation body)
 
+
+
 Create annotation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1850,7 +2000,13 @@ namespace Example
 
 ## [**BatchDownloadJobSubmissionResult**](BatchDownloadJobSubmissionResult.html) PostRecordingBatchrequests (BatchDownloadJobSubmission body)
 
+
+
 Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1914,9 +2070,15 @@ namespace Example
 
 ## [**EncryptionKey**](EncryptionKey.html) PostRecordingLocalkeys (LocalEncryptionKeyRequest body)
 
+
+
 create a local recording key
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
 
 ### Example
 ~~~csharp
@@ -1978,9 +2140,15 @@ namespace Example
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PostRecordingLocalkeysSettings (LocalEncryptionConfiguration body)
 
+
+
 create settings for local key creation
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
 
 ### Example
 ~~~csharp
@@ -2042,9 +2210,15 @@ namespace Example
 
 ## [**Policy**](Policy.html) PostRecordingMediaretentionpolicies (PolicyCreate body)
 
+
+
 Create media retention policy
 
 
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:add
 
 ### Example
 ~~~csharp
@@ -2106,9 +2280,15 @@ namespace Example
 
 ## [**EncryptionKey**](EncryptionKey.html) PostRecordingRecordingkeys ()
 
+
+
 Create encryption key
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
 
 ### Example
 ~~~csharp
@@ -2161,9 +2341,15 @@ This endpoint does require any parameters.
 
 ## [**Recording**](Recording.html) PutConversationRecording (string conversationId, string recordingId, Recording body)
 
+
+
 Updates the retention records on a recording.
 
 Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. 
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -2237,7 +2423,13 @@ namespace Example
 
 ## [**Annotation**](Annotation.html) PutConversationRecordingAnnotation (string conversationId, string recordingId, string annotationId, Annotation body)
 
+
+
 Update annotation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2319,9 +2511,15 @@ namespace Example
 
 ## [**Recording**](Recording.html) PutOrphanrecording (string orphanId, OrphanUpdateRequest body = null)
 
+
+
 Updates an orphan recording to a regular recording with retention values
 
 If this operation is successful the orphan will no longer exist. It will be replaced by the resulting recording in the response. This replacement recording is accessible by the normal Recording api.
+
+Requires ANY permissions: 
+
+* recording:orphan:edit
 
 ### Example
 ~~~csharp
@@ -2389,9 +2587,15 @@ namespace Example
 
 ## [**LocalEncryptionConfiguration**](LocalEncryptionConfiguration.html) PutRecordingLocalkeysSetting (string settingsId, LocalEncryptionConfiguration body)
 
+
+
 Update the local encryption settings
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
 
 ### Example
 ~~~csharp
@@ -2459,9 +2663,15 @@ namespace Example
 
 ## [**Policy**](Policy.html) PutRecordingMediaretentionpolicy (string policyId, Policy body)
 
+
+
 Update a media retention policy
 
 
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:edit
 
 ### Example
 ~~~csharp
@@ -2529,9 +2739,15 @@ namespace Example
 
 ## [**KeyRotationSchedule**](KeyRotationSchedule.html) PutRecordingRecordingkeysRotationschedule (KeyRotationSchedule body)
 
+
+
 Update key rotation schedule
 
 
+
+Requires ANY permissions: 
+
+* recording:encryptionKey:edit
 
 ### Example
 ~~~csharp
@@ -2593,7 +2809,13 @@ namespace Example
 
 ## [**RecordingSettings**](RecordingSettings.html) PutRecordingSettings (RecordingSettings body)
 
+
+
 Update the Recording Settings for the Organization
+
+
+
+Requires NO permissions: 
 
 
 

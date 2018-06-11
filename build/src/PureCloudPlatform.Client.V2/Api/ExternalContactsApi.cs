@@ -496,9 +496,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
-        Note PostExternalcontactsContactNotes (string contactId, Note body = null);
+        Note PostExternalcontactsContactNotes (string contactId, Note body);
 
         /// <summary>
         /// Create a note for an external contact
@@ -508,9 +508,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body = null);
+        ApiResponse<Note> PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body);
         
         /// <summary>
         /// Create an external contact
@@ -519,9 +519,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
-        ExternalContact PostExternalcontactsContacts (ExternalContact body = null);
+        ExternalContact PostExternalcontactsContacts (ExternalContact body);
 
         /// <summary>
         /// Create an external contact
@@ -530,9 +530,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        ApiResponse<ExternalContact> PostExternalcontactsContactsWithHttpInfo (ExternalContact body = null);
+        ApiResponse<ExternalContact> PostExternalcontactsContactsWithHttpInfo (ExternalContact body);
         
         /// <summary>
         /// Create a note for an external organization
@@ -542,9 +542,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
-        Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body = null);
+        Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body);
 
         /// <summary>
         /// Create a note for an external organization
@@ -554,9 +554,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body = null);
+        ApiResponse<Note> PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body);
         
         /// <summary>
         /// Create an external organization
@@ -565,9 +565,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
-        ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body = null);
+        ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body);
 
         /// <summary>
         /// Create an external organization
@@ -576,9 +576,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        ApiResponse<ExternalOrganization> PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body = null);
+        ApiResponse<ExternalOrganization> PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body);
         
         /// <summary>
         /// Create a relationship
@@ -587,9 +587,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
-        Relationship PostExternalcontactsRelationships (Relationship body = null);
+        Relationship PostExternalcontactsRelationships (Relationship body);
 
         /// <summary>
         /// Create a relationship
@@ -598,9 +598,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
-        ApiResponse<Relationship> PostExternalcontactsRelationshipsWithHttpInfo (Relationship body = null);
+        ApiResponse<Relationship> PostExternalcontactsRelationshipsWithHttpInfo (Relationship body);
         
         /// <summary>
         /// Update an external contact
@@ -610,9 +610,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
-        ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body = null);
+        ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body);
 
         /// <summary>
         /// Update an external contact
@@ -622,9 +622,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        ApiResponse<ExternalContact> PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body = null);
+        ApiResponse<ExternalContact> PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body);
         
         /// <summary>
         /// Update a note for an external contact
@@ -635,9 +635,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Note</returns>
-        Note PutExternalcontactsContactNote (string contactId, string noteId, Note body = null);
+        Note PutExternalcontactsContactNote (string contactId, string noteId, Note body);
 
         /// <summary>
         /// Update a note for an external contact
@@ -648,9 +648,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body = null);
+        ApiResponse<Note> PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body);
         
         /// <summary>
         /// Associate an external contact with a conversation
@@ -660,9 +660,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns></returns>
-        void PutExternalcontactsConversation (string conversationId, ConversationAssociation body = null);
+        void PutExternalcontactsConversation (string conversationId, ConversationAssociation body);
 
         /// <summary>
         /// Associate an external contact with a conversation
@@ -672,9 +672,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body = null);
+        ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body);
         
         /// <summary>
         /// Update an external organization
@@ -684,9 +684,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
-        ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body = null);
+        ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body);
 
         /// <summary>
         /// Update an external organization
@@ -696,9 +696,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        ApiResponse<ExternalOrganization> PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
+        ApiResponse<ExternalOrganization> PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body);
         
         /// <summary>
         /// Update a note for an external organization
@@ -709,9 +709,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Note</returns>
-        Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body = null);
+        Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body);
 
         /// <summary>
         /// Update a note for an external organization
@@ -722,12 +722,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
-        ApiResponse<Note> PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
+        ApiResponse<Note> PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body);
         
         /// <summary>
-        /// Links a Trustor with an Extenral Organization
+        /// Links a Trustor with an External Organization
         /// </summary>
         /// <remarks>
         /// 
@@ -739,7 +739,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ExternalOrganization PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId);
 
         /// <summary>
-        /// Links a Trustor with an Extenral Organization
+        /// Links a Trustor with an External Organization
         /// </summary>
         /// <remarks>
         /// 
@@ -758,9 +758,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
-        Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body = null);
+        Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body);
 
         /// <summary>
         /// Update a relationship
@@ -770,9 +770,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
-        ApiResponse<Relationship> PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body = null);
+        ApiResponse<Relationship> PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body);
         
         #endregion Synchronous Operations
         
@@ -1258,9 +1258,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body = null);
+        System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body);
 
         /// <summary>
         /// Create a note for an external contact
@@ -1270,9 +1270,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body);
         
         /// <summary>
         /// Create an external contact
@@ -1281,9 +1281,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body = null);
+        System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body);
 
         /// <summary>
         /// Create an external contact
@@ -1292,9 +1292,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body);
         
         /// <summary>
         /// Create a note for an external organization
@@ -1304,9 +1304,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body = null);
+        System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body);
 
         /// <summary>
         /// Create a note for an external organization
@@ -1316,9 +1316,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body);
         
         /// <summary>
         /// Create an external organization
@@ -1327,9 +1327,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body);
 
         /// <summary>
         /// Create an external organization
@@ -1338,9 +1338,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body);
         
         /// <summary>
         /// Create a relationship
@@ -1349,9 +1349,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body = null);
+        System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body);
 
         /// <summary>
         /// Create a relationship
@@ -1360,9 +1360,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body = null);
+        System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body);
         
         /// <summary>
         /// Update an external contact
@@ -1372,9 +1372,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body = null);
+        System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body);
 
         /// <summary>
         /// Update an external contact
@@ -1384,9 +1384,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body);
         
         /// <summary>
         /// Update a note for an external contact
@@ -1397,9 +1397,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body);
 
         /// <summary>
         /// Update a note for an external contact
@@ -1410,9 +1410,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body);
         
         /// <summary>
         /// Associate an external contact with a conversation
@@ -1422,9 +1422,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of void</returns>
-        System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body = null);
+        System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body);
 
         /// <summary>
         /// Associate an external contact with a conversation
@@ -1434,9 +1434,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of ApiResponse</returns>
-        System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body = null);
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body);
         
         /// <summary>
         /// Update an external organization
@@ -1446,9 +1446,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body);
 
         /// <summary>
         /// Update an external organization
@@ -1458,9 +1458,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null);
+        System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body);
         
         /// <summary>
         /// Update a note for an external organization
@@ -1471,9 +1471,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body);
 
         /// <summary>
         /// Update a note for an external organization
@@ -1484,12 +1484,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null);
+        System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body);
         
         /// <summary>
-        /// Links a Trustor with an Extenral Organization
+        /// Links a Trustor with an External Organization
         /// </summary>
         /// <remarks>
         /// 
@@ -1501,7 +1501,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationTrustorTrustorIdAsync (string externalOrganizationId, string trustorId);
 
         /// <summary>
-        /// Links a Trustor with an Extenral Organization
+        /// Links a Trustor with an External Organization
         /// </summary>
         /// <remarks>
         /// 
@@ -1520,9 +1520,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body = null);
+        System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body);
 
         /// <summary>
         /// Update a relationship
@@ -1532,9 +1532,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body = null);
+        System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body);
         
         #endregion Asynchronous Operations
         
@@ -5301,9 +5301,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
-        public Note PostExternalcontactsContactNotes (string contactId, Note body = null)
+        public Note PostExternalcontactsContactNotes (string contactId, Note body)
         {
              ApiResponse<Note> localVarResponse = PostExternalcontactsContactNotesWithHttpInfo(contactId, body);
              return localVarResponse.Data;
@@ -5314,13 +5314,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body = null)
+        public ApiResponse< Note > PostExternalcontactsContactNotesWithHttpInfo (string contactId, Note body)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactNotes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactNotes");
 
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5402,9 +5405,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PostExternalcontactsContactNotesAsync (string contactId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PostExternalcontactsContactNotesAsyncWithHttpInfo(contactId, body);
              return localVarResponse.Data;
@@ -5416,13 +5419,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, Note body)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactNotes");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactNotes");
             
 
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
@@ -5505,9 +5512,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
-        public ExternalContact PostExternalcontactsContacts (ExternalContact body = null)
+        public ExternalContact PostExternalcontactsContacts (ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = PostExternalcontactsContactsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5517,10 +5524,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        public ApiResponse< ExternalContact > PostExternalcontactsContactsWithHttpInfo (ExternalContact body = null)
+        public ApiResponse< ExternalContact > PostExternalcontactsContactsWithHttpInfo (ExternalContact body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContacts");
 
             var localVarPath = "/api/v2/externalcontacts/contacts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5600,9 +5610,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ExternalContact> PostExternalcontactsContactsAsync (ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = await PostExternalcontactsContactsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5613,10 +5623,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external contact 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PostExternalcontactsContactsAsyncWithHttpInfo (ExternalContact body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContacts");
+            
 
             var localVarPath = "/api/v2/externalcontacts/contacts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5698,9 +5712,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Note</returns>
-        public Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body = null)
+        public Note PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body)
         {
              ApiResponse<Note> localVarResponse = PostExternalcontactsOrganizationNotesWithHttpInfo(externalOrganizationId, body);
              return localVarResponse.Data;
@@ -5711,13 +5725,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body = null)
+        public ApiResponse< Note > PostExternalcontactsOrganizationNotesWithHttpInfo (string externalOrganizationId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PostExternalcontactsOrganizationNotes");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationNotes");
 
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5799,9 +5816,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PostExternalcontactsOrganizationNotesAsync (string externalOrganizationId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PostExternalcontactsOrganizationNotesAsyncWithHttpInfo(externalOrganizationId, body);
              return localVarResponse.Data;
@@ -5813,13 +5830,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PostExternalcontactsOrganizationNotesAsyncWithHttpInfo (string externalOrganizationId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PostExternalcontactsOrganizationNotes");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationNotes");
             
 
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
@@ -5902,9 +5923,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
-        public ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body = null)
+        public ExternalOrganization PostExternalcontactsOrganizations (ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = PostExternalcontactsOrganizationsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -5914,10 +5935,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        public ApiResponse< ExternalOrganization > PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body = null)
+        public ApiResponse< ExternalOrganization > PostExternalcontactsOrganizationsWithHttpInfo (ExternalOrganization body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizations");
 
             var localVarPath = "/api/v2/externalcontacts/organizations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -5997,9 +6021,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ExternalOrganization> PostExternalcontactsOrganizationsAsync (ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = await PostExternalcontactsOrganizationsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6010,10 +6034,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create an external organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PostExternalcontactsOrganizationsAsyncWithHttpInfo (ExternalOrganization body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizations");
+            
 
             var localVarPath = "/api/v2/externalcontacts/organizations";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6094,9 +6122,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a relationship 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
-        public Relationship PostExternalcontactsRelationships (Relationship body = null)
+        public Relationship PostExternalcontactsRelationships (Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = PostExternalcontactsRelationshipsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6106,10 +6134,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a relationship 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
-        public ApiResponse< Relationship > PostExternalcontactsRelationshipsWithHttpInfo (Relationship body = null)
+        public ApiResponse< Relationship > PostExternalcontactsRelationshipsWithHttpInfo (Relationship body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsRelationships");
 
             var localVarPath = "/api/v2/externalcontacts/relationships";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6189,9 +6220,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a relationship 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        public async System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body = null)
+        public async System.Threading.Tasks.Task<Relationship> PostExternalcontactsRelationshipsAsync (Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = await PostExternalcontactsRelationshipsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -6202,10 +6233,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a relationship 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PostExternalcontactsRelationshipsAsyncWithHttpInfo (Relationship body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsRelationships");
+            
 
             var localVarPath = "/api/v2/externalcontacts/relationships";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6287,9 +6322,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ExternalContact</returns>
-        public ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body = null)
+        public ExternalContact PutExternalcontactsContact (string contactId, ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = PutExternalcontactsContactWithHttpInfo(contactId, body);
              return localVarResponse.Data;
@@ -6300,13 +6335,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>ApiResponse of ExternalContact</returns>
-        public ApiResponse< ExternalContact > PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body = null)
+        public ApiResponse< ExternalContact > PutExternalcontactsContactWithHttpInfo (string contactId, ExternalContact body)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutExternalcontactsContact");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContact");
 
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6388,9 +6426,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ExternalContact</returns>
-        public async System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ExternalContact> PutExternalcontactsContactAsync (string contactId, ExternalContact body)
         {
              ApiResponse<ExternalContact> localVarResponse = await PutExternalcontactsContactAsyncWithHttpInfo(contactId, body);
              return localVarResponse.Data;
@@ -6402,13 +6440,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact ID</param>
-        /// <param name="body">ExternalContact (optional)</param>
+        /// <param name="body">ExternalContact</param>
         /// <returns>Task of ApiResponse (ExternalContact)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalContact>> PutExternalcontactsContactAsyncWithHttpInfo (string contactId, ExternalContact body)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
                 throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PutExternalcontactsContact");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContact");
             
 
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
@@ -6493,9 +6535,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Note</returns>
-        public Note PutExternalcontactsContactNote (string contactId, string noteId, Note body = null)
+        public Note PutExternalcontactsContactNote (string contactId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = PutExternalcontactsContactNoteWithHttpInfo(contactId, noteId, body);
              return localVarResponse.Data;
@@ -6507,9 +6549,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body = null)
+        public ApiResponse< Note > PutExternalcontactsContactNoteWithHttpInfo (string contactId, string noteId, Note body)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -6517,6 +6559,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutExternalcontactsContactNote");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactNote");
 
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6600,9 +6645,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PutExternalcontactsContactNoteAsync (string contactId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PutExternalcontactsContactNoteAsyncWithHttpInfo(contactId, noteId, body);
              return localVarResponse.Data;
@@ -6615,9 +6660,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="contactId">ExternalContact Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsContactNoteAsyncWithHttpInfo (string contactId, string noteId, Note body)
         { 
             // verify the required parameter 'contactId' is set
             if (contactId == null)
@@ -6626,6 +6671,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutExternalcontactsContactNote");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactNote");
             
 
             var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
@@ -6710,9 +6759,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns></returns>
-        public void PutExternalcontactsConversation (string conversationId, ConversationAssociation body = null)
+        public void PutExternalcontactsConversation (string conversationId, ConversationAssociation body)
         {
              PutExternalcontactsConversationWithHttpInfo(conversationId, body);
         }
@@ -6722,13 +6771,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        public ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body = null)
+        public ApiResponse<Object> PutExternalcontactsConversationWithHttpInfo (string conversationId, ConversationAssociation body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ExternalContactsApi->PutExternalcontactsConversation");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
 
             var localVarPath = "/api/v2/externalcontacts/conversations/{conversationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -6810,9 +6862,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of void</returns>
-        public async System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body = null)
+        public async System.Threading.Tasks.Task PutExternalcontactsConversationAsync (string conversationId, ConversationAssociation body)
         {
              await PutExternalcontactsConversationAsyncWithHttpInfo(conversationId, body);
 
@@ -6823,13 +6875,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
-        /// <param name="body">ConversationAssociation (optional)</param>
+        /// <param name="body">ConversationAssociation</param>
         /// <returns>Task of ApiResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutExternalcontactsConversationAsyncWithHttpInfo (string conversationId, ConversationAssociation body)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
                 throw new ApiException(400, "Missing required parameter 'conversationId' when calling ExternalContactsApi->PutExternalcontactsConversation");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
             
 
             var localVarPath = "/api/v2/externalcontacts/conversations/{conversationId}";
@@ -6913,9 +6969,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ExternalOrganization</returns>
-        public ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body = null)
+        public ExternalOrganization PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = PutExternalcontactsOrganizationWithHttpInfo(externalOrganizationId, body);
              return localVarResponse.Data;
@@ -6926,13 +6982,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>ApiResponse of ExternalOrganization</returns>
-        public ApiResponse< ExternalOrganization > PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
+        public ApiResponse< ExternalOrganization > PutExternalcontactsOrganizationWithHttpInfo (string externalOrganizationId, ExternalOrganization body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutExternalcontactsOrganization");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganization");
 
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7014,9 +7073,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ExternalOrganization</returns>
-        public async System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ExternalOrganization> PutExternalcontactsOrganizationAsync (string externalOrganizationId, ExternalOrganization body)
         {
              ApiResponse<ExternalOrganization> localVarResponse = await PutExternalcontactsOrganizationAsyncWithHttpInfo(externalOrganizationId, body);
              return localVarResponse.Data;
@@ -7028,13 +7087,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
-        /// <param name="body">ExternalOrganization (optional)</param>
+        /// <param name="body">ExternalOrganization</param>
         /// <returns>Task of ApiResponse (ExternalOrganization)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganization>> PutExternalcontactsOrganizationAsyncWithHttpInfo (string externalOrganizationId, ExternalOrganization body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
                 throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->PutExternalcontactsOrganization");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganization");
             
 
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
@@ -7119,9 +7182,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Note</returns>
-        public Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body = null)
+        public Note PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = PutExternalcontactsOrganizationNoteWithHttpInfo(externalOrganizationId, noteId, body);
              return localVarResponse.Data;
@@ -7133,9 +7196,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>ApiResponse of Note</returns>
-        public ApiResponse< Note > PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
+        public ApiResponse< Note > PutExternalcontactsOrganizationNoteWithHttpInfo (string externalOrganizationId, string noteId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -7143,6 +7206,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
 
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7226,9 +7292,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of Note</returns>
-        public async System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<Note> PutExternalcontactsOrganizationNoteAsync (string externalOrganizationId, string noteId, Note body)
         {
              ApiResponse<Note> localVarResponse = await PutExternalcontactsOrganizationNoteAsyncWithHttpInfo(externalOrganizationId, noteId, body);
              return localVarResponse.Data;
@@ -7241,9 +7307,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization Id</param>
         /// <param name="noteId">Note Id</param>
-        /// <param name="body">Note (optional)</param>
+        /// <param name="body">Note</param>
         /// <returns>Task of ApiResponse (Note)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Note>> PutExternalcontactsOrganizationNoteAsyncWithHttpInfo (string externalOrganizationId, string noteId, Note body)
         { 
             // verify the required parameter 'externalOrganizationId' is set
             if (externalOrganizationId == null)
@@ -7252,6 +7318,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'noteId' is set
             if (noteId == null)
                 throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
             
 
             var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
@@ -7332,7 +7402,7 @@ namespace PureCloudPlatform.Client.V2.Api
         
         
         /// <summary>
-        /// Links a Trustor with an Extenral Organization 
+        /// Links a Trustor with an External Organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
@@ -7345,7 +7415,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Links a Trustor with an Extenral Organization 
+        /// Links a Trustor with an External Organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
@@ -7432,7 +7502,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         
         /// <summary>
-        /// Links a Trustor with an Extenral Organization 
+        /// Links a Trustor with an External Organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
@@ -7446,7 +7516,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Links a Trustor with an Extenral Organization 
+        /// Links a Trustor with an External Organization 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="externalOrganizationId">External Organization ID</param>
@@ -7540,9 +7610,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Relationship</returns>
-        public Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body = null)
+        public Relationship PutExternalcontactsRelationship (string relationshipId, Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = PutExternalcontactsRelationshipWithHttpInfo(relationshipId, body);
              return localVarResponse.Data;
@@ -7553,13 +7623,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>ApiResponse of Relationship</returns>
-        public ApiResponse< Relationship > PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body = null)
+        public ApiResponse< Relationship > PutExternalcontactsRelationshipWithHttpInfo (string relationshipId, Relationship body)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->PutExternalcontactsRelationship");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsRelationship");
 
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -7641,9 +7714,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of Relationship</returns>
-        public async System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body = null)
+        public async System.Threading.Tasks.Task<Relationship> PutExternalcontactsRelationshipAsync (string relationshipId, Relationship body)
         {
              ApiResponse<Relationship> localVarResponse = await PutExternalcontactsRelationshipAsyncWithHttpInfo(relationshipId, body);
              return localVarResponse.Data;
@@ -7655,13 +7728,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="relationshipId">Relationship Id</param>
-        /// <param name="body">Relationship (optional)</param>
+        /// <param name="body">Relationship</param>
         /// <returns>Task of ApiResponse (Relationship)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Relationship>> PutExternalcontactsRelationshipAsyncWithHttpInfo (string relationshipId, Relationship body)
         { 
             // verify the required parameter 'relationshipId' is set
             if (relationshipId == null)
                 throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->PutExternalcontactsRelationship");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsRelationship");
             
 
             var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";

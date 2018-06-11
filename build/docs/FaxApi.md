@@ -19,7 +19,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteFaxDocument (string documentId)
 
+
+
 Delete a fax document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -82,7 +88,13 @@ void (empty response body)
 
 ## [**FaxDocument**](FaxDocument.html) GetFaxDocument (string documentId)
 
+
+
 Get a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -146,7 +158,13 @@ namespace Example
 
 ## [**DownloadResponse**](DownloadResponse.html) GetFaxDocumentContent (string documentId)
 
+
+
 Download a fax document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -210,7 +228,13 @@ namespace Example
 
 ## [**FaxDocumentEntityListing**](FaxDocumentEntityListing.html) GetFaxDocuments (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of fax documents.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -280,7 +304,13 @@ namespace Example
 
 ## [**FaxSummary**](FaxSummary.html) GetFaxSummary ()
 
+
+
 Get fax summary
+
+
+
+Requires NO permissions: 
 
 
 
@@ -335,7 +365,13 @@ This endpoint does require any parameters.
 
 ## [**FaxDocument**](FaxDocument.html) PutFaxDocument (string documentId, FaxDocument body)
 
+
+
 Update a fax document.
+
+
+
+Requires NO permissions: 
 
 
 

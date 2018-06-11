@@ -71,9 +71,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteRoutingEmailDomain (string domainId)
 
+
+
 Delete a domain
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -134,9 +140,15 @@ void (empty response body)
 
 ## void DeleteRoutingEmailDomainRoute (string domainName, string routeId)
 
+
+
 Delete a route
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -203,9 +215,15 @@ void (empty response body)
 
 ## void DeleteRoutingQueue (string queueId, bool? forceDelete = null)
 
+
+
 Delete a queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:delete
 
 ### Example
 ~~~csharp
@@ -272,9 +290,15 @@ void (empty response body)
 
 ## void DeleteRoutingQueueUser (string queueId, string memberId)
 
+
+
 Delete queue member
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:edit
 
 ### Example
 ~~~csharp
@@ -341,9 +365,15 @@ void (empty response body)
 
 ## void DeleteRoutingQueueWrapupcode (string queueId, string codeId)
 
+
+
 Delete a wrap-up code from a queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:edit
 
 ### Example
 ~~~csharp
@@ -410,9 +440,15 @@ void (empty response body)
 
 ## void DeleteRoutingSkill (string skillId)
 
+
+
 Delete Routing Skill
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -473,9 +509,15 @@ void (empty response body)
 
 ## void DeleteRoutingSmsPhonenumber (string addressId)
 
+
+
 Delete a phone number provisioned for SMS.
 
 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:delete
 
 ### Example
 ~~~csharp
@@ -536,9 +578,15 @@ void (empty response body)
 
 ## void DeleteRoutingUtilization ()
 
+
+
 Delete utilization settings and revert to system defaults.
 
 
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
 
 ### Example
 ~~~csharp
@@ -590,9 +638,15 @@ void (empty response body)
 
 ## void DeleteRoutingWrapupcode (string codeId)
 
+
+
 Delete wrap-up code
 
 
+
+Requires ANY permissions: 
+
+* routing:wrapupCode:delete
 
 ### Example
 ~~~csharp
@@ -653,9 +707,15 @@ void (empty response body)
 
 ## void DeleteUserRoutinglanguage (string userId, string languageId)
 
+
+
 Remove routing language from user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -722,9 +782,15 @@ void (empty response body)
 
 ## void DeleteUserRoutingskill (string userId, string skillId)
 
+
+
 Remove routing skill from user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -791,9 +857,15 @@ void (empty response body)
 
 ## [**InboundDomain**](InboundDomain.html) GetRoutingEmailDomain (string domainId)
 
+
+
 Get domain
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -855,9 +927,15 @@ namespace Example
 
 ## [**InboundRoute**](InboundRoute.html) GetRoutingEmailDomainRoute (string domainName, string routeId)
 
+
+
 Get a route
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -925,9 +1003,15 @@ namespace Example
 
 ## [**InboundRouteEntityListing**](InboundRouteEntityListing.html) GetRoutingEmailDomainRoutes (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null)
 
+
+
 Get routes
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -1007,9 +1091,15 @@ namespace Example
 
 ## [**InboundDomainEntityListing**](InboundDomainEntityListing.html) GetRoutingEmailDomains ()
 
+
+
 Get domains
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -1062,9 +1152,15 @@ This endpoint does require any parameters.
 
 ## [**EmailSetup**](EmailSetup.html) GetRoutingEmailSetup ()
 
+
+
 Get email setup
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -1117,9 +1213,15 @@ This endpoint does require any parameters.
 
 ## [**LanguageEntityListing**](LanguageEntityListing.html) GetRoutingLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 
+
+
 Get the list of supported languages.
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -1199,9 +1301,15 @@ namespace Example
 
 ## [**Recipient**](Recipient.html) GetRoutingMessageRecipient (string recipientId)
 
+
+
 Get a recipient
 
 
+
+Requires ANY permissions: 
+
+* routing:message:manage
 
 ### Example
 ~~~csharp
@@ -1263,9 +1371,15 @@ namespace Example
 
 ## [**RecipientListing**](RecipientListing.html) GetRoutingMessageRecipients (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get recipients
 
 
+
+Requires ANY permissions: 
+
+* routing:message:manage
 
 ### Example
 ~~~csharp
@@ -1333,9 +1447,15 @@ namespace Example
 
 ## [**Queue**](Queue.html) GetRoutingQueue (string queueId)
 
+
+
 Get details about this queue.
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:view
 
 ### Example
 ~~~csharp
@@ -1397,9 +1517,15 @@ namespace Example
 
 ## [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) GetRoutingQueueEstimatedwaittime (string queueId, string conversationId = null)
 
+
+
 Get Estimated Wait Time
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:view
 
 ### Example
 ~~~csharp
@@ -1467,9 +1593,15 @@ namespace Example
 
 ## [**EstimatedWaitTimePredictions**](EstimatedWaitTimePredictions.html) GetRoutingQueueMediatypeEstimatedwaittime (string queueId, string mediaType)
 
+
+
 Get Estimated Wait Time
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:view
 
 ### Example
 ~~~csharp
@@ -1537,9 +1669,15 @@ namespace Example
 
 ## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) GetRoutingQueueUsers (string queueId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, bool? joined = null, string name = null, List<string> profileSkills = null, List<string> skills = null, List<string> languages = null, List<string> routingStatus = null, List<string> presence = null)
 
+
+
 Get the members of this queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:view
 
 ### Example
 ~~~csharp
@@ -1667,9 +1805,15 @@ namespace Example
 
 ## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingQueueWrapupcodes (string queueId)
 
+
+
 Get the wrap-up codes for a queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:view
 
 ### Example
 ~~~csharp
@@ -1729,11 +1873,17 @@ namespace Example
 
 <a name="getroutingqueues"></a>
 
-## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null)
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueues (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> divisionId = null)
+
+
 
 Get list of queues.
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:view
 
 ### Example
 ~~~csharp
@@ -1781,13 +1931,18 @@ namespace Example
             
             
             
+            
+            
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            
+            
 
             try
             {
                 
                 // Get list of queues.
                 
-                QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, active);
+                QueueEntityListing result = apiInstance.GetRoutingQueues(pageSize, pageNumber, sortBy, name, active, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1809,6 +1964,7 @@ namespace Example
 | **sortBy** | **string**| Sort by | [optional] [default to name] |
 | **name** | **string**| Name | [optional]  |
 | **active** | **bool?**| Active | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1819,9 +1975,15 @@ namespace Example
 
 ## [**RoutingSkill**](RoutingSkill.html) GetRoutingSkill (string skillId)
 
+
+
 Get Routing Skill
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -1883,9 +2045,15 @@ namespace Example
 
 ## [**SkillEntityListing**](SkillEntityListing.html) GetRoutingSkills (int? pageSize = null, int? pageNumber = null, string name = null)
 
+
+
 Get the list of routing skills.
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -1959,9 +2127,15 @@ namespace Example
 
 ## [**SMSAvailablePhoneNumberEntityListing**](SMSAvailablePhoneNumberEntityListing.html) GetRoutingSmsAvailablephonenumbers (string countryCode, string phoneNumberType, string region = null, string city = null, string areaCode = null, string pattern = null, string addressRequirement = null)
 
+
+
 Get a list of available phone numbers for SMS provisioning.
 
 This request will return up to 30 random phone numbers matching the criteria specified.  To get additional phone numbers repeat the request.
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:add
 
 ### Example
 ~~~csharp
@@ -2059,9 +2233,15 @@ namespace Example
 
 ## [**SmsPhoneNumber**](SmsPhoneNumber.html) GetRoutingSmsPhonenumber (string addressId)
 
+
+
 Get a phone number provisioned for SMS.
 
 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:view
 
 ### Example
 ~~~csharp
@@ -2123,9 +2303,15 @@ namespace Example
 
 ## [**SmsPhoneNumberEntityListing**](SmsPhoneNumberEntityListing.html) GetRoutingSmsPhonenumbers (string phoneNumber = null, string phoneNumberType = null, string phoneNumberStatus = null, int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of provisioned phone numbers.
 
 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:view
 
 ### Example
 ~~~csharp
@@ -2211,9 +2397,15 @@ namespace Example
 
 ## [**Utilization**](Utilization.html) GetRoutingUtilization ()
 
+
+
 Get the utilization settings.
 
 
+
+Requires ANY permissions: 
+
+* routing:utilization:manage* routing:utilization:view
 
 ### Example
 ~~~csharp
@@ -2266,9 +2458,15 @@ This endpoint does require any parameters.
 
 ## [**WrapupCode**](WrapupCode.html) GetRoutingWrapupcode (string codeId)
 
+
+
 Get details about this wrap-up code.
 
 
+
+Requires ANY permissions: 
+
+* routing:wrapupCode:view
 
 ### Example
 ~~~csharp
@@ -2330,9 +2528,15 @@ namespace Example
 
 ## [**WrapupCodeEntityListing**](WrapupCodeEntityListing.html) GetRoutingWrapupcodes (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
 
+
+
 Get list of wrapup codes.
 
 
+
+Requires ANY permissions: 
+
+* routing:wrapupCode:view
 
 ### Example
 ~~~csharp
@@ -2412,7 +2616,13 @@ namespace Example
 
 ## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
+
+
 List routing language for user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2494,7 +2704,13 @@ namespace Example
 
 ## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
+
+
 List routing skills for user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2576,9 +2792,15 @@ namespace Example
 
 ## [**QueueMember**](QueueMember.html) PatchRoutingQueueUser (string queueId, string memberId, QueueMember body)
 
+
+
 Update the ring number of joined status for a User in a Queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:edit
 
 ### Example
 ~~~csharp
@@ -2652,9 +2874,15 @@ namespace Example
 
 ## [**QueueMemberEntityListing**](QueueMemberEntityListing.html) PatchRoutingQueueUsers (string queueId, List<QueueMember> body)
 
+
+
 Join or unjoin a set of users for a queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:edit
 
 ### Example
 ~~~csharp
@@ -2722,9 +2950,15 @@ namespace Example
 
 ## [**UserRoutingLanguage**](UserRoutingLanguage.html) PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
 
+
+
 Update routing language proficiency or state.
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -2798,9 +3032,15 @@ namespace Example
 
 ## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) PostAnalyticsQueuesObservationsQuery (ObservationQuery body)
 
+
+
 Query for queue observations
 
 
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
 
 ### Example
 ~~~csharp
@@ -2862,9 +3102,15 @@ namespace Example
 
 ## [**InboundRoute**](InboundRoute.html) PostRoutingEmailDomainRoutes (string domainName, InboundRoute body)
 
+
+
 Create a route
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -2932,9 +3178,15 @@ namespace Example
 
 ## [**InboundDomain**](InboundDomain.html) PostRoutingEmailDomains (InboundDomain body)
 
+
+
 Create a domain
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -2996,9 +3248,15 @@ namespace Example
 
 ## [**Language**](Language.html) PostRoutingLanguages (Language body)
 
+
+
 Create Language
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -3060,9 +3318,15 @@ namespace Example
 
 ## **string** PostRoutingQueueUsers (string queueId, List<WritableEntity> body, bool? delete = null)
 
+
+
 Bulk add or delete up to 100 queue members
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:edit
 
 ### Example
 ~~~csharp
@@ -3136,9 +3400,15 @@ namespace Example
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) PostRoutingQueueWrapupcodes (string queueId, List<WrapUpCodeReference> body)
 
+
+
 Add up to 100 wrap-up codes to a queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:edit
 
 ### Example
 ~~~csharp
@@ -3206,9 +3476,15 @@ namespace Example
 
 ## [**Queue**](Queue.html) PostRoutingQueues (CreateQueueRequest body)
 
+
+
 Create queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:add
 
 ### Example
 ~~~csharp
@@ -3270,9 +3546,15 @@ namespace Example
 
 ## [**RoutingSkill**](RoutingSkill.html) PostRoutingSkills (RoutingSkill body)
 
+
+
 Create Skill
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -3334,9 +3616,15 @@ namespace Example
 
 ## [**SmsPhoneNumber**](SmsPhoneNumber.html) PostRoutingSmsAddresses (SmsAddressProvision body)
 
+
+
 Provision an Address for SMS
 
 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:add
 
 ### Example
 ~~~csharp
@@ -3398,9 +3686,15 @@ namespace Example
 
 ## [**SmsPhoneNumber**](SmsPhoneNumber.html) PostRoutingSmsPhonenumbers (SmsPhoneNumberProvision body)
 
+
+
 Provision a phone number for SMS
 
 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:add
 
 ### Example
 ~~~csharp
@@ -3462,9 +3756,15 @@ namespace Example
 
 ## [**WrapupCode**](WrapupCode.html) PostRoutingWrapupcodes (WrapupCode body)
 
+
+
 Create a wrap-up code
 
 
+
+Requires ANY permissions: 
+
+* routing:wrapupCode:add
 
 ### Example
 ~~~csharp
@@ -3526,9 +3826,15 @@ namespace Example
 
 ## [**UserRoutingLanguage**](UserRoutingLanguage.html) PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
 
+
+
 Add routing language to user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -3596,9 +3902,15 @@ namespace Example
 
 ## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserRoutingskills (string userId, UserRoutingSkillPost body)
 
+
+
 Add routing skill to user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -3666,9 +3978,15 @@ namespace Example
 
 ## [**InboundRoute**](InboundRoute.html) PutRoutingEmailDomainRoute (string domainName, string routeId, InboundRoute body)
 
+
+
 Update a route
 
 
+
+Requires ANY permissions: 
+
+* routing:email:manage
 
 ### Example
 ~~~csharp
@@ -3742,9 +4060,15 @@ namespace Example
 
 ## [**Recipient**](Recipient.html) PutRoutingMessageRecipient (string recipientId, Recipient body)
 
+
+
 Update a recipient
 
 
+
+Requires ANY permissions: 
+
+* routing:message:manage
 
 ### Example
 ~~~csharp
@@ -3812,9 +4136,15 @@ namespace Example
 
 ## [**Queue**](Queue.html) PutRoutingQueue (string queueId, Queue body)
 
+
+
 Update a queue
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:edit
 
 ### Example
 ~~~csharp
@@ -3882,9 +4212,15 @@ namespace Example
 
 ## [**SmsPhoneNumber**](SmsPhoneNumber.html) PutRoutingSmsPhonenumber (string addressId, SmsPhoneNumber body)
 
+
+
 Update a phone number provisioned for SMS.
 
 
+
+Requires ANY permissions: 
+
+* sms:phoneNumber:edit
 
 ### Example
 ~~~csharp
@@ -3952,9 +4288,15 @@ namespace Example
 
 ## [**Utilization**](Utilization.html) PutRoutingUtilization (Utilization body)
 
+
+
 Update the utilization settings.
 
 
+
+Requires ANY permissions: 
+
+* routing:utilization:manage
 
 ### Example
 ~~~csharp
@@ -4016,9 +4358,15 @@ namespace Example
 
 ## [**WrapupCode**](WrapupCode.html) PutRoutingWrapupcode (string codeId, WrapupCode body)
 
+
+
 Update wrap-up code
 
 
+
+Requires ANY permissions: 
+
+* routing:wrapupCode:edit
 
 ### Example
 ~~~csharp
@@ -4086,9 +4434,15 @@ namespace Example
 
 ## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
 
+
+
 Update routing skill proficiency or state.
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp

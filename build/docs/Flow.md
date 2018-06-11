@@ -9,8 +9,8 @@ title: Flow
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Name** | **string** | The flow name | |
+| **Division** | [**UriReference**](UriReference.html) | The division to which this entity belongs. | [optional] |
 | **Description** | **string** |  | [optional] |
-| **Division** | [**AuthzDivision**](AuthzDivision.html) |  | [optional] |
 | **Type** | **string** |  | [optional] |
 | **LockedUser** | [**User**](User.html) |  | [optional] |
 | **Active** | **bool?** |  | [optional] |

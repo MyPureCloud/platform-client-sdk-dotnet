@@ -19,7 +19,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteUserrecording (string recordingId)
 
+
+
 Delete a user recording.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -82,7 +88,13 @@ void (empty response body)
 
 ## [**UserRecording**](UserRecording.html) GetUserrecording (string recordingId, List<string> expand = null)
 
+
+
 Get a user recording.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -152,7 +164,13 @@ namespace Example
 
 ## [**DownloadResponse**](DownloadResponse.html) GetUserrecordingMedia (string recordingId, string formatId = null)
 
+
+
 Download a user recording.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -222,7 +240,13 @@ namespace Example
 
 ## [**UserRecordingEntityListing**](UserRecordingEntityListing.html) GetUserrecordings (int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
+
+
 Get a list of user recordings.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -298,7 +322,13 @@ namespace Example
 
 ## [**FaxSummary**](FaxSummary.html) GetUserrecordingsSummary ()
 
+
+
 Get user recording summary
+
+
+
+Requires NO permissions: 
 
 
 
@@ -353,7 +383,13 @@ This endpoint does require any parameters.
 
 ## [**UserRecording**](UserRecording.html) PutUserrecording (string recordingId, UserRecording body, List<string> expand = null)
 
+
+
 Update a user recording.
+
+
+
+Requires NO permissions: 
 
 
 

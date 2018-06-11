@@ -437,8 +437,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
-        UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
+        UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get queues for user
@@ -451,8 +452,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
-        ApiResponse<UserQueueEntityListing> GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
+        ApiResponse<UserQueueEntityListing> GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
         
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -813,8 +815,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
-        UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body);
+        UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
         /// Join or unjoin a set of queues for a user
@@ -825,8 +828,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
-        ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body);
+        ApiResponse<UserQueueEntityListing> PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
         
         /// <summary>
         /// Update routing language proficiency or state.
@@ -1701,8 +1705,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
-        System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
+        System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
 
         /// <summary>
         /// Get queues for user
@@ -1715,8 +1720,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null);
+        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null);
         
         /// <summary>
         /// Returns a listing of roles and permissions for a user.
@@ -2077,8 +2083,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
-        System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body);
+        System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body, List<string> divisionId = null);
 
         /// <summary>
         /// Join or unjoin a set of queues for a user
@@ -2089,8 +2096,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
-        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body);
+        System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null);
         
         /// <summary>
         /// Update routing language proficiency or state.
@@ -5999,10 +6007,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
-        public UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
+        public UserQueueEntityListing GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         {
-             ApiResponse<UserQueueEntityListing> localVarResponse = GetUserQueuesWithHttpInfo(userId, pageSize, pageNumber, joined);
+             ApiResponse<UserQueueEntityListing> localVarResponse = GetUserQueuesWithHttpInfo(userId, pageSize, pageNumber, joined, divisionId);
              return localVarResponse.Data;
         }
 
@@ -6014,8 +6023,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
-        public ApiResponse< UserQueueEntityListing > GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
+        public ApiResponse< UserQueueEntityListing > GetUserQueuesWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -6058,6 +6068,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (joined != null) localVarQueryParams.Add(new Tuple<string, string>("joined", this.Configuration.ApiClient.ParameterToString(joined)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -6102,10 +6113,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
+        public async System.Threading.Tasks.Task<UserQueueEntityListing> GetUserQueuesAsync (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         {
-             ApiResponse<UserQueueEntityListing> localVarResponse = await GetUserQueuesAsyncWithHttpInfo(userId, pageSize, pageNumber, joined);
+             ApiResponse<UserQueueEntityListing> localVarResponse = await GetUserQueuesAsyncWithHttpInfo(userId, pageSize, pageNumber, joined, divisionId);
              return localVarResponse.Data;
 
         }
@@ -6118,8 +6130,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="joined">Is joined to the queue (optional, default to true)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> GetUserQueuesAsyncWithHttpInfo (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -6163,6 +6176,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (joined != null) localVarQueryParams.Add(new Tuple<string, string>("joined", this.Configuration.ApiClient.ParameterToString(joined)));
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -9066,10 +9080,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>UserQueueEntityListing</returns>
-        public UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body)
+        public UserQueueEntityListing PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null)
         {
-             ApiResponse<UserQueueEntityListing> localVarResponse = PatchUserQueuesWithHttpInfo(userId, body);
+             ApiResponse<UserQueueEntityListing> localVarResponse = PatchUserQueuesWithHttpInfo(userId, body, divisionId);
              return localVarResponse.Data;
         }
 
@@ -9079,8 +9094,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>ApiResponse of UserQueueEntityListing</returns>
-        public ApiResponse< UserQueueEntityListing > PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body)
+        public ApiResponse< UserQueueEntityListing > PatchUserQueuesWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -9123,6 +9139,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -9170,10 +9187,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of UserQueueEntityListing</returns>
-        public async System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body)
+        public async System.Threading.Tasks.Task<UserQueueEntityListing> PatchUserQueuesAsync (string userId, List<UserQueue> body, List<string> divisionId = null)
         {
-             ApiResponse<UserQueueEntityListing> localVarResponse = await PatchUserQueuesAsyncWithHttpInfo(userId, body);
+             ApiResponse<UserQueueEntityListing> localVarResponse = await PatchUserQueuesAsyncWithHttpInfo(userId, body, divisionId);
              return localVarResponse.Data;
 
         }
@@ -9184,8 +9202,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
         /// <param name="body">User Queues</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (UserQueueEntityListing)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body)
+        public async System.Threading.Tasks.Task<ApiResponse<UserQueueEntityListing>> PatchUserQueuesAsyncWithHttpInfo (string userId, List<UserQueue> body, List<string> divisionId = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -9230,6 +9249,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
 
             // Query params
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

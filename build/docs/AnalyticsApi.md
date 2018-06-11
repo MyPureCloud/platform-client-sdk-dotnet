@@ -37,7 +37,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteAnalyticsReportingSchedule (string scheduleId)
 
+
+
 Delete a scheduled report job.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -100,9 +106,15 @@ void (empty response body)
 
 ## [**AnalyticsConversation**](AnalyticsConversation.html) GetAnalyticsConversationDetails (string conversationId)
 
+
+
 Get a conversation by id
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
 
 ### Example
 ~~~csharp
@@ -164,9 +176,15 @@ namespace Example
 
 ## [**ReportingExportJobListing**](ReportingExportJobListing.html) GetAnalyticsReportingExports ()
 
+
+
 Get all view export requests for a user
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
 
 ### Example
 ~~~csharp
@@ -219,7 +237,13 @@ This endpoint does require any parameters.
 
 ## [**ReportMetaDataEntityListing**](ReportMetaDataEntityListing.html) GetAnalyticsReportingMetadata (int? pageNumber = null, int? pageSize = null, string locale = null)
 
+
+
 Get list of reporting metadata.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -295,7 +319,13 @@ namespace Example
 
 ## [**ReportMetaData**](ReportMetaData.html) GetAnalyticsReportingReportIdMetadata (string reportId, string locale = null)
 
+
+
 Get a reporting metadata.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -365,9 +395,15 @@ namespace Example
 
 ## **List&lt;string&gt;** GetAnalyticsReportingReportformats ()
 
+
+
 Get a list of report formats
 
 Get a list of report formats.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -420,7 +456,13 @@ This endpoint does require any parameters.
 
 ## [**ReportSchedule**](ReportSchedule.html) GetAnalyticsReportingSchedule (string scheduleId)
 
+
+
 Get a scheduled report job.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -484,7 +526,13 @@ namespace Example
 
 ## [**ReportRunEntryEntityDomainListing**](ReportRunEntryEntityDomainListing.html) GetAnalyticsReportingScheduleHistory (string scheduleId, int? pageNumber = null, int? pageSize = null)
 
+
+
 Get list of completed scheduled report jobs.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -560,7 +608,13 @@ namespace Example
 
 ## [**ReportRunEntry**](ReportRunEntry.html) GetAnalyticsReportingScheduleHistoryLatest (string scheduleId)
 
+
+
 Get most recently completed scheduled report job.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -624,9 +678,15 @@ namespace Example
 
 ## [**ReportRunEntry**](ReportRunEntry.html) GetAnalyticsReportingScheduleHistoryRunId (string runId, string scheduleId)
 
+
+
 A completed scheduled report job
 
 A completed scheduled report job.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -694,9 +754,15 @@ namespace Example
 
 ## [**ReportScheduleEntityListing**](ReportScheduleEntityListing.html) GetAnalyticsReportingSchedules (int? pageNumber = null, int? pageSize = null)
 
+
+
 Get a list of scheduled report jobs
 
 Get a list of scheduled report jobs.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -764,7 +830,13 @@ namespace Example
 
 ## **List&lt;string&gt;** GetAnalyticsReportingTimeperiods ()
 
+
+
 Get a list of report time periods.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -819,9 +891,15 @@ This endpoint does require any parameters.
 
 ## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
 
+
+
 Index conversation properties
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationProperties:index
 
 ### Example
 ~~~csharp
@@ -889,9 +967,15 @@ namespace Example
 
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsConversationsAggregatesQuery (AggregationQuery body)
 
+
+
 Query for conversation aggregates
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
 
 ### Example
 ~~~csharp
@@ -953,9 +1037,15 @@ namespace Example
 
 ## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostAnalyticsConversationsDetailsQuery (ConversationQuery body)
 
+
+
 Query for conversation details
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
 
 ### Example
 ~~~csharp
@@ -1017,9 +1107,15 @@ namespace Example
 
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsEvaluationsAggregatesQuery (AggregationQuery body)
 
+
+
 Query for evaluation aggregates
 
 
+
+Requires ANY permissions: 
+
+* analytics:evaluationAggregate:view
 
 ### Example
 ~~~csharp
@@ -1081,9 +1177,15 @@ namespace Example
 
 ## [**QualifierMappingObservationQueryResponse**](QualifierMappingObservationQueryResponse.html) PostAnalyticsQueuesObservationsQuery (ObservationQuery body)
 
+
+
 Query for queue observations
 
 
+
+Requires ANY permissions: 
+
+* analytics:queueObservation:view
 
 ### Example
 ~~~csharp
@@ -1145,9 +1247,15 @@ namespace Example
 
 ## [**ReportingExportJobResponse**](ReportingExportJobResponse.html) PostAnalyticsReportingExports (ReportingExportJobRequest body)
 
+
+
 Generate a view export request
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
 
 ### Example
 ~~~csharp
@@ -1209,7 +1317,13 @@ namespace Example
 
 ## [**RunNowResponse**](RunNowResponse.html) PostAnalyticsReportingScheduleRunreport (string scheduleId)
 
+
+
 Place a scheduled report immediately into the reporting queue
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1273,9 +1387,15 @@ namespace Example
 
 ## [**ReportSchedule**](ReportSchedule.html) PostAnalyticsReportingSchedules (ReportSchedule body)
 
+
+
 Create a scheduled report job
 
 Create a scheduled report job.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -1337,9 +1457,15 @@ namespace Example
 
 ## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostAnalyticsUsersAggregatesQuery (AggregationQuery body)
 
+
+
 Query for user aggregates
 
 
+
+Requires ANY permissions: 
+
+* analytics:userAggregate:view
 
 ### Example
 ~~~csharp
@@ -1401,9 +1527,15 @@ namespace Example
 
 ## [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) PostAnalyticsUsersDetailsQuery (UserDetailsQuery body)
 
+
+
 Query for user details
 
 
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
 
 ### Example
 ~~~csharp
@@ -1465,9 +1597,15 @@ namespace Example
 
 ## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostAnalyticsUsersObservationsQuery (ObservationQuery body)
 
+
+
 Query for user observations
 
 
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
 
 ### Example
 ~~~csharp
@@ -1529,7 +1667,13 @@ namespace Example
 
 ## [**ReportSchedule**](ReportSchedule.html) PutAnalyticsReportingSchedule (string scheduleId, ReportSchedule body)
 
+
+
 Update a scheduled report job.
+
+
+
+Requires NO permissions: 
 
 
 

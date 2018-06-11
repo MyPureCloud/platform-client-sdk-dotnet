@@ -27,9 +27,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteGroup (string groupId)
 
+
+
 Delete group
 
 
+
+Requires ANY permissions: 
+
+* group_administration
 
 ### Example
 ~~~csharp
@@ -90,7 +96,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) DeleteGroupMembers (string groupId, string ids)
 
+
+
 Remove members
+
+
+
+Requires NO permissions: 
 
 
 
@@ -160,7 +172,13 @@ namespace Example
 
 ## [**FieldConfig**](FieldConfig.html) GetFieldconfig (string type)
 
+
+
 Fetch field config for an entity type
+
+
+
+Requires NO permissions: 
 
 
 
@@ -224,7 +242,13 @@ namespace Example
 
 ## [**Group**](Group.html) GetGroup (string groupId)
 
+
+
 Get group
+
+
+
+Requires NO permissions: 
 
 
 
@@ -288,7 +312,13 @@ namespace Example
 
 ## [**UserEntityListing**](UserEntityListing.html) GetGroupIndividuals (string groupId)
 
+
+
 Get all individuals associated with the group
+
+
+
+Requires NO permissions: 
 
 
 
@@ -352,7 +382,13 @@ namespace Example
 
 ## [**UserEntityListing**](UserEntityListing.html) GetGroupMembers (string groupId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
+
+
 Get group members, includes individuals, owners, and dynamically included people
+
+
+
+Requires NO permissions: 
 
 
 
@@ -440,7 +476,13 @@ namespace Example
 
 ## [**GroupProfile**](GroupProfile.html) GetGroupProfile (string groupId, string fields = null)
 
+
+
 Get group profile
+
+
+
+Requires NO permissions: 
 
 
 
@@ -510,7 +552,13 @@ namespace Example
 
 ## [**GroupEntityListing**](GroupEntityListing.html) GetGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
 
+
+
 Get a group list
+
+
+
+Requires NO permissions: 
 
 
 
@@ -592,7 +640,13 @@ namespace Example
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetGroupsSearch (string q64, List<string> expand = null)
 
+
+
 Search groups using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -662,7 +716,13 @@ namespace Example
 
 ## [**GroupProfileEntityListing**](GroupProfileEntityListing.html) GetProfilesGroups (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null)
 
+
+
 Get group profile listing
+
+
+
+Requires NO permissions: 
 
 
 
@@ -744,7 +804,13 @@ namespace Example
 
 ## [**Empty**](Empty.html) PostGroupMembers (string groupId, GroupMembersUpdate body)
 
+
+
 Add members
+
+
+
+Requires NO permissions: 
 
 
 
@@ -814,9 +880,15 @@ namespace Example
 
 ## [**Group**](Group.html) PostGroups (GroupCreate body)
 
+
+
 Create a group
 
 
+
+Requires ANY permissions: 
+
+* group_administration* group_creation
 
 ### Example
 ~~~csharp
@@ -878,7 +950,13 @@ namespace Example
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostGroupsSearch (GroupSearchRequest body)
 
+
+
 Search groups
+
+
+
+Requires NO permissions: 
 
 
 
@@ -942,9 +1020,15 @@ namespace Example
 
 ## [**Group**](Group.html) PutGroup (string groupId, GroupUpdate body = null)
 
+
+
 Update group
 
 
+
+Requires ANY permissions: 
+
+* group_administration
 
 ### Example
 ~~~csharp

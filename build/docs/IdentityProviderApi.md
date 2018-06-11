@@ -41,9 +41,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersAdfs ()
 
+
+
 Delete ADFS Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -96,9 +102,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersCic ()
 
+
+
 Delete Customer Interaction Center (CIC) Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -151,9 +163,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersGsuite ()
 
+
+
 Delete G Suite Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -206,9 +224,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersIdentitynow ()
 
+
+
 Delete IdentityNow Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -261,9 +285,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersOkta ()
 
+
+
 Delete Okta Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -316,9 +346,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersOnelogin ()
 
+
+
 Delete OneLogin Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -371,9 +407,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersPing ()
 
+
+
 Delete Ping Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -426,9 +468,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersPurecloud ()
 
+
+
 Delete PureCloud Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -481,9 +529,15 @@ This endpoint does require any parameters.
 
 ## [**Empty**](Empty.html) DeleteIdentityprovidersSalesforce ()
 
+
+
 Delete Salesforce Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:delete
 
 ### Example
 ~~~csharp
@@ -536,9 +590,15 @@ This endpoint does require any parameters.
 
 ## [**OAuthProviderEntityListing**](OAuthProviderEntityListing.html) GetIdentityproviders ()
 
+
+
 The list of identity providers
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -591,9 +651,15 @@ This endpoint does require any parameters.
 
 ## [**ADFS**](ADFS.html) GetIdentityprovidersAdfs ()
 
+
+
 Get ADFS Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -646,9 +712,15 @@ This endpoint does require any parameters.
 
 ## [**CustomerInteractionCenter**](CustomerInteractionCenter.html) GetIdentityprovidersCic ()
 
+
+
 Get Customer Interaction Center (CIC) Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -701,9 +773,15 @@ This endpoint does require any parameters.
 
 ## [**GSuite**](GSuite.html) GetIdentityprovidersGsuite ()
 
+
+
 Get G Suite Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -756,9 +834,15 @@ This endpoint does require any parameters.
 
 ## [**IdentityNow**](IdentityNow.html) GetIdentityprovidersIdentitynow ()
 
+
+
 Get IdentityNow Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -811,9 +895,15 @@ This endpoint does require any parameters.
 
 ## [**Okta**](Okta.html) GetIdentityprovidersOkta ()
 
+
+
 Get Okta Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -866,9 +956,15 @@ This endpoint does require any parameters.
 
 ## [**OneLogin**](OneLogin.html) GetIdentityprovidersOnelogin ()
 
+
+
 Get OneLogin Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -921,9 +1017,15 @@ This endpoint does require any parameters.
 
 ## [**PingIdentity**](PingIdentity.html) GetIdentityprovidersPing ()
 
+
+
 Get Ping Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -976,9 +1078,15 @@ This endpoint does require any parameters.
 
 ## [**PureCloudPlatform.Client.V2.Model.PureCloud**](PureCloud.html) GetIdentityprovidersPurecloud ()
 
+
+
 Get PureCloud Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -1031,9 +1139,15 @@ This endpoint does require any parameters.
 
 ## [**Salesforce**](Salesforce.html) GetIdentityprovidersSalesforce ()
 
+
+
 Get Salesforce Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:view
 
 ### Example
 ~~~csharp
@@ -1086,9 +1200,15 @@ This endpoint does require any parameters.
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersAdfs (ADFS body)
 
+
+
 Update/Create ADFS Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1150,9 +1270,15 @@ namespace Example
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersCic (CustomerInteractionCenter body)
 
+
+
 Update/Create Customer Interaction Center (CIC) Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1214,9 +1340,15 @@ namespace Example
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersGsuite (GSuite body)
 
+
+
 Update/Create G Suite Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1278,9 +1410,15 @@ namespace Example
 
 ## [**IdentityNow**](IdentityNow.html) PutIdentityprovidersIdentitynow (IdentityNow body)
 
+
+
 Update/Create IdentityNow Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1342,9 +1480,15 @@ namespace Example
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersOkta (Okta body)
 
+
+
 Update/Create Okta Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1406,9 +1550,15 @@ namespace Example
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersOnelogin (OneLogin body)
 
+
+
 Update/Create OneLogin Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1470,9 +1620,15 @@ namespace Example
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPing (PingIdentity body)
 
+
+
 Update/Create Ping Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1534,9 +1690,15 @@ namespace Example
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersPurecloud (PureCloudPlatform.Client.V2.Model.PureCloud body)
 
+
+
 Update/Create PureCloud Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1598,9 +1760,15 @@ namespace Example
 
 ## [**OAuthProvider**](OAuthProvider.html) PutIdentityprovidersSalesforce (Salesforce body)
 
+
+
 Update/Create Salesforce Identity Provider
 
 
+
+Requires ANY permissions: 
+
+* sso:provider:add* sso:provider:edit
 
 ### Example
 ~~~csharp

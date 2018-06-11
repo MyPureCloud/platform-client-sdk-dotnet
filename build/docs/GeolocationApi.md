@@ -17,7 +17,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**GeolocationSettings**](GeolocationSettings.html) GetGeolocationsSettings ()
 
+
+
 Get a organization's GeolocationSettings
+
+
+
+Requires NO permissions: 
 
 
 
@@ -72,7 +78,13 @@ This endpoint does require any parameters.
 
 ## [**Geolocation**](Geolocation.html) GetUserGeolocation (string userId, string clientId)
 
+
+
 Get a user's Geolocation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -142,9 +154,15 @@ namespace Example
 
 ## [**GeolocationSettings**](GeolocationSettings.html) PatchGeolocationsSettings (GeolocationSettings body)
 
+
+
 Patch a organization's GeolocationSettings
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -206,9 +224,15 @@ namespace Example
 
 ## [**Geolocation**](Geolocation.html) PatchUserGeolocation (string userId, string clientId, Geolocation body)
 
+
+
 Patch a user's Geolocation
 
 The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp

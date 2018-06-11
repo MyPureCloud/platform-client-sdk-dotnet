@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// AuthzDivision
+    /// CampaignDivisionView
     /// </summary>
     [DataContract]
-    public partial class AuthzDivision :  IEquatable<AuthzDivision>
+    public partial class CampaignDivisionView :  IEquatable<CampaignDivisionView>
     {
         
         
@@ -40,25 +40,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="AuthzDivision" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected AuthzDivision() { }
-    
-        /// <summary>
-        /// Initializes a new instance of the <see cref="AuthzDivision" /> class.
+        /// Initializes a new instance of the <see cref="CampaignDivisionView" /> class.
         /// </summary>
         
         
@@ -68,37 +52,15 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Description">A helpful description for the division. (required).</param>
+        /// <param name="Division">The division to which this entity belongs..</param>
         
         
         
         
-        
-        /// <param name="ObjectCounts">A count of objects in this division, grouped by type..</param>
-        
-        
-        
-        
-        public AuthzDivision(string Name = null, string Description = null, Dictionary<string, long?> ObjectCounts = null)
+        public CampaignDivisionView(string Name = null, UriReference Division = null)
         {
             
             
-            
-            
-            
-            
-            
-            
-            
-            // to ensure "Description" is required (not null)
-            if (Description == null)
-            {
-                throw new InvalidDataException("Description is a required property for AuthzDivision and cannot be null");
-            }
-            else
-            {
-                this.Description = Description;
-            }
             
             
             
@@ -126,13 +88,7 @@ this.Name = Name;
             
             
             
-            
-            
-            
-            
-            
-            
-this.ObjectCounts = ObjectCounts;
+this.Division = Division;
             
             
             
@@ -161,29 +117,11 @@ this.ObjectCounts = ObjectCounts;
         
         
         /// <summary>
-        /// A helpful description for the division.
+        /// The division to which this entity belongs.
         /// </summary>
-        /// <value>A helpful description for the division.</value>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
-        
-        
-        
-        /// <summary>
-        /// A flag indicating whether this division is the \&quot;Home\&quot; (default) division. Cannot be modified and any supplied value will be ignored on create or update.
-        /// </summary>
-        /// <value>A flag indicating whether this division is the \&quot;Home\&quot; (default) division. Cannot be modified and any supplied value will be ignored on create or update.</value>
-        [DataMember(Name="homeDivision", EmitDefaultValue=false)]
-        public bool? HomeDivision { get; private set; }
-        
-        
-        
-        /// <summary>
-        /// A count of objects in this division, grouped by type.
-        /// </summary>
-        /// <value>A count of objects in this division, grouped by type.</value>
-        [DataMember(Name="objectCounts", EmitDefaultValue=false)]
-        public Dictionary<string, long?> ObjectCounts { get; set; }
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public UriReference Division { get; set; }
         
         
         
@@ -202,17 +140,13 @@ this.ObjectCounts = ObjectCounts;
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class AuthzDivision {\n");
+            sb.Append("class CampaignDivisionView {\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            
-            sb.Append("  HomeDivision: ").Append(HomeDivision).Append("\n");
-            
-            sb.Append("  ObjectCounts: ").Append(ObjectCounts).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -237,15 +171,15 @@ this.ObjectCounts = ObjectCounts;
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as AuthzDivision);
+            return this.Equals(obj as CampaignDivisionView);
         }
 
         /// <summary>
-        /// Returns true if AuthzDivision instances are equal
+        /// Returns true if CampaignDivisionView instances are equal
         /// </summary>
-        /// <param name="other">Instance of AuthzDivision to be compared</param>
+        /// <param name="other">Instance of CampaignDivisionView to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(AuthzDivision other)
+        public bool Equals(CampaignDivisionView other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -263,19 +197,9 @@ this.ObjectCounts = ObjectCounts;
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
-                ) &&
-                (
-                    this.HomeDivision == other.HomeDivision ||
-                    this.HomeDivision != null &&
-                    this.HomeDivision.Equals(other.HomeDivision)
-                ) &&
-                (
-                    this.ObjectCounts == other.ObjectCounts ||
-                    this.ObjectCounts != null &&
-                    this.ObjectCounts.SequenceEqual(other.ObjectCounts)
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -302,14 +226,8 @@ this.ObjectCounts = ObjectCounts;
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
-                
-                if (this.HomeDivision != null)
-                    hash = hash * 59 + this.HomeDivision.GetHashCode();
-                
-                if (this.ObjectCounts != null)
-                    hash = hash * 59 + this.ObjectCounts.GetHashCode();
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

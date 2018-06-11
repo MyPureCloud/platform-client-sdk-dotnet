@@ -16,7 +16,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**ServerDate**](ServerDate.html) GetDate ()
 
+
+
 Get the current system date/time
+
+
+
+Requires NO permissions: 
 
 
 
@@ -71,7 +77,13 @@ This endpoint does require any parameters.
 
 ## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) GetTimezones (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get time zones list
+
+
+
+Requires NO permissions: 
 
 
 
@@ -141,7 +153,13 @@ namespace Example
 
 ## [**ParsedCertificate**](ParsedCertificate.html) PostCertificateDetails (Certificate body)
 
+
+
 Returns the information about an X509 PEM encoded certificate or certificate chain.
+
+
+
+Requires NO permissions: 
 
 
 

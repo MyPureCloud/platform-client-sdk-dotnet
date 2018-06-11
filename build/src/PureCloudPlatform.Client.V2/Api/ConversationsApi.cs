@@ -194,8 +194,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>WrapupCode</returns>
-        WrapupCode GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>AssignedWrapupCode</returns>
+        AssignedWrapupCode GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -207,8 +207,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        ApiResponse<WrapupCode> GetConversationParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        ApiResponse<AssignedWrapupCode> GetConversationParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -288,8 +288,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        Wrapup GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>AssignedWrapupCode</returns>
+        AssignedWrapupCode GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -301,8 +301,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        ApiResponse<Wrapup> GetConversationsCallParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        ApiResponse<AssignedWrapupCode> GetConversationsCallParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -360,8 +360,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        Wrapup GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>AssignedWrapupCode</returns>
+        AssignedWrapupCode GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -373,8 +373,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        ApiResponse<Wrapup> GetConversationsCallbackParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        ApiResponse<AssignedWrapupCode> GetConversationsCallbackParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -520,8 +520,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        Wrapup GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>AssignedWrapupCode</returns>
+        AssignedWrapupCode GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -533,8 +533,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        ApiResponse<Wrapup> GetConversationsChatParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        ApiResponse<AssignedWrapupCode> GetConversationsChatParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -612,8 +612,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        Wrapup GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>AssignedWrapupCode</returns>
+        AssignedWrapupCode GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -625,8 +625,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        ApiResponse<Wrapup> GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        ApiResponse<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -772,8 +772,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        Wrapup GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>AssignedWrapupCode</returns>
+        AssignedWrapupCode GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -785,8 +785,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        ApiResponse<Wrapup> GetConversationsEmailParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        ApiResponse<AssignedWrapupCode> GetConversationsEmailParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -888,8 +888,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        Wrapup GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>AssignedWrapupCode</returns>
+        AssignedWrapupCode GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -901,8 +901,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        ApiResponse<Wrapup> GetConversationsMessageParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        ApiResponse<AssignedWrapupCode> GetConversationsMessageParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -2540,8 +2540,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of WrapupCode</returns>
-        System.Threading.Tasks.Task<WrapupCode> GetConversationParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of AssignedWrapupCode</returns>
+        System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -2553,8 +2553,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -2634,8 +2634,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        System.Threading.Tasks.Task<Wrapup> GetConversationsCallParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of AssignedWrapupCode</returns>
+        System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCallParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -2647,8 +2647,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsCallParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCallParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -2706,8 +2706,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        System.Threading.Tasks.Task<Wrapup> GetConversationsCallbackParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of AssignedWrapupCode</returns>
+        System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCallbackParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -2719,8 +2719,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsCallbackParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCallbackParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -2866,8 +2866,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        System.Threading.Tasks.Task<Wrapup> GetConversationsChatParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of AssignedWrapupCode</returns>
+        System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsChatParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -2879,8 +2879,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsChatParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsChatParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -2958,8 +2958,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        System.Threading.Tasks.Task<Wrapup> GetConversationsCobrowsesessionParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of AssignedWrapupCode</returns>
+        System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -2971,8 +2971,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -3118,8 +3118,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        System.Threading.Tasks.Task<Wrapup> GetConversationsEmailParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of AssignedWrapupCode</returns>
+        System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsEmailParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -3131,8 +3131,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsEmailParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsEmailParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -3234,8 +3234,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        System.Threading.Tasks.Task<Wrapup> GetConversationsMessageParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of AssignedWrapupCode</returns>
+        System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsMessageParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null);
 
         /// <summary>
         /// Get the wrap-up for this conversation participant. 
@@ -3247,8 +3247,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsMessageParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsMessageParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null);
         
         /// <summary>
         /// Get list of wrapup codes for this conversation participant
@@ -6225,10 +6225,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>WrapupCode</returns>
-        public WrapupCode GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>AssignedWrapupCode</returns>
+        public AssignedWrapupCode GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<WrapupCode> localVarResponse = GetConversationParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
         }
 
@@ -6239,8 +6239,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of WrapupCode</returns>
-        public ApiResponse< WrapupCode > GetConversationParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        public ApiResponse< AssignedWrapupCode > GetConversationParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -6314,9 +6314,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (WrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -6328,10 +6328,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of WrapupCode</returns>
-        public async System.Threading.Tasks.Task<WrapupCode> GetConversationParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of AssignedWrapupCode</returns>
+        public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<WrapupCode> localVarResponse = await GetConversationParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
 
         }
@@ -6343,8 +6343,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversation ID</param>
         /// <param name="participantId">participant ID</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (WrapupCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCode>> GetConversationParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -6420,9 +6420,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WrapupCode>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (WrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WrapupCode)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -7014,10 +7014,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        public Wrapup GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>AssignedWrapupCode</returns>
+        public AssignedWrapupCode GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = GetConversationsCallParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsCallParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
         }
 
@@ -7028,8 +7028,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        public ApiResponse< Wrapup > GetConversationsCallParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        public ApiResponse< AssignedWrapupCode > GetConversationsCallParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -7103,9 +7103,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -7117,10 +7117,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        public async System.Threading.Tasks.Task<Wrapup> GetConversationsCallParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of AssignedWrapupCode</returns>
+        public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCallParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = await GetConversationsCallParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsCallParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
 
         }
@@ -7132,8 +7132,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsCallParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCallParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -7209,9 +7209,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -7619,10 +7619,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        public Wrapup GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>AssignedWrapupCode</returns>
+        public AssignedWrapupCode GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = GetConversationsCallbackParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsCallbackParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
         }
 
@@ -7633,8 +7633,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        public ApiResponse< Wrapup > GetConversationsCallbackParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        public ApiResponse< AssignedWrapupCode > GetConversationsCallbackParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -7708,9 +7708,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -7722,10 +7722,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        public async System.Threading.Tasks.Task<Wrapup> GetConversationsCallbackParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of AssignedWrapupCode</returns>
+        public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCallbackParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = await GetConversationsCallbackParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsCallbackParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
 
         }
@@ -7737,8 +7737,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsCallbackParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCallbackParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -7814,9 +7814,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCallbackParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -8960,10 +8960,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        public Wrapup GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>AssignedWrapupCode</returns>
+        public AssignedWrapupCode GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = GetConversationsChatParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsChatParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
         }
 
@@ -8974,8 +8974,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        public ApiResponse< Wrapup > GetConversationsChatParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        public ApiResponse< AssignedWrapupCode > GetConversationsChatParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -9049,9 +9049,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -9063,10 +9063,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        public async System.Threading.Tasks.Task<Wrapup> GetConversationsChatParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of AssignedWrapupCode</returns>
+        public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsChatParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = await GetConversationsChatParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsChatParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
 
         }
@@ -9078,8 +9078,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsChatParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsChatParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -9155,9 +9155,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsChatParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -9743,10 +9743,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        public Wrapup GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>AssignedWrapupCode</returns>
+        public AssignedWrapupCode GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
         }
 
@@ -9757,8 +9757,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        public ApiResponse< Wrapup > GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        public ApiResponse< AssignedWrapupCode > GetConversationsCobrowsesessionParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -9832,9 +9832,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -9846,10 +9846,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        public async System.Threading.Tasks.Task<Wrapup> GetConversationsCobrowsesessionParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of AssignedWrapupCode</returns>
+        public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsCobrowsesessionParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = await GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
 
         }
@@ -9861,8 +9861,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsCobrowsesessionParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -9938,9 +9938,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsCobrowsesessionParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -11112,10 +11112,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        public Wrapup GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>AssignedWrapupCode</returns>
+        public AssignedWrapupCode GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = GetConversationsEmailParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsEmailParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
         }
 
@@ -11126,8 +11126,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        public ApiResponse< Wrapup > GetConversationsEmailParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        public ApiResponse< AssignedWrapupCode > GetConversationsEmailParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -11201,9 +11201,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -11215,10 +11215,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        public async System.Threading.Tasks.Task<Wrapup> GetConversationsEmailParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of AssignedWrapupCode</returns>
+        public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsEmailParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = await GetConversationsEmailParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsEmailParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
 
         }
@@ -11230,8 +11230,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsEmailParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsEmailParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -11307,9 +11307,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsEmailParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -12099,10 +12099,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Wrapup</returns>
-        public Wrapup GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>AssignedWrapupCode</returns>
+        public AssignedWrapupCode GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = GetConversationsMessageParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = GetConversationsMessageParticipantWrapupWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
         }
 
@@ -12113,8 +12113,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>ApiResponse of Wrapup</returns>
-        public ApiResponse< Wrapup > GetConversationsMessageParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>ApiResponse of AssignedWrapupCode</returns>
+        public ApiResponse< AssignedWrapupCode > GetConversationsMessageParticipantWrapupWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -12188,9 +12188,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 
@@ -12202,10 +12202,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of Wrapup</returns>
-        public async System.Threading.Tasks.Task<Wrapup> GetConversationsMessageParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of AssignedWrapupCode</returns>
+        public async System.Threading.Tasks.Task<AssignedWrapupCode> GetConversationsMessageParticipantWrapupAsync (string conversationId, string participantId, bool? provisional = null)
         {
-             ApiResponse<Wrapup> localVarResponse = await GetConversationsMessageParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
+             ApiResponse<AssignedWrapupCode> localVarResponse = await GetConversationsMessageParticipantWrapupAsyncWithHttpInfo(conversationId, participantId, provisional);
              return localVarResponse.Data;
 
         }
@@ -12217,8 +12217,8 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="conversationId">conversationId</param>
         /// <param name="participantId">participantId</param>
         /// <param name="provisional">Indicates if the wrap-up code is provisional. (optional, default to false)</param>
-        /// <returns>Task of ApiResponse (Wrapup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Wrapup>> GetConversationsMessageParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
+        /// <returns>Task of ApiResponse (AssignedWrapupCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<AssignedWrapupCode>> GetConversationsMessageParticipantWrapupAsyncWithHttpInfo (string conversationId, string participantId, bool? provisional = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -12294,9 +12294,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessageParticipantWrapup: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Wrapup>(localVarStatusCode,
+            return new ApiResponse<AssignedWrapupCode>(localVarStatusCode,
                 localVarHeaders,
-                (Wrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Wrapup)));
+                (AssignedWrapupCode) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssignedWrapupCode)));
             
         }
 

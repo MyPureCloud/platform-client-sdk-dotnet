@@ -17,7 +17,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch (string q64, List<string> expand = null, bool? profile = null)
 
+
+
 Search using the q64 value returned from a previous search.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -93,7 +99,13 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
 
+
+
 Suggest resources using the q64 value returned from a previous suggest query.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -169,7 +181,13 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch (SearchRequest body, bool? profile = null)
 
+
+
 Search resources.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -239,7 +257,13 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
 
+
+
 Suggest resources.
+
+
+
+Requires NO permissions: 
 
 
 

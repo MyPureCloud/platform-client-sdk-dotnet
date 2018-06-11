@@ -54,7 +54,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**Integration**](Integration.html) DeleteIntegration (string integrationId)
 
+
+
 Delete integration.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -118,9 +124,15 @@ namespace Example
 
 ## void DeleteIntegrationsAction (string actionId)
 
+
+
 Delete an Action
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:delete
 
 ### Example
 ~~~csharp
@@ -181,9 +193,15 @@ void (empty response body)
 
 ## void DeleteIntegrationsActionDraft (string actionId)
 
+
+
 Delete a Draft
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:delete
 
 ### Example
 ~~~csharp
@@ -244,7 +262,13 @@ void (empty response body)
 
 ## void DeleteIntegrationsCredential (string credentialId)
 
+
+
 Delete a set of credentials
+
+
+
+Requires NO permissions: 
 
 
 
@@ -307,7 +331,13 @@ void (empty response body)
 
 ## [**Integration**](Integration.html) GetIntegration (string integrationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 Get integration.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -407,7 +437,13 @@ namespace Example
 
 ## [**IntegrationConfiguration**](IntegrationConfiguration.html) GetIntegrationConfigCurrent (string integrationId)
 
+
+
 Get integration configuration.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -471,7 +507,13 @@ namespace Example
 
 ## [**IntegrationEntityListing**](IntegrationEntityListing.html) GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 List integrations
+
+
+
+Requires NO permissions: 
 
 
 
@@ -565,9 +607,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) GetIntegrationsAction (string actionId, string expand = null, bool? includeConfig = null)
 
+
+
 Retrieves a single Action matching id.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -641,9 +689,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) GetIntegrationsActionDraft (string actionId, string expand = null, bool? includeConfig = null)
 
+
+
 Retrieve a Draft
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -717,9 +771,15 @@ namespace Example
 
 ## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsActionDraftSchema (string actionId, string fileName)
 
+
+
 Retrieve schema for a Draft based on filename.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -787,9 +847,15 @@ namespace Example
 
 ## **string** GetIntegrationsActionDraftTemplate (string actionId, string fileName)
 
+
+
 Retrieve templates for a Draft based on filename.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -857,9 +923,15 @@ namespace Example
 
 ## [**DraftValidationResult**](DraftValidationResult.html) GetIntegrationsActionDraftValidation (string actionId)
 
+
+
 Validate current Draft configuration.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:edit
 
 ### Example
 ~~~csharp
@@ -921,9 +993,15 @@ namespace Example
 
 ## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsActionSchema (string actionId, string fileName)
 
+
+
 Retrieve schema for an action based on filename.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -991,9 +1069,15 @@ namespace Example
 
 ## **string** GetIntegrationsActionTemplate (string actionId, string fileName)
 
+
+
 Retrieve text of templates for an action based on filename.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1061,9 +1145,15 @@ namespace Example
 
 ## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActions (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 Retrieves all actions associated with filters passed in via query param.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1173,9 +1263,15 @@ namespace Example
 
 ## [**CategoryEntityListing**](CategoryEntityListing.html) GetIntegrationsActionsCategories (string secure = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 Retrieves all categories of available Actions
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1273,9 +1369,15 @@ namespace Example
 
 ## [**ActionEntityListing**](ActionEntityListing.html) GetIntegrationsActionsDrafts (string category = null, string secure = null, string includeAuthActions = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 Retrieves all action drafts associated with the filters passed in via query param.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:view* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1385,7 +1487,13 @@ namespace Example
 
 ## [**ClientAppEntityListing**](ClientAppEntityListing.html) GetIntegrationsClientapps (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 List permitted client app integrations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1479,7 +1587,13 @@ namespace Example
 
 ## [**Credential**](Credential.html) GetIntegrationsCredential (string credentialId)
 
+
+
 Get a single credential with sensitive fields redacted
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1543,7 +1657,13 @@ namespace Example
 
 ## [**CredentialInfoListing**](CredentialInfoListing.html) GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
 
+
+
 List multiple sets of credentials
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1613,7 +1733,13 @@ namespace Example
 
 ## [**CredentialTypeListing**](CredentialTypeListing.html) GetIntegrationsCredentialsTypes ()
 
+
+
 List all credential types
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1668,9 +1794,15 @@ This endpoint does require any parameters.
 
 ## [**IntegrationEventEntityListing**](IntegrationEventEntityListing.html) GetIntegrationsEventlog (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string entityId = null)
 
+
+
 List all events
 
 
+
+Requires ANY permissions: 
+
+* integrations:integration:view* bridge:notification:view
 
 ### Example
 ~~~csharp
@@ -1756,9 +1888,15 @@ namespace Example
 
 ## [**IntegrationEvent**](IntegrationEvent.html) GetIntegrationsEventlogEventId (string eventId)
 
+
+
 Get a single event
 
 
+
+Requires ANY permissions: 
+
+* integrations:integration:view* bridge:notification:view
 
 ### Example
 ~~~csharp
@@ -1820,7 +1958,13 @@ namespace Example
 
 ## [**IntegrationType**](IntegrationType.html) GetIntegrationsType (string typeId)
 
+
+
 Get integration type.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1884,7 +2028,13 @@ namespace Example
 
 ## [**JsonSchemaDocument**](JsonSchemaDocument.html) GetIntegrationsTypeConfigschema (string typeId, string configType)
 
+
+
 Get properties config schema for an integration type.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1954,7 +2104,13 @@ namespace Example
 
 ## [**IntegrationTypeEntityListing**](IntegrationTypeEntityListing.html) GetIntegrationsTypes (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 List integration types
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2048,7 +2204,13 @@ namespace Example
 
 ## [**Integration**](Integration.html) PatchIntegration (string integrationId, Integration body = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 
+
+
 Update an integration.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2154,9 +2316,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PatchIntegrationsAction (string actionId, UpdateActionInput body)
 
+
+
 Patch an Action
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:edit
 
 ### Example
 ~~~csharp
@@ -2224,9 +2392,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PatchIntegrationsActionDraft (string actionId, UpdateDraftInput body)
 
+
+
 Update an existing Draft
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:edit
 
 ### Example
 ~~~csharp
@@ -2294,7 +2468,13 @@ namespace Example
 
 ## [**Integration**](Integration.html) PostIntegrations (CreateIntegrationRequest body = null)
 
+
+
 Create an integration.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2358,9 +2538,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActionDraft (string actionId)
 
+
+
 Create a new Draft from existing Action
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:edit
 
 ### Example
 ~~~csharp
@@ -2422,9 +2608,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActionDraftPublish (string actionId, PublishDraftInput body)
 
+
+
 Publish a Draft and make it the active Action configuration
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:edit
 
 ### Example
 ~~~csharp
@@ -2492,9 +2684,15 @@ namespace Example
 
 ## [**TestExecutionResult**](TestExecutionResult.html) PostIntegrationsActionDraftTest (string actionId, Object body)
 
+
+
 Test the execution of a draft. Responses will show execution steps broken out with intermediate results to help in debugging.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:execute
 
 ### Example
 ~~~csharp
@@ -2562,9 +2760,15 @@ namespace Example
 
 ## **Object** PostIntegrationsActionExecute (string actionId, Object body)
 
+
+
 Execute Action and return response from 3rd party.  Responses will follow the schemas defined on the Action for success and error.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:execute* bridge:actions:execute
 
 ### Example
 ~~~csharp
@@ -2632,9 +2836,15 @@ namespace Example
 
 ## [**TestExecutionResult**](TestExecutionResult.html) PostIntegrationsActionTest (string actionId, Object body)
 
+
+
 Test the execution of an action. Responses will show execution steps broken out with intermediate results to help in debugging.
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:execute* bridge:actions:execute
 
 ### Example
 ~~~csharp
@@ -2702,9 +2912,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActions (PostActionInput body)
 
+
+
 Create a new Action
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:add
 
 ### Example
 ~~~csharp
@@ -2766,9 +2982,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Action**](Action.html) PostIntegrationsActionsDrafts (PostActionInput body)
 
+
+
 Create a new Draft
 
 
+
+Requires ANY permissions: 
+
+* integrations:action:add
 
 ### Example
 ~~~csharp
@@ -2830,7 +3052,13 @@ namespace Example
 
 ## [**CredentialInfo**](CredentialInfo.html) PostIntegrationsCredentials (Credential body = null)
 
+
+
 Create a set of credentials
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2894,7 +3122,13 @@ namespace Example
 
 ## [**UserActionCategoryEntityListing**](UserActionCategoryEntityListing.html) PostIntegrationsWorkforcemanagementVendorconnection (VendorConnectionRequest body = null)
 
+
+
 Add a vendor connection
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2958,7 +3192,13 @@ namespace Example
 
 ## [**IntegrationConfiguration**](IntegrationConfiguration.html) PutIntegrationConfigCurrent (string integrationId, IntegrationConfiguration body = null)
 
+
+
 Update integration configuration.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3028,7 +3268,13 @@ namespace Example
 
 ## [**CredentialInfo**](CredentialInfo.html) PutIntegrationsCredential (string credentialId, Credential body = null)
 
+
+
 Update a set of credentials
+
+
+
+Requires NO permissions: 
 
 
 

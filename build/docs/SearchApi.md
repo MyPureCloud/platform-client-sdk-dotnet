@@ -27,7 +27,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**DocumentationSearchResponse**](DocumentationSearchResponse.html) GetDocumentationSearch (string q64)
 
+
+
 Search documentation using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -91,7 +97,13 @@ namespace Example
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) GetGroupsSearch (string q64, List<string> expand = null)
 
+
+
 Search groups using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -161,7 +173,13 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetLocationsSearch (string q64, List<string> expand = null)
 
+
+
 Search locations using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -231,7 +249,13 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearch (string q64, List<string> expand = null, bool? profile = null)
 
+
+
 Search using the q64 value returned from a previous search.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -307,7 +331,13 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) GetSearchSuggest (string q64, List<string> expand = null, bool? profile = null)
 
+
+
 Suggest resources using the q64 value returned from a previous suggest query.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -383,7 +413,13 @@ namespace Example
 
 ## [**UsersSearchResponse**](UsersSearchResponse.html) GetUsersSearch (string q64, List<string> expand = null)
 
+
+
 Search users using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -453,7 +489,13 @@ namespace Example
 
 ## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) GetVoicemailSearch (string q64, List<string> expand = null)
 
+
+
 Search voicemails using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -523,7 +565,13 @@ namespace Example
 
 ## [**DocumentationSearchResponse**](DocumentationSearchResponse.html) PostDocumentationSearch (DocumentationSearchRequest body)
 
+
+
 Search documentation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -587,7 +635,13 @@ namespace Example
 
 ## [**GroupsSearchResponse**](GroupsSearchResponse.html) PostGroupsSearch (GroupSearchRequest body)
 
+
+
 Search groups
+
+
+
+Requires NO permissions: 
 
 
 
@@ -651,7 +705,13 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostLocationsSearch (LocationSearchRequest body)
 
+
+
 Search locations
+
+
+
+Requires NO permissions: 
 
 
 
@@ -715,7 +775,13 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearch (SearchRequest body, bool? profile = null)
 
+
+
 Search resources.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -785,7 +851,13 @@ namespace Example
 
 ## [**JsonNodeSearchResponse**](JsonNodeSearchResponse.html) PostSearchSuggest (SuggestSearchRequest body, bool? profile = null)
 
+
+
 Suggest resources.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -855,7 +927,13 @@ namespace Example
 
 ## [**UsersSearchResponse**](UsersSearchResponse.html) PostUsersSearch (UserSearchRequest body)
 
+
+
 Search users
+
+
+
+Requires NO permissions: 
 
 
 
@@ -919,7 +997,13 @@ namespace Example
 
 ## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) PostVoicemailSearch (VoicemailSearchRequest body)
 
+
+
 Search voicemails
+
+
+
+Requires NO permissions: 
 
 
 

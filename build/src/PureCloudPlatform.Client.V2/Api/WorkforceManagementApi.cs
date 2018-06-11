@@ -166,7 +166,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null);
@@ -179,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
@@ -462,7 +462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null);
@@ -475,7 +475,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null);
@@ -1905,7 +1905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ManagementUnitListing</returns>
         public ManagementUnitListing GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null)
@@ -1919,7 +1919,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>ApiResponse of ManagementUnitListing</returns>
         public ApiResponse< ManagementUnitListing > GetWorkforcemanagementManagementunitsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)
@@ -2002,7 +2002,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ManagementUnitListing</returns>
         public async System.Threading.Tasks.Task<ManagementUnitListing> GetWorkforcemanagementManagementunitsAsync (int? pageSize = null, int? pageNumber = null, string expand = null)
@@ -2017,7 +2017,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageSize"> (optional)</param>
-        /// <param name="pageNumber"> (optional, default to 1)</param>
+        /// <param name="pageNumber"> (optional)</param>
         /// <param name="expand"> (optional)</param>
         /// <returns>Task of ApiResponse (ManagementUnitListing)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null)

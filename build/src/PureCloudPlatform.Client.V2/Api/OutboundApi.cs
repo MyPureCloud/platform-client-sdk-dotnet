@@ -743,6 +743,38 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CampaignEntityListing> GetOutboundCampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
+        /// Query a list of basic Campaign information objects
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignDivisionViewListing</returns>
+        CampaignDivisionViewListing GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of basic Campaign information objects
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignDivisionViewListing</returns>
+        ApiResponse<CampaignDivisionViewListing> GetOutboundCampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+        
+        /// <summary>
         /// Get a dialer contact list.
         /// </summary>
         /// <remarks>
@@ -2905,6 +2937,38 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Sort order (optional, default to a)</param>
         /// <returns>Task of ApiResponse (CampaignEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null);
+        
+        /// <summary>
+        /// Query a list of basic Campaign information objects
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignDivisionViewListing</returns>
+        System.Threading.Tasks.Task<CampaignDivisionViewListing> GetOutboundCampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Query a list of basic Campaign information objects
+        /// </summary>
+        /// <remarks>
+        /// This returns a simplified version of a Campaign, consisting of name and division.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignDivisionViewListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CampaignDivisionViewListing>> GetOutboundCampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
         
         /// <summary>
         /// Get a dialer contact list.
@@ -10304,6 +10368,220 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CampaignEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (CampaignEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignEntityListing)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>CampaignDivisionViewListing</returns>
+        public CampaignDivisionViewListing GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CampaignDivisionViewListing> localVarResponse = GetOutboundCampaignsDivisionviewsWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>ApiResponse of CampaignDivisionViewListing</returns>
+        public ApiResponse< CampaignDivisionViewListing > GetOutboundCampaignsDivisionviewsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/outbound/campaigns/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDivisionViewListing>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignDivisionViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDivisionViewListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of CampaignDivisionViewListing</returns>
+        public async System.Threading.Tasks.Task<CampaignDivisionViewListing> GetOutboundCampaignsDivisionviewsAsync (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        {
+             ApiResponse<CampaignDivisionViewListing> localVarResponse = await GetOutboundCampaignsDivisionviewsAsyncWithHttpInfo(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query a list of basic Campaign information objects This returns a simplified version of a Campaign, consisting of name and division.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="filterType">Filter type (optional, default to Prefix)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="sortBy">Sort by (optional)</param>
+        /// <param name="sortOrder">Sort order (optional, default to a)</param>
+        /// <returns>Task of ApiResponse (CampaignDivisionViewListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignDivisionViewListing>> GetOutboundCampaignsDivisionviewsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+        { 
+
+            var localVarPath = "/api/v2/outbound/campaigns/divisionviews";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionviews: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundCampaignsDivisionviews: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDivisionViewListing>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignDivisionViewListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDivisionViewListing)));
             
         }
 

@@ -30,9 +30,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteAuthorizationRole (string roleId)
 
+
+
 Delete an organization role.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:role:delete
 
 ### Example
 ~~~csharp
@@ -93,9 +99,15 @@ void (empty response body)
 
 ## void DeleteUserRoles (string userId)
 
+
+
 Removes all the roles from the user.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:delete
 
 ### Example
 ~~~csharp
@@ -156,9 +168,15 @@ void (empty response body)
 
 ## [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing.html) GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get all permissions.
 
 Retrieve a list of all permission defined in the system.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -226,9 +244,15 @@ namespace Example
 
 ## [**OrganizationProductEntityListing**](OrganizationProductEntityListing.html) GetAuthorizationProducts ()
 
+
+
 Get the list of enabled products
 
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -281,9 +305,15 @@ This endpoint does require any parameters.
 
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) GetAuthorizationRole (string roleId)
 
+
+
 Get a single organization role.
 
 Get the organization role specified by its ID.
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 ### Example
 ~~~csharp
@@ -345,9 +375,15 @@ namespace Example
 
 ## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) GetAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId)
 
+
+
 Get an org role to default role comparison comparison
 
 Compares any organization role to a default role id and show differences
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 ### Example
 ~~~csharp
@@ -415,9 +451,15 @@ namespace Example
 
 ## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) GetAuthorizationRoles (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
 
+
+
 Retrieve a list of all roles defined for the organization
 
 
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 ### Example
 ~~~csharp
@@ -539,9 +581,15 @@ namespace Example
 
 ## [**UserAuthorization**](UserAuthorization.html) GetUserRoles (string userId)
 
+
+
 Returns a listing of roles and permissions for a user.
 
 
+
+Requires ANY permissions: 
+
+* authorization:grant:view
 
 ### Example
 ~~~csharp
@@ -603,9 +651,15 @@ namespace Example
 
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) PatchAuthorizationRole (string roleId, DomainOrganizationRole body)
 
+
+
 Patch Organization Role for needsUpdate Field
 
 Patch Organization Role for needsUpdate Field
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:role:edit
 
 ### Example
 ~~~csharp
@@ -673,9 +727,15 @@ namespace Example
 
 ## [**DomainOrgRoleDifference**](DomainOrgRoleDifference.html) PostAuthorizationRoleComparedefaultRightRoleId (string leftRoleId, string rightRoleId, DomainOrganizationRole body)
 
+
+
 Get an unsaved org role to default role comparison
 
 Allows users to compare their existing roles in an unsaved state to its default role
+
+Requires ANY permissions: 
+
+* authorization:role:view
 
 ### Example
 ~~~csharp
@@ -749,9 +809,15 @@ namespace Example
 
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) PostAuthorizationRoles (DomainOrganizationRoleCreate body)
 
+
+
 Create an organization role.
 
 
+
+Requires ANY permissions: 
+
+* authorization:role:add
 
 ### Example
 ~~~csharp
@@ -813,9 +879,15 @@ namespace Example
 
 ## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PostAuthorizationRolesDefault (bool? force = null)
 
+
+
 Restores all default roles
 
 This endpoint serves several purposes. 1. It provides the org with default roles. This is important for default roles that will be added after go-live (they can retroactively add the new default-role). Note: When not using a query param of force=true, it only adds the default roles not configured for the org; it does not overwrite roles. 2. Using the query param force=true, you can restore all default roles. Note: This does not have an effect on custom roles.
+
+Requires ANY permissions: 
+
+* authorization:role:edit
 
 ### Example
 ~~~csharp
@@ -877,9 +949,15 @@ namespace Example
 
 ## [**DomainOrganizationRole**](DomainOrganizationRole.html) PutAuthorizationRole (string roleId, DomainOrganizationRoleUpdate body)
 
+
+
 Update an organization role.
 
 Update
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:role:edit
 
 ### Example
 ~~~csharp
@@ -947,9 +1025,15 @@ namespace Example
 
 ## **List&lt;string&gt;** PutAuthorizationRoleUsersAdd (string roleId, List<string> body)
 
+
+
 Sets the users for the role
 
 
+
+Requires ANY permissions: 
+
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -1017,9 +1101,15 @@ namespace Example
 
 ## **List&lt;string&gt;** PutAuthorizationRoleUsersRemove (string roleId, List<string> body)
 
+
+
 Removes the users from the role
 
 
+
+Requires ANY permissions: 
+
+* authorization:grant:delete
 
 ### Example
 ~~~csharp
@@ -1087,9 +1177,15 @@ namespace Example
 
 ## [**OrganizationRoleEntityListing**](OrganizationRoleEntityListing.html) PutAuthorizationRolesDefault (List<DomainOrganizationRole> body)
 
+
+
 Restore specified default roles
 
 
+
+Requires ANY permissions: 
+
+* authorization:role:edit
 
 ### Example
 ~~~csharp
@@ -1151,9 +1247,15 @@ namespace Example
 
 ## [**UserAuthorization**](UserAuthorization.html) PutUserRoles (string userId, List<string> body)
 
+
+
 Sets the user's roles
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp

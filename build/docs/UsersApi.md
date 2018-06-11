@@ -65,7 +65,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**Empty**](Empty.html) DeleteUser (string userId)
 
+
+
 Delete user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -129,9 +135,15 @@ namespace Example
 
 ## void DeleteUserRoles (string userId)
 
+
+
 Removes all the roles from the user.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:delete
 
 ### Example
 ~~~csharp
@@ -192,9 +204,15 @@ void (empty response body)
 
 ## void DeleteUserRoutinglanguage (string userId, string languageId)
 
+
+
 Remove routing language from user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -261,9 +279,15 @@ void (empty response body)
 
 ## void DeleteUserRoutingskill (string userId, string skillId)
 
+
+
 Remove routing skill from user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -330,7 +354,13 @@ void (empty response body)
 
 ## void DeleteUserStationAssociatedstation (string userId)
 
+
+
 Clear associated station
+
+
+
+Requires NO permissions: 
 
 
 
@@ -393,9 +423,15 @@ void (empty response body)
 
 ## void DeleteUserStationDefaultstation (string userId)
 
+
+
 Clear default station
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all* telephony:phone:assign
 
 ### Example
 ~~~csharp
@@ -456,7 +492,13 @@ void (empty response body)
 
 ## [**FieldConfig**](FieldConfig.html) GetFieldconfig (string type)
 
+
+
 Fetch field config for an entity type
+
+
+
+Requires NO permissions: 
 
 
 
@@ -520,7 +562,13 @@ namespace Example
 
 ## [**UserProfileEntityListing**](UserProfileEntityListing.html) GetProfilesUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string state = null)
 
+
+
 Get a user profile listing
+
+
+
+Requires NO permissions: 
 
 
 
@@ -620,7 +668,13 @@ namespace Example
 
 ## [**User**](User.html) GetUser (string userId, List<string> expand = null, string state = null)
 
+
+
 Get user.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -696,7 +750,13 @@ namespace Example
 
 ## [**Adjacents**](Adjacents.html) GetUserAdjacents (string userId, List<string> expand = null)
 
+
+
 Get adjacents
+
+
+
+Requires NO permissions: 
 
 
 
@@ -766,7 +826,13 @@ namespace Example
 
 ## [**CallForwarding**](CallForwarding.html) GetUserCallforwarding (string userId)
 
+
+
 Get a user's CallForwarding
+
+
+
+Requires NO permissions: 
 
 
 
@@ -830,7 +896,13 @@ namespace Example
 
 ## [**List&lt;User&gt;**](User.html) GetUserDirectreports (string userId, List<string> expand = null)
 
+
+
 Get direct reports
+
+
+
+Requires NO permissions: 
 
 
 
@@ -900,7 +972,13 @@ namespace Example
 
 ## [**UserEntityListing**](UserEntityListing.html) GetUserFavorites (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
+
+
 Get favorites
+
+
+
+Requires NO permissions: 
 
 
 
@@ -988,7 +1066,13 @@ namespace Example
 
 ## [**Geolocation**](Geolocation.html) GetUserGeolocation (string userId, string clientId)
 
+
+
 Get a user's Geolocation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1058,7 +1142,13 @@ namespace Example
 
 ## [**OutOfOffice**](OutOfOffice.html) GetUserOutofoffice (string userId)
 
+
+
 Get a OutOfOffice
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1122,7 +1212,13 @@ namespace Example
 
 ## [**UserProfile**](UserProfile.html) GetUserProfile (string userId, List<string> expand = null)
 
+
+
 Get user profile
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1192,9 +1288,15 @@ namespace Example
 
 ## **List&lt;string&gt;** GetUserProfileskills (string userId)
 
+
+
 List profile skills for a user
 
 
+
+Requires ANY permissions: 
+
+* directory:userProfile:view
 
 ### Example
 ~~~csharp
@@ -1254,11 +1356,17 @@ namespace Example
 
 <a name="getuserqueues"></a>
 
-## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) GetUserQueues (string userId, int? pageSize = null, int? pageNumber = null, bool? joined = null, List<string> divisionId = null)
+
+
 
 Get queues for user
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:view
 
 ### Example
 ~~~csharp
@@ -1301,13 +1409,18 @@ namespace Example
             
             
             
+            
+            
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            
+            
 
             try
             {
                 
                 // Get queues for user
                 
-                UserQueueEntityListing result = apiInstance.GetUserQueues(userId, pageSize, pageNumber, joined);
+                UserQueueEntityListing result = apiInstance.GetUserQueues(userId, pageSize, pageNumber, joined, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1328,6 +1441,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **joined** | **bool?**| Is joined to the queue | [optional] [default to true] |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1338,9 +1452,15 @@ namespace Example
 
 ## [**UserAuthorization**](UserAuthorization.html) GetUserRoles (string userId)
 
+
+
 Returns a listing of roles and permissions for a user.
 
 
+
+Requires ANY permissions: 
+
+* authorization:grant:view
 
 ### Example
 ~~~csharp
@@ -1402,7 +1522,13 @@ namespace Example
 
 ## [**UserLanguageEntityListing**](UserLanguageEntityListing.html) GetUserRoutinglanguages (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
+
+
 List routing language for user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1484,7 +1610,13 @@ namespace Example
 
 ## [**UserSkillEntityListing**](UserSkillEntityListing.html) GetUserRoutingskills (string userId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
+
+
 List routing skills for user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1566,7 +1698,13 @@ namespace Example
 
 ## [**RoutingStatus**](RoutingStatus.html) GetUserRoutingstatus (string userId)
 
+
+
 Fetch the routing status of a user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1630,7 +1768,13 @@ namespace Example
 
 ## [**UserStations**](UserStations.html) GetUserStation (string userId)
 
+
+
 Get station information for user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1694,7 +1838,13 @@ namespace Example
 
 ## [**List&lt;User&gt;**](User.html) GetUserSuperiors (string userId, List<string> expand = null)
 
+
+
 Get superiors
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1764,9 +1914,15 @@ namespace Example
 
 ## [**TrustorEntityListing**](TrustorEntityListing.html) GetUserTrustors (string userId, int? pageSize = null, int? pageNumber = null)
 
+
+
 List the organizations that have authorized/trusted the user.
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustor:view
 
 ### Example
 ~~~csharp
@@ -1840,7 +1996,13 @@ namespace Example
 
 ## [**UserEntityListing**](UserEntityListing.html) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, string sortOrder = null, List<string> expand = null, string state = null)
 
+
+
 Get the list of available users.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1934,9 +2096,15 @@ namespace Example
 
 ## [**UserMe**](UserMe.html) GetUsersMe (List<string> expand = null)
 
+
+
 Get current user details.
 
 This request is not valid when using the Client Credentials OAuth grant.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -1998,7 +2166,13 @@ namespace Example
 
 ## [**UsersSearchResponse**](UsersSearchResponse.html) GetUsersSearch (string q64, List<string> expand = null)
 
+
+
 Search users using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2068,7 +2242,13 @@ namespace Example
 
 ## [**User**](User.html) PatchUser (string userId, UpdateUser body)
 
+
+
 Update user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2138,7 +2318,13 @@ namespace Example
 
 ## [**CallForwarding**](CallForwarding.html) PatchUserCallforwarding (string userId, CallForwarding body)
 
+
+
 Patch a user's CallForwarding
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2208,9 +2394,15 @@ namespace Example
 
 ## [**Geolocation**](Geolocation.html) PatchUserGeolocation (string userId, string clientId, Geolocation body)
 
+
+
 Patch a user's Geolocation
 
 The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -2284,9 +2476,15 @@ namespace Example
 
 ## [**UserQueue**](UserQueue.html) PatchUserQueue (string queueId, string userId, UserQueue body)
 
+
+
 Join or unjoin a queue for a user
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:join
 
 ### Example
 ~~~csharp
@@ -2358,11 +2556,17 @@ namespace Example
 
 <a name="patchuserqueues"></a>
 
-## [**UserQueueEntityListing**](UserQueueEntityListing.html) PatchUserQueues (string userId, List<UserQueue> body)
+## [**UserQueueEntityListing**](UserQueueEntityListing.html) PatchUserQueues (string userId, List<UserQueue> body, List<string> divisionId = null)
+
+
 
 Join or unjoin a set of queues for a user
 
 
+
+Requires ANY permissions: 
+
+* routing:queue:join
 
 ### Example
 ~~~csharp
@@ -2395,13 +2599,18 @@ namespace Example
             var body = new List<UserQueue>(); // List<UserQueue> | User Queues
             
             
+            
+            
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            
+            
 
             try
             {
                 
                 // Join or unjoin a set of queues for a user
                 
-                UserQueueEntityListing result = apiInstance.PatchUserQueues(userId, body);
+                UserQueueEntityListing result = apiInstance.PatchUserQueues(userId, body, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2420,6 +2629,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| User ID |  |
 | **body** | [**List<UserQueue>**](UserQueue.html)| User Queues |  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2430,9 +2640,15 @@ namespace Example
 
 ## [**UserRoutingLanguage**](UserRoutingLanguage.html) PatchUserRoutinglanguage (string userId, string languageId, UserRoutingLanguage body)
 
+
+
 Update routing language proficiency or state.
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -2506,9 +2722,15 @@ namespace Example
 
 ## [**PresenceQueryResponse**](PresenceQueryResponse.html) PostAnalyticsUsersAggregatesQuery (AggregationQuery body)
 
+
+
 Query for user aggregates
 
 
+
+Requires ANY permissions: 
+
+* analytics:userAggregate:view
 
 ### Example
 ~~~csharp
@@ -2570,9 +2792,15 @@ namespace Example
 
 ## [**AnalyticsUserDetailsQueryResponse**](AnalyticsUserDetailsQueryResponse.html) PostAnalyticsUsersDetailsQuery (UserDetailsQuery body)
 
+
+
 Query for user details
 
 
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
 
 ### Example
 ~~~csharp
@@ -2634,9 +2862,15 @@ namespace Example
 
 ## [**ObservationQueryResponse**](ObservationQueryResponse.html) PostAnalyticsUsersObservationsQuery (ObservationQuery body)
 
+
+
 Query for user observations
 
 
+
+Requires ANY permissions: 
+
+* analytics:userObservation:view
 
 ### Example
 ~~~csharp
@@ -2698,9 +2932,15 @@ namespace Example
 
 ## void PostUserInvite (string userId, bool? force = null)
 
+
+
 Send an activation email to the user
 
 
+
+Requires ANY permissions: 
+
+* directory:user:add* user_manager* user_administration
 
 ### Example
 ~~~csharp
@@ -2767,9 +3007,15 @@ void (empty response body)
 
 ## void PostUserPassword (string userId, ChangePasswordRequest body)
 
+
+
 Change a users password
 
 
+
+Requires ANY permissions: 
+
+* user_administration* directory:userPassword:edit
 
 ### Example
 ~~~csharp
@@ -2836,9 +3082,15 @@ void (empty response body)
 
 ## [**UserRoutingLanguage**](UserRoutingLanguage.html) PostUserRoutinglanguages (string userId, UserRoutingLanguagePost body)
 
+
+
 Add routing language to user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -2906,9 +3158,15 @@ namespace Example
 
 ## [**UserRoutingSkill**](UserRoutingSkill.html) PostUserRoutingskills (string userId, UserRoutingSkillPost body)
 
+
+
 Add routing skill to user
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -2976,9 +3234,15 @@ namespace Example
 
 ## [**User**](User.html) PostUsers (CreateUser body)
 
+
+
 Create user
 
 
+
+Requires ANY permissions: 
+
+* directory:user:add
 
 ### Example
 ~~~csharp
@@ -3040,7 +3304,13 @@ namespace Example
 
 ## void PostUsersMePassword (ChangeMyPasswordRequest body)
 
+
+
 Change your password
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3103,7 +3373,13 @@ void (empty response body)
 
 ## [**UsersSearchResponse**](UsersSearchResponse.html) PostUsersSearch (UserSearchRequest body)
 
+
+
 Search users
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3167,7 +3443,13 @@ namespace Example
 
 ## [**CallForwarding**](CallForwarding.html) PutUserCallforwarding (string userId, CallForwarding body)
 
+
+
 Update a user's CallForwarding
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3237,7 +3519,13 @@ namespace Example
 
 ## [**OutOfOffice**](OutOfOffice.html) PutUserOutofoffice (string userId, OutOfOffice body)
 
+
+
 Update an OutOfOffice
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3307,9 +3595,15 @@ namespace Example
 
 ## **List&lt;string&gt;** PutUserProfileskills (string userId, List<string> body = null)
 
+
+
 Update profile skills for a user
 
 
+
+Requires ANY permissions: 
+
+* directory:userProfile:edit* admin* user_manager* user_administration
 
 ### Example
 ~~~csharp
@@ -3377,9 +3671,15 @@ namespace Example
 
 ## [**UserAuthorization**](UserAuthorization.html) PutUserRoles (string userId, List<string> body)
 
+
+
 Sets the user's roles
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -3447,9 +3747,15 @@ namespace Example
 
 ## [**UserRoutingSkill**](UserRoutingSkill.html) PutUserRoutingskill (string userId, string skillId, UserRoutingSkill body)
 
+
+
 Update routing skill proficiency or state.
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:assign* admin
 
 ### Example
 ~~~csharp
@@ -3523,7 +3829,13 @@ namespace Example
 
 ## [**RoutingStatus**](RoutingStatus.html) PutUserRoutingstatus (string userId, RoutingStatus body)
 
+
+
 Update the routing status of a user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3593,7 +3905,13 @@ namespace Example
 
 ## void PutUserStationAssociatedstationStationId (string userId, string stationId)
 
+
+
 Set associated station
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3662,9 +3980,15 @@ void (empty response body)
 
 ## void PutUserStationDefaultstationStationId (string userId, string stationId)
 
+
+
 Set default station
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all* telephony:phone:assign
 
 ### Example
 ~~~csharp

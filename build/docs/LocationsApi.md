@@ -17,9 +17,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**LocationDefinition**](LocationDefinition.html) GetLocation (string locationId)
 
+
+
 Get Location by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -81,7 +87,13 @@ namespace Example
 
 ## [**LocationEntityListing**](LocationEntityListing.html) GetLocations (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
+
+
 Get a list of all locations.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -157,7 +169,13 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) GetLocationsSearch (string q64, List<string> expand = null)
 
+
+
 Search locations using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -227,7 +245,13 @@ namespace Example
 
 ## [**LocationsSearchResponse**](LocationsSearchResponse.html) PostLocationsSearch (LocationSearchRequest body)
 
+
+
 Search locations
+
+
+
+Requires NO permissions: 
 
 
 

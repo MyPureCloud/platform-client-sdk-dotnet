@@ -20,7 +20,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteNotificationsChannelSubscriptions (string channelId)
 
+
+
 Remove all subscriptions
+
+
+
+Requires NO permissions: 
 
 
 
@@ -83,7 +89,13 @@ void (empty response body)
 
 ## [**AvailableTopicEntityListing**](AvailableTopicEntityListing.html) GetNotificationsAvailabletopics (List<string> expand = null)
 
+
+
 Get available notification topics.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -147,7 +159,13 @@ namespace Example
 
 ## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) GetNotificationsChannelSubscriptions (string channelId)
 
+
+
 The list of all subscriptions for this channel
+
+
+
+Requires NO permissions: 
 
 
 
@@ -211,7 +229,13 @@ namespace Example
 
 ## [**ChannelEntityListing**](ChannelEntityListing.html) GetNotificationsChannels (string includechannels = null)
 
+
+
 The list of existing channels
+
+
+
+Requires NO permissions: 
 
 
 
@@ -275,7 +299,13 @@ namespace Example
 
 ## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PostNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body)
 
+
+
 Add a list of subscriptions to the existing list of subscriptions
+
+
+
+Requires NO permissions: 
 
 
 
@@ -345,9 +375,15 @@ namespace Example
 
 ## [**Channel**](Channel.html) PostNotificationsChannels ()
 
+
+
 Create a new channel
 
 There is a limit of 5 channels per user/app combination. Creating a 6th channel will remove the channel with oldest last used date.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -400,7 +436,13 @@ This endpoint does require any parameters.
 
 ## [**ChannelTopicEntityListing**](ChannelTopicEntityListing.html) PutNotificationsChannelSubscriptions (string channelId, List<ChannelTopic> body)
 
+
+
 Replace the current list of subscriptions with a new list.
+
+
+
+Requires NO permissions: 
 
 
 

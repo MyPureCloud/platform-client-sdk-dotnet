@@ -24,9 +24,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteAlertingInteractionstatsAlert (string alertId)
 
+
+
 Delete an interaction stats alert
 
 
+
+Requires ANY permissions: 
+
+* alerting:alert:delete
 
 ### Example
 ~~~csharp
@@ -87,9 +93,15 @@ void (empty response body)
 
 ## void DeleteAlertingInteractionstatsRule (string ruleId)
 
+
+
 Delete an interaction stats rule.
 
 
+
+Requires ANY permissions: 
+
+* alerting:rule:delete
 
 ### Example
 ~~~csharp
@@ -150,7 +162,13 @@ void (empty response body)
 
 ## [**ActiveAlertCount**](ActiveAlertCount.html) GetAlertingAlertsActive ()
 
+
+
 Gets active alert count for a user.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -205,9 +223,15 @@ This endpoint does require any parameters.
 
 ## [**InteractionStatsAlert**](InteractionStatsAlert.html) GetAlertingInteractionstatsAlert (string alertId, List<string> expand = null)
 
+
+
 Get an interaction stats alert
 
 
+
+Requires ANY permissions: 
+
+* alerting:alert:view
 
 ### Example
 ~~~csharp
@@ -275,9 +299,15 @@ namespace Example
 
 ## [**InteractionStatsAlertContainer**](InteractionStatsAlertContainer.html) GetAlertingInteractionstatsAlerts (List<string> expand = null)
 
+
+
 Get interaction stats alert list.
 
 
+
+Requires ANY permissions: 
+
+* alerting:alert:view
 
 ### Example
 ~~~csharp
@@ -339,7 +369,13 @@ namespace Example
 
 ## [**UnreadMetric**](UnreadMetric.html) GetAlertingInteractionstatsAlertsUnread ()
 
+
+
 Gets user unread count of interaction stats alerts.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -394,9 +430,15 @@ This endpoint does require any parameters.
 
 ## [**InteractionStatsRule**](InteractionStatsRule.html) GetAlertingInteractionstatsRule (string ruleId, List<string> expand = null)
 
+
+
 Get an interaction stats rule.
 
 
+
+Requires ANY permissions: 
+
+* alerting:rule:view
 
 ### Example
 ~~~csharp
@@ -464,9 +506,15 @@ namespace Example
 
 ## [**InteractionStatsRuleContainer**](InteractionStatsRuleContainer.html) GetAlertingInteractionstatsRules (List<string> expand = null)
 
+
+
 Get an interaction stats rule list.
 
 
+
+Requires ANY permissions: 
+
+* alerting:rule:view
 
 ### Example
 ~~~csharp
@@ -528,9 +576,15 @@ namespace Example
 
 ## [**InteractionStatsRule**](InteractionStatsRule.html) PostAlertingInteractionstatsRules (InteractionStatsRule body, List<string> expand = null)
 
+
+
 Create an interaction stats rule.
 
 
+
+Requires ANY permissions: 
+
+* alerting:rule:add
 
 ### Example
 ~~~csharp
@@ -598,9 +652,15 @@ namespace Example
 
 ## [**UnreadStatus**](UnreadStatus.html) PutAlertingInteractionstatsAlert (string alertId, UnreadStatus body, List<string> expand = null)
 
+
+
 Update an interaction stats alert read status
 
 
+
+Requires ANY permissions: 
+
+* alerting:alert:edit
 
 ### Example
 ~~~csharp
@@ -674,9 +734,15 @@ namespace Example
 
 ## [**InteractionStatsRule**](InteractionStatsRule.html) PutAlertingInteractionstatsRule (string ruleId, InteractionStatsRule body, List<string> expand = null)
 
+
+
 Update an interaction stats rule
 
 
+
+Requires ANY permissions: 
+
+* alerting:rule:edit
 
 ### Example
 ~~~csharp

@@ -55,6 +55,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="WebChatDeployment" /> class.
@@ -75,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="AuthenticationUrl">URL for third party service authenticating webchat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples.</param>
+        /// <param name="AuthenticationUrl">URL for third party service authenticating web chat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples.</param>
         
         
         
@@ -83,9 +88,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="WebChatConfig">WebChatConfig.</param>
         
-        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null)
+        
+        
+        
+        public WebChatDeployment(string Name = null, string Description = null, bool? AuthenticationRequired = null, string AuthenticationUrl = null, bool? Disabled = null, WebChatConfig WebChatConfig = null)
         {
+            
+            
+            
+            
             
             
             
@@ -161,6 +174,15 @@ this.Disabled = Disabled;
             
             
             
+            
+            
+this.WebChatConfig = WebChatConfig;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -199,9 +221,9 @@ this.Disabled = Disabled;
         
         
         /// <summary>
-        /// URL for third party service authenticating webchat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples
+        /// URL for third party service authenticating web chat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples
         /// </summary>
-        /// <value>URL for third party service authenticating webchat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples</value>
+        /// <value>URL for third party service authenticating web chat clients. See https://github.com/MyPureCloud/authenticated-web-chat-server-examples</value>
         [DataMember(Name="authenticationUrl", EmitDefaultValue=false)]
         public string AuthenticationUrl { get; set; }
         
@@ -212,6 +234,14 @@ this.Disabled = Disabled;
         /// </summary>
         [DataMember(Name="disabled", EmitDefaultValue=false)]
         public bool? Disabled { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Gets or Sets WebChatConfig
+        /// </summary>
+        [DataMember(Name="webChatConfig", EmitDefaultValue=false)]
+        public WebChatConfig WebChatConfig { get; set; }
         
         
         
@@ -243,6 +273,8 @@ this.Disabled = Disabled;
             sb.Append("  AuthenticationUrl: ").Append(AuthenticationUrl).Append("\n");
             
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
+            
+            sb.Append("  WebChatConfig: ").Append(WebChatConfig).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -313,6 +345,11 @@ this.Disabled = Disabled;
                     this.Disabled.Equals(other.Disabled)
                 ) &&
                 (
+                    this.WebChatConfig == other.WebChatConfig ||
+                    this.WebChatConfig != null &&
+                    this.WebChatConfig.Equals(other.WebChatConfig)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -348,6 +385,9 @@ this.Disabled = Disabled;
                 
                 if (this.Disabled != null)
                     hash = hash * 59 + this.Disabled.GetHashCode();
+                
+                if (this.WebChatConfig != null)
+                    hash = hash * 59 + this.WebChatConfig.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

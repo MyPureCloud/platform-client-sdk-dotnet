@@ -37,9 +37,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteVoicemailMessage (string messageId)
 
+
+
 Delete a voicemail message.
 
 A user voicemail can only be deleted by its associated user. A group voicemail can only be deleted by a user that is a member of the group. A queue voicemail can only be deleted by a user with the acd voicemail delete permission.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -100,7 +106,13 @@ void (empty response body)
 
 ## void DeleteVoicemailMessages ()
 
+
+
 Delete all voicemail messages
+
+
+
+Requires NO permissions: 
 
 
 
@@ -154,7 +166,13 @@ void (empty response body)
 
 ## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) GetVoicemailGroupMailbox (string groupId)
 
+
+
 Get the group's mailbox information
+
+
+
+Requires NO permissions: 
 
 
 
@@ -218,7 +236,13 @@ namespace Example
 
 ## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetVoicemailGroupMessages (string groupId, int? pageSize = null, int? pageNumber = null)
 
+
+
 List voicemail messages
+
+
+
+Requires NO permissions: 
 
 
 
@@ -294,9 +318,15 @@ namespace Example
 
 ## [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html) GetVoicemailGroupPolicy (string groupId)
 
+
+
 Get a group's voicemail policy
 
 
+
+Requires ANY permissions: 
+
+* directory:group:add* directory:group:edit* group_administration* group_creation
 
 ### Example
 ~~~csharp
@@ -358,7 +388,13 @@ namespace Example
 
 ## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) GetVoicemailMailbox ()
 
+
+
 Get the current user's mailbox information
+
+
+
+Requires NO permissions: 
 
 
 
@@ -413,7 +449,13 @@ This endpoint does require any parameters.
 
 ## [**VoicemailMailboxInfo**](VoicemailMailboxInfo.html) GetVoicemailMeMailbox ()
 
+
+
 Get the current user's mailbox information
+
+
+
+Requires NO permissions: 
 
 
 
@@ -468,7 +510,13 @@ This endpoint does require any parameters.
 
 ## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetVoicemailMeMessages (int? pageSize = null, int? pageNumber = null)
 
+
+
 List voicemail messages
+
+
+
+Requires NO permissions: 
 
 
 
@@ -538,7 +586,13 @@ namespace Example
 
 ## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) GetVoicemailMePolicy ()
 
+
+
 Get the current user's voicemail policy
+
+
+
+Requires NO permissions: 
 
 
 
@@ -593,7 +647,13 @@ This endpoint does require any parameters.
 
 ## [**VoicemailMessage**](VoicemailMessage.html) GetVoicemailMessage (string messageId, List<string> expand = null)
 
+
+
 Get a voicemail message
+
+
+
+Requires NO permissions: 
 
 
 
@@ -663,7 +723,13 @@ namespace Example
 
 ## [**VoicemailMediaInfo**](VoicemailMediaInfo.html) GetVoicemailMessageMedia (string messageId, string formatId = null)
 
+
+
 Get media playback URI for this voicemail message
+
+
+
+Requires NO permissions: 
 
 
 
@@ -733,7 +799,13 @@ namespace Example
 
 ## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetVoicemailMessages (string ids = null, List<string> expand = null)
 
+
+
 List voicemail messages
+
+
+
+Requires NO permissions: 
 
 
 
@@ -803,9 +875,15 @@ namespace Example
 
 ## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) GetVoicemailPolicy ()
 
+
+
 Get a policy
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -858,9 +936,15 @@ This endpoint does require any parameters.
 
 ## [**VoicemailMessageEntityListing**](VoicemailMessageEntityListing.html) GetVoicemailQueueMessages (string queueId, int? pageSize = null, int? pageNumber = null)
 
+
+
 List voicemail messages
 
 
+
+Requires ANY permissions: 
+
+* voicemail:acdVoicemail:view
 
 ### Example
 ~~~csharp
@@ -934,7 +1018,13 @@ namespace Example
 
 ## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) GetVoicemailSearch (string q64, List<string> expand = null)
 
+
+
 Search voicemails using the q64 value returned from a previous search
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1004,7 +1094,13 @@ namespace Example
 
 ## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) GetVoicemailUserpolicy (string userId)
 
+
+
 Get a user's voicemail policy
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1068,9 +1164,15 @@ namespace Example
 
 ## [**VoicemailGroupPolicy**](VoicemailGroupPolicy.html) PatchVoicemailGroupPolicy (string groupId, VoicemailGroupPolicy body)
 
+
+
 Update a group's voicemail policy
 
 
+
+Requires ANY permissions: 
+
+* directory:group:add* directory:group:edit* group_administration* group_creation
 
 ### Example
 ~~~csharp
@@ -1138,7 +1240,13 @@ namespace Example
 
 ## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) PatchVoicemailMePolicy (VoicemailUserPolicy body)
 
+
+
 Update the current user's voicemail policy
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1202,9 +1310,15 @@ namespace Example
 
 ## [**VoicemailMessage**](VoicemailMessage.html) PatchVoicemailMessage (string messageId, VoicemailMessage body)
 
+
+
 Update a voicemail message
 
 A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -1272,7 +1386,13 @@ namespace Example
 
 ## [**VoicemailUserPolicy**](VoicemailUserPolicy.html) PatchVoicemailUserpolicy (string userId, VoicemailUserPolicy body)
 
+
+
 Update a user's voicemail policy
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1342,7 +1462,13 @@ namespace Example
 
 ## [**VoicemailMessage**](VoicemailMessage.html) PostVoicemailMessages (CopyVoicemailMessage body = null)
 
+
+
 Copy a voicemail message to a user or group
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1406,7 +1532,13 @@ namespace Example
 
 ## [**VoicemailsSearchResponse**](VoicemailsSearchResponse.html) PostVoicemailSearch (VoicemailSearchRequest body)
 
+
+
 Search voicemails
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1470,9 +1602,15 @@ namespace Example
 
 ## [**VoicemailMessage**](VoicemailMessage.html) PutVoicemailMessage (string messageId, VoicemailMessage body)
 
+
+
 Update a voicemail message
 
 A user voicemail can only be modified by its associated user. A group voicemail can only be modified by a user that is a member of the group. A queue voicemail can only be modified by a participant of the conversation the voicemail is associated with.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -1540,9 +1678,15 @@ namespace Example
 
 ## [**VoicemailOrganizationPolicy**](VoicemailOrganizationPolicy.html) PutVoicemailPolicy (VoicemailOrganizationPolicy body)
 
+
+
 Update a policy
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp

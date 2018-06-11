@@ -19,9 +19,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteOauthClient (string clientId)
 
+
+
 Delete OAuth Client
 
 
+
+Requires ANY permissions: 
+
+* oauth:client:delete
 
 ### Example
 ~~~csharp
@@ -82,9 +88,15 @@ void (empty response body)
 
 ## [**OAuthClient**](OAuthClient.html) GetOauthClient (string clientId)
 
+
+
 Get OAuth Client
 
 
+
+Requires ANY permissions: 
+
+* oauth:client:view
 
 ### Example
 ~~~csharp
@@ -146,9 +158,15 @@ namespace Example
 
 ## [**OAuthClientEntityListing**](OAuthClientEntityListing.html) GetOauthClients ()
 
+
+
 The list of OAuth clients
 
 
+
+Requires ANY permissions: 
+
+* oauth:client:view
 
 ### Example
 ~~~csharp
@@ -201,9 +219,15 @@ This endpoint does require any parameters.
 
 ## [**OAuthClient**](OAuthClient.html) PostOauthClientSecret (string clientId)
 
+
+
 Regenerate Client Secret
 
 This operation will set the client secret to a randomly generated cryptographically random value. All clients must be updated with the new secret. This operation should be used with caution.
+
+Requires ANY permissions: 
+
+* oauth:client:edit
 
 ### Example
 ~~~csharp
@@ -265,9 +289,15 @@ namespace Example
 
 ## [**OAuthClient**](OAuthClient.html) PostOauthClients (OAuthClient body)
 
+
+
 Create OAuth client
 
 The OAuth Grant/Client is required in order to create an authentication token and gain access to PureCloud.  The preferred authorizedGrantTypes is 'CODE' which requires applications to send a client ID and client secret. This is typically a web server.  If the client is unable to secure the client secret then the 'TOKEN' grant type aka IMPLICIT should be used. This is would be for browser or mobile apps.  If a client is to be used outside of the context of a user then the 'CLIENT-CREDENTIALS' grant may be used. In this case the client must be granted roles  via the 'roleIds' field.
+
+Requires ANY permissions: 
+
+* oauth:client:add
 
 ### Example
 ~~~csharp
@@ -329,9 +359,15 @@ namespace Example
 
 ## [**OAuthClient**](OAuthClient.html) PutOauthClient (string clientId, OAuthClient body)
 
+
+
 Update OAuth Client
 
 
+
+Requires ANY permissions: 
+
+* oauth:client:edit
 
 ### Example
 ~~~csharp

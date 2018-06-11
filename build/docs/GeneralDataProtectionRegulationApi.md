@@ -17,9 +17,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**GDPRRequest**](GDPRRequest.html) GetGdprRequest (string requestId)
 
+
+
 Get an existing GDPR request
 
 
+
+Requires ANY permissions: 
+
+* gdpr:request:view
 
 ### Example
 ~~~csharp
@@ -81,9 +87,15 @@ namespace Example
 
 ## [**GDPRRequestEntityListing**](GDPRRequestEntityListing.html) GetGdprRequests (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get all GDPR requests
 
 
+
+Requires ANY permissions: 
+
+* gdpr:request:view
 
 ### Example
 ~~~csharp
@@ -151,9 +163,15 @@ namespace Example
 
 ## [**GDPRSubjectEntityListing**](GDPRSubjectEntityListing.html) GetGdprSubjects (string searchType, string searchValue)
 
+
+
 Get GDPR subjects
 
 
+
+Requires ANY permissions: 
+
+* gdpr:subject:view
 
 ### Example
 ~~~csharp
@@ -221,9 +239,15 @@ namespace Example
 
 ## [**GDPRRequest**](GDPRRequest.html) PostGdprRequests (GDPRRequest body, bool? deleteConfirmed = null)
 
+
+
 Submit a new GDPR request
 
 
+
+Requires ANY permissions: 
+
+* gdpr:request:add
 
 ### Example
 ~~~csharp

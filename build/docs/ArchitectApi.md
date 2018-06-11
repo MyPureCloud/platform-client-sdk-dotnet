@@ -94,9 +94,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteArchitectEmergencygroup (string emergencyGroupId)
 
+
+
 Deletes a emergency group by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -157,9 +163,15 @@ void (empty response body)
 
 ## void DeleteArchitectIvr (string ivrId)
 
+
+
 Delete an IVR Config.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -220,9 +232,15 @@ void (empty response body)
 
 ## void DeleteArchitectPrompt (string promptId, bool? allResources = null)
 
+
+
 Delete specified user prompt
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -289,9 +307,15 @@ void (empty response body)
 
 ## void DeleteArchitectPromptResource (string promptId, string languageCode)
 
+
+
 Delete specified user prompt resource
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -358,9 +382,15 @@ void (empty response body)
 
 ## [**Operation**](Operation.html) DeleteArchitectPrompts (List<string> id)
 
+
+
 Batch-delete a list of prompts
 
 Multiple IDs can be specified, in which case all specified prompts will be deleted.  Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -422,9 +452,15 @@ namespace Example
 
 ## void DeleteArchitectSchedule (string scheduleId)
 
+
+
 Delete a schedule by id
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -485,9 +521,15 @@ void (empty response body)
 
 ## void DeleteArchitectSchedulegroup (string scheduleGroupId)
 
+
+
 Deletes a schedule group by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -548,9 +590,15 @@ void (empty response body)
 
 ## void DeleteArchitectSystempromptResource (string promptId, string languageCode)
 
+
+
 Delete a system prompt resource override.
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -617,9 +665,15 @@ void (empty response body)
 
 ## void DeleteFlow (string flowId)
 
+
+
 Delete flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -680,9 +734,15 @@ void (empty response body)
 
 ## [**Operation**](Operation.html) DeleteFlows (List<string> id)
 
+
+
 Batch-delete a list of flows
 
 Multiple IDs can be specified, in which case all specified flows will be deleted.  Asynchronous.  Notification topic: v2.flows.{flowId}
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -744,9 +804,15 @@ namespace Example
 
 ## void DeleteFlowsDatatable (string datatableId, bool? force = null)
 
+
+
 deletes a specific datatable by id
 
 deletes an entire datatable (including schema and data) with a given id)
+
+Requires ANY permissions: 
+
+* architect:datatable:delete
 
 ### Example
 ~~~csharp
@@ -813,9 +879,15 @@ void (empty response body)
 
 ## void DeleteFlowsDatatableRow (string datatableId, string rowId)
 
+
+
 Delete a row entry
 
 Deletes a row with a given rowId.
+
+Requires ANY permissions: 
+
+* architect:datatable:delete
 
 ### Example
 ~~~csharp
@@ -882,9 +954,15 @@ void (empty response body)
 
 ## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) GetArchitectDependencytracking (string name, int? pageNumber = null, int? pageSize = null, List<string> objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
 
+
+
 Get Dependency Tracking objects that have a given display name
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -988,9 +1066,15 @@ namespace Example
 
 ## [**DependencyStatus**](DependencyStatus.html) GetArchitectDependencytrackingBuild ()
 
+
+
 Get Dependency Tracking build status for an organization
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1043,9 +1127,15 @@ This endpoint does require any parameters.
 
 ## [**ConsumedResourcesEntityListing**](ConsumedResourcesEntityListing.html) GetArchitectDependencytrackingConsumedresources (string id, string version, string objectType, List<string> resourceType = null)
 
+
+
 Get resources that are consumed by a given Dependency Tracking object
 
 
+
+Requires ANY permissions: 
+
+* admin* editor* readonly
 
 ### Example
 ~~~csharp
@@ -1125,9 +1215,15 @@ namespace Example
 
 ## [**ConsumingResourcesEntityListing**](ConsumingResourcesEntityListing.html) GetArchitectDependencytrackingConsumingresources (string id, string objectType, List<string> resourceType = null)
 
+
+
 Get resources that consume a given Dependency Tracking object
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1201,9 +1297,15 @@ namespace Example
 
 ## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) GetArchitectDependencytrackingDeletedresourceconsumers (string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
 
+
+
 Get Dependency Tracking objects that consume deleted resources
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1301,9 +1403,15 @@ namespace Example
 
 ## [**DependencyObject**](DependencyObject.html) GetArchitectDependencytrackingObject (string id, string version = null, string objectType = null, bool? consumedResources = null, bool? consumingResources = null, List<string> consumedResourceType = null, List<string> consumingResourceType = null)
 
+
+
 Get a Dependency Tracking object
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1401,9 +1509,15 @@ namespace Example
 
 ## [**DependencyType**](DependencyType.html) GetArchitectDependencytrackingType (string typeId)
 
+
+
 Get a Dependency Tracking type.
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1465,9 +1579,15 @@ namespace Example
 
 ## [**DependencyTypeEntityListing**](DependencyTypeEntityListing.html) GetArchitectDependencytrackingTypes (int? pageNumber = null, int? pageSize = null)
 
+
+
 Get Dependency Tracking types.
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1535,9 +1655,15 @@ namespace Example
 
 ## [**DependencyObjectEntityListing**](DependencyObjectEntityListing.html) GetArchitectDependencytrackingUpdatedresourceconsumers (string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
 
+
+
 Get Dependency Tracking objects that depend on updated resources
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1629,9 +1755,15 @@ namespace Example
 
 ## [**EmergencyGroup**](EmergencyGroup.html) GetArchitectEmergencygroup (string emergencyGroupId)
 
+
+
 Gets a emergency group by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1693,9 +1825,15 @@ namespace Example
 
 ## [**EmergencyGroupListing**](EmergencyGroupListing.html) GetArchitectEmergencygroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
+
+
 Get a list of emergency groups.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1781,9 +1919,15 @@ namespace Example
 
 ## [**IVR**](IVR.html) GetArchitectIvr (string ivrId)
 
+
+
 Get an IVR config.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1845,9 +1989,15 @@ namespace Example
 
 ## [**IVREntityListing**](IVREntityListing.html) GetArchitectIvrs (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
+
+
 Get IVR configs.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1933,9 +2083,15 @@ namespace Example
 
 ## [**Prompt**](Prompt.html) GetArchitectPrompt (string promptId)
 
+
+
 Get specified user prompt
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1997,9 +2153,15 @@ namespace Example
 
 ## [**HistoryListing**](HistoryListing.html) GetArchitectPromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
 
+
+
 Get generated prompt history
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2097,9 +2259,15 @@ namespace Example
 
 ## [**PromptAsset**](PromptAsset.html) GetArchitectPromptResource (string promptId, string languageCode)
 
+
+
 Get specified user prompt resource
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2167,9 +2335,15 @@ namespace Example
 
 ## [**PromptAssetEntityListing**](PromptAssetEntityListing.html) GetArchitectPromptResources (string promptId, int? pageNumber = null, int? pageSize = null)
 
+
+
 Get a pageable list of user prompt resources
 
 The returned list is pageable, and query parameters can be used for filtering.
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2243,9 +2417,15 @@ namespace Example
 
 ## [**PromptEntityListing**](PromptEntityListing.html) GetArchitectPrompts (int? pageNumber = null, int? pageSize = null, string name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null)
 
+
+
 Get a pageable list of user prompts
 
 The returned list is pageable, and query parameters can be used for filtering.  Multiple names can be specified, in which case all matching prompts will be returned, and no other filters will be evaluated.
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2343,9 +2523,15 @@ namespace Example
 
 ## [**Schedule**](Schedule.html) GetArchitectSchedule (string scheduleId)
 
+
+
 Get a schedule by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2407,9 +2593,15 @@ namespace Example
 
 ## [**ScheduleGroup**](ScheduleGroup.html) GetArchitectSchedulegroup (string scheduleGroupId)
 
+
+
 Gets a schedule group by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2471,9 +2663,15 @@ namespace Example
 
 ## [**ScheduleGroupEntityListing**](ScheduleGroupEntityListing.html) GetArchitectSchedulegroups (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
+
+
 Get a list of schedule groups.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2559,9 +2757,15 @@ namespace Example
 
 ## [**ScheduleEntityListing**](ScheduleEntityListing.html) GetArchitectSchedules (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 
+
+
 Get a list of schedules.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2647,9 +2851,15 @@ namespace Example
 
 ## [**SystemPrompt**](SystemPrompt.html) GetArchitectSystemprompt (string promptId)
 
+
+
 Get a system prompt
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2711,9 +2921,15 @@ namespace Example
 
 ## [**HistoryListing**](HistoryListing.html) GetArchitectSystempromptHistoryHistoryId (string promptId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
 
+
+
 Get generated prompt history
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2811,9 +3027,15 @@ namespace Example
 
 ## [**SystemPromptAsset**](SystemPromptAsset.html) GetArchitectSystempromptResource (string promptId, string languageCode)
 
+
+
 Get a system prompt resource.
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2881,9 +3103,15 @@ namespace Example
 
 ## [**SystemPromptAssetEntityListing**](SystemPromptAssetEntityListing.html) GetArchitectSystempromptResources (string promptId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
 
+
+
 Get system prompt resources.
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2969,9 +3197,15 @@ namespace Example
 
 ## [**SystemPromptEntityListing**](SystemPromptEntityListing.html) GetArchitectSystemprompts (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null)
 
+
+
 Get System Prompts
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3069,9 +3303,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) GetFlow (string flowId, bool? deleted = null)
 
+
+
 Get flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3139,9 +3379,15 @@ namespace Example
 
 ## [**HistoryListing**](HistoryListing.html) GetFlowHistoryHistoryId (string flowId, string historyId, int? pageNumber = null, int? pageSize = null, string sortOrder = null, string sortBy = null, List<string> action = null)
 
+
+
 Get generated flow history
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3239,9 +3485,15 @@ namespace Example
 
 ## **Object** GetFlowLatestconfiguration (string flowId, bool? deleted = null)
 
+
+
 Get the latest configuration for flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3309,9 +3561,15 @@ namespace Example
 
 ## [**FlowVersion**](FlowVersion.html) GetFlowVersion (string flowId, string versionId, string deleted = null)
 
+
+
 Get flow version
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3385,9 +3643,15 @@ namespace Example
 
 ## **Object** GetFlowVersionConfiguration (string flowId, string versionId, string deleted = null)
 
+
+
 Create flow version configuration
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3461,9 +3725,15 @@ namespace Example
 
 ## [**FlowVersionEntityListing**](FlowVersionEntityListing.html) GetFlowVersions (string flowId, int? pageNumber = null, int? pageSize = null, bool? deleted = null)
 
+
+
 Get flow version list
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3541,11 +3811,17 @@ namespace Example
 
 <a name="getflows"></a>
 
-## [**FlowEntityListing**](FlowEntityListing.html) GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null)
+## [**FlowEntityListing**](FlowEntityListing.html) GetFlows (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
+
+
 
 Get a pageable list of flows, filtered by query parameters
 
 Multiple IDs can be specified, in which case all matching flows will be returned, and no other parameters will be evaluated.
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3653,13 +3929,18 @@ namespace Example
             
             
             
+            
+            
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+            
+            
 
             try
             {
                 
                 // Get a pageable list of flows, filtered by query parameters
                 
-                FlowEntityListing result = apiInstance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas, publishedAfter, publishedBefore);
+                FlowEntityListing result = apiInstance.GetFlows(type, pageNumber, pageSize, sortBy, sortOrder, id, name, description, nameOrDescription, publishVersionId, editableBy, lockedBy, secure, deleted, includeSchemas, publishedAfter, publishedBefore, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3693,6 +3974,7 @@ namespace Example
 | **includeSchemas** | **bool?**| Include variable schemas | [optional] [default to false] |
 | **publishedAfter** | **string**| Published after | [optional]  |
 | **publishedBefore** | **string**| Published before | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -3703,9 +3985,15 @@ namespace Example
 
 ## [**DataTable**](DataTable.html) GetFlowsDatatable (string datatableId, string expand = null)
 
+
+
 Returns a specific datatable by id
 
 Given a datableid returns the schema associated with it.
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 ### Example
 ~~~csharp
@@ -3773,9 +4061,15 @@ namespace Example
 
 ## **Dictionary&lt;string, Object&gt;** GetFlowsDatatableRow (string datatableId, string rowId, bool? showbrief = null)
 
+
+
 Returns a specific row for the datatable
 
 Given a datatable id and a rowId (key)  will return the full row contents for that rowId.
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 ### Example
 ~~~csharp
@@ -3849,9 +4143,15 @@ namespace Example
 
 ## [**DataTableRowEntityListing**](DataTableRowEntityListing.html) GetFlowsDatatableRows (string datatableId, int? pageNumber = null, int? pageSize = null, bool? showbrief = null)
 
+
+
 Returns the rows for the datatable
 
 Returns all of the rows for the datatable with the given id.  By default this will just be a shortened list returning the key for each row.  Set expand to all to return all of the row contents.
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 ### Example
 ~~~csharp
@@ -3931,9 +4231,15 @@ namespace Example
 
 ## [**DataTablesDomainEntityListing**](DataTablesDomainEntityListing.html) GetFlowsDatatables (string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
 
+
+
 Retrieve a list of datatables for the org
 
 Returns a metadata list of the datatables associated with this org, including ID, name and description.
+
+Requires ANY permissions: 
+
+* architect:datatable:view
 
 ### Example
 ~~~csharp
@@ -4017,11 +4323,17 @@ namespace Example
 
 <a name="getflowsdivisionviews"></a>
 
-## [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) GetFlowsDivisionviews (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null)
+## [**FlowDivisionViewEntityListing**](FlowDivisionViewEntityListing.html) GetFlowsDivisionviews (string type, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
+
+
 
 Get a pageable list of basic flow information objects filterable by query parameters.
 
 This returns a simplified version of /flow consisting of name and type.
+
+Requires ANY permissions: 
+
+* architect:flow:search
 
 ### Example
 ~~~csharp
@@ -4094,13 +4406,18 @@ namespace Example
             
             
             
+            
+            
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+            
+            
 
             try
             {
                 
                 // Get a pageable list of basic flow information objects filterable by query parameters.
                 
-                FlowDivisionViewEntityListing result = apiInstance.GetFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore);
+                FlowDivisionViewEntityListing result = apiInstance.GetFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4127,6 +4444,7 @@ namespace Example
 | **publishVersionId** | **string**| Publish version ID | [optional]  |
 | **publishedAfter** | **string**| Published after | [optional]  |
 | **publishedBefore** | **string**| Published before | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| division ID(s) | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4137,9 +4455,15 @@ namespace Example
 
 ## void PostArchitectDependencytrackingBuild ()
 
+
+
 Rebuild Dependency Tracking data for an organization
 
 Asynchronous.  Notification topic: v2.architect.dependencytracking.build
+
+Requires ANY permissions: 
+
+* architect:user:admin
 
 ### Example
 ~~~csharp
@@ -4191,9 +4515,15 @@ void (empty response body)
 
 ## [**EmergencyGroup**](EmergencyGroup.html) PostArchitectEmergencygroups (EmergencyGroup body = null)
 
+
+
 Creates a new emergency group
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4255,9 +4585,15 @@ namespace Example
 
 ## [**IVR**](IVR.html) PostArchitectIvrs (IVR body = null)
 
+
+
 Create IVR config.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4319,9 +4655,15 @@ namespace Example
 
 ## [**Operation**](Operation.html) PostArchitectPromptHistory (string promptId)
 
+
+
 Generate prompt history
 
 Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -4383,9 +4725,15 @@ namespace Example
 
 ## [**PromptAsset**](PromptAsset.html) PostArchitectPromptResources (string promptId, PromptAssetCreate body = null)
 
+
+
 Create a new user prompt resource
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -4453,9 +4801,15 @@ namespace Example
 
 ## [**Prompt**](Prompt.html) PostArchitectPrompts (Prompt body = null)
 
+
+
 Create a new user prompt
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -4517,9 +4871,15 @@ namespace Example
 
 ## [**ScheduleGroup**](ScheduleGroup.html) PostArchitectSchedulegroups (ScheduleGroup body = null)
 
+
+
 Creates a new schedule group
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4581,9 +4941,15 @@ namespace Example
 
 ## [**Schedule**](Schedule.html) PostArchitectSchedules (Schedule body = null)
 
+
+
 Create a new schedule.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4645,9 +5011,15 @@ namespace Example
 
 ## [**Operation**](Operation.html) PostArchitectSystempromptHistory (string promptId)
 
+
+
 Generate system prompt history
 
 Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -4709,9 +5081,15 @@ namespace Example
 
 ## [**SystemPromptAsset**](SystemPromptAsset.html) PostArchitectSystempromptResources (string promptId, SystemPromptAsset body = null)
 
+
+
 Create system prompt resource override.
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -4779,9 +5157,15 @@ namespace Example
 
 ## [**FlowVersion**](FlowVersion.html) PostFlowVersions (string flowId, Object body = null)
 
+
+
 Create flow version
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -4849,9 +5233,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) PostFlows (Flow body = null)
 
+
+
 Create flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -4913,9 +5303,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) PostFlowsActionsCheckin (string flow)
 
+
+
 Check-in flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -4977,9 +5373,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) PostFlowsActionsCheckout (string flow)
 
+
+
 Check-out flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5041,9 +5443,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) PostFlowsActionsDeactivate (string flow)
 
+
+
 Deactivate flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5105,9 +5513,15 @@ namespace Example
 
 ## [**Operation**](Operation.html) PostFlowsActionsPublish (string flow, string version = null)
 
+
+
 Publish flow
 
 Asynchronous.  Notification topic: v2.flows.{flowId}
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5175,9 +5589,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) PostFlowsActionsRevert (string flow)
 
+
+
 Revert flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5239,9 +5659,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) PostFlowsActionsUnlock (string flow)
 
+
+
 Unlock flow
 
 Allows for unlocking a flow in the case where there is no flow configuration available, and thus a check-in will not unlock the flow. The user must have Architect Admin permissions to perform this action.
+
+Requires ANY permissions: 
+
+* architect:user:admin
 
 ### Example
 ~~~csharp
@@ -5303,9 +5729,15 @@ namespace Example
 
 ## **Dictionary&lt;string, Object&gt;** PostFlowsDatatableRows (string datatableId, Object dataTableRow)
 
+
+
 Create a new row entry
 
 Will add the passed in row entry to the datatable with the given id after verifying it against the schema.
+
+Requires ANY permissions: 
+
+* architect:datatable:add
 
 ### Example
 ~~~csharp
@@ -5373,9 +5805,15 @@ namespace Example
 
 ## [**DataTable**](DataTable.html) PostFlowsDatatables (DataTable body)
 
+
+
 Create a new datatable with the specified json-schema definition
 
 This will create a new datatable with fields that match the property definitions in the JSON schema.  The name of the table from the title field of the json-schema.  See also http://json-schema.org/
+
+Requires ANY permissions: 
+
+* architect:datatable:add
 
 ### Example
 ~~~csharp
@@ -5437,9 +5875,15 @@ namespace Example
 
 ## [**EmergencyGroup**](EmergencyGroup.html) PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body = null)
 
+
+
 Updates a emergency group by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5507,9 +5951,15 @@ namespace Example
 
 ## [**IVR**](IVR.html) PutArchitectIvr (string ivrId, IVR body = null)
 
+
+
 Update an IVR Config.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5577,9 +6027,15 @@ namespace Example
 
 ## [**Prompt**](Prompt.html) PutArchitectPrompt (string promptId, Prompt body = null)
 
+
+
 Update specified user prompt
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5647,9 +6103,15 @@ namespace Example
 
 ## [**PromptAsset**](PromptAsset.html) PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body = null)
 
+
+
 Update specified user prompt resource
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5723,9 +6185,15 @@ namespace Example
 
 ## [**Schedule**](Schedule.html) PutArchitectSchedule (string scheduleId, Schedule body = null)
 
+
+
 Update schedule by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5793,9 +6261,15 @@ namespace Example
 
 ## [**ScheduleGroup**](ScheduleGroup.html) PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body = null)
 
+
+
 Updates a schedule group by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5863,9 +6337,15 @@ namespace Example
 
 ## [**SystemPromptAsset**](SystemPromptAsset.html) PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body = null)
 
+
+
 Updates a system prompt resource override.
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5939,9 +6419,15 @@ namespace Example
 
 ## [**Flow**](Flow.html) PutFlow (string flowId, Flow body = null)
 
+
+
 Update flow
 
 
+
+Requires ANY permissions: 
+
+* architect:user:admin* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -6009,9 +6495,15 @@ namespace Example
 
 ## [**DataTable**](DataTable.html) PutFlowsDatatable (string datatableId, string expand = null, DataTable body = null)
 
+
+
 Updates a specific datatable by id
 
 Updates a schema for a datatable with the given id - updates are additive only, no changes or removals of existing fields.
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
 
 ### Example
 ~~~csharp
@@ -6085,9 +6577,15 @@ namespace Example
 
 ## **Dictionary&lt;string, Object&gt;** PutFlowsDatatableRow (string datatableId, string rowId, Object body = null)
 
+
+
 Update a row entry
 
 Updates a row with the given to the new values.
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
 
 ### Example
 ~~~csharp

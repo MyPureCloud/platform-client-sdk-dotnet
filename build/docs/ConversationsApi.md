@@ -109,7 +109,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteConversationParticipantCode (string conversationId, string participantId, string addCommunicationCode)
 
+
+
 Delete a code used to add a communication to this participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -184,7 +190,13 @@ void (empty response body)
 
 ## void DeleteConversationsCallParticipantConsult (string conversationId, string participantId)
 
+
+
 Cancel the transfer
+
+
+
+Requires NO permissions: 
 
 
 
@@ -253,7 +265,13 @@ void (empty response body)
 
 ## void DeleteConversationsEmailMessagesDraftAttachment (string conversationId, string attachmentId)
 
+
+
 Delete attachment from draft
+
+
+
+Requires NO permissions: 
 
 
 
@@ -322,9 +340,15 @@ void (empty response body)
 
 ## [**AnalyticsConversation**](AnalyticsConversation.html) GetAnalyticsConversationDetails (string conversationId)
 
+
+
 Get a conversation by id
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
 
 ### Example
 ~~~csharp
@@ -386,9 +410,15 @@ namespace Example
 
 ## [**Conversation**](Conversation.html) GetConversation (string conversationId)
 
+
+
 Get conversation
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:view
 
 ### Example
 ~~~csharp
@@ -450,7 +480,13 @@ namespace Example
 
 ## [**SecureSession**](SecureSession.html) GetConversationParticipantSecureivrsession (string conversationId, string participantId, string secureSessionId)
 
+
+
 Fetch info on a secure session
+
+
+
+Requires NO permissions: 
 
 
 
@@ -526,7 +562,13 @@ namespace Example
 
 ## [**SecureSessionEntityListing**](SecureSessionEntityListing.html) GetConversationParticipantSecureivrsessions (string conversationId, string participantId)
 
+
+
 Get a list of secure sessions for this participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -594,9 +636,15 @@ namespace Example
 
 <a name="getconversationparticipantwrapup"></a>
 
-## [**WrapupCode**](WrapupCode.html) GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+
 
 Get the wrap-up for this conversation participant. 
+
+
+
+Requires NO permissions: 
 
 
 
@@ -642,7 +690,7 @@ namespace Example
                 
                 // Get the wrap-up for this conversation participant. 
                 
-                WrapupCode result = apiInstance.GetConversationParticipantWrapup(conversationId, participantId, provisional);
+                AssignedWrapupCode result = apiInstance.GetConversationParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -666,13 +714,19 @@ namespace Example
 
 ### Return type
 
-[**WrapupCode**](WrapupCode.html)
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getconversationparticipantwrapupcodes"></a>
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationParticipantWrapupcodes (string conversationId, string participantId)
 
+
+
 Get list of wrapup codes for this conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -742,7 +796,13 @@ namespace Example
 
 ## [**ConversationEntityListing**](ConversationEntityListing.html) GetConversations (string communicationType = null)
 
+
+
 Get active conversations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -806,7 +866,13 @@ namespace Example
 
 ## [**CallConversation**](CallConversation.html) GetConversationsCall (string conversationId)
 
+
+
 Get call conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -868,9 +934,15 @@ namespace Example
 
 <a name="getconversationscallparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCallParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+
 
 Get the wrap-up for this conversation participant. 
+
+
+
+Requires NO permissions: 
 
 
 
@@ -916,7 +988,7 @@ namespace Example
                 
                 // Get the wrap-up for this conversation participant. 
                 
-                Wrapup result = apiInstance.GetConversationsCallParticipantWrapup(conversationId, participantId, provisional);
+                AssignedWrapupCode result = apiInstance.GetConversationsCallParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -940,13 +1012,19 @@ namespace Example
 
 ### Return type
 
-[**Wrapup**](Wrapup.html)
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getconversationscallparticipantwrapupcodes"></a>
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallParticipantWrapupcodes (string conversationId, string participantId)
 
+
+
 Get list of wrapup codes for this conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1016,7 +1094,13 @@ namespace Example
 
 ## [**CallbackConversation**](CallbackConversation.html) GetConversationsCallback (string conversationId)
 
+
+
 Get callback conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1078,9 +1162,15 @@ namespace Example
 
 <a name="getconversationscallbackparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCallbackParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+
 
 Get the wrap-up for this conversation participant. 
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1126,7 +1216,7 @@ namespace Example
                 
                 // Get the wrap-up for this conversation participant. 
                 
-                Wrapup result = apiInstance.GetConversationsCallbackParticipantWrapup(conversationId, participantId, provisional);
+                AssignedWrapupCode result = apiInstance.GetConversationsCallbackParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1150,13 +1240,19 @@ namespace Example
 
 ### Return type
 
-[**Wrapup**](Wrapup.html)
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getconversationscallbackparticipantwrapupcodes"></a>
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCallbackParticipantWrapupcodes (string conversationId, string participantId)
 
+
+
 Get list of wrapup codes for this conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1226,7 +1322,13 @@ namespace Example
 
 ## [**CallbackConversationEntityListing**](CallbackConversationEntityListing.html) GetConversationsCallbacks ()
 
+
+
 Get active callback conversations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1281,7 +1383,13 @@ This endpoint does require any parameters.
 
 ## [**CallConversationEntityListing**](CallConversationEntityListing.html) GetConversationsCalls ()
 
+
+
 Get active call conversations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1336,7 +1444,13 @@ This endpoint does require any parameters.
 
 ## [**CallHistoryConversationEntityListing**](CallHistoryConversationEntityListing.html) GetConversationsCallsHistory (int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
 
+
+
 Get call history
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1418,7 +1532,13 @@ namespace Example
 
 ## [**MaxParticipants**](MaxParticipants.html) GetConversationsCallsMaximumconferenceparties ()
 
+
+
 Get the maximum number of participants that this user can have on a conference
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1473,7 +1593,13 @@ This endpoint does require any parameters.
 
 ## [**ChatConversation**](ChatConversation.html) GetConversationsChat (string conversationId)
 
+
+
 Get chat conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1535,9 +1661,15 @@ namespace Example
 
 <a name="getconversationschatparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsChatParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+
 
 Get the wrap-up for this conversation participant. 
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1583,7 +1715,7 @@ namespace Example
                 
                 // Get the wrap-up for this conversation participant. 
                 
-                Wrapup result = apiInstance.GetConversationsChatParticipantWrapup(conversationId, participantId, provisional);
+                AssignedWrapupCode result = apiInstance.GetConversationsChatParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1607,13 +1739,19 @@ namespace Example
 
 ### Return type
 
-[**Wrapup**](Wrapup.html)
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getconversationschatparticipantwrapupcodes"></a>
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsChatParticipantWrapupcodes (string conversationId, string participantId)
 
+
+
 Get list of wrapup codes for this conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1683,7 +1821,13 @@ namespace Example
 
 ## [**ChatConversationEntityListing**](ChatConversationEntityListing.html) GetConversationsChats ()
 
+
+
 Get active chat conversations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1738,7 +1882,13 @@ This endpoint does require any parameters.
 
 ## [**CobrowseConversation**](CobrowseConversation.html) GetConversationsCobrowsesession (string conversationId)
 
+
+
 Get cobrowse conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1800,9 +1950,15 @@ namespace Example
 
 <a name="getconversationscobrowsesessionparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsCobrowsesessionParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+
 
 Get the wrap-up for this conversation participant. 
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1848,7 +2004,7 @@ namespace Example
                 
                 // Get the wrap-up for this conversation participant. 
                 
-                Wrapup result = apiInstance.GetConversationsCobrowsesessionParticipantWrapup(conversationId, participantId, provisional);
+                AssignedWrapupCode result = apiInstance.GetConversationsCobrowsesessionParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1872,13 +2028,19 @@ namespace Example
 
 ### Return type
 
-[**Wrapup**](Wrapup.html)
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getconversationscobrowsesessionparticipantwrapupcodes"></a>
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsCobrowsesessionParticipantWrapupcodes (string conversationId, string participantId)
 
+
+
 Get list of wrapup codes for this conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1948,7 +2110,13 @@ namespace Example
 
 ## [**CobrowseConversationEntityListing**](CobrowseConversationEntityListing.html) GetConversationsCobrowsesessions ()
 
+
+
 Get active cobrowse conversations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2003,7 +2171,13 @@ This endpoint does require any parameters.
 
 ## [**EmailConversation**](EmailConversation.html) GetConversationsEmail (string conversationId)
 
+
+
 Get email conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2067,7 +2241,13 @@ namespace Example
 
 ## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessage (string conversationId, string messageId)
 
+
+
 Get conversation message
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2137,7 +2317,13 @@ namespace Example
 
 ## [**EmailMessageListing**](EmailMessageListing.html) GetConversationsEmailMessages (string conversationId)
 
+
+
 Get conversation messages
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2201,7 +2387,13 @@ namespace Example
 
 ## [**EmailMessage**](EmailMessage.html) GetConversationsEmailMessagesDraft (string conversationId)
 
+
+
 Get conversation draft reply
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2263,9 +2455,15 @@ namespace Example
 
 <a name="getconversationsemailparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsEmailParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+
 
 Get the wrap-up for this conversation participant. 
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2311,7 +2509,7 @@ namespace Example
                 
                 // Get the wrap-up for this conversation participant. 
                 
-                Wrapup result = apiInstance.GetConversationsEmailParticipantWrapup(conversationId, participantId, provisional);
+                AssignedWrapupCode result = apiInstance.GetConversationsEmailParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2335,13 +2533,19 @@ namespace Example
 
 ### Return type
 
-[**Wrapup**](Wrapup.html)
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getconversationsemailparticipantwrapupcodes"></a>
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsEmailParticipantWrapupcodes (string conversationId, string participantId)
 
+
+
 Get list of wrapup codes for this conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2411,7 +2615,13 @@ namespace Example
 
 ## [**EmailConversationEntityListing**](EmailConversationEntityListing.html) GetConversationsEmails ()
 
+
+
 Get active email conversations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2466,7 +2676,13 @@ This endpoint does require any parameters.
 
 ## [**MessageConversation**](MessageConversation.html) GetConversationsMessage (string conversationId)
 
+
+
 Get message conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2530,9 +2746,15 @@ namespace Example
 
 ## [**MessageData**](MessageData.html) GetConversationsMessageMessage (string conversationId, string messageId)
 
+
+
 Get message
 
 
+
+Requires ANY permissions: 
+
+* conversation:message:view
 
 ### Example
 ~~~csharp
@@ -2598,9 +2820,15 @@ namespace Example
 
 <a name="getconversationsmessageparticipantwrapup"></a>
 
-## [**Wrapup**](Wrapup.html) GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+## [**AssignedWrapupCode**](AssignedWrapupCode.html) GetConversationsMessageParticipantWrapup (string conversationId, string participantId, bool? provisional = null)
+
+
 
 Get the wrap-up for this conversation participant. 
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2646,7 +2874,7 @@ namespace Example
                 
                 // Get the wrap-up for this conversation participant. 
                 
-                Wrapup result = apiInstance.GetConversationsMessageParticipantWrapup(conversationId, participantId, provisional);
+                AssignedWrapupCode result = apiInstance.GetConversationsMessageParticipantWrapup(conversationId, participantId, provisional);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2670,13 +2898,19 @@ namespace Example
 
 ### Return type
 
-[**Wrapup**](Wrapup.html)
+[**AssignedWrapupCode**](AssignedWrapupCode.html)
 
 <a name="getconversationsmessageparticipantwrapupcodes"></a>
 
 ## [**List&lt;WrapupCode&gt;**](WrapupCode.html) GetConversationsMessageParticipantWrapupcodes (string conversationId, string participantId)
 
+
+
 Get list of wrapup codes for this conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2746,7 +2980,13 @@ namespace Example
 
 ## [**MessageConversationEntityListing**](MessageConversationEntityListing.html) GetConversationsMessages ()
 
+
+
 Get active message conversations for the logged in user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2801,9 +3041,15 @@ This endpoint does require any parameters.
 
 ## void PatchConversationParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
+
+
 Update a participant.
 
 Update conversation participant.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -2876,7 +3122,13 @@ void (empty response body)
 
 ## void PatchConversationParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
+
+
 Update the attributes on a conversation participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2951,9 +3203,15 @@ void (empty response body)
 
 ## [**Conversation**](Conversation.html) PatchConversationsCall (string conversationId, Conversation body)
 
+
+
 Update a conversation by setting it's recording state, merging in other conversations to create a conference, or disconnecting all of the participants
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
 
 ### Example
 ~~~csharp
@@ -3021,7 +3279,13 @@ namespace Example
 
 ## void PatchConversationsCallParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
+
+
 Update conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3096,7 +3360,13 @@ void (empty response body)
 
 ## void PatchConversationsCallParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
+
+
 Update the attributes on a conversation participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3171,7 +3441,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) PatchConversationsCallParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
+
+
 Update conversation participant's communication by disconnecting it.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3253,7 +3529,13 @@ namespace Example
 
 ## [**ConsultTransferResponse**](ConsultTransferResponse.html) PatchConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransferUpdate body)
 
+
+
 Change who can speak
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3329,9 +3611,15 @@ namespace Example
 
 ## [**Conversation**](Conversation.html) PatchConversationsCallback (string conversationId, Conversation body)
 
+
+
 Update a conversation by disconnecting all of the participants
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
 
 ### Example
 ~~~csharp
@@ -3399,7 +3687,13 @@ namespace Example
 
 ## void PatchConversationsCallbackParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
+
+
 Update conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3474,7 +3768,13 @@ void (empty response body)
 
 ## void PatchConversationsCallbackParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
+
+
 Update the attributes on a conversation participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3549,7 +3849,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) PatchConversationsCallbackParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
+
+
 Update conversation participant's communication by disconnecting it.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3631,9 +3937,15 @@ namespace Example
 
 ## [**Conversation**](Conversation.html) PatchConversationsChat (string conversationId, Conversation body)
 
+
+
 Update a conversation by disconnecting all of the participants
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
 
 ### Example
 ~~~csharp
@@ -3701,7 +4013,13 @@ namespace Example
 
 ## void PatchConversationsChatParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
+
+
 Update conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3776,7 +4094,13 @@ void (empty response body)
 
 ## void PatchConversationsChatParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
+
+
 Update the attributes on a conversation participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3851,7 +4175,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) PatchConversationsChatParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
+
+
 Update conversation participant's communication by disconnecting it.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3933,9 +4263,15 @@ namespace Example
 
 ## [**Conversation**](Conversation.html) PatchConversationsCobrowsesession (string conversationId, Conversation body)
 
+
+
 Update a conversation by disconnecting all of the participants
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
 
 ### Example
 ~~~csharp
@@ -4003,7 +4339,13 @@ namespace Example
 
 ## void PatchConversationsCobrowsesessionParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
 
+
+
 Update conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4078,7 +4420,13 @@ void (empty response body)
 
 ## void PatchConversationsCobrowsesessionParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
+
+
 Update the attributes on a conversation participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4153,7 +4501,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) PatchConversationsCobrowsesessionParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
+
+
 Update conversation participant's communication by disconnecting it.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4235,9 +4589,15 @@ namespace Example
 
 ## [**Conversation**](Conversation.html) PatchConversationsEmail (string conversationId, Conversation body)
 
+
+
 Update a conversation by disconnecting all of the participants
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
 
 ### Example
 ~~~csharp
@@ -4305,7 +4665,13 @@ namespace Example
 
 ## void PatchConversationsEmailParticipant (string conversationId, string participantId, MediaParticipantRequest body)
 
+
+
 Update conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4380,7 +4746,13 @@ void (empty response body)
 
 ## void PatchConversationsEmailParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body)
 
+
+
 Update the attributes on a conversation participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4455,7 +4827,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) PatchConversationsEmailParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
+
+
 Update conversation participant's communication by disconnecting it.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4537,9 +4915,15 @@ namespace Example
 
 ## [**Conversation**](Conversation.html) PatchConversationsMessage (string conversationId, Conversation body)
 
+
+
 Update a conversation by disconnecting all of the participants
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
 
 ### Example
 ~~~csharp
@@ -4607,7 +4991,13 @@ namespace Example
 
 ## void PatchConversationsMessageParticipant (string conversationId, string participantId, MediaParticipantRequest body = null)
 
+
+
 Update conversation participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4682,7 +5072,13 @@ void (empty response body)
 
 ## void PatchConversationsMessageParticipantAttributes (string conversationId, string participantId, ParticipantAttributes body = null)
 
+
+
 Update the attributes on a conversation participant.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4757,7 +5153,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) PatchConversationsMessageParticipantCommunication (string conversationId, string participantId, string communicationId, MediaParticipantRequest body)
 
+
+
 Update conversation participant's communication by disconnecting it.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -4839,9 +5241,15 @@ namespace Example
 
 ## [**PropertyIndexRequest**](PropertyIndexRequest.html) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
 
+
+
 Index conversation properties
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationProperties:index
 
 ### Example
 ~~~csharp
@@ -4909,9 +5317,15 @@ namespace Example
 
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsConversationsAggregatesQuery (AggregationQuery body)
 
+
+
 Query for conversation aggregates
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationAggregate:view
 
 ### Example
 ~~~csharp
@@ -4973,9 +5387,15 @@ namespace Example
 
 ## [**AnalyticsConversationQueryResponse**](AnalyticsConversationQueryResponse.html) PostAnalyticsConversationsDetailsQuery (ConversationQuery body)
 
+
+
 Query for conversation details
 
 
+
+Requires ANY permissions: 
+
+* analytics:conversationDetail:view
 
 ### Example
 ~~~csharp
@@ -5037,9 +5457,15 @@ namespace Example
 
 ## **string** PostConversationDisconnect (string conversationId)
 
+
+
 Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resyncronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation.
 
 
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
 
 ### Example
 ~~~csharp
@@ -5101,9 +5527,15 @@ namespace Example
 
 ## void PostConversationParticipantCallbacks (string conversationId, string participantId, CreateCallbackOnConversationCommand body = null)
 
+
+
 Create a new callback for the specified participant on the conversation.
 
 
+
+Requires ANY permissions: 
+
+* conversation:callback:create
 
 ### Example
 ~~~csharp
@@ -5176,7 +5608,13 @@ void (empty response body)
 
 ## void PostConversationParticipantDigits (string conversationId, string participantId, Digits body = null)
 
+
+
 Sends DTMF to the participant
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5251,7 +5689,13 @@ void (empty response body)
 
 ## void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+
+
 Replace this participant with the specified user and/or address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5326,7 +5770,13 @@ void (empty response body)
 
 ## [**SecureSession**](SecureSession.html) PostConversationParticipantSecureivrsessions (string conversationId, string participantId, CreateSecureSession body = null)
 
+
+
 Create secure IVR session. Only a participant in the conversation can invoke a secure IVR.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5402,7 +5852,13 @@ namespace Example
 
 ## [**Conversation**](Conversation.html) PostConversationsCall (string conversationId, CallCommand body)
 
+
+
 Place a new call as part of a callback conversation.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5472,7 +5928,13 @@ namespace Example
 
 ## [**ConsultTransferResponse**](ConsultTransferResponse.html) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
 
+
+
 Initiate and update consult transfer
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5548,9 +6010,15 @@ namespace Example
 
 ## void PostConversationsCallParticipantMonitor (string conversationId, string participantId)
 
+
+
 Listen in on the conversation from the point of view of a given participant.
 
 
+
+Requires ANY permissions: 
+
+* conversation:call:monitor
 
 ### Example
 ~~~csharp
@@ -5617,7 +6085,13 @@ void (empty response body)
 
 ## void PostConversationsCallParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+
+
 Replace this participant with the specified user and/or address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5692,7 +6166,13 @@ void (empty response body)
 
 ## [**Conversation**](Conversation.html) PostConversationsCallParticipants (string conversationId, Conversation body)
 
+
+
 Add participants to a conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5762,7 +6242,13 @@ namespace Example
 
 ## void PostConversationsCallbackParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+
+
 Replace this participant with the specified user and/or address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5837,9 +6323,15 @@ void (empty response body)
 
 ## [**CreateCallbackResponse**](CreateCallbackResponse.html) PostConversationsCallbacks (CreateCallbackCommand body)
 
+
+
 Create a Callback
 
 
+
+Requires ANY permissions: 
+
+* conversation:callback:create
 
 ### Example
 ~~~csharp
@@ -5901,9 +6393,15 @@ namespace Example
 
 ## [**CreateCallResponse**](CreateCallResponse.html) PostConversationsCalls (CreateCallRequest body)
 
+
+
 Create a call conversation
 
 
+
+Requires ANY permissions: 
+
+* conversation:conference:add
 
 ### Example
 ~~~csharp
@@ -5965,7 +6463,13 @@ namespace Example
 
 ## void PostConversationsChatParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+
+
 Replace this participant with the specified user and/or address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6040,9 +6544,15 @@ void (empty response body)
 
 ## [**ChatConversation**](ChatConversation.html) PostConversationsChats (CreateWebChatRequest body)
 
+
+
 Create a web chat conversation
 
 
+
+Requires ANY permissions: 
+
+* conversation:webchat:create
 
 ### Example
 ~~~csharp
@@ -6104,7 +6614,13 @@ namespace Example
 
 ## void PostConversationsCobrowsesessionParticipantReplace (string conversationId, string participantId, TransferRequest body = null)
 
+
+
 Replace this participant with the specified user and/or address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6179,7 +6695,13 @@ void (empty response body)
 
 ## [**EmailConversation**](EmailConversation.html) PostConversationsEmailInboundmessages (string conversationId, InboundMessageRequest body)
 
+
+
 Send an email to an external conversation. An external conversation is one where the provider is not PureCloud based. This endpoint allows the sender of the external email to reply or send a new message to the existing conversation. The new message will be treated as part of the existing conversation and chained to it.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6249,7 +6771,13 @@ namespace Example
 
 ## [**EmailMessage**](EmailMessage.html) PostConversationsEmailMessages (string conversationId, EmailMessage body)
 
+
+
 Send an email reply
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6319,7 +6847,13 @@ namespace Example
 
 ## void PostConversationsEmailParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+
+
 Replace this participant with the specified user and/or address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6394,9 +6928,15 @@ void (empty response body)
 
 ## [**EmailConversation**](EmailConversation.html) PostConversationsEmails (CreateEmailRequest body)
 
+
+
 Create an email conversation
 
 If the direction of the request is INBOUND, this will create an external conversation with a third party provider. If the direction of the the request is OUTBOUND, this will create a conversation to send outbound emails on behalf of a queue.
+
+Requires ANY permissions: 
+
+* conversation:email:create
 
 ### Example
 ~~~csharp
@@ -6458,7 +6998,13 @@ namespace Example
 
 ## [**FaxSendResponse**](FaxSendResponse.html) PostConversationsFaxes (FaxSendRequest body)
 
+
+
 Create Fax Conversation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6522,9 +7068,15 @@ namespace Example
 
 ## [**MessageData**](MessageData.html) PostConversationsMessageCommunicationMessages (string conversationId, string communicationId, AdditionalMessage body)
 
+
+
 Send message
 
 
+
+Requires ANY permissions: 
+
+* conversation:message:create
 
 ### Example
 ~~~csharp
@@ -6598,9 +7150,15 @@ namespace Example
 
 ## [**TextMessageListing**](TextMessageListing.html) PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null)
 
+
+
 Get messages in batch
 
 
+
+Requires ANY permissions: 
+
+* conversation:message:view
 
 ### Example
 ~~~csharp
@@ -6668,7 +7226,13 @@ namespace Example
 
 ## void PostConversationsMessageParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+
+
 Replace this participant with the specified user and/or address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6743,7 +7307,13 @@ void (empty response body)
 
 ## [**Empty**](Empty.html) PutConversationsCallParticipantCommunicationUuidata (string conversationId, string participantId, string communicationId, SetUuiDataRequest body)
 
+
+
 Set uuiData to be sent on future commands.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6825,7 +7395,13 @@ namespace Example
 
 ## [**EmailMessage**](EmailMessage.html) PutConversationsEmailMessagesDraft (string conversationId, EmailMessage body)
 
+
+
 Update conversation draft reply
+
+
+
+Requires NO permissions: 
 
 
 

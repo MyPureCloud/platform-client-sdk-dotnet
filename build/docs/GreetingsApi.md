@@ -29,7 +29,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteGreeting (string greetingId)
 
+
+
 Deletes a Greeting with the given GreetingId
+
+
+
+Requires NO permissions: 
 
 
 
@@ -92,7 +98,13 @@ void (empty response body)
 
 ## [**Greeting**](Greeting.html) GetGreeting (string greetingId)
 
+
+
 Get a Greeting with the given GreetingId
+
+
+
+Requires NO permissions: 
 
 
 
@@ -156,7 +168,13 @@ namespace Example
 
 ## [**GreetingMediaInfo**](GreetingMediaInfo.html) GetGreetingMedia (string greetingId, string formatId = null)
 
+
+
 Get media playback URI for this greeting
+
+
+
+Requires NO permissions: 
 
 
 
@@ -226,7 +244,13 @@ namespace Example
 
 ## [**DomainEntityListing**](DomainEntityListing.html) GetGreetings (int? pageSize = null, int? pageNumber = null)
 
+
+
 Gets an Organization's Greetings
+
+
+
+Requires NO permissions: 
 
 
 
@@ -296,7 +320,13 @@ namespace Example
 
 ## [**DefaultGreetingList**](DefaultGreetingList.html) GetGreetingsDefaults ()
 
+
+
 Get an Organization's DefaultGreetingList
+
+
+
+Requires NO permissions: 
 
 
 
@@ -351,7 +381,13 @@ This endpoint does require any parameters.
 
 ## [**GreetingListing**](GreetingListing.html) GetGroupGreetings (string groupId, int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of the Group's Greetings
+
+
+
+Requires NO permissions: 
 
 
 
@@ -427,7 +463,13 @@ namespace Example
 
 ## [**DefaultGreetingList**](DefaultGreetingList.html) GetGroupGreetingsDefaults (string groupId)
 
+
+
 Grabs the list of Default Greetings given a Group's ID
+
+
+
+Requires NO permissions: 
 
 
 
@@ -491,7 +533,13 @@ namespace Example
 
 ## [**DomainEntityListing**](DomainEntityListing.html) GetUserGreetings (string userId, int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of the User's Greetings
+
+
+
+Requires NO permissions: 
 
 
 
@@ -567,7 +615,13 @@ namespace Example
 
 ## [**DefaultGreetingList**](DefaultGreetingList.html) GetUserGreetingsDefaults (string userId)
 
+
+
 Grabs the list of Default Greetings given a User's ID
+
+
+
+Requires NO permissions: 
 
 
 
@@ -631,7 +685,13 @@ namespace Example
 
 ## [**Greeting**](Greeting.html) PostGreetings (Greeting body)
 
+
+
 Create a Greeting for an Organization
+
+
+
+Requires NO permissions: 
 
 
 
@@ -695,7 +755,13 @@ namespace Example
 
 ## [**Greeting**](Greeting.html) PostGroupGreetings (string groupId, Greeting body)
 
+
+
 Creates a Greeting for a Group
+
+
+
+Requires NO permissions: 
 
 
 
@@ -765,7 +831,13 @@ namespace Example
 
 ## [**Greeting**](Greeting.html) PostUserGreetings (string userId, Greeting body)
 
+
+
 Creates a Greeting for a User
+
+
+
+Requires NO permissions: 
 
 
 
@@ -835,7 +907,13 @@ namespace Example
 
 ## [**Greeting**](Greeting.html) PutGreeting (string greetingId, Greeting body)
 
+
+
 Updates the Greeting with the given GreetingId
+
+
+
+Requires NO permissions: 
 
 
 
@@ -905,7 +983,13 @@ namespace Example
 
 ## [**DefaultGreetingList**](DefaultGreetingList.html) PutGreetingsDefaults (DefaultGreetingList body)
 
+
+
 Update an Organization's DefaultGreetingList
+
+
+
+Requires NO permissions: 
 
 
 
@@ -969,7 +1053,13 @@ namespace Example
 
 ## [**DefaultGreetingList**](DefaultGreetingList.html) PutGroupGreetingsDefaults (string groupId, DefaultGreetingList body)
 
+
+
 Updates the DefaultGreetingList of the specified Group
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1039,7 +1129,13 @@ namespace Example
 
 ## [**DefaultGreetingList**](DefaultGreetingList.html) PutUserGreetingsDefaults (string userId, DefaultGreetingList body)
 
+
+
 Updates the DefaultGreetingList of the specified User
+
+
+
+Requires NO permissions: 
 
 
 

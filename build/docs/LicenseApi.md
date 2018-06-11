@@ -21,9 +21,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**LicenseDefinition**](LicenseDefinition.html) GetLicenseDefinition (string licenseId)
 
+
+
 Get PureCloud license definition.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -85,9 +91,15 @@ namespace Example
 
 ## [**List&lt;LicenseDefinition&gt;**](LicenseDefinition.html) GetLicenseDefinitions ()
 
+
+
 Get all PureCloud license definitions available for the organization.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -140,9 +152,15 @@ This endpoint does require any parameters.
 
 ## [**LicenseOrganization**](LicenseOrganization.html) GetLicenseOrganization ()
 
+
+
 Get license assignments for the organization.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -195,9 +213,15 @@ This endpoint does require any parameters.
 
 ## [**LicenseOrgToggle**](LicenseOrgToggle.html) GetLicenseToggle (string featureName)
 
+
+
 Get PureCloud license feature toggle value.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -259,9 +283,15 @@ namespace Example
 
 ## [**LicenseUser**](LicenseUser.html) GetLicenseUser (string userId)
 
+
+
 Get licenses for specified user.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -323,9 +353,15 @@ namespace Example
 
 ## [**List&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus.html) PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
 
+
+
 Update the organization's license assignments in a batch.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -387,9 +423,15 @@ namespace Example
 
 ## [**LicenseOrgToggle**](LicenseOrgToggle.html) PostLicenseToggle (string featureName)
 
+
+
 Switch PureCloud license feature toggle value.
 
 
+
+Requires ANY permissions: 
+
+* admin* role_manager* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -451,7 +493,13 @@ namespace Example
 
 ## **Dictionary&lt;string, Object&gt;** PostLicenseUsers (List<string> body = null)
 
+
+
 Fetch user licenses in a batch.
+
+
+
+Requires NO permissions: 
 
 
 

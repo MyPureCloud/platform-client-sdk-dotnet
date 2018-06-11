@@ -25,9 +25,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**List&lt;UserScheduleAdherence&gt;**](UserScheduleAdherence.html) GetWorkforcemanagementAdherence (List<string> userId)
 
+
+
 Get a list of UserScheduleAdherence records for the requested users
 
 
+
+Requires ANY permissions: 
+
+* wfm:realtimeAdherence:view
 
 ### Example
 ~~~csharp
@@ -89,9 +95,15 @@ namespace Example
 
 ## [**ActivityCodeContainer**](ActivityCodeContainer.html) GetWorkforcemanagementManagementunitActivitycodes (string muId)
 
+
+
 Get activity codes
 
 
+
+Requires ANY permissions: 
+
+* wfm:activityCode:administer* wfm:agent:administer* wfm:agentSchedule:view* wfm:historicalAdherence:view* wfm:intraday:view* wfm:managementUnit:administer* wfm:publishedSchedule:view* wfm:realtimeAdherence:view* wfm:schedule:administer* wfm:schedule:generate* wfm:serviceGoalGroup:administer* wfm:shortTermForecast:administer* wfm:agentTimeOffRequest:submit* wfm:timeOffRequest:administer* wfm:workPlan:administer
 
 ### Example
 ~~~csharp
@@ -153,9 +165,15 @@ namespace Example
 
 ## [**WfmIntradayQueueListing**](WfmIntradayQueueListing.html) GetWorkforcemanagementManagementunitIntradayQueues (string muId, string date)
 
+
+
 Get intraday queues for the given date
 
 
+
+Requires ANY permissions: 
+
+* wfm:intraday:view
 
 ### Example
 ~~~csharp
@@ -223,9 +241,15 @@ namespace Example
 
 ## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) GetWorkforcemanagementManagementunitUserTimeoffrequest (string muId, string userId, string timeOffRequestId)
 
+
+
 Get a time off request
 
 
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:administer
 
 ### Example
 ~~~csharp
@@ -299,9 +323,15 @@ namespace Example
 
 ## [**TimeOffRequestList**](TimeOffRequestList.html) GetWorkforcemanagementManagementunitUserTimeoffrequests (string muId, string userId, bool? recentlyReviewed = null)
 
+
+
 Get a list of time off requests for a given user
 
 
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:administer
 
 ### Example
 ~~~csharp
@@ -375,9 +405,15 @@ namespace Example
 
 ## [**WfmUserEntityListing**](WfmUserEntityListing.html) GetWorkforcemanagementManagementunitUsers (string muId)
 
+
+
 Get agents in the management unit
 
 
+
+Requires ANY permissions: 
+
+* wfm:agent:administer
 
 ### Example
 ~~~csharp
@@ -439,7 +475,13 @@ namespace Example
 
 ## [**ManagementUnitListing**](ManagementUnitListing.html) GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null)
 
+
+
 Get management units
+
+
+
+Requires NO permissions: 
 
 
 
@@ -470,7 +512,7 @@ namespace Example
             
             
             
-            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageNumber = 56;  // int? |  (optional) 
             
             
             
@@ -503,7 +545,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **pageSize** | **int?**|  | [optional]  |
-| **pageNumber** | **int?**|  | [optional] [default to 1] |
+| **pageNumber** | **int?**|  | [optional]  |
 | **expand** | **string**|  | [optional] <br />**Values**: details |
 {: class="table table-striped"}
 
@@ -515,9 +557,15 @@ namespace Example
 
 ## [**TimeOffRequestResponse**](TimeOffRequestResponse.html) PatchWorkforcemanagementManagementunitUserTimeoffrequest (string muId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body = null)
 
+
+
 Update a time off request
 
 
+
+Requires ANY permissions: 
+
+* wfm:timeOffRequest:administer
 
 ### Example
 ~~~csharp
@@ -597,9 +645,15 @@ namespace Example
 
 ## [**ActivityCode**](ActivityCode.html) PostWorkforcemanagementManagementunitActivitycodes (string muId, CreateActivityCodeRequest body = null)
 
+
+
 Create a new activity code
 
 
+
+Requires ANY permissions: 
+
+* wfm:activityCode:administer
 
 ### Example
 ~~~csharp
@@ -667,9 +721,15 @@ namespace Example
 
 ## [**WfmHistoricalAdherenceResponse**](WfmHistoricalAdherenceResponse.html) PostWorkforcemanagementManagementunitHistoricaladherencequery (string muId, WfmHistoricalAdherenceQuery body = null)
 
+
+
 Request a historical adherence report
 
 
+
+Requires ANY permissions: 
+
+* wfm:historicalAdherence:view
 
 ### Example
 ~~~csharp
@@ -737,9 +797,15 @@ namespace Example
 
 ## [**IntradayResponse**](IntradayResponse.html) PostWorkforcemanagementManagementunitIntraday (string muId, IntradayQueryDataCommand body = null)
 
+
+
 Get intraday data for the given date for the requested queueIds
 
 
+
+Requires ANY permissions: 
+
+* wfm:intraday:view
 
 ### Example
 ~~~csharp
@@ -807,9 +873,15 @@ namespace Example
 
 ## [**UserScheduleContainer**](UserScheduleContainer.html) PostWorkforcemanagementManagementunitSchedulesSearch (string muId, UserListScheduleRequestBody body = null)
 
+
+
 Query published schedules for given given time range for set of users
 
 
+
+Requires ANY permissions: 
+
+* wfm:schedule:administer* wfm:publishedSchedule:view
 
 ### Example
 ~~~csharp

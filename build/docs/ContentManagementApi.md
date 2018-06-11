@@ -51,7 +51,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteContentmanagementDocument (string documentId, bool? _override = null)
 
+
+
 Delete a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -120,9 +126,15 @@ void (empty response body)
 
 ## void DeleteContentmanagementShare (string shareId)
 
+
+
 Deletes an existing share.
 
 This revokes sharing rights specified in the share record
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -183,7 +195,13 @@ void (empty response body)
 
 ## void DeleteContentmanagementStatusStatusId (string statusId)
 
+
+
 Cancel the command for this status
+
+
+
+Requires NO permissions: 
 
 
 
@@ -246,7 +264,13 @@ void (empty response body)
 
 ## void DeleteContentmanagementWorkspace (string workspaceId, string moveChildrenToWorkspaceId = null)
 
+
+
 Delete a workspace
+
+
+
+Requires NO permissions: 
 
 
 
@@ -315,7 +339,13 @@ void (empty response body)
 
 ## void DeleteContentmanagementWorkspaceMember (string workspaceId, string memberId)
 
+
+
 Delete a member from a workspace
+
+
+
+Requires NO permissions: 
 
 
 
@@ -384,9 +414,15 @@ void (empty response body)
 
 ## void DeleteContentmanagementWorkspaceTagvalue (string workspaceId, string tagId)
 
+
+
 Delete workspace tag
 
 Delete a tag from a workspace. Will remove this tag from all documents.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -453,7 +489,13 @@ void (empty response body)
 
 ## [**Document**](Document.html) GetContentmanagementDocument (string documentId, List<string> expand = null)
 
+
+
 Get a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -523,7 +565,13 @@ namespace Example
 
 ## [**DocumentAuditEntityListing**](DocumentAuditEntityListing.html) GetContentmanagementDocumentAudits (string documentId, int? pageSize = null, int? pageNumber = null, string transactionFilter = null, string level = null, string sortBy = null, string sortOrder = null)
 
+
+
 Get a list of audits for a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -623,7 +671,13 @@ namespace Example
 
 ## [**DownloadResponse**](DownloadResponse.html) GetContentmanagementDocumentContent (string documentId, string disposition = null, string contentType = null)
 
+
+
 Download a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -699,7 +753,13 @@ namespace Example
 
 ## [**DocumentEntityListing**](DocumentEntityListing.html) GetContentmanagementDocuments (string workspaceId, string name = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get a list of documents.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -799,7 +859,13 @@ namespace Example
 
 ## [**QueryResults**](QueryResults.html) GetContentmanagementQuery (string queryPhrase, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
 
+
+
 Query content
+
+
+
+Requires NO permissions: 
 
 
 
@@ -893,7 +959,13 @@ namespace Example
 
 ## [**SecurityProfile**](SecurityProfile.html) GetContentmanagementSecurityprofile (string securityProfileId)
 
+
+
 Get a Security Profile
+
+
+
+Requires NO permissions: 
 
 
 
@@ -957,7 +1029,13 @@ namespace Example
 
 ## [**SecurityProfileEntityListing**](SecurityProfileEntityListing.html) GetContentmanagementSecurityprofiles ()
 
+
+
 Get a List of Security Profiles
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1012,7 +1090,13 @@ This endpoint does require any parameters.
 
 ## [**Share**](Share.html) GetContentmanagementShare (string shareId, List<string> expand = null)
 
+
+
 Retrieve details about an existing share.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1082,9 +1166,15 @@ namespace Example
 
 ## [**SharedResponse**](SharedResponse.html) GetContentmanagementSharedSharedId (string sharedId, bool? redirect = null, string disposition = null, string contentType = null, string expand = null)
 
+
+
 Get shared documents. Securely download a shared document.
 
 This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -1170,9 +1260,15 @@ namespace Example
 
 ## [**ShareEntityListing**](ShareEntityListing.html) GetContentmanagementShares (string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
 
+
+
 Gets a list of shares.  You must specify at least one filter (e.g. entityId).
 
 Failing to specify a filter will return 400.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -1252,7 +1348,13 @@ namespace Example
 
 ## [**CommandStatusEntityListing**](CommandStatusEntityListing.html) GetContentmanagementStatus (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of statuses for pending operations
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1322,7 +1424,13 @@ namespace Example
 
 ## [**CommandStatus**](CommandStatus.html) GetContentmanagementStatusStatusId (string statusId)
 
+
+
 Get a status.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1386,7 +1494,13 @@ namespace Example
 
 ## [**Usage**](Usage.html) GetContentmanagementUsage ()
 
+
+
 Get usage details.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1441,7 +1555,13 @@ This endpoint does require any parameters.
 
 ## [**Workspace**](Workspace.html) GetContentmanagementWorkspace (string workspaceId, List<string> expand = null)
 
+
+
 Get a workspace.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1511,7 +1631,13 @@ namespace Example
 
 ## [**DocumentEntityListing**](DocumentEntityListing.html) GetContentmanagementWorkspaceDocuments (string workspaceId, List<string> expand = null, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
+
+
 Get a list of documents.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1605,7 +1731,13 @@ namespace Example
 
 ## [**WorkspaceMember**](WorkspaceMember.html) GetContentmanagementWorkspaceMember (string workspaceId, string memberId, List<string> expand = null)
 
+
+
 Get a workspace member
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1681,7 +1813,13 @@ namespace Example
 
 ## [**WorkspaceMemberEntityListing**](WorkspaceMemberEntityListing.html) GetContentmanagementWorkspaceMembers (string workspaceId, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
+
+
 Get a list workspace members
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1763,7 +1901,13 @@ namespace Example
 
 ## [**TagValue**](TagValue.html) GetContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, List<string> expand = null)
 
+
+
 Get a workspace tag
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1839,7 +1983,13 @@ namespace Example
 
 ## [**TagValueEntityListing**](TagValueEntityListing.html) GetContentmanagementWorkspaceTagvalues (string workspaceId, string value = null, int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 
+
+
 Get a list of workspace tags
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1927,9 +2077,15 @@ namespace Example
 
 ## [**WorkspaceEntityListing**](WorkspaceEntityListing.html) GetContentmanagementWorkspaces (int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
 
+
+
 Get a list of workspaces.
 
 Specifying 'content' access will return all workspaces the user has document access to, while 'admin' access will return all group workspaces the user has administrative rights to.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -2009,7 +2165,13 @@ namespace Example
 
 ## [**QueryResults**](QueryResults.html) PostContentmanagementAuditquery (ContentQueryRequest body)
 
+
+
 Query audits
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2073,7 +2235,13 @@ namespace Example
 
 ## [**Document**](Document.html) PostContentmanagementDocument (string documentId, DocumentUpdate body, string expand = null, bool? _override = null)
 
+
+
 Update a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2155,7 +2323,13 @@ namespace Example
 
 ## [**ReplaceResponse**](ReplaceResponse.html) PostContentmanagementDocumentContent (string documentId, ReplaceRequest body, bool? _override = null)
 
+
+
 Replace the contents of a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2231,7 +2405,13 @@ namespace Example
 
 ## [**Document**](Document.html) PostContentmanagementDocuments (DocumentUpload body, string copySource = null, string moveSource = null, bool? _override = null)
 
+
+
 Add a document.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2313,7 +2493,13 @@ namespace Example
 
 ## [**QueryResults**](QueryResults.html) PostContentmanagementQuery (QueryRequest body, string expand = null)
 
+
+
 Query content
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2383,7 +2569,13 @@ namespace Example
 
 ## [**CreateShareResponse**](CreateShareResponse.html) PostContentmanagementShares (CreateShareRequest body)
 
+
+
 Creates a new share or updates an existing share if the entity has already been shared
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2447,7 +2639,13 @@ namespace Example
 
 ## [**TagValue**](TagValue.html) PostContentmanagementWorkspaceTagvalues (string workspaceId, TagValue body)
 
+
+
 Create a workspace tag
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2517,7 +2715,13 @@ namespace Example
 
 ## [**TagValueEntityListing**](TagValueEntityListing.html) PostContentmanagementWorkspaceTagvaluesQuery (string workspaceId, TagQueryRequest body, List<string> expand = null)
 
+
+
 Perform a prefix query on tags in the workspace
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2593,7 +2797,13 @@ namespace Example
 
 ## [**Workspace**](Workspace.html) PostContentmanagementWorkspaces (WorkspaceCreate body)
 
+
+
 Create a group workspace
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2657,7 +2867,13 @@ namespace Example
 
 ## [**Workspace**](Workspace.html) PutContentmanagementWorkspace (string workspaceId, Workspace body)
 
+
+
 Update a workspace
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2727,7 +2943,13 @@ namespace Example
 
 ## [**WorkspaceMember**](WorkspaceMember.html) PutContentmanagementWorkspaceMember (string workspaceId, string memberId, WorkspaceMember body)
 
+
+
 Add a member to a workspace
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2803,7 +3025,13 @@ namespace Example
 
 ## [**TagValue**](TagValue.html) PutContentmanagementWorkspaceTagvalue (string workspaceId, string tagId, TagValue body)
 
+
+
 Update a workspace tag. Will update all documents with the new tag value.
+
+
+
+Requires NO permissions: 
 
 
 

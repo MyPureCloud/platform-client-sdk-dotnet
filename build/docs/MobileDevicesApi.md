@@ -18,7 +18,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteMobiledevice (string deviceId)
 
+
+
 Delete device
+
+
+
+Requires NO permissions: 
 
 
 
@@ -81,7 +87,13 @@ void (empty response body)
 
 ## [**UserDevice**](UserDevice.html) GetMobiledevice (string deviceId)
 
+
+
 Get device
+
+
+
+Requires NO permissions: 
 
 
 
@@ -145,7 +157,13 @@ namespace Example
 
 ## [**DirectoryUserDevicesListing**](DirectoryUserDevicesListing.html) GetMobiledevices (int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
+
+
 Get a list of all devices.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -221,7 +239,13 @@ namespace Example
 
 ## [**UserDevice**](UserDevice.html) PostMobiledevices (UserDevice body)
 
+
+
 Create User device
+
+
+
+Requires NO permissions: 
 
 
 
@@ -285,7 +309,13 @@ namespace Example
 
 ## [**UserDevice**](UserDevice.html) PutMobiledevice (string deviceId, UserDevice body = null)
 
+
+
 Update device
+
+
+
+Requires NO permissions: 
 
 
 

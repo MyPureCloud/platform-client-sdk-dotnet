@@ -198,11 +198,11 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Division">The division to which this entity belongs..</param>
+        
+        
+        
         /// <param name="Description">Description.</param>
-        
-        
-        
-        /// <param name="Division">Division.</param>
         
         
         
@@ -255,7 +255,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Flow(string Name = null, string Description = null, AuthzDivision Division = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        public Flow(string Name = null, UriReference Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
             
             
@@ -343,16 +343,16 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Description = Description;
-            
-            
-            
-            
-            
-            
-            
-            
 this.Division = Division;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Description = Description;
             
             
             
@@ -490,18 +490,19 @@ this.CurrentOperation = CurrentOperation;
         
         
         /// <summary>
-        /// Gets or Sets Description
+        /// The division to which this entity belongs.
         /// </summary>
-        [DataMember(Name="description", EmitDefaultValue=false)]
-        public string Description { get; set; }
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public UriReference Division { get; set; }
         
         
         
         /// <summary>
-        /// Gets or Sets Division
+        /// Gets or Sets Description
         /// </summary>
-        [DataMember(Name="division", EmitDefaultValue=false)]
-        public AuthzDivision Division { get; set; }
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
         
         
         
@@ -618,9 +619,9 @@ this.CurrentOperation = CurrentOperation;
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             
-            sb.Append("  Description: ").Append(Description).Append("\n");
-            
             sb.Append("  Division: ").Append(Division).Append("\n");
+            
+            sb.Append("  Description: ").Append(Description).Append("\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
             
@@ -695,14 +696,14 @@ this.CurrentOperation = CurrentOperation;
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Description == other.Description ||
-                    this.Description != null &&
-                    this.Description.Equals(other.Description)
-                ) &&
-                (
                     this.Division == other.Division ||
                     this.Division != null &&
                     this.Division.Equals(other.Division)
+                ) &&
+                (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
                 ) &&
                 (
                     this.Type == other.Type ||
@@ -789,11 +790,11 @@ this.CurrentOperation = CurrentOperation;
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
                 
-                if (this.Description != null)
-                    hash = hash * 59 + this.Description.GetHashCode();
-                
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
+                
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

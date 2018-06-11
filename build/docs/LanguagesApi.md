@@ -23,9 +23,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteLanguage (string languageId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Delete Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -86,9 +92,15 @@ void (empty response body)
 
 ## void DeleteRoutingLanguage (string languageId)
 
+
+
 Delete Language
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -149,9 +161,15 @@ void (empty response body)
 
 ## [**Language**](Language.html) GetLanguage (string languageId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages/{languageId}
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -213,9 +231,15 @@ namespace Example
 
 ## [**LanguageEntityListing**](LanguageEntityListing.html) GetLanguages (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get the list of supported languages. (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -295,7 +319,13 @@ namespace Example
 
 ## [**AvailableTranslations**](AvailableTranslations.html) GetLanguagesTranslations ()
 
+
+
 Get all available languages for translation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -350,7 +380,13 @@ This endpoint does require any parameters.
 
 ## **Dictionary&lt;string, Object&gt;** GetLanguagesTranslationsBuiltin (string language)
 
+
+
 Get the builtin translation for a language
+
+
+
+Requires NO permissions: 
 
 
 
@@ -414,7 +450,13 @@ namespace Example
 
 ## **Dictionary&lt;string, Object&gt;** GetLanguagesTranslationsOrganization (string language)
 
+
+
 Get effective translation for an organization by language
+
+
+
+Requires NO permissions: 
 
 
 
@@ -478,7 +520,13 @@ namespace Example
 
 ## **Dictionary&lt;string, Object&gt;** GetLanguagesTranslationsUser (string userId)
 
+
+
 Get effective language translation for a user
+
+
+
+Requires NO permissions: 
 
 
 
@@ -542,9 +590,15 @@ namespace Example
 
 ## [**Language**](Language.html) GetRoutingLanguage (string languageId)
 
+
+
 Get language
 
 
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp
@@ -606,9 +660,15 @@ namespace Example
 
 ## [**Language**](Language.html) PostLanguages (Language body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Create Language (Deprecated)
 
 This endpoint is deprecated. It has been moved to /routing/languages
+
+Requires ANY permissions: 
+
+* routing:skill:manage
 
 ### Example
 ~~~csharp

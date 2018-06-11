@@ -17,7 +17,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**FieldConfig**](FieldConfig.html) GetFieldconfig (string type)
 
+
+
 Fetch field config for an entity type
+
+
+
+Requires NO permissions: 
 
 
 
@@ -81,7 +87,13 @@ namespace Example
 
 ## [**Organization**](Organization.html) GetOrganizationsMe ()
 
+
+
 Get organization.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -136,9 +148,15 @@ This endpoint does require any parameters.
 
 ## [**OrganizationFeatures**](OrganizationFeatures.html) PatchOrganizationsFeature (string featureName, FeatureState enabled)
 
+
+
 Update organization
 
 
+
+Requires ANY permissions: 
+
+* admin
 
 ### Example
 ~~~csharp
@@ -206,9 +224,15 @@ namespace Example
 
 ## [**Organization**](Organization.html) PutOrganizationsMe (Organization body = null)
 
+
+
 Update organization.
 
 
+
+Requires ANY permissions: 
+
+* admin
 
 ### Example
 ~~~csharp

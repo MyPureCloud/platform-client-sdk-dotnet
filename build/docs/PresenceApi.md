@@ -21,9 +21,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeletePresencedefinition (string presenceId)
 
+
+
 Delete a Presence Definition
 
 
+
+Requires ANY permissions: 
+
+* presence:presenceDefinition:delete
 
 ### Example
 ~~~csharp
@@ -84,7 +90,13 @@ void (empty response body)
 
 ## [**OrganizationPresence**](OrganizationPresence.html) GetPresencedefinition (string presenceId, string localeCode = null)
 
+
+
 Get a Presence Definition
+
+
+
+Requires NO permissions: 
 
 
 
@@ -154,7 +166,13 @@ namespace Example
 
 ## [**OrganizationPresenceEntityListing**](OrganizationPresenceEntityListing.html) GetPresencedefinitions (int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
 
+
+
 Get an Organization's list of Presence Definitions
+
+
+
+Requires NO permissions: 
 
 
 
@@ -236,7 +254,13 @@ namespace Example
 
 ## [**List&lt;SystemPresence&gt;**](SystemPresence.html) GetSystempresences ()
 
+
+
 Get the list of SystemPresences
+
+
+
+Requires NO permissions: 
 
 
 
@@ -291,7 +315,13 @@ This endpoint does require any parameters.
 
 ## [**UserPresence**](UserPresence.html) GetUserPresence (string userId, string sourceId)
 
+
+
 Get a user's Presence
+
+
+
+Requires NO permissions: 
 
 
 
@@ -361,9 +391,15 @@ namespace Example
 
 ## [**UserPresence**](UserPresence.html) PatchUserPresence (string userId, string sourceId, UserPresence body)
 
+
+
 Patch a user's Presence
 
 The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -437,9 +473,15 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) PostPresencedefinitions (OrganizationPresence body)
 
+
+
 Create a Presence Definition
 
 
+
+Requires ANY permissions: 
+
+* presence:presenceDefinition:add
 
 ### Example
 ~~~csharp
@@ -501,9 +543,15 @@ namespace Example
 
 ## [**OrganizationPresence**](OrganizationPresence.html) PutPresencedefinition (string presenceId, OrganizationPresence body)
 
+
+
 Update a Presence Definition
 
 
+
+Requires ANY permissions: 
+
+* presence:presenceDefinition:edit
 
 ### Example
 ~~~csharp

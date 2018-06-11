@@ -36,9 +36,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteOrgauthorizationTrustee (string trusteeOrgId)
 
+
+
 Delete Org Trust
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:delete
 
 ### Example
 ~~~csharp
@@ -99,9 +105,15 @@ void (empty response body)
 
 ## void DeleteOrgauthorizationTrusteeUser (string trusteeOrgId, string trusteeUserId)
 
+
+
 Delete Trustee User
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:delete* admin* role_manager
 
 ### Example
 ~~~csharp
@@ -168,9 +180,15 @@ void (empty response body)
 
 ## void DeleteOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId)
 
+
+
 Delete Trustee User Roles
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:delete* admin* role_manager
 
 ### Example
 ~~~csharp
@@ -237,9 +255,15 @@ void (empty response body)
 
 ## void DeleteOrgauthorizationTrustor (string trustorOrgId)
 
+
+
 Delete Org Trust
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustor:delete
 
 ### Example
 ~~~csharp
@@ -300,9 +324,15 @@ void (empty response body)
 
 ## void DeleteOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
 
+
+
 Delete Trustee User
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:delete
 
 ### Example
 ~~~csharp
@@ -369,9 +399,15 @@ void (empty response body)
 
 ## [**TrustRequest**](TrustRequest.html) GetOrgauthorizationPairing (string pairingId)
 
+
+
 Get Pairing Info
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:view* authorization:orgTrustor:view
 
 ### Example
 ~~~csharp
@@ -433,9 +469,15 @@ namespace Example
 
 ## [**Trustee**](Trustee.html) GetOrgauthorizationTrustee (string trusteeOrgId)
 
+
+
 Get Org Trust
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:view
 
 ### Example
 ~~~csharp
@@ -497,9 +539,15 @@ namespace Example
 
 ## [**TrustUser**](TrustUser.html) GetOrgauthorizationTrusteeUser (string trusteeOrgId, string trusteeUserId)
 
+
+
 Get Trustee User
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
 
 ### Example
 ~~~csharp
@@ -567,9 +615,15 @@ namespace Example
 
 ## [**UserAuthorization**](UserAuthorization.html) GetOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId)
 
+
+
 Get Trustee User Roles
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
 
 ### Example
 ~~~csharp
@@ -637,9 +691,15 @@ namespace Example
 
 ## [**TrustUserEntityListing**](TrustUserEntityListing.html) GetOrgauthorizationTrusteeUsers (string trusteeOrgId, int? pageSize = null, int? pageNumber = null)
 
+
+
 The list of trustee users for this organization (i.e. users granted access to this organization).
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
 
 ### Example
 ~~~csharp
@@ -713,9 +773,15 @@ namespace Example
 
 ## [**TrustEntityListing**](TrustEntityListing.html) GetOrgauthorizationTrustees (int? pageSize = null, int? pageNumber = null)
 
+
+
 The list of trustees for this organization (i.e. organizations granted access to this organization).
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:view
 
 ### Example
 ~~~csharp
@@ -783,9 +849,15 @@ namespace Example
 
 ## [**Trustor**](Trustor.html) GetOrgauthorizationTrustor (string trustorOrgId)
 
+
+
 Get Org Trust
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustor:view
 
 ### Example
 ~~~csharp
@@ -847,9 +919,15 @@ namespace Example
 
 ## [**TrustUser**](TrustUser.html) GetOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
 
+
+
 Get Trustee User
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
 
 ### Example
 ~~~csharp
@@ -917,9 +995,15 @@ namespace Example
 
 ## [**TrustUserEntityListing**](TrustUserEntityListing.html) GetOrgauthorizationTrustorUsers (string trustorOrgId, int? pageSize = null, int? pageNumber = null)
 
+
+
 The list of users in the trustor organization (i.e. users granted access).
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:view
 
 ### Example
 ~~~csharp
@@ -993,9 +1077,15 @@ namespace Example
 
 ## [**TrustorEntityListing**](TrustorEntityListing.html) GetOrgauthorizationTrustors (int? pageSize = null, int? pageNumber = null)
 
+
+
 The list of organizations that have authorized/trusted your organization.
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustor:view
 
 ### Example
 ~~~csharp
@@ -1063,9 +1153,15 @@ namespace Example
 
 ## [**TrustRequest**](TrustRequest.html) PostOrgauthorizationPairings (TrustRequestCreate body)
 
+
+
 A pairing id is created by the trustee and given to the trustor to create a trust.
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:add
 
 ### Example
 ~~~csharp
@@ -1127,9 +1223,15 @@ namespace Example
 
 ## [**TrustUser**](TrustUser.html) PostOrgauthorizationTrusteeUsers (string trusteeOrgId, TrustMemberCreate body)
 
+
+
 Add a user to the trust.
 
 
+
+Requires ALL permissions: 
+
+* authorization:orgTrusteeUser:add* admin* role_manager
 
 ### Example
 ~~~csharp
@@ -1197,9 +1299,15 @@ namespace Example
 
 ## [**Trustee**](Trustee.html) PostOrgauthorizationTrustees (TrustCreate body)
 
+
+
 Create a new organization authorization trust. This is required to grant other organizations access to your organization.
 
 
+
+Requires ALL permissions: 
+
+* authorization:orgTrustee:add* authorization:orgTrusteeUser:add
 
 ### Example
 ~~~csharp
@@ -1261,9 +1369,15 @@ namespace Example
 
 ## [**AuditQueryResponse**](AuditQueryResponse.html) PostOrgauthorizationTrusteesAudits (TrusteeAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
+
+
 Get Org Trustee Audits
 
 
+
+Requires ANY permissions: 
+
+* authorization:audit:view
 
 ### Example
 ~~~csharp
@@ -1349,9 +1463,15 @@ namespace Example
 
 ## [**AuditQueryResponse**](AuditQueryResponse.html) PostOrgauthorizationTrustorAudits (TrustorAuditQueryRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null)
 
+
+
 Get Org Trustor Audits
 
 
+
+Requires ANY permissions: 
+
+* authorization:audit:view
 
 ### Example
 ~~~csharp
@@ -1437,9 +1557,15 @@ namespace Example
 
 ## [**Trustee**](Trustee.html) PutOrgauthorizationTrustee (string trusteeOrgId, Trustee body)
 
+
+
 Update Org Trust
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrustee:edit
 
 ### Example
 ~~~csharp
@@ -1507,9 +1633,15 @@ namespace Example
 
 ## [**UserAuthorization**](UserAuthorization.html) PutOrgauthorizationTrusteeUserRoles (string trusteeOrgId, string trusteeUserId, List<string> body)
 
+
+
 Update Trustee User Roles
 
 
+
+Requires ANY permissions: 
+
+* authorization:orgTrusteeUser:edit* admin* role_manager
 
 ### Example
 ~~~csharp
@@ -1583,9 +1715,15 @@ namespace Example
 
 ## [**TrustUser**](TrustUser.html) PutOrgauthorizationTrustorUser (string trustorOrgId, string trusteeUserId)
 
+
+
 Add a Trustee user to the trust.
 
 
+
+Requires ALL permissions: 
+
+* authorization:orgTrusteeUser:add
 
 ### Example
 ~~~csharp

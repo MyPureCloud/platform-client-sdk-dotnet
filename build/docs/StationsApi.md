@@ -18,7 +18,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteStationAssociateduser (string stationId)
 
+
+
 Unassigns the user assigned to this station
+
+
+
+Requires NO permissions: 
 
 
 
@@ -81,7 +87,13 @@ void (empty response body)
 
 ## [**Station**](Station.html) GetStation (string stationId)
 
+
+
 Get station.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -145,7 +157,13 @@ namespace Example
 
 ## [**StationEntityListing**](StationEntityListing.html) GetStations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
 
+
+
 Get the list of available stations.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -251,9 +269,15 @@ namespace Example
 
 ## [**StationSettings**](StationSettings.html) GetStationsSettings ()
 
+
+
 Get an organization's StationSettings
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -306,9 +330,15 @@ This endpoint does require any parameters.
 
 ## [**StationSettings**](StationSettings.html) PatchStationsSettings (StationSettings body)
 
+
+
 Patch an organization's StationSettings
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp

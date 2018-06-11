@@ -63,7 +63,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**Calibration**](Calibration.html) DeleteQualityCalibration (string calibrationId, string calibratorId)
 
+
+
 Delete a calibration by id.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -133,7 +139,13 @@ namespace Example
 
 ## [**Evaluation**](Evaluation.html) DeleteQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
 
+
+
 Delete an evaluation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -209,9 +221,15 @@ namespace Example
 
 ## void DeleteQualityForm (string formId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Delete an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:delete
 
 ### Example
 ~~~csharp
@@ -272,9 +290,15 @@ void (empty response body)
 
 ## void DeleteQualityFormsEvaluation (string formId)
 
+
+
 Delete an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:delete
 
 ### Example
 ~~~csharp
@@ -335,9 +359,15 @@ void (empty response body)
 
 ## void DeleteQualityFormsSurvey (string formId)
 
+
+
 Delete a survey form.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:delete
 
 ### Example
 ~~~csharp
@@ -398,7 +428,13 @@ void (empty response body)
 
 ## void DeleteQualityKeywordset (string keywordSetId)
 
+
+
 Delete a keywordSet by id.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -461,9 +497,15 @@ void (empty response body)
 
 ## void DeleteQualityKeywordsets (string ids)
 
+
+
 Delete keyword sets
 
 Bulk delete of keyword sets; this will only delete the keyword sets that match the ids specified in the query param.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -524,9 +566,15 @@ void (empty response body)
 
 ## [**AgentActivityEntityListing**](AgentActivityEntityListing.html) GetQualityAgentsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null)
 
+
+
 Gets a list of Agent Activities
 
 Including the number of evaluations and average evaluation score
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -654,7 +702,13 @@ namespace Example
 
 ## [**Calibration**](Calibration.html) GetQualityCalibration (string calibrationId, string calibratorId = null, string conversationId = null)
 
+
+
 Get a calibration by id.  Requires either calibrator id or conversation id
+
+
+
+Requires NO permissions: 
 
 
 
@@ -730,7 +784,13 @@ namespace Example
 
 ## [**CalibrationEntityListing**](CalibrationEntityListing.html) GetQualityCalibrations (string calibratorId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, DateTime? startTime = null, DateTime? endTime = null)
 
+
+
 Get the list of calibrations
+
+
+
+Requires NO permissions: 
 
 
 
@@ -848,7 +908,13 @@ namespace Example
 
 ## [**QualityAuditPage**](QualityAuditPage.html) GetQualityConversationAudits (string conversationId, int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string recordingId = null, string entityType = null)
 
+
+
 Get audits for conversation or recording
+
+
+
+Requires NO permissions: 
 
 
 
@@ -960,7 +1026,13 @@ namespace Example
 
 ## [**Evaluation**](Evaluation.html) GetQualityConversationEvaluation (string conversationId, string evaluationId, string expand = null)
 
+
+
 Get an evaluation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1036,9 +1108,15 @@ namespace Example
 
 ## [**EvaluationEntityListing**](EvaluationEntityListing.html) GetQualityEvaluationsQuery (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string conversationId = null, string agentUserId = null, string evaluatorUserId = null, string queueId = null, string startTime = null, string endTime = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null)
 
+
+
 Queries Evaluations and returns a paged list
 
 Query params must include one of conversationId, evaluatorUserId, or agentUserId
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -1202,7 +1280,13 @@ namespace Example
 
 ## [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing.html) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null)
 
+
+
 Get an evaluator activity
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1326,9 +1410,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) GetQualityForm (string formId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get an evaluation form
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -1390,9 +1480,15 @@ namespace Example
 
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Gets all the revisions for a specific evaluation.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -1466,9 +1562,15 @@ namespace Example
 
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityForms (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get the list of evaluation forms
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -1566,9 +1668,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) GetQualityFormsEvaluation (string formId)
 
+
+
 Get an evaluation form
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -1630,9 +1738,15 @@ namespace Example
 
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluationVersions (string formId, int? pageSize = null, int? pageNumber = null)
 
+
+
 Gets all the revisions for a specific evaluation.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -1706,9 +1820,15 @@ namespace Example
 
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityFormsEvaluations (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
 
+
+
 Get the list of evaluation forms
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -1806,9 +1926,15 @@ namespace Example
 
 ## [**SurveyForm**](SurveyForm.html) GetQualityFormsSurvey (string formId)
 
+
+
 Get a survey form
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
 
 ### Example
 ~~~csharp
@@ -1870,9 +1996,15 @@ namespace Example
 
 ## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveyVersions (string formId, int? pageSize = null, int? pageNumber = null)
 
+
+
 Gets all the revisions for a specific survey.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
 
 ### Example
 ~~~csharp
@@ -1946,9 +2078,15 @@ namespace Example
 
 ## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityFormsSurveys (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null)
 
+
+
 Get the list of survey forms
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
 
 ### Example
 ~~~csharp
@@ -2046,7 +2184,13 @@ namespace Example
 
 ## [**KeywordSet**](KeywordSet.html) GetQualityKeywordset (string keywordSetId)
 
+
+
 Get a keywordSet by id.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2110,7 +2254,13 @@ namespace Example
 
 ## [**KeywordSetEntityListing**](KeywordSetEntityListing.html) GetQualityKeywordsets (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, string queueId = null, string agentId = null, string _operator = null)
 
+
+
 Get the list of keyword sets
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2228,9 +2378,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) GetQualityPublishedform (string formId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get the published evaluation forms.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -2292,9 +2448,15 @@ namespace Example
 
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedforms (int? pageSize = null, int? pageNumber = null, string name = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get the published evaluation forms.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -2368,9 +2530,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) GetQualityPublishedformsEvaluation (string formId)
 
+
+
 Get the most recent published version of an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -2432,9 +2600,15 @@ namespace Example
 
 ## [**EvaluationFormEntityListing**](EvaluationFormEntityListing.html) GetQualityPublishedformsEvaluations (int? pageSize = null, int? pageNumber = null, string name = null)
 
+
+
 Get the published evaluation forms.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
 
 ### Example
 ~~~csharp
@@ -2508,9 +2682,15 @@ namespace Example
 
 ## [**SurveyForm**](SurveyForm.html) GetQualityPublishedformsSurvey (string formId)
 
+
+
 Get the most recent published version of a survey form.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
 
 ### Example
 ~~~csharp
@@ -2572,9 +2752,15 @@ namespace Example
 
 ## [**SurveyFormEntityListing**](SurveyFormEntityListing.html) GetQualityPublishedformsSurveys (int? pageSize = null, int? pageNumber = null, string name = null)
 
+
+
 Get the published survey forms.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:view
 
 ### Example
 ~~~csharp
@@ -2648,9 +2834,15 @@ namespace Example
 
 ## [**SurveyForm**](SurveyForm.html) PatchQualityFormsSurvey (string formId, SurveyForm body)
 
+
+
 Disable a particular version of a survey form and invalidates any invitations that have already been sent to customers using this version of the form.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:edit
 
 ### Example
 ~~~csharp
@@ -2718,9 +2910,15 @@ namespace Example
 
 ## [**AggregateQueryResponse**](AggregateQueryResponse.html) PostAnalyticsEvaluationsAggregatesQuery (AggregationQuery body)
 
+
+
 Query for evaluation aggregates
 
 
+
+Requires ANY permissions: 
+
+* analytics:evaluationAggregate:view
 
 ### Example
 ~~~csharp
@@ -2782,7 +2980,13 @@ namespace Example
 
 ## [**Calibration**](Calibration.html) PostQualityCalibrations (CalibrationCreate body, string expand = null)
 
+
+
 Create a calibration
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2852,7 +3056,13 @@ namespace Example
 
 ## [**Evaluation**](Evaluation.html) PostQualityConversationEvaluations (string conversationId, Evaluation body, string expand = null)
 
+
+
 Create an evaluation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2928,7 +3138,13 @@ namespace Example
 
 ## [**EvaluationScoringSet**](EvaluationScoringSet.html) PostQualityEvaluationsScoring (EvaluationFormAndScoringSet body)
 
+
+
 Score evaluation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2992,9 +3208,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) PostQualityForms (EvaluationForm body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Create an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:add
 
 ### Example
 ~~~csharp
@@ -3056,9 +3278,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) PostQualityFormsEvaluations (EvaluationForm body)
 
+
+
 Create an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:add
 
 ### Example
 ~~~csharp
@@ -3120,9 +3348,15 @@ namespace Example
 
 ## [**SurveyForm**](SurveyForm.html) PostQualityFormsSurveys (SurveyForm body)
 
+
+
 Create a survey form.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:add
 
 ### Example
 ~~~csharp
@@ -3184,7 +3418,13 @@ namespace Example
 
 ## [**KeywordSet**](KeywordSet.html) PostQualityKeywordsets (KeywordSet body, string expand = null)
 
+
+
 Create a Keyword Set
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3254,9 +3494,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedforms (PublishForm body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Publish an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:add
 
 ### Example
 ~~~csharp
@@ -3318,9 +3564,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) PostQualityPublishedformsEvaluations (PublishForm body)
 
+
+
 Publish an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:add
 
 ### Example
 ~~~csharp
@@ -3382,9 +3634,15 @@ namespace Example
 
 ## [**SurveyForm**](SurveyForm.html) PostQualityPublishedformsSurveys (PublishForm body)
 
+
+
 Publish a survey form.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:add
 
 ### Example
 ~~~csharp
@@ -3446,7 +3704,13 @@ namespace Example
 
 ## [**KeywordSet**](KeywordSet.html) PostQualitySpotability (KeywordSet body = null)
 
+
+
 Retrieve the spotability statistic
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3510,7 +3774,13 @@ namespace Example
 
 ## [**Calibration**](Calibration.html) PutQualityCalibration (string calibrationId, Calibration body)
 
+
+
 Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3580,7 +3850,13 @@ namespace Example
 
 ## [**Evaluation**](Evaluation.html) PutQualityConversationEvaluation (string conversationId, string evaluationId, Evaluation body, string expand = null)
 
+
+
 Update an evaluation
+
+
+
+Requires NO permissions: 
 
 
 
@@ -3662,9 +3938,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) PutQualityForm (string formId, EvaluationForm body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Update an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:edit
 
 ### Example
 ~~~csharp
@@ -3732,9 +4014,15 @@ namespace Example
 
 ## [**EvaluationForm**](EvaluationForm.html) PutQualityFormsEvaluation (string formId, EvaluationForm body)
 
+
+
 Update an evaluation form.
 
 
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:edit
 
 ### Example
 ~~~csharp
@@ -3802,9 +4090,15 @@ namespace Example
 
 ## [**SurveyForm**](SurveyForm.html) PutQualityFormsSurvey (string formId, SurveyForm body)
 
+
+
 Update a survey form.
 
 
+
+Requires ANY permissions: 
+
+* quality:surveyForm:edit
 
 ### Example
 ~~~csharp
@@ -3872,7 +4166,13 @@ namespace Example
 
 ## [**KeywordSet**](KeywordSet.html) PutQualityKeywordset (string keywordSetId, KeywordSet body)
 
+
+
 Update a keywordSet to the specified keywordSet via PUT.
+
+
+
+Requires NO permissions: 
 
 
 

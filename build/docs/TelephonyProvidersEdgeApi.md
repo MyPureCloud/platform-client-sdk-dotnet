@@ -140,9 +140,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteTelephonyProvidersEdge (string edgeId)
 
+
+
 Delete a edge.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -203,9 +209,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId)
 
+
+
 Delete an edge logical interface
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -272,7 +284,13 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgeSoftwareupdate (string edgeId)
 
+
+
 Cancels any in-progress update for this edge.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -335,9 +353,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesCertificateauthority (string certificateId)
 
+
+
 Delete a certificate authority.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -398,9 +422,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesDidpool (string didPoolId)
 
+
+
 Delete a DID Pool by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -461,9 +491,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesEdgegroup (string edgeGroupId)
 
+
+
 Delete an edge group.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -524,9 +560,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesEndpoint (string endpointId)
 
+
+
 Delete endpoint
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -587,9 +629,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
 
+
+
 Delete an extension pool by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -650,9 +698,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Delete Outbound Route
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -713,9 +767,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesPhone (string phoneId)
 
+
+
 Delete a Phone by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -776,9 +836,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
 
+
+
 Delete a Phone Base Settings by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -839,9 +905,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesSite (string siteId)
 
+
+
 Delete a Site by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -902,9 +974,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
 
+
+
 Delete Outbound Route
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -971,9 +1049,15 @@ void (empty response body)
 
 ## void DeleteTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId)
 
+
+
 Delete a Trunk Base Settings object by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1034,7 +1118,13 @@ void (empty response body)
 
 ## [**SchemaCategoryEntityListing**](SchemaCategoryEntityListing.html) GetConfigurationSchemasEdgesVnext (int? pageSize = null, int? pageNumber = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Lists available schema categories (Deprecated)
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1104,7 +1194,13 @@ namespace Example
 
 ## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetConfigurationSchemasEdgesVnextSchemaCategory (string schemaCategory, int? pageSize = null, int? pageNumber = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 List schemas of a specific category (Deprecated)
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1180,7 +1276,13 @@ namespace Example
 
 ## [**SchemaReferenceEntityListing**](SchemaReferenceEntityListing.html) GetConfigurationSchemasEdgesVnextSchemaCategorySchemaType (string schemaCategory, string schemaType, int? pageSize = null, int? pageNumber = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 List schemas of a specific category (Deprecated)
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1262,7 +1364,13 @@ namespace Example
 
 ## [**Organization**](Organization.html) GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaId (string schemaCategory, string schemaType, string schemaId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get a json schema (Deprecated)
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1338,7 +1446,13 @@ namespace Example
 
 ## [**Organization**](Organization.html) GetConfigurationSchemasEdgesVnextSchemaCategorySchemaTypeSchemaIdExtensionTypeMetadataId (string schemaCategory, string schemaType, string schemaId, string extensionType, string metadataId, string type = null)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get metadata for a schema (Deprecated)
+
+
+
+Requires NO permissions: 
 
 
 
@@ -1432,9 +1546,15 @@ namespace Example
 
 ## [**Edge**](Edge.html) GetTelephonyProvidersEdge (string edgeId, List<string> expand = null)
 
+
+
 Get edge.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1502,9 +1622,15 @@ namespace Example
 
 ## [**EdgeLine**](EdgeLine.html) GetTelephonyProvidersEdgeLine (string edgeId, string lineId)
 
+
+
 Get line
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1572,9 +1698,15 @@ namespace Example
 
 ## [**EdgeLineEntityListing**](EdgeLineEntityListing.html) GetTelephonyProvidersEdgeLines (string edgeId, int? pageSize = null, int? pageNumber = null)
 
+
+
 Get the list of lines.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1648,9 +1780,15 @@ namespace Example
 
 ## [**DomainLogicalInterface**](DomainLogicalInterface.html) GetTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId, List<string> expand = null)
 
+
+
 Get an edge logical interface
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1724,9 +1862,15 @@ namespace Example
 
 ## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) GetTelephonyProvidersEdgeLogicalinterfaces (string edgeId, List<string> expand = null)
 
+
+
 Get edge logical interfaces.
 
 Retrieve a list of all configured logical interfaces from a specific edge.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1794,9 +1938,15 @@ namespace Example
 
 ## [**EdgeLogsJob**](EdgeLogsJob.html) GetTelephonyProvidersEdgeLogsJob (string edgeId, string jobId)
 
+
+
 Get an Edge logs job.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1864,9 +2014,15 @@ namespace Example
 
 ## [**EdgeMetrics**](EdgeMetrics.html) GetTelephonyProvidersEdgeMetrics (string edgeId)
 
+
+
 Get the edge metrics.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1928,9 +2084,15 @@ namespace Example
 
 ## [**DomainPhysicalInterface**](DomainPhysicalInterface.html) GetTelephonyProvidersEdgePhysicalinterface (string edgeId, string interfaceId)
 
+
+
 Get edge physical interface.
 
 Retrieve a physical interface from a specific edge.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -1998,9 +2160,15 @@ namespace Example
 
 ## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) GetTelephonyProvidersEdgePhysicalinterfaces (string edgeId)
 
+
+
 Retrieve a list of all configured physical interfaces from a specific edge.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2062,9 +2230,15 @@ namespace Example
 
 ## [**VmPairingInfo**](VmPairingInfo.html) GetTelephonyProvidersEdgeSetuppackage (string edgeId)
 
+
+
 Get the setup package for a locally deployed edge device. This is needed to complete the setup process for the virtual edge.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2126,7 +2300,13 @@ namespace Example
 
 ## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) GetTelephonyProvidersEdgeSoftwareupdate (string edgeId)
 
+
+
 Gets software update status information about any edge.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2190,7 +2370,13 @@ namespace Example
 
 ## [**DomainEdgeSoftwareVersionDtoEntityListing**](DomainEdgeSoftwareVersionDtoEntityListing.html) GetTelephonyProvidersEdgeSoftwareversions (string edgeId)
 
+
+
 Gets all the available software versions for this edge.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2254,9 +2440,15 @@ namespace Example
 
 ## [**TrunkEntityListing**](TrunkEntityListing.html) GetTelephonyProvidersEdgeTrunks (string edgeId, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string trunkBaseId = null, string trunkType = null)
 
+
+
 Get the list of available trunks for the given Edge.
 
 Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2354,9 +2546,15 @@ namespace Example
 
 ## [**EdgeEntityListing**](EdgeEntityListing.html) GetTelephonyProvidersEdges (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null)
 
+
+
 Get the list of edges.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2454,7 +2652,13 @@ namespace Example
 
 ## [**AvailableLanguageList**](AvailableLanguageList.html) GetTelephonyProvidersEdgesAvailablelanguages ()
 
+
+
 Get the list of available languages.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -2509,9 +2713,15 @@ This endpoint does require any parameters.
 
 ## [**CertificateAuthorityEntityListing**](CertificateAuthorityEntityListing.html) GetTelephonyProvidersEdgesCertificateauthorities ()
 
+
+
 Get the list of certificate authorities.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2564,9 +2774,15 @@ This endpoint does require any parameters.
 
 ## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) GetTelephonyProvidersEdgesCertificateauthority (string certificateId)
 
+
+
 Get a certificate authority.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2628,9 +2844,15 @@ namespace Example
 
 ## [**DID**](DID.html) GetTelephonyProvidersEdgesDid (string didId)
 
+
+
 Get a DID by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2692,9 +2914,15 @@ namespace Example
 
 ## [**DIDPool**](DIDPool.html) GetTelephonyProvidersEdgesDidpool (string didPoolId)
 
+
+
 Get a DID Pool by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2756,9 +2984,15 @@ namespace Example
 
 ## [**DIDPoolEntityListing**](DIDPoolEntityListing.html) GetTelephonyProvidersEdgesDidpools (int? pageSize = null, int? pageNumber = null, string sortBy = null)
 
+
+
 Get a listing of DID Pools
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2832,9 +3066,15 @@ namespace Example
 
 ## [**DIDEntityListing**](DIDEntityListing.html) GetTelephonyProvidersEdgesDids (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null)
 
+
+
 Get a listing of DIDs
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2920,9 +3160,15 @@ namespace Example
 
 ## [**EdgeGroup**](EdgeGroup.html) GetTelephonyProvidersEdgesEdgegroup (string edgeGroupId, List<string> expand = null)
 
+
+
 Get edge group.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -2990,9 +3236,15 @@ namespace Example
 
 ## [**EdgeTrunkBase**](EdgeTrunkBase.html) GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId)
 
+
+
 Gets the edge trunk base associated with the edge group
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3060,9 +3312,15 @@ namespace Example
 
 ## [**EdgeGroupEntityListing**](EdgeGroupEntityListing.html) GetTelephonyProvidersEdgesEdgegroups (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
 
+
+
 Get the list of edge groups.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3148,9 +3406,15 @@ namespace Example
 
 ## [**EdgeVersionReport**](EdgeVersionReport.html) GetTelephonyProvidersEdgesEdgeversionreport ()
 
+
+
 Get the edge version report.
 
 The report will not have consistent data about the edge version(s) until all edges have been reset.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -3203,9 +3467,15 @@ This endpoint does require any parameters.
 
 ## [**Endpoint**](Endpoint.html) GetTelephonyProvidersEdgesEndpoint (string endpointId)
 
+
+
 Get endpoint
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3267,9 +3537,15 @@ namespace Example
 
 ## [**EndpointEntityListing**](EndpointEntityListing.html) GetTelephonyProvidersEdgesEndpoints (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
 
+
+
 Get endpoints
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3349,9 +3625,15 @@ namespace Example
 
 ## [**Extension**](Extension.html) GetTelephonyProvidersEdgesExtension (string extensionId)
 
+
+
 Get an extension by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3413,9 +3695,15 @@ namespace Example
 
 ## [**ExtensionPool**](ExtensionPool.html) GetTelephonyProvidersEdgesExtensionpool (string extensionPoolId)
 
+
+
 Get an extension pool by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3477,9 +3765,15 @@ namespace Example
 
 ## [**ExtensionPoolEntityListing**](ExtensionPoolEntityListing.html) GetTelephonyProvidersEdgesExtensionpools (int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null)
 
+
+
 Get a listing of extension pools
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3559,9 +3853,15 @@ namespace Example
 
 ## [**ExtensionEntityListing**](ExtensionEntityListing.html) GetTelephonyProvidersEdgesExtensions (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null)
 
+
+
 Get a listing of extensions
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3647,9 +3947,15 @@ namespace Example
 
 ## [**Line**](Line.html) GetTelephonyProvidersEdgesLine (string lineId)
 
+
+
 Get a Line by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3711,9 +4017,15 @@ namespace Example
 
 ## [**LineBase**](LineBase.html) GetTelephonyProvidersEdgesLinebasesetting (string lineBaseId)
 
+
+
 Get a line base settings object by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3775,9 +4087,15 @@ namespace Example
 
 ## [**LineBaseEntityListing**](LineBaseEntityListing.html) GetTelephonyProvidersEdgesLinebasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null)
 
+
+
 Get a listing of line base settings objects
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3857,9 +4175,15 @@ namespace Example
 
 ## [**LineEntityListing**](LineEntityListing.html) GetTelephonyProvidersEdgesLines (int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
 
+
+
 Get a list of Lines
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -3945,9 +4269,15 @@ namespace Example
 
 ## [**Line**](Line.html) GetTelephonyProvidersEdgesLinesTemplate (string lineBaseSettingsId)
 
+
+
 Get a Line instance template based on a Line Base Settings object. This object can then be modified and saved as a new Line instance
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4009,9 +4339,15 @@ namespace Example
 
 ## [**LogicalInterfaceEntityListing**](LogicalInterfaceEntityListing.html) GetTelephonyProvidersEdgesLogicalinterfaces (string edgeIds, List<string> expand = null)
 
+
+
 Get edge logical interfaces.
 
 Retrieve the configured logical interfaces for a list edges. Only 100 edges can be requested at a time.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4079,9 +4415,15 @@ namespace Example
 
 ## [**List&lt;EdgeMetrics&gt;**](EdgeMetrics.html) GetTelephonyProvidersEdgesMetrics (string edgeIds)
 
+
+
 Get the metrics for a list of edges.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4143,9 +4485,15 @@ namespace Example
 
 ## [**OutboundRoute**](OutboundRoute.html) GetTelephonyProvidersEdgesOutboundroute (string outboundRouteId)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Get outbound route
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4207,9 +4555,15 @@ namespace Example
 
 ## [**OutboundRouteEntityListing**](OutboundRouteEntityListing.html) GetTelephonyProvidersEdgesOutboundroutes (int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string sortBy = null)
 
+
+
 Get outbound routes
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4295,9 +4649,15 @@ namespace Example
 
 ## [**Phone**](Phone.html) GetTelephonyProvidersEdgesPhone (string phoneId)
 
+
+
 Get a Phone by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4359,9 +4719,15 @@ namespace Example
 
 ## [**PhoneBase**](PhoneBase.html) GetTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId)
 
+
+
 Get a Phone Base Settings object by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4423,9 +4789,15 @@ namespace Example
 
 ## [**PhoneBaseEntityListing**](PhoneBaseEntityListing.html) GetTelephonyProvidersEdgesPhonebasesettings (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
 
+
+
 Get a list of Phone Base Settings objects
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4517,9 +4889,15 @@ namespace Example
 
 ## [**PhoneMetaBaseEntityListing**](PhoneMetaBaseEntityListing.html) GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabases (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of available makes and models to create a new Phone Base Settings
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4587,9 +4965,15 @@ namespace Example
 
 ## [**PhoneBase**](PhoneBase.html) GetTelephonyProvidersEdgesPhonebasesettingsTemplate (string phoneMetabaseId)
 
+
+
 Get a Phone Base Settings instance template from a given make and model. This object can then be modified and saved as a new Phone Base Settings instance
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4651,9 +5035,15 @@ namespace Example
 
 ## [**PhoneEntityListing**](PhoneEntityListing.html) GetTelephonyProvidersEdgesPhones (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, List<string> expand = null, List<string> fields = null)
 
+
+
 Get a list of Phone Instances
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4793,9 +5183,15 @@ namespace Example
 
 ## [**Phone**](Phone.html) GetTelephonyProvidersEdgesPhonesTemplate (string phoneBaseSettingsId)
 
+
+
 Get a Phone instance template based on a Phone Base Settings object. This object can then be modified and saved as a new Phone instance
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4857,9 +5253,15 @@ namespace Example
 
 ## [**PhysicalInterfaceEntityListing**](PhysicalInterfaceEntityListing.html) GetTelephonyProvidersEdgesPhysicalinterfaces (string edgeIds)
 
+
+
 Get physical interfaces for edges.
 
 Retrieves a list of all configured physical interfaces for a list of edges. Only 100 edges can be requested at a time.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -4921,9 +5323,15 @@ namespace Example
 
 ## [**Site**](Site.html) GetTelephonyProvidersEdgesSite (string siteId)
 
+
+
 Get a Site by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all* telephony:sites:view
 
 ### Example
 ~~~csharp
@@ -4985,9 +5393,15 @@ namespace Example
 
 ## [**AsgInfoResponse**](AsgInfoResponse.html) GetTelephonyProvidersEdgesSiteAutoscalinggroups (string siteId)
 
+
+
 Gets the basic information about an asg in a specified site
 
 
+
+Requires ANY permissions: 
+
+* managed:all:all
 
 ### Example
 ~~~csharp
@@ -5049,9 +5463,15 @@ namespace Example
 
 ## [**NumberPlan**](NumberPlan.html) GetTelephonyProvidersEdgesSiteNumberplan (string siteId, string numberPlanId)
 
+
+
 Get a Number Plan by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5119,9 +5539,15 @@ namespace Example
 
 ## [**List&lt;NumberPlan&gt;**](NumberPlan.html) GetTelephonyProvidersEdgesSiteNumberplans (string siteId)
 
+
+
 Get the list of Number Plans for this Site.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5183,9 +5609,15 @@ namespace Example
 
 ## **List&lt;string&gt;** GetTelephonyProvidersEdgesSiteNumberplansClassifications (string siteId, string classification = null)
 
+
+
 Get a list of Classifications for this Site
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5253,9 +5685,15 @@ namespace Example
 
 ## [**OutboundRouteBase**](OutboundRouteBase.html) GetTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId)
 
+
+
 Get an outbound route
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5323,9 +5761,15 @@ namespace Example
 
 ## [**OutboundRouteBaseEntityListing**](OutboundRouteBaseEntityListing.html) GetTelephonyProvidersEdgesSiteOutboundroutes (string siteId, int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null)
 
+
+
 Get outbound routes
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5411,7 +5855,13 @@ namespace Example
 
 ## [**SiteEntityListing**](SiteEntityListing.html) GetTelephonyProvidersEdgesSites (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null)
 
+
+
 Get the list of Sites.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5511,7 +5961,13 @@ namespace Example
 
 ## [**TimeZoneEntityListing**](TimeZoneEntityListing.html) GetTelephonyProvidersEdgesTimezones (int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of Edge-compatible time zones
+
+
+
+Requires NO permissions: 
 
 
 
@@ -5581,9 +6037,15 @@ namespace Example
 
 ## [**Trunk**](Trunk.html) GetTelephonyProvidersEdgesTrunk (string trunkId)
 
+
+
 Get a Trunk by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5645,9 +6107,15 @@ namespace Example
 
 ## [**TrunkMetrics**](TrunkMetrics.html) GetTelephonyProvidersEdgesTrunkMetrics (string trunkId)
 
+
+
 Get the trunk metrics.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5709,9 +6177,15 @@ namespace Example
 
 ## [**TrunkBase**](TrunkBase.html) GetTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId, bool? ignoreHidden = null)
 
+
+
 Get a Trunk Base Settings object by ID
 
 Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5779,9 +6253,15 @@ namespace Example
 
 ## [**TrunkBaseEntityListing**](TrunkBaseEntityListing.html) GetTelephonyProvidersEdgesTrunkbasesettings (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null)
 
+
+
 Get Trunk Base Settings listing
 
 Managed properties will not be returned unless the user is assigned the managed:all:all permission.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5891,9 +6371,15 @@ namespace Example
 
 ## [**TrunkMetabaseEntityListing**](TrunkMetabaseEntityListing.html) GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabases (string type = null, int? pageSize = null, int? pageNumber = null)
 
+
+
 Get a list of available makes and models to create a new Trunk Base Settings
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -5967,9 +6453,15 @@ namespace Example
 
 ## [**TrunkBase**](TrunkBase.html) GetTelephonyProvidersEdgesTrunkbasesettingsTemplate (string trunkMetabaseId)
 
+
+
 Get a Trunk Base Settings instance template from a given make and model. This object can then be modified and saved as a new Trunk Base Settings instance
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6031,9 +6523,15 @@ namespace Example
 
 ## [**TrunkEntityListing**](TrunkEntityListing.html) GetTelephonyProvidersEdgesTrunks (int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
 
+
+
 Get the list of available trunks.
 
 Trunks are created by assigning trunk base settings to an Edge or Edge Group.
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6131,9 +6629,15 @@ namespace Example
 
 ## [**List&lt;TrunkMetrics&gt;**](TrunkMetrics.html) GetTelephonyProvidersEdgesTrunksMetrics (string trunkIds)
 
+
+
 Get the metrics for a list of trunks.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6195,9 +6699,15 @@ namespace Example
 
 ## [**TrunkRecordingEnabledCount**](TrunkRecordingEnabledCount.html) GetTelephonyProvidersEdgesTrunkswithrecording (string trunkType = null)
 
+
+
 Get Counts of trunks that have recording disabled or enabled
 
 
+
+Requires ANY permissions: 
+
+* recording:retentionPolicy:view* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6259,9 +6769,15 @@ namespace Example
 
 ## [**DomainLogicalInterface**](DomainLogicalInterface.html) PostTelephonyProvidersEdgeLogicalinterfaces (string edgeId, DomainLogicalInterface body)
 
+
+
 Create an edge logical interface.
 
 Create
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6329,9 +6845,15 @@ namespace Example
 
 ## void PostTelephonyProvidersEdgeLogsJobUpload (string edgeId, string jobId, EdgeLogsJobUploadRequest body)
 
+
+
 Request that the specified fileIds be uploaded from the Edge.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6404,9 +6926,15 @@ void (empty response body)
 
 ## [**EdgeLogsJobResponse**](EdgeLogsJobResponse.html) PostTelephonyProvidersEdgeLogsJobs (string edgeId, EdgeLogsJobRequest body)
 
+
+
 Create a job to upload a list of Edge logs.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6474,9 +7002,15 @@ namespace Example
 
 ## **string** PostTelephonyProvidersEdgeReboot (string edgeId, EdgeRebootParameters body = null)
 
+
+
 Reboot an Edge
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6544,7 +7078,13 @@ namespace Example
 
 ## [**DomainEdgeSoftwareUpdateDto**](DomainEdgeSoftwareUpdateDto.html) PostTelephonyProvidersEdgeSoftwareupdate (string edgeId, DomainEdgeSoftwareUpdateDto body)
 
+
+
 Starts a software update for this edge.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6614,9 +7154,15 @@ namespace Example
 
 ## **string** PostTelephonyProvidersEdgeStatuscode (string edgeId, EdgeServiceStateRequest body = null)
 
+
+
 Take an Edge in or out of service
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6684,9 +7230,15 @@ namespace Example
 
 ## **string** PostTelephonyProvidersEdgeUnpair (string edgeId)
 
+
+
 Unpair an Edge
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6748,9 +7300,15 @@ namespace Example
 
 ## [**Edge**](Edge.html) PostTelephonyProvidersEdges (Edge body)
 
+
+
 Create an edge.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6812,7 +7370,13 @@ namespace Example
 
 ## [**ValidateAddressResponse**](ValidateAddressResponse.html) PostTelephonyProvidersEdgesAddressvalidation (ValidateAddressRequest body)
 
+
+
 Validates a street address
+
+
+
+Requires NO permissions: 
 
 
 
@@ -6876,9 +7440,15 @@ namespace Example
 
 ## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PostTelephonyProvidersEdgesCertificateauthorities (DomainCertificateAuthority body)
 
+
+
 Create a certificate authority.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -6940,9 +7510,15 @@ namespace Example
 
 ## [**DIDPool**](DIDPool.html) PostTelephonyProvidersEdgesDidpools (DIDPool body)
 
+
+
 Create a new DID pool
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7004,9 +7580,15 @@ namespace Example
 
 ## [**EdgeGroup**](EdgeGroup.html) PostTelephonyProvidersEdgesEdgegroups (EdgeGroup body)
 
+
+
 Create an edge group.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7068,9 +7650,15 @@ namespace Example
 
 ## [**Endpoint**](Endpoint.html) PostTelephonyProvidersEdgesEndpoints (Endpoint body)
 
+
+
 Create endpoint
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7132,9 +7720,15 @@ namespace Example
 
 ## [**ExtensionPool**](ExtensionPool.html) PostTelephonyProvidersEdgesExtensionpools (ExtensionPool body)
 
+
+
 Create a new extension pool
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7196,9 +7790,15 @@ namespace Example
 
 ## [**OutboundRoute**](OutboundRoute.html) PostTelephonyProvidersEdgesOutboundroutes (OutboundRoute body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Create outbound rule
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7260,9 +7860,15 @@ namespace Example
 
 ## void PostTelephonyProvidersEdgesPhoneReboot (string phoneId)
 
+
+
 Reboot a Phone
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7323,9 +7929,15 @@ void (empty response body)
 
 ## [**PhoneBase**](PhoneBase.html) PostTelephonyProvidersEdgesPhonebasesettings (PhoneBase body)
 
+
+
 Create a new Phone Base Settings object
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7387,9 +7999,15 @@ namespace Example
 
 ## [**Phone**](Phone.html) PostTelephonyProvidersEdgesPhones (Phone body)
 
+
+
 Create a new Phone
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7451,9 +8069,15 @@ namespace Example
 
 ## void PostTelephonyProvidersEdgesPhonesReboot (PhonesReboot body)
 
+
+
 Reboot Multiple Phones
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7514,9 +8138,15 @@ void (empty response body)
 
 ## **string** PostTelephonyProvidersEdgesSiteAutoscalinggroups (string siteId, CreateAsgRequest body)
 
+
+
 Creates an ASG for the specified site
 
 
+
+Requires ANY permissions: 
+
+* managed:all:all
 
 ### Example
 ~~~csharp
@@ -7584,9 +8214,15 @@ namespace Example
 
 ## [**OutboundRouteBase**](OutboundRouteBase.html) PostTelephonyProvidersEdgesSiteOutboundroutes (string siteId, OutboundRouteBase body)
 
+
+
 Create outbound route
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7654,9 +8290,15 @@ namespace Example
 
 ## void PostTelephonyProvidersEdgesSiteRebalance (string siteId)
 
+
+
 Triggers the rebalance operation.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7717,9 +8359,15 @@ void (empty response body)
 
 ## [**Site**](Site.html) PostTelephonyProvidersEdgesSites (Site body)
 
+
+
 Create a Site.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7781,9 +8429,15 @@ namespace Example
 
 ## [**TrunkBase**](TrunkBase.html) PostTelephonyProvidersEdgesTrunkbasesettings (TrunkBase body)
 
+
+
 Create a Trunk Base Settings object
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7845,9 +8499,15 @@ namespace Example
 
 ## [**Edge**](Edge.html) PutTelephonyProvidersEdge (string edgeId, Edge body)
 
+
+
 Update a edge.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7915,9 +8575,15 @@ namespace Example
 
 ## [**EdgeLine**](EdgeLine.html) PutTelephonyProvidersEdgeLine (string edgeId, string lineId, EdgeLine body)
 
+
+
 Update a line.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7991,9 +8657,15 @@ namespace Example
 
 ## [**DomainLogicalInterface**](DomainLogicalInterface.html) PutTelephonyProvidersEdgeLogicalinterface (string edgeId, string interfaceId, DomainLogicalInterface body)
 
+
+
 Update an edge logical interface.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8067,9 +8739,15 @@ namespace Example
 
 ## [**DomainCertificateAuthority**](DomainCertificateAuthority.html) PutTelephonyProvidersEdgesCertificateauthority (string certificateId, DomainCertificateAuthority body)
 
+
+
 Update a certificate authority.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8137,9 +8815,15 @@ namespace Example
 
 ## [**DID**](DID.html) PutTelephonyProvidersEdgesDid (string didId, DID body)
 
+
+
 Update a DID by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8207,9 +8891,15 @@ namespace Example
 
 ## [**DIDPool**](DIDPool.html) PutTelephonyProvidersEdgesDidpool (string didPoolId, DIDPool body)
 
+
+
 Update a DID Pool by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8277,9 +8967,15 @@ namespace Example
 
 ## [**EdgeGroup**](EdgeGroup.html) PutTelephonyProvidersEdgesEdgegroup (string edgeGroupId, EdgeGroup body)
 
+
+
 Update an edge group.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8347,9 +9043,15 @@ namespace Example
 
 ## [**EdgeTrunkBase**](EdgeTrunkBase.html) PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase (string edgegroupId, string edgetrunkbaseId, EdgeTrunkBase body)
 
+
+
 Update the edge trunk base associated with the edge group
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8423,9 +9125,15 @@ namespace Example
 
 ## [**Endpoint**](Endpoint.html) PutTelephonyProvidersEdgesEndpoint (string endpointId, Endpoint body)
 
+
+
 Update endpoint
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8493,9 +9201,15 @@ namespace Example
 
 ## [**Extension**](Extension.html) PutTelephonyProvidersEdgesExtension (string extensionId, Extension body)
 
+
+
 Update an extension by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8563,9 +9277,15 @@ namespace Example
 
 ## [**ExtensionPool**](ExtensionPool.html) PutTelephonyProvidersEdgesExtensionpool (string extensionPoolId, ExtensionPool body)
 
+
+
 Update an extension pool by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8633,9 +9353,15 @@ namespace Example
 
 ## [**OutboundRoute**](OutboundRoute.html) PutTelephonyProvidersEdgesOutboundroute (string outboundRouteId, OutboundRoute body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Update outbound route
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8703,9 +9429,15 @@ namespace Example
 
 ## [**Phone**](Phone.html) PutTelephonyProvidersEdgesPhone (string phoneId, Phone body)
 
+
+
 Update a Phone by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8773,9 +9505,15 @@ namespace Example
 
 ## [**PhoneBase**](PhoneBase.html) PutTelephonyProvidersEdgesPhonebasesetting (string phoneBaseId, PhoneBase body)
 
+
+
 Update a Phone Base Settings by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8843,9 +9581,15 @@ namespace Example
 
 ## [**Site**](Site.html) PutTelephonyProvidersEdgesSite (string siteId, Site body)
 
+
+
 Update a Site by ID.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8913,9 +9657,15 @@ namespace Example
 
 ## [**List&lt;NumberPlan&gt;**](NumberPlan.html) PutTelephonyProvidersEdgesSiteNumberplans (string siteId, List<NumberPlan> body)
 
+
+
 Update the list of Number Plans.
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -8983,9 +9733,15 @@ namespace Example
 
 ## [**OutboundRouteBase**](OutboundRouteBase.html) PutTelephonyProvidersEdgesSiteOutboundroute (string siteId, string outboundRouteId, OutboundRouteBase body)
 
+
+
 Update outbound route
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -9059,9 +9815,15 @@ namespace Example
 
 ## [**TrunkBase**](TrunkBase.html) PutTelephonyProvidersEdgesTrunkbasesetting (string trunkBaseSettingsId, TrunkBase body)
 
+
+
 Update a Trunk Base Settings object by ID
 
 
+
+Requires ANY permissions: 
+
+* telephony:plugin:all
 
 ### Example
 ~~~csharp

@@ -21,9 +21,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteWebchatDeployment (string deploymentId)
 
+
+
 Delete a WebChat deployment
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:delete
 
 ### Example
 ~~~csharp
@@ -84,9 +90,15 @@ void (empty response body)
 
 ## void DeleteWebchatSettings ()
 
+
+
 Remove WebChat deployment settings
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:delete
 
 ### Example
 ~~~csharp
@@ -138,9 +150,15 @@ void (empty response body)
 
 ## [**WebChatDeployment**](WebChatDeployment.html) GetWebchatDeployment (string deploymentId)
 
+
+
 Get a WebChat deployment
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:read
 
 ### Example
 ~~~csharp
@@ -202,9 +220,15 @@ namespace Example
 
 ## [**WebChatDeploymentEntityListing**](WebChatDeploymentEntityListing.html) GetWebchatDeployments ()
 
+
+
 List WebChat deployments
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:read
 
 ### Example
 ~~~csharp
@@ -257,9 +281,15 @@ This endpoint does require any parameters.
 
 ## [**WebChatSettings**](WebChatSettings.html) GetWebchatSettings ()
 
+
+
 Get WebChat deployment settings
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:read
 
 ### Example
 ~~~csharp
@@ -312,9 +342,15 @@ This endpoint does require any parameters.
 
 ## [**WebChatDeployment**](WebChatDeployment.html) PostWebchatDeployments (WebChatDeployment body)
 
+
+
 Create WebChat deployment
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:create
 
 ### Example
 ~~~csharp
@@ -376,9 +412,15 @@ namespace Example
 
 ## [**WebChatDeployment**](WebChatDeployment.html) PutWebchatDeployment (string deploymentId, WebChatDeployment body)
 
+
+
 Update a WebChat deployment
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:update
 
 ### Example
 ~~~csharp
@@ -446,9 +488,15 @@ namespace Example
 
 ## [**WebChatSettings**](WebChatSettings.html) PutWebchatSettings (WebChatSettings body)
 
+
+
 Update WebChat deployment settings
 
 
+
+Requires ANY permissions: 
+
+* webchat:deployment:update
 
 ### Example
 ~~~csharp

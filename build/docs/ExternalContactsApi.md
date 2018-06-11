@@ -35,7 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutExternalcontactsConversation**](ExternalContactsApi.html#putexternalcontactsconversation) | **PUT** /api/v2/externalcontacts/conversations/{conversationId} | Associate an external contact with a conversation |
 | [**PutExternalcontactsOrganization**](ExternalContactsApi.html#putexternalcontactsorganization) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId} | Update an external organization |
 | [**PutExternalcontactsOrganizationNote**](ExternalContactsApi.html#putexternalcontactsorganizationnote) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId} | Update a note for an external organization |
-| [**PutExternalcontactsOrganizationTrustorTrustorId**](ExternalContactsApi.html#putexternalcontactsorganizationtrustortrustorid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} | Links a Trustor with an Extenral Organization |
+| [**PutExternalcontactsOrganizationTrustorTrustorId**](ExternalContactsApi.html#putexternalcontactsorganizationtrustortrustorid) | **PUT** /api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId} | Links a Trustor with an External Organization |
 | [**PutExternalcontactsRelationship**](ExternalContactsApi.html#putexternalcontactsrelationship) | **PUT** /api/v2/externalcontacts/relationships/{relationshipId} | Update a relationship |
 {: class="table table-striped"}
 
@@ -43,9 +43,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteExternalcontactsContact (string contactId)
 
+
+
 Delete an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:delete
 
 ### Example
 ~~~csharp
@@ -106,9 +112,15 @@ void (empty response body)
 
 ## void DeleteExternalcontactsContactNote (string contactId, string noteId)
 
+
+
 Delete a note for an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
 
 ### Example
 ~~~csharp
@@ -175,9 +187,15 @@ void (empty response body)
 
 ## void DeleteExternalcontactsOrganization (string externalOrganizationId)
 
+
+
 Delete an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:delete
 
 ### Example
 ~~~csharp
@@ -238,9 +256,15 @@ void (empty response body)
 
 ## void DeleteExternalcontactsOrganizationNote (string externalOrganizationId, string noteId)
 
+
+
 Delete a note for an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -307,9 +331,15 @@ void (empty response body)
 
 ## void DeleteExternalcontactsOrganizationTrustor (string externalOrganizationId)
 
+
+
 Unlink the Trustor for this External Organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -370,9 +400,15 @@ void (empty response body)
 
 ## void DeleteExternalcontactsRelationship (string relationshipId)
 
+
+
 Delete a relationship
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -433,9 +469,15 @@ void (empty response body)
 
 ## [**ExternalContact**](ExternalContact.html) GetExternalcontactsContact (string contactId, List<string> expand = null)
 
+
+
 Fetch an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
 
 ### Example
 ~~~csharp
@@ -503,9 +545,15 @@ namespace Example
 
 ## [**Note**](Note.html) GetExternalcontactsContactNote (string contactId, string noteId, List<string> expand = null)
 
+
+
 Fetch a note for an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
 
 ### Example
 ~~~csharp
@@ -579,9 +627,15 @@ namespace Example
 
 ## [**NoteListing**](NoteListing.html) GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
+
+
 List notes for an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
 
 ### Example
 ~~~csharp
@@ -667,9 +721,15 @@ namespace Example
 
 ## [**ContactListing**](ContactListing.html) GetExternalcontactsContacts (int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
 
+
+
 Search for external contacts
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
 
 ### Example
 ~~~csharp
@@ -755,9 +815,15 @@ namespace Example
 
 ## [**ExternalOrganization**](ExternalOrganization.html) GetExternalcontactsOrganization (string externalOrganizationId, string expand = null, bool? includeTrustors = null)
 
+
+
 Fetch an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
 
 ### Example
 ~~~csharp
@@ -831,9 +897,15 @@ namespace Example
 
 ## [**ContactListing**](ContactListing.html) GetExternalcontactsOrganizationContacts (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null)
 
+
+
 Search for external contacts in an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
 
 ### Example
 ~~~csharp
@@ -925,9 +997,15 @@ namespace Example
 
 ## [**Note**](Note.html) GetExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, List<string> expand = null)
 
+
+
 Fetch a note for an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
 
 ### Example
 ~~~csharp
@@ -1001,9 +1079,15 @@ namespace Example
 
 ## [**NoteListing**](NoteListing.html) GetExternalcontactsOrganizationNotes (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
 
+
+
 List notes for an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
 
 ### Example
 ~~~csharp
@@ -1089,9 +1173,15 @@ namespace Example
 
 ## [**RelationshipListing**](RelationshipListing.html) GetExternalcontactsOrganizationRelationships (string externalOrganizationId, int? pageSize = null, int? pageNumber = null, string expand = null, string sortOrder = null)
 
+
+
 Fetch a relationship for an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
 
 ### Example
 ~~~csharp
@@ -1177,9 +1267,15 @@ namespace Example
 
 ## [**ExternalOrganizationListing**](ExternalOrganizationListing.html) GetExternalcontactsOrganizations (int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null)
 
+
+
 Search for external organizations
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
 
 ### Example
 ~~~csharp
@@ -1277,9 +1373,15 @@ namespace Example
 
 ## [**Relationship**](Relationship.html) GetExternalcontactsRelationship (string relationshipId, string expand = null)
 
+
+
 Fetch a relationship
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:view
 
 ### Example
 ~~~csharp
@@ -1347,9 +1449,15 @@ namespace Example
 
 ## [**ReverseWhitepagesLookupResult**](ReverseWhitepagesLookupResult.html) GetExternalcontactsReversewhitepageslookup (string lookupVal, List<string> expand = null)
 
+
+
 Lookup contacts and externalOrganizations based on an attribute
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:view
 
 ### Example
 ~~~csharp
@@ -1415,11 +1523,17 @@ namespace Example
 
 <a name="postexternalcontactscontactnotes"></a>
 
-## [**Note**](Note.html) PostExternalcontactsContactNotes (string contactId, Note body = null)
+## [**Note**](Note.html) PostExternalcontactsContactNotes (string contactId, Note body)
+
+
 
 Create a note for an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
 
 ### Example
 ~~~csharp
@@ -1449,7 +1563,7 @@ namespace Example
             
             
             
-            var body = new Note(); // Note | ExternalContact (optional) 
+            var body = new Note(); // Note | ExternalContact
             
             
 
@@ -1476,7 +1590,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
-| **body** | [**Note**](Note.html)| ExternalContact | [optional]  |
+| **body** | [**Note**](Note.html)| ExternalContact |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1485,11 +1599,17 @@ namespace Example
 
 <a name="postexternalcontactscontacts"></a>
 
-## [**ExternalContact**](ExternalContact.html) PostExternalcontactsContacts (ExternalContact body = null)
+## [**ExternalContact**](ExternalContact.html) PostExternalcontactsContacts (ExternalContact body)
+
+
 
 Create an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:add
 
 ### Example
 ~~~csharp
@@ -1514,7 +1634,7 @@ namespace Example
             
             
             
-            var body = new ExternalContact(); // ExternalContact | ExternalContact (optional) 
+            var body = new ExternalContact(); // ExternalContact | ExternalContact
             
             
 
@@ -1540,7 +1660,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional]  |
+| **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1549,11 +1669,17 @@ namespace Example
 
 <a name="postexternalcontactsorganizationnotes"></a>
 
-## [**Note**](Note.html) PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body = null)
+## [**Note**](Note.html) PostExternalcontactsOrganizationNotes (string externalOrganizationId, Note body)
+
+
 
 Create a note for an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -1583,7 +1709,7 @@ namespace Example
             
             
             
-            var body = new Note(); // Note | ExternalContact (optional) 
+            var body = new Note(); // Note | ExternalContact
             
             
 
@@ -1610,7 +1736,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
-| **body** | [**Note**](Note.html)| ExternalContact | [optional]  |
+| **body** | [**Note**](Note.html)| ExternalContact |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1619,11 +1745,17 @@ namespace Example
 
 <a name="postexternalcontactsorganizations"></a>
 
-## [**ExternalOrganization**](ExternalOrganization.html) PostExternalcontactsOrganizations (ExternalOrganization body = null)
+## [**ExternalOrganization**](ExternalOrganization.html) PostExternalcontactsOrganizations (ExternalOrganization body)
+
+
 
 Create an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:add
 
 ### Example
 ~~~csharp
@@ -1648,7 +1780,7 @@ namespace Example
             
             
             
-            var body = new ExternalOrganization(); // ExternalOrganization | ExternalOrganization (optional) 
+            var body = new ExternalOrganization(); // ExternalOrganization | ExternalOrganization
             
             
 
@@ -1674,7 +1806,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional]  |
+| **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1683,11 +1815,17 @@ namespace Example
 
 <a name="postexternalcontactsrelationships"></a>
 
-## [**Relationship**](Relationship.html) PostExternalcontactsRelationships (Relationship body = null)
+## [**Relationship**](Relationship.html) PostExternalcontactsRelationships (Relationship body)
+
+
 
 Create a relationship
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -1712,7 +1850,7 @@ namespace Example
             
             
             
-            var body = new Relationship(); // Relationship | Relationship (optional) 
+            var body = new Relationship(); // Relationship | Relationship
             
             
 
@@ -1738,7 +1876,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Relationship**](Relationship.html)| Relationship | [optional]  |
+| **body** | [**Relationship**](Relationship.html)| Relationship |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1747,11 +1885,17 @@ namespace Example
 
 <a name="putexternalcontactscontact"></a>
 
-## [**ExternalContact**](ExternalContact.html) PutExternalcontactsContact (string contactId, ExternalContact body = null)
+## [**ExternalContact**](ExternalContact.html) PutExternalcontactsContact (string contactId, ExternalContact body)
+
+
 
 Update an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
 
 ### Example
 ~~~csharp
@@ -1781,7 +1925,7 @@ namespace Example
             
             
             
-            var body = new ExternalContact(); // ExternalContact | ExternalContact (optional) 
+            var body = new ExternalContact(); // ExternalContact | ExternalContact
             
             
 
@@ -1808,7 +1952,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact ID |  |
-| **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact | [optional]  |
+| **body** | [**ExternalContact**](ExternalContact.html)| ExternalContact |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1817,11 +1961,17 @@ namespace Example
 
 <a name="putexternalcontactscontactnote"></a>
 
-## [**Note**](Note.html) PutExternalcontactsContactNote (string contactId, string noteId, Note body = null)
+## [**Note**](Note.html) PutExternalcontactsContactNote (string contactId, string noteId, Note body)
+
+
 
 Update a note for an external contact
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
 
 ### Example
 ~~~csharp
@@ -1856,7 +2006,7 @@ namespace Example
             
             
             
-            var body = new Note(); // Note | Note (optional) 
+            var body = new Note(); // Note | Note
             
             
 
@@ -1884,7 +2034,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **contactId** | **string**| ExternalContact Id |  |
 | **noteId** | **string**| Note Id |  |
-| **body** | [**Note**](Note.html)| Note | [optional]  |
+| **body** | [**Note**](Note.html)| Note |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1893,11 +2043,17 @@ namespace Example
 
 <a name="putexternalcontactsconversation"></a>
 
-## void PutExternalcontactsConversation (string conversationId, ConversationAssociation body = null)
+## void PutExternalcontactsConversation (string conversationId, ConversationAssociation body)
+
+
 
 Associate an external contact with a conversation
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:conversation:associate
 
 ### Example
 ~~~csharp
@@ -1927,7 +2083,7 @@ namespace Example
             
             
             
-            var body = new ConversationAssociation(); // ConversationAssociation | ConversationAssociation (optional) 
+            var body = new ConversationAssociation(); // ConversationAssociation | ConversationAssociation
             
             
 
@@ -1953,7 +2109,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| Conversation ID |  |
-| **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation | [optional]  |
+| **body** | [**ConversationAssociation**](ConversationAssociation.html)| ConversationAssociation |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -1962,11 +2118,17 @@ void (empty response body)
 
 <a name="putexternalcontactsorganization"></a>
 
-## [**ExternalOrganization**](ExternalOrganization.html) PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body = null)
+## [**ExternalOrganization**](ExternalOrganization.html) PutExternalcontactsOrganization (string externalOrganizationId, ExternalOrganization body)
+
+
 
 Update an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -1996,7 +2158,7 @@ namespace Example
             
             
             
-            var body = new ExternalOrganization(); // ExternalOrganization | ExternalOrganization (optional) 
+            var body = new ExternalOrganization(); // ExternalOrganization | ExternalOrganization
             
             
 
@@ -2023,7 +2185,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization ID |  |
-| **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization | [optional]  |
+| **body** | [**ExternalOrganization**](ExternalOrganization.html)| ExternalOrganization |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2032,11 +2194,17 @@ namespace Example
 
 <a name="putexternalcontactsorganizationnote"></a>
 
-## [**Note**](Note.html) PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body = null)
+## [**Note**](Note.html) PutExternalcontactsOrganizationNote (string externalOrganizationId, string noteId, Note body)
+
+
 
 Update a note for an external organization
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -2071,7 +2239,7 @@ namespace Example
             
             
             
-            var body = new Note(); // Note | Note (optional) 
+            var body = new Note(); // Note | Note
             
             
 
@@ -2099,7 +2267,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **externalOrganizationId** | **string**| External Organization Id |  |
 | **noteId** | **string**| Note Id |  |
-| **body** | [**Note**](Note.html)| Note | [optional]  |
+| **body** | [**Note**](Note.html)| Note |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -2110,9 +2278,15 @@ namespace Example
 
 ## [**ExternalOrganization**](ExternalOrganization.html) PutExternalcontactsOrganizationTrustorTrustorId (string externalOrganizationId, string trustorId)
 
-Links a Trustor with an Extenral Organization
 
 
+Links a Trustor with an External Organization
+
+
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -2149,7 +2323,7 @@ namespace Example
             try
             {
                 
-                // Links a Trustor with an Extenral Organization
+                // Links a Trustor with an External Organization
                 
                 ExternalOrganization result = apiInstance.PutExternalcontactsOrganizationTrustorTrustorId(externalOrganizationId, trustorId);
                 Debug.WriteLine(result);
@@ -2178,11 +2352,17 @@ namespace Example
 
 <a name="putexternalcontactsrelationship"></a>
 
-## [**Relationship**](Relationship.html) PutExternalcontactsRelationship (string relationshipId, Relationship body = null)
+## [**Relationship**](Relationship.html) PutExternalcontactsRelationship (string relationshipId, Relationship body)
+
+
 
 Update a relationship
 
 
+
+Requires ANY permissions: 
+
+* externalContacts:externalOrganization:edit
 
 ### Example
 ~~~csharp
@@ -2212,7 +2392,7 @@ namespace Example
             
             
             
-            var body = new Relationship(); // Relationship | Relationship (optional) 
+            var body = new Relationship(); // Relationship | Relationship
             
             
 
@@ -2239,7 +2419,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **relationshipId** | **string**| Relationship Id |  |
-| **body** | [**Relationship**](Relationship.html)| Relationship | [optional]  |
+| **body** | [**Relationship**](Relationship.html)| Relationship |  |
 {: class="table table-striped"}
 
 ### Return type

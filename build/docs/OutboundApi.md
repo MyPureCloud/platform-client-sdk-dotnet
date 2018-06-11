@@ -37,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundCampaignrule**](OutboundApi.html#getoutboundcampaignrule) | **GET** /api/v2/outbound/campaignrules/{campaignRuleId} | Get Campaign Rule |
 | [**GetOutboundCampaignrules**](OutboundApi.html#getoutboundcampaignrules) | **GET** /api/v2/outbound/campaignrules | Query Campaign Rule list |
 | [**GetOutboundCampaigns**](OutboundApi.html#getoutboundcampaigns) | **GET** /api/v2/outbound/campaigns | Query a list of dialer campaigns. |
+| [**GetOutboundCampaignsDivisionviews**](OutboundApi.html#getoutboundcampaignsdivisionviews) | **GET** /api/v2/outbound/campaigns/divisionviews | Query a list of basic Campaign information objects |
 | [**GetOutboundContactlist**](OutboundApi.html#getoutboundcontactlist) | **GET** /api/v2/outbound/contactlists/{contactListId} | Get a dialer contact list. |
 | [**GetOutboundContactlistContact**](OutboundApi.html#getoutboundcontactlistcontact) | **GET** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Get a contact. |
 | [**GetOutboundContactlistExport**](OutboundApi.html#getoutboundcontactlistexport) | **GET** /api/v2/outbound/contactlists/{contactListId}/export | Get the URI of a contact list export. |
@@ -102,9 +103,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteOutboundAttemptlimit (string attemptLimitsId)
 
+
+
 Delete attempt limits
 
 
+
+Requires ANY permissions: 
+
+* outbound:attemptLimits:delete
 
 ### Example
 ~~~csharp
@@ -165,9 +172,15 @@ void (empty response body)
 
 ## void DeleteOutboundCallabletimeset (string callableTimeSetId)
 
+
+
 Delete callable time set
 
 
+
+Requires ANY permissions: 
+
+* outbound:callableTimeSet:delete
 
 ### Example
 ~~~csharp
@@ -228,9 +241,15 @@ void (empty response body)
 
 ## void DeleteOutboundCallanalysisresponseset (string callAnalysisSetId)
 
+
+
 Delete a dialer call analysis response set.
 
 
+
+Requires ANY permissions: 
+
+* outbound:responseSet:delete
 
 ### Example
 ~~~csharp
@@ -291,9 +310,15 @@ void (empty response body)
 
 ## [**Campaign**](Campaign.html) DeleteOutboundCampaign (string campaignId)
 
+
+
 Delete a campaign.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:delete
 
 ### Example
 ~~~csharp
@@ -355,9 +380,15 @@ namespace Example
 
 ## void DeleteOutboundCampaignProgress (string campaignId)
 
+
+
 Reset campaign progress and recycle the campaign
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:edit
 
 ### Example
 ~~~csharp
@@ -418,9 +449,15 @@ void (empty response body)
 
 ## void DeleteOutboundCampaignrule (string campaignRuleId)
 
+
+
 Delete Campaign Rule
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignRule:delete
 
 ### Example
 ~~~csharp
@@ -481,9 +518,15 @@ void (empty response body)
 
 ## void DeleteOutboundContactlist (string contactListId)
 
+
+
 Delete a contact list.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactList:delete
 
 ### Example
 ~~~csharp
@@ -544,9 +587,15 @@ void (empty response body)
 
 ## void DeleteOutboundContactlistContact (string contactListId, string contactId)
 
+
+
 Delete a contact.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contact:delete
 
 ### Example
 ~~~csharp
@@ -613,9 +662,15 @@ void (empty response body)
 
 ## void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds)
 
+
+
 Delete contacts from a contact list.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contact:delete
 
 ### Example
 ~~~csharp
@@ -682,9 +737,15 @@ void (empty response body)
 
 ## void DeleteOutboundContactlistfilter (string contactListFilterId)
 
+
+
 Delete Contact List Filter
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactListFilter:delete
 
 ### Example
 ~~~csharp
@@ -745,9 +806,15 @@ void (empty response body)
 
 ## void DeleteOutboundContactlists (List<string> id)
 
+
+
 Delete multiple contact lists.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactList:delete
 
 ### Example
 ~~~csharp
@@ -808,9 +875,15 @@ void (empty response body)
 
 ## void DeleteOutboundDnclist (string dncListId)
 
+
+
 Delete dialer DNC list
 
 
+
+Requires ANY permissions: 
+
+* outbound:dncList:delete
 
 ### Example
 ~~~csharp
@@ -871,9 +944,15 @@ void (empty response body)
 
 ## void DeleteOutboundRuleset (string ruleSetId)
 
+
+
 Delete a Rule set.
 
 
+
+Requires ANY permissions: 
+
+* outbound:ruleSet:delete
 
 ### Example
 ~~~csharp
@@ -934,9 +1013,15 @@ void (empty response body)
 
 ## void DeleteOutboundSchedulesCampaign (string campaignId)
 
+
+
 Delete a dialer campaign schedule.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:delete
 
 ### Example
 ~~~csharp
@@ -997,9 +1082,15 @@ void (empty response body)
 
 ## void DeleteOutboundSchedulesSequence (string sequenceId)
 
+
+
 Delete a dialer sequence schedule.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:delete
 
 ### Example
 ~~~csharp
@@ -1060,9 +1151,15 @@ void (empty response body)
 
 ## void DeleteOutboundSequence (string sequenceId)
 
+
+
 Delete a dialer campaign sequence.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignSequence:delete
 
 ### Example
 ~~~csharp
@@ -1123,9 +1220,15 @@ void (empty response body)
 
 ## [**AttemptLimits**](AttemptLimits.html) GetOutboundAttemptlimit (string attemptLimitsId)
 
+
+
 Get attempt limits
 
 
+
+Requires ANY permissions: 
+
+* outbound:attemptLimits:view
 
 ### Example
 ~~~csharp
@@ -1187,9 +1290,15 @@ namespace Example
 
 ## [**AttemptLimitsEntityListing**](AttemptLimitsEntityListing.html) GetOutboundAttemptlimits (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query attempt limits list
 
 
+
+Requires ANY permissions: 
+
+* outbound:attemptLimits:view
 
 ### Example
 ~~~csharp
@@ -1281,9 +1390,15 @@ namespace Example
 
 ## [**CallableTimeSet**](CallableTimeSet.html) GetOutboundCallabletimeset (string callableTimeSetId)
 
+
+
 Get callable time set
 
 
+
+Requires ANY permissions: 
+
+* outbound:callableTimeSet:view
 
 ### Example
 ~~~csharp
@@ -1345,9 +1460,15 @@ namespace Example
 
 ## [**CallableTimeSetEntityListing**](CallableTimeSetEntityListing.html) GetOutboundCallabletimesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query callable time set list
 
 
+
+Requires ANY permissions: 
+
+* outbound:callableTimeSet:view
 
 ### Example
 ~~~csharp
@@ -1439,9 +1560,15 @@ namespace Example
 
 ## [**ResponseSet**](ResponseSet.html) GetOutboundCallanalysisresponseset (string callAnalysisSetId)
 
+
+
 Get a dialer call analysis response set.
 
 
+
+Requires ANY permissions: 
+
+* outbound:responseSet:view
 
 ### Example
 ~~~csharp
@@ -1503,9 +1630,15 @@ namespace Example
 
 ## [**ResponseSetEntityListing**](ResponseSetEntityListing.html) GetOutboundCallanalysisresponsesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query a list of dialer call analysis response sets.
 
 
+
+Requires ANY permissions: 
+
+* outbound:responseSet:view
 
 ### Example
 ~~~csharp
@@ -1597,9 +1730,15 @@ namespace Example
 
 ## [**Campaign**](Campaign.html) GetOutboundCampaign (string campaignId)
 
+
+
 Get dialer campaign.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
 
 ### Example
 ~~~csharp
@@ -1661,9 +1800,15 @@ namespace Example
 
 ## [**CampaignDiagnostics**](CampaignDiagnostics.html) GetOutboundCampaignDiagnostics (string campaignId)
 
+
+
 Get campaign diagnostics
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
 
 ### Example
 ~~~csharp
@@ -1725,9 +1870,15 @@ namespace Example
 
 ## [**CampaignInteractions**](CampaignInteractions.html) GetOutboundCampaignInteractions (string campaignId)
 
+
+
 Get dialer campaign interactions.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
 
 ### Example
 ~~~csharp
@@ -1789,9 +1940,15 @@ namespace Example
 
 ## [**CampaignProgress**](CampaignProgress.html) GetOutboundCampaignProgress (string campaignId)
 
+
+
 Get campaign progress
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
 
 ### Example
 ~~~csharp
@@ -1853,9 +2010,15 @@ namespace Example
 
 ## [**CampaignStats**](CampaignStats.html) GetOutboundCampaignStats (string campaignId)
 
+
+
 Get statistics about a Dialer Campaign
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
 
 ### Example
 ~~~csharp
@@ -1917,9 +2080,15 @@ namespace Example
 
 ## [**CampaignRule**](CampaignRule.html) GetOutboundCampaignrule (string campaignRuleId)
 
+
+
 Get Campaign Rule
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignRule:view
 
 ### Example
 ~~~csharp
@@ -1981,9 +2150,15 @@ namespace Example
 
 ## [**CampaignRuleEntityListing**](CampaignRuleEntityListing.html) GetOutboundCampaignrules (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query Campaign Rule list
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignRule:view
 
 ### Example
 ~~~csharp
@@ -2075,9 +2250,15 @@ namespace Example
 
 ## [**CampaignEntityListing**](CampaignEntityListing.html) GetOutboundCampaigns (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListId = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query a list of dialer campaigns.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
 
 ### Example
 ~~~csharp
@@ -2201,13 +2382,119 @@ namespace Example
 
 [**CampaignEntityListing**](CampaignEntityListing.html)
 
+<a name="getoutboundcampaignsdivisionviews"></a>
+
+## [**CampaignDivisionViewListing**](CampaignDivisionViewListing.html) GetOutboundCampaignsDivisionviews (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
+
+
+
+Query a list of basic Campaign information objects
+
+This returns a simplified version of a Campaign, consisting of name and division.
+
+Requires ANY permissions: 
+
+* outbound:campaign:search
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundCampaignsDivisionviewsExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new OutboundApi();
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var filterType = filterType_example;  // string | Filter type (optional)  (default to Prefix)
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional) 
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to a)
+            
+            
+            
+
+            try
+            {
+                
+                // Query a list of basic Campaign information objects
+                
+                CampaignDivisionViewListing result = apiInstance.GetOutboundCampaignsDivisionviews(pageSize, pageNumber, filterType, name, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundCampaignsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **filterType** | **string**| Filter type | [optional] [default to Prefix]<br />**Values**: Equals, RegEx, Contains, Prefix, LessThan, LessThanEqualTo, GreaterThan, GreaterThanEqualTo, BeginsWith, EndsWith |
+| **name** | **string**| Name | [optional]  |
+| **sortBy** | **string**| Sort by | [optional]  |
+| **sortOrder** | **string**| Sort order | [optional] [default to a]<br />**Values**: ascending, descending |
+{: class="table table-striped"}
+
+### Return type
+
+[**CampaignDivisionViewListing**](CampaignDivisionViewListing.html)
+
 <a name="getoutboundcontactlist"></a>
 
 ## [**ContactList**](ContactList.html) GetOutboundContactlist (string contactListId, bool? includeImportStatus = null, bool? includeSize = null)
 
+
+
 Get a dialer contact list.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
 
 ### Example
 ~~~csharp
@@ -2281,9 +2568,15 @@ namespace Example
 
 ## [**DialerContact**](DialerContact.html) GetOutboundContactlistContact (string contactListId, string contactId)
 
+
+
 Get a contact.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contact:view
 
 ### Example
 ~~~csharp
@@ -2351,9 +2644,15 @@ namespace Example
 
 ## [**ExportUri**](ExportUri.html) GetOutboundContactlistExport (string contactListId, string download = null)
 
+
+
 Get the URI of a contact list export.
 
 
+
+Requires ALL permissions: 
+
+* outbound:contact:view* outbound:contactList:view
 
 ### Example
 ~~~csharp
@@ -2421,9 +2720,15 @@ namespace Example
 
 ## [**ImportStatus**](ImportStatus.html) GetOutboundContactlistImportstatus (string contactListId)
 
+
+
 Get dialer contactList import status.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
 
 ### Example
 ~~~csharp
@@ -2485,9 +2790,15 @@ namespace Example
 
 ## [**ContactListFilter**](ContactListFilter.html) GetOutboundContactlistfilter (string contactListFilterId)
 
+
+
 Get Contact list filter
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactListFilter:view
 
 ### Example
 ~~~csharp
@@ -2549,9 +2860,15 @@ namespace Example
 
 ## [**ContactListFilterEntityListing**](ContactListFilterEntityListing.html) GetOutboundContactlistfilters (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
 
+
+
 Query Contact list filters
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactListFilter:view
 
 ### Example
 ~~~csharp
@@ -2649,9 +2966,15 @@ namespace Example
 
 ## [**ContactListEntityListing**](ContactListEntityListing.html) GetOutboundContactlists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query a list of contact lists.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactList:view
 
 ### Example
 ~~~csharp
@@ -2761,9 +3084,15 @@ namespace Example
 
 ## [**DncList**](DncList.html) GetOutboundDnclist (string dncListId, bool? includeImportStatus = null, bool? includeSize = null)
 
+
+
 Get dialer DNC list
 
 
+
+Requires ANY permissions: 
+
+* outbound:dncList:view
 
 ### Example
 ~~~csharp
@@ -2837,9 +3166,15 @@ namespace Example
 
 ## [**ExportUri**](ExportUri.html) GetOutboundDnclistExport (string dncListId, string download = null)
 
+
+
 Get the URI of a DNC list export.
 
 
+
+Requires ALL permissions: 
+
+* outbound:dnc:view* outbound:dncList:view
 
 ### Example
 ~~~csharp
@@ -2907,9 +3242,15 @@ namespace Example
 
 ## [**ImportStatus**](ImportStatus.html) GetOutboundDnclistImportstatus (string dncListId)
 
+
+
 Get dialer dncList import status.
 
 
+
+Requires ANY permissions: 
+
+* outbound:dncList:view
 
 ### Example
 ~~~csharp
@@ -2971,9 +3312,15 @@ namespace Example
 
 ## [**DncListEntityListing**](DncListEntityListing.html) GetOutboundDnclists (bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query dialer DNC lists
 
 
+
+Requires ANY permissions: 
+
+* outbound:dncList:view
 
 ### Example
 ~~~csharp
@@ -3077,9 +3424,15 @@ namespace Example
 
 ## [**EventLog**](EventLog.html) GetOutboundEvent (string eventId)
 
+
+
 Get Dialer Event
 
 
+
+Requires ANY permissions: 
+
+* outbound:eventLog:view
 
 ### Example
 ~~~csharp
@@ -3141,9 +3494,15 @@ namespace Example
 
 ## [**DialerEventEntityListing**](DialerEventEntityListing.html) GetOutboundEvents (int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query Event Logs
 
 
+
+Requires ANY permissions: 
+
+* outbound:eventLog:view
 
 ### Example
 ~~~csharp
@@ -3241,9 +3600,15 @@ namespace Example
 
 ## [**RuleSet**](RuleSet.html) GetOutboundRuleset (string ruleSetId)
 
+
+
 Get a Rule Set by ID.
 
 
+
+Requires ANY permissions: 
+
+* outbound:ruleSet:view
 
 ### Example
 ~~~csharp
@@ -3305,9 +3670,15 @@ namespace Example
 
 ## [**RuleSetEntityListing**](RuleSetEntityListing.html) GetOutboundRulesets (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query a list of Rule Sets.
 
 
+
+Requires ANY permissions: 
+
+* outbound:ruleSet:view
 
 ### Example
 ~~~csharp
@@ -3399,9 +3770,15 @@ namespace Example
 
 ## [**CampaignSchedule**](CampaignSchedule.html) GetOutboundSchedulesCampaign (string campaignId)
 
+
+
 Get a dialer campaign schedule.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:view
 
 ### Example
 ~~~csharp
@@ -3463,9 +3840,15 @@ namespace Example
 
 ## [**List&lt;CampaignSchedule&gt;**](CampaignSchedule.html) GetOutboundSchedulesCampaigns ()
 
+
+
 Query for a list of dialer campaign schedules.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:view
 
 ### Example
 ~~~csharp
@@ -3518,9 +3901,15 @@ This endpoint does require any parameters.
 
 ## [**SequenceSchedule**](SequenceSchedule.html) GetOutboundSchedulesSequence (string sequenceId)
 
+
+
 Get a dialer sequence schedule.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:view
 
 ### Example
 ~~~csharp
@@ -3582,9 +3971,15 @@ namespace Example
 
 ## [**List&lt;SequenceSchedule&gt;**](SequenceSchedule.html) GetOutboundSchedulesSequences ()
 
+
+
 Query for a list of dialer sequence schedules.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:view
 
 ### Example
 ~~~csharp
@@ -3637,9 +4032,15 @@ This endpoint does require any parameters.
 
 ## [**CampaignSequence**](CampaignSequence.html) GetOutboundSequence (string sequenceId)
 
+
+
 Get a dialer campaign sequence.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignSequence:view
 
 ### Example
 ~~~csharp
@@ -3701,9 +4102,15 @@ namespace Example
 
 ## [**CampaignSequenceEntityListing**](CampaignSequenceEntityListing.html) GetOutboundSequences (int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 
+
+
 Query a list of dialer campaign sequences.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignSequence:view
 
 ### Example
 ~~~csharp
@@ -3795,9 +4202,15 @@ namespace Example
 
 ## [**OutboundSettings**](OutboundSettings.html) GetOutboundSettings ()
 
+
+
 Get the outbound settings for this organization
 
 
+
+Requires ANY permissions: 
+
+* outbound:settings:view
 
 ### Example
 ~~~csharp
@@ -3850,9 +4263,15 @@ This endpoint does require any parameters.
 
 ## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) GetOutboundWrapupcodemappings ()
 
+
+
 Get the Dialer wrap up code mapping.
 
 
+
+Requires ANY permissions: 
+
+* outbound:wrapUpCodeMapping:view
 
 ### Example
 ~~~csharp
@@ -3905,9 +4324,15 @@ This endpoint does require any parameters.
 
 ## void PatchOutboundSettings (OutboundSettings body)
 
+
+
 Update the outbound settings for this organization
 
 
+
+Requires ANY permissions: 
+
+* outbound:settings:edit
 
 ### Example
 ~~~csharp
@@ -3968,9 +4393,15 @@ void (empty response body)
 
 ## [**AttemptLimits**](AttemptLimits.html) PostOutboundAttemptlimits (AttemptLimits body)
 
+
+
 Create attempt limits
 
 
+
+Requires ANY permissions: 
+
+* outbound:attemptLimits:add
 
 ### Example
 ~~~csharp
@@ -4032,9 +4463,15 @@ namespace Example
 
 ## [**AuditSearchResult**](AuditSearchResult.html) PostOutboundAudits (DialerAuditRequest body, int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, bool? facetsOnly = null)
 
+
+
 Retrieves audits for dialer.
 
 
+
+Requires ANY permissions: 
+
+* outbound:audit:view
 
 ### Example
 ~~~csharp
@@ -4126,9 +4563,15 @@ namespace Example
 
 ## [**CallableTimeSet**](CallableTimeSet.html) PostOutboundCallabletimesets (CallableTimeSet body)
 
+
+
 Create callable time set
 
 
+
+Requires ANY permissions: 
+
+* outbound:callableTimeSet:add
 
 ### Example
 ~~~csharp
@@ -4190,9 +4633,15 @@ namespace Example
 
 ## [**ResponseSet**](ResponseSet.html) PostOutboundCallanalysisresponsesets (ResponseSet body)
 
+
+
 Create a dialer call analysis response set.
 
 
+
+Requires ANY permissions: 
+
+* outbound:responseSet:add
 
 ### Example
 ~~~csharp
@@ -4254,9 +4703,15 @@ namespace Example
 
 ## [**ContactCallbackRequest**](ContactCallbackRequest.html) PostOutboundCampaignCallbackSchedule (string campaignId, ContactCallbackRequest body)
 
+<span style="background-color: #f0ad4e;display: inline-block;padding: 7px;font-weight: bold;line-height: 1;color: #ffffff;text-align: center;white-space: nowrap;vertical-align: baseline;border-radius: .25em;margin: 10px 0;">DEPRECATED</span>
+
 Schedule a Callback for a Dialer Campaign (Deprecated)
 
 This endpoint is deprecated and may have unexpected results. Please use \"/conversations/{conversationId}/participants/{participantId}/callbacks instead.\"
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -4324,9 +4779,15 @@ namespace Example
 
 ## [**CampaignRule**](CampaignRule.html) PostOutboundCampaignrules (CampaignRule body)
 
+
+
 Create Campaign Rule
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignRule:add
 
 ### Example
 ~~~csharp
@@ -4388,9 +4849,15 @@ namespace Example
 
 ## [**Campaign**](Campaign.html) PostOutboundCampaigns (Campaign body)
 
+
+
 Create a campaign.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:add
 
 ### Example
 ~~~csharp
@@ -4452,9 +4919,15 @@ namespace Example
 
 ## [**List&lt;CampaignProgress&gt;**](CampaignProgress.html) PostOutboundCampaignsProgress (List<string> body)
 
+
+
 Get progress for a list of campaigns
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:view
 
 ### Example
 ~~~csharp
@@ -4516,9 +4989,15 @@ namespace Example
 
 ## [**List&lt;DialerContact&gt;**](DialerContact.html) PostOutboundContactlistContacts (string contactListId, List<DialerContact> body, bool? priority = null, bool? clearSystemData = null, bool? doNotQueue = null)
 
+
+
 Add contacts to a contact list.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contact:add
 
 ### Example
 ~~~csharp
@@ -4604,9 +5083,15 @@ namespace Example
 
 ## [**List&lt;DialerContact&gt;**](DialerContact.html) PostOutboundContactlistContactsBulk (string contactListId, List<string> body)
 
+
+
 Get contacts from a contact list.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contact:view
 
 ### Example
 ~~~csharp
@@ -4674,9 +5159,15 @@ namespace Example
 
 ## [**UriReference**](UriReference.html) PostOutboundContactlistExport (string contactListId)
 
+
+
 Initiate the export of a contact list.
 
 Returns 200 if received OK.
+
+Requires ALL permissions: 
+
+* outbound:contact:view* outbound:contactList:view
 
 ### Example
 ~~~csharp
@@ -4738,9 +5229,15 @@ namespace Example
 
 ## [**ContactListFilter**](ContactListFilter.html) PostOutboundContactlistfilters (ContactListFilter body)
 
+
+
 Create Contact List Filter
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactListFilter:add
 
 ### Example
 ~~~csharp
@@ -4802,9 +5299,15 @@ namespace Example
 
 ## [**FilterPreviewResponse**](FilterPreviewResponse.html) PostOutboundContactlistfiltersPreview (ContactListFilter body)
 
+
+
 Get a preview of the output of a contact list filter
 
 
+
+Requires ANY permissions: 
+
+* outbound:contact:view
 
 ### Example
 ~~~csharp
@@ -4866,9 +5369,15 @@ namespace Example
 
 ## [**ContactList**](ContactList.html) PostOutboundContactlists (ContactList body)
 
+
+
 Create a contact List.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactList:add
 
 ### Example
 ~~~csharp
@@ -4930,9 +5439,15 @@ namespace Example
 
 ## void PostOutboundConversationDnc (string conversationId)
 
+
+
 Add phone numbers to a Dialer DNC list.
 
 
+
+Requires ANY permissions: 
+
+* outbound:dnc:add
 
 ### Example
 ~~~csharp
@@ -4993,9 +5508,15 @@ void (empty response body)
 
 ## [**UriReference**](UriReference.html) PostOutboundDnclistExport (string dncListId)
 
+
+
 Initiate the export of a dnc list.
 
 Returns 200 if received OK.
+
+Requires ALL permissions: 
+
+* outbound:dnc:view* outbound:dncList:view
 
 ### Example
 ~~~csharp
@@ -5057,9 +5578,15 @@ namespace Example
 
 ## void PostOutboundDnclistPhonenumbers (string dncListId, List<string> body)
 
+
+
 Add phone numbers to a Dialer DNC list.
 
 Only Internal DNC lists may be appended to
+
+Requires ANY permissions: 
+
+* outbound:dnc:add
 
 ### Example
 ~~~csharp
@@ -5126,9 +5653,15 @@ void (empty response body)
 
 ## [**DncList**](DncList.html) PostOutboundDnclists (DncListCreate body)
 
+
+
 Create dialer DNC list
 
 
+
+Requires ANY permissions: 
+
+* outbound:dncList:add
 
 ### Example
 ~~~csharp
@@ -5190,9 +5723,15 @@ namespace Example
 
 ## [**RuleSet**](RuleSet.html) PostOutboundRulesets (RuleSet body)
 
+
+
 Create a Dialer Call Analysis Response Set.
 
 
+
+Requires ANY permissions: 
+
+* outbound:ruleSet:add
 
 ### Example
 ~~~csharp
@@ -5254,9 +5793,15 @@ namespace Example
 
 ## [**CampaignSequence**](CampaignSequence.html) PostOutboundSequences (CampaignSequence body)
 
+
+
 Create a new campaign sequence.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignSequence:add
 
 ### Example
 ~~~csharp
@@ -5318,9 +5863,15 @@ namespace Example
 
 ## [**AttemptLimits**](AttemptLimits.html) PutOutboundAttemptlimit (string attemptLimitsId, AttemptLimits body)
 
+
+
 Update attempt limits
 
 
+
+Requires ANY permissions: 
+
+* outbound:attemptLimits:edit
 
 ### Example
 ~~~csharp
@@ -5388,9 +5939,15 @@ namespace Example
 
 ## [**CallableTimeSet**](CallableTimeSet.html) PutOutboundCallabletimeset (string callableTimeSetId, CallableTimeSet body)
 
+
+
 Update callable time set
 
 
+
+Requires ANY permissions: 
+
+* outbound:callableTimeSet:edit
 
 ### Example
 ~~~csharp
@@ -5458,9 +6015,15 @@ namespace Example
 
 ## [**ResponseSet**](ResponseSet.html) PutOutboundCallanalysisresponseset (string callAnalysisSetId, ResponseSet body)
 
+
+
 Update a dialer call analysis response set.
 
 
+
+Requires ANY permissions: 
+
+* outbound:responseSet:edit
 
 ### Example
 ~~~csharp
@@ -5528,9 +6091,15 @@ namespace Example
 
 ## [**Campaign**](Campaign.html) PutOutboundCampaign (string campaignId, Campaign body)
 
+
+
 Update a campaign.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaign:edit
 
 ### Example
 ~~~csharp
@@ -5598,9 +6167,15 @@ namespace Example
 
 ## **string** PutOutboundCampaignAgent (string campaignId, string userId, Agent body)
 
+
+
 Send notification that an agent's state changed 
 
 New agent state.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -5674,9 +6249,15 @@ namespace Example
 
 ## [**CampaignRule**](CampaignRule.html) PutOutboundCampaignrule (string campaignRuleId, CampaignRule body)
 
+
+
 Update Campaign Rule
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignRule:edit
 
 ### Example
 ~~~csharp
@@ -5744,9 +6325,15 @@ namespace Example
 
 ## [**ContactList**](ContactList.html) PutOutboundContactlist (string contactListId, ContactList body)
 
+
+
 Update a contact list.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactList:edit
 
 ### Example
 ~~~csharp
@@ -5814,9 +6401,15 @@ namespace Example
 
 ## [**DialerContact**](DialerContact.html) PutOutboundContactlistContact (string contactListId, string contactId, DialerContact body)
 
+
+
 Update a contact.
 
 
+
+Requires ANY permissions: 
+
+* outbound:contact:edit
 
 ### Example
 ~~~csharp
@@ -5890,9 +6483,15 @@ namespace Example
 
 ## [**ContactListFilter**](ContactListFilter.html) PutOutboundContactlistfilter (string contactListFilterId, ContactListFilter body)
 
+
+
 Update Contact List Filter
 
 
+
+Requires ANY permissions: 
+
+* outbound:contactListFilter:edit
 
 ### Example
 ~~~csharp
@@ -5960,9 +6559,15 @@ namespace Example
 
 ## [**DncList**](DncList.html) PutOutboundDnclist (string dncListId, DncList body)
 
+
+
 Update dialer DNC list
 
 
+
+Requires ANY permissions: 
+
+* outbound:dncList:edit
 
 ### Example
 ~~~csharp
@@ -6030,9 +6635,15 @@ namespace Example
 
 ## [**RuleSet**](RuleSet.html) PutOutboundRuleset (string ruleSetId, RuleSet body)
 
+
+
 Update a RuleSet.
 
 
+
+Requires ANY permissions: 
+
+* outbound:ruleSet:edit
 
 ### Example
 ~~~csharp
@@ -6100,9 +6711,15 @@ namespace Example
 
 ## [**CampaignSchedule**](CampaignSchedule.html) PutOutboundSchedulesCampaign (string campaignId, CampaignSchedule body)
 
+
+
 Update a new campaign schedule.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:edit
 
 ### Example
 ~~~csharp
@@ -6170,9 +6787,15 @@ namespace Example
 
 ## [**SequenceSchedule**](SequenceSchedule.html) PutOutboundSchedulesSequence (string sequenceId, SequenceSchedule body)
 
+
+
 Update a new sequence schedule.
 
 
+
+Requires ANY permissions: 
+
+* outbound:schedule:edit
 
 ### Example
 ~~~csharp
@@ -6240,9 +6863,15 @@ namespace Example
 
 ## [**CampaignSequence**](CampaignSequence.html) PutOutboundSequence (string sequenceId, CampaignSequence body)
 
+
+
 Update a new campaign sequence.
 
 
+
+Requires ANY permissions: 
+
+* outbound:campaignSequence:edit
 
 ### Example
 ~~~csharp
@@ -6310,9 +6939,15 @@ namespace Example
 
 ## [**WrapUpCodeMapping**](WrapUpCodeMapping.html) PutOutboundWrapupcodemappings (WrapUpCodeMapping body)
 
+
+
 Update the Dialer wrap up code mapping.
 
 
+
+Requires ANY permissions: 
+
+* outbound:wrapUpCodeMapping:edit
 
 ### Example
 ~~~csharp

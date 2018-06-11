@@ -24,9 +24,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## [**Script**](Script.html) GetScript (string scriptId)
 
+
+
 Get a script
 
 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 ### Example
 ~~~csharp
@@ -88,9 +94,15 @@ namespace Example
 
 ## [**Page**](Page.html) GetScriptPage (string scriptId, string pageId, string scriptDataVersion = null)
 
+
+
 Get a page
 
 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 ### Example
 ~~~csharp
@@ -164,9 +176,15 @@ namespace Example
 
 ## [**List&lt;Page&gt;**](Page.html) GetScriptPages (string scriptId, string scriptDataVersion = null)
 
+
+
 Get the list of pages
 
 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 ### Example
 ~~~csharp
@@ -234,9 +252,15 @@ namespace Example
 
 ## [**ScriptEntityListing**](ScriptEntityListing.html) GetScripts (int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null)
 
+
+
 Get the list of scripts
 
 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 ### Example
 ~~~csharp
@@ -346,9 +370,15 @@ namespace Example
 
 ## [**ScriptEntityListing**](ScriptEntityListing.html) GetScriptsPublished (string scriptId, int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null)
 
+
+
 Get the published scripts.
 
 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 ### Example
 ~~~csharp
@@ -452,9 +482,15 @@ namespace Example
 
 ## [**Script**](Script.html) GetScriptsPublishedScriptId (string scriptId, string scriptDataVersion = null)
 
+
+
 Get the published script.
 
 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 ### Example
 ~~~csharp
@@ -522,9 +558,15 @@ namespace Example
 
 ## [**Page**](Page.html) GetScriptsPublishedScriptIdPage (string scriptId, string pageId, string scriptDataVersion = null)
 
+
+
 Get the published page.
 
 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 ### Example
 ~~~csharp
@@ -598,9 +640,15 @@ namespace Example
 
 ## [**List&lt;Page&gt;**](Page.html) GetScriptsPublishedScriptIdPages (string scriptId, string scriptDataVersion = null)
 
+
+
 Get the list of published pages
 
 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 ### Example
 ~~~csharp
@@ -668,9 +716,15 @@ namespace Example
 
 ## **Object** GetScriptsPublishedScriptIdVariables (string scriptId, string input = null, string output = null, string type = null, string scriptDataVersion = null)
 
+
+
 Get the published variables
 
 
+
+Requires ANY permissions: 
+
+* scripter:publishedScript:view
 
 ### Example
 ~~~csharp
@@ -756,9 +810,15 @@ namespace Example
 
 ## [**ImportScriptStatusResponse**](ImportScriptStatusResponse.html) GetScriptsUploadStatus (string uploadId, bool? longPoll = null)
 
+
+
 Get the upload status of an imported script
 
 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 ### Example
 ~~~csharp
@@ -826,9 +886,15 @@ namespace Example
 
 ## [**ExportScriptResponse**](ExportScriptResponse.html) PostScriptExport (string scriptId, ExportScriptRequest body = null)
 
+
+
 Export a script via download service.
 
 
+
+Requires ANY permissions: 
+
+* scripter:script:view
 
 ### Example
 ~~~csharp

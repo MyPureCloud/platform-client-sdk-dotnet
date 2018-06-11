@@ -24,9 +24,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteResponsemanagementLibrary (string libraryId)
 
+
+
 Delete an existing response library.
 
 This will remove any responses associated with the library.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -87,9 +93,15 @@ void (empty response body)
 
 ## void DeleteResponsemanagementResponse (string responseId)
 
+
+
 Delete an existing response.
 
 This will remove the response from any libraries associated with it.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -150,7 +162,13 @@ void (empty response body)
 
 ## [**LibraryEntityListing**](LibraryEntityListing.html) GetResponsemanagementLibraries (int? pageNumber = null, int? pageSize = null)
 
+
+
 Gets a list of existing response libraries.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -220,7 +238,13 @@ namespace Example
 
 ## [**Library**](Library.html) GetResponsemanagementLibrary (string libraryId)
 
+
+
 Get details about an existing response library.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -284,7 +308,13 @@ namespace Example
 
 ## [**Response**](Response.html) GetResponsemanagementResponse (string responseId, string expand = null)
 
+
+
 Get details about an existing response.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -354,7 +384,13 @@ namespace Example
 
 ## [**ResponseEntityListing**](ResponseEntityListing.html) GetResponsemanagementResponses (string libraryId, int? pageNumber = null, int? pageSize = null, string expand = null)
 
+
+
 Gets a list of existing responses.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -436,7 +472,13 @@ namespace Example
 
 ## [**Library**](Library.html) PostResponsemanagementLibraries (Library body)
 
+
+
 Create a response library.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -500,7 +542,13 @@ namespace Example
 
 ## [**Response**](Response.html) PostResponsemanagementResponses (Response body, string expand = null)
 
+
+
 Create a response.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -570,7 +618,13 @@ namespace Example
 
 ## [**ResponseQueryResults**](ResponseQueryResults.html) PostResponsemanagementResponsesQuery (ResponseQueryRequest body)
 
+
+
 Query responses
+
+
+
+Requires NO permissions: 
 
 
 
@@ -634,9 +688,15 @@ namespace Example
 
 ## [**Library**](Library.html) PutResponsemanagementLibrary (string libraryId, Library body)
 
+
+
 Update an existing response library.
 
 Fields that can be updated: name. The most recent version is required for updates.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -704,9 +764,15 @@ namespace Example
 
 ## [**Response**](Response.html) PutResponsemanagementResponse (string responseId, Response body, string expand = null)
 
+
+
 Update an existing response.
 
 Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp

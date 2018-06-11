@@ -19,9 +19,15 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 ## void DeleteAttribute (string attributeId)
 
+
+
 Delete an existing Attribute.
 
 This will remove attribute.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
@@ -82,7 +88,13 @@ void (empty response body)
 
 ## [**PureCloudPlatform.Client.V2.Model.Attribute**](Attribute.html) GetAttribute (string attributeId)
 
+
+
 Get details about an existing attribute.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -146,7 +158,13 @@ namespace Example
 
 ## [**AttributeEntityListing**](AttributeEntityListing.html) GetAttributes (int? pageNumber = null, int? pageSize = null)
 
+
+
 Gets a list of existing attributes.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -216,7 +234,13 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Attribute**](Attribute.html) PostAttributes (PureCloudPlatform.Client.V2.Model.Attribute body)
 
+
+
 Create an attribute.
+
+
+
+Requires NO permissions: 
 
 
 
@@ -280,7 +304,13 @@ namespace Example
 
 ## [**AttributeEntityListing**](AttributeEntityListing.html) PostAttributesQuery (AttributeQueryRequest body)
 
+
+
 Query attributes
+
+
+
+Requires NO permissions: 
 
 
 
@@ -344,9 +374,15 @@ namespace Example
 
 ## [**PureCloudPlatform.Client.V2.Model.Attribute**](Attribute.html) PutAttribute (string attributeId, PureCloudPlatform.Client.V2.Model.Attribute body)
 
+
+
 Update an existing attribute.
 
 Fields that can be updated: name, description. The most recent version is required for updates.
+
+Requires NO permissions: 
+
+
 
 ### Example
 ~~~csharp
