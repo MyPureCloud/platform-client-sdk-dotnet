@@ -125,6 +125,24 @@ namespace PureCloudPlatform.Client.V2.Model
             ContactListFilterEvaluationFailed,
             
             /// <summary>
+            /// Enum ContactColumnsLimitExceeded for "CONTACT_COLUMNS_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_COLUMNS_LIMIT_EXCEEDED")]
+            ContactColumnsLimitExceeded,
+            
+            /// <summary>
+            /// Enum ContactColumnLengthLimitExceeded for "CONTACT_COLUMN_LENGTH_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_COLUMN_LENGTH_LIMIT_EXCEEDED")]
+            ContactColumnLengthLimitExceeded,
+            
+            /// <summary>
+            /// Enum ContactDatumLengthLimitExceeded for "CONTACT_DATUM_LENGTH_LIMIT_EXCEEDED"
+            /// </summary>
+            [EnumMember(Value = "CONTACT_DATUM_LENGTH_LIMIT_EXCEEDED")]
+            ContactDatumLengthLimitExceeded,
+            
+            /// <summary>
             /// Enum ContactZipCodeColumnValueInvalid for "CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID"
             /// </summary>
             [EnumMember(Value = "CONTACT_ZIP_CODE_COLUMN_VALUE_INVALID")]

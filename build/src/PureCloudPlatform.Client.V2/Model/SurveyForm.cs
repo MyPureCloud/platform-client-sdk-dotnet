@@ -75,6 +75,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="SurveyForm" /> class.
@@ -103,7 +113,13 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="Header">Id of the header image appearing at the top of the form..</param>
+        /// <param name="HeaderImageId">Id of the header image appearing at the top of the form..</param>
+        
+        
+        
+        
+        
+        /// <param name="Header">Markdown text for the top of the form..</param>
         
         
         
@@ -120,7 +136,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public SurveyForm(string Name = null, bool? Disabled = null, string Header = null, string Footer = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
+        public SurveyForm(string Name = null, bool? Disabled = null, string HeaderImageId = null, string Header = null, string Footer = null, List<QuestionGroup> QuestionGroups = null, DomainEntityListingSurveyForm PublishedVersions = null)
         {
             
             
@@ -136,6 +152,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Name = Name;
             }
+            
+            
+            
+            
+            
+            
             
             
             
@@ -193,6 +215,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
 this.Disabled = Disabled;
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.HeaderImageId = HeaderImageId;
             
             
             
@@ -294,6 +327,24 @@ this.PublishedVersions = PublishedVersions;
         /// Id of the header image appearing at the top of the form.
         /// </summary>
         /// <value>Id of the header image appearing at the top of the form.</value>
+        [DataMember(Name="headerImageId", EmitDefaultValue=false)]
+        public string HeaderImageId { get; set; }
+        
+        
+        
+        /// <summary>
+        /// Temporary URL for accessing header image
+        /// </summary>
+        /// <value>Temporary URL for accessing header image</value>
+        [DataMember(Name="headerImageUrl", EmitDefaultValue=false)]
+        public string HeaderImageUrl { get; private set; }
+        
+        
+        
+        /// <summary>
+        /// Markdown text for the top of the form.
+        /// </summary>
+        /// <value>Markdown text for the top of the form.</value>
         [DataMember(Name="header", EmitDefaultValue=false)]
         public string Header { get; set; }
         
@@ -354,6 +405,10 @@ this.PublishedVersions = PublishedVersions;
             sb.Append("  Disabled: ").Append(Disabled).Append("\n");
             
             sb.Append("  ContextId: ").Append(ContextId).Append("\n");
+            
+            sb.Append("  HeaderImageId: ").Append(HeaderImageId).Append("\n");
+            
+            sb.Append("  HeaderImageUrl: ").Append(HeaderImageUrl).Append("\n");
             
             sb.Append("  Header: ").Append(Header).Append("\n");
             
@@ -432,6 +487,16 @@ this.PublishedVersions = PublishedVersions;
                     this.ContextId.Equals(other.ContextId)
                 ) &&
                 (
+                    this.HeaderImageId == other.HeaderImageId ||
+                    this.HeaderImageId != null &&
+                    this.HeaderImageId.Equals(other.HeaderImageId)
+                ) &&
+                (
+                    this.HeaderImageUrl == other.HeaderImageUrl ||
+                    this.HeaderImageUrl != null &&
+                    this.HeaderImageUrl.Equals(other.HeaderImageUrl)
+                ) &&
+                (
                     this.Header == other.Header ||
                     this.Header != null &&
                     this.Header.Equals(other.Header)
@@ -487,6 +552,12 @@ this.PublishedVersions = PublishedVersions;
                 
                 if (this.ContextId != null)
                     hash = hash * 59 + this.ContextId.GetHashCode();
+                
+                if (this.HeaderImageId != null)
+                    hash = hash * 59 + this.HeaderImageId.GetHashCode();
+                
+                if (this.HeaderImageUrl != null)
+                    hash = hash * 59 + this.HeaderImageUrl.GetHashCode();
                 
                 if (this.Header != null)
                     hash = hash * 59 + this.Header.GetHashCode();

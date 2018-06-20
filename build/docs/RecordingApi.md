@@ -59,7 +59,6 @@ Delete annotation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -348,7 +347,6 @@ Gets a specific recording.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -442,7 +440,6 @@ Get annotation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -524,7 +521,6 @@ Get annotations for recording
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -600,7 +596,6 @@ Get recording metadata for a conversation. Does not return playable media.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -668,7 +663,6 @@ Get metadata for a specific recording. Does not return playable media.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -744,7 +738,6 @@ Get all of a Conversation's Recordings.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -896,7 +889,6 @@ Gets the media of a single orphan recording
 A 202 response means the orphaned media is currently transcoding and will be available shortly.A 200 response denotes the transcoded orphan media is available now and is contained in the response body.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1096,7 +1088,6 @@ Get the status and results for a batch request job, only the user that submitted
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1630,7 +1621,6 @@ Get the Recording Settings for the Organization
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1698,7 +1688,6 @@ Retrieves a paged listing of screen recording sessions
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1852,7 +1841,6 @@ Update a screen recording session
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1925,7 +1913,6 @@ Create annotation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2007,7 +1994,6 @@ Submit a batch download request for recordings. Recordings in response will be i
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2350,7 +2336,6 @@ Currently supports updating and removing both archive and delete dates for eligi
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2430,7 +2415,6 @@ Update annotation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2816,7 +2800,6 @@ Update the Recording Settings for the Organization
 
 
 Requires NO permissions: 
-
 
 
 ### Example

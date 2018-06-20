@@ -198,6 +198,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The direction of the message.
         /// </summary>
@@ -224,6 +227,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The status of the message.</value>
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
+        
+        
         
         
         
@@ -286,12 +291,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Stickers">The sticker details associated to a message..</param>
+        
+        
+        
         /// <param name="CreatedBy">User who sent this message..</param>
         
         
         
         
-        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, User CreatedBy = null)
+        public MessageData(string Name = null, string ProviderMessageId = null, DateTime? Timestamp = null, string FromAddress = null, string ToAddress = null, DirectionEnum? Direction = null, MessengerTypeEnum? MessengerType = null, string TextBody = null, StatusEnum? Status = null, List<MessageMedia> Media = null, List<MessageSticker> Stickers = null, User CreatedBy = null)
         {
             
             
@@ -379,6 +388,10 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
 this.Name = Name;
             
             
@@ -446,6 +459,15 @@ this.MessengerType = MessengerType;
             
             
 this.Media = Media;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Stickers = Stickers;
             
             
             
@@ -543,6 +565,15 @@ this.CreatedBy = CreatedBy;
         
         
         /// <summary>
+        /// The sticker details associated to a message.
+        /// </summary>
+        /// <value>The sticker details associated to a message.</value>
+        [DataMember(Name="stickers", EmitDefaultValue=false)]
+        public List<MessageSticker> Stickers { get; set; }
+        
+        
+        
+        /// <summary>
         /// User who sent this message.
         /// </summary>
         /// <value>User who sent this message.</value>
@@ -589,6 +620,8 @@ this.CreatedBy = CreatedBy;
             sb.Append("  Status: ").Append(Status).Append("\n");
             
             sb.Append("  Media: ").Append(Media).Append("\n");
+            
+            sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             
@@ -686,6 +719,11 @@ this.CreatedBy = CreatedBy;
                     this.Media.SequenceEqual(other.Media)
                 ) &&
                 (
+                    this.Stickers == other.Stickers ||
+                    this.Stickers != null &&
+                    this.Stickers.SequenceEqual(other.Stickers)
+                ) &&
+                (
                     this.CreatedBy == other.CreatedBy ||
                     this.CreatedBy != null &&
                     this.CreatedBy.Equals(other.CreatedBy)
@@ -741,6 +779,9 @@ this.CreatedBy = CreatedBy;
                 
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
+                
+                if (this.Stickers != null)
+                    hash = hash * 59 + this.Stickers.GetHashCode();
                 
                 if (this.CreatedBy != null)
                     hash = hash * 59 + this.CreatedBy.GetHashCode();

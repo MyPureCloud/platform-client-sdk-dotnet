@@ -343,7 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public CreateQueueRequest(string Name = null, UriReference Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, string SourceQueueId = null, int? MemberCount = null)
+        public CreateQueueRequest(string Name = null, Division Division = null, string Description = null, int? Version = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, StateEnum? State = null, string ModifiedByApp = null, string CreatedByApp = null, Dictionary<string, MediaSetting> MediaSettings = null, Bullseye Bullseye = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, UriReference QueueFlow = null, UriReference WhisperPrompt = null, bool? AutoAnswerOnly = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueEmailAddress OutboundEmailAddress = null, string SourceQueueId = null, int? MemberCount = null)
         {
             
             
@@ -708,7 +708,7 @@ this.MemberCount = MemberCount;
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
+        public Division Division { get; set; }
         
         
         

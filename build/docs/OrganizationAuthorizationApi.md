@@ -113,7 +113,9 @@ Delete Trustee User
 
 Requires ANY permissions: 
 
-* authorization:orgTrusteeUser:delete* admin* role_manager
+* authorization:orgTrusteeUser:delete
+* admin
+* role_manager
 
 ### Example
 ~~~csharp
@@ -188,7 +190,9 @@ Delete Trustee User Roles
 
 Requires ANY permissions: 
 
-* authorization:orgTrusteeUser:delete* admin* role_manager
+* authorization:orgTrusteeUser:delete
+* admin
+* role_manager
 
 ### Example
 ~~~csharp
@@ -407,7 +411,8 @@ Get Pairing Info
 
 Requires ANY permissions: 
 
-* authorization:orgTrustee:view* authorization:orgTrustor:view
+* authorization:orgTrustee:view
+* authorization:orgTrustor:view
 
 ### Example
 ~~~csharp
@@ -1231,7 +1236,9 @@ Add a user to the trust.
 
 Requires ALL permissions: 
 
-* authorization:orgTrusteeUser:add* admin* role_manager
+* authorization:orgTrusteeUser:add
+* admin
+* role_manager
 
 ### Example
 ~~~csharp
@@ -1307,7 +1314,8 @@ Create a new organization authorization trust. This is required to grant other o
 
 Requires ALL permissions: 
 
-* authorization:orgTrustee:add* authorization:orgTrusteeUser:add
+* authorization:orgTrustee:add
+* authorization:orgTrusteeUser:add
 
 ### Example
 ~~~csharp
@@ -1641,7 +1649,9 @@ Update Trustee User Roles
 
 Requires ANY permissions: 
 
-* authorization:orgTrusteeUser:edit* admin* role_manager
+* authorization:orgTrusteeUser:edit
+* admin
+* role_manager
 
 ### Example
 ~~~csharp

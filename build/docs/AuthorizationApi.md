@@ -38,7 +38,9 @@ Delete an organization role.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:role:delete
+* admin
+* role_manager
+* authorization:role:delete
 
 ### Example
 ~~~csharp
@@ -107,7 +109,9 @@ Removes all the roles from the user.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:delete
+* admin
+* role_manager
+* authorization:grant:delete
 
 ### Example
 ~~~csharp
@@ -175,7 +179,6 @@ Get all permissions.
 Retrieve a list of all permission defined in the system.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -251,7 +254,6 @@ Get the list of enabled products
 Gets the list of enabled products. Some example product names are: collaborateFree, collaboratePro, communicate, and engage.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -659,7 +661,9 @@ Patch Organization Role for needsUpdate Field
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:role:edit
+* admin
+* role_manager
+* authorization:role:edit
 
 ### Example
 ~~~csharp
@@ -957,7 +961,9 @@ Update
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:role:edit
+* admin
+* role_manager
+* authorization:role:edit
 
 ### Example
 ~~~csharp
@@ -1255,7 +1261,9 @@ Sets the user's roles
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp

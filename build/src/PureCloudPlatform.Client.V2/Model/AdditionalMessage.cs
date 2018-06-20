@@ -25,6 +25,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="AdditionalMessage" /> class.
@@ -40,7 +50,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TextBody">The body of the text message. (required).</param>
         
         
-        public AdditionalMessage(string TextBody = null)
+        
+        /// <param name="MediaIds">The media ids associated with the text message..</param>
+        
+        
+        
+        /// <param name="StickerIds">The sticker ids associated with the text message..</param>
+        
+        
+        public AdditionalMessage(string TextBody = null, List<string> MediaIds = null, List<string> StickerIds = null)
         {
             
             
@@ -62,6 +80,32 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.MediaIds = MediaIds;
+            
+            
+            
+            
+            
+            
+            
+            
+this.StickerIds = StickerIds;
+            
+            
+            
+            
         }
         
         
@@ -74,6 +118,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public string TextBody { get; set; }
         
         
+        
+        /// <summary>
+        /// The media ids associated with the text message.
+        /// </summary>
+        /// <value>The media ids associated with the text message.</value>
+        [DataMember(Name="mediaIds", EmitDefaultValue=false)]
+        public List<string> MediaIds { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The sticker ids associated with the text message.
+        /// </summary>
+        /// <value>The sticker ids associated with the text message.</value>
+        [DataMember(Name="stickerIds", EmitDefaultValue=false)]
+        public List<string> StickerIds { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +146,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AdditionalMessage {\n");
             
             sb.Append("  TextBody: ").Append(TextBody).Append("\n");
+            
+            sb.Append("  MediaIds: ").Append(MediaIds).Append("\n");
+            
+            sb.Append("  StickerIds: ").Append(StickerIds).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -125,6 +191,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TextBody == other.TextBody ||
                     this.TextBody != null &&
                     this.TextBody.Equals(other.TextBody)
+                ) &&
+                (
+                    this.MediaIds == other.MediaIds ||
+                    this.MediaIds != null &&
+                    this.MediaIds.SequenceEqual(other.MediaIds)
+                ) &&
+                (
+                    this.StickerIds == other.StickerIds ||
+                    this.StickerIds != null &&
+                    this.StickerIds.SequenceEqual(other.StickerIds)
                 );
         }
 
@@ -142,6 +218,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 
                 if (this.TextBody != null)
                     hash = hash * 59 + this.TextBody.GetHashCode();
+                
+                if (this.MediaIds != null)
+                    hash = hash * 59 + this.MediaIds.GetHashCode();
+                
+                if (this.StickerIds != null)
+                    hash = hash * 59 + this.StickerIds.GetHashCode();
                 
                 return hash;
             }

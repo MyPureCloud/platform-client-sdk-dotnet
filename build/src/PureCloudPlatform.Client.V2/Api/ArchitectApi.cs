@@ -1433,9 +1433,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
-        EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body = null);
+        EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body);
 
         /// <summary>
         /// Creates a new emergency group
@@ -1444,9 +1444,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
-        ApiResponse<EmergencyGroup> PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body = null);
+        ApiResponse<EmergencyGroup> PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body);
         
         /// <summary>
         /// Create IVR config.
@@ -1455,9 +1455,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>IVR</returns>
-        IVR PostArchitectIvrs (IVR body = null);
+        IVR PostArchitectIvrs (IVR body);
 
         /// <summary>
         /// Create IVR config.
@@ -1466,9 +1466,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
-        ApiResponse<IVR> PostArchitectIvrsWithHttpInfo (IVR body = null);
+        ApiResponse<IVR> PostArchitectIvrsWithHttpInfo (IVR body);
         
         /// <summary>
         /// Generate prompt history
@@ -1500,9 +1500,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
-        PromptAsset PostArchitectPromptResources (string promptId, PromptAssetCreate body = null);
+        PromptAsset PostArchitectPromptResources (string promptId, PromptAssetCreate body);
 
         /// <summary>
         /// Create a new user prompt resource
@@ -1512,9 +1512,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
-        ApiResponse<PromptAsset> PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body = null);
+        ApiResponse<PromptAsset> PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body);
         
         /// <summary>
         /// Create a new user prompt
@@ -1523,9 +1523,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Prompt</returns>
-        Prompt PostArchitectPrompts (Prompt body = null);
+        Prompt PostArchitectPrompts (Prompt body);
 
         /// <summary>
         /// Create a new user prompt
@@ -1534,9 +1534,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
-        ApiResponse<Prompt> PostArchitectPromptsWithHttpInfo (Prompt body = null);
+        ApiResponse<Prompt> PostArchitectPromptsWithHttpInfo (Prompt body);
         
         /// <summary>
         /// Creates a new schedule group
@@ -1545,9 +1545,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
-        ScheduleGroup PostArchitectSchedulegroups (ScheduleGroup body = null);
+        ScheduleGroup PostArchitectSchedulegroups (ScheduleGroup body);
 
         /// <summary>
         /// Creates a new schedule group
@@ -1556,9 +1556,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        ApiResponse<ScheduleGroup> PostArchitectSchedulegroupsWithHttpInfo (ScheduleGroup body = null);
+        ApiResponse<ScheduleGroup> PostArchitectSchedulegroupsWithHttpInfo (ScheduleGroup body);
         
         /// <summary>
         /// Create a new schedule.
@@ -1567,9 +1567,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Schedule</returns>
-        Schedule PostArchitectSchedules (Schedule body = null);
+        Schedule PostArchitectSchedules (Schedule body);
 
         /// <summary>
         /// Create a new schedule.
@@ -1578,9 +1578,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
-        ApiResponse<Schedule> PostArchitectSchedulesWithHttpInfo (Schedule body = null);
+        ApiResponse<Schedule> PostArchitectSchedulesWithHttpInfo (Schedule body);
         
         /// <summary>
         /// Generate system prompt history
@@ -1612,9 +1612,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
-        SystemPromptAsset PostArchitectSystempromptResources (string promptId, SystemPromptAsset body = null);
+        SystemPromptAsset PostArchitectSystempromptResources (string promptId, SystemPromptAsset body);
 
         /// <summary>
         /// Create system prompt resource override.
@@ -1624,9 +1624,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        ApiResponse<SystemPromptAsset> PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body = null);
+        ApiResponse<SystemPromptAsset> PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body);
         
         /// <summary>
         /// Create flow version
@@ -1636,9 +1636,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>FlowVersion</returns>
-        FlowVersion PostFlowVersions (string flowId, Object body = null);
+        FlowVersion PostFlowVersions (string flowId, Object body);
 
         /// <summary>
         /// Create flow version
@@ -1648,9 +1648,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of FlowVersion</returns>
-        ApiResponse<FlowVersion> PostFlowVersionsWithHttpInfo (string flowId, Object body = null);
+        ApiResponse<FlowVersion> PostFlowVersionsWithHttpInfo (string flowId, Object body);
         
         /// <summary>
         /// Create flow
@@ -1659,9 +1659,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Flow</returns>
-        Flow PostFlows (Flow body = null);
+        Flow PostFlows (Flow body);
 
         /// <summary>
         /// Create flow
@@ -1670,9 +1670,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body = null);
+        ApiResponse<Flow> PostFlowsWithHttpInfo (Flow body);
         
         /// <summary>
         /// Check-in flow
@@ -1862,9 +1862,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
-        EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body = null);
+        EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body);
 
         /// <summary>
         /// Updates a emergency group by ID
@@ -1874,9 +1874,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
-        ApiResponse<EmergencyGroup> PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null);
+        ApiResponse<EmergencyGroup> PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body);
         
         /// <summary>
         /// Update an IVR Config.
@@ -1886,9 +1886,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>IVR</returns>
-        IVR PutArchitectIvr (string ivrId, IVR body = null);
+        IVR PutArchitectIvr (string ivrId, IVR body);
 
         /// <summary>
         /// Update an IVR Config.
@@ -1898,9 +1898,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
-        ApiResponse<IVR> PutArchitectIvrWithHttpInfo (string ivrId, IVR body = null);
+        ApiResponse<IVR> PutArchitectIvrWithHttpInfo (string ivrId, IVR body);
         
         /// <summary>
         /// Update specified user prompt
@@ -1910,9 +1910,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Prompt</returns>
-        Prompt PutArchitectPrompt (string promptId, Prompt body = null);
+        Prompt PutArchitectPrompt (string promptId, Prompt body);
 
         /// <summary>
         /// Update specified user prompt
@@ -1922,9 +1922,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
-        ApiResponse<Prompt> PutArchitectPromptWithHttpInfo (string promptId, Prompt body = null);
+        ApiResponse<Prompt> PutArchitectPromptWithHttpInfo (string promptId, Prompt body);
         
         /// <summary>
         /// Update specified user prompt resource
@@ -1935,9 +1935,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
-        PromptAsset PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body = null);
+        PromptAsset PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body);
 
         /// <summary>
         /// Update specified user prompt resource
@@ -1948,9 +1948,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
-        ApiResponse<PromptAsset> PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body = null);
+        ApiResponse<PromptAsset> PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body);
         
         /// <summary>
         /// Update schedule by ID
@@ -1960,9 +1960,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Schedule</returns>
-        Schedule PutArchitectSchedule (string scheduleId, Schedule body = null);
+        Schedule PutArchitectSchedule (string scheduleId, Schedule body);
 
         /// <summary>
         /// Update schedule by ID
@@ -1972,9 +1972,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
-        ApiResponse<Schedule> PutArchitectScheduleWithHttpInfo (string scheduleId, Schedule body = null);
+        ApiResponse<Schedule> PutArchitectScheduleWithHttpInfo (string scheduleId, Schedule body);
         
         /// <summary>
         /// Updates a schedule group by ID
@@ -1984,9 +1984,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
-        ScheduleGroup PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body = null);
+        ScheduleGroup PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body);
 
         /// <summary>
         /// Updates a schedule group by ID
@@ -1996,9 +1996,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        ApiResponse<ScheduleGroup> PutArchitectSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null);
+        ApiResponse<ScheduleGroup> PutArchitectSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body);
         
         /// <summary>
         /// Updates a system prompt resource override.
@@ -2009,9 +2009,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
-        SystemPromptAsset PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body = null);
+        SystemPromptAsset PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body);
 
         /// <summary>
         /// Updates a system prompt resource override.
@@ -2022,9 +2022,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        ApiResponse<SystemPromptAsset> PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body = null);
+        ApiResponse<SystemPromptAsset> PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body);
         
         /// <summary>
         /// Update flow
@@ -2034,9 +2034,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Flow</returns>
-        Flow PutFlow (string flowId, Flow body = null);
+        Flow PutFlow (string flowId, Flow body);
 
         /// <summary>
         /// Update flow
@@ -2046,9 +2046,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
-        ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body = null);
+        ApiResponse<Flow> PutFlowWithHttpInfo (string flowId, Flow body);
         
         /// <summary>
         /// Updates a specific datatable by id
@@ -3523,9 +3523,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
-        System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body = null);
+        System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body);
 
         /// <summary>
         /// Creates a new emergency group
@@ -3534,9 +3534,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body);
         
         /// <summary>
         /// Create IVR config.
@@ -3545,9 +3545,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
-        System.Threading.Tasks.Task<IVR> PostArchitectIvrsAsync (IVR body = null);
+        System.Threading.Tasks.Task<IVR> PostArchitectIvrsAsync (IVR body);
 
         /// <summary>
         /// Create IVR config.
@@ -3556,9 +3556,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body = null);
+        System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body);
         
         /// <summary>
         /// Generate prompt history
@@ -3590,9 +3590,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        System.Threading.Tasks.Task<PromptAsset> PostArchitectPromptResourcesAsync (string promptId, PromptAssetCreate body = null);
+        System.Threading.Tasks.Task<PromptAsset> PostArchitectPromptResourcesAsync (string promptId, PromptAssetCreate body);
 
         /// <summary>
         /// Create a new user prompt resource
@@ -3602,9 +3602,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body);
         
         /// <summary>
         /// Create a new user prompt
@@ -3613,9 +3613,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
-        System.Threading.Tasks.Task<Prompt> PostArchitectPromptsAsync (Prompt body = null);
+        System.Threading.Tasks.Task<Prompt> PostArchitectPromptsAsync (Prompt body);
 
         /// <summary>
         /// Create a new user prompt
@@ -3624,9 +3624,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body = null);
+        System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body);
         
         /// <summary>
         /// Creates a new schedule group
@@ -3635,9 +3635,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
-        System.Threading.Tasks.Task<ScheduleGroup> PostArchitectSchedulegroupsAsync (ScheduleGroup body = null);
+        System.Threading.Tasks.Task<ScheduleGroup> PostArchitectSchedulegroupsAsync (ScheduleGroup body);
 
         /// <summary>
         /// Creates a new schedule group
@@ -3646,9 +3646,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PostArchitectSchedulegroupsAsyncWithHttpInfo (ScheduleGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PostArchitectSchedulegroupsAsyncWithHttpInfo (ScheduleGroup body);
         
         /// <summary>
         /// Create a new schedule.
@@ -3657,9 +3657,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
-        System.Threading.Tasks.Task<Schedule> PostArchitectSchedulesAsync (Schedule body = null);
+        System.Threading.Tasks.Task<Schedule> PostArchitectSchedulesAsync (Schedule body);
 
         /// <summary>
         /// Create a new schedule.
@@ -3668,9 +3668,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body);
         
         /// <summary>
         /// Generate system prompt history
@@ -3702,9 +3702,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
-        System.Threading.Tasks.Task<SystemPromptAsset> PostArchitectSystempromptResourcesAsync (string promptId, SystemPromptAsset body = null);
+        System.Threading.Tasks.Task<SystemPromptAsset> PostArchitectSystempromptResourcesAsync (string promptId, SystemPromptAsset body);
 
         /// <summary>
         /// Create system prompt resource override.
@@ -3714,9 +3714,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body = null);
+        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body);
         
         /// <summary>
         /// Create flow version
@@ -3726,9 +3726,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of FlowVersion</returns>
-        System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Object body = null);
+        System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Object body);
 
         /// <summary>
         /// Create flow version
@@ -3738,9 +3738,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
-        System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body = null);
+        System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body);
         
         /// <summary>
         /// Create flow
@@ -3749,9 +3749,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body = null);
+        System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body);
 
         /// <summary>
         /// Create flow
@@ -3760,9 +3760,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body);
         
         /// <summary>
         /// Check-in flow
@@ -3952,9 +3952,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
-        System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body = null);
+        System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body);
 
         /// <summary>
         /// Updates a emergency group by ID
@@ -3964,9 +3964,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body);
         
         /// <summary>
         /// Update an IVR Config.
@@ -3976,9 +3976,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
-        System.Threading.Tasks.Task<IVR> PutArchitectIvrAsync (string ivrId, IVR body = null);
+        System.Threading.Tasks.Task<IVR> PutArchitectIvrAsync (string ivrId, IVR body);
 
         /// <summary>
         /// Update an IVR Config.
@@ -3988,9 +3988,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body = null);
+        System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body);
         
         /// <summary>
         /// Update specified user prompt
@@ -4000,9 +4000,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
-        System.Threading.Tasks.Task<Prompt> PutArchitectPromptAsync (string promptId, Prompt body = null);
+        System.Threading.Tasks.Task<Prompt> PutArchitectPromptAsync (string promptId, Prompt body);
 
         /// <summary>
         /// Update specified user prompt
@@ -4012,9 +4012,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body = null);
+        System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body);
         
         /// <summary>
         /// Update specified user prompt resource
@@ -4025,9 +4025,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        System.Threading.Tasks.Task<PromptAsset> PutArchitectPromptResourceAsync (string promptId, string languageCode, PromptAsset body = null);
+        System.Threading.Tasks.Task<PromptAsset> PutArchitectPromptResourceAsync (string promptId, string languageCode, PromptAsset body);
 
         /// <summary>
         /// Update specified user prompt resource
@@ -4038,9 +4038,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body = null);
+        System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body);
         
         /// <summary>
         /// Update schedule by ID
@@ -4050,9 +4050,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
-        System.Threading.Tasks.Task<Schedule> PutArchitectScheduleAsync (string scheduleId, Schedule body = null);
+        System.Threading.Tasks.Task<Schedule> PutArchitectScheduleAsync (string scheduleId, Schedule body);
 
         /// <summary>
         /// Update schedule by ID
@@ -4062,9 +4062,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Schedule>> PutArchitectScheduleAsyncWithHttpInfo (string scheduleId, Schedule body = null);
+        System.Threading.Tasks.Task<ApiResponse<Schedule>> PutArchitectScheduleAsyncWithHttpInfo (string scheduleId, Schedule body);
         
         /// <summary>
         /// Updates a schedule group by ID
@@ -4074,9 +4074,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
-        System.Threading.Tasks.Task<ScheduleGroup> PutArchitectSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body = null);
+        System.Threading.Tasks.Task<ScheduleGroup> PutArchitectSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body);
 
         /// <summary>
         /// Updates a schedule group by ID
@@ -4086,9 +4086,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null);
+        System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body);
         
         /// <summary>
         /// Updates a system prompt resource override.
@@ -4099,9 +4099,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
-        System.Threading.Tasks.Task<SystemPromptAsset> PutArchitectSystempromptResourceAsync (string promptId, string languageCode, SystemPromptAsset body = null);
+        System.Threading.Tasks.Task<SystemPromptAsset> PutArchitectSystempromptResourceAsync (string promptId, string languageCode, SystemPromptAsset body);
 
         /// <summary>
         /// Updates a system prompt resource override.
@@ -4112,9 +4112,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body = null);
+        System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body);
         
         /// <summary>
         /// Update flow
@@ -4124,9 +4124,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body = null);
+        System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body);
 
         /// <summary>
         /// Update flow
@@ -4136,9 +4136,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body = null);
+        System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body);
         
         /// <summary>
         /// Updates a specific datatable by id
@@ -15010,9 +15010,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new emergency group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
-        public EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body = null)
+        public EmergencyGroup PostArchitectEmergencygroups (EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = PostArchitectEmergencygroupsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -15022,10 +15022,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new emergency group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
-        public ApiResponse< EmergencyGroup > PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body = null)
+        public ApiResponse< EmergencyGroup > PostArchitectEmergencygroupsWithHttpInfo (EmergencyGroup body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectEmergencygroups");
 
             var localVarPath = "/api/v2/architect/emergencygroups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15105,9 +15108,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new emergency group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
-        public async System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body = null)
+        public async System.Threading.Tasks.Task<EmergencyGroup> PostArchitectEmergencygroupsAsync (EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = await PostArchitectEmergencygroupsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -15118,10 +15121,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new emergency group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PostArchitectEmergencygroupsAsyncWithHttpInfo (EmergencyGroup body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectEmergencygroups");
+            
 
             var localVarPath = "/api/v2/architect/emergencygroups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15202,9 +15209,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create IVR config. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>IVR</returns>
-        public IVR PostArchitectIvrs (IVR body = null)
+        public IVR PostArchitectIvrs (IVR body)
         {
              ApiResponse<IVR> localVarResponse = PostArchitectIvrsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -15214,10 +15221,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create IVR config. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
-        public ApiResponse< IVR > PostArchitectIvrsWithHttpInfo (IVR body = null)
+        public ApiResponse< IVR > PostArchitectIvrsWithHttpInfo (IVR body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectIvrs");
 
             var localVarPath = "/api/v2/architect/ivrs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15297,9 +15307,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create IVR config. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
-        public async System.Threading.Tasks.Task<IVR> PostArchitectIvrsAsync (IVR body = null)
+        public async System.Threading.Tasks.Task<IVR> PostArchitectIvrsAsync (IVR body)
         {
              ApiResponse<IVR> localVarResponse = await PostArchitectIvrsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -15310,10 +15320,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create IVR config. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IVR>> PostArchitectIvrsAsyncWithHttpInfo (IVR body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectIvrs");
+            
 
             var localVarPath = "/api/v2/architect/ivrs";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15586,9 +15600,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
-        public PromptAsset PostArchitectPromptResources (string promptId, PromptAssetCreate body = null)
+        public PromptAsset PostArchitectPromptResources (string promptId, PromptAssetCreate body)
         {
              ApiResponse<PromptAsset> localVarResponse = PostArchitectPromptResourcesWithHttpInfo(promptId, body);
              return localVarResponse.Data;
@@ -15599,13 +15613,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
-        public ApiResponse< PromptAsset > PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body = null)
+        public ApiResponse< PromptAsset > PostArchitectPromptResourcesWithHttpInfo (string promptId, PromptAssetCreate body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptResources");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPromptResources");
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15687,9 +15704,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        public async System.Threading.Tasks.Task<PromptAsset> PostArchitectPromptResourcesAsync (string promptId, PromptAssetCreate body = null)
+        public async System.Threading.Tasks.Task<PromptAsset> PostArchitectPromptResourcesAsync (string promptId, PromptAssetCreate body)
         {
              ApiResponse<PromptAsset> localVarResponse = await PostArchitectPromptResourcesAsyncWithHttpInfo(promptId, body);
              return localVarResponse.Data;
@@ -15701,13 +15718,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PostArchitectPromptResourcesAsyncWithHttpInfo (string promptId, PromptAssetCreate body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptResources");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPromptResources");
             
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
@@ -15790,9 +15811,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new user prompt 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Prompt</returns>
-        public Prompt PostArchitectPrompts (Prompt body = null)
+        public Prompt PostArchitectPrompts (Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = PostArchitectPromptsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -15802,10 +15823,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new user prompt 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
-        public ApiResponse< Prompt > PostArchitectPromptsWithHttpInfo (Prompt body = null)
+        public ApiResponse< Prompt > PostArchitectPromptsWithHttpInfo (Prompt body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPrompts");
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15885,9 +15909,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new user prompt 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
-        public async System.Threading.Tasks.Task<Prompt> PostArchitectPromptsAsync (Prompt body = null)
+        public async System.Threading.Tasks.Task<Prompt> PostArchitectPromptsAsync (Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = await PostArchitectPromptsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -15898,10 +15922,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new user prompt 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PostArchitectPromptsAsyncWithHttpInfo (Prompt body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPrompts");
+            
 
             var localVarPath = "/api/v2/architect/prompts";
             var localVarPathParams = new Dictionary<String, String>();
@@ -15982,9 +16010,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new schedule group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
-        public ScheduleGroup PostArchitectSchedulegroups (ScheduleGroup body = null)
+        public ScheduleGroup PostArchitectSchedulegroups (ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = PostArchitectSchedulegroupsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -15994,10 +16022,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new schedule group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        public ApiResponse< ScheduleGroup > PostArchitectSchedulegroupsWithHttpInfo (ScheduleGroup body = null)
+        public ApiResponse< ScheduleGroup > PostArchitectSchedulegroupsWithHttpInfo (ScheduleGroup body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedulegroups");
 
             var localVarPath = "/api/v2/architect/schedulegroups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16077,9 +16108,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new schedule group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
-        public async System.Threading.Tasks.Task<ScheduleGroup> PostArchitectSchedulegroupsAsync (ScheduleGroup body = null)
+        public async System.Threading.Tasks.Task<ScheduleGroup> PostArchitectSchedulegroupsAsync (ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = await PostArchitectSchedulegroupsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16090,10 +16121,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Creates a new schedule group 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PostArchitectSchedulegroupsAsyncWithHttpInfo (ScheduleGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PostArchitectSchedulegroupsAsyncWithHttpInfo (ScheduleGroup body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedulegroups");
+            
 
             var localVarPath = "/api/v2/architect/schedulegroups";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16174,9 +16209,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new schedule. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Schedule</returns>
-        public Schedule PostArchitectSchedules (Schedule body = null)
+        public Schedule PostArchitectSchedules (Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = PostArchitectSchedulesWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16186,10 +16221,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new schedule. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
-        public ApiResponse< Schedule > PostArchitectSchedulesWithHttpInfo (Schedule body = null)
+        public ApiResponse< Schedule > PostArchitectSchedulesWithHttpInfo (Schedule body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedules");
 
             var localVarPath = "/api/v2/architect/schedules";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16269,9 +16307,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new schedule. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
-        public async System.Threading.Tasks.Task<Schedule> PostArchitectSchedulesAsync (Schedule body = null)
+        public async System.Threading.Tasks.Task<Schedule> PostArchitectSchedulesAsync (Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = await PostArchitectSchedulesAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16282,10 +16320,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a new schedule. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PostArchitectSchedulesAsyncWithHttpInfo (Schedule body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedules");
+            
 
             var localVarPath = "/api/v2/architect/schedules";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16558,9 +16600,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
-        public SystemPromptAsset PostArchitectSystempromptResources (string promptId, SystemPromptAsset body = null)
+        public SystemPromptAsset PostArchitectSystempromptResources (string promptId, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = PostArchitectSystempromptResourcesWithHttpInfo(promptId, body);
              return localVarResponse.Data;
@@ -16571,13 +16613,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        public ApiResponse< SystemPromptAsset > PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body = null)
+        public ApiResponse< SystemPromptAsset > PostArchitectSystempromptResourcesWithHttpInfo (string promptId, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptResources");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSystempromptResources");
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16659,9 +16704,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
-        public async System.Threading.Tasks.Task<SystemPromptAsset> PostArchitectSystempromptResourcesAsync (string promptId, SystemPromptAsset body = null)
+        public async System.Threading.Tasks.Task<SystemPromptAsset> PostArchitectSystempromptResourcesAsync (string promptId, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = await PostArchitectSystempromptResourcesAsyncWithHttpInfo(promptId, body);
              return localVarResponse.Data;
@@ -16673,13 +16718,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PostArchitectSystempromptResourcesAsyncWithHttpInfo (string promptId, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptResources");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSystempromptResources");
             
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
@@ -16763,9 +16812,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>FlowVersion</returns>
-        public FlowVersion PostFlowVersions (string flowId, Object body = null)
+        public FlowVersion PostFlowVersions (string flowId, Object body)
         {
              ApiResponse<FlowVersion> localVarResponse = PostFlowVersionsWithHttpInfo(flowId, body);
              return localVarResponse.Data;
@@ -16776,13 +16825,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of FlowVersion</returns>
-        public ApiResponse< FlowVersion > PostFlowVersionsWithHttpInfo (string flowId, Object body = null)
+        public ApiResponse< FlowVersion > PostFlowVersionsWithHttpInfo (string flowId, Object body)
         { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowVersions");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowVersions");
 
             var localVarPath = "/api/v2/flows/{flowId}/versions";
             var localVarPathParams = new Dictionary<String, String>();
@@ -16864,9 +16916,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of FlowVersion</returns>
-        public async System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Object body = null)
+        public async System.Threading.Tasks.Task<FlowVersion> PostFlowVersionsAsync (string flowId, Object body)
         {
              ApiResponse<FlowVersion> localVarResponse = await PostFlowVersionsAsyncWithHttpInfo(flowId, body);
              return localVarResponse.Data;
@@ -16878,13 +16930,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (FlowVersion)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<FlowVersion>> PostFlowVersionsAsyncWithHttpInfo (string flowId, Object body)
         { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowVersions");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowVersions");
             
 
             var localVarPath = "/api/v2/flows/{flowId}/versions";
@@ -16967,9 +17023,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create flow 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Flow</returns>
-        public Flow PostFlows (Flow body = null)
+        public Flow PostFlows (Flow body)
         {
              ApiResponse<Flow> localVarResponse = PostFlowsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -16979,10 +17035,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create flow 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body = null)
+        public ApiResponse< Flow > PostFlowsWithHttpInfo (Flow body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlows");
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
@@ -17062,9 +17121,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create flow 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body = null)
+        public async System.Threading.Tasks.Task<Flow> PostFlowsAsync (Flow body)
         {
              ApiResponse<Flow> localVarResponse = await PostFlowsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -17075,10 +17134,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create flow 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PostFlowsAsyncWithHttpInfo (Flow body)
         { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlows");
+            
 
             var localVarPath = "/api/v2/flows";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18723,9 +18786,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>EmergencyGroup</returns>
-        public EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body = null)
+        public EmergencyGroup PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = PutArchitectEmergencygroupWithHttpInfo(emergencyGroupId, body);
              return localVarResponse.Data;
@@ -18736,13 +18799,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of EmergencyGroup</returns>
-        public ApiResponse< EmergencyGroup > PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null)
+        public ApiResponse< EmergencyGroup > PutArchitectEmergencygroupWithHttpInfo (string emergencyGroupId, EmergencyGroup body)
         { 
             // verify the required parameter 'emergencyGroupId' is set
             if (emergencyGroupId == null)
                 throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->PutArchitectEmergencygroup");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectEmergencygroup");
 
             var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -18824,9 +18890,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of EmergencyGroup</returns>
-        public async System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body = null)
+        public async System.Threading.Tasks.Task<EmergencyGroup> PutArchitectEmergencygroupAsync (string emergencyGroupId, EmergencyGroup body)
         {
              ApiResponse<EmergencyGroup> localVarResponse = await PutArchitectEmergencygroupAsyncWithHttpInfo(emergencyGroupId, body);
              return localVarResponse.Data;
@@ -18838,13 +18904,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="emergencyGroupId">Emergency group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (EmergencyGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroup>> PutArchitectEmergencygroupAsyncWithHttpInfo (string emergencyGroupId, EmergencyGroup body)
         { 
             // verify the required parameter 'emergencyGroupId' is set
             if (emergencyGroupId == null)
                 throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->PutArchitectEmergencygroup");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectEmergencygroup");
             
 
             var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
@@ -18928,9 +18998,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>IVR</returns>
-        public IVR PutArchitectIvr (string ivrId, IVR body = null)
+        public IVR PutArchitectIvr (string ivrId, IVR body)
         {
              ApiResponse<IVR> localVarResponse = PutArchitectIvrWithHttpInfo(ivrId, body);
              return localVarResponse.Data;
@@ -18941,13 +19011,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of IVR</returns>
-        public ApiResponse< IVR > PutArchitectIvrWithHttpInfo (string ivrId, IVR body = null)
+        public ApiResponse< IVR > PutArchitectIvrWithHttpInfo (string ivrId, IVR body)
         { 
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
                 throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->PutArchitectIvr");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvr");
 
             var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19029,9 +19102,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of IVR</returns>
-        public async System.Threading.Tasks.Task<IVR> PutArchitectIvrAsync (string ivrId, IVR body = null)
+        public async System.Threading.Tasks.Task<IVR> PutArchitectIvrAsync (string ivrId, IVR body)
         {
              ApiResponse<IVR> localVarResponse = await PutArchitectIvrAsyncWithHttpInfo(ivrId, body);
              return localVarResponse.Data;
@@ -19043,13 +19116,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (IVR)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IVR>> PutArchitectIvrAsyncWithHttpInfo (string ivrId, IVR body)
         { 
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
                 throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->PutArchitectIvr");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvr");
             
 
             var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
@@ -19133,9 +19210,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Prompt</returns>
-        public Prompt PutArchitectPrompt (string promptId, Prompt body = null)
+        public Prompt PutArchitectPrompt (string promptId, Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = PutArchitectPromptWithHttpInfo(promptId, body);
              return localVarResponse.Data;
@@ -19146,13 +19223,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Prompt</returns>
-        public ApiResponse< Prompt > PutArchitectPromptWithHttpInfo (string promptId, Prompt body = null)
+        public ApiResponse< Prompt > PutArchitectPromptWithHttpInfo (string promptId, Prompt body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectPrompt");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPrompt");
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19234,9 +19314,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Prompt</returns>
-        public async System.Threading.Tasks.Task<Prompt> PutArchitectPromptAsync (string promptId, Prompt body = null)
+        public async System.Threading.Tasks.Task<Prompt> PutArchitectPromptAsync (string promptId, Prompt body)
         {
              ApiResponse<Prompt> localVarResponse = await PutArchitectPromptAsyncWithHttpInfo(promptId, body);
              return localVarResponse.Data;
@@ -19248,13 +19328,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Prompt)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Prompt>> PutArchitectPromptAsyncWithHttpInfo (string promptId, Prompt body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
                 throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PutArchitectPrompt");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPrompt");
             
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}";
@@ -19339,9 +19423,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>PromptAsset</returns>
-        public PromptAsset PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body = null)
+        public PromptAsset PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body)
         {
              ApiResponse<PromptAsset> localVarResponse = PutArchitectPromptResourceWithHttpInfo(promptId, languageCode, body);
              return localVarResponse.Data;
@@ -19353,9 +19437,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of PromptAsset</returns>
-        public ApiResponse< PromptAsset > PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body = null)
+        public ApiResponse< PromptAsset > PutArchitectPromptResourceWithHttpInfo (string promptId, string languageCode, PromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -19363,6 +19447,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectPromptResource");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPromptResource");
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19446,9 +19533,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of PromptAsset</returns>
-        public async System.Threading.Tasks.Task<PromptAsset> PutArchitectPromptResourceAsync (string promptId, string languageCode, PromptAsset body = null)
+        public async System.Threading.Tasks.Task<PromptAsset> PutArchitectPromptResourceAsync (string promptId, string languageCode, PromptAsset body)
         {
              ApiResponse<PromptAsset> localVarResponse = await PutArchitectPromptResourceAsyncWithHttpInfo(promptId, languageCode, body);
              return localVarResponse.Data;
@@ -19461,9 +19548,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (PromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PromptAsset>> PutArchitectPromptResourceAsyncWithHttpInfo (string promptId, string languageCode, PromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -19472,6 +19559,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectPromptResource");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPromptResource");
             
 
             var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
@@ -19556,9 +19647,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Schedule</returns>
-        public Schedule PutArchitectSchedule (string scheduleId, Schedule body = null)
+        public Schedule PutArchitectSchedule (string scheduleId, Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = PutArchitectScheduleWithHttpInfo(scheduleId, body);
              return localVarResponse.Data;
@@ -19569,13 +19660,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Schedule</returns>
-        public ApiResponse< Schedule > PutArchitectScheduleWithHttpInfo (string scheduleId, Schedule body = null)
+        public ApiResponse< Schedule > PutArchitectScheduleWithHttpInfo (string scheduleId, Schedule body)
         { 
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->PutArchitectSchedule");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedule");
 
             var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19657,9 +19751,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Schedule</returns>
-        public async System.Threading.Tasks.Task<Schedule> PutArchitectScheduleAsync (string scheduleId, Schedule body = null)
+        public async System.Threading.Tasks.Task<Schedule> PutArchitectScheduleAsync (string scheduleId, Schedule body)
         {
              ApiResponse<Schedule> localVarResponse = await PutArchitectScheduleAsyncWithHttpInfo(scheduleId, body);
              return localVarResponse.Data;
@@ -19671,13 +19765,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleId">Schedule ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Schedule)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PutArchitectScheduleAsyncWithHttpInfo (string scheduleId, Schedule body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Schedule>> PutArchitectScheduleAsyncWithHttpInfo (string scheduleId, Schedule body)
         { 
             // verify the required parameter 'scheduleId' is set
             if (scheduleId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->PutArchitectSchedule");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedule");
             
 
             var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
@@ -19761,9 +19859,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ScheduleGroup</returns>
-        public ScheduleGroup PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body = null)
+        public ScheduleGroup PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = PutArchitectSchedulegroupWithHttpInfo(scheduleGroupId, body);
              return localVarResponse.Data;
@@ -19774,13 +19872,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of ScheduleGroup</returns>
-        public ApiResponse< ScheduleGroup > PutArchitectSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null)
+        public ApiResponse< ScheduleGroup > PutArchitectSchedulegroupWithHttpInfo (string scheduleGroupId, ScheduleGroup body)
         { 
             // verify the required parameter 'scheduleGroupId' is set
             if (scheduleGroupId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->PutArchitectSchedulegroup");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedulegroup");
 
             var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -19862,9 +19963,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ScheduleGroup</returns>
-        public async System.Threading.Tasks.Task<ScheduleGroup> PutArchitectSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body = null)
+        public async System.Threading.Tasks.Task<ScheduleGroup> PutArchitectSchedulegroupAsync (string scheduleGroupId, ScheduleGroup body)
         {
              ApiResponse<ScheduleGroup> localVarResponse = await PutArchitectSchedulegroupAsyncWithHttpInfo(scheduleGroupId, body);
              return localVarResponse.Data;
@@ -19876,13 +19977,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="scheduleGroupId">Schedule group ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (ScheduleGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroup>> PutArchitectSchedulegroupAsyncWithHttpInfo (string scheduleGroupId, ScheduleGroup body)
         { 
             // verify the required parameter 'scheduleGroupId' is set
             if (scheduleGroupId == null)
                 throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->PutArchitectSchedulegroup");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedulegroup");
             
 
             var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
@@ -19967,9 +20072,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>SystemPromptAsset</returns>
-        public SystemPromptAsset PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body = null)
+        public SystemPromptAsset PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = PutArchitectSystempromptResourceWithHttpInfo(promptId, languageCode, body);
              return localVarResponse.Data;
@@ -19981,9 +20086,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of SystemPromptAsset</returns>
-        public ApiResponse< SystemPromptAsset > PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body = null)
+        public ApiResponse< SystemPromptAsset > PutArchitectSystempromptResourceWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -19991,6 +20096,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectSystempromptResource");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSystempromptResource");
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20074,9 +20182,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of SystemPromptAsset</returns>
-        public async System.Threading.Tasks.Task<SystemPromptAsset> PutArchitectSystempromptResourceAsync (string promptId, string languageCode, SystemPromptAsset body = null)
+        public async System.Threading.Tasks.Task<SystemPromptAsset> PutArchitectSystempromptResourceAsync (string promptId, string languageCode, SystemPromptAsset body)
         {
              ApiResponse<SystemPromptAsset> localVarResponse = await PutArchitectSystempromptResourceAsyncWithHttpInfo(promptId, languageCode, body);
              return localVarResponse.Data;
@@ -20089,9 +20197,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="promptId">Prompt ID</param>
         /// <param name="languageCode">Language</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (SystemPromptAsset)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SystemPromptAsset>> PutArchitectSystempromptResourceAsyncWithHttpInfo (string promptId, string languageCode, SystemPromptAsset body)
         { 
             // verify the required parameter 'promptId' is set
             if (promptId == null)
@@ -20100,6 +20208,10 @@ namespace PureCloudPlatform.Client.V2.Api
             // verify the required parameter 'languageCode' is set
             if (languageCode == null)
                 throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PutArchitectSystempromptResource");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSystempromptResource");
             
 
             var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
@@ -20184,9 +20296,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Flow</returns>
-        public Flow PutFlow (string flowId, Flow body = null)
+        public Flow PutFlow (string flowId, Flow body)
         {
              ApiResponse<Flow> localVarResponse = PutFlowWithHttpInfo(flowId, body);
              return localVarResponse.Data;
@@ -20197,13 +20309,16 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>ApiResponse of Flow</returns>
-        public ApiResponse< Flow > PutFlowWithHttpInfo (string flowId, Flow body = null)
+        public ApiResponse< Flow > PutFlowWithHttpInfo (string flowId, Flow body)
         { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlow");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlow");
 
             var localVarPath = "/api/v2/flows/{flowId}";
             var localVarPathParams = new Dictionary<String, String>();
@@ -20285,9 +20400,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of Flow</returns>
-        public async System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body = null)
+        public async System.Threading.Tasks.Task<Flow> PutFlowAsync (string flowId, Flow body)
         {
              ApiResponse<Flow> localVarResponse = await PutFlowAsyncWithHttpInfo(flowId, body);
              return localVarResponse.Data;
@@ -20299,13 +20414,17 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="flowId">Flow ID</param>
-        /// <param name="body"> (optional)</param>
+        /// <param name="body"></param>
         /// <returns>Task of ApiResponse (Flow)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Flow>> PutFlowAsyncWithHttpInfo (string flowId, Flow body)
         { 
             // verify the required parameter 'flowId' is set
             if (flowId == null)
                 throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PutFlow");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlow");
             
 
             var localVarPath = "/api/v2/flows/{flowId}";

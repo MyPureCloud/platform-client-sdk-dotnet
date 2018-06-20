@@ -60,7 +60,6 @@ Delete a document.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -135,7 +134,6 @@ This revokes sharing rights specified in the share record
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -204,7 +202,6 @@ Cancel the command for this status
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -271,7 +268,6 @@ Delete a workspace
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -348,7 +344,6 @@ Delete a member from a workspace
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -421,7 +416,6 @@ Delete workspace tag
 Delete a tag from a workspace. Will remove this tag from all documents.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -498,7 +492,6 @@ Get a document.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -572,7 +565,6 @@ Get a list of audits for a document.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -680,7 +672,6 @@ Download a document.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -760,7 +751,6 @@ Get a list of documents.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -868,7 +858,6 @@ Query content
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -968,7 +957,6 @@ Get a Security Profile
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1038,7 +1026,6 @@ Get a List of Security Profiles
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1097,7 +1084,6 @@ Retrieve details about an existing share.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1173,7 +1159,6 @@ Get shared documents. Securely download a shared document.
 This method requires the download sharing URI obtained in the get document response (downloadSharingUri). Documents may be shared between users in the same workspace. Documents may also be shared between any user by creating a content management share.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1269,7 +1254,6 @@ Failing to specify a filter will return 400.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1357,7 +1341,6 @@ Get a list of statuses for pending operations
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1433,7 +1416,6 @@ Get a status.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1503,7 +1485,6 @@ Get usage details.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1562,7 +1543,6 @@ Get a workspace.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1638,7 +1618,6 @@ Get a list of documents.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1740,7 +1719,6 @@ Get a workspace member
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1820,7 +1798,6 @@ Get a list workspace members
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1910,7 +1887,6 @@ Get a workspace tag
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1990,7 +1966,6 @@ Get a list of workspace tags
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2086,7 +2061,6 @@ Specifying 'content' access will return all workspaces the user has document acc
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2174,7 +2148,6 @@ Query audits
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2242,7 +2215,6 @@ Update a document.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2332,7 +2304,6 @@ Replace the contents of a document.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2412,7 +2383,6 @@ Add a document.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2502,7 +2472,6 @@ Query content
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2578,7 +2547,6 @@ Creates a new share or updates an existing share if the entity has already been 
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2646,7 +2614,6 @@ Create a workspace tag
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2722,7 +2689,6 @@ Perform a prefix query on tags in the workspace
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2806,7 +2772,6 @@ Create a group workspace
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2874,7 +2839,6 @@ Update a workspace
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2950,7 +2914,6 @@ Add a member to a workspace
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3032,7 +2995,6 @@ Update a workspace tag. Will update all documents with the new tag value.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

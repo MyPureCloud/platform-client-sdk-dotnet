@@ -33,7 +33,6 @@ This will remove any responses associated with the library.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -102,7 +101,6 @@ This will remove the response from any libraries associated with it.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -169,7 +167,6 @@ Gets a list of existing response libraries.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -247,7 +244,6 @@ Get details about an existing response library.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -315,7 +311,6 @@ Get details about an existing response.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -391,7 +386,6 @@ Gets a list of existing responses.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -481,7 +475,6 @@ Create a response library.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -549,7 +542,6 @@ Create a response.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -627,7 +619,6 @@ Query responses
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -695,7 +686,6 @@ Update an existing response library.
 Fields that can be updated: name. The most recent version is required for updates.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -771,7 +761,6 @@ Update an existing response.
 Fields that can be updated: name, libraries, and texts. The most recent version is required for updates.
 
 Requires NO permissions: 
-
 
 
 ### Example

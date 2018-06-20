@@ -63,7 +63,6 @@ Delete integration.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -271,7 +270,6 @@ Delete a set of credentials
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -338,7 +336,6 @@ Get integration.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -446,7 +443,6 @@ Get integration configuration.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -514,7 +510,6 @@ List integrations
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -615,7 +610,8 @@ Retrieves a single Action matching id.
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -697,7 +693,8 @@ Retrieve a Draft
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -779,7 +776,8 @@ Retrieve schema for a Draft based on filename.
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -855,7 +853,8 @@ Retrieve templates for a Draft based on filename.
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1001,7 +1000,8 @@ Retrieve schema for an action based on filename.
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1077,7 +1077,8 @@ Retrieve text of templates for an action based on filename.
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1153,7 +1154,8 @@ Retrieves all actions associated with filters passed in via query param.
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1271,7 +1273,8 @@ Retrieves all categories of available Actions
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1377,7 +1380,8 @@ Retrieves all action drafts associated with the filters passed in via query para
 
 Requires ANY permissions: 
 
-* integrations:action:view* bridge:actions:view
+* integrations:action:view
+* bridge:actions:view
 
 ### Example
 ~~~csharp
@@ -1496,7 +1500,6 @@ List permitted client app integrations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1596,7 +1599,6 @@ Get a single credential with sensitive fields redacted
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1664,7 +1666,6 @@ List multiple sets of credentials
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1742,7 +1743,6 @@ List all credential types
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1802,7 +1802,8 @@ List all events
 
 Requires ANY permissions: 
 
-* integrations:integration:view* bridge:notification:view
+* integrations:integration:view
+* bridge:notification:view
 
 ### Example
 ~~~csharp
@@ -1896,7 +1897,8 @@ Get a single event
 
 Requires ANY permissions: 
 
-* integrations:integration:view* bridge:notification:view
+* integrations:integration:view
+* bridge:notification:view
 
 ### Example
 ~~~csharp
@@ -1967,7 +1969,6 @@ Get integration type.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2035,7 +2036,6 @@ Get properties config schema for an integration type.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2111,7 +2111,6 @@ List integration types
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2211,7 +2210,6 @@ Update an integration.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2475,7 +2473,6 @@ Create an integration.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2768,7 +2765,8 @@ Execute Action and return response from 3rd party.  Responses will follow the sc
 
 Requires ANY permissions: 
 
-* integrations:action:execute* bridge:actions:execute
+* integrations:action:execute
+* bridge:actions:execute
 
 ### Example
 ~~~csharp
@@ -2844,7 +2842,8 @@ Test the execution of an action. Responses will show execution steps broken out 
 
 Requires ANY permissions: 
 
-* integrations:action:execute* bridge:actions:execute
+* integrations:action:execute
+* bridge:actions:execute
 
 ### Example
 ~~~csharp
@@ -3061,7 +3060,6 @@ Create a set of credentials
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3131,7 +3129,6 @@ Add a vendor connection
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3199,7 +3196,6 @@ Update integration configuration.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3275,7 +3271,6 @@ Update a set of credentials
 
 
 Requires NO permissions: 
-
 
 
 ### Example

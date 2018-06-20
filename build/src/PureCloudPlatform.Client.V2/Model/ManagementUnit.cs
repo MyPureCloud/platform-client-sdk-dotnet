@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Start day of week for scheduling and forecasting purposes
         /// </summary>
@@ -113,6 +116,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Start day of week for scheduling and forecasting purposes
         /// </summary>
@@ -153,6 +158,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Division">The division to which this entity belongs..</param>
+        
+        
+        
         /// <param name="StartDayOfWeek">Start day of week for scheduling and forecasting purposes.</param>
         
         
@@ -180,8 +189,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public ManagementUnit(string Name = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettings Settings = null, int? Version = null, UserReference ModifiedBy = null, WfmVersionedEntityMetadata Metadata = null)
+        public ManagementUnit(string Name = null, Division Division = null, StartDayOfWeekEnum? StartDayOfWeek = null, string TimeZone = null, ManagementUnitSettings Settings = null, int? Version = null, UserReference ModifiedBy = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            
+            
+            
+            
             
             
             
@@ -253,6 +266,15 @@ this.Name = Name;
             
             
             
+this.Division = Division;
+            
+            
+            
+            
+            
+            
+            
+            
 this.StartDayOfWeek = StartDayOfWeek;
             
             
@@ -315,6 +337,15 @@ this.ModifiedBy = ModifiedBy;
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
         
         
         
@@ -395,6 +426,8 @@ this.ModifiedBy = ModifiedBy;
             
             sb.Append("  Name: ").Append(Name).Append("\n");
             
+            sb.Append("  Division: ").Append(Division).Append("\n");
+            
             sb.Append("  StartDayOfWeek: ").Append(StartDayOfWeek).Append("\n");
             
             sb.Append("  TimeZone: ").Append(TimeZone).Append("\n");
@@ -458,6 +491,11 @@ this.ModifiedBy = ModifiedBy;
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.StartDayOfWeek == other.StartDayOfWeek ||
                     this.StartDayOfWeek != null &&
                     this.StartDayOfWeek.Equals(other.StartDayOfWeek)
@@ -516,6 +554,9 @@ this.ModifiedBy = ModifiedBy;
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.StartDayOfWeek != null)
                     hash = hash * 59 + this.StartDayOfWeek.GetHashCode();

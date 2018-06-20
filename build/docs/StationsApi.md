@@ -27,7 +27,6 @@ Unassigns the user assigned to this station
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -94,7 +93,6 @@ Get station.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -164,7 +162,6 @@ Get the list of available stations.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

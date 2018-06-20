@@ -328,7 +328,6 @@ Get all available languages for translation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -387,7 +386,6 @@ Get the builtin translation for a language
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -459,7 +457,6 @@ Get effective translation for an organization by language
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -527,7 +524,6 @@ Get effective language translation for a user
 
 
 Requires NO permissions: 
-
 
 
 ### Example

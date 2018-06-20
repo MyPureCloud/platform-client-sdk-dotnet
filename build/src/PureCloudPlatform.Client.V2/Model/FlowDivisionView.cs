@@ -26,6 +26,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -106,6 +109,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <summary>
         /// Gets or Sets Type
         /// </summary>
@@ -133,12 +138,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Division">The division to which this entity belongs..</param>
+        
+        
+        
         /// <param name="Type">Type.</param>
         
         
         
         
-        public FlowDivisionView(string Name = null, TypeEnum? Type = null)
+        public FlowDivisionView(string Name = null, Division Division = null, TypeEnum? Type = null)
         {
             
             
@@ -166,6 +175,19 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+this.Division = Division;
             
             
             
@@ -203,6 +225,15 @@ this.Type = Type;
         
         
         
+        /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public Division Division { get; set; }
+        
+        
+        
         
         
         /// <summary>
@@ -225,6 +256,8 @@ this.Type = Type;
             sb.Append("  Id: ").Append(Id).Append("\n");
             
             sb.Append("  Name: ").Append(Name).Append("\n");
+            
+            sb.Append("  Division: ").Append(Division).Append("\n");
             
             sb.Append("  Type: ").Append(Type).Append("\n");
             
@@ -277,6 +310,11 @@ this.Type = Type;
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
@@ -305,6 +343,9 @@ this.Type = Type;
                 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();

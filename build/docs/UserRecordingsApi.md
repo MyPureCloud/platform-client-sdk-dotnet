@@ -28,7 +28,6 @@ Delete a user recording.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -95,7 +94,6 @@ Get a user recording.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -173,7 +171,6 @@ Download a user recording.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -247,7 +244,6 @@ Get a list of user recordings.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -331,7 +327,6 @@ Get user recording summary
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -390,7 +385,6 @@ Update a user recording.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

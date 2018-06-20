@@ -74,7 +74,6 @@ Delete user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -143,7 +142,9 @@ Removes all the roles from the user.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:delete
+* admin
+* role_manager
+* authorization:grant:delete
 
 ### Example
 ~~~csharp
@@ -212,7 +213,8 @@ Remove routing language from user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -287,7 +289,8 @@ Remove routing skill from user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -363,7 +366,6 @@ Clear associated station
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -431,7 +433,8 @@ Clear default station
 
 Requires ANY permissions: 
 
-* telephony:plugin:all* telephony:phone:assign
+* telephony:plugin:all
+* telephony:phone:assign
 
 ### Example
 ~~~csharp
@@ -501,7 +504,6 @@ Fetch field config for an entity type
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -569,7 +571,6 @@ Get a user profile listing
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -677,7 +678,6 @@ Get user.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -759,7 +759,6 @@ Get adjacents
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -835,7 +834,6 @@ Get a user's CallForwarding
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -903,7 +901,6 @@ Get direct reports
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -979,7 +976,6 @@ Get favorites
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1075,7 +1071,6 @@ Get a user's Geolocation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1151,7 +1146,6 @@ Get a OutOfOffice
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1219,7 +1213,6 @@ Get user profile
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1531,7 +1524,6 @@ List routing language for user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1617,7 +1609,6 @@ List routing skills for user
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1707,7 +1698,6 @@ Fetch the routing status of a user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1777,7 +1767,6 @@ Get station information for user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1845,7 +1834,6 @@ Get superiors
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2005,7 +1993,6 @@ Get the list of available users.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2105,7 +2092,6 @@ This request is not valid when using the Client Credentials OAuth grant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2173,7 +2159,6 @@ Search users using the q64 value returned from a previous search
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2251,7 +2236,6 @@ Update user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2327,7 +2311,6 @@ Patch a user's CallForwarding
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2401,7 +2384,6 @@ Patch a user's Geolocation
 The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2648,7 +2630,8 @@ Update routing language proficiency or state.
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -2940,7 +2923,9 @@ Send an activation email to the user
 
 Requires ANY permissions: 
 
-* directory:user:add* user_manager* user_administration
+* directory:user:add
+* user_manager
+* user_administration
 
 ### Example
 ~~~csharp
@@ -3015,7 +3000,8 @@ Change a users password
 
 Requires ANY permissions: 
 
-* user_administration* directory:userPassword:edit
+* user_administration
+* directory:userPassword:edit
 
 ### Example
 ~~~csharp
@@ -3090,7 +3076,8 @@ Add routing language to user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -3166,7 +3153,8 @@ Add routing skill to user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -3313,7 +3301,6 @@ Change your password
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3380,7 +3367,6 @@ Search users
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3450,7 +3436,6 @@ Update a user's CallForwarding
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3528,7 +3513,6 @@ Update an OutOfOffice
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3603,7 +3587,10 @@ Update profile skills for a user
 
 Requires ANY permissions: 
 
-* directory:userProfile:edit* admin* user_manager* user_administration
+* directory:userProfile:edit
+* admin
+* user_manager
+* user_administration
 
 ### Example
 ~~~csharp
@@ -3679,7 +3666,9 @@ Sets the user's roles
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -3755,7 +3744,8 @@ Update routing skill proficiency or state.
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -3838,7 +3828,6 @@ Update the routing status of a user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3914,7 +3903,6 @@ Set associated station
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3988,7 +3976,8 @@ Set default station
 
 Requires ANY permissions: 
 
-* telephony:plugin:all* telephony:phone:assign
+* telephony:plugin:all
+* telephony:phone:assign
 
 ### Example
 ~~~csharp

@@ -32,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingQueueUsers**](RoutingApi.html#getroutingqueueusers) | **GET** /api/v2/routing/queues/{queueId}/users | Get the members of this queue |
 | [**GetRoutingQueueWrapupcodes**](RoutingApi.html#getroutingqueuewrapupcodes) | **GET** /api/v2/routing/queues/{queueId}/wrapupcodes | Get the wrap-up codes for a queue |
 | [**GetRoutingQueues**](RoutingApi.html#getroutingqueues) | **GET** /api/v2/routing/queues | Get list of queues. |
+| [**GetRoutingQueuesSearch**](RoutingApi.html#getroutingqueuessearch) | **GET** /api/v2/routing/queues/search | Search for queues by name |
 | [**GetRoutingSkill**](RoutingApi.html#getroutingskill) | **GET** /api/v2/routing/skills/{skillId} | Get Routing Skill |
 | [**GetRoutingSkills**](RoutingApi.html#getroutingskills) | **GET** /api/v2/routing/skills | Get the list of routing skills. |
 | [**GetRoutingSmsAvailablephonenumbers**](RoutingApi.html#getroutingsmsavailablephonenumbers) | **GET** /api/v2/routing/sms/availablephonenumbers | Get a list of available phone numbers for SMS provisioning. |
@@ -715,7 +716,8 @@ Remove routing language from user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -790,7 +792,8 @@ Remove routing skill from user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -1971,6 +1974,112 @@ namespace Example
 
 [**QueueEntityListing**](QueueEntityListing.html)
 
+<a name="getroutingqueuessearch"></a>
+
+## [**QueueEntityListing**](QueueEntityListing.html) GetRoutingQueuesSearch (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+
+
+
+Search for queues by name
+
+
+
+Requires ANY permissions: 
+
+* routing:queue:search
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingQueuesSearchExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new RoutingApi();
+            
+            
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            
+            
+            
+            
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            
+            
+            
+            
+            var sortBy = sortBy_example;  // string | Sort by (optional)  (default to name)
+            
+            
+            
+            
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
+            
+            
+            
+            
+            var name = name_example;  // string | Name (optional) 
+            
+            
+            
+            
+            
+            var id = new List<string>(); // List<string> | Queue ID(s) (optional) 
+            
+            
+            
+            
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            
+            
+
+            try
+            {
+                
+                // Search for queues by name
+                
+                QueueEntityListing result = apiInstance.GetRoutingQueuesSearch(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingQueuesSearch: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortBy** | **string**| Sort by | [optional] [default to name] |
+| **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc, score |
+| **name** | **string**| Name | [optional]  |
+| **id** | [**List<string>**](string.html)| Queue ID(s) | [optional]  |
+| **divisionId** | [**List<string>**](string.html)| Division ID(s) | [optional]  |
+{: class="table table-striped"}
+
+### Return type
+
+[**QueueEntityListing**](QueueEntityListing.html)
+
 <a name="getroutingskill"></a>
 
 ## [**RoutingSkill**](RoutingSkill.html) GetRoutingSkill (string skillId)
@@ -2405,7 +2514,8 @@ Get the utilization settings.
 
 Requires ANY permissions: 
 
-* routing:utilization:manage* routing:utilization:view
+* routing:utilization:manage
+* routing:utilization:view
 
 ### Example
 ~~~csharp
@@ -2625,7 +2735,6 @@ List routing language for user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2711,7 +2820,6 @@ List routing skills for user
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2958,7 +3066,8 @@ Update routing language proficiency or state.
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -3834,7 +3943,8 @@ Add routing language to user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -3910,7 +4020,8 @@ Add routing skill to user
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp
@@ -4442,7 +4553,8 @@ Update routing skill proficiency or state.
 
 Requires ANY permissions: 
 
-* routing:skill:assign* admin
+* routing:skill:assign
+* admin
 
 ### Example
 ~~~csharp

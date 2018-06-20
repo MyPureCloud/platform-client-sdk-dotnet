@@ -96,7 +96,6 @@ Get a list of all locations.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -178,7 +177,6 @@ Search locations using the q64 value returned from a previous search
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -252,7 +250,6 @@ Search locations
 
 
 Requires NO permissions: 
-
 
 
 ### Example

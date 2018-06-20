@@ -30,6 +30,21 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
     
         /// <summary>
         /// Initializes a new instance of the <see cref="MessageMedia" /> class.
@@ -43,8 +58,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">The optional internet media type of the the media object.  If null then the media type should be dictated by the url.</param>
         
         
-        public MessageMedia(string Url = null, string MediaType = null)
+        
+        /// <param name="ContentLengthBytes">The optional content length of the the media object, in bytes..</param>
+        
+        
+        
+        /// <param name="Name">The optional name of the the media object..</param>
+        
+        
+        
+        /// <param name="Id">The optional id of the the media object..</param>
+        
+        
+        public MessageMedia(string Url = null, string MediaType = null, int? ContentLengthBytes = null, string Name = null, string Id = null)
         {
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             
             
@@ -73,6 +112,33 @@ this.MediaType = MediaType;
             
             
             
+            
+            
+            
+            
+this.ContentLengthBytes = ContentLengthBytes;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Name = Name;
+            
+            
+            
+            
+            
+            
+            
+            
+this.Id = Id;
+            
+            
+            
+            
         }
         
         
@@ -94,6 +160,33 @@ this.MediaType = MediaType;
         public string MediaType { get; set; }
         
         
+        
+        /// <summary>
+        /// The optional content length of the the media object, in bytes.
+        /// </summary>
+        /// <value>The optional content length of the the media object, in bytes.</value>
+        [DataMember(Name="contentLengthBytes", EmitDefaultValue=false)]
+        public int? ContentLengthBytes { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The optional name of the the media object.
+        /// </summary>
+        /// <value>The optional name of the the media object.</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+        
+        
+        
+        /// <summary>
+        /// The optional id of the the media object.
+        /// </summary>
+        /// <value>The optional id of the the media object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -106,6 +199,12 @@ this.MediaType = MediaType;
             sb.Append("  Url: ").Append(Url).Append("\n");
             
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            
+            sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
+            
+            sb.Append("  Name: ").Append(Name).Append("\n");
+            
+            sb.Append("  Id: ").Append(Id).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +251,21 @@ this.MediaType = MediaType;
                     this.MediaType == other.MediaType ||
                     this.MediaType != null &&
                     this.MediaType.Equals(other.MediaType)
+                ) &&
+                (
+                    this.ContentLengthBytes == other.ContentLengthBytes ||
+                    this.ContentLengthBytes != null &&
+                    this.ContentLengthBytes.Equals(other.ContentLengthBytes)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 );
         }
 
@@ -172,6 +286,15 @@ this.MediaType = MediaType;
                 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+                
+                if (this.ContentLengthBytes != null)
+                    hash = hash * 59 + this.ContentLengthBytes.GetHashCode();
+                
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+                
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
                 
                 return hash;
             }

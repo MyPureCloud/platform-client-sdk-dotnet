@@ -26,7 +26,6 @@ Search using the q64 value returned from a previous search.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -106,7 +105,6 @@ Suggest resources using the q64 value returned from a previous suggest query.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -190,7 +188,6 @@ Search resources.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -264,7 +261,6 @@ Suggest resources.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

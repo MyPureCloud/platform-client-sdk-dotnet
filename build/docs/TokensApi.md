@@ -24,7 +24,6 @@ Delete  auth token used to make the request.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -82,7 +81,6 @@ Fetch information about the current token
 
 
 Requires NO permissions: 
-
 
 
 ### Example

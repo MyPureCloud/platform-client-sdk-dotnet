@@ -20,12 +20,53 @@ namespace PureCloudPlatform.Client.V2.Model
     {
         
         
+        /// <summary>
+        /// The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.
+        /// </summary>
+        /// <value>The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum FreeSeatingStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum On for "ON"
+            /// </summary>
+            [EnumMember(Value = "ON")]
+            On,
+            
+            /// <summary>
+            /// Enum Off for "OFF"
+            /// </summary>
+            [EnumMember(Value = "OFF")]
+            Off,
+            
+            /// <summary>
+            /// Enum Partial for "PARTIAL"
+            /// </summary>
+            [EnumMember(Value = "PARTIAL")]
+            Partial
+        }
         
         
         
         
         
         
+        
+        
+        /// <summary>
+        /// The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.
+        /// </summary>
+        /// <value>The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out.</value>
+        [DataMember(Name="freeSeatingState", EmitDefaultValue=false)]
+        public FreeSeatingStateEnum? FreeSeatingState { get; set; }
         
         
         
@@ -36,14 +77,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         
         
-        /// <param name="Enabled">Whether or not free-seating is enabled for the organization.</param>
+        /// <param name="FreeSeatingState">The FreeSeatingState for FreeSeatingConfiguration. Can be ON, OFF, or PARTIAL. ON meaning disassociate the user after the ttl expires, OFF meaning never disassociate the user, and PARTIAL meaning only disassociate when a user explicitly clicks log out..</param>
         
         
         
         /// <param name="TtlMinutes">The amount of time in minutes until an offline user is disassociated from their station.</param>
         
         
-        public FreeSeatingConfiguration(bool? Enabled = null, int? TtlMinutes = null)
+        public FreeSeatingConfiguration(FreeSeatingStateEnum? FreeSeatingState = null, int? TtlMinutes = null)
         {
             
             
@@ -59,7 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-this.Enabled = Enabled;
+this.FreeSeatingState = FreeSeatingState;
             
             
             
@@ -76,13 +117,6 @@ this.TtlMinutes = TtlMinutes;
         }
         
         
-        
-        /// <summary>
-        /// Whether or not free-seating is enabled for the organization
-        /// </summary>
-        /// <value>Whether or not free-seating is enabled for the organization</value>
-        [DataMember(Name="enabled", EmitDefaultValue=false)]
-        public bool? Enabled { get; set; }
         
         
         
@@ -103,7 +137,7 @@ this.TtlMinutes = TtlMinutes;
             var sb = new StringBuilder();
             sb.Append("class FreeSeatingConfiguration {\n");
             
-            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
+            sb.Append("  FreeSeatingState: ").Append(FreeSeatingState).Append("\n");
             
             sb.Append("  TtlMinutes: ").Append(TtlMinutes).Append("\n");
             
@@ -144,9 +178,9 @@ this.TtlMinutes = TtlMinutes;
 
             return true &&
                 (
-                    this.Enabled == other.Enabled ||
-                    this.Enabled != null &&
-                    this.Enabled.Equals(other.Enabled)
+                    this.FreeSeatingState == other.FreeSeatingState ||
+                    this.FreeSeatingState != null &&
+                    this.FreeSeatingState.Equals(other.FreeSeatingState)
                 ) &&
                 (
                     this.TtlMinutes == other.TtlMinutes ||
@@ -167,8 +201,8 @@ this.TtlMinutes = TtlMinutes;
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
                 
-                if (this.Enabled != null)
-                    hash = hash * 59 + this.Enabled.GetHashCode();
+                if (this.FreeSeatingState != null)
+                    hash = hash * 59 + this.FreeSeatingState.GetHashCode();
                 
                 if (this.TtlMinutes != null)
                     hash = hash * 59 + this.TtlMinutes.GetHashCode();

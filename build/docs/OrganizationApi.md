@@ -26,7 +26,6 @@ Fetch field config for an entity type
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -94,7 +93,6 @@ Get organization.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

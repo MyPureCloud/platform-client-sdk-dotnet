@@ -240,7 +240,8 @@ Delete specified user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -315,7 +316,8 @@ Delete specified user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -390,7 +392,8 @@ Multiple IDs can be specified, in which case all specified prompts will be delet
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -598,7 +601,8 @@ Delete a system prompt resource override.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -673,7 +677,8 @@ Delete flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -742,7 +747,8 @@ Multiple IDs can be specified, in which case all specified flows will be deleted
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -962,7 +968,9 @@ Get Dependency Tracking objects that have a given display name
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1074,7 +1082,9 @@ Get Dependency Tracking build status for an organization
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1135,7 +1145,9 @@ Get resources that are consumed by a given Dependency Tracking object
 
 Requires ANY permissions: 
 
-* admin* editor* readonly
+* admin
+* editor
+* readonly
 
 ### Example
 ~~~csharp
@@ -1223,7 +1235,9 @@ Get resources that consume a given Dependency Tracking object
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1305,7 +1319,9 @@ Get Dependency Tracking objects that consume deleted resources
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1411,7 +1427,9 @@ Get a Dependency Tracking object
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1517,7 +1535,9 @@ Get a Dependency Tracking type.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1587,7 +1607,9 @@ Get Dependency Tracking types.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -1663,7 +1685,9 @@ Get Dependency Tracking objects that depend on updated resources
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2091,7 +2115,9 @@ Get specified user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2161,7 +2187,9 @@ Get generated prompt history
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2267,7 +2295,9 @@ Get specified user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2343,7 +2373,9 @@ The returned list is pageable, and query parameters can be used for filtering.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2425,7 +2457,9 @@ The returned list is pageable, and query parameters can be used for filtering.  
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2859,7 +2893,9 @@ Get a system prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -2929,7 +2965,9 @@ Get generated prompt history
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3035,7 +3073,9 @@ Get a system prompt resource.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3111,7 +3151,9 @@ Get system prompt resources.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3205,7 +3247,9 @@ Get System Prompts
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3311,7 +3355,9 @@ Get flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3387,7 +3433,9 @@ Get generated flow history
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3493,7 +3541,9 @@ Get the latest configuration for flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3569,7 +3619,9 @@ Get flow version
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3651,7 +3703,9 @@ Create flow version configuration
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3733,7 +3787,9 @@ Get flow version list
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -3821,7 +3877,9 @@ Multiple IDs can be specified, in which case all matching flows will be returned
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -4513,7 +4571,7 @@ void (empty response body)
 
 <a name="postarchitectemergencygroups"></a>
 
-## [**EmergencyGroup**](EmergencyGroup.html) PostArchitectEmergencygroups (EmergencyGroup body = null)
+## [**EmergencyGroup**](EmergencyGroup.html) PostArchitectEmergencygroups (EmergencyGroup body)
 
 
 
@@ -4548,7 +4606,7 @@ namespace Example
             
             
             
-            var body = new EmergencyGroup(); // EmergencyGroup |  (optional) 
+            var body = new EmergencyGroup(); // EmergencyGroup | 
             
             
 
@@ -4574,7 +4632,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4583,7 +4641,7 @@ namespace Example
 
 <a name="postarchitectivrs"></a>
 
-## [**IVR**](IVR.html) PostArchitectIvrs (IVR body = null)
+## [**IVR**](IVR.html) PostArchitectIvrs (IVR body)
 
 
 
@@ -4618,7 +4676,7 @@ namespace Example
             
             
             
-            var body = new IVR(); // IVR |  (optional) 
+            var body = new IVR(); // IVR | 
             
             
 
@@ -4644,7 +4702,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**IVR**](IVR.html)|  | [optional]  |
+| **body** | [**IVR**](IVR.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4663,7 +4721,9 @@ Asynchronous.  Notification topic: v2.architect.prompts.{promptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -4723,7 +4783,7 @@ namespace Example
 
 <a name="postarchitectpromptresources"></a>
 
-## [**PromptAsset**](PromptAsset.html) PostArchitectPromptResources (string promptId, PromptAssetCreate body = null)
+## [**PromptAsset**](PromptAsset.html) PostArchitectPromptResources (string promptId, PromptAssetCreate body)
 
 
 
@@ -4733,7 +4793,8 @@ Create a new user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -4763,7 +4824,7 @@ namespace Example
             
             
             
-            var body = new PromptAssetCreate(); // PromptAssetCreate |  (optional) 
+            var body = new PromptAssetCreate(); // PromptAssetCreate | 
             
             
 
@@ -4790,7 +4851,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
-| **body** | [**PromptAssetCreate**](PromptAssetCreate.html)|  | [optional]  |
+| **body** | [**PromptAssetCreate**](PromptAssetCreate.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4799,7 +4860,7 @@ namespace Example
 
 <a name="postarchitectprompts"></a>
 
-## [**Prompt**](Prompt.html) PostArchitectPrompts (Prompt body = null)
+## [**Prompt**](Prompt.html) PostArchitectPrompts (Prompt body)
 
 
 
@@ -4809,7 +4870,8 @@ Create a new user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -4834,7 +4896,7 @@ namespace Example
             
             
             
-            var body = new Prompt(); // Prompt |  (optional) 
+            var body = new Prompt(); // Prompt | 
             
             
 
@@ -4860,7 +4922,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Prompt**](Prompt.html)|  | [optional]  |
+| **body** | [**Prompt**](Prompt.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4869,7 +4931,7 @@ namespace Example
 
 <a name="postarchitectschedulegroups"></a>
 
-## [**ScheduleGroup**](ScheduleGroup.html) PostArchitectSchedulegroups (ScheduleGroup body = null)
+## [**ScheduleGroup**](ScheduleGroup.html) PostArchitectSchedulegroups (ScheduleGroup body)
 
 
 
@@ -4904,7 +4966,7 @@ namespace Example
             
             
             
-            var body = new ScheduleGroup(); // ScheduleGroup |  (optional) 
+            var body = new ScheduleGroup(); // ScheduleGroup | 
             
             
 
@@ -4930,7 +4992,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -4939,7 +5001,7 @@ namespace Example
 
 <a name="postarchitectschedules"></a>
 
-## [**Schedule**](Schedule.html) PostArchitectSchedules (Schedule body = null)
+## [**Schedule**](Schedule.html) PostArchitectSchedules (Schedule body)
 
 
 
@@ -4974,7 +5036,7 @@ namespace Example
             
             
             
-            var body = new Schedule(); // Schedule |  (optional) 
+            var body = new Schedule(); // Schedule | 
             
             
 
@@ -5000,7 +5062,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+| **body** | [**Schedule**](Schedule.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5019,7 +5081,9 @@ Asynchronous.  Notification topic: v2.architect.systemprompts.{systemPromptId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -5079,7 +5143,7 @@ namespace Example
 
 <a name="postarchitectsystempromptresources"></a>
 
-## [**SystemPromptAsset**](SystemPromptAsset.html) PostArchitectSystempromptResources (string promptId, SystemPromptAsset body = null)
+## [**SystemPromptAsset**](SystemPromptAsset.html) PostArchitectSystempromptResources (string promptId, SystemPromptAsset body)
 
 
 
@@ -5089,7 +5153,8 @@ Create system prompt resource override.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5119,7 +5184,7 @@ namespace Example
             
             
             
-            var body = new SystemPromptAsset(); // SystemPromptAsset |  (optional) 
+            var body = new SystemPromptAsset(); // SystemPromptAsset | 
             
             
 
@@ -5146,7 +5211,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
-| **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional]  |
+| **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5155,7 +5220,7 @@ namespace Example
 
 <a name="postflowversions"></a>
 
-## [**FlowVersion**](FlowVersion.html) PostFlowVersions (string flowId, Object body = null)
+## [**FlowVersion**](FlowVersion.html) PostFlowVersions (string flowId, Object body)
 
 
 
@@ -5165,7 +5230,8 @@ Create flow version
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5194,7 +5260,7 @@ namespace Example
             
             
             
-            var body = ;  // Object |  (optional) 
+            var body = ;  // Object | 
             
             
             
@@ -5222,7 +5288,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-| **body** | **Object**|  | [optional]  |
+| **body** | **Object**|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5231,7 +5297,7 @@ namespace Example
 
 <a name="postflows"></a>
 
-## [**Flow**](Flow.html) PostFlows (Flow body = null)
+## [**Flow**](Flow.html) PostFlows (Flow body)
 
 
 
@@ -5241,7 +5307,9 @@ Create flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor* architect:user:readonly
+* architect:user:admin
+* architect:user:editor
+* architect:user:readonly
 
 ### Example
 ~~~csharp
@@ -5266,7 +5334,7 @@ namespace Example
             
             
             
-            var body = new Flow(); // Flow |  (optional) 
+            var body = new Flow(); // Flow | 
             
             
 
@@ -5292,7 +5360,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**Flow**](Flow.html)|  | [optional]  |
+| **body** | [**Flow**](Flow.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5311,7 +5379,8 @@ Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5381,7 +5450,8 @@ Check-out flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5451,7 +5521,8 @@ Deactivate flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5521,7 +5592,8 @@ Asynchronous.  Notification topic: v2.flows.{flowId}
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5597,7 +5669,8 @@ Revert flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -5873,7 +5946,7 @@ namespace Example
 
 <a name="putarchitectemergencygroup"></a>
 
-## [**EmergencyGroup**](EmergencyGroup.html) PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body = null)
+## [**EmergencyGroup**](EmergencyGroup.html) PutArchitectEmergencygroup (string emergencyGroupId, EmergencyGroup body)
 
 
 
@@ -5913,7 +5986,7 @@ namespace Example
             
             
             
-            var body = new EmergencyGroup(); // EmergencyGroup |  (optional) 
+            var body = new EmergencyGroup(); // EmergencyGroup | 
             
             
 
@@ -5940,7 +6013,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **emergencyGroupId** | **string**| Emergency group ID |  |
-| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  | [optional]  |
+| **body** | [**EmergencyGroup**](EmergencyGroup.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -5949,7 +6022,7 @@ namespace Example
 
 <a name="putarchitectivr"></a>
 
-## [**IVR**](IVR.html) PutArchitectIvr (string ivrId, IVR body = null)
+## [**IVR**](IVR.html) PutArchitectIvr (string ivrId, IVR body)
 
 
 
@@ -5989,7 +6062,7 @@ namespace Example
             
             
             
-            var body = new IVR(); // IVR |  (optional) 
+            var body = new IVR(); // IVR | 
             
             
 
@@ -6016,7 +6089,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ivrId** | **string**| IVR id |  |
-| **body** | [**IVR**](IVR.html)|  | [optional]  |
+| **body** | [**IVR**](IVR.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6025,7 +6098,7 @@ namespace Example
 
 <a name="putarchitectprompt"></a>
 
-## [**Prompt**](Prompt.html) PutArchitectPrompt (string promptId, Prompt body = null)
+## [**Prompt**](Prompt.html) PutArchitectPrompt (string promptId, Prompt body)
 
 
 
@@ -6035,7 +6108,8 @@ Update specified user prompt
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -6065,7 +6139,7 @@ namespace Example
             
             
             
-            var body = new Prompt(); // Prompt |  (optional) 
+            var body = new Prompt(); // Prompt | 
             
             
 
@@ -6092,7 +6166,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
-| **body** | [**Prompt**](Prompt.html)|  | [optional]  |
+| **body** | [**Prompt**](Prompt.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6101,7 +6175,7 @@ namespace Example
 
 <a name="putarchitectpromptresource"></a>
 
-## [**PromptAsset**](PromptAsset.html) PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body = null)
+## [**PromptAsset**](PromptAsset.html) PutArchitectPromptResource (string promptId, string languageCode, PromptAsset body)
 
 
 
@@ -6111,7 +6185,8 @@ Update specified user prompt resource
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -6146,7 +6221,7 @@ namespace Example
             
             
             
-            var body = new PromptAsset(); // PromptAsset |  (optional) 
+            var body = new PromptAsset(); // PromptAsset | 
             
             
 
@@ -6174,7 +6249,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
-| **body** | [**PromptAsset**](PromptAsset.html)|  | [optional]  |
+| **body** | [**PromptAsset**](PromptAsset.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6183,7 +6258,7 @@ namespace Example
 
 <a name="putarchitectschedule"></a>
 
-## [**Schedule**](Schedule.html) PutArchitectSchedule (string scheduleId, Schedule body = null)
+## [**Schedule**](Schedule.html) PutArchitectSchedule (string scheduleId, Schedule body)
 
 
 
@@ -6223,7 +6298,7 @@ namespace Example
             
             
             
-            var body = new Schedule(); // Schedule |  (optional) 
+            var body = new Schedule(); // Schedule | 
             
             
 
@@ -6250,7 +6325,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleId** | **string**| Schedule ID |  |
-| **body** | [**Schedule**](Schedule.html)|  | [optional]  |
+| **body** | [**Schedule**](Schedule.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6259,7 +6334,7 @@ namespace Example
 
 <a name="putarchitectschedulegroup"></a>
 
-## [**ScheduleGroup**](ScheduleGroup.html) PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body = null)
+## [**ScheduleGroup**](ScheduleGroup.html) PutArchitectSchedulegroup (string scheduleGroupId, ScheduleGroup body)
 
 
 
@@ -6299,7 +6374,7 @@ namespace Example
             
             
             
-            var body = new ScheduleGroup(); // ScheduleGroup |  (optional) 
+            var body = new ScheduleGroup(); // ScheduleGroup | 
             
             
 
@@ -6326,7 +6401,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **scheduleGroupId** | **string**| Schedule group ID |  |
-| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  | [optional]  |
+| **body** | [**ScheduleGroup**](ScheduleGroup.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6335,7 +6410,7 @@ namespace Example
 
 <a name="putarchitectsystempromptresource"></a>
 
-## [**SystemPromptAsset**](SystemPromptAsset.html) PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body = null)
+## [**SystemPromptAsset**](SystemPromptAsset.html) PutArchitectSystempromptResource (string promptId, string languageCode, SystemPromptAsset body)
 
 
 
@@ -6345,7 +6420,8 @@ Updates a system prompt resource override.
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -6380,7 +6456,7 @@ namespace Example
             
             
             
-            var body = new SystemPromptAsset(); // SystemPromptAsset |  (optional) 
+            var body = new SystemPromptAsset(); // SystemPromptAsset | 
             
             
 
@@ -6408,7 +6484,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **promptId** | **string**| Prompt ID |  |
 | **languageCode** | **string**| Language |  |
-| **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  | [optional]  |
+| **body** | [**SystemPromptAsset**](SystemPromptAsset.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type
@@ -6417,7 +6493,7 @@ namespace Example
 
 <a name="putflow"></a>
 
-## [**Flow**](Flow.html) PutFlow (string flowId, Flow body = null)
+## [**Flow**](Flow.html) PutFlow (string flowId, Flow body)
 
 
 
@@ -6427,7 +6503,8 @@ Update flow
 
 Requires ANY permissions: 
 
-* architect:user:admin* architect:user:editor
+* architect:user:admin
+* architect:user:editor
 
 ### Example
 ~~~csharp
@@ -6457,7 +6534,7 @@ namespace Example
             
             
             
-            var body = new Flow(); // Flow |  (optional) 
+            var body = new Flow(); // Flow | 
             
             
 
@@ -6484,7 +6561,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **flowId** | **string**| Flow ID |  |
-| **body** | [**Flow**](Flow.html)|  | [optional]  |
+| **body** | [**Flow**](Flow.html)|  |  |
 {: class="table table-striped"}
 
 ### Return type

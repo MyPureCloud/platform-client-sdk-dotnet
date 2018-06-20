@@ -105,7 +105,6 @@ Remove members
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -181,7 +180,6 @@ Fetch field config for an entity type
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -249,7 +247,6 @@ Get group
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -321,7 +318,6 @@ Get all individuals associated with the group
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -389,7 +385,6 @@ Get group members, includes individuals, owners, and dynamically included people
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -485,7 +480,6 @@ Get group profile
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -559,7 +553,6 @@ Get a group list
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -649,7 +642,6 @@ Search groups using the q64 value returned from a previous search
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -723,7 +715,6 @@ Get group profile listing
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -813,7 +804,6 @@ Add members
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -888,7 +878,8 @@ Create a group
 
 Requires ANY permissions: 
 
-* group_administration* group_creation
+* group_administration
+* group_creation
 
 ### Example
 ~~~csharp
@@ -957,7 +948,6 @@ Search groups
 
 
 Requires NO permissions: 
-
 
 
 ### Example

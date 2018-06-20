@@ -2652,7 +2652,8 @@ Get the URI of a contact list export.
 
 Requires ALL permissions: 
 
-* outbound:contact:view* outbound:contactList:view
+* outbound:contact:view
+* outbound:contactList:view
 
 ### Example
 ~~~csharp
@@ -3174,7 +3175,8 @@ Get the URI of a DNC list export.
 
 Requires ALL permissions: 
 
-* outbound:dnc:view* outbound:dncList:view
+* outbound:dnc:view
+* outbound:dncList:view
 
 ### Example
 ~~~csharp
@@ -4712,7 +4714,6 @@ This endpoint is deprecated and may have unexpected results. Please use \"/conve
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -5167,7 +5168,8 @@ Returns 200 if received OK.
 
 Requires ALL permissions: 
 
-* outbound:contact:view* outbound:contactList:view
+* outbound:contact:view
+* outbound:contactList:view
 
 ### Example
 ~~~csharp
@@ -5516,7 +5518,8 @@ Returns 200 if received OK.
 
 Requires ALL permissions: 
 
-* outbound:dnc:view* outbound:dncList:view
+* outbound:dnc:view
+* outbound:dncList:view
 
 ### Example
 ~~~csharp
@@ -6174,7 +6177,6 @@ Send notification that an agent's state changed
 New agent state.
 
 Requires NO permissions: 
-
 
 
 ### Example

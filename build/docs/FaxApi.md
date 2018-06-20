@@ -28,7 +28,6 @@ Delete a fax document.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -95,7 +94,6 @@ Get a document.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -167,7 +165,6 @@ Download a fax document.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -235,7 +232,6 @@ Get a list of fax documents.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -313,7 +309,6 @@ Get fax summary
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -372,7 +367,6 @@ Update a fax document.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

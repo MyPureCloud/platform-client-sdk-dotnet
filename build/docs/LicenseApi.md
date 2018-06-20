@@ -29,7 +29,9 @@ Get PureCloud license definition.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -99,7 +101,9 @@ Get all PureCloud license definitions available for the organization.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -160,7 +164,9 @@ Get license assignments for the organization.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -221,7 +227,9 @@ Get PureCloud license feature toggle value.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -291,7 +299,9 @@ Get licenses for specified user.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -361,7 +371,9 @@ Update the organization's license assignments in a batch.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -431,7 +443,9 @@ Switch PureCloud license feature toggle value.
 
 Requires ANY permissions: 
 
-* admin* role_manager* authorization:grant:add
+* admin
+* role_manager
+* authorization:grant:add
 
 ### Example
 ~~~csharp
@@ -500,7 +514,6 @@ Fetch user licenses in a batch.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

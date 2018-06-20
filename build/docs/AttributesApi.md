@@ -28,7 +28,6 @@ This will remove attribute.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -95,7 +94,6 @@ Get details about an existing attribute.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -165,7 +163,6 @@ Gets a list of existing attributes.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -243,7 +240,6 @@ Create an attribute.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -313,7 +309,6 @@ Query attributes
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -381,7 +376,6 @@ Update an existing attribute.
 Fields that can be updated: name, description. The most recent version is required for updates.
 
 Requires NO permissions: 
-
 
 
 ### Example

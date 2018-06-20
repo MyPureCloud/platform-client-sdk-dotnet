@@ -25,7 +25,6 @@ Get the current system date/time
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -84,7 +83,6 @@ Get time zones list
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -160,7 +158,6 @@ Returns the information about an X509 PEM encoded certificate or certificate cha
 
 
 Requires NO permissions: 
-
 
 
 ### Example

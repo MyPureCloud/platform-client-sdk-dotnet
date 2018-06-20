@@ -44,6 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The denominator to be used in determining the compliance abandon rate
         /// </summary>
@@ -71,6 +74,8 @@ namespace PureCloudPlatform.Client.V2.Model
             [EnumMember(Value = "CALLS_THAT_REACHED_QUEUE")]
             CallsThatReachedQueue
         }
+        
+        
         
         
         
@@ -129,6 +134,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
         /// <param name="MaxLineUtilization">The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0].</param>
         
         
@@ -144,6 +151,8 @@ namespace PureCloudPlatform.Client.V2.Model
         
         public OutboundSettings(string Name = null, int? Version = null, int? MaxCallsPerAgent = null, double? MaxLineUtilization = null, double? AbandonSeconds = null, ComplianceAbandonRateDenominatorEnum? ComplianceAbandonRateDenominator = null)
         {
+            
+            
             
             
             
@@ -207,6 +216,8 @@ this.Version = Version;
             
             
 this.MaxCallsPerAgent = MaxCallsPerAgent;
+            
+            
             
             
             
@@ -298,6 +309,15 @@ this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
         
         
         /// <summary>
+        /// The maximum number of calls that can be configured to be placed per agent on any campaign
+        /// </summary>
+        /// <value>The maximum number of calls that can be configured to be placed per agent on any campaign</value>
+        [DataMember(Name="maxConfigurableCallsPerAgent", EmitDefaultValue=false)]
+        public int? MaxConfigurableCallsPerAgent { get; private set; }
+        
+        
+        
+        /// <summary>
         /// The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0]
         /// </summary>
         /// <value>The maximum percentage of lines that should be used for Outbound, expressed as a decimal in the range [0.0, 1.0]</value>
@@ -345,6 +365,8 @@ this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
             sb.Append("  Version: ").Append(Version).Append("\n");
             
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
+            
+            sb.Append("  MaxConfigurableCallsPerAgent: ").Append(MaxConfigurableCallsPerAgent).Append("\n");
             
             sb.Append("  MaxLineUtilization: ").Append(MaxLineUtilization).Append("\n");
             
@@ -421,6 +443,11 @@ this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
                     this.MaxCallsPerAgent.Equals(other.MaxCallsPerAgent)
                 ) &&
                 (
+                    this.MaxConfigurableCallsPerAgent == other.MaxConfigurableCallsPerAgent ||
+                    this.MaxConfigurableCallsPerAgent != null &&
+                    this.MaxConfigurableCallsPerAgent.Equals(other.MaxConfigurableCallsPerAgent)
+                ) &&
+                (
                     this.MaxLineUtilization == other.MaxLineUtilization ||
                     this.MaxLineUtilization != null &&
                     this.MaxLineUtilization.Equals(other.MaxLineUtilization)
@@ -471,6 +498,9 @@ this.ComplianceAbandonRateDenominator = ComplianceAbandonRateDenominator;
                 
                 if (this.MaxCallsPerAgent != null)
                     hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();
+                
+                if (this.MaxConfigurableCallsPerAgent != null)
+                    hash = hash * 59 + this.MaxConfigurableCallsPerAgent.GetHashCode();
                 
                 if (this.MaxLineUtilization != null)
                     hash = hash * 59 + this.MaxLineUtilization.GetHashCode();

@@ -43,6 +43,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsEmailParticipantWrapupcodes**](ConversationsApi.html#getconversationsemailparticipantwrapupcodes) | **GET** /api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
 | [**GetConversationsEmails**](ConversationsApi.html#getconversationsemails) | **GET** /api/v2/conversations/emails | Get active email conversations for the logged in user |
 | [**GetConversationsMessage**](ConversationsApi.html#getconversationsmessage) | **GET** /api/v2/conversations/messages/{conversationId} | Get message conversation |
+| [**GetConversationsMessageCommunicationMessagesMediaMediaId**](ConversationsApi.html#getconversationsmessagecommunicationmessagesmediamediaid) | **GET** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} | Get media |
 | [**GetConversationsMessageMessage**](ConversationsApi.html#getconversationsmessagemessage) | **GET** /api/v2/conversations/messages/{conversationId}/messages/{messageId} | Get message |
 | [**GetConversationsMessageParticipantWrapup**](ConversationsApi.html#getconversationsmessageparticipantwrapup) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup | Get the wrap-up for this conversation participant.  |
 | [**GetConversationsMessageParticipantWrapupcodes**](ConversationsApi.html#getconversationsmessageparticipantwrapupcodes) | **GET** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes | Get list of wrapup codes for this conversation participant |
@@ -99,6 +100,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsEmails**](ConversationsApi.html#postconversationsemails) | **POST** /api/v2/conversations/emails | Create an email conversation |
 | [**PostConversationsFaxes**](ConversationsApi.html#postconversationsfaxes) | **POST** /api/v2/conversations/faxes | Create Fax Conversation |
 | [**PostConversationsMessageCommunicationMessages**](ConversationsApi.html#postconversationsmessagecommunicationmessages) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages | Send message |
+| [**PostConversationsMessageCommunicationMessagesMedia**](ConversationsApi.html#postconversationsmessagecommunicationmessagesmedia) | **POST** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Create media |
 | [**PostConversationsMessageMessagesBulk**](ConversationsApi.html#postconversationsmessagemessagesbulk) | **POST** /api/v2/conversations/messages/{conversationId}/messages/bulk | Get messages in batch |
 | [**PostConversationsMessageParticipantReplace**](ConversationsApi.html#postconversationsmessageparticipantreplace) | **POST** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PutConversationsCallParticipantCommunicationUuidata**](ConversationsApi.html#putconversationscallparticipantcommunicationuuidata) | **PUT** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata | Set uuiData to be sent on future commands. |
@@ -116,7 +118,6 @@ Delete a code used to add a communication to this participant
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -199,7 +200,6 @@ Cancel the transfer
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -272,7 +272,6 @@ Delete attachment from draft
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -489,7 +488,6 @@ Fetch info on a secure session
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -571,7 +569,6 @@ Get a list of secure sessions for this participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -645,7 +642,6 @@ Get the wrap-up for this conversation participant.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -729,7 +725,6 @@ Get list of wrapup codes for this conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -805,7 +800,6 @@ Get active conversations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -875,7 +869,6 @@ Get call conversation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -943,7 +936,6 @@ Get the wrap-up for this conversation participant.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1027,7 +1019,6 @@ Get list of wrapup codes for this conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1103,7 +1094,6 @@ Get callback conversation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1171,7 +1161,6 @@ Get the wrap-up for this conversation participant.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1255,7 +1244,6 @@ Get list of wrapup codes for this conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1331,7 +1319,6 @@ Get active callback conversations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1392,7 +1379,6 @@ Get active call conversations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1451,7 +1437,6 @@ Get call history
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1541,7 +1526,6 @@ Get the maximum number of participants that this user can have on a conference
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1600,7 +1584,6 @@ Get chat conversation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1670,7 +1653,6 @@ Get the wrap-up for this conversation participant.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1754,7 +1736,6 @@ Get list of wrapup codes for this conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1830,7 +1811,6 @@ Get active chat conversations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1889,7 +1869,6 @@ Get cobrowse conversation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1959,7 +1938,6 @@ Get the wrap-up for this conversation participant.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2043,7 +2021,6 @@ Get list of wrapup codes for this conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2119,7 +2096,6 @@ Get active cobrowse conversations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2178,7 +2154,6 @@ Get email conversation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2248,7 +2223,6 @@ Get conversation message
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2326,7 +2300,6 @@ Get conversation messages
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2396,7 +2369,6 @@ Get conversation draft reply
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2464,7 +2436,6 @@ Get the wrap-up for this conversation participant.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2548,7 +2519,6 @@ Get list of wrapup codes for this conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2624,7 +2594,6 @@ Get active email conversations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2685,7 +2654,6 @@ Get message conversation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2741,6 +2709,88 @@ namespace Example
 ### Return type
 
 [**MessageConversation**](MessageConversation.html)
+
+<a name="getconversationsmessagecommunicationmessagesmediamediaid"></a>
+
+## [**MessageMediaData**](MessageMediaData.html) GetConversationsMessageCommunicationMessagesMediaMediaId (string conversationId, string communicationId, string mediaId)
+
+
+
+Get media
+
+
+
+Requires ANY permissions: 
+
+* conversation:message:view
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessageCommunicationMessagesMediaMediaIdExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+            
+            var mediaId = mediaId_example;  // string | mediaId
+            
+            
+            
+
+            try
+            {
+                
+                // Get media
+                
+                MessageMediaData result = apiInstance.GetConversationsMessageCommunicationMessagesMediaMediaId(conversationId, communicationId, mediaId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessageCommunicationMessagesMediaMediaId: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+| **mediaId** | **string**| mediaId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessageMediaData**](MessageMediaData.html)
 
 <a name="getconversationsmessagemessage"></a>
 
@@ -2831,7 +2881,6 @@ Get the wrap-up for this conversation participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2913,7 +2962,6 @@ Get list of wrapup codes for this conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2989,7 +3037,6 @@ Get active message conversations for the logged in user
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3048,7 +3095,6 @@ Update a participant.
 Update conversation participant.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3129,7 +3175,6 @@ Update the attributes on a conversation participant.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3288,7 +3333,6 @@ Update conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3369,7 +3413,6 @@ Update the attributes on a conversation participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3448,7 +3491,6 @@ Update conversation participant's communication by disconnecting it.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3536,7 +3578,6 @@ Change who can speak
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3696,7 +3737,6 @@ Update conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3777,7 +3817,6 @@ Update the attributes on a conversation participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3856,7 +3895,6 @@ Update conversation participant's communication by disconnecting it.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -4022,7 +4060,6 @@ Update conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -4103,7 +4140,6 @@ Update the attributes on a conversation participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -4182,7 +4218,6 @@ Update conversation participant's communication by disconnecting it.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -4348,7 +4383,6 @@ Update conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -4429,7 +4463,6 @@ Update the attributes on a conversation participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -4508,7 +4541,6 @@ Update conversation participant's communication by disconnecting it.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -4674,7 +4706,6 @@ Update conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -4755,7 +4786,6 @@ Update the attributes on a conversation participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -4834,7 +4864,6 @@ Update conversation participant's communication by disconnecting it.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -5000,7 +5029,6 @@ Update conversation participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -5081,7 +5109,6 @@ Update the attributes on a conversation participant.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -5160,7 +5187,6 @@ Update conversation participant's communication by disconnecting it.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -5617,7 +5643,6 @@ Sends DTMF to the participant
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -5698,7 +5723,6 @@ Replace this participant with the specified user and/or address
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -5777,7 +5801,6 @@ Create secure IVR session. Only a participant in the conversation can invoke a s
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -5861,7 +5884,6 @@ Place a new call as part of a callback conversation.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -5935,7 +5957,6 @@ Initiate and update consult transfer
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -6094,7 +6115,6 @@ Replace this participant with the specified user and/or address
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -6175,7 +6195,6 @@ Add participants to a conversation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -6249,7 +6268,6 @@ Replace this participant with the specified user and/or address
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -6472,7 +6490,6 @@ Replace this participant with the specified user and/or address
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -6623,7 +6640,6 @@ Replace this participant with the specified user and/or address
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -6704,7 +6720,6 @@ Send an email to an external conversation. An external conversation is one where
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -6780,7 +6795,6 @@ Send an email reply
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -6854,7 +6868,6 @@ Replace this participant with the specified user and/or address
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -7007,7 +7020,6 @@ Create Fax Conversation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -7146,6 +7158,82 @@ namespace Example
 
 [**MessageData**](MessageData.html)
 
+<a name="postconversationsmessagecommunicationmessagesmedia"></a>
+
+## [**MessageMediaData**](MessageMediaData.html) PostConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId)
+
+
+
+Create media
+
+
+
+Requires ANY permissions: 
+
+* conversation:message:create
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessageCommunicationMessagesMediaExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new ConversationsApi();
+            
+            
+            var conversationId = conversationId_example;  // string | conversationId
+            
+            
+            
+            
+            var communicationId = communicationId_example;  // string | communicationId
+            
+            
+            
+
+            try
+            {
+                
+                // Create media
+                
+                MessageMediaData result = apiInstance.PostConversationsMessageCommunicationMessagesMedia(conversationId, communicationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessageCommunicationMessagesMedia: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**MessageMediaData**](MessageMediaData.html)
+
 <a name="postconversationsmessagemessagesbulk"></a>
 
 ## [**TextMessageListing**](TextMessageListing.html) PostConversationsMessageMessagesBulk (string conversationId, List<string> body = null)
@@ -7235,7 +7323,6 @@ Replace this participant with the specified user and/or address
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -7314,7 +7401,6 @@ Set uuiData to be sent on future commands.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -7402,7 +7488,6 @@ Update conversation draft reply
 
 
 Requires NO permissions: 
-
 
 
 ### Example

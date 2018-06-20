@@ -36,7 +36,6 @@ Search documentation using the q64 value returned from a previous search
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -104,7 +103,6 @@ Search groups using the q64 value returned from a previous search
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -182,7 +180,6 @@ Search locations using the q64 value returned from a previous search
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -256,7 +253,6 @@ Search using the q64 value returned from a previous search.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -340,7 +336,6 @@ Suggest resources using the q64 value returned from a previous suggest query.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -422,7 +417,6 @@ Search users using the q64 value returned from a previous search
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -496,7 +490,6 @@ Search voicemails using the q64 value returned from a previous search
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -574,7 +567,6 @@ Search documentation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -642,7 +634,6 @@ Search groups
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -714,7 +705,6 @@ Search locations
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -782,7 +772,6 @@ Search resources.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -860,7 +849,6 @@ Suggest resources.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -936,7 +924,6 @@ Search users
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1004,7 +991,6 @@ Search voicemails
 
 
 Requires NO permissions: 
-
 
 
 ### Example

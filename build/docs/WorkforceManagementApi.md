@@ -103,7 +103,21 @@ Get activity codes
 
 Requires ANY permissions: 
 
-* wfm:activityCode:administer* wfm:agent:administer* wfm:agentSchedule:view* wfm:historicalAdherence:view* wfm:intraday:view* wfm:managementUnit:administer* wfm:publishedSchedule:view* wfm:realtimeAdherence:view* wfm:schedule:administer* wfm:schedule:generate* wfm:serviceGoalGroup:administer* wfm:shortTermForecast:administer* wfm:agentTimeOffRequest:submit* wfm:timeOffRequest:administer* wfm:workPlan:administer
+* wfm:activityCode:administer
+* wfm:agent:administer
+* wfm:agentSchedule:view
+* wfm:historicalAdherence:view
+* wfm:intraday:view
+* wfm:managementUnit:administer
+* wfm:publishedSchedule:view
+* wfm:realtimeAdherence:view
+* wfm:schedule:administer
+* wfm:schedule:generate
+* wfm:serviceGoalGroup:administer
+* wfm:shortTermForecast:administer
+* wfm:agentTimeOffRequest:submit
+* wfm:timeOffRequest:administer
+* wfm:workPlan:administer
 
 ### Example
 ~~~csharp
@@ -414,6 +428,9 @@ Get agents in the management unit
 Requires ANY permissions: 
 
 * wfm:agent:administer
+* wfm:timeOffRequest:administer
+* wfm:realtimeAdherence:view
+* wfm:historicalAdherence:view
 
 ### Example
 ~~~csharp
@@ -473,7 +490,7 @@ namespace Example
 
 <a name="getworkforcemanagementmanagementunits"></a>
 
-## [**ManagementUnitListing**](ManagementUnitListing.html) GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null)
+## [**ManagementUnitListing**](ManagementUnitListing.html) GetWorkforcemanagementManagementunits (int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
 
 
 
@@ -482,7 +499,6 @@ Get management units
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -521,13 +537,23 @@ namespace Example
             
             
             
+            
+            var feature = feature_example;  // string |  (optional) 
+            
+            
+            
+            
+            var divisionId = divisionId_example;  // string |  (optional) 
+            
+            
+            
 
             try
             {
                 
                 // Get management units
                 
-                ManagementUnitListing result = apiInstance.GetWorkforcemanagementManagementunits(pageSize, pageNumber, expand);
+                ManagementUnitListing result = apiInstance.GetWorkforcemanagementManagementunits(pageSize, pageNumber, expand, feature, divisionId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -547,6 +573,8 @@ namespace Example
 | **pageSize** | **int?**|  | [optional]  |
 | **pageNumber** | **int?**|  | [optional]  |
 | **expand** | **string**|  | [optional] <br />**Values**: details |
+| **feature** | **string**|  | [optional] <br />**Values**: Agents, ActivityCodes, HistoricalAdherence, IntradayMonitoring, ManagementUnits, RealTimeAdherence, Schedules, ServiceGoalGroups, ShortTermForecasts, TimeOffRequests, WorkPlans |
+| **divisionId** | **string**|  | [optional]  |
 {: class="table table-striped"}
 
 ### Return type
@@ -881,7 +909,8 @@ Query published schedules for given given time range for set of users
 
 Requires ANY permissions: 
 
-* wfm:schedule:administer* wfm:publishedSchedule:view
+* wfm:schedule:administer
+* wfm:publishedSchedule:view
 
 ### Example
 ~~~csharp

@@ -99,7 +99,6 @@ Get a Presence Definition
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -173,7 +172,6 @@ Get an Organization's list of Presence Definitions
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -263,7 +261,6 @@ Get the list of SystemPresences
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -322,7 +319,6 @@ Get a user's Presence
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -398,7 +394,6 @@ Patch a user's Presence
 The presence object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the 'source' defined in the path as the user's primary presence source. Option 2: Provide the presenceDefinition value. The 'id' is the only value required within the presenceDefinition. Option 3: Provide the message value. Option 1 can be combined with Option 2 and/or Option 3.
 
 Requires NO permissions: 
-
 
 
 ### Example

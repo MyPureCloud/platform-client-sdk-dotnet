@@ -1208,7 +1208,8 @@ Update/Create ADFS Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1278,7 +1279,8 @@ Update/Create Customer Interaction Center (CIC) Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1348,7 +1350,8 @@ Update/Create G Suite Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1418,7 +1421,8 @@ Update/Create IdentityNow Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1488,7 +1492,8 @@ Update/Create Okta Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1558,7 +1563,8 @@ Update/Create OneLogin Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1628,7 +1634,8 @@ Update/Create Ping Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1698,7 +1705,8 @@ Update/Create PureCloud Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp
@@ -1768,7 +1776,8 @@ Update/Create Salesforce Identity Provider
 
 Requires ANY permissions: 
 
-* sso:provider:add* sso:provider:edit
+* sso:provider:add
+* sso:provider:edit
 
 ### Example
 ~~~csharp

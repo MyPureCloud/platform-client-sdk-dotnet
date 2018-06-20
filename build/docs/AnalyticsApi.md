@@ -46,7 +46,6 @@ Delete a scheduled report job.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -246,7 +245,6 @@ Get list of reporting metadata.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -328,7 +326,6 @@ Get a reporting metadata.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -404,7 +401,6 @@ Get a list of report formats.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -463,7 +459,6 @@ Get a scheduled report job.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -533,7 +528,6 @@ Get list of completed scheduled report jobs.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -617,7 +611,6 @@ Get most recently completed scheduled report job.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -685,7 +678,6 @@ A completed scheduled report job
 A completed scheduled report job.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -763,7 +755,6 @@ Get a list of scheduled report jobs.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -837,7 +828,6 @@ Get a list of report time periods.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1326,7 +1316,6 @@ Place a scheduled report immediately into the reporting queue
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1394,7 +1383,6 @@ Create a scheduled report job
 Create a scheduled report job.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1674,7 +1662,6 @@ Update a scheduled report job.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

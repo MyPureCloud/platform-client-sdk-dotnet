@@ -625,6 +625,40 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<QueueEntityListing> GetRoutingQueuesWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> divisionId = null);
         
         /// <summary>
+        /// Search for queues by name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>QueueEntityListing</returns>
+        QueueEntityListing GetRoutingQueuesSearch (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Search for queues by name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>ApiResponse of QueueEntityListing</returns>
+        ApiResponse<QueueEntityListing> GetRoutingQueuesSearchWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+        
+        /// <summary>
         /// Get Routing Skill
         /// </summary>
         /// <remarks>
@@ -2039,6 +2073,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="divisionId">Division ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
         System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, bool? active = null, List<string> divisionId = null);
+        
+        /// <summary>
+        /// Search for queues by name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>Task of QueueEntityListing</returns>
+        System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesSearchAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
+
+        /// <summary>
+        /// Search for queues by name
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
+        System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesSearchAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null);
         
         /// <summary>
         /// Get Routing Skill
@@ -7861,6 +7929,226 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueues: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (QueueEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueEntityListing)));
+            
+        }
+
+        
+        
+        /// <summary>
+        /// Search for queues by name 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>QueueEntityListing</returns>
+        public QueueEntityListing GetRoutingQueuesSearch (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        {
+             ApiResponse<QueueEntityListing> localVarResponse = GetRoutingQueuesSearchWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search for queues by name 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>ApiResponse of QueueEntityListing</returns>
+        public ApiResponse< QueueEntityListing > GetRoutingQueuesSearchWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/queues/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<QueueEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (QueueEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(QueueEntityListing)));
+            
+        }
+
+        
+        /// <summary>
+        /// Search for queues by name 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>Task of QueueEntityListing</returns>
+        public async System.Threading.Tasks.Task<QueueEntityListing> GetRoutingQueuesSearchAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        {
+             ApiResponse<QueueEntityListing> localVarResponse = await GetRoutingQueuesSearchAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search for queues by name 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortBy">Sort by (optional, default to name)</param>
+        /// <param name="sortOrder">Sort order (optional, default to asc)</param>
+        /// <param name="name">Name (optional)</param>
+        /// <param name="id">Queue ID(s) (optional)</param>
+        /// <param name="divisionId">Division ID(s) (optional)</param>
+        /// <returns>Task of ApiResponse (QueueEntityListing)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<QueueEntityListing>> GetRoutingQueuesSearchAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null, List<string> divisionId = null)
+        { 
+
+            var localVarPath = "/api/v2/routing/queues/search";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                
+                "application/json"
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (divisionId != null) divisionId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionId", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+            
+            // authentication (PureCloud Auth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString());
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingQueuesSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<QueueEntityListing>(localVarStatusCode,
                 localVarHeaders,

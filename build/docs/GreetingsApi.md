@@ -38,7 +38,6 @@ Deletes a Greeting with the given GreetingId
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -105,7 +104,6 @@ Get a Greeting with the given GreetingId
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -175,7 +173,6 @@ Get media playback URI for this greeting
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -253,7 +250,6 @@ Gets an Organization's Greetings
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -329,7 +325,6 @@ Get an Organization's DefaultGreetingList
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -388,7 +383,6 @@ Get a list of the Group's Greetings
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -472,7 +466,6 @@ Grabs the list of Default Greetings given a Group's ID
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -540,7 +533,6 @@ Get a list of the User's Greetings
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -624,7 +616,6 @@ Grabs the list of Default Greetings given a User's ID
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -694,7 +685,6 @@ Create a Greeting for an Organization
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -762,7 +752,6 @@ Creates a Greeting for a Group
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -840,7 +829,6 @@ Creates a Greeting for a User
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -914,7 +902,6 @@ Updates the Greeting with the given GreetingId
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -992,7 +979,6 @@ Update an Organization's DefaultGreetingList
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1060,7 +1046,6 @@ Updates the DefaultGreetingList of the specified Group
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1136,7 +1121,6 @@ Updates the DefaultGreetingList of the specified User
 
 
 Requires NO permissions: 
-
 
 
 ### Example

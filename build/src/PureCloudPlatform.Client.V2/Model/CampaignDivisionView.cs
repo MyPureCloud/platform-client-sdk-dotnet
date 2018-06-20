@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public CampaignDivisionView(string Name = null, UriReference Division = null)
+        public CampaignDivisionView(string Name = null, Division Division = null)
         {
             
             
@@ -121,7 +121,7 @@ this.Division = Division;
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
+        public Division Division { get; set; }
         
         
         

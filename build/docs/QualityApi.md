@@ -72,7 +72,6 @@ Delete a calibration by id.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -146,7 +145,6 @@ Delete an evaluation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -437,7 +435,6 @@ Delete a keywordSet by id.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -506,7 +503,6 @@ Bulk delete of keyword sets; this will only delete the keyword sets that match t
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -573,7 +569,6 @@ Gets a list of Agent Activities
 Including the number of evaluations and average evaluation score
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -711,7 +706,6 @@ Get a calibration by id.  Requires either calibrator id or conversation id
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -791,7 +785,6 @@ Get the list of calibrations
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -917,7 +910,6 @@ Get audits for conversation or recording
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1035,7 +1027,6 @@ Get an evaluation
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1115,7 +1106,6 @@ Queries Evaluations and returns a paged list
 Query params must include one of conversationId, evaluatorUserId, or agentUserId
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1287,7 +1277,6 @@ Get an evaluator activity
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2193,7 +2182,6 @@ Get a keywordSet by id.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2261,7 +2249,6 @@ Get the list of keyword sets
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2989,7 +2976,6 @@ Create a calibration
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3063,7 +3049,6 @@ Create an evaluation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3145,7 +3130,6 @@ Score evaluation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3425,7 +3409,6 @@ Create a Keyword Set
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3713,7 +3696,6 @@ Retrieve the spotability statistic
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -3781,7 +3763,6 @@ Update a calibration to the specified calibration via PUT.  Editable fields incl
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3857,7 +3838,6 @@ Update an evaluation
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -4173,7 +4153,6 @@ Update a keywordSet to the specified keywordSet via PUT.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

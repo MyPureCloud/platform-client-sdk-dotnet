@@ -171,7 +171,6 @@ Gets active alert count for a user.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -376,7 +375,6 @@ Gets user unread count of interaction stats alerts.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

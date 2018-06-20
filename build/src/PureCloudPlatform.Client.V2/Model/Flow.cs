@@ -255,7 +255,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public Flow(string Name = null, UriReference Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
+        public Flow(string Name = null, Division Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, User PublishedBy = null, Operation CurrentOperation = null)
         {
             
             
@@ -494,7 +494,7 @@ this.CurrentOperation = CurrentOperation;
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
-        public UriReference Division { get; set; }
+        public Division Division { get; set; }
         
         
         

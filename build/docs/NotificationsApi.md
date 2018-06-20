@@ -29,7 +29,6 @@ Remove all subscriptions
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -96,7 +95,6 @@ Get available notification topics.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -168,7 +166,6 @@ The list of all subscriptions for this channel
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -238,7 +235,6 @@ The list of existing channels
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -306,7 +302,6 @@ Add a list of subscriptions to the existing list of subscriptions
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -384,7 +379,6 @@ There is a limit of 5 channels per user/app combination. Creating a 6th channel 
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -443,7 +437,6 @@ Replace the current list of subscriptions with a new list.
 
 
 Requires NO permissions: 
-
 
 
 ### Example

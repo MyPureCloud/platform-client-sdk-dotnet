@@ -27,7 +27,6 @@ Delete device
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -94,7 +93,6 @@ Get device
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -164,7 +162,6 @@ Get a list of all devices.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -248,7 +245,6 @@ Create User device
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -316,7 +312,6 @@ Update device
 
 
 Requires NO permissions: 
-
 
 
 ### Example

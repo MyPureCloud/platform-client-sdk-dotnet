@@ -293,7 +293,6 @@ Cancels any in-progress update for this edge.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1127,7 +1126,6 @@ Lists available schema categories (Deprecated)
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1201,7 +1199,6 @@ List schemas of a specific category (Deprecated)
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1283,7 +1280,6 @@ List schemas of a specific category (Deprecated)
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -1373,7 +1369,6 @@ Get a json schema (Deprecated)
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -1453,7 +1448,6 @@ Get metadata for a schema (Deprecated)
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2309,7 +2303,6 @@ Gets software update status information about any edge.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -2377,7 +2370,6 @@ Gets all the available software versions for this edge.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -2659,7 +2651,6 @@ Get the list of available languages.
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -3413,7 +3404,6 @@ Get the edge version report.
 The report will not have consistent data about the edge version(s) until all edges have been reset.
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -5331,7 +5321,8 @@ Get a Site by ID.
 
 Requires ANY permissions: 
 
-* telephony:plugin:all* telephony:sites:view
+* telephony:plugin:all
+* telephony:sites:view
 
 ### Example
 ~~~csharp
@@ -5864,7 +5855,6 @@ Get the list of Sites.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -5968,7 +5958,6 @@ Get a list of Edge-compatible time zones
 
 
 Requires NO permissions: 
-
 
 
 ### Example
@@ -6707,7 +6696,8 @@ Get Counts of trunks that have recording disabled or enabled
 
 Requires ANY permissions: 
 
-* recording:retentionPolicy:view* telephony:plugin:all
+* recording:retentionPolicy:view
+* telephony:plugin:all
 
 ### Example
 ~~~csharp
@@ -7087,7 +7077,6 @@ Starts a software update for this edge.
 Requires NO permissions: 
 
 
-
 ### Example
 ~~~csharp
 using System;
@@ -7377,7 +7366,6 @@ Validates a street address
 
 
 Requires NO permissions: 
-
 
 
 ### Example
