@@ -41,6 +41,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchUserQueue**](UsersApi.html#patchuserqueue) | **PATCH** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
 | [**PatchUserQueues**](UsersApi.html#patchuserqueues) | **PATCH** /api/v2/users/{userId}/queues | Join or unjoin a set of queues for a user |
 | [**PatchUserRoutinglanguage**](UsersApi.html#patchuserroutinglanguage) | **PATCH** /api/v2/users/{userId}/routinglanguages/{languageId} | Update routing language proficiency or state. |
+| [**PatchUsersBulk**](UsersApi.html#patchusersbulk) | **PATCH** /api/v2/users/bulk | Update bulk acd autoanswer on users |
 | [**PostAnalyticsUsersAggregatesQuery**](UsersApi.html#postanalyticsusersaggregatesquery) | **POST** /api/v2/analytics/users/aggregates/query | Query for user aggregates |
 | [**PostAnalyticsUsersDetailsQuery**](UsersApi.html#postanalyticsusersdetailsquery) | **POST** /api/v2/analytics/users/details/query | Query for user details |
 | [**PostAnalyticsUsersObservationsQuery**](UsersApi.html#postanalyticsusersobservationsquery) | **POST** /api/v2/analytics/users/observations/query | Query for user observations |
@@ -2700,6 +2701,79 @@ namespace Example
 ### Return type
 
 [**UserRoutingLanguage**](UserRoutingLanguage.html)
+
+<a name="patchusersbulk"></a>
+
+## [**UserEntityListing**](UserEntityListing.html) PatchUsersBulk (List<PatchUser> body)
+
+
+
+Update bulk acd autoanswer on users
+
+
+
+Requires ANY permissions: 
+
+* directory:user:add
+* user_manager
+* user_administration
+* directory:user:edit
+
+### Example
+~~~csharp
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchUsersBulkExample
+    {
+        public void main()
+        {
+            
+            // Configure OAuth2 access token for authorization: PureCloud Auth
+            Configuration.Default.AccessToken = 'YOUR_ACCESS_TOKEN';
+            
+
+            var apiInstance = new UsersApi();
+            
+            
+            
+            var body = new List<PatchUser>(); // List<PatchUser> | Users
+            
+            
+
+            try
+            {
+                
+                // Update bulk acd autoanswer on users
+                
+                UserEntityListing result = apiInstance.PatchUsersBulk(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PatchUsersBulk: " + e.Message );
+            }
+        }
+    }
+}
+~~~
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<PatchUser>**](PatchUser.html)| Users |  |
+{: class="table table-striped"}
+
+### Return type
+
+[**UserEntityListing**](UserEntityListing.html)
 
 <a name="postanalyticsusersaggregatesquery"></a>
 

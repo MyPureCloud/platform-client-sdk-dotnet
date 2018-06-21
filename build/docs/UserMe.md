@@ -30,6 +30,7 @@ title: UserMe
 | **ProfileSkills** | **List&lt;string&gt;** | Skills possessed by the user | [optional] |
 | **Locations** | [**List&lt;Location&gt;**](Location.html) | The user placement at each site location. | [optional] |
 | **Groups** | [**List&lt;Group&gt;**](Group.html) | The groups the user is a member of | [optional] |
+| **AcdAutoAnswer** | **bool?** | acd auto answer | [optional] |
 | **Date** | [**ServerDate**](ServerDate.html) | The PureCloud system date time. | [optional] |
 | **GeolocationSettings** | [**GeolocationSettings**](GeolocationSettings.html) | Geolocation settings for user&#39;s organization. | [optional] |
 | **Organization** | [**Organization**](Organization.html) | Organization details for this user. | [optional] |

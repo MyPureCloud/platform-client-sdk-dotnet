@@ -136,12 +136,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.
         /// </summary>
         /// <value>The state of the user. This property can be used to restore a deleted user or transition between active and inactive. If specified, it is the only modifiable field.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -220,8 +225,12 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="AcdAutoAnswer">The value that denotes if acdAutoAnswer is set on the user.</param>
         
-        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null)
+        
+        
+        
+        public UpdateUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, string Manager = null, List<UserImage> Images = null, int? Version = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, StateEnum? State = null, bool? AcdAutoAnswer = null)
         {
             
             
@@ -277,6 +286,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
             
             
             
@@ -433,6 +446,15 @@ this.State = State;
             
             
             
+            
+            
+this.AcdAutoAnswer = AcdAutoAnswer;
+            
+            
+            
+            
+            
+            
         }
         
         
@@ -567,6 +589,15 @@ this.State = State;
         
         
         /// <summary>
+        /// The value that denotes if acdAutoAnswer is set on the user
+        /// </summary>
+        /// <value>The value that denotes if acdAutoAnswer is set on the user</value>
+        [DataMember(Name="acdAutoAnswer", EmitDefaultValue=false)]
+        public bool? AcdAutoAnswer { get; set; }
+        
+        
+        
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -614,6 +645,8 @@ this.State = State;
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             
             sb.Append("  State: ").Append(State).Append("\n");
+            
+            sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             
@@ -734,6 +767,11 @@ this.State = State;
                     this.State.Equals(other.State)
                 ) &&
                 (
+                    this.AcdAutoAnswer == other.AcdAutoAnswer ||
+                    this.AcdAutoAnswer != null &&
+                    this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -799,6 +837,9 @@ this.State = State;
                 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+                
+                if (this.AcdAutoAnswer != null)
+                    hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
                 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

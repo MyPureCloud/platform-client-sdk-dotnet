@@ -141,12 +141,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -281,10 +286,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="AcdAutoAnswer">acd auto answer.</param>
+        
+        
+        
         /// <param name="TrustUserDetails">TrustUserDetails.</param>
         
         
-        public TrustUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, TrustUserDetails TrustUserDetails = null)
+        public TrustUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null, TrustUserDetails TrustUserDetails = null)
         {
             
             
@@ -342,6 +351,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
             
             
             
@@ -582,6 +595,15 @@ this.Groups = Groups;
             
             
             
+this.AcdAutoAnswer = AcdAutoAnswer;
+            
+            
+            
+            
+            
+            
+            
+            
 this.TrustUserDetails = TrustUserDetails;
             
             
@@ -784,6 +806,15 @@ this.TrustUserDetails = TrustUserDetails;
         
         
         /// <summary>
+        /// acd auto answer
+        /// </summary>
+        /// <value>acd auto answer</value>
+        [DataMember(Name="acdAutoAnswer", EmitDefaultValue=false)]
+        public bool? AcdAutoAnswer { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets TrustUserDetails
         /// </summary>
         [DataMember(Name="trustUserDetails", EmitDefaultValue=false)]
@@ -844,6 +875,8 @@ this.TrustUserDetails = TrustUserDetails;
             sb.Append("  Locations: ").Append(Locations).Append("\n");
             
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            
+            sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             
             sb.Append("  TrustUserDetails: ").Append(TrustUserDetails).Append("\n");
             
@@ -999,6 +1032,11 @@ this.TrustUserDetails = TrustUserDetails;
                     this.Groups.SequenceEqual(other.Groups)
                 ) &&
                 (
+                    this.AcdAutoAnswer == other.AcdAutoAnswer ||
+                    this.AcdAutoAnswer != null &&
+                    this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
+                ) &&
+                (
                     this.TrustUserDetails == other.TrustUserDetails ||
                     this.TrustUserDetails != null &&
                     this.TrustUserDetails.Equals(other.TrustUserDetails)
@@ -1085,6 +1123,9 @@ this.TrustUserDetails = TrustUserDetails;
                 
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
+                
+                if (this.AcdAutoAnswer != null)
+                    hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
                 
                 if (this.TrustUserDetails != null)
                     hash = hash * 59 + this.TrustUserDetails.GetHashCode();

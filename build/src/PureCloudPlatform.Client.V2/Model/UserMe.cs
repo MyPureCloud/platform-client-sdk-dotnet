@@ -183,12 +183,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -351,6 +356,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="AcdAutoAnswer">acd auto answer.</param>
+        
+        
+        
         /// <param name="Date">The PureCloud system date time..</param>
         
         
@@ -408,7 +417,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null)
+        public UserMe(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null, ServerDate Date = null, GeolocationSettings GeolocationSettings = null, Organization Organization = null, List<OrganizationPresence> PresenceDefinitions = null, List<LocationDefinition> LocationDefinitions = null, List<DomainOrganizationRole> OrgAuthorization = null, List<User> Favorites = null, List<User> Superiors = null, List<User> DirectReports = null, Adjacents Adjacents = null, List<RoutingSkill> RoutingSkills = null, FieldConfigs FieldConfigs = null, TokenInfo Token = null, List<Trustor> Trustors = null)
         {
             
             
@@ -466,6 +475,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
             
             
             
@@ -752,6 +765,15 @@ this.Locations = Locations;
             
             
 this.Groups = Groups;
+            
+            
+            
+            
+            
+            
+            
+            
+this.AcdAutoAnswer = AcdAutoAnswer;
             
             
             
@@ -1081,6 +1103,15 @@ this.Trustors = Trustors;
         
         
         /// <summary>
+        /// acd auto answer
+        /// </summary>
+        /// <value>acd auto answer</value>
+        [DataMember(Name="acdAutoAnswer", EmitDefaultValue=false)]
+        public bool? AcdAutoAnswer { get; set; }
+        
+        
+        
+        /// <summary>
         /// The PureCloud system date time.
         /// </summary>
         /// <value>The PureCloud system date time.</value>
@@ -1269,6 +1300,8 @@ this.Trustors = Trustors;
             
             sb.Append("  Groups: ").Append(Groups).Append("\n");
             
+            sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
+            
             sb.Append("  Date: ").Append(Date).Append("\n");
             
             sb.Append("  GeolocationSettings: ").Append(GeolocationSettings).Append("\n");
@@ -1451,6 +1484,11 @@ this.Trustors = Trustors;
                     this.Groups.SequenceEqual(other.Groups)
                 ) &&
                 (
+                    this.AcdAutoAnswer == other.AcdAutoAnswer ||
+                    this.AcdAutoAnswer != null &&
+                    this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
+                ) &&
+                (
                     this.Date == other.Date ||
                     this.Date != null &&
                     this.Date.Equals(other.Date)
@@ -1607,6 +1645,9 @@ this.Trustors = Trustors;
                 
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
+                
+                if (this.AcdAutoAnswer != null)
+                    hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
                 
                 if (this.Date != null)
                     hash = hash * 59 + this.Date.GetHashCode();

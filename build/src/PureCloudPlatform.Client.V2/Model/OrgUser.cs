@@ -141,12 +141,17 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// The current state for this user.
         /// </summary>
         /// <value>The current state for this user.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+        
+        
         
         
         
@@ -281,10 +286,14 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="AcdAutoAnswer">acd auto answer.</param>
+        
+        
+        
         /// <param name="Organization">Organization.</param>
         
         
-        public OrgUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, Organization Organization = null)
+        public OrgUser(string Name = null, Chat Chat = null, string Department = null, string Email = null, List<Contact> PrimaryContactInfo = null, List<Contact> Addresses = null, string Title = null, string Username = null, User Manager = null, List<UserImage> Images = null, int? Version = null, RoutingStatus RoutingStatus = null, UserPresence Presence = null, UserConversationSummary ConversationSummary = null, OutOfOffice OutOfOffice = null, Geolocation Geolocation = null, UserStations Station = null, UserAuthorization Authorization = null, List<string> ProfileSkills = null, List<Location> Locations = null, List<Group> Groups = null, bool? AcdAutoAnswer = null, Organization Organization = null)
         {
             
             
@@ -342,6 +351,10 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 this.Version = Version;
             }
+            
+            
+            
+            
             
             
             
@@ -582,6 +595,15 @@ this.Groups = Groups;
             
             
             
+this.AcdAutoAnswer = AcdAutoAnswer;
+            
+            
+            
+            
+            
+            
+            
+            
 this.Organization = Organization;
             
             
@@ -784,6 +806,15 @@ this.Organization = Organization;
         
         
         /// <summary>
+        /// acd auto answer
+        /// </summary>
+        /// <value>acd auto answer</value>
+        [DataMember(Name="acdAutoAnswer", EmitDefaultValue=false)]
+        public bool? AcdAutoAnswer { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets Organization
         /// </summary>
         [DataMember(Name="organization", EmitDefaultValue=false)]
@@ -844,6 +875,8 @@ this.Organization = Organization;
             sb.Append("  Locations: ").Append(Locations).Append("\n");
             
             sb.Append("  Groups: ").Append(Groups).Append("\n");
+            
+            sb.Append("  AcdAutoAnswer: ").Append(AcdAutoAnswer).Append("\n");
             
             sb.Append("  Organization: ").Append(Organization).Append("\n");
             
@@ -999,6 +1032,11 @@ this.Organization = Organization;
                     this.Groups.SequenceEqual(other.Groups)
                 ) &&
                 (
+                    this.AcdAutoAnswer == other.AcdAutoAnswer ||
+                    this.AcdAutoAnswer != null &&
+                    this.AcdAutoAnswer.Equals(other.AcdAutoAnswer)
+                ) &&
+                (
                     this.Organization == other.Organization ||
                     this.Organization != null &&
                     this.Organization.Equals(other.Organization)
@@ -1085,6 +1123,9 @@ this.Organization = Organization;
                 
                 if (this.Groups != null)
                     hash = hash * 59 + this.Groups.GetHashCode();
+                
+                if (this.AcdAutoAnswer != null)
+                    hash = hash * 59 + this.AcdAutoAnswer.GetHashCode();
                 
                 if (this.Organization != null)
                     hash = hash * 59 + this.Organization.GetHashCode();
