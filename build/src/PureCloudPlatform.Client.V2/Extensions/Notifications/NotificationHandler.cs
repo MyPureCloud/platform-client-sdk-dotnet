@@ -105,7 +105,7 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
             _typeMap.Clear();
         }
 
-        private void ConnectSocket(string uri)
+        private void ConnectSocket(string uri, string uri_proxy = null, string username_proxy = null, string password_proxy = null)
         {
             WebSocket = new WebSocket(uri);
             WebSocket.OnMessage += (sender, e) =>
@@ -130,6 +130,12 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
                     Console.WriteLine(ex);
                 }
             };
+
+            if (uri_proxy != null)
+            {
+                WebSocket.SetProxy(uri_proxy, username_proxy, password_proxy);
+            }
+
             WebSocket.Connect();
         }
 
