@@ -221,6 +221,9 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets DialingMode
         /// </summary>
@@ -240,6 +243,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="campaignStatus", EmitDefaultValue=false)]
         public CampaignStatusEnum? CampaignStatus { get; set; }
+        
+        
         
         
         
@@ -412,11 +417,19 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        /// <param name="Division">Division.</param>
+        
+        
+        
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         
         
-        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignNotificationUriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, List<CampaignNotificationContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<CampaignNotificationUriReference> ContactListFilters = null, Object AdditionalProperties = null)
+        public CampaignNotification(string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, int? Version = null, DocumentDataV2NotificationCreatedBy ContactList = null, CampaignNotificationUriReference Queue = null, DialingModeEnum? DialingMode = null, CampaignNotificationUriReference Script = null, CampaignNotificationUriReference EdgeGroup = null, CampaignNotificationUriReference Site = null, CampaignStatusEnum? CampaignStatus = null, List<CampaignNotificationPhoneColumns> PhoneColumns = null, double? AbandonRate = null, List<CampaignNotificationUriReference> DncLists = null, CampaignNotificationUriReference CallableTimeSet = null, CampaignNotificationUriReference CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<CampaignNotificationErrors> Errors = null, List<CampaignNotificationUriReference> RuleSets = null, bool? SkipPreviewDisabled = null, int? PreviewTimeOutSeconds = null, bool? SingleNumberPreview = null, CampaignNotificationContactSort ContactSort = null, List<CampaignNotificationContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<CampaignNotificationUriReference> ContactListFilters = null, CampaignNotificationUriReference Division = null, Object AdditionalProperties = null)
         {
+            
+            
+            
+            
             
             
             
@@ -830,6 +843,15 @@ this.ContactListFilters = ContactListFilters;
             
             
             
+this.Division = Division;
+            
+            
+            
+            
+            
+            
+            
+            
 this.AdditionalProperties = AdditionalProperties;
             
             
@@ -1076,6 +1098,14 @@ this.AdditionalProperties = AdditionalProperties;
         
         
         /// <summary>
+        /// Gets or Sets Division
+        /// </summary>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public CampaignNotificationUriReference Division { get; set; }
+        
+        
+        
+        /// <summary>
         /// Gets or Sets AdditionalProperties
         /// </summary>
         [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
@@ -1152,6 +1182,8 @@ this.AdditionalProperties = AdditionalProperties;
             sb.Append("  Priority: ").Append(Priority).Append("\n");
             
             sb.Append("  ContactListFilters: ").Append(ContactListFilters).Append("\n");
+            
+            sb.Append("  Division: ").Append(Division).Append("\n");
             
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             
@@ -1347,6 +1379,11 @@ this.AdditionalProperties = AdditionalProperties;
                     this.ContactListFilters.SequenceEqual(other.ContactListFilters)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.Equals(other.AdditionalProperties)
@@ -1457,6 +1494,9 @@ this.AdditionalProperties = AdditionalProperties;
                 
                 if (this.ContactListFilters != null)
                     hash = hash * 59 + this.ContactListFilters.GetHashCode();
+                
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
                 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();

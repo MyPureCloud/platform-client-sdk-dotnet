@@ -81,11 +81,16 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
+        
+        
+        
         /// <summary>
         /// Gets or Sets MessageStatus
         /// </summary>
         [DataMember(Name="messageStatus", EmitDefaultValue=false)]
         public MessageStatusEnum? MessageStatus { get; set; }
+        
+        
         
         
         
@@ -115,8 +120,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Media">Media.</param>
         
         
-        public MessageConversationNotificationMessageDetails(MessageConversationNotificationUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<ConversationNotificationMedia> Media = null)
+        
+        /// <param name="Stickers">Stickers.</param>
+        
+        
+        public MessageConversationNotificationMessageDetails(MessageConversationNotificationUriReference Message = null, DateTime? MessageTime = null, int? MessageSegmentCount = null, MessageStatusEnum? MessageStatus = null, List<ConversationNotificationMedia> Media = null, List<ConversationNotificationStickers> Stickers = null)
         {
+            
+            
+            
+            
             
             
             
@@ -184,6 +197,15 @@ this.Media = Media;
             
             
             
+            
+            
+            
+            
+this.Stickers = Stickers;
+            
+            
+            
+            
         }
         
         
@@ -221,6 +243,14 @@ this.Media = Media;
         public List<ConversationNotificationMedia> Media { get; set; }
         
         
+        
+        /// <summary>
+        /// Gets or Sets Stickers
+        /// </summary>
+        [DataMember(Name="stickers", EmitDefaultValue=false)]
+        public List<ConversationNotificationStickers> Stickers { get; set; }
+        
+        
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -239,6 +269,8 @@ this.Media = Media;
             sb.Append("  MessageStatus: ").Append(MessageStatus).Append("\n");
             
             sb.Append("  Media: ").Append(Media).Append("\n");
+            
+            sb.Append("  Stickers: ").Append(Stickers).Append("\n");
             
             sb.Append("}\n");
             return sb.ToString();
@@ -300,6 +332,11 @@ this.Media = Media;
                     this.Media == other.Media ||
                     this.Media != null &&
                     this.Media.SequenceEqual(other.Media)
+                ) &&
+                (
+                    this.Stickers == other.Stickers ||
+                    this.Stickers != null &&
+                    this.Stickers.SequenceEqual(other.Stickers)
                 );
         }
 
@@ -329,6 +366,9 @@ this.Media = Media;
                 
                 if (this.Media != null)
                     hash = hash * 59 + this.Media.GetHashCode();
+                
+                if (this.Stickers != null)
+                    hash = hash * 59 + this.Stickers.GetHashCode();
                 
                 return hash;
             }

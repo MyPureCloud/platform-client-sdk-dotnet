@@ -43,6 +43,7 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         /// </summary>
         public NotificationHandler()
         {
+            WebSocket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls12;
             Channel = _notificationsApi.PostNotificationsChannels();
             ConnectSocket(Channel.ConnectUri);
         }
@@ -52,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Extensions.Notifications
         /// </summary>
         public NotificationHandler(Channel channel)
         {
+            WebSocket.SslConfiguration.EnabledSslProtocols = System.Security.Authentication.SslProtocols.Tls12;
             Channel = channel;
             ConnectSocket(Channel.ConnectUri);
         }

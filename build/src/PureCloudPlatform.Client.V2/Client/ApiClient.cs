@@ -127,10 +127,7 @@ namespace PureCloudPlatform.Client.V2.Client
             // add file parameter, if any
             foreach(var param in fileParams)
             {
-                
-                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);
-                
-                
+                request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);
             }
 
             if (postBody != null) // http body (model or byte[]) parameter
@@ -178,7 +175,7 @@ namespace PureCloudPlatform.Client.V2.Client
             RestClient.UserAgent = Configuration.UserAgent;
 
             // Set SDK version
-            request.AddHeader("purecloud-sdk", "37.1.0");
+            request.AddHeader("purecloud-sdk", "37.1.1");
 
             
             var response = RestClient.Execute(request);

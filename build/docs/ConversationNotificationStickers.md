@@ -1,16 +1,13 @@
 ---
-title: ConversationNotificationMedia
+title: ConversationNotificationStickers
 ---
-## ININ.PureCloudApi.Model.ConversationNotificationMedia
+## ININ.PureCloudApi.Model.ConversationNotificationStickers
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Url** | **string** |  | [optional] |
-| **MediaType** | **string** |  | [optional] |
-| **ContentLengthBytes** | **int?** |  | [optional] |
-| **Name** | **string** |  | [optional] |
 | **Id** | **string** |  | [optional] |
 {: class="table table-striped"}
 

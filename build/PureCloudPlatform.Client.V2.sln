@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureCloudPlatform.Client.V2", "src\PureCloudPlatform.Client.V2\PureCloudPlatform.Client.V2.csproj", "{67CEAEED-68BA-4FB8-9876-00D74FBDA8A5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PureCloudPlatform.Client.V2", "src\PureCloudPlatform.Client.V2\PureCloudPlatform.Client.V2.csproj", "{221AEE12-01E8-4B54-8F40-9DA6195F8B27}"
 EndProject
 Global
 GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -10,10 +10,10 @@ Debug|Any CPU = Debug|Any CPU
 Release|Any CPU = Release|Any CPU
 EndGlobalSection
 GlobalSection(ProjectConfigurationPlatforms) = postSolution
-{67CEAEED-68BA-4FB8-9876-00D74FBDA8A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-{67CEAEED-68BA-4FB8-9876-00D74FBDA8A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-{67CEAEED-68BA-4FB8-9876-00D74FBDA8A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-{67CEAEED-68BA-4FB8-9876-00D74FBDA8A5}.Release|Any CPU.Build.0 = Release|Any CPU
+{221AEE12-01E8-4B54-8F40-9DA6195F8B27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+{221AEE12-01E8-4B54-8F40-9DA6195F8B27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+{221AEE12-01E8-4B54-8F40-9DA6195F8B27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+{221AEE12-01E8-4B54-8F40-9DA6195F8B27}.Release|Any CPU.Build.0 = Release|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 {19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -13,26 +13,11 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationNotificationMedia
+    /// MessageConversationNotificationMessageSticker
     /// </summary>
     [DataContract]
-    public partial class ConversationNotificationMedia :  IEquatable<ConversationNotificationMedia>
+    public partial class MessageConversationNotificationMessageSticker :  IEquatable<MessageConversationNotificationMessageSticker>
     {
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         
         
@@ -47,7 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         
     
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationNotificationMedia" /> class.
+        /// Initializes a new instance of the <see cref="MessageConversationNotificationMessageSticker" /> class.
         /// </summary>
         
         
@@ -55,22 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
         
         
         
-        /// <param name="MediaType">MediaType.</param>
-        
-        
-        
-        /// <param name="ContentLengthBytes">ContentLengthBytes.</param>
-        
-        
-        
-        /// <param name="Name">Name.</param>
-        
-        
-        
         /// <param name="Id">Id.</param>
         
         
-        public ConversationNotificationMedia(string Url = null, string MediaType = null, int? ContentLengthBytes = null, string Name = null, string Id = null)
+        public MessageConversationNotificationMessageSticker(string Url = null, string Id = null)
         {
             
             
@@ -86,46 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             
             
             
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
 this.Url = Url;
-            
-            
-            
-            
-            
-            
-            
-            
-this.MediaType = MediaType;
-            
-            
-            
-            
-            
-            
-            
-            
-this.ContentLengthBytes = ContentLengthBytes;
-            
-            
-            
-            
-            
-            
-            
-            
-this.Name = Name;
             
             
             
@@ -152,30 +86,6 @@ this.Id = Id;
         
         
         /// <summary>
-        /// Gets or Sets MediaType
-        /// </summary>
-        [DataMember(Name="mediaType", EmitDefaultValue=false)]
-        public string MediaType { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets ContentLengthBytes
-        /// </summary>
-        [DataMember(Name="contentLengthBytes", EmitDefaultValue=false)]
-        public int? ContentLengthBytes { get; set; }
-        
-        
-        
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-        
-        
-        
-        /// <summary>
         /// Gets or Sets Id
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
@@ -189,15 +99,9 @@ this.Id = Id;
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationNotificationMedia {\n");
+            sb.Append("class MessageConversationNotificationMessageSticker {\n");
             
             sb.Append("  Url: ").Append(Url).Append("\n");
-            
-            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
-            
-            sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
-            
-            sb.Append("  Name: ").Append(Name).Append("\n");
             
             sb.Append("  Id: ").Append(Id).Append("\n");
             
@@ -222,15 +126,15 @@ this.Id = Id;
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationNotificationMedia);
+            return this.Equals(obj as MessageConversationNotificationMessageSticker);
         }
 
         /// <summary>
-        /// Returns true if ConversationNotificationMedia instances are equal
+        /// Returns true if MessageConversationNotificationMessageSticker instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationNotificationMedia to be compared</param>
+        /// <param name="other">Instance of MessageConversationNotificationMessageSticker to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationNotificationMedia other)
+        public bool Equals(MessageConversationNotificationMessageSticker other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -241,21 +145,6 @@ this.Id = Id;
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
-                ) &&
-                (
-                    this.MediaType == other.MediaType ||
-                    this.MediaType != null &&
-                    this.MediaType.Equals(other.MediaType)
-                ) &&
-                (
-                    this.ContentLengthBytes == other.ContentLengthBytes ||
-                    this.ContentLengthBytes != null &&
-                    this.ContentLengthBytes.Equals(other.ContentLengthBytes)
-                ) &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
                 ) &&
                 (
                     this.Id == other.Id ||
@@ -278,15 +167,6 @@ this.Id = Id;
                 
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
-                
-                if (this.MediaType != null)
-                    hash = hash * 59 + this.MediaType.GetHashCode();
-                
-                if (this.ContentLengthBytes != null)
-                    hash = hash * 59 + this.ContentLengthBytes.GetHashCode();
-                
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
                 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
